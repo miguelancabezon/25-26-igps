@@ -4,9 +4,8 @@ El repositorio de materiales y proyectos de la asignatura **Programación I** de
 
 ## Curso *[25][26]*
 - Repo con el [temario](https://github.com/miguelancabezon/IGPS)
-  - [A día de hoy, deberíamos saber...]()
-  - [Casos de uso]()
-  - [Ejercicios]()
+  - [A día de hoy, deberíamos saber...](https://github.com/miguelancabezon/25-26-igps/blob/main/plantillas/should-know.md)
+  - [Ejercicios](/actividades/ejercicios)
 - Evaluaciones
   - Evaluación continua: [Actividades](evaluaciones/actividades/README.md)
   - Exámenes
