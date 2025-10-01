@@ -14,3 +14,4 @@ Después, creé una rama llamada docs/modificaciones para trabajar en mis cambio
 Después, creé una rama llamada docs/modificaciones para trabajar en mis cambios:
 
 git checkout -b docs/modificaciones
+y termine haciendo merge.
