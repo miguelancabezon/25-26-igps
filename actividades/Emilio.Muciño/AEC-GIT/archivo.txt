@@ -1,0 +1,11 @@
+Este es un archivo de prueeba 
+
+1.-Clonar el repositorio.
+2.-Crear carpetas: actividades\Emilio.Muciño\\AEC-GIT
+3.-Crear archivos de texto
+4.-Hacer commit y push a main
+5.-Crear rama docs/modificaciones
+6.-Resultado
+  Capturas:
+      -imagenes/captura1.png
+      -imagenes /captura2.png
