@@ -1,0 +1,55 @@
+Descripción de los pasos seguidos
+
+1. Hice fork del repositorio original del profesor en GitHub para poder trabajar en mi propio repositorio remoto.
+
+2. Cloné mi repositorio en local con el comando:
+
+```git clone https://github.com/natiicruuz/25-26-igps.git``
+
+3. Dentro del proyecto, entré en la carpeta entregas y creé una carpeta con mi nombre y apellido:
+
+entregas/Natalia.Cruz/
+
+4. Dentro de esa carpeta, creé otra llamada AEC-GIT:
+
+entregas/Natalia.Cruz/AEC-GIT/
+
+
+5. Dentro de AEC-GIT, creé un archivo de texto, y lo nombré igual que la carpeta: AEC-GIT.txt, y lo guardé vacío inicialmente.
+
+6. Añadí el archivo al repositorio con:
+
+```git add .```
+```git commit -m "docs: nuevo archivo"```
+
+7. Hice push de estos cambios a mi repositorio remoto:
+```git checkout -b docs/modificaciones```
+
+8. Abrí el archivo AEC-GIT.txt y empecé a describir todos los pasos que estaba siguiendo (esto que está escrito).
+
+9. Añadí varias capturas de pantalla del proceso y las incluí en la carpeta. Luego, las fui agregando al repositorio con commits separados, por ejemplo:
+
+```git add AEC-GIT.txt``` 
+```git commit -m "añado descripción de pasos"```
+
+```git add captura1.png```
+```git commit -m "subo captura de creación de carpetas"```
+
+```git add captura2.png```
+```git commit -m "subo captura del resultado del commit anterior"```
+
+10. Una vez finalizadas las modificaciones, volví a la rama principal:
+
+```git checkout main```
+
+
+11. Combiné los cambios de la rama docs/modificaciones con:
+
+```git merge docs/modificaciones```
+
+
+12. Hice push de los cambios finales al repositorio remoto:
+
+```git push origin main```
+
+13. Por último, entré a GitHub y creé una Pull Request desde mi rama principal hacia el repositorio original del profesor para entregar el trabajo.
