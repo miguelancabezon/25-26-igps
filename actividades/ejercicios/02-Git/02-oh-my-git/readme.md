@@ -5,7 +5,7 @@
 
 | Paso | Imagen |
 | :--- | :--- |
-| 1. Abrí Oh My Git! → Levels → escogí el nivel de *Cloning / Workflows* | ![](ohmygit.png)|
+| 1. Abrí Oh My Git! → Levels → escogí el nivel de *Cloning / Workflows* | ![](oh-my-git.png)|
 | 2. Usé la carta `git clone` arrastrándola al tablero, o en la terminal escribí:  `git clone ../friend .` | ![](image.png) |
 | 3. Creé una rama llamada "solution" utilizando el comando `git checkout -b solution`  | ![](image-1.png)|
  
