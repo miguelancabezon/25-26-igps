@@ -1,0 +1,3 @@
+Este es un archivo de texto incluido en el primer commit
+
+Este es un cambio al archivo que se vera dentro del siguiente commit
