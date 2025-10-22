@@ -1,4 +1,4 @@
-# Shoreside Vale
+# 🏘️ Shoreside Vale
 Shoreside Vale representa la cara más suburbana y residencial de Liberty City. A diferencia de los distritos anteriores, este sector combina zonas de clase media-alta con áreas marginales, reflejando la desigualdad social y el aislamiento geográfico. Su diseño urbano está inspirado en los suburbios del norte de Nueva Jersey y el área de Westchester.
 
 ![Shoreside Vale](./recursos/imagenes/shoreside.png)

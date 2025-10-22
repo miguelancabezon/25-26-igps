@@ -1,4 +1,4 @@
-# Vida Urbana y Exploración
+# 🚶‍♂️ Vida Urbana y Exploración
 Aquí tienes un artículo dividido en cinco secciones que explora la vida urbana y la experiencia de exploración en Liberty City, el icónico escenario de Grand Theft Auto III:
 
 ## 🌆 1. Una Ciudad que Nunca Duerme
@@ -40,12 +40,6 @@ Estas actividades enriquecen la experiencia urbana y fomentan la exploración si
 ## 🧠 5. Narrativa Ambiental y Descubrimiento Orgánico
 Liberty City cuenta historias sin necesidad de diálogos. La arquitectura, los grafitis, los anuncios publicitarios y la distribución de los espacios urbanos revelan tensiones sociales, decadencia económica y conflictos entre bandas.
 
-Un callejón lleno de basura y autos quemados sugiere violencia reciente.
-
-Un club nocturno con autos de lujo estacionados afuera indica poder y corrupción.
-
-Un barrio con casas idénticas y niños jugando refleja una falsa sensación de seguridad.
-
-Este enfoque de narrativa ambiental ha influido en muchos juegos posteriores, donde el entorno cuenta tanto como los personajes.
+Un callejón lleno de basura y autos quemados sugiere violencia reciente. Un club nocturno con autos de lujo estacionados afuera indica poder y corrupción.Un barrio con casas idénticas y niños jugando refleja una falsa sensación de seguridad. Este enfoque de narrativa ambiental ha influido en muchos juegos posteriores, donde el entorno cuenta tanto como los personajes.
 
 Conclusión: La vida urbana y la exploración en Liberty City no son solo mecánicas de juego: son una experiencia sensorial y narrativa que convirtió a GTA III en un referente del género sandbox. Cada rincón de la ciudad tiene algo que contar, y cada jugador puede descubrirlo a su manera.

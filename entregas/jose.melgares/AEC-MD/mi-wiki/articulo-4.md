@@ -1,4 +1,4 @@
-# Influencia en el diseño de Sandboxes
+# 🎮 Influencia en el diseño de Sandboxes
 
 El diseño de Liberty City en GTA III marcó un antes y un después en la historia de los videojuegos sandbox.
 
@@ -21,7 +21,7 @@ Aunque estilizada, Liberty City capturó la esencia de una ciudad postindustrial
 
 Este enfoque inspiró a desarrolladores a crear entornos más creíbles, como The Elder Scrolls IV: Oblivion y Mafia.
 
-El detalle ambiental —como estaciones de tren, anuncios, y sonidos urbanos— ayudó a establecer una atmósfera inmersiva que otros juegos replicaron.
+El detalle ambiental, como estaciones de tren, anuncios, y sonidos urbanos,  ayudó a establecer una atmósfera inmersiva que otros juegos replicaron.
 
 ## 🚓 4. Libertad de Acción y Caos Controlado
 Liberty City ofrecía al jugador una libertad sin precedentes: robar vehículos, provocar el caos, ignorar misiones o seguir la historia. Esta filosofía de “haz lo que quieras” se convirtió en la piedra angular del diseño sandbox.
