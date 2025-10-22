@@ -54,3 +54,33 @@ A[Durán 2010: Crecimiento urbano] --> B[2015: Aumento del microtráfico]
 B --> C[2018: Bandas se disputan territorios]
 C --> D[2022: Escalada de homicidios y sicariatos]
 D --> E[2024: Intervención militar y planes de pacificación]
+
+----
+
+
+## 3. Zonas críticas y tipos de delitos
+
+La violencia en **Durán** no se distribuye de manera uniforme. Existen **barrios identificados como “zonas rojas”** donde los enfrentamientos entre bandas son frecuentes, especialmente en torno a rutas de microtráfico y sectores marginales.
+
+| Zona o barrio | Nivel de riesgo | Delitos más frecuentes | Control territorial |
+|----------------|----------------|-------------------------|---------------------|
+| **El Recreo** | 🔴 Alto | Sicariato, extorsión, microtráfico | *Tiguerones* |
+| **El Arbolito** | 🔴 Muy alto | Homicidios, secuestros exprés | *Chone Killers* |
+| **Divino Niño** | 🟡 Medio | Robos y asaltos | Disputa entre bandas |
+| **Primavera 2** | 🔴 Alto | Tráfico de armas | *Lobos* |
+| **Abel Gilbert** | 🟡 Medio | Extorsión y amenazas | *Chone Killers* |
+
+> [!WARNING]
+> La mayoría de los crímenes violentos se concentran en **sectores urbanos periféricos**, donde la falta de iluminación y la limitada presencia policial facilitan la impunidad.
+
+<details>
+<summary>🚨 Información adicional</summary>
+En 2024, más del **65 % de los homicidios** registrados en Durán se produjeron en los barrios *El Recreo* y *El Arbolito*, según datos del Ministerio del Interior.
+</details>
+
+<details>
+<summary>📅 Datos históricos</summary>
+La expansión del microtráfico en 2018 marcó el inicio de una ola delictiva que se mantiene hasta hoy.  
+El control de los territorios cambió de manos más de **10 veces** entre 2020 y 2024.
+</details>
+
