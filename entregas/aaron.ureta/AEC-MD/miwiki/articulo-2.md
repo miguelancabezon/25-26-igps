@@ -18,66 +18,67 @@
 
 ## 🧩 Introducción
 
-La delincuencia en Durán no puede entenderse solo desde la presencia de bandas criminales.  
-Detrás de la violencia se encuentran **causas estructurales**: pobreza, desigualdad, desempleo y desintegración social.  
-Estos factores, combinados con la falta de políticas sostenibles, generan un **entorno propicio para el crimen** y la pérdida de oportunidades legítimas.
+La delincuencia en Durán no surge de la nada; tiene raíces estructurales en la **pobreza, desigualdad y exclusión**.  
+Estos factores crean condiciones ideales para el **reclutamiento de jóvenes** y el fortalecimiento de economías ilegales.
 
-Según el [INEC (2023)](https://www.ecuadorencifras.gob.ec/), más del **37 % de la población duraneña vive en pobreza** y el **desempleo juvenil supera el 20 %**, cifras muy superiores al promedio nacional.  
-La falta de empleo formal y la precariedad en la educación incrementan la vulnerabilidad de los jóvenes ante el reclutamiento por bandas.
+Según el [INEC (2023)](https://www.ecuadorencifras.gob.ec/), el 37 % de la población de Durán vive en pobreza, y el desempleo juvenil supera el 20 %.  
+La falta de empleo formal y la precariedad educativa incrementan la vulnerabilidad ante el crimen.
 
 ---
 
 ## 1. Desigualdad económica y pobreza
 
-La concentración de riqueza y la precariedad en los barrios populares de Durán explican gran parte del auge delictivo.  
-Las zonas con mayor pobreza coinciden con las de **mayor presencia de microtráfico y violencia**.
-
 | Indicador | Durán | Promedio nacional | Fuente |
 |------------|-------|------------------|---------|
-| Pobreza por ingresos | 37 % | 27 % | INEC (2023) |
-| Desempleo | 10 % | 5,8 % | INEC (2023) |
-| Acceso a servicios básicos | 61 % | 79 % | MIDUVI (2024) |
-| Escolaridad promedio | 8,4 años | 10,2 años | Ministerio de Educación (2024) |
+| Pobreza por ingresos | 37 % | 27 % | INEC 2023 |
+| Desempleo | 10 % | 5,8 % | INEC 2023 |
+| Acceso a servicios básicos | 61 % | 79 % | MIDUVI 2024 |
+| Escolaridad promedio | 8,4 años | 10,2 años | Ministerio de Educación 2024 |
 
-```mermaid
-flowchart TD
-    A[Pobreza extrema] --> B[Desempleo]
-    B --> C[Economía informal]
-    C --> D[Vulnerabilidad social]
-    D --> E[Incremento del crimen]
-[!NOTE]
-En Durán, las brechas económicas se agravan por la falta de inversión pública y privada.
-La economía informal representa más del 50 % del total de empleos.
+**Cadena causal simple**
 
-2. Desempleo juvenil y exclusión social
-El desempleo juvenil en Durán es uno de los principales motores del crimen organizado.
-Las bandas aprovechan esta carencia para ofrecer ingresos rápidos a cambio de actividades ilegales.
+Pobreza estructural
+↓
+Desempleo
+↓
+Economía informal
+↓
+Vulnerabilidad social
+↓
+Incremento del crimen
 
-Factor	Situación	Impacto
-Desempleo juvenil	20 %	Incremento del reclutamiento por bandas.
-Deserción escolar	18 %	Menor acceso a empleos formales.
-Población joven en riesgo	35 %	Vulnerabilidad a la violencia.
 
-<details> <summary>🧠 Ejemplo detallado</summary> Muchos jóvenes de los barrios *El Arbolito* y *Primavera 2* son reclutados por grupos como los **Tiguerones**, quienes les ofrecen entre **USD 50 y USD 200 semanales** por tareas de vigilancia o entrega de paquetes ilícitos. </details>
+## 2. Desempleo juvenil y exclusión social
 
-mermaid
+| Factor | Situación | Impacto |
+|--------|------------|----------|
+| Desempleo juvenil | 20 % | Reclutamiento por bandas. |
+| Deserción escolar | 18 % | Menor acceso a empleos formales. |
+| Población joven en riesgo | 35 % | Mayor vulnerabilidad. |
+
+**Relación entre actores (diagrama textual)**
+
+Joven → busca ingresos y pertenencia
+Banda → ofrece dinero y protección
+Joven → acepta tareas ilícitas
+Comunidad → sufre amenazas
+Gobierno → responde con operativos temporales
+
+yaml
 Copiar código
-sequenceDiagram
-    participant Joven
-    participant Banda
-    participant Comunidad
-    Joven->>Banda: Busca ingresos y sentido de pertenencia
-    Banda-->>Joven: Ofrece dinero, protección y "estatus"
-    Banda-->>Comunidad: Impone miedo y control
-    Comunidad-->>Joven: Rechazo y estigmatización
-3. Educación, familia y tejido comunitario
-La debilidad del sistema educativo y la desintegración familiar contribuyen a la formación de contextos violentos.
-Las escuelas, en lugar de ser espacios de prevención, se convierten en zonas de riesgo donde se reproducen patrones de agresión.
 
-Elemento	Descripción	Consecuencia
-Escuelas inseguras	Falta de control y protección policial.	Reclutamiento y consumo de drogas.
-Familias fragmentadas	Altas tasas de violencia intrafamiliar.	Desarraigo y conducta antisocial.
-Pérdida de espacios públicos	Calles sin iluminación ni áreas recreativas.	Falta de cohesión comunitaria.
+## 3. Educación, familia y tejido comunitario
 
+| Elemento | Descripción | Consecuencia |
+|-----------|-------------|---------------|
+| Escuelas inseguras | Falta de control y protección policial. | Reclutamiento y consumo de drogas. |
+| Familias fragmentadas | Altas tasas de violencia intrafamiliar. | Desarraigo y conducta antisocial. |
+| Pérdida de espacios públicos | Calles sin iluminación ni áreas recreativas. | Falta de cohesión comunitaria. |
 
-<details> <summary>📚 Información adicional</summary> El Ministerio de Educación implementó en 2024 el programa **“Escuelas Seguras”** en Durán, con el objetivo de reducir la violencia escolar y capacitar a docentes en gestión emocional. </details> ```
+**Mapa causal compacto**
+
+Educación deficiente
+└─→ Bajo rendimiento escolar
+└─→ Deserción
+└─→ Vulnerabilidad social
+└─→ Reclutamiento juvenil
