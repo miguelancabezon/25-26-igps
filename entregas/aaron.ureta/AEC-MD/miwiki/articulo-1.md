@@ -50,58 +50,41 @@ Su ubicación, junto a vías fluviales y terrestres estratégicas, la convierte 
 
 ```mermaid
 flowchart TD
-A[Durán 2010: Crecimiento urbano] --> B[2015: Aumento del microtráfico]
-B --> C[2018: Bandas se disputan territorios]
-C --> D[2022: Escalada de homicidios y sicariatos]
-D --> E[2024: Intervención militar y planes de pacificación]
+    A[Durán 2010: Crecimiento urbano] --> B[2015: Aumento del microtráfico]
+    B --> C[2018: Bandas se disputan territorios]
+    C --> D[2022: Escalada de homicidios y sicariatos]
+    D --> E[2024: Intervención militar y planes de pacificación]
+3. Zonas críticas y tipos de delitos
+La violencia en Durán no se distribuye de manera uniforme. Existen barrios identificados como “zonas rojas” donde los enfrentamientos entre bandas son frecuentes, especialmente en torno a rutas de microtráfico y sectores marginales.
 
+Zona o barrio	Nivel de riesgo	Delitos más frecuentes	Control territorial
+El Recreo	Alto	Sicariato, extorsión, microtráfico	Tiguerones
+El Arbolito	Muy alto	Homicidios, secuestros exprés	Chone Killers
+Divino Niño	Medio	Robos y asaltos	Disputa entre bandas
+Primavera 2	Alto	Tráfico de armas	Lobos
+Abel Gilbert	Medio	Extorsión y amenazas	Chone Killers
 
----
+[!WARNING]
+La mayoría de los crímenes violentos se concentran en sectores urbanos periféricos, donde la falta de iluminación y la limitada presencia policial facilitan la impunidad.
 
-## 3. Zonas críticas y tipos de delitos
+<details> <summary>🚨 Información adicional</summary> En 2024, más del **65 % de los homicidios** registrados en Durán se produjeron en los barrios *El Recreo* y *El Arbolito*, según datos del Ministerio del Interior. </details> <details> <summary>📅 Datos históricos</summary> La expansión del microtráfico en 2018 marcó el inicio de una ola delictiva que se mantiene hasta hoy. El control de los territorios cambió de manos más de **10 veces** entre 2020 y 2024. </details>
+4. Factores que agravan la inseguridad
+Durán enfrenta un conjunto de factores estructurales y coyunturales que potencian la criminalidad. Entre ellos destacan la pobreza, la corrupción y el déficit policial.
 
-La violencia en Durán no se distribuye de manera uniforme. Existen **barrios identificados como “zonas rojas”** donde los enfrentamientos entre bandas son frecuentes, especialmente en torno a rutas de microtráfico y sectores marginales.
+Factor	Descripción	Consecuencia
+Pobreza estructural	Más del 37 % de la población vive bajo la línea de pobreza.	Reclutamiento juvenil y economía informal.
+Déficit policial	Solo 1 agente por cada 500 habitantes.	Falta de control territorial.
+Corrupción institucional	Infiltración de bandas en gobiernos locales.	Impunidad y manipulación judicial.
+Cercanía a Guayaquil	Conexión directa con puertos y rutas de exportación.	Incremento del narcotráfico.
+Educación deficiente	Alto índice de deserción escolar.	Vulnerabilidad ante el crimen.
 
-| Zona o barrio | Nivel de riesgo | Delitos más frecuentes | Control territorial |
-|----------------|----------------|-------------------------|---------------------|
-| El Recreo | Alto | Sicariato, extorsión, microtráfico | Tiguerones |
-| El Arbolito | Muy alto | Homicidios, secuestros exprés | Chone Killers |
-| Divino Niño | Medio | Robos y asaltos | Disputa entre bandas |
-| Primavera 2 | Alto | Tráfico de armas | Lobos |
-| Abel Gilbert | Medio | Extorsión y amenazas | Chone Killers |
-
-> [!WARNING]
-> La mayoría de los crímenes violentos se concentran en **sectores urbanos periféricos**, donde la falta de iluminación y la limitada presencia policial facilitan la impunidad.
-
-<details>
-<summary>🚨 Información adicional</summary>
-En 2024, más del **65 % de los homicidios** registrados en Durán se produjeron en los barrios *El Recreo* y *El Arbolito*, según datos del Ministerio del Interior.
-</details>
-
-<details>
-<summary>📅 Datos históricos</summary>
-La expansión del microtráfico en 2018 marcó el inicio de una ola delictiva que se mantiene hasta hoy.  
-El control de los territorios cambió de manos más de **10 veces** entre 2020 y 2024.
-</details>
-
----
-
-## 4. Factores que agravan la inseguridad
-
-Durán enfrenta un conjunto de **factores estructurales y coyunturales** que potencian la criminalidad. Entre ellos destacan la pobreza, la corrupción y el déficit policial.
-
-| Factor | Descripción | Consecuencia |
-|---------|-------------|---------------|
-| Pobreza estructural | Más del 37 % de la población vive bajo la línea de pobreza. | Reclutamiento juvenil y economía informal. |
-| Déficit policial | Solo 1 agente por cada 500 habitantes. | Falta de control territorial. |
-| Corrupción institucional | Infiltración de bandas en gobiernos locales. | Impunidad y manipulación judicial. |
-| Cercanía a Guayaquil | Conexión directa con puertos y rutas de exportación. | Incremento del narcotráfico. |
-| Educación deficiente | Alto índice de deserción escolar. | Vulnerabilidad ante el crimen. |
-
-```mermaid
+mermaid
+Copiar código
 flowchart TD
-A[Pobreza estructural] --> B[Desempleo juvenil]
-B --> C[Reclutamiento por bandas]
-C --> D[Mayor violencia]
-D --> E[Inseguridad generalizada]
-E --> A
+    A[Pobreza estructural] --> B[Desempleo juvenil]
+    B --> C[Reclutamiento por bandas]
+    C --> D[Mayor violencia]
+    D --> E[Inseguridad generalizada]
+    E --> A
+markdown
+Copiar código
