@@ -1,0 +1,6 @@
+Aqui las capturas:
+En la captura5: clone mi repositorio
+En la captura4: Comitee mis cambios
+En la captura3: Navegué en la carpeta principal para hacer commit
+En la captura2: configuré mi usuario y email
+En la captura1:  navegué en carpetas y cree las carpetas junto con el archivo
