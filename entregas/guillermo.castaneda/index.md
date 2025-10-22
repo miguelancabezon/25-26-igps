@@ -50,3 +50,55 @@ timeline
     1980 : Inclusión del Judo femenino en competiciones internacionales
     2021 : Juegos Olímpicos de Tokio con paridad de género
 
+---
+
+
+---
+
+## 📘 `articulo-1.md` — Historia del Judo
+
+```markdown
+# 🥇 Historia del Judo
+
+**Ruta:** [Inicio](index.md) › Historia del Judo  
+**Fecha:** 2025-10-22  
+**Lectura:** ≈ 5 min  
+**Etiquetas:** #Historia #Kodokan #Kanō  
+
+---
+
+## 📑 Tabla de contenido
+- [Introducción](#introducción)
+- [Orígenes del Judo](#orígenes-del-judo)
+- [Expansión mundial](#expansión-mundial)
+- [El Judo olímpico](#el-judo-olímpico)
+- [Legado de Kanō](#legado-de-kanō)
+- [Notas y referencias](#notas-y-referencias)
+
+---
+
+## 🏯 Introducción
+
+El **Judo** es un arte marcial japonés moderno creado por **Jigorō Kanō** en 1882.  
+Surgió como una evolución del **Jujutsu**, buscando aplicar la *eficiencia del cuerpo y la mente* sin causar daño innecesario.  
+Desde su creación en el **Kodokan**, el Judo se expandió rápidamente por Japón y el mundo, convirtiéndose en uno de los deportes más practicados.
+
+---
+
+## 🕰️ Orígenes del Judo
+
+### Las raíces del Jujutsu
+El Jujutsu fue la base técnica del Judo. Kanō estudió varias escuelas antiguas (Ryū), seleccionó técnicas útiles y eliminó las más peligrosas.
+
+### El nacimiento del Kodokan
+En 1882, Kanō fundó el **Kodokan** con solo nueve alumnos. En pocos años se convirtió en un centro educativo reconocido por el gobierno japonés.
+
+### Filosofía educativa
+Kanō integró el Judo en el sistema educativo japonés, enfocándose en los valores de **respeto**, **esfuerzo** y **autocontrol**.
+
+```mermaid
+flowchart LR
+    A[Jujutsu] --> B[Jigorō Kanō]
+    B --> C[Kodokan Judo]
+    C --> D[Educación Física]
+    C --> E[Competición]
