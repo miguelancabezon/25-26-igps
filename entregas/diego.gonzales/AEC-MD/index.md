@@ -9,7 +9,7 @@
 ## 🧭 Descripción del Proyecto
 
 Bienvenido a la **Wiki Personal Interconectada del Manchester United**, creada por **Diego Gonzales**.  
-Este proyecto ofrece una visión clara y estructurada de la **evolución histórica del club**, sus jugadores icónicos, títulos, logros y legado cultural.  
+Este proyecto ofrece una visión clara y estructurada de la **evolución histórica del club**, sus jugadores icónicos, títulos, logros y legado cultural..
 
 Cada artículo está interconectado para facilitar la navegación y comprensión del crecimiento del Manchester United a lo largo del tiempo, mostrando cómo se convirtió en uno de los clubes más importantes del fútbol mundial.
 
