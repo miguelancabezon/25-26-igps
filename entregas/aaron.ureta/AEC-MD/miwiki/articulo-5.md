@@ -11,12 +11,6 @@
 ## 📑 Tabla de Contenidos
 - [Introducción](#introducción)
 - [1. La intervención militar y policial](#1-la-intervención-militar-y-policial)
-- [2. Reformas institucionales y judiciales](#2-reformas-institucionales-y-judiciales)
-- [3. Programas sociales y educativos](#3-programas-sociales-y-educativos)
-- [4. Iniciativas ciudadanas y liderazgo local](#4-iniciativas-ciudadanas-y-liderazgo-local)
-- [5. Mirando hacia el futuro](#5-mirando-hacia-el-futuro)
-- [Conclusiones](#conclusiones)
-- [Notas y referencias](#notas-y-referencias)
 
 ---
 
