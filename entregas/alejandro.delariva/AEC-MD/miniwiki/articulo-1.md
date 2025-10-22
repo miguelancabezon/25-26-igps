@@ -2,10 +2,6 @@
 
 **Ruta:** Inicio > Base > Fundamentos de la Estadística
 
-**Creado:** 2025-10-22 · **Actualizado:** 2025-10-22  
-⏱️ Lectura estimada: 7–9 min  
-**Tags: estadística, ingeniería, fundamentos, AEC, miniwiki**
-
 ## 📑 Tabla de contenidos
 - [Introducción](#introducción)
 - [Sección 1 — Conceptos clave](#sección-1--conceptos-clave)
