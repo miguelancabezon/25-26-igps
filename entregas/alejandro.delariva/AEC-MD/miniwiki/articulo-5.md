@@ -2,17 +2,6 @@
 
 **Ruta:** Inicio > Contexto > Aplicaciones y Ética en la Ingeniería
 
-**Creado:** 2025-10-22 · **Actualizado:** 2025-10-22  
-⏱️ Lectura estimada: 7–9 min  
-**Tags: estadística, ingeniería, fundamentos, AEC, miniwiki**
-
-> [!NOTE]
-> Esta página forma parte de la miniwiki *Estadística*. Enlaza con [Fundamentos](./articulo-1.md), [Variables](./articulo-2.md), [Frecuencias](./articulo-3.md), [Medidas](./articulo-4.md) y [Aplicaciones](./articulo-5.md).
-
-> [!WARNING]
-> Revisa las definiciones y supuestos antes de aplicar fórmulas: un mal supuesto puede invalidar conclusiones.
-
-
 ## 📑 Tabla de contenidos
 - [Introducción](#introducción)
 - [Sección 1 — Conceptos clave](#sección-1--conceptos-clave)
