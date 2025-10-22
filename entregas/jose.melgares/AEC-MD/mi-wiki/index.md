@@ -1,4 +1,7 @@
-<center><h1>Liberty City</h1></center>
+<div align="center">
+    <h1>Liberty City</h1>
+    <img src="recursos/imagenes/liberty.jpg"/>
+</div>
 
 **Liberty City**, el escenario principal de **Grand Theft Auto III**, no es solo una ciudad ficticia: es un personaje más dentro del universo del juego. Inspirada en la ciudad de Nueva York, esta metrópolis virtual se convirtió en un hito en la historia de los videojuegos por su atmósfera oscura, su estructura abierta y su narrativa envolvente.
 
