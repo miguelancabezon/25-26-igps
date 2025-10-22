@@ -11,12 +11,6 @@
 ## 📑 Tabla de Contenidos
 - [Introducción](#introducción)
 - [1. Contexto del crimen organizado en Durán](#1-contexto-del-crimen-organizado-en-durán)
-- [2. Los Chone Killers: estructura y expansión](#2-los-chone-killers-estructura-y-expansión)
-- [3. Los Tiguerones y su dominio urbano](#3-los-tiguerones-y-su-dominio-urbano)
-- [4. Los Lobos y la fragmentación criminal](#4-los-lobos-y-la-fragmentación-criminal)
-- [5. Rivalidades, alianzas y territorio](#5-rivalidades-alianzas-y-territorio)
-- [Conclusiones](#conclusiones)
-- [Notas y referencias](#notas-y-referencias)
 
 ---
 

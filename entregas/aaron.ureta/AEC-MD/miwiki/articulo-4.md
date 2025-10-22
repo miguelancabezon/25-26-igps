@@ -11,13 +11,6 @@
 ## 📑 Tabla de Contenidos
 - [Introducción](#introducción)
 - [1. El miedo como norma cotidiana](#1-el-miedo-como-norma-cotidiana)
-- [2. Desplazamiento y migración interna](#2-desplazamiento-y-migración-interna)
-- [3. Descomposición del tejido comunitario](#3-descomposición-del-tejido-comunitario)
-- [4. Efectos psicológicos y educativos](#4-efectos-psicológicos-y-educativos)
-- [5. Resiliencia y organización barrial](#5-resiliencia-y-organización-barrial)
-- [Conclusiones](#conclusiones)
-- [Notas y referencias](#notas-y-referencias)
-
 ---
 
 ## 🧩 Introducción
