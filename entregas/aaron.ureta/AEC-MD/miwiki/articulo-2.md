@@ -12,7 +12,6 @@
 - [Introducción](#introducción)
 - [1. Desigualdad económica y pobreza](#1-desigualdad-económica-y-pobreza)
 - [2. Desempleo juvenil y exclusión social](#2-desempleo-juvenil-y-exclusión-social)
-- [3. Educación, familia y tejido comunitario](#3-educación-familia-y-tejido-comunitario)
 
 ---
 
@@ -28,57 +27,19 @@ La falta de empleo formal y la precariedad educativa incrementan la vulnerabilid
 
 ## 1. Desigualdad económica y pobreza
 
+La concentración de riqueza y la precariedad en los barrios populares de Durán explican gran parte del auge delictivo.  
+Las zonas con mayor pobreza coinciden con las de **mayor presencia de microtráfico y violencia**.
+
 | Indicador | Durán | Promedio nacional | Fuente |
 |------------|-------|------------------|---------|
-| Pobreza por ingresos | 37 % | 27 % | INEC 2023 |
-| Desempleo | 10 % | 5,8 % | INEC 2023 |
-| Acceso a servicios básicos | 61 % | 79 % | MIDUVI 2024 |
-| Escolaridad promedio | 8,4 años | 10,2 años | Ministerio de Educación 2024 |
+| Pobreza por ingresos | 37 % | 27 % | INEC (2023) |
+| Desempleo | 10 % | 5,8 % | INEC (2023) |
+| Acceso a servicios básicos | 61 % | 79 % | MIDUVI (2024) |
+| Escolaridad promedio | 8,4 años | 10,2 años | Ministerio de Educación (2024) |
 
-**Cadena causal simple**
-
-Pobreza estructural
-↓
-Desempleo
-↓
-Economía informal
-↓
-Vulnerabilidad social
-↓
-Incremento del crimen
-
-
-## 2. Desempleo juvenil y exclusión social
-
-| Factor | Situación | Impacto |
-|--------|------------|----------|
-| Desempleo juvenil | 20 % | Reclutamiento por bandas. |
-| Deserción escolar | 18 % | Menor acceso a empleos formales. |
-| Población joven en riesgo | 35 % | Mayor vulnerabilidad. |
-
-**Relación entre actores (diagrama textual)**
-
-Joven → busca ingresos y pertenencia
-Banda → ofrece dinero y protección
-Joven → acepta tareas ilícitas
-Comunidad → sufre amenazas
-Gobierno → responde con operativos temporales
-
-yaml
-Copiar código
-
-## 3. Educación, familia y tejido comunitario
-
-| Elemento | Descripción | Consecuencia |
-|-----------|-------------|---------------|
-| Escuelas inseguras | Falta de control y protección policial. | Reclutamiento y consumo de drogas. |
-| Familias fragmentadas | Altas tasas de violencia intrafamiliar. | Desarraigo y conducta antisocial. |
-| Pérdida de espacios públicos | Calles sin iluminación ni áreas recreativas. | Falta de cohesión comunitaria. |
-
-**Mapa causal compacto**
-
-Educación deficiente
-└─→ Bajo rendimiento escolar
-└─→ Deserción
-└─→ Vulnerabilidad social
-└─→ Reclutamiento juvenil
+```mermaid
+flowchart TD
+    A[Pobreza extrema] --> B[Desempleo]
+    B --> C[Economía informal]
+    C --> D[Vulnerabilidad social]
+    D --> E[Incremento del crimen]
