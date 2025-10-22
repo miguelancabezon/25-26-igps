@@ -1,7 +1,7 @@
 
 # Introducción a la Gestión de Proyectos de Software
 
-El repositorio de materiales y proyectos de la asignatura **Programación I** del [Grado de Ingeniería Informática](https://www.uneatlantico.es/escuela-politecnica-superior/estudios-grado-oficial-en-ingenieria-informatica) la [Universidad Europea del Atlántico](https://www.uneatlantico.es).
+El repositorio de materiales y proyectos de la asignatura **Introducción a la Gestión de Proyectos de Software** del [Grado de Ingeniería Informática](https://www.uneatlantico.es/escuela-politecnica-superior/estudios-grado-oficial-en-ingenieria-informatica) la [Universidad Europea del Atlántico](https://www.uneatlantico.es).
 
 ## Curso *[25][26]*
 - Repo con el [temario](https://github.com/miguelancabezon/IGPS)
