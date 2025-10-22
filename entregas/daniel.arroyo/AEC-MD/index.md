@@ -1,13 +1,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Wiki del Fútbol</title>
 </head>
 
 
 
 <div align="center">
-    <img src="recursos/imagenes/banner-futbol.png" alt="Banner Fútbol" width="70%">
     <h1>Bienvenido a mi Wiki sobre el Fútbol</h1>
     <p><em>Explora la historia, competiciones, estadísticas y categorías del deporte más popular del mundo.</em></p>
 </div>
@@ -32,4 +30,5 @@ Se abordan tanto elementos históricos como técnicos, competitivos y estadísti
 </ul>
 
 <hr>
+
 
