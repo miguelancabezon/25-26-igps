@@ -8,7 +8,7 @@
 
 <div align="center">
     <img src="recursos/imagenes/banner-futbol.png" alt="Banner Fútbol" width="70%">
-    <h1>⚽ Bienvenido a mi Wiki sobre el Fútbol</h1>
+    <h1>Bienvenido a mi Wiki sobre el Fútbol</h1>
     <p><em>Explora la historia, competiciones, estadísticas y categorías del deporte más popular del mundo.</em></p>
 </div>
 
@@ -22,7 +22,7 @@ Se abordan tanto elementos históricos como técnicos, competitivos y estadísti
 
 <hr>
 
-<h2>📖 Secciones principales</h2>
+<h2>Secciones principales</h2>
 <p>Las secciones con las que contamos actualmente son:</p>
 <ul>
     <li><a href="articulo-1.md"> Historia del Fútbol</a> — Desde sus orígenes hasta la era moderna.</li>
@@ -32,3 +32,4 @@ Se abordan tanto elementos históricos como técnicos, competitivos y estadísti
 </ul>
 
 <hr>
+
