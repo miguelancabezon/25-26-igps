@@ -20,7 +20,7 @@
 
 ## 🌍 Introducción
 
-El Manchester United, fundado en 1878 como **Newton Heath LYR F.C.**, se ha convertido en uno de los clubes más emblemáticos del fútbol mundial. Su historia refleja **resiliencia, innovación y éxito deportivo**, pasando de ser un equipo local a una marca global con millones de seguidores.. 
+El Manchester United, fundado en 1878 como **Newton Heath LYR F.C.**, se ha convertido en uno de los clubes más emblemáticos del fútbol mundial. Su historia refleja **resiliencia, innovación y éxito deportivo**, pasando de ser un equipo local a una marca global con millones de seguidores.
 
 A lo largo del tiempo, el club ha enfrentado tragedias, como el accidente aéreo de Múnich en 1958, y momentos históricos, como el triplete logrado en 1999. Cada etapa de su evolución combina **logros deportivos, cambios estratégicos y el desarrollo de su identidad cultural**.  
 
