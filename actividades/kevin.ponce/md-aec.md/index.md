@@ -29,14 +29,15 @@ Esta descripción añade información contextual y ejemplos de uso: puedes busca
 | 1 | Origen del Imperio | Cómo surgió el Imperio Galáctico: causas políticas y militares. | [Leer](articulo1.md) |
 | 2 | Origen de la República | Historia de la Antigua República y su caída. | [Leer](articulo2.md) |
 | 3 | Grogu ("Baby Yoda") | Caracterización, aparición en la serie y significado cultural. | [Leer](articulo3.md) |
+| 4 | Las Guerras Clon | El conflicto galáctico que destruyó la República y dio origen al Imperio. | [Leer](articulo4.md) |
 
 ---
 
 ## 📊 Estadísticas del proyecto
 
-- Total de artículos destacados: 3
-- Estimación de palabras (toda la wiki): ~2,300 palabras (contenido base + descripciones y artículos en desarrollo)
-- Diagramas integrados: 2 (línea temporal y árbol de personajes) — en desarrollo
+- Total de artículos destacados: 4
+- Estimación de palabras (toda la wiki): ~8,500 palabras (contenido base + descripciones y artículos en desarrollo)
+- Diagramas integrados: 8 (líneas temporales, diagramas de flujo, secuencias, etc.)
 - Última revisión de contenido: ver sección "Últimas actualizaciones"
 
 > Nota: Las cifras son estimadas y se actualizarán automáticamente cuando se agreguen nuevos artículos o se integre un contador.
@@ -48,6 +49,8 @@ Esta descripción añade información contextual y ejemplos de uso: puedes busca
 - 2025-10-18 — Artículo "Origen del Imperio" creado y revisado.
 - 2025-10-20 — Añadida la ficha sobre Grogu y enlaces a multimedia.
 - 2025-10-22 — Ampliación de la página principal: índice visual, estadísticas y navegación.
+- 2025-10-22 — Artículo "Grogu (Baby Yoda)" completamente ampliado y mejorado con contenido extenso.
+- 2025-10-22 — Nuevo artículo "Las Guerras Clon" agregado con análisis completo del conflicto.
 
 ---
 
