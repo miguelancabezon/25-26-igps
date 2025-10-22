@@ -3,7 +3,7 @@
 # 🧠🎭 Memes con Inteligencia Artificial  
 ### *Una exploración divertida del impacto cultural de los memes generados por IA*  
 
-<img src="recursos/imagenes/banner-memes-ia.png" alt="Banner Memes con IA" width="600"/>
+<img src="recursos/imagenes/banner-memes-ia.jpg" alt="Banner Memes con IA" width="600"/>
 
 </div>
 
