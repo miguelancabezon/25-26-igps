@@ -55,6 +55,7 @@ B --> C[2018: Bandas se disputan territorios]
 C --> D[2022: Escalada de homicidios y sicariatos]
 D --> E[2024: Intervención militar y planes de pacificación]
 
+
 ---
 
 ## 3. Zonas críticas y tipos de delitos
