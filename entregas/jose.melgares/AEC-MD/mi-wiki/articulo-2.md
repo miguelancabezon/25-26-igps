@@ -1,5 +1,10 @@
 # Staunton Island
 
+## Introducción
+Staunton Island representa el corazón financiero y político de Liberty City. A diferencia de la decadente Portland, este distrito está lleno de rascacielos, parques bien cuidados y una arquitectura moderna que refleja poder, riqueza y corrupción institucional.
+
+![Staunton Island](./recursos/imagenes/staunton.png)
+
 ## 🏢 Diseño Urbano de Staunton Island en Liberty City (GTA III)
 Staunton Island representa el corazón financiero y político de Liberty City. A diferencia de la decadente Portland, este distrito está lleno de rascacielos, parques bien cuidados y una arquitectura moderna que refleja poder, riqueza y corrupción institucional.
 

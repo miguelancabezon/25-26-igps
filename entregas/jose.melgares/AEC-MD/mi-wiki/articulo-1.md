@@ -1,6 +1,9 @@
 # Portland
 
+## Introducción
 Portland es el distrito más antiguo y decadente de Liberty City, y sirve como la primera zona que el jugador explora en Grand Theft Auto III. Su diseño urbano refleja una ciudad industrial inspirada en los barrios periféricos de Nueva York, como Brooklyn y Queens.
+
+![Portalnd](./recursos/imagenes/portland.jpg)
 
 ## 🧱 Estructura y Zonas Principales
 Portland está dividido en varios barrios con funciones y estilos distintos:
