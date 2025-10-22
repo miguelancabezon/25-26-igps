@@ -43,7 +43,7 @@ Su ubicación, junto a vías fluviales y terrestres estratégicas, la convierte 
 
 ```mermaid
 flowchart TD
-A[Durán 2010: Crecimiento urbano] --> B[2015: Aumento del microtráfico]
-B --> C[2018: Bandas se disputan territorios]
-C --> D[2022: Escalada de homicidios y sicariatos]
-D --> E[2024: Intervención militar y planes de pacificación]
+    A[Durán 2010: Crecimiento urbano] --> B[2015: Aumento del microtráfico]
+    B --> C[2018: Bandas se disputan territorios]
+    C --> D[2022: Escalada de homicidios y sicariatos]
+    D --> E[2024: Intervención militar y planes de pacificación]
