@@ -27,11 +27,6 @@
   - [4.2. Supercopas nacionales e internacionales](#42-supercopas-nacionales-e-internacionales)
   - [4.3. Valor deportivo y comercial](#43-valor-deportivo-y-comercial)
 - [Diagramas visuales](#diagramas-visuales)
-- [Tablas informativas](#tablas-informativas)
-- [Elementos interactivos](#elementos-interactivos)
-- [Alertas y notas importantes](#alertas-y-notas-importantes)
-- [Referencias y notas](#referencias-y-notas)
-- [Ver también](#ver-también)
 - [Navegación](#navegación)
 
 ---
@@ -42,7 +37,6 @@ Las **competiciones de fútbol** constituyen la estructura vertebral del deporte
 
 El fútbol moderno se articula sobre un sistema piramidal: clubes locales → ligas nacionales → competiciones continentales → torneos globales. Este sistema ha evolucionado con los años para equilibrar intereses deportivos, financieros y de audiencia.
 
-A lo largo de este artículo exploraremos cómo se estructuran las principales competiciones del mundo, sus formatos de clasificación, su valor histórico y el papel que cumplen en la economía del fútbol actual. También haremos referencia a [Estadísticas y Récords](articulo-3.md), [Historia del Fútbol](articulo-1.md), [Distintas Categorías](articulo-4.md), y al [Glosario](glosario.md) para ampliar información técnica.
 
 ---
 
@@ -61,8 +55,6 @@ Algunas de las ligas más reconocidas por su nivel competitivo y comercial son:
 - **Bundesliga (Alemania)** — Estructura sostenible y asistencia récord.
 - **Brasileirão (Brasil)** — Alta rotación de talentos juveniles.
 
-> **Cita destacada:**  
-> “Las ligas son el latido constante del fútbol, donde cada semana se escribe la historia cotidiana del deporte.”
 
 ### 1.3. Ascensos, descensos y economía
 El sistema de ascensos y descensos mantiene la competitividad, evita monopolios deportivos y promueve la meritocracia. Económicamente, la diferencia entre divisiones es abismal: los ingresos por **televisión y patrocinio** aumentan exponencialmente en la máxima categoría. Esto influye en presupuestos, fichajes y políticas de cantera.
@@ -111,7 +103,8 @@ Algunas se alternan en calendario con el Mundial, y otras se solapan parcialment
 ### 3.3. Importancia cultural y social
 Más allá del espectáculo, estos torneos actúan como **fenómenos sociopolíticos**. Reflejan procesos de globalización, migración y diplomacia. Son espacios de unidad nacional, pero también de protesta o expresión cultural.
 
-> “Cuando una selección juega, el país entero respira fútbol.” — *Crónica Mundialista*
+> Nota
+> Cuando una nación de un país juega un partido, el país se une para ver su país jugar
 
 ---
 
@@ -144,3 +137,4 @@ flowchart TD
   C --> F[Champions / Libertadores]
   D --> G[Copa del Mundo]
   B --> H[Clubes base]
+
