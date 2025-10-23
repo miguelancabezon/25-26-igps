@@ -1,5 +1,3 @@
-# 👥 Distintas Categorías del Fútbol
-
 ##  Tabla de Contenidos
 - [Introducción](#introducción)
 - [1. Fútbol Masculino](#1-fútbol-masculino)
@@ -128,3 +126,4 @@ flowchart TD
     A --> E[ Juvenil]
     D --> F[Inclusión y Diversidad]
     E --> G[Formación y Valores]
+
