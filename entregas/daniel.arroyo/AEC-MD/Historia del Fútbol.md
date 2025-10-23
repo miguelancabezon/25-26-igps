@@ -29,13 +29,15 @@ El fútbol constituye una de las manifestaciones culturales más influyentes del
 ## 1. Orígenes del fútbol
 
 ### 1.1 Creación oficial del fútbol
-El fútbol se creó en 1863 en Inglaterra, cuando se fundó la Football Association (FA), con la representación oficial de 12 equpipos y se establecieron las primeras reglas unificadas del deporte. Antes de esta fecha, existían diversas variantes de juegos con pelota que se conocían como "fútbol" pero no tenían un reglamento común, lo que llevó a la necesidad de crear una organización que los unificara.
+El ***fútbol*** se creó en 1863 en Inglaterra, cuando se fundó la **Football Association** (FA), con la representación oficial de 12 equpipos y se establecieron las primeras reglas unificadas del deporte. Antes de esta fecha, existían diversas variantes de juegos con pelota que se conocían como "fútbol" pero no tenían un reglamento común, lo que llevó a la necesidad de crear una organización que los unificara.
+
+> Se debe tener en cuenta que antes de la "creación" del fútbol, existían otros deportes similares, como podemos encontrar el "cuju" durante la dinastia Han.
 
 ### 1.2. Prácticas medievales y festividades populares
 Durante la Edad Media en Europa, el llamado mob football o fútbol de pueblo era una actividad colectiva que se realizaba en ocasiones festivas (por ejemplo, en días de fiesta patronal). Partidos entre aldeas podían involucrar a centenares de participantes con escasas reglas, donde el objetivo era llevar la pelota a un lugar concreto del pueblo contrario. Estos juegos eran a menudo violentos y fueron objeto de prohibiciones temporales por autoridades locales debido al desorden público.
 
 ### 1.3. De juego folclórico a deporte reglamentado
-En el siglo XIX las instituciones educativas británicas (p. ej. Eton, Harrow, Rugby, Cambridge) jugaron un papel clave. Cada escuela tenía su versión del juego; la necesidad de competir entre escuelas llevó a la creación de reglas comunes. En 1863 se fundó la Football Association en Londres, que formalizó reglas como el tamaño del campo, número de jugadores y la prohibición de sujetar al rival. Ese proceso de codificación fue crucial: transformó una práctica local en una disciplina exportable y reproducible.
+En el siglo XIX las instituciones educativas británicas jugaron un papel clave. Cada escuela tenía su versión del juego; la necesidad de competir entre escuelas llevó a la creación de reglas comunes. En 1863 se fundó la Football Association en Londres, que __formalizó reglas__ como el tamaño del campo, número de jugadores y la prohibición de sujetar al rival. Ese proceso de codificación fue crucial: transformó una práctica local en una disciplina exportable y reproducible.
 
 ---
 
@@ -45,13 +47,10 @@ En el siglo XIX las instituciones educativas británicas (p. ej. Eton, Harrow, R
 La FA, creada en 1863, consolidó principios que separaban el football association code del rugby football. Entre los puntos clave estaba la prohibición de cargar con los brazos y el reconocimiento de que el balón debía jugarse principalmente con los pies. Estas reglas rompieron con prácticas anteriores y permitieron un juego más técnico y táctico. La introducción de conceptos como fuera de juego y el número fijo de jugadores (11) fue determinante para la estrategia y la sistematización del juego.
 
 ### 2.2. Clubes pioneros y primeras estructuras organizativas
-Los clubes surgieron como organismos sociales y deportivos. Sheffield FC (1857) es reconocido como el club más antiguo aún activo. Las primeras competiciones —locales y regionales— impulsaron formatos de torneo y la creación de trofeos. La FA Cup (1871) fue un hito: un torneo de eliminación que reunió equipos con distinto grado de profesionalización. Los clubes no solo consolidaron identidades deportivas, sino que también comenzaron a construir infraestructuras (estadios, escuelas de formación) y prácticas de gestión que son la base del club moderno.
+Los clubes surgieron como organismos sociales y deportivos. __Sheffield FC__ (1857) es reconocido como el club más antiguo aún activo. Las primeras competiciones —locales y regionales— impulsaron formatos de torneo y la creación de trofeos. La FA Cup (1871) fue un hito: un torneo de eliminación que reunió equipos con distinto grado de profesionalización. Los clubes no solo consolidaron identidades deportivas, sino que también comenzaron a construir infraestructuras (estadios, escuelas de formación) y prácticas de gestión que son la base del club moderno.
 
 ### 2.3. Difusión internacional y adaptaciones locales
 El fútbol se expandió con rapidez gracias a la movilidad (marineros, comerciantes, misioneros). En Sudamérica, por ejemplo, el fútbol británico fue asumido y adaptado hasta convertirse en elemento identitario en países como Argentina, Uruguay y Brasil. Las adaptaciones locales implicaron cambios tácticos (enfasis en técnica individual en Brasil), estructuras de competición y formas de afición. Este proceso explica la diversidad contemporánea: distintas escuelas de juego, estilos y tradiciones coexisten en el fútbol global.
-
-> Cita destacada:  
-> “El fútbol llega como semilla y crece con la cultura local.” — Investigador en historia del deporte
 
 ---
 
