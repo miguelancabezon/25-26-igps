@@ -1,7 +1,7 @@
 # 🏆 Competiciones de Fútbol
 
 
-## 📚 Tabla de Contenidos
+##  Tabla de Contenidos
 - [Introducción](#introducción)
 - [1. Ligas Nacionales](#1-ligas-nacionales)
   - [1.1. Estructura y formato](#11-estructura-y-formato)
@@ -24,7 +24,7 @@
 
 ---
 
-## ⚽ Introducción
+## Introducción
 
 Las **competiciones de fútbol** constituyen la estructura vertebral del deporte, pues definen los calendarios, la jerarquía de clubes y selecciones, y el interés global del público. Desde las **ligas nacionales** que se juegan semanalmente, hasta los grandes torneos internacionales como la **UEFA Champions League** o la **Copa del Mundo**, cada formato tiene sus propias reglas, historia y relevancia económica.
 
@@ -130,5 +130,6 @@ flowchart TD
   C --> F[Champions / Libertadores]
   D --> G[Copa del Mundo]
   B --> H[Clubes base]
+
 
 
