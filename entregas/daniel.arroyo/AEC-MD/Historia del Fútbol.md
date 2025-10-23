@@ -84,4 +84,3 @@ El fútbol del futuro deberá enfrentar desafíos de gobernanza (transparencia e
 **← [Anterior: Página Principal](index.md)**  
 **[Siguiente → Competiciones](articulo-2.md)**  
 
-[Volver arriba](#Historia del Fútbol.md)
