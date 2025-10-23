@@ -134,5 +134,6 @@ El desafío será mantener el equilibrio entre **humanidad y automatización**.
 ---
 
 **← [Anterior: Competiciones](Competiciones.md)**  
-**[Siguiente → Competiciones](Distintas-Categorías.md)**  
+**[Siguiente → Distintas Categorías](DistintasCategorías.md)**  
+
 
