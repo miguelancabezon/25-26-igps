@@ -1,5 +1,3 @@
-# 🏆 Competiciones de Fútbol
-
 
 ##  Tabla de Contenidos
 - [Introducción](#introducción)
@@ -130,6 +128,7 @@ flowchart TD
   C --> F[Champions / Libertadores]
   D --> G[Copa del Mundo]
   B --> H[Clubes base]
+
 
 
 
