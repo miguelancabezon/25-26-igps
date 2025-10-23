@@ -1,12 +1,4 @@
-# 📊 Estadísticas y Récords del Fútbol
 
-**Ruta:** [Inicio](index.md) > [Categoría: Análisis y Datos](#) > Estadísticas y Récords  
-**Creación:** 21 de octubre de 2025  
-**Última actualización:** 23 de octubre de 2025  
-**Tiempo estimado de lectura:** ⏱️ 17 minutos  
-**Etiquetas:** #Estadísticas #Récords #Fútbol #Historia #Datos  
-
----
 
 ## 📚 Tabla de Contenidos
 - [Introducción](#introducción)
@@ -135,6 +127,7 @@ El desafío será mantener el equilibrio entre **humanidad y automatización**.
 
 **← [Anterior: Competiciones](Competiciones.md)**  
 **[Siguiente → Distintas Categorías](Distintas_Categorías.md)**  
+
 
 
 
