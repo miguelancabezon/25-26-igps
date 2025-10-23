@@ -81,5 +81,7 @@ El fútbol femenino ha experimentado un crecimiento sostenido en audiencias, fin
 ### 4.3. Sostenibilidad, gobernanza y nuevos modelos de negocio
 El fútbol del futuro deberá enfrentar desafíos de gobernanza (transparencia en fichajes y administración), sostenibilidad ambiental (estadio ecoeficientes, reducción de emisiones en giras) y modelos de negocio híbridos (NFT, experiencias virtuales, suscripciones directas de fans). La combinación de tecnología y responsabilidad social promete un deporte más inclusivo y sostenible.
 
-Anterior (#index.md)    Siguiente ---:
-:---
+**← [Anterior: Página Principal](index.md)**  
+**[Siguiente → Competiciones](articulo-2.md)**  
+
+⬆️ [Volver arriba](#🏛️-historia-del-fútbol)
