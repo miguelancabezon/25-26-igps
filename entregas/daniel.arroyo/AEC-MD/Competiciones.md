@@ -1,12 +1,5 @@
 # 🏆 Competiciones de Fútbol
 
-**Ruta:** [Inicio](index.md) > [Categoría: Competiciones](#) > Competiciones de Fútbol  
-**Creación:** 19 de octubre de 2025  
-**Última actualización:** 23 de octubre de 2025  
-**Tiempo estimado de lectura:** ⏱️ 16 minutos  
-**Etiquetas:** #Competiciones #Ligas #ChampionsLeague #Selecciones #Trofeos  
-
----
 
 ## 📚 Tabla de Contenidos
 - [Introducción](#introducción)
@@ -137,4 +130,5 @@ flowchart TD
   C --> F[Champions / Libertadores]
   D --> G[Copa del Mundo]
   B --> H[Clubes base]
+
 
