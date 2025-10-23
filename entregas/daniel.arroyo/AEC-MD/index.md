@@ -23,13 +23,14 @@ Se abordan tanto elementos históricos como técnicos, competitivos y estadísti
 <h2>Secciones principales</h2>
 <p>Las secciones con las que contamos actualmente son:</p>
 <ul>
-    <li><a href="https://github.com/DaniArroyo07/25-26-igps/blob/main/entregas/daniel.arroyo/AEC-MD/Historia-del-F%C3%BAtbol.md"> Historia del Fútbol</a> — Desde sus orígenes hasta la era moderna.</li>
+    <li><a href="https://github.com/DaniArroyo07/25-26-igps/blob/main/entregas/daniel.arroyo/AEC-MD/Historia%20del%20F%C3%BAtbol.md"> Historia del Fútbol</a> — Desde sus orígenes hasta la era moderna.</li>
     <li><a href="https://github.com/DaniArroyo07/25-26-igps/blob/main/entregas/daniel.arroyo/AEC-MD/Competiciones.md"> Competiciones</a> — Ligas, torneos internacionales y eventos históricos.</li>
     <li><a href="https://github.com/DaniArroyo07/25-26-igps/blob/main/entregas/daniel.arroyo/AEC-MD/Estad%C3%ADsticas%20y%20R%C3%A9cords.md"> Estadísticas y Récords</a> — Datos sorprendentes, cifras y logros de jugadores.</li>
     <li><a href="https://github.com/DaniArroyo07/25-26-igps/blob/main/entregas/daniel.arroyo/AEC-MD/Distintas%20Categor%C3%ADas.md"> Distintas Categorías</a> — Fútbol femenino, juvenil, sala, y más variantes.</li>
 </ul>
 
 <hr>
+
 
 
 
