@@ -13,7 +13,7 @@ Cada referencia cuenta con un **identificador interno** para su citación en el 
 | Sitio Web | Sound on Sound | *Principles of Modern Mixing* | 2023 | [soundonsound.com](https://www.soundonsound.com) |
 | Libro | Everest, F. Alton | *The Master Handbook of Acoustics* | 2001 | McGraw-Hill Education |
 | Artículo | Johnson, T. | *The Evolution of Popular Music Genres* | 2020 | *Journal of Musicology* |
-| Video | YouTube Channel | *Recording Studio Setup Guide* | 2022 | [Ver en YouTube](https://youtu.be/abc123xyz) |
+| Video | YouTube Channel | *Recording Studio Setup Guide* | 2022 | [Ver en YouTube](https://www.youtube.com/watch?v=PWjfYvf0fsw) |
 | Sitio Web | Wikipedia | *Historia de la Grabación de Sonido* | 2024 | [es.wikipedia.org/wiki/Grabación_de_sonido](https://es.wikipedia.org/wiki/Grabación_de_sonido) |
 | Libro | O’Dair, Barbara | *The Rolling Stone Encyclopedia of Rock & Roll* | 2001 | Fireside |
 
@@ -38,4 +38,4 @@ Cada referencia cuenta con un **identificador interno** para su citación en el 
 
 ---
 
-[↑ Volver arriba](#📚-referencias-y-bibliografía)
+← [Ir a página principal](../AEC-MD/index.md) | [↑ Volver arriba](#📚-referencias-y-bibliografía)

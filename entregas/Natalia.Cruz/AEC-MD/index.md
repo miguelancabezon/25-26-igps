@@ -36,6 +36,28 @@ El tema central es la **Música**, explorada desde sus cimientos teóricos y ac�
 
 * [**📚 Referencias y Bibliografía**](referencias.md)
 
+## ⏳ Línea de Tiempo de la Música (Mermaid Gantt)
+
+```mermaid
+    gantt
+    title Historia y Desarrollo Clave de la Música
+    dateFormat  YYYY-MM-DD
+    section Teoría y Orígenes
+        Música Antigua (Grecia, Roma)  :crit, 0001-01-01, 1000y
+        Desarrollo del Sistema Tonal (Barroco) :crit, 1600-01-01, 150y
+        Invención del Piano Moderno : 1709-01-01, 10y
+    section La Era de la Grabación
+        Fonógrafo de Edison : 1877-01-01, 5y
+        Introducción del Jazz y Blues : 1900-01-01, 40y
+        Cinta Magnética y Grabación Multitrack : 1940-01-01, 10y
+    section Digital y Moderno
+        Sintetizadores y Música Electrónica : 1970-01-01, 15y
+        Estándar MIDI y Audio Digital : 1983-01-01, 5y
+        Streaming y Música bajo demanda : 2005-01-01, 20y
+```
+
+
+
 ## 📰 Últimas Actualizaciones
 
 | **Fecha** | **Artículo** | **Cambio Realizado** | 

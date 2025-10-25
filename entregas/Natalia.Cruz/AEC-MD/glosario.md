@@ -18,6 +18,15 @@ Este glosario proporciona una referencia rápida de términos técnicos utilizad
 | **Ritmo** | Teoría | Elemento de la música que organiza los sonidos a través del tiempo. | [Art. 1: Teoría](../AEC-MD/articulo-1.md) |
 | **Sampleo** | Producción | El uso de fragmentos pregrabados de audio en una nueva composición. | [Art. 2: Géneros](../AEC-MD/articulo-2.md) |
 | **Timbre** | Acústica | Cualidad del sonido que distingue una voz o instrumento de otro, independiente del tono. | [Art. 4: Acústica](../AEC-MD/articulo-4.md) |
+| **Tónica / Armadura** | Teoría | El sistema tonal se basa en la idea de que una nota (*tónica*) actúa como centro de gravedad. | [Armadura](../AEC-MD/glosario.md#Armadura) |
+| **Modulación** | Teoría | Proceso mediante el cual una obra cambia de tonalidad para aportar variedad y dinamismo. |[Art. 2: Géneros](../AEC-MD/articulo-2.md) |
+| **DAW** | Producción | Estación de trabajo de audio digital, software usado para grabar, editar y mezclar sonido. | [Art. 3: Producción](../AEC-MD/articulo-3.md) |
+| **Ecualización (EQ)** | Producción | Proceso de ajuste del balance de frecuencias de una señal para mejorar su claridad o carácter. |[Art. 3: Producción](../AEC-MD/articulo-3.md)|
+| **Compresión** | Producción | Técnica para reducir el rango dinámico del audio y evitar picos excesivos. | [Art. 3: Producción](../AEC-MD/articulo-3.md) |
+| **Frecuencia** | Acústica | Medida en Hertz (Hz), determina la altura tonal de un sonido. | [Frecuencia](../AEC-MD/glosario.md#Frecuencia) |
+| **Decibelio (dB)** | Acústica | Unidad logarítmica para expresar la relación entre niveles de presión sonora o potencia. | [Decibelio (dB)](../AEC-MD/glosario.md#Decibelio-(dB)) |
+| **Vinilo** | Formato / Soporte | Medio físico analógico utilizado para la reproducción de grabaciones de audio. |  [Art. 5: Historia](../AEC-MD/articulo-5.md) |
+
 
 ← [Ir a página principal](../AEC-MD/index.md) | [ Siguiente → Ir a Referencias](../AEC-MD/referencias.md) →
 
