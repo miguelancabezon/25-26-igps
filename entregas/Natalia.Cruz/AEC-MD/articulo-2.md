@@ -218,3 +218,9 @@ La **Invasión Británica** de los años 60 (The Beatles, The Rolling Stones) fu
 ← [Anterior: Teoría Musical](../AEC-MD/articulo-1.md) | [Siguiente: Producción de Audio Moderna](../AEC-MD/articulo-3.md) →
 <[↑ Volver arriba](../AEC-MD/#géneros-clave-y-evolución-histórica)
 
+<div align="center"> <p style="font-size: 0.9em; color: #666;"> © 2025 Wiki Personal Interconectada. Creado por Natalia Cruz.
+
+
+Evaluación Continua 2 - IGPS 2025/2026.
+</p>
+</div>

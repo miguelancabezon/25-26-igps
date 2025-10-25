@@ -39,3 +39,10 @@ Cada referencia cuenta con un **identificador interno** para su citación en el 
 ---
 
 ← [Ir a página principal](../AEC-MD/index.md) | [↑ Volver arriba](#📚-referencias-y-bibliografía)
+
+<div align="center"> <p style="font-size: 0.9em; color: #666;"> © 2025 Wiki Personal Interconectada. Creado por Natalia Cruz.
+
+
+Evaluación Continua 2 - IGPS 2025/2026.
+</p>
+</div>

@@ -197,3 +197,10 @@ Mientras que Edison inventó el fonógrafo, el **Fonoautógrafo** fue patentado 
 ---
 ← [Anterior: Acústica y Ondas](../AEC-MD/articulo-4.md) | [Siguiente: Glosario Técnico](../AEC-MD/glosario.md) →
 [↑ Volver arriba](../AEC-MD/articulo-5.md#historia-del-sonido-grabado-del-fonografo-al-streaming)
+
+<div align="center"> <p style="font-size: 0.9em; color: #666;"> © 2025 Wiki Personal Interconectada. Creado por Natalia Cruz.
+
+
+Evaluación Continua 2 - IGPS 2025/2026.
+</p>
+</div>

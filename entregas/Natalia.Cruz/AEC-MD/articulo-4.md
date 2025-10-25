@@ -191,3 +191,10 @@ Los instrumentos acústicos como el violín o la guitarra dependen intrínsecame
 ← [Anterior: Producción de Audio Moderna](../AEC-MD/articulo-3.md) | [Siguiente: Historia del Sonido Grabado](../AEC-MD/articulo-5.md) →
 
 [↑ Volver arriba](#acústica-y-ondas-la-ciencia-detrás-del-sonido)
+
+<div align="center"> <p style="font-size: 0.9em; color: #666;"> © 2025 Wiki Personal Interconectada. Creado por Natalia Cruz.
+
+
+Evaluación Continua 2 - IGPS 2025/2026.
+</p>
+</div>

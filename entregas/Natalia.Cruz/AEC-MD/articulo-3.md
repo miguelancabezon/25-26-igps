@@ -210,3 +210,10 @@ Desde los años 90, los ingenieros compitieron para hacer sus grabaciones lo má
 ---
 ← [Anterior: Géneros Clave y Evolución](../AEC-MD/articulo-2.md) | [Siguiente: Acústica y Ondas](../AEC-MD/articulo-4.md) →
 [↑ Volver arriba](#producción-de-audio-moderna-del-micrófono-al-master)
+
+<div align="center"> <p style="font-size: 0.9em; color: #666;"> © 2025 Wiki Personal Interconectada. Creado por Natalia Cruz.
+
+
+Evaluación Continua 2 - IGPS 2025/2026.
+</p>
+</div>

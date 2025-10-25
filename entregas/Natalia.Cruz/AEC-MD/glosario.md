@@ -30,3 +30,10 @@ Este glosario proporciona una referencia rápida de términos técnicos utilizad
 
 ← [Ir a página principal](../AEC-MD/index.md) | [ Siguiente → Ir a Referencias](../AEC-MD/referencias.md) →
 
+
+<div align="center"> <p style="font-size: 0.9em; color: #666;"> © 2025 Wiki Personal Interconectada. Creado por Natalia Cruz.
+
+
+Evaluación Continua 2 - IGPS 2025/2026.
+</p>
+</div>

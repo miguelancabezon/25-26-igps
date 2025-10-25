@@ -74,6 +74,73 @@ El tema central es la **Música**, explorada desde sus cimientos teóricos y ac�
 
 > La escala pentatónica, utilizada hoy en día en casi todos los géneros populares (rock, blues, pop), es una de las escalas más antiguas, registrada en culturas tan diversas como la china, la celta y la africana, ¡hace miles de años!
 
+---
+
+## ❓ Preguntas Frecuentes (FAQ)
+
+<details>
+<summary><b>1. ¿Qué significa exactamente “Armonía” y por qué es tan importante en la música?</b></summary>
+La **Armonía** es el estudio de cómo los acordes se relacionan y combinan entre sí para generar sensación de estabilidad o tensión.  
+Es el “esqueleto” que da estructura emocional a las melodías. Puedes leer más en el [Glosario Técnico](glosario.md#Armonía).
+</details>
+
+<details>
+<summary><b>2. ¿Qué es la Tónica y cómo se relaciona con la Armadura?</b></summary>
+La **Tónica** es la nota principal que actúa como centro tonal de una pieza.  
+La **Armadura** define cuántas alteraciones (sostenidos o bemoles) tiene esa tonalidad.  
+Ambos conceptos son esenciales para comprender el sistema tonal occidental.
+</details>
+
+<details>
+<summary><b>3. ¿Por qué la Modulación hace que una canción suene más interesante?</b></summary>
+La **Modulación** (cambio de tonalidad) introduce variedad y contraste en una obra.  
+En producción moderna, se usa incluso digitalmente para refrescar la percepción del oyente o crear clímax emocionales.
+</details>
+
+<details>
+<summary><b>4. ¿Qué diferencia hay entre “Compresión” y “Limitación” en la mezcla de audio?</b></summary>
+Ambas reducen el rango dinámico, pero la **Compresión** suaviza gradualmente los picos de volumen, mientras que la **Limitación** impone un tope absoluto para evitar saturación o distorsión.
+</details>
+
+<details>
+<summary><b>5. ¿Qué hace exactamente una EQ o Ecualización?</b></summary>
+La **Ecualización (EQ)** permite ajustar el balance de frecuencias de una señal: realzar agudos, reducir graves, o limpiar resonancias molestas.  
+Es clave para dar claridad y espacio a cada instrumento.
+</details>
+
+<details>
+<summary><b>6. ¿Qué es un DAW y por qué es fundamental en la producción musical moderna?</b></summary>
+Un **DAW (Digital Audio Workstation)** es el software donde se graba, edita y mezcla audio.  
+Ejemplos famosos son *Ableton Live*, *Logic Pro* o *FL Studio*. Son el corazón del estudio digital.
+</details>
+
+<details>
+<summary><b>7. ¿Cómo influye la Reverberación en la percepción del sonido?</b></summary>
+La **Reverberación** recrea el ambiente acústico de un espacio.  
+Una reverberación larga puede dar sensación de “grandeza”, mientras que una corta aporta cercanía e intimidad.
+</details>
+
+<details>
+<summary><b>8. ¿Por qué la Frecuencia y los Decibelios son tan mencionados en acústica?</b></summary>
+La **Frecuencia** (Hz) define la altura del sonido, y los **Decibelios (dB)** miden su intensidad.  
+Juntas determinan cómo percibimos el volumen y el tono de cada fuente sonora.
+</details>
+
+<details>
+<summary><b>9. ¿Qué papel tuvo el vinilo en la historia del sonido grabado?</b></summary>
+El **Vinilo** fue el principal formato físico de distribución musical durante gran parte del siglo XX.  
+Su sonido cálido y su textura analógica aún lo hacen apreciado por audiófilos y productores.
+</details>
+
+<details>
+<summary><b>10. ¿Cuál es la relación entre el Jazz y la improvisación?</b></summary>
+El **Jazz** se basa en la improvisación: los músicos interpretan melodías espontáneamente dentro de una estructura armónica.  
+Esta libertad es lo que hace que cada interpretación sea única e irrepetible.
+</details>
+
+---
+
+
 ## 🧑‍💻 Contribuidores
 
 | **Nombre** | **Rol** | **Contacto** | 
@@ -83,6 +150,6 @@ El tema central es la **Música**, explorada desde sus cimientos teóricos y ac�
 <div align="center"> <p style="font-size: 0.9em; color: #666;"> © 2025 Wiki Personal Interconectada. Creado por Natalia Cruz.
 
 
-Evaluación de Componentes AEC-MD.
+Evaluación Continua 2 - IGPS 2025/2026.
 </p>
 </div>

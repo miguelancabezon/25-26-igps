@@ -250,3 +250,10 @@ La notación musical moderna tiene sus raíces en los cantos gregorianos de la E
 ---
 ← [Anterior: Glosario Técnico](../AEC-MD/glosario.md) | [Siguiente: Géneros Clave y Evolución](../AEC-MD/articulo-2.md) →
 ↑ [Volver arriba](#teoría-musical-los-pilares-fundamentales)
+
+<div align="center"> <p style="font-size: 0.9em; color: #666;"> © 2025 Wiki Personal Interconectada. Creado por Natalia Cruz.
+
+
+Evaluación Continua 2 - IGPS 2025/2026.
+</p>
+</div>
