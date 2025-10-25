@@ -12,10 +12,10 @@ El tema central es la **Música**, explorada desde sus cimientos teóricos y ac�
 | **Título del Artículo** | **Descripción Breve** | **Enlace** | 
 |-----|---|---|
 | **🎼 Teoría Musical: Los Pilares** | Fundamentos de armonía, ritmo y melodía. | [Ir a Artículo 1](articulo-1.md) | 
+| **🎷 Géneros Clave y Evolución** | Panorama de estilos: Rock, Jazz, Electrónica, Clásica. | [Ir a Artículo 2](articulo-2.md) | 
 | **🎚️ Producción de Audio Moderna** | El proceso de mezcla, masterización y *sound design*. | [Ir a Artículo 3](articulo-3.md) | 
 | **🕰️ Historia del Sonido Grabado** | Desde el fonógrafo hasta el streaming digital. | [Ir a Artículo 5](articulo-5.md) | 
 | **🌊 Acústica y Ondas** | Ciencia detrás del sonido, frecuencias y reverberación. | [Ir a Artículo 4](articulo-4.md) | 
-| **🎷 Géneros Clave y Evolución** | Panorama de estilos: Rock, Jazz, Electrónica, Clásica. | [Ir a Artículo 2](articulo-2.md) | 
 
 
 ## 📊 Estadísticas del Proyecto
