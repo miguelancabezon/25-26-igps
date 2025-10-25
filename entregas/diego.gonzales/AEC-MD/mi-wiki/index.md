@@ -1,7 +1,7 @@
 # 🔴 Manchester United: Wiki Completa
 
 <div align="center">
-  <img src="../AEC-MD/recursos/imagenes/manchester-united-banner1.jpg" alt="Banner Manchester United" style="max-width:80%;">
+  <img src="../recursos/imagenes/manchester-united-banner1.jpg" alt="Banner Manchester United" style="max-width:80%;">
 </div>
 
 ---
