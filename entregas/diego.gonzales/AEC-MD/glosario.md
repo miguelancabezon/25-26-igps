@@ -28,7 +28,7 @@ Este glosario contiene **13 términos fundamentales** relacionados con el **Manc
 
 ## Términos del Glosario
 
-### Balón de Oro 🏆 {#balón-de-oro}
+### Balón de Oro 🏆 
 
 **Categoría:** Premios Individuales
 
@@ -38,7 +38,7 @@ El **Balón de Oro** es el premio individual más prestigioso del fútbol mundia
 
 ---
 
-### Busby Babes 👤 {#busby-babes}
+### Busby Babes 👤 
 
 **Categoría:** Equipos Históricos
 
@@ -50,7 +50,7 @@ Nombre dado a la **generación de jóvenes talentos** desarrollados por Matt Bus
 
 ---
 
-### Champions League 🏆 {#champions-league}
+### Champions League 🏆 
 
 **Categoría:** Competiciones Europeas
 
@@ -60,7 +60,7 @@ La **UEFA Champions League** es la competición de clubes más prestigiosa de Eu
 
 ---
 
-### Clase del 92 👤 {#clase-del-92}
+### Clase del 92 👤 
 
 **Categoría:** Equipos Históricos
 
@@ -70,7 +70,7 @@ Generación legendaria de juveniles que debutaron alrededor de 1992: [David Beck
 
 ---
 
-### FA Cup 🏆 {#fa-cup}
+### FA Cup 🏆 
 
 **Categoría:** Competiciones Domésticas
 
@@ -80,7 +80,7 @@ La **Football Association Cup** es la competición de copa más antigua del mund
 
 ---
 
-### Fergie Time ⚽ {#fergie-time}
+### Fergie Time ⚽ 
 
 **Categoría:** Conceptos Futbolísticos
 
@@ -90,7 +90,7 @@ Término que describe la tendencia del United bajo Ferguson de anotar **goles de
 
 ---
 
-### Matt Busby 👤 {#matt-busby}
+### Matt Busby 👤 
 
 **Categoría:** Managers Históricos
 
@@ -100,7 +100,7 @@ Término que describe la tendencia del United bajo Ferguson de anotar **goles de
 
 ---
 
-### Old Trafford 🏟️ {#old-trafford}
+### Old Trafford 🏟️ 
 
 **Categoría:** Estadios
 
@@ -110,7 +110,7 @@ Término que describe la tendencia del United bajo Ferguson de anotar **goles de
 
 ---
 
-### Premier League 🏆 {#premier-league}
+### Premier League 🏆 
 
 **Categoría:** Competiciones Domésticas
 
@@ -120,7 +120,7 @@ La **Premier League** es la máxima categoría del fútbol inglés desde 1992. E
 
 ---
 
-### Sir Alex Ferguson 👤 {#sir-alex-ferguson}
+### Sir Alex Ferguson 👤 
 
 **Categoría:** Managers Históricos
 
@@ -132,7 +132,7 @@ La **Premier League** es la máxima categoría del fútbol inglés desde 1992. E
 
 ---
 
-### Tragedia de Múnich ⚽ {#tragedia-de-múnich}
+### Tragedia de Múnich ⚽ 
 
 **Categoría:** Eventos Históricos
 
@@ -142,7 +142,7 @@ El **desastre aéreo de Múnich** ocurrió el **6 de febrero de 1958** cuando el
 
 ---
 
-### Triplete 🏆 {#triplete}
+### Triplete 🏆 
 
 **Categoría:** Logros Históricos
 
@@ -154,7 +154,7 @@ El **Triplete** es ganar tres competiciones mayores en una temporada. El Manches
 
 ---
 
-### United Way ⚽ {#united-way}
+### United Way ⚽ 
 
 **Categoría:** Conceptos Futbolísticos
 
