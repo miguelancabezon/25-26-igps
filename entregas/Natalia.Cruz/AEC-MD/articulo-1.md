@@ -1,6 +1,6 @@
 # 🎼 Teoría Musical: Los Pilares Fundamentales
 
-> [Inicio](../AEC-MD/index.md) > Fundamentos > Teoría Musical
+> **Breadcrumb:** [Inicio](../AEC-MD/index.md) > Fundamentos > Teoría Musical
 
 | **Info** | **Detalle** | 
 | :--- | :--- | 
