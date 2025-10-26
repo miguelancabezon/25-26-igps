@@ -3,7 +3,7 @@
 ---
 
 <p align="center">
-  <img src="recursos/imagenes/banner_duran.png" alt="Banner de Durán" width="85%">
+  <img src="miwiki/imagenes/banner_duran.png" alt="Banner de Durán" width="85%">
 </p>
 
 ---
