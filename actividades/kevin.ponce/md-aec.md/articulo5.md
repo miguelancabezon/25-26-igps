@@ -344,26 +344,33 @@ La decadencia de las películas recientes de Star Wars no es inevitable ni irrev
 
 [3] NPD Group. (2018). "Star Wars Toy Sales Analysis 2015-2018." _Market Research Report_. [https://www.npd.com/news/entertainment-top-tens/](https://www.npd.com/news/entertainment-top-tens/) - Análisis del impacto en ventas de merchandising durante la era secuela.
 
+**Ver referencias completas con IDs únicos en:** [📚 Referencias](referencias.md) - IDs: PEL-001, PRE-001, PRE-002
+
 ### Bibliografía Adicional
 
 - Boucher, Geoff. (2019). "The Rise of Skywalker: Inside the Final Chapter of the Skywalker Saga." _The Hollywood Reporter_.
 - Campbell, Joseph. (1949). _The Hero with a Thousand Faces_. Pantheon Books. Obra fundamental que inspiró la estructura narrativa de Star Wars.
 - Rinzler, J.W. (2013). _The Making of Star Wars: The Definitive Story Behind the Original Film_. Del Rey Books.
+- **[📖 Glosario](glosario.md)** - Términos: [Luke Skywalker](glosario.md#luke-skywalker), [Primera Orden](glosario.md#primera-orden), [Palpatine](glosario.md#palpatine)
 
 ### Artículos Relacionados
 
 #### Ver también:
 - [El Impacto Cultural de Star Wars en la Ciencia Ficción](./articulo1.md)
-- [Análisis Comparativo: Mandalorian vs. Trilogía Secuela](./articulo2.md)
-- [La Visión Original de George Lucas vs. La Era Disney](./articulo3.md)
+- [Análisis Comparativo: Mandalorian vs. Trilogía Secuela](./articulo3.md)
+- [La Visión Original de George Lucas vs. La Era Disney](./articulo2.md)
 - [El Futuro de Star Wars: ¿Puede Recuperarse la Franquicia?](./articulo4.md)
-- [Análisis de Personajes: Rey y el Problema del Mary Sue](./articulo6.md)
+- [📖 Glosario Completo](./glosario.md)
+- [📚 Referencias Bibliográficas](./referencias.md)
+- [🏠 Página Principal](./index.md)
 
 ---
 
 ### Navegación
 
-[← Artículo Anterior: El Fenómeno Marvel](./articulo4.md) | [Siguiente Artículo: El Auge de las Series de TV →](./articulo6.md)
+[← Artículo Anterior: Las Guerras Clon](./articulo4.md) | [Siguiente Artículo: Glosario →](./glosario.md)
+
+[🏠 Volver al Inicio](./index.md)
 
 ---
 

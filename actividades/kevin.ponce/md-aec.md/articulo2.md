@@ -22,7 +22,7 @@
 
 ## Introducción
 
-La **República Galáctica** fue una construcción política de enorme escala: un intento de articular un contrato social entre miles de mundos con diferentes niveles de desarrollo, idiomas y prioridades. Más que una simple institución, la República funcionó como una red de gobernanza que permitió el comercio interplanetario, la resolución diplomática de conflictos y la creación de normas comunes. Durante milenios, sus estructuras—el *Senado Galáctico*, los comités especializados y las cortes interestelares—sirvieron para mediar entre intereses locales y metas comunes. No obstante, la magnitud de la República también fue su talón de Aquiles: la distancia geográfica, la heterogeneidad cultural y la concentración de poder en centros como Coruscant generaron fricciones que los mecanismos institucionales no resolvieron con suficiencia. Las megacorporaciones, con recursos y redes de influencia crecientes, impusieron agendas económicas que distorsionaron la representatividad del Senado. Simultáneamente, los Jedi, inicialmente vistos como pastores espirituales y diplomáticos, se involucraron progresivamente en asuntos militares, lo que cambió la percepción pública sobre su neutralidad.
+La [**República Galáctica**](glosario.md#república-galáctica) fue una construcción política de enorme escala: un intento de articular un contrato social entre miles de mundos con diferentes niveles de desarrollo, idiomas y prioridades. Más que una simple institución, la República funcionó como una red de gobernanza que permitió el comercio interplanetario, la resolución diplomática de conflictos y la creación de normas comunes. Durante milenios, sus estructuras—el [*Senado Galáctico*](glosario.md#senado-galáctico), los comités especializados y las cortes interestelares—sirvieron para mediar entre intereses locales y metas comunes. No obstante, la magnitud de la República también fue su talón de Aquiles: la distancia geográfica, la heterogeneidad cultural y la concentración de poder en centros como [Coruscant](glosario.md#coruscant) generaron fricciones que los mecanismos institucionales no resolvieron con suficiencia. Las megacorporaciones, con recursos y redes de influencia crecientes, impusieron agendas económicas que distorsionaron la representatividad del Senado. Simultáneamente, los [Jedi](glosario.md#jedi), inicialmente vistos como [pastores espirituales y diplomáticos](glosario.md#guardianes-de-la-paz), se involucraron progresivamente en asuntos militares, lo que cambió la percepción pública sobre su neutralidad.
 
 En este artículo analizamos esas tensiones desde distintas perspectivas: política, económica, cultural y militar. Se presentarán cronologías, tablas comparativas y diagramas para facilitar la comprensión, además de vínculos a artículos relacionados dentro de esta wiki —por ejemplo, [Origen del Imperio](articulo1.md), la ficha de [Grogu](articulo3.md) y la [página principal](index.md)— y referencias externas como Wookieepedia, StarWars.com y artículos académicos sobre gobernanza comparada. El objetivo es ofrecer una visión integrada que permita ver por qué una república longeva puede entrar en procesos de decadencia y cómo esos procesos se traducen en transformaciones institucionales profundas.
 
@@ -103,9 +103,9 @@ flowchart LR
 - Falta de transparencia en procesos críticos.
 
 ### Episodios clave
-- Crisis de Naboo (32 BBY) — manipulación política.
-- Guerras Clon (22–19 BBY) — militarización y emergencia.
-- Ascenso de Palpatine — transformación constitucional.
+- Crisis de Naboo ([32 BBY](glosario.md#bby-before-the-battle-of-yavin)) — manipulación política.
+- [Guerras Clon](glosario.md#guerras-clon) ([22–19 BBY](glosario.md#bby-before-the-battle-of-yavin)) — militarización y emergencia.
+- Ascenso de [Palpatine](glosario.md#palpatine) — transformación constitucional.
 
 ### Consecuencias sistémicas
 - Erosión de la representatividad sénatorial.
@@ -198,6 +198,8 @@ Tabla de pérdidas estimadas y cronologías por sector durante las Guerras Clon.
 
 - Las referencias mezclan fuentes oficiales y reconstrucciones; ver Wookieepedia y StarWars.com para entradas específicas.  
 - Enlaces internos relevantes: [Origen del Imperio](articulo1.md), [Grogu](articulo3.md), [Inicio](index.md), [Origen del Imperio — Fundación](articulo1.md#fundación-del-imperio), [Grogu — Poderes](articulo3.md#poderes).
+- Consulta el [📖 Glosario](glosario.md) para definiciones de términos clave.
+- Revisa las [📚 Referencias](referencias.md) para la bibliografía completa.
 
 ---
 
@@ -205,6 +207,9 @@ Tabla de pérdidas estimadas y cronologías por sector durante las Guerras Clon.
 
 - [Origen del Imperio](articulo1.md)  
 - [Grogu — ficha](articulo3.md)  
+- [Las Guerras Clon](articulo4.md)
+- [📖 Glosario](glosario.md)
+- [📚 Referencias](referencias.md)
 - [Página principal](index.md)
 
 ---

@@ -46,9 +46,9 @@
 
 ## Introducción
 
-Las **Guerras Clon** representan uno de los **conflictos más devastadores** en la historia de la galaxia conocida, un cataclismo de tres años que marcó el fin de mil años de paz bajo la **República Galáctica** y dio nacimiento al opresivo **Imperio Galáctico**. Este conflicto, que transcurrió entre el **22 ABY y el 19 ABY** (Antes de la Batalla de Yavin), enfrentó al **Gran Ejército de la República** —compuesto por millones de soldados clon genéticamente idénticos y dirigidos por los Jedi— contra el **Ejército Droide Separatista**, una vasta fuerza automatizada financiada por corporaciones y liderada por el Conde Dooku.
+Las **[Guerras Clon](glosario.md#guerras-clon)** representan uno de los **conflictos más devastadores** en la historia de la galaxia conocida, un cataclismo de tres años que marcó el fin de mil años de paz bajo la [**República Galáctica**](glosario.md#república-galáctica) y dio nacimiento al opresivo [**Imperio Galáctico**](glosario.md#imperio-galáctico). Este conflicto, que transcurrió entre el **[22 ABY y el 19 ABY](glosario.md#aby-after-the-battle-of-yavin)** (Antes de la Batalla de Yavin), enfrentó al [**Gran Ejército de la República**](glosario.md#ejército-clon) —compuesto por millones de soldados clon genéticamente idénticos y dirigidos por los [Jedi](glosario.md#jedi)— contra el [**Ejército Droide Separatista**](glosario.md#ejército-droide), una vasta fuerza automatizada financiada por corporaciones y liderada por el [Conde Dooku](glosario.md#conde-dooku).
 
-Lo que la galaxia desconocía era que toda la guerra había sido **orquestada meticulosamente** desde las sombras por **Darth Sidious** (el Senador Supremo Palpatine), un Lord Sith que controlaba ambos bandos del conflicto con el objetivo final de destruir a los Jedi, consolidar su poder absoluto y transformar la democracia en dictadura. Las Guerras Clon no fueron simplemente un enfrentamiento militar entre dos facciones ideológicas, sino una **trampa elaborada** diseñada para cumplir una antigua venganza Sith que había estado preparándose durante un milenio[1].
+Lo que la galaxia desconocía era que toda la guerra había sido **orquestada meticulosamente** desde las sombras por [**Darth Sidious**](glosario.md#darth-sidious) (el Senador Supremo [Palpatine](glosario.md#palpatine)), un [Lord Sith](glosario.md#sith) que controlaba ambos bandos del conflicto con el objetivo final de destruir a los Jedi, consolidar su poder absoluto y transformar la democracia en dictadura. Las Guerras Clon no fueron simplemente un enfrentamiento militar entre dos facciones ideológicas, sino una **trampa elaborada** diseñada para cumplir una antigua venganza Sith que había estado preparándose durante un milenio[1].
 
 El conflicto se caracterizó por batallas masivas en miles de sistemas estelares, desde los desiertos áridos de **Geonosis** donde comenzó todo, hasta los bosques de **Kashyyyk**, las llanadas nevadas de **Rhen Var**, y las torres urbanas de **Coruscant**. Millones de seres —tanto orgánicos como sintéticos— perecieron en los combates, y sistemas enteros fueron devastados por el fuego cruzado entre la República y los Separatistas. Planetas que habían prosperado durante generaciones quedaron reducidos a escombros, economías fueron destruidas, y poblaciones civiles sufrieron horrores inimaginables.
 
@@ -540,24 +540,27 @@ Las consecuencias de las Guerras Clon resonaron durante generaciones:
 - **Traviss, Karen** - *Star Wars Republic Commando Series*. Del Rey Books, 2004-2009. Exploración de la perspectiva de los soldados clon.
 - **StarWars.com** - Clone Wars Campaign Guide: https://www.starwars.com/databank/the-clone-wars
 - **Wookieepedia** - The Clone Wars: https://starwars.fandom.com/wiki/Clone_Wars
-
----
-
-## 🔗 Navegación
-
-[← Artículo Anterior: Grogu (Baby Yoda)](articulo3.md) | [Siguiente Artículo: El Imperio Galáctico →](articulo1.md)
-
-[↑ Volver arriba](#️-las-guerras-clon-el-conflicto-que-destruyó-la-república)
+- **[� Glosario](glosario.md)** - Términos clave: [Guerras Clon](glosario.md#guerras-clon), [Orden 66](glosario.md#orden-66), [Ejército Clon](glosario.md#ejército-clon)
+- **[📚 Referencias Completas](referencias.md)** - Bibliografía detallada (IDs: PEL-005, PEL-006, SER-002)
 
 ---
 
 ## 📚 Ver También
 
-- [⚔️ La Orden Jedi y la Fuerza](articulo1.md)
-- [🏛️ Origen de la República Galáctica](articulo2.md)
-- [👶 Grogu y la Era Post-Imperio](articulo3.md)
-- [😈 Darth Sidious: El Emperador](articulo-palpatine.md)
-- [🌑 La Orden 66 en Detalle](articulo-orden66.md)
+- [👑 Origen del Imperio Galáctico](articulo1.md) - Consecuencia directa de las Guerras Clon
+- [🏛️ Origen de la República Galáctica](articulo2.md) - Sistema destruido por el conflicto
+- [👶 Grogu (Baby Yoda)](articulo3.md) - Superviviente de la Orden 66
+- [� Glosario](glosario.md) - Términos y definiciones completas
+- [📚 Referencias](referencias.md) - Fuentes bibliográficas
+- [🏠 Página Principal](index.md) - Inicio de la wiki
+
+---
+
+## 🔗 Navegación
+
+[← Artículo Anterior: Grogu (Baby Yoda)](articulo3.md) | [Siguiente Artículo: Decadencia de Star Wars →](articulo5.md)
+
+[↑ Volver arriba](#️-las-guerras-clon-el-conflicto-que-destruyó-la-república)
 
 ---
 

@@ -20,7 +20,7 @@
 
 ## Introducción
 
-La transición de la Antigua República al **Imperio Galáctico** es un caso paradigmático de cómo las instituciones democráticas pueden ser secuestradas desde dentro por actores que explotan crisis sistémicas. A primera vista, la consolidación del poder por parte del Canciller Palpatine parecía una respuesta temporal a la amenaza separatista; sin embargo, sus maniobras políticas culminaron en la abolición de las libertades republicanas y en la institucionalización de un régimen autoritario. En términos prácticos, la creación del Imperio implicó la centralización del gobierno, la militarización de la administración pública y la delegación de potestades excepcionales al Ejecutivo. En este artículo exploramos no solo los eventos (*Orden 66*, creación del ejército clon, proclamación del Emperador), sino también las dinámicas políticas y las ideologías que justificaron la transformación: el miedo como herramienta de legitimación, la tecnocracia militar y la narrativa de estabilidad a costa de la democracia. Esta introducción ofrece contexto para las secciones siguientes y enlaza a otros análisis en la wiki, como [Origen de la República](articulo2.md) y la ficha sobre [Grogu](articulo3.md), que ayudan a entender el impacto social y cultural del cambio de régimen. Además, se incluyen diagramas conceptuales y cronologías para visualizar las etapas del proceso, y tablas comparativas que permiten contrastar la República, el Imperio y la Primera Orden.
+La transición de la [Antigua República](glosario.md#antigua-república) al [**Imperio Galáctico**](glosario.md#imperio-galáctico) es un caso paradigmático de cómo las instituciones democráticas pueden ser secuestradas desde dentro por actores que explotan crisis sistémicas. A primera vista, la consolidación del poder por parte del [Canciller](glosario.md#canciller-supremo) [Palpatine](glosario.md#palpatine) parecía una respuesta temporal a la amenaza [separatista](glosario.md#separatistas); sin embargo, sus maniobras políticas culminaron en la abolición de las libertades republicanas y en la institucionalización de un régimen autoritario. En términos prácticos, la creación del Imperio implicó la centralización del gobierno, la militarización de la administración pública y la delegación de potestades excepcionales al Ejecutivo. En este artículo exploramos no solo los eventos ([*Orden 66*](glosario.md#orden-66), creación del [ejército clon](glosario.md#ejército-clon), proclamación del [Emperador](glosario.md#emperador-palpatine)), sino también las dinámicas políticas y las ideologías que justificaron la transformación: el miedo como herramienta de legitimación, la tecnocracia militar y la narrativa de estabilidad a costa de la democracia. Esta introducción ofrece contexto para las secciones siguientes y enlaza a otros análisis en la wiki, como [Origen de la República](articulo2.md) y la ficha sobre [Grogu](articulo3.md), que ayudan a entender el impacto social y cultural del cambio de régimen. Además, se incluyen diagramas conceptuales y cronologías para visualizar las etapas del proceso, y tablas comparativas que permiten contrastar la República, el Imperio y la [Primera Orden](glosario.md#primera-orden).
 
 > *La historia completa requiere analizar causas profundas (económicas, culturales y militares) y las decisiones concretas de actores clave.*
 
@@ -50,12 +50,12 @@ La transición de la Antigua República al **Imperio Galáctico** es un caso par
 ## Fundación del Imperio
 
 ### Orden 66 y su ejecución
-- Resumen de la orden: eliminación de los Jedi.
-- Mecanismos: chips inhibitorios en clones.
+- Resumen de la orden: eliminación de los [Jedi](glosario.md#jedi).
+- Mecanismos: chips inhibitorios en [clones](glosario.md#ejército-clon).
 - Consecuencias inmediatas: ruptura del aparato militar-jedi.
 
 ### Proclamación del Emperador
-- Fecha clave: 19 BBY.
+- Fecha clave: [19 BBY](glosario.md#bby-before-the-battle-of-yavin).
 - Declaración: transformación constitucional.
 - Recepción pública y resistencia.
 
@@ -199,6 +199,8 @@ Registro de pérdidas humanas en puntos clave de las Guerras Clon (estimaciones 
 
 - Las referencias mezclan fuentes oficiales y reconstrucciones académicas.  
 - Para más lecturas, ver [Origen de la República](articulo2.md) y los análisis culturales en [Grogu](articulo3.md).
+- Consulta el [📖 Glosario](glosario.md) para términos específicos.
+- Revisa las [📚 Referencias](referencias.md) para fuentes bibliográficas completas.
 
 ---
 

@@ -39,9 +39,9 @@
 
 ## Introducción
 
-**Grogu**, conocido popularmente como **"Baby Yoda"**, emergió como uno de los personajes más icónicos y queridos del universo *Star Wars* desde su primera aparición en noviembre de 2019 en la serie *The Mandalorian*. Este pequeño ser de **50 años de edad** pertenece a la misma **especie misteriosa** que el legendario **Maestro Yoda**, una de las razas más enigmáticas de la galaxia de la que aún no se conoce el nombre oficial.
+**[Grogu](glosario.md#grogu)**, conocido popularmente como **"Baby Yoda"**, emergió como uno de los personajes más icónicos y queridos del universo *Star Wars* desde su primera aparición en noviembre de 2019 en la serie *[The Mandalorian](glosario.md#the-mandalorian)*. Este pequeño ser de **50 años de edad** pertenece a la misma **especie misteriosa** que el legendario **Maestro [Yoda](glosario.md#yoda)**, una de las razas más enigmáticas de la galaxia de la que aún no se conoce el nombre oficial.
 
-La aparición de Grogu no solo revitalizó la franquicia de *Star Wars*, sino que desencadenó un **fenómeno cultural sin precedentes** en la era del streaming. Su diseño adorable, combinado con poderosas habilidades en la Fuerza y una personalidad entrañable, capturó los corazones de millones de espectadores alrededor del mundo. El personaje se convirtió en un **símbolo de esperanza e inocencia** en un universo marcado por décadas de conflicto galáctico y oscuridad.
+La aparición de Grogu no solo revitalizó la franquicia de *Star Wars*, sino que desencadenó un **fenómeno cultural sin precedentes** en la era del streaming. Su diseño adorable, combinado con poderosas habilidades en [la Fuerza](glosario.md#fuerza-la) y una personalidad entrañable, capturó los corazones de millones de espectadores alrededor del mundo. El personaje se convirtió en un **símbolo de esperanza e inocencia** en un universo marcado por décadas de conflicto galáctico y oscuridad.
 
 Lo que hace particularmente fascinante a Grogu es la **dualidad de su existencia**: por un lado, es un infante vulnerable que necesita protección constante; por otro, posee un poder latente en la Fuerza que rivaliza con el de los Jedi más experimentados. Esta contradicción crea una narrativa rica y compleja que explora temas de **identidad, protección, legado** y el **verdadero significado de la familia**. Su viaje junto a Din Djarin, el Mandaloriano, no es solo una historia de supervivencia, sino una exploración profunda de cómo las conexiones emocionales trascienden las barreras culturales y las diferencias de especie[1].
 
@@ -385,6 +385,19 @@ flowchart TD
 - **StarWars.com** - Databank oficial sobre Grogu: https://www.starwars.com/databank/grogu
 - **Wookieepedia** - Entrada enciclopédica completa: https://starwars.fandom.com/wiki/Grogu
 - **The Mandalorian Season 1-3** - Material fuente primario disponible en Disney+
+- **[📖 Glosario](glosario.md)** - Consulta términos como [Grogu](glosario.md#grogu), [La Fuerza](glosario.md#fuerza-la), [Yoda](glosario.md#yoda)
+- **[📚 Referencias Completas](referencias.md)** - Bibliografía detallada con IDs únicos
+
+---
+
+## 🔗 Ver También
+
+- [Origen del Imperio](articulo1.md) - Contexto histórico
+- [Origen de la República](articulo2.md) - Era previa
+- [Las Guerras Clon](articulo4.md) - Conflicto que presenció Grogu
+- [📖 Glosario](glosario.md) - Términos y definiciones
+- [📚 Referencias](referencias.md) - Fuentes bibliográficas
+- [🏠 Página Principal](index.md) - Inicio de la wiki
 
 ---
 
@@ -393,5 +406,6 @@ flowchart TD
 [← Artículo Anterior: Origen de la República](articulo2.md) | [Siguiente Artículo: Las Guerras Clon →](articulo4.md)
 
 [↑ Volver arriba](#-grogu-baby-yoda-el-fenómeno-cultural-de-star-wars)
+
 *"Este es el camino."*
 
