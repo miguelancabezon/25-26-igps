@@ -3,7 +3,7 @@
 [Inicio](index.md) > [Biografía](Articulo3.md) > La Presidencia de George Washington  
 
 :calendar: **Creado:** 22 de octubre de 2025  
-:arrows_counterclockwise: **Última actualización:** 22 de octubre de 2025  
+:arrows_counterclockwise: **Última actualización:** 26 de octubre de 2025  
 :hourglass: **Lectura:** 5 min  
 :ticket: **Etiquetas:** #Historia #EEUU #Washington #Presidencia #Gobierno  
 
