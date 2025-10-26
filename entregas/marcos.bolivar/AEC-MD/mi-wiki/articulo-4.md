@@ -28,7 +28,6 @@
    - [Impacto en la percepción del universo](#impacto-en-la-percepción-del-universo)
 5. [Conclusión: La riqueza narrativa transmedia](#conclusión-la-riqueza-narrativa-transmedia)
 6. [Referencias](#referencias)
-7. [Ver también](#ver-también)
 
 ---
 
