@@ -5,7 +5,7 @@
   <br>
   <img src="https://img.shields.io/badge/estado-en%20desarrollo-yellow">
   <img src="https://img.shields.io/badge/artículos-5-blue">
-  <img src="https://img.shields.io/badge/autor-Estudiante-green">
+  <img src="https://img.shields.io/badge/autor-izan.herranz-green">
 </div>
 
 ---
