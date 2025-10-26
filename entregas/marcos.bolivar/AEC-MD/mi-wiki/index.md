@@ -103,3 +103,12 @@ flowchart LR
 
 ❓ FAQ (preguntas frecuentes)
 <details> <summary>¿Cyberpunk 2077 y Edgerunners pertenecen al mismo universo?</summary> Sí, Edgerunners ocurre en el mismo mundo, mostrando historias paralelas y complementarias. </details> <details> <summary>¿Cómo enlazo términos del glosario desde un artículo?</summary> Usa enlaces relativos, por ejemplo: `[Netrunner](glosario.md#netrunner)`. </details> <details> <summary>¿Dónde guardar las imágenes?</summary> En `recursos/imagenes/` y nómbralas sin espacios, ejemplo: `nightcity-banner.jpg`. </details> <details> <summary>¿Cómo verificar los diagramas Mermaid?</summary> Abre el archivo en VS Code o usa el preview de GitHub; ambos renderizan Mermaid. </details> <details> <summary>¿Puedo usar imágenes oficiales del juego?</summary> Para proyecto académico personal se acepta, pero evita republicarlas en entornos públicos sin permiso. </details>
+
+## 🏁 Footer
+<div align="center">
+
+🦾 Cyberpunk 2077 Wiki Personal Interconectada
+Creada por Marcos Bolívar
+© 2025 | Proyecto académico - AEC-MD
+
+</div>
