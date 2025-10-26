@@ -1,112 +1,70 @@
-# 🛡️ Respuestas y esperanza: militarización, comunidad y futuro de Durán
-
-**Ruta:** Inicio > Delincuencia en Ecuador > Respuestas y esperanza  
-**Creado:** 26/10/2025  
-**Última actualización:** 26/10/2025  
-**Tiempo estimado de lectura:** 8 minutos  
-**Etiquetas:** #Durán #Seguridad #Militarización #Esperanza #ReformaSocial  
+<h1 align="center">🚨 La delincuencia en Durán, Ecuador, y su impacto nacional</h1>
 
 ---
 
-## 📑 Tabla de Contenidos
-- [Introducción](#introducción)
-- [1. La intervención militar y policial](#1-la-intervención-militar-y-policial)
-- [2. Reformas institucionales y judiciales](#2-reformas-institucionales-y-judiciales)
-- [3. Participación ciudadana y organización comunitaria](#3-participación-ciudadana-y-organización-comunitaria)
-- [4. Educación, empleo y reinserción social](#4-educación-empleo-y-reinserción-social)
-- [5. Perspectivas futuras y sostenibilidad](#5-perspectivas-futuras-y-sostenibilidad)
-- [Diagramas Visuales](#📊-diagramas-visuales)
+<p align="center">
+  <img src="recursos/imagenes/banner-duran.jpg" alt="Banner de Durán" width="85%">
+</p>
 
 ---
 
-## 🧩 Introducción
+## 📖 Descripción del proyecto
 
-Tras años de violencia y caos, **Durán** ha comenzado un proceso de transformación impulsado por la acción conjunta del **Estado, las Fuerzas Armadas y la ciudadanía organizada**.  
-Si bien la militarización ha generado debate, también ha permitido recuperar el control territorial y reducir los índices de homicidios.
-
-Este artículo analiza las respuestas institucionales y sociales frente a la crisis, así como los primeros signos de esperanza que comienzan a surgir entre los habitantes.
+Esta miniwiki analiza en profundidad la situación de la **delincuencia en el cantón Durán**, uno de los territorios más violentos del Ecuador, y cómo sus dinámicas delictivas repercuten a nivel nacional.  
+A través de cinco artículos interconectados, se exploran las **causas estructurales**, los **grupos criminales**, el **impacto social** y las **respuestas institucionales** que configuran la actual crisis de seguridad.
 
 > [!NOTE]
-> La recuperación de Durán no solo depende de la fuerza pública, sino de una estrategia integral que combine **seguridad, educación y oportunidades.**
+> Proyecto desarrollado para la asignatura *AEC-MD*.  
+> Autor: *[Tu nombre completo]* · Octubre 2025.
 
 ---
 
-## 1. La intervención militar y policial
+## 🗂️ Índice de artículos
 
-En enero de 2024, el gobierno ecuatoriano desplegó un contingente permanente de **militares y policías** en Durán.  
-Esta acción buscó frenar el avance del crimen organizado y retomar el control de los barrios más peligrosos.
-
-| Fuerza | Personal desplegado | Objetivo |
-|----------|-------------------|-----------|
-| Policía Nacional | 1 500 agentes | Control urbano y patrullaje |
-| Fuerzas Armadas | 800 soldados | Apoyo en operaciones y retenes |
-| Fiscalía | 30 fiscales | Procesos acelerados por delitos graves |
-| Intendencia | 15 inspectores | Clausura de locales ilegales |
-
-> [!WARNING]
-> La militarización no puede sostenerse de forma indefinida. Sin políticas sociales paralelas, el control recuperado puede perderse rápidamente.
+| Artículo | Descripción |
+|-----------|-------------|
+| [⚠️ Panorama del crimen en Durán](articulo-1.md) | Datos generales, estadísticas y evolución de la violencia. |
+| [💣 Causas estructurales](articulo-2.md) | Factores económicos, sociales y geográficos que alimentan la delincuencia. |
+| [🕵️ Los actores del crimen organizado](articulo-3.md) | Bandas, estructuras y rivalidades criminales. |
+| [💔 Impacto social](articulo-4.md) | Consecuencias en la comunidad, el miedo y la migración interna. |
+| [🛡️ Respuestas y esperanza](articulo-5.md) | Acciones del Estado, militarización y proyectos de recuperación. |
 
 ---
 
-## 2. Reformas institucionales y judiciales
+## 📊 Estadísticas del proyecto
 
-El Estado implementó **reformas para agilizar la justicia penal** y sancionar la corrupción dentro de las fuerzas del orden.  
-Se crearon **unidades especializadas** en delitos de crimen organizado y se impulsó la digitalización de procesos judiciales.
-
-Estas medidas buscan garantizar una **respuesta más eficiente y transparente**, reduciendo la impunidad y mejorando la confianza en las instituciones.
-
-| Reforma | Resultado esperado |
-|----------|--------------------|
-| Fiscalías especializadas en Durán | Procesamiento más rápido de casos |
-| Depuración policial | Reducción de corrupción interna |
-| Tribunales móviles | Acceso a justicia en zonas conflictivas |
-
----
-
-## 3. Participación ciudadana y organización comunitaria
-
-El cambio no solo vino desde arriba.  
-Organizaciones barriales, iglesias y colectivos juveniles han promovido **campañas de convivencia y recuperación de espacios públicos**.  
-El objetivo es devolver a los barrios su sentido de comunidad.
-
-Proyectos como **“Durán renace”** y **“Jóvenes por la paz”** han logrado involucrar a cientos de voluntarios en tareas de limpieza, muralismo y deporte comunitario.
-
-> [!TIP]
-> La participación ciudadana es el factor más decisivo para mantener los logros de seguridad a largo plazo.
+| Elemento | Cantidad |
+|-----------|-----------|
+| Total de artículos | 5 |
+| Diagramas Mermaid incluidos | 12 |
+| Tablas informativas | 15 |
+| Fuentes documentadas | 10+ |
+| Palabras estimadas | 6,000+ |
+| Alertas tipo GitHub | 10+ |
+| Bloques colapsables | 10 (en FAQ y artículos) |
 
 ---
 
-## 4. Educación, empleo y reinserción social
+## 🕒 Últimas actualizaciones
 
-La violencia también se combate con **oportunidades reales**.  
-Se han puesto en marcha programas de **empleo joven**, becas educativas y talleres de reinserción para exmiembros de bandas.  
-Aunque aún limitados, estos esfuerzos han mostrado resultados positivos en barrios como *El Recreo* y *La Primavera*.
-
-| Programa | Enfoque | Beneficiarios |
-|-----------|----------|---------------|
-| Jóvenes Productivos | Formación técnica y empleo formal | 500 participantes |
-| Beca Futuro | Apoyo educativo en secundaria | 200 estudiantes |
-| Reinserción Durán | Capacitación laboral para exconvictos | 80 personas |
+| Fecha | Descripción |
+|--------|-------------|
+| 2025-10-22 | Creación del proyecto y elección del tema. |
+| 2025-10-23 | Diseño de estructura de carpetas. |
+| 2025-10-24 | Desarrollo de artículos 1 y 2. |
+| 2025-10-25 | Redacción de artículos 3 y 4. |
+| 2025-10-26 | Finalización del artículo 5 y revisión general. |
 
 ---
 
-## 5. Perspectivas futuras y sostenibilidad
-
-El desafío principal es **mantener la estabilidad lograda** y convertirla en un proceso duradero.  
-Los expertos coinciden en que la seguridad sostenible solo se alcanzará con **coordinación interinstitucional**, inversión social y educación cívica.
-
-Durán representa hoy un **laboratorio social** para el Ecuador: un territorio donde la violencia extrema se enfrenta con esperanza, pero también con la certeza de que el camino hacia la paz será largo.
-
-> [!IMPORTANT]
-> La esperanza en Durán crece no por la ausencia de miedo, sino por la voluntad colectiva de superarlo.
-
----
-
-## 📊 Diagramas Visuales
+## ⏳ Línea de tiempo del conflicto en Durán
 
 ```mermaid
-flowchart LR
-    A["Operativo militar 2024"] --> B["Control de barrios"]
-    B --> C["Desarticulación de bandas"]
-    C --> D["Reducción de homicidios"]
-    D --> E["Recuperación ciudadana"]
+timeline
+title Evolución de la violencia en Durán
+2015 : Aumento del microtráfico y primeros enfrentamientos
+2019 : Expansión de bandas y surgimiento de Chone Killers
+2021 : Escalada de homicidios y control de barrios
+2022 : Crisis de seguridad y estado de excepción
+2024 : Intervención militar en Durán
+2025 : Estrategias de pacificación y reconstrucción social
