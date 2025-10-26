@@ -132,35 +132,25 @@ Esta descripción añade información contextual y ejemplos de uso: puedes busca
 ## ⏳ Línea Temporal General de Star Wars
 
 ```mermaid
-gantt
-    title Cronología del Universo Star Wars
-    dateFormat YYYY
-    axisFormat %Y ABY
-    
+timeline
+    title Cronología del Universo Star Wars (BBY/ABY)
     section Era de la República
-    Fundación de la República    :milestone, -25000, 0d
-    Era Dorada                    :-15000, 14900y
-    
-    section Crisis y Conflicto
-    Crisis de Naboo              :crit, -32, 1y
-    Guerras Clon                 :crit, -22, 3y
-    
+        25000 BBY : Fundación de la República Galáctica
+        15000 BBY : Era Dorada de la República
+        1000 BBY : Reforma Ruusan - Regla de Dos Sith
+    section Crisis Pre-Imperial
+        32 BBY : Crisis de Naboo
+        22 BBY : Inicio de las Guerras Clon
+        19 BBY : Orden 66 - Purga Jedi : Proclamación del Imperio
     section Era Imperial
-    Orden 66 - Purga Jedi        :milestone, -19, 0d
-    Imperio Galáctico            :-19, 23y
-    
-    section Era de Rebelión
-    Batalla de Yavin             :milestone, 0, 0d
-    Guerra Civil Galáctica       :0, 4y
-    Batalla de Endor             :milestone, 4, 0d
-    
+        0 ABY : Batalla de Yavin - Destrucción Estrella de la Muerte
+        3 ABY : Batalla de Hoth
+        4 ABY : Batalla de Endor - Muerte del Emperador
     section Nueva República
-    Nueva República              :4, 30y
-    The Mandalorian (Grogu)      :9, 2y
-    
-    section Conflicto Moderno
-    Primera Orden                :crit, 34, 1y
-    Guerra FO vs Resistencia     :crit, 34, 1y
+        9 ABY : The Mandalorian - Era de Grogu
+        28 ABY : Fundación de la Primera Orden
+        34 ABY : Destrucción de Hosnian Prime
+        35 ABY : Batalla de Exegol - Derrota Final Sith
 ```
 
 ---
