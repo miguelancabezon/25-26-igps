@@ -1,4 +1,4 @@
-```markdown
+
 # 🔧 Tipos de paneles solares: cómo elegir el tuyo
 
 Inicio > Equipamiento > Paneles solares
