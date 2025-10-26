@@ -1,8 +1,10 @@
 # 🏙️ Staunton Island
-![Staunton Island](./recursos/imagenes/staunton.png)
-
 Creado en: 22/10/2025
 Última actualización: 26/10/2025
+Tiempo estimado de lectura: 4 min 52 sec
+
+![Staunton Island](./recursos/imagenes/staunton.png)
+
 
 > [!CAUTION]
 > Es posible que contenga spoilers

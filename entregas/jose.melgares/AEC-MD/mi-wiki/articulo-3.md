@@ -1,8 +1,10 @@
 # 🏘️ Shoreside Vale
-![Shoreside Vale](./recursos/imagenes/shoreside.png)
-
 Creado en: 22/10/2025
 Última actualización: 26/10/2025
+Tiempo estimado de lectura: 4 min 31 sec
+
+![Shoreside Vale](./recursos/imagenes/shoreside.png)
+
 
 > [!CAUTION]
 > Es posible que contenga spoilers

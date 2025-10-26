@@ -1,4 +1,7 @@
 # 🎮 Influencia en el diseño de Sandboxes
+Creado en: 22/10/2025
+Última actualización: 26/10/2025
+Tiempo estimado de lectura: 4 min 23 sec
 
 #### Tabla de Contenidos
 1. [Introducción](#introducción)

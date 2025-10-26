@@ -1,4 +1,7 @@
 # 🚶‍♂️ Vida Urbana y Exploración
+Creado en: 22/10/2025
+Última actualización: 26/10/2025
+Tiempo estimado de lectura: 5 min 38 sec
 
 #### Tabla de Contenidos
 1. [🌆 Una Ciudad que Nunca Duerme](#-una-ciudad-que-nunca-duerme)
@@ -30,6 +33,12 @@
 ### Ambientación
 Liberty City está diseñada para sentirse viva a toda hora. Desde el bullicio matutino en las calles de Portland hasta las luces de neón en el distrito financiero de Staunton Island, la ciudad simula un ciclo urbano constante. Peatones con rutinas propias, tráfico impredecible y sonidos ambientales —como sirenas, radios de autos y conversaciones callejeras— contribuyen a una atmósfera inmersiva que da la sensación de estar en una metrópolis real.
 
+<details> <summary><strong>📌 Información adicional</strong></summary>
+
+La vida urbana en GTA III está diseñada para simular una ciudad que respira: peatones con rutinas, tráfico dinámico, clima cambiante y emisoras de radio que reaccionan a los eventos del juego. Cada isla tiene su propio ritmo y estilo de vida, lo que influye directamente en la jugabilidad. Por ejemplo, Portland es más hostil y caótica, mientras que Staunton Island ofrece una experiencia más estructurada y corporativa. Esta diversidad urbana permite que el jugador experimente distintos tipos de exploración, desde persecuciones callejeras hasta infiltraciones en zonas residenciales.
+
+</details>
+
 ### NPCs
 Los NPCs reaccionan al entorno huyen de ti, se enfrentan entre ellos o simplemente caminan con indiferencia.
 
@@ -40,6 +49,12 @@ Las condiciones climáticas y el ciclo día-noche afectan la visibilidad, el com
 
 ## 🗺️ Exploración por Distritos: Tres Mundos en Uno
 Cada distrito de Liberty City ofrece una experiencia distinta:
+
+<details> <summary><strong>🧪 Ejemplo detallado</strong></summary>
+
+Imagina que Claude está en Chinatown, Portland. Mientras camina por las calles, escucha una conversación entre peatones, ve un coche chocar por una maniobra brusca y observa cómo una banda rival patrulla la zona. Decide robar un vehículo y, al encender la radio, escucha una noticia que hace referencia a una misión reciente. Esta escena, completamente emergente, no está guionizada, pero refleja cómo la ciudad responde a las acciones del jugador y genera momentos únicos de exploración urbana.
+
+</details>
 
 ### Portland
  Industrial y decadente, con callejones estrechos, fábricas y zonas portuarias. Ideal para misiones de bajo perfil y conflictos entre mafias.
@@ -134,12 +149,21 @@ sequenceDiagram
 ### Elementos visuales
 Liberty City cuenta historias sin necesidad de diálogos. La arquitectura, los grafitis, los anuncios publicitarios y la distribución de los espacios urbanos revelan tensiones sociales, decadencia económica y conflictos entre bandas.
 
+> [!NOTE]
+> Basada en Nueva York, se refleja en la ciudad el ambiente previo a los atentados del 11 de septiembre de 2001.
+
 ### Ambientación con objetos
 Un callejón lleno de basura y autos quemados sugiere violencia reciente. Un club nocturno con autos de lujo estacionados afuera indica poder y corrupción.Un barrio con casas idénticas y niños jugando refleja una falsa sensación de seguridad. 
 > Este enfoque de narrativa ambiental ha influido en muchos juegos posteriores, donde el entorno cuenta tanto como los personajes.
 
 ### Influencia
 La vida urbana y la exploración en Liberty City no son solo mecánicas de juego: son una experiencia sensorial y narrativa que convirtió a GTA III en un referente del género sandbox. Cada rincón de la ciudad tiene algo que contar, y cada jugador puede descubrirlo a su manera.
+
+<details> <summary><strong>📚 Datos históricos / Contexto</strong></summary>
+
+Antes de GTA III, los entornos urbanos en videojuegos eran limitados y poco interactivos. Liberty City cambió eso al ofrecer una ciudad tridimensional con sistemas interconectados: tráfico, facciones, misiones, clima y sonido ambiental. Inspirada en Nueva York, la ciudad fue diseñada para que cada rincón tuviera propósito y personalidad. Esta aproximación influyó en títulos posteriores como Assassin’s Creed, Watch Dogs y Sleeping Dogs, que adoptaron la idea de que explorar una ciudad podía ser tan emocionante como seguir una historia principal.
+
+</details>
 
 | Elemento urbano        | Función en el juego                          | Nivel de interacción     |
 |:------------------------|:---------------------------------------------|---------------------------:|

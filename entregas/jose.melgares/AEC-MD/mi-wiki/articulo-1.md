@@ -2,6 +2,7 @@
 ![Portland](recursos/imagenes/portland.jpg)
 Creado en: 22/10/2025
 Última actualización: 26/10/2025
+Tiempo estimado de lectura: 4 min 45 sec
 
 > [!CAUTION]
 > Es posible que contenga spoilers
