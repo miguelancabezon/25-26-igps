@@ -74,4 +74,32 @@ timeline
     2020 : Estreno de la campaña publicitaria con Keanu Reeves
     2022 : Estreno del anime "Cyberpunk: Edgerunners" (Netflix)
     2023 : Actualización 2.0 y expansión "Phantom Liberty"
+```
+```mermaid
+flowchart LR
+    A[Cyberpunk 2077] --> B[Night City 🌆]
+    A --> C[Tecnología 🧬]
+    A --> D[Corporaciones 🏢]
+    A --> E[Narrativa y Anime 🎞️]
+    A --> F[Filosofía y Cultura 💭]
+    B --> D
+    C --> F
+    E --> F
+    D --> C
 
+```
+### 📈 Estadísticas visuales rápidas
+
+| Categoría            | Peso relativo |
+| :------------------- | ------------: |
+| Mundo y ambientación |           25% |
+| Tecnología y ciencia |           20% |
+| Personajes y poder   |           20% |
+| Narrativa y estética |           20% |
+| Filosofía y cultura  |           15% |
+
+💡 Sabías que...
+<details> <summary>Dato 1</summary> El término *cyberpunk* se popularizó gracias a *Neuromante* (1984) de William Gibson. </details> <details> <summary>Dato 2</summary> *Edgerunners* impulsó un aumento de jugadores activos y la popularidad del lore en 2022. </details> <details> <summary>Dato 3</summary> Night City está inspirada en ciudades reales como Tokio, Los Ángeles y Hong Kong. </details>
+
+❓ FAQ (preguntas frecuentes)
+<details> <summary>¿Cyberpunk 2077 y Edgerunners pertenecen al mismo universo?</summary> Sí, Edgerunners ocurre en el mismo mundo, mostrando historias paralelas y complementarias. </details> <details> <summary>¿Cómo enlazo términos del glosario desde un artículo?</summary> Usa enlaces relativos, por ejemplo: `[Netrunner](glosario.md#netrunner)`. </details> <details> <summary>¿Dónde guardar las imágenes?</summary> En `recursos/imagenes/` y nómbralas sin espacios, ejemplo: `nightcity-banner.jpg`. </details> <details> <summary>¿Cómo verificar los diagramas Mermaid?</summary> Abre el archivo en VS Code o usa el preview de GitHub; ambos renderizan Mermaid. </details> <details> <summary>¿Puedo usar imágenes oficiales del juego?</summary> Para proyecto académico personal se acepta, pero evita republicarlas en entornos públicos sin permiso. </details>
