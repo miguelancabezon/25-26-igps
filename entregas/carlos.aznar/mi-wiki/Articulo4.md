@@ -93,5 +93,5 @@ Su figura sigue siendo un referente mundial de liderazgo, patriotismo y ética p
 [3] Britannica. "George Washington." https://www.britannica.com/biography/George-Washington
 
 
-⬆[Volver arriba](#🕊️-legado-y-muerte-de-george-washington)  
+⬆[Volver arriba](#legado-y-muerte-de-george-washington)  
 ← [Anterior: La Presidencia de George Washington](Articulo3.md) | [Siguiente: Legado póstumo →](Articulo5.md)
