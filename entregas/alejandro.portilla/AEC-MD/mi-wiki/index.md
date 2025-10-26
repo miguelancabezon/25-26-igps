@@ -19,5 +19,4 @@ Bienvenido a mi wiki sobre la **exploración espacial**. Aquí encontrarás art�
 ### 🛰️ Otros recursos
 
 - [Galería de imágenes espaciales](./imagenes/imagenes.md)
-- [Cronología de misiones](./cronologia.md)
 - [Referencias](./referencias.md)
