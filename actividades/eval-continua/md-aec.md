@@ -4,6 +4,10 @@
 
 **Crear una mini-Wiki sobre un tema de tu elección con múltiples páginas interconectadas.**
 
+
+>[!NOTE]
+>La entrega se debe hacer en la carpeta entregas > nombre.apellido > AEC-MD
+
 <br/>
 
 ## Requisitos
