@@ -1,4 +1,4 @@
-```markdown
+
 # ☀️ Energía solar en casa: cómo funciona realmente
 
 Inicio > Conceptos básicos > Energía solar doméstica
@@ -35,14 +35,3 @@ También es clave entender un punto: la energía solar no significa “me descon
 
 ---
 
-## Del sol al enchufe: el camino de la energía
-
-```mermaid
-flowchart LR
-    A[Luz solar ☀️] --> B[Panel solar]
-    B --> C[Corriente continua (CC)]
-    C --> D[Inversor]
-    D --> E[Corriente alterna (CA) usable en casa]
-    E --> F[Frigorífico / Lavadora / Coche eléctrico]
-    D --> G[Batería doméstica 🔋]
-    G --> H[Consumo nocturno 🌙]
