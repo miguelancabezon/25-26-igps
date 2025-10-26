@@ -1,5 +1,0 @@
-[captura1.png] forkeo el repositorio y lo clonoç
-[captura2.png] creo las nuevas carpetas
-[captura3.png] creo el archivo de texto
-[captura4.png] trackeo, comitteo y pusheo
-[captura5.png] creo la nueva rama

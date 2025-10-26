@@ -48,6 +48,20 @@ Esta integración inspiró juegos como [Red Dead Redemption](https://es.wikipedi
 
 El uso de espacios urbanos para contar historias emergentes (como emboscadas, persecuciones o traiciones) se convirtió en una norma del género.
 
+```mermaid
+flowchart TD
+    A[Liberty City en GTA III] --> B[Ciudad abierta y explorable]
+    B --> C[Diseño urbano detallado]
+    B --> D[Interacción con NPCs y tráfico]
+    B --> E[Misiones no lineales]
+    C --> F[Inspiración para mundos vivos]
+    D --> G[Simulación de vida urbana]
+    E --> H[Libertad narrativa]
+    F --> I[Sandbox modernos]
+    G --> I
+    H --> I
+```
+
 ---
 
 ## 🏙️ Realismo Urbano y Detalle Ambiental
@@ -80,6 +94,21 @@ El desbloqueo progresivo de distritos en GTA III permitió escalar la dificultad
 Títulos como Horizon Zero Dawn y Ghost of Tsushima usan zonas desbloqueables para mantener el ritmo narrativo y la progresión del jugador.
 
 El diseño modular también facilitó la expansión de contenido en forma de DLCs o mundos abiertos más grandes.
+
+```mermaid
+sequenceDiagram
+    participant GTA III
+    participant Liberty City
+    participant Jugadores
+    participant Desarrolladores
+    participant Nuevos Sandboxes
+
+    GTA III->>Liberty City: Introduce mundo urbano tridimensional
+    Liberty City->>Jugadores: Ofrece exploración libre y misiones abiertas
+    Jugadores->>Desarrolladores: Demandan más libertad y realismo
+    Desarrolladores->>Nuevos Sandboxes: Implementan ciudades vivas y sistemas dinámicos
+    Nuevos Sandboxes->>Jugadores: Presentan experiencias personalizadas y expansivas
+```
 
 ## Conclusiones y Referencias
 [◄ Anterior Artículo](./articulo-3.md)
