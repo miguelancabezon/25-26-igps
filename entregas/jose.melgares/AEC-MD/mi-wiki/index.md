@@ -24,9 +24,9 @@ Este proyecto tiene como objetivo explorar Liberty City desde múltiples perspec
 | **[Glosario](./Glosario.md)** | Glosario con algunos términos útiles para entender mejor el sitio |
 
 ## 🧮 Estadísticas del proyecto
-- Total de palabras: <span style="color:#94AFE8;">  666 </span>
-- Total de artículos:  <span style="color:#E6A1FF;">  666 </span>
-- Total de Diagramas: <span style="color:#FF7F9D;">  666 </span>
+- Total de palabras: <span style="color:#94AFE8;"> 4540 </span>
+- Total de artículos:  <span style="color:#E6A1FF;">  5 </span>
+- Total de Diagramas: <span style="color:#FF7F9D;">  10 </span>
 
 ---
 #### 👤 Sobre el autor
