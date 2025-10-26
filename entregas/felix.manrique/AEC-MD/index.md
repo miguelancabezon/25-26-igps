@@ -1,4 +1,8 @@
-<!- Archivo: mi-wiki/index.md -->
+<!-- Imagen banner principal -->
+<p align="center">
+  <img alt="Banner del proyecto" src="recursos/imagenes/banner.png" style="max-width:100%;height:auto;" />
+</p>
+
 <!-- Banner centrado con HTML -->
 <div align="center">
   <h1>🎮 Mini-Wiki: Emuladores de Videojuegos</h1>
