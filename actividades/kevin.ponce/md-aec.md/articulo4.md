@@ -1,6 +1,6 @@
 # ⚔️ Las Guerras Clon: El Conflicto que Destruyó la República
 
-![Guerras Clon](./recursos/guerras-clon-banner.jpg)
+![Guerras Clon](./recursos/guerras-clon-banner.webp)
 
 **Breadcrumb:** [🏠 Inicio](index.md) > [📚 Eventos Históricos](categoria-eventos.md) > Las Guerras Clon
 
