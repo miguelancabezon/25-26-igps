@@ -92,9 +92,7 @@ La falta de espacios públicos seguros y de inversión municipal contribuye al *
 
 ```mermaid
 flowchart TD
-    A[Pobreza extrema] --> B[Desempleo juvenil]
-    B --> C[Exclusión social]
-    C --> D[Reclutamiento por bandas]
-    D --> E[Incremento del crimen]
-
----
+    A["Pobreza extrema"] --> B["Desempleo juvenil"]
+    B --> C["Exclusión social"]
+    C --> D["Reclutamiento por bandas"]
+    D --> E["Incremento del crimen"]
