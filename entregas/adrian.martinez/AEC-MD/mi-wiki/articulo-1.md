@@ -7,14 +7,14 @@
 
 ## 📑 Tabla de Contenidos
 
-1. [Introducción](#introduccion)
-2. [Infancia y Formación](#infancia)
-3. [Fundación de Apple](#fundacion-apple)
-4. [Años de Exilio](#exilio)
-5. [Regreso Triunfal](#regreso)
-6. [Legado](#legado)
+1. [Introducción](#-introducción)
+2. [Infancia y Formación](#-infancia-y-formación)
+3. [Fundación de Apple](#-fundación-de-apple)
+4. [Años de Exilio](#-años-de-exilio)
+5. [Regreso Triunfal](#-regreso-triunfal)
+6. [Legado](#-legado)
 
-## 📖 Introducción {#introduccion}
+## 📖 Introducción 
 
 Steve Jobs (1955-2011) fue el visionario que transformó/revolucionó seis industrias: computación personal, películas animadas, música, teléfonos, tablets y publicación digital. Su obsesión por el **diseño simple** y la **experiencia perfecta** creó productos que millones de personas aman hoy en día.
 
@@ -41,7 +41,7 @@ flowchart TD
 
 ```
 
-## 👶 Infancia y Formación {#infancia}
+## 👶 Infancia y Formación 
 
 Adoptado por Paul y Clara Jobs, Steve creció en [Silicon Valley](glosario.md#silicon-valley). Desde niño mostró interés por la electrónica, trabajando en Hewlett-Packard durante veranos.
 
@@ -52,7 +52,7 @@ En 1972, asistió a Reed College pero abandonó después de 6 meses. Continuó a
 Jobs viajó a India en 1974 buscando iluminación espiritual. Practicó budismo zen y dietas frutarianas que moldearon su filosofía de simplicidad.
 </details>
 
-## 🍎 Fundación de Apple {#fundacion-apple}
+## 🍎 Fundación de Apple 
 
 <img src="/entregas/adrian.martinez/AEC-MD/mi-wiki/recursos/imagenes/stevejobs-joven.jpg"  width="600" height="350">
 
@@ -70,7 +70,7 @@ El Macintosh de 1984 introdujo la **interfaz gráfica** al mercado masivo, hacie
 💡 El famoso comercial "1984" del Macintosh se emitió solo una vez durante la SuperBowl, pero se considera uno de los mejores anuncios de la historia.
 </div>
 
-## 🔄 Años de Exilio {#exilio}
+## 🔄 Años de Exilio 
 
 Forzado a dejar Apple en 1985, Jobs fundó NeXT Computer y compró Pixar por $10 millones.
 
@@ -84,7 +84,7 @@ Pixar revolucionó la animación con "Toy Story" (1995), el primer largometraje 
 - Pixar: Transformó la industria del cine animado
 - Maduración como líder y visionario
 
-## 🔁 Regreso Triunfal {#regreso}
+## 🔁 Regreso Triunfal 
 
 Apple adquirió NeXT en 1996, llevando a Jobs de vuelta. Como CEO interino, tomó decisiones radicales:
 
@@ -95,7 +95,7 @@ Apple adquirió NeXT en 1996, llevando a Jobs de vuelta. Como CEO interino, tom�
 
 > **"Estamos aquí para hacer una mella en el universo."**
 
-## 🌟 Legado {#legado}
+## 🌟 Legado 
 
 Diagnosticado con cáncer en 2003, Jobs falleció el 5 de octubre de 2011. Su legado perdura en:
 
