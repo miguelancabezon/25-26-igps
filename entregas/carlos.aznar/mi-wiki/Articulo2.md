@@ -3,7 +3,7 @@
 [Inicio](index.md) > [Biografía](Articulo2.md) > George Washington y la Guerra de Independencia  
 
 :calendar: **Creado:** 22 de octubre de 2025  
-:arrows_counterclockwise:**Última actualización:** 22 de octubre de 2025  
+:arrows_counterclockwise:**Última actualización:** 26 de octubre de 2025  
 :hourglass: **Lectura:** 5 min  
 :ticket: **Etiquetas:** #Historia #EEUU #Washington #Independencia #Ejército  
 
