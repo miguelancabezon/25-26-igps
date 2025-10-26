@@ -3,7 +3,7 @@
 ---
 
 <p align="center">
-  <img src="miwiki/imagenes/banner_duran.png" alt="Banner de Durán" width="85%">
+  <img src="imagenes/banner_duran.png" alt="Banner de Durán" width="85%">
 </p>
 
 ---
@@ -14,8 +14,8 @@ Esta miniwiki analiza en profundidad la situación de la **delincuencia en el ca
 A través de cinco artículos interconectados, se exploran las **causas estructurales**, los **grupos criminales**, el **impacto social** y las **respuestas institucionales** que configuran la actual crisis de seguridad.
 
 > [!NOTE]
-> Proyecto desarrollado para la asignatura *AEC-MD*.  
-> Autor: *[Tu nombre completo]* · Octubre 2025.
+> Proyecto desarrollado para la asignatura *IGPS*.  
+> Autor: *[Aaron Ureta]* · Octubre 2025.
 
 ---
 
@@ -61,10 +61,10 @@ A través de cinco artículos interconectados, se exploran las **causas estructu
 
 ```mermaid
 timeline
-title Evolución de la violencia en Durán
-2015 : Aumento del microtráfico y primeros enfrentamientos
-2019 : Expansión de bandas y surgimiento de Chone Killers
-2021 : Escalada de homicidios y control de barrios
-2022 : Crisis de seguridad y estado de excepción
-2024 : Intervención militar en Durán
-2025 : Estrategias de pacificación y reconstrucción social
+    title Evolución de la violencia en Durán
+    2015 : Aumento del microtráfico y primeros enfrentamientos
+    2019 : Expansión de bandas y surgimiento de Chone Killers
+    2021 : Escalada de homicidios y control de barrios
+    2022 : Crisis de seguridad y estado de excepción
+    2024 : Intervención militar en Durán
+    2025 : Estrategias de pacificación y reconstrucción social
