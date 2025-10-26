@@ -1,5 +1,5 @@
 
-```markdown
+
 # 🔋 Baterías domésticas: ¿merecen la pena?
 
 Inicio > Almacenamiento > Baterías domésticas
@@ -31,12 +31,3 @@ Si estás casi siempre en casa de día y consumes lavadora, lavavajillas, ordena
 
 ---
 
-## Cómo funciona una batería en casa
-
-```mermaid
-flowchart LR
-    Sol[Luz solar] --> Paneles[Paneles]
-    Paneles --> Inversor[Inversor híbrido]
-    Inversor --> Consumo[Casa (consumo directo)]
-    Inversor --> Bateria[Batería doméstica 🔋]
-    Bateria --> Noche[Casa de noche 🌙]
