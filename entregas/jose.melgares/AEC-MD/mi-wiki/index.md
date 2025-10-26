@@ -33,5 +33,6 @@ Este proyecto tiene como objetivo explorar Liberty City desde múltiples perspec
 __José Melgares__: Estudiante de Ingeniería Informática en la Universidad Europea del Atlántico
 > Toma el camino largo a casa
 
-<br>
+<br/>
+
 Última Actualización: **22/10/2025**

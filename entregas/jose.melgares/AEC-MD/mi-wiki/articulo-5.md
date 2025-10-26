@@ -43,3 +43,6 @@ Liberty City cuenta historias sin necesidad de diálogos. La arquitectura, los g
 Un callejón lleno de basura y autos quemados sugiere violencia reciente. Un club nocturno con autos de lujo estacionados afuera indica poder y corrupción.Un barrio con casas idénticas y niños jugando refleja una falsa sensación de seguridad. Este enfoque de narrativa ambiental ha influido en muchos juegos posteriores, donde el entorno cuenta tanto como los personajes.
 
 Conclusión: La vida urbana y la exploración en Liberty City no son solo mecánicas de juego: son una experiencia sensorial y narrativa que convirtió a GTA III en un referente del género sandbox. Cada rincón de la ciudad tiene algo que contar, y cada jugador puede descubrirlo a su manera.
+
+[◄ Anterior Artículo](./articulo-4.md)
+[Siguiente Artículo ►](./glosario.md)
