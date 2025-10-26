@@ -154,5 +154,12 @@ sequenceDiagram
 | *Impacto en la trama*    | Resolución del conflicto y cierre de la historia de Claude                  |
 
 
-[◄ Anterior Artículo](./articulo-2.md)
-[Siguiente Artículo ►](./articulo-4.md)
+[← Anterior Artículo](./articulo-2.md)
+[Siguiente Artículo →](./articulo-4.md)
+
+[Volver al inicio ↑](#-shoreside-vale)
+
+### 🔎 Ver también
+- [Portland Island](./articulo-1.md)
+- [Influencia en el mundo de los sandboxes](./articulo-4.md)
+- [Staunton Island](./articulo-2.md)

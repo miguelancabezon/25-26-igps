@@ -167,5 +167,12 @@ En la misión “Decoy”, Claude debe distraer a la policía mientras un convoy
 | Impacto en la trama    | Claude se convierte en figura clave del crimen organizado                   |
 
 
-[◄ Anterior Artículo](./articulo-1.md)
-[Siguiente Artículo ►](./articulo-3.md)
+[← Anterior Artículo](./articulo-1.md)
+[Siguiente Artículo →](./articulo-3.md)
+
+[Volver al inicio ↑](#️-staunton-island)
+
+### 🔎 Ver también
+- [Portland Island](./articulo-1.md)
+- [Influencia en el mundo de los sandboxes](./articulo-4.md)
+- [Shoreside Vale](./articulo-3.md)

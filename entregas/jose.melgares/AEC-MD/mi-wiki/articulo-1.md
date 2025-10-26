@@ -9,8 +9,19 @@ Creado en: 22/10/2025
 #### Tabla de Contenidos
 1. [Intrdoucción](#introducción)
 2. [🧱 Estructura y Zonas Principales](#-estructura-y-zonas-principales)
+    - [Saint Mark's](#saint-marks)
+    - [Red Light District](#red-light-district)
+    - [Chinatown](#chinatown)
+    - [Portland Harbor](#portland-harbor)
+    - [Harwood y Trenton](#harwood-y-trenton)
 3. [🚇 Infraestructura y Movilidad](#-infraestructura-y-movilidad)
+    - [Portland Train](#portland-train)
+    - [Puente Callahan](#puente-callahan)
+    - [Calles y tráfico](#calles-y-tráfico)
 4. [🎨 Estética y Ambientación](#-estética-y-ambientación)
+    - [Diseño Visual](#diseño-visual)
+    - [Sonido ambiental](#sonido-ambiental)
+    - [NPCs e interacción](#npcs-e-interacción)
 5. [🧭 Función narrativa](#-función-narrativa)
 6. [Conclusiones y Referencias](#conclusiones-y-referencias)
 
@@ -23,7 +34,9 @@ Portland es la primera de las tres islas que conforman [Liberty City](https://gt
 | **Trenton**  | Área industrial con fábricas           | Media                    |
 | **Saint Mark's**          | Barrio residencial controlado por la Mafia | Muy alta              |
 
-Portland es también el territorio de varias facciones criminales, como la Mafia Leone, los Yakuza y los diabólicos Diablos, lo que convierte a la isla en un campo de batalla constante por el control del crimen organizado. Su atmósfera lluviosa, calles estrechas y arquitectura deteriorada refuerzan el tono oscuro y peligroso del juego. A pesar de su tamaño relativamente pequeño, Portland está repleta de detalles, secretos y misiones que marcan el inicio de la transformación de Claude en una figura clave del inframundo de Liberty City. Es una ciudad que, aunque ficticia, ha dejado una huella imborrable en la historia de los videojuegos.
+Portland es también el territorio de varias facciones criminales, como la Mafia Leone, los Yakuza y los diabólicos Diablos, lo que convierte a la isla en un campo de batalla constante por el control del crimen organizado. Su atmósfera lluviosa, calles estrechas y arquitectura deteriorada refuerzan el tono oscuro y peligroso del juego. A pesar de su tamaño relativamente pequeño, Portland está repleta de detalles, secretos y misiones que marcan el inicio de la transformación de Claude en una figura clave del inframundo de Liberty City. 
+
+> Es una ciudad que, aunque ficticia, ha dejado una huella imborrable en la historia de los videojuegos.
 
 
 
@@ -52,6 +65,7 @@ Portland está dividido en varios barrios con funciones y estilos distintos:
 
 ### Red Light District
 Área de entretenimiento nocturno con clubes, bares y actividad criminal. Es uno de los sectores más activos del juego.
+> Es aquí donde el jugador incia sus aventuras conla mafia Leone
 
 ### Chinatown 
 Barrio asiático con arquitectura típica, mercados y presencia de la banda Triads.
@@ -76,6 +90,7 @@ Portland está inspirada en zonas industriales de Nueva York, especialmente Broo
 
 ### Portland Train
 Un tren elevado que recorre parte del distrito, añadiendo verticalidad y realismo al entorno.
+> Fue el primer tren accesible al jugador en la saga, hasta su regreso en *Grand Theft Auto San Andreas* en 2005 y *Grand Theft Auto IV* en 2008
 
 ### Puente Callahan 
 Conecta Portland con [Staunton Island](./articulo-2.md), aunque está bloqueado al inicio del juego por razones narrativas.
@@ -106,6 +121,9 @@ Colores apagados, neblina constante y arquitectura envejecida refuerzan el tono 
 Portland es la isla más pequeña pero más densa en términos de actividad criminal. Su diseño urbano incluye zonas portuarias, barrios marginales y fábricas abandonadas. Es el punto de partida del juego, donde Claude comienza su ascenso en el mundo del crimen. La isla está dividida en distritos como Harwood, Chinatown y Saint Mark’s, cada uno con su propia estética y peligros. La atmósfera lluviosa y gris refuerza el tono sombrío del juego.
 
 </details>
+
+### NPCs e interacción
+Los NPCs de Portland reflejan la realidad de la isla con trabajadores, vagos, ladrones y criminales por doquier. Representan la faceta más baja de Liberty City.
 
 ----
 
@@ -145,5 +163,11 @@ Una de las primeras misiones en Portland es “Luigi’s Girls”, donde Claude 
 | *Impacto en la trama*    | Establece la reputación de Claude en Liberty City                           |
 
 
-[◄ Anterior](./index.md.md)
-[Siguiente Artículo ►](./articulo-2.md)
+[← Anterior](./index.md.md)
+[Siguiente Artículo →](./articulo-2.md)
+
+[Volver al inicio ↑](#-portland)
+### 🔎 Ver también
+- [Shoreside Vale](./articulo-3.md)
+- [Influencia en el mundo de los sandboxes](./articulo-4.md)
+- [Staunton Island](./articulo-2.md)

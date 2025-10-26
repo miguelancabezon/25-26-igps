@@ -111,5 +111,12 @@ sequenceDiagram
 ```
 
 ## Conclusiones y Referencias
-[◄ Anterior Artículo](./articulo-3.md)
-[Siguiente Artículo ►](./articulo-5.md)
+[← Anterior Artículo](./articulo-3.md)
+[Siguiente Artículo →](./articulo-5.md)
+
+[Volver al inicio ↑](#-influencia-en-el-diseño-de-sandboxes)
+
+### 🔎 Ver también
+- [Portland Island](./articulo-1.md)
+- [Vida Urbana y Exploración](./articulo-5.md)
+- [Staunton Island](./articulo-2.md)

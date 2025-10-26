@@ -17,6 +17,12 @@
 | *Misiones no lineales*| Estructura de juego que permite múltiples formas de completar objetivos     | [Influencia en los sandbox](#sandbox)         | Mecánica       |
 
 ---
+## Estadísticas Visuales
+| Isla             | Número de bandas | Misiones principales | Vehículos únicos | Dificultad |
+|------------------|------------------|-----------------------|------------------|------------|
+| Portland         | 3                | 12                    | 8                | Alta       |
+| Staunton Island  | 3                | 15                    | 10               | Media      |
+| Shoreside Vale   | 2                | 10                    | 6                | Alta       |
 
 
 --- 
