@@ -163,7 +163,7 @@ gantt
 
 **← [Página Principal](index.md)** | **[Siguiente: Fundación de Apple →](articulo-2.md)**
 
-[↑ Volver arriba](#)
+[↑ Volver arriba](#-steve-jobs-del-garaje-al-gigante-tecnologico-)
 
 </div>
 

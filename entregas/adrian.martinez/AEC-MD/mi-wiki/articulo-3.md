@@ -7,14 +7,14 @@
 
 ## 📑 Tabla de Contenidos
 
-1. [La Salida de Apple](#salida)
-2. [NeXT Computer](#next)
-3. [La Aventura Pixar](#pixar)
-4. [Toy Story: Éxito Histórico](#toy-story)
-5. [Preparando el Regreso](#regreso)
-6. [Balance del Exilio](#balance)
+1. [La Salida de Apple](#la-salida-de-apple)
+2. [NeXT Computer](#next-computer)
+3. [La Aventura Pixar](#la-aventura-pixar)
+4. [Toy Story: Éxito Histórico](#toy-story-éxito-histórico)
+5. [Preparando el Regreso](#preparando-el-regreso)
+6. [Balance del Exilio](#balance-del-exilio)
 
-## 🚪 La Salida de Apple {#salida}
+## 🚪 La Salida de Apple 
 
 En 1985, tras conflictos con el CEO John Sculley y el directorio, Steve Jobs renunció a Apple. Vendió todas sus acciones excepto una, declarando: "Ya no confío en que sepan lo que hay que hacer."
 
@@ -25,7 +25,7 @@ En 1985, tras conflictos con el CEO John Sculley y el directorio, Steve Jobs ren
 - Jobs intentó una especie de "golpe de estado" fallido
 
 
-## 💻 NeXT Computer {#next}
+## 💻 NeXT Computer 
 
 
 Jobs fundó NeXT Computer en 1985, enfocándose en computadoras de alta gama para educación y negocios.
@@ -51,7 +51,7 @@ Jobs fundó NeXT Computer en 1985, enfocándose en computadoras de alta gama par
 💡 Aunque NeXT vendió solo 50,000 unidades, su tecnología NeXTSTEP se convirtió en la base de macOS y iOS cuando Apple compró la compañía.
 </div>
 
-## 🎬 La Aventura Pixar {#pixar}
+## 🎬 La Aventura Pixar
 
 En 1986, Jobs compró la división de gráficos de Lucasfilm por $10 millones, renombrándola [Pixar](glosario.md#pixar).
 
@@ -66,7 +66,7 @@ En 1986, Jobs compró la división de gráficos de Lucasfilm por $10 millones, r
 Jobs invirtió más de $50 millones de su bolsillo en Pixar durante años sin ver retorno. Muchos lo consideraron un error, hasta que Toy Story cambió todo.
 </details>
 
-## 🎪 Toy Story: Éxito Histórico {#toy-story}
+## 🎪 Toy Story: Éxito Histórico 
 
 <img src="/entregas/adrian.martinez/AEC-MD/mi-wiki/recursos/imagenes/jobs-toy-story.jpeg"  width="600" height="400">
 <br><br>
@@ -81,7 +81,7 @@ En 1995, [Pixar](glosario.md#pixar) estrenó "Toy Story", el primer largometraje
 
 > **"Toy Story no solo cambió la animación, cambió la forma en que contamos historias."**
 
-## 🔄 Preparando el Regreso {#regreso}
+## 🔄 Preparando el Regreso 
 
 El éxito de Pixar y la tecnología de NeXT posicionaron a Jobs para su regreso triunfal.
 
@@ -96,7 +96,7 @@ El éxito de Pixar y la tecnología de NeXT posicionaron a Jobs para su regreso 
 Apple compró NeXT principalmente por su sistema operativo NeXTSTEP, que se convirtió en macOS. Así, la tecnología que Jobs creó durante su exilio salvó a la empresa que lo había echado.
 </details>
 
-## ⚖️ Balance del Exilio {#balance}
+## ⚖️ Balance del Exilio 
 
 Los 11 años fuera de Apple fueron cruciales para el crecimiento de Jobs.
 
@@ -149,7 +149,7 @@ flowchart TD
 
 **← [Anterior: Fundación Apple](articulo-2.md)** | **[Siguiente: Renacimiento Apple →](articulo-4.md)**
 
-[↑ Volver arriba](#)
+[↑ Volver arriba](#-el-exilio-productivo-next-y-pixar-)
 
 </div>
 

@@ -7,19 +7,19 @@
 ## 📑 Tabla de Contenidos
 
 1. [Introducción](#introduccion)
-2. [Filosofía de Diseño](#diseno)
-3. [Innovación Continua](#innovacion)
-4. [Cultura Corporativa](#cultura)
-5. [Liderazgo Visionario](#liderazgo)
-6. [FAQ Preguntas Frecuentes](#faq)
+2. [Filosofía de Diseño](#filosofía-de-diseño)
+3. [Innovación Continua](#innovación-continua)
+4. [Cultura Corporativa](#cultura-corporativa)
+5. [Liderazgo Visionario](#liderazgo-visionario)
+6. [FAQ Preguntas Frecuentes](#faq-preguntas-frecuentes)
 
-## 🌟 Introducción {#introduccion}
+## 🌟 Introducción 
 
 Steve Jobs dejó más que productos; dejó una filosofía que transformó cómo las empresas innovan, diseñan y compiten. Su enfoque único combinaba tecnología, humanidades y negocios de manera nunca antes vista.
 
 > **"Los que están lo suficientemente locos como para pensar que pueden cambiar el mundo, son los que lo cambian."**
 
-## 🎨 Filosofía de Diseño {#diseno}
+## 🎨 Filosofía de Diseño 
 
 <img src="/entregas/adrian.martinez/AEC-MD/mi-wiki/recursos/imagenes/apple-ecosystem.jpg"  width="600" height="400">
 
@@ -36,7 +36,7 @@ Jobs obsesionaba con el diseño simple y funcional ([User Experience](glosario.m
 El iPhone original tenía solo un botón físico porque Jobs insistió en que la pantalla debía ser la interfaz. Eliminó el teclado físico cuando todos los smartphones lo tenían. Esta decisión radical creó el estándar moderno.
 </details>
 
-## 💡 Innovación Continua {#innovacion}
+## 💡 Innovación Continua 
 
 Jobs no creía en investigación de mercados. Decía: "La gente no sabe lo que quiere hasta que se lo muestras."
 
@@ -51,7 +51,7 @@ Jobs no creía en investigación de mercados. Decía: "La gente no sabe lo que q
 💡 El [Reality Distortion Field](glosario.md#reality-distortion-field) de Jobs era su capacidad para convencer a su equipo de que lo imposible era posible, logrando avances técnicos que otros consideraban inviables.
 </details>
 
-## 🏢 Cultura Corporativa {#cultura}
+## 🏢 Cultura Corporativa 
 
 Jobs creó una cultura de excelencia que perdura en Apple décadas después.
 
@@ -66,7 +66,7 @@ Jobs creó una cultura de excelencia que perdura en Apple décadas después.
 Los empleados de Apple solo trabajan en partes de proyectos sin conocer el todo. Las reuniones usan nombres en código como "Purple 2" para el iPhone. Esta cultura protege la sorpresa que define los lanzamientos de Apple.
 </details>
 
-## 👑 Liderazgo Visionario {#liderazgo}
+## 👑 Liderazgo Visionario 
 
 El estilo de liderazgo de Jobs era único: combinaba intuición, perfeccionismo y visión a largo plazo.
 
@@ -78,7 +78,7 @@ El estilo de liderazgo de Jobs era único: combinaba intuición, perfeccionismo 
 
 > **"Mantente hambriento. Mantente imprudente."**
 
-## ❓ FAQ Preguntas Frecuentes {#faq}
+## ❓ FAQ Preguntas Frecuentes 
 
 <details>
 <summary>¿Por qué Steve Jobs vestía siempre igual?</summary>
@@ -120,7 +120,7 @@ Tim Cook mantiene la rentabilidad y escala, pero muchos argumentan (yo) que la i
 
 **← [Anterior: Renacimiento Apple](articulo-4.md)** | **[Glosario de Términos →](glosario.md)**
 
-[↑ Volver arriba](#)
+[↑ Volver arriba](#%EF%B8%8F-el-legado-jobs-diseño-innovación-y-cultura-)
 
 </div>
 

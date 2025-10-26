@@ -7,14 +7,14 @@
 
 ## 📑 Tabla de Contenidos
 
-1. [El Encuentro Legendario](#encuentro)
-2. [Apple I: El Primer Producto](#apple-i)
-3. [Apple II: Éxito Masivo](#apple-ii)
-4. [Expansión y Crecimiento](#expansion)
-5. [Macintosh: La Revolución](#macintosh)
-6. [Legado del Inicio](#legado)
+1. [El Encuentro Legendario](#el-encuentro-legendario)
+2. [Apple I: El Primer Producto](#apple-i-el-primer-producto)
+3. [Apple II: Éxito Masivo](#apple-ii-éxito-masivo)
+4. [Expansión y Crecimiento](#expansión-y-crecimiento)
+5. [Macintosh: La Revolución](#macintosh-la-revolución)
+6. [Legado del Inicio](#legado-del-inicio)
 
-## 🤝 El Encuentro Legendario {#encuentro}
+## 🤝 El Encuentro Legendario 
 
 Steve Jobs (21 años) y Steve Wozniak (26 años) se conocieron en 1971 a través de un amigo mutuo. Wozniak, el genio técnico, y Jobs, el visionario comercial, formaron una asociación perfecta.
 
@@ -29,7 +29,7 @@ Steve Jobs (21 años) y Steve Wozniak (26 años) se conocieron en 1971 a través
 El acuerdo con Byte Shop fue por 50 computadoras a $500 cada una, pero el dueño Paul Terrell quería computadoras ensambladas, no solo placas. Jobs y Wozniak trabajaron días enteros para cumplir el pedido.
 </details>
 
-## 💻 Apple I: El Primer Producto {#apple-i}
+## 💻 Apple I: El Primer Producto 
 
 Lanzado en 1976, el [Apple I](glosario.md#apple-i) fue una placa base que los usuarios debían ensamblar con carcasa, teclado y monitor.
 
@@ -45,7 +45,7 @@ Lanzado en 1976, el [Apple I](glosario.md#apple-i) fue una placa base que los us
 💡 El precio de $666.66 fue elegido por Wozniak porque le gustaban los números repetidos, no por "connotaciones religiosas".
 </div>
 
-## 🚀 Apple II: Éxito Masivo {#apple-ii}
+## 🚀 Apple II: Éxito Masivo 
 
 El [Apple II](glosario.md#apple-ii) (1977) fue el primer éxito comercial masivo de Apple, vendiendo millones de unidades.
 
@@ -68,7 +68,7 @@ El [Apple II](glosario.md#apple-ii) (1977) fue el primer éxito comercial masivo
 La hoja de cálculo VisiCalc impulsó ventas empresariales, haciendo al Apple II indispensable para negocios.
 </details>
 
-## 📈 Expansión y Crecimiento {#expansion}
+## 📈 Expansión y Crecimiento 
 
 Apple se convirtió en empresa pública el 12 de diciembre de 1980. La OPI fue una de las más grandes en la historia.
 
@@ -80,7 +80,7 @@ Apple se convirtió en empresa pública el 12 de diciembre de 1980. La OPI fue u
 
 > **"¿Quieres vender agua azucarada el resto de tu vida o venir conmigo y cambiar el mundo?"** - Jobs a Sculley
 
-## 💫 Macintosh: La Revolución {#macintosh}
+## 💫 Macintosh: La Revolución 
 
 El [Macintosh](glosario.md#macintosh) 128K (1984) revolucionó la computación personal con interfaz gráfica y ratón.
 
@@ -95,7 +95,7 @@ El [Macintosh](glosario.md#macintosh) 128K (1984) revolucionó la computación p
 ⚠️ Aunque revolucionario, el Macintosh inicial era lento y caro ($2,495). Las ventas fueron decepcionantes, llevando a conflictos entre Jobs y Sculley.
 </div>
 
-## 🌟 Legado del Inicio {#legado}
+## 🌟 Legado del Inicio 
 
 El garaje donde comenzó Apple es ahora monumento histórico de Silicon Valley.
 
@@ -149,7 +149,7 @@ xychart-beta
 
 **← [Anterior: Biografía Steve Jobs](articulo-1.md)** | **[Siguiente: Años de Exilio →](articulo-3.md)**
 
-[↑ Volver arriba](#)
+[↑ Volver arriba](#-apple-computer-nacimiento-en-un-garaje-)
 
 </div>
 

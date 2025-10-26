@@ -7,14 +7,14 @@
 
 ## 📑 Tabla de Contenidos
 
-1. [El Regreso del Rey](#regreso)
-2. [iMac: El Primer Éxito](#imac)
-3. [iPod: Revolución Musical](#ipod)
-4. [iPhone: El Cambio Total](#iphone)
-5. [iPad y Ecosistema](#ipad)
-6. [Transformación Empresarial](#transformacion)
+1. [El Regreso del Rey](#el-regreso-del-rey)
+2. [iMac: El Primer Éxito](#imac-el-primer-éxito)
+3. [iPod: Revolución Musical](#ipod-revolución-musical)
+4. [iPhone: El Cambio Total](#iphone-un-antes-y-un-después)
+5. [iPad y Ecosistema](#ipad-y-ecosistema)
+6. [Transformación Empresarial](#transformación-empresarial)
 
-## 👑 El Regreso del Rey {#regreso}
+## 👑 El Regreso del Rey 
 
 En 1997, Apple estaba en crisis: pérdidas de $1.6 billones, productos desconectados y sin visión. El regreso de Jobs marcó el inicio de la transformación más espectacular en la historia corporativa.
 
@@ -26,7 +26,7 @@ En 1997, Apple estaba en crisis: pérdidas de $1.6 billones, productos desconect
 
 > **"La gente olvidará lo que dijiste, pero nunca cómo los hiciste sentir."**
 
-## 🖥️ iMac: El Primer Éxito {#imac}
+## 🖥️ iMac: El Primer Éxito 
 
 El [iMac](glosario.md#imac) G3 (1998) fue la declaración de que Apple estaba de vuelta. Su diseño revolucionario rompió todos los moldes.
 
@@ -42,7 +42,7 @@ El [iMac](glosario.md#imac) G3 (1998) fue la declaración de que Apple estaba de
 El iMac eliminó la disquetera cuando era estándar, apostando por USB y CD-ROM. Jony Ive diseñó la carcasa transparente que mostraba el interior, haciendo la tecnología "amigable". 
 </details>
 
-## 🎵 iPod: Revolución Musical {#ipod}
+## 🎵 iPod: Revolución Musical 
 
 Lanzado en 2001, el [iPod](glosario.md#ipod) transformó cómo escuchamos música con su eslogan "1,000 canciones en tu bolsillo".
 
@@ -57,7 +57,7 @@ Lanzado en 2001, el [iPod](glosario.md#ipod) transformó cómo escuchamos músic
 ✅ El iPod + iTunes creó un ecosistema completo: hardware fácil de usar + tienda de contenido + software simple. Este modelo definiría la estrategia  de Apple a futuro.
 </div>
 
-## 📱 iPhone: Un Antes y un Después {#iphone}
+## 📱 iPhone: Un Antes y un Después 
 
 El [iPhone](glosario.md#iphone) (2007) no fue solo un teléfono, fue una computadora de bolsillo que redefinió múltiples industrias.
 
@@ -77,7 +77,7 @@ El iPhone creó un mercado de $1 trillón en smartphones.
 
 <img src="/entregas/adrian.martinez/AEC-MD/mi-wiki/recursos/imagenes/steve-jobs-iphone.jpg"  width="600" height="400">
 
-## 📟 iPad y Ecosistema {#ipad}
+## 📟 iPad y Ecosistema 
 
 El [iPad](glosario.md#ipad) (2010) creó la categoría de tablets modernas, aunque muchos criticaron su necesidad inicial.
 
@@ -94,7 +94,7 @@ El [iPad](glosario.md#ipad) (2010) creó la categoría de tablets modernas, aunq
 | **iPhone** | 2007 | Revolucionó telefonía móvil |
 | **iPad** | 2010 | Creó categoría tablets |
 
-## 💼 Transformación Empresarial {#transformacion}
+## 💼 Transformación Empresarial 
 
 Bajo el liderazgo de Jobs, Apple se transformó de empresa al borde de la quiebra a la más valiosa del mundo.
 
@@ -134,7 +134,7 @@ xychart-beta
 
 **← [Anterior: Años de Exilio](articulo-3.md)** | **[Siguiente: Legado y Filosofía →](articulo-5.md)**
 
-[↑ Volver arriba](#)
+[↑ Volver arriba](#-el-renacimiento-apple-imac-ipod-iphone-)
 
 </div>
 
