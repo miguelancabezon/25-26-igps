@@ -9,7 +9,7 @@
 
 ---
 
-## 📚 Tabla de Contenidos
+## Tabla de Contenidos
 1. [Introducción](#introducción)  
 2. [Nombramiento y liderazgo](#nombramiento-y-liderazgo)  
 3. [Valley Forge y dificultades](#valley-forge-y-dificultades)  
