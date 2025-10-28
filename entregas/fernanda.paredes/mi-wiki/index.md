@@ -1,9 +1,8 @@
-# Mujeres en la Ingeniería 🌐
 
 <div align="center">
-  <img src="./recursos/imagenes/banner.png" alt="Banner Mujeres en la Ingeniería" width="720"/>
-  <h2>Visibilizando historias, retos y logros</h2>
+<img width="2000" height="545" alt="imagen" src="https://github.com/user-attachments/assets/1bc92631-423e-47c4-bca0-9b6f3a15f619" />
 </div>
+
 
 ## Descripción
 
