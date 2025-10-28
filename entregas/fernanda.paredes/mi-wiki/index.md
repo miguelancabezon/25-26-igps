@@ -1,4 +1,3 @@
-
 <div align="center">
 <img width="2000" height="545" alt="imagen" src="https://github.com/user-attachments/assets/1bc92631-423e-47c4-bca0-9b6f3a15f619" />
 </div>
@@ -9,13 +8,13 @@
 Esta mini‑Wiki reúne artículos sobre la participación, contribuciones y desafíos de las mujeres en la ingeniería. Incluye artículos interconectados, un glosario, referencias y recursos visuales.
 
 ## Índice visual — Artículos destacados
-| Artículo | Resumen | Emoji |
-|---|---|:--:|
-| [Panorama histórico](articulo-1.md) | Historia y pioneras | 🕰️ |
-| [Barreras y género](articulo-2.md) | Obstáculos y estadísticas | 📊 |
-| [Avances técnicos](articulo-3.md) | Mujeres en áreas STEM | 🛠️ |
-| [Modelos a seguir](articulo-4.md) | Biografías y casos | 👩‍🔬 |
-| [Futuro y políticas](articulo-5.md) | Inclusión y soluciones | 🚀 |
+| Artículo | Resumen | 
+|---|---|
+| [Panorama histórico](articulo-1.md) | Historia y pioneras |
+| [Barreras y género](articulo-2.md) | Obstáculos y estadísticas | 
+| [Avances técnicos](articulo-3.md) | Mujeres en áreas STEM | 
+| [Modelos a seguir](articulo-4.md) | Biografías y casos | 
+| [Futuro y políticas](articulo-5.md) | Inclusión y soluciones | 
 
 ## Estadísticas del proyecto
 - Total artículos: 5
@@ -83,4 +82,4 @@ Ambientes de trabajo poco inclusivos o con sesgos inconscientes.
 ## Autor
 Fernanda Paredes — fernanda@example.com
 
-[↑ Volver arriba](#mujeres-en-la-ingeniería-🌐)
+
