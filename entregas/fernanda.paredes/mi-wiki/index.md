@@ -59,13 +59,26 @@ flowchart LR
 
 ## FAQ (resumen)
 <details>
-<summary>¿Qué debo entregar y dónde?</summary>
-Entregar la carpeta `mi-wiki` dentro de `entregas/fernanda.paredes/AEC-MD/`.
+<summary>¿Por qué es importante fomentar la participación de mujeres en la ingeniería?</summary>
+La ingeniería impulsa la innovación y el desarrollo tecnológico. La inclusión de mujeres aporta diversidad de pensamiento, mejora la creatividad en la resolución de problemas y reduce sesgos en el diseño de soluciones tecnológicas que afectan a toda la sociedad.
 </details>
 
 <details>
-<summary>¿Puedo añadir más artículos?</summary>
-Sí — añade nuevos archivos `.md` y enlázalos desde `index.md`.
+<summary>¿Cuántas mujeres hay actualmente en carreras o profesiones de ingeniería?</summary>
+A nivel global, las mujeres representan entre el 20 % y el 30 % del total de estudiantes de ingeniería, aunque varía según el país y la especialidad. En áreas como ingeniería biomédica o ambiental la proporción es más alta, mientras que en ingeniería mecánica o eléctrica sigue siendo menor.
+</details>
+
+<details>
+<summary>Qué barreras enfrentan las mujeres que eligen estudiar ingeniería?</summary>
+Algunas de las principales barreras son:
+
+Estereotipos de género que asocian la ingeniería con los hombres.
+
+Falta de modelos femeninos en posiciones de liderazgo técnico.
+
+Brecha salarial y menor acceso a oportunidades de promoción.
+
+Ambientes de trabajo poco inclusivos o con sesgos inconscientes.
 </details>
 
 ## Autor
