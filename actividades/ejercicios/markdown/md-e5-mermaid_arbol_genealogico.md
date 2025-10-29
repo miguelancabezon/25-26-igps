@@ -1,3 +1,11 @@
-# Ejercicio 5: Árbol Genealógico con Mermaid
+# 🌳 Ejercicio 5: Árbol Genealógico (Mermaid)
 
-Crea un árbol genealógico que llegue hasta tus abuelos (más si los conoces) con el diagrama de flujo de Mermaid.
+```mermaid
+graph TD
+    A[👵 Abuela Paterna: Elizbeth Rojas] --> C[👨 Padre: David Cruz Rojas]
+    B[👴 Abuelo Paterno: David Cruz] --> C
+    D[👵 Abuela Materna: Daisy Salazar] --> E[👩 Madre: Grettel Babbar Salazar]
+    F[👴 Abuelo Materno: Goverdhan Babbar] --> E
+    C --> G[👩‍💻 Yo: Natalia Cruz Babbar]
+    E --> G
+```

@@ -1,10 +1,17 @@
-# Ejercicio 4: Lista de deseos
+# 🌠 Ejercicio 4: Lista de Deseos 2026
 
-## Objetivos
+## 🌿 Salud 🧘‍♀️
+- [ ] Hacer ejercicio al menos 4 veces por semana  
+- [ ] Dormir 8 horas diarias  
+- [ ] Comer más frutas y verduras  
 
-Crea tu lista de deseos para el año que incluya:
+## 💼 Carrera 🚀
+- [ ] Obtener una certificación en IA  
+- [ ] Participar en un proyecto internacional  
+- [ ] Publicar un artículo técnico en LinkedIn  
 
-- Checkboxes para marcar progreso
-- Al menos 3 categorías (personal, profesional, viajes, etc.)
-- Subelementos dentro de cada objetivo
-- Usa emojis para cada categoría
+## ✈️ Viajes 🌍
+- [ ] Visitar Japón 🇯🇵  
+- [ ] Hacer surf en Costa Rica 🏄‍♀️  
+- [ ] Conocer París y la Torre Eiffel 🗼  
+
