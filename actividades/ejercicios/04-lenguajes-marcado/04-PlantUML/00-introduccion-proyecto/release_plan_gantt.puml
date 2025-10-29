@@ -1,0 +1,31 @@
+@startgantt
+Project starts the 2025-10-01
+printscale weekly
+Project scale 7 days
+
+-- Fase 1: Planificación --
+[Definir visión y usuarios] lasts 3 days
+[Historias de usuario y backlog] lasts 4 days
+[Diseño de wireframes] lasts 3 days
+[Revisión y aprobación] lasts 2 days
+
+-- Fase 2: Desarrollo MVP --
+[Interfaz de pedidos] lasts 7 days
+[Gestión de pedidos en cocina] lasts 5 days
+[Confirmación y pagos] lasts 4 days
+[MVP listo para pruebas] lasts 2 days
+
+-- Fase 3: Pruebas y despliegue --
+[Pruebas funcionales] lasts 4 days
+[Correcciones MVP] lasts 3 days
+[Entrega MVP] happens at 2025-10-28
+
+-- Fase 4: Mejora continua --
+[Feedback usuarios] lasts 4 days
+[Versión 1.1] lasts 5 days
+
+-- Hitos --
+[Inicio del proyecto] happens at 2025-10-01
+[MVP entregado] happens at 2025-10-28
+[Versión 1.1 liberada] happens at 2025-11-08
+@endgantt

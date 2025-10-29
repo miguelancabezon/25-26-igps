@@ -1,0 +1,15 @@
+@startsalt
+{+
+  { "El Buen Taco - Sistema de Pedidos" | "" }
+  { "Selecciona tus tacos:" |
+    [🌮 Carnitas] [🌯 Pastor] [🥩 Suadero] [🌮 Barbacoa]
+  }
+  { "" | [Añadir al pedido] }
+  { "Pedido actual:" | "3 tacos - Total: $75 USD" }
+  { "" | [Confirmar Pedido] [Cancelar] }
+  { "" | "" }
+  { "Panel inferior" |
+    "Pedidos activos: 5 | Listos: 2 | En preparación: 3"
+  }
+}
+@endsalt

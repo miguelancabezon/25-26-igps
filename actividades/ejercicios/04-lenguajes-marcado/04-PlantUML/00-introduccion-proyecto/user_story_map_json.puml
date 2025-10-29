@@ -1,0 +1,52 @@
+@startjson
+{
+  "producto": "El Buen Taco",
+  "backbone": [
+    "Explorar menú",
+    "Seleccionar tacos",
+    "Confirmar pedido",
+    "Preparar en cocina",
+    "Entregar pedido",
+    "Generar reporte"
+  ],
+  "historias": {
+    "Explorar menú": [
+      "Como cliente quiero ver el menú de tacos para elegir fácilmente",
+      "Como cliente quiero filtrar por tipo o precio"
+    ],
+    "Seleccionar tacos": [
+      "Como cliente quiero añadir tacos al carrito",
+      "Como cliente quiero modificar cantidades antes de confirmar"
+    ],
+    "Confirmar pedido": [
+      "Como cajero quiero ver el total del pedido",
+      "Como cajero quiero seleccionar método de pago y registrar el pedido"
+    ],
+    "Preparar en cocina": [
+      "Como cocinero quiero ver los pedidos activos con detalle",
+      "Como cocinero quiero marcar pedidos como listos"
+    ],
+    "Entregar pedido": [
+      "Como cajero quiero notificar la entrega",
+      "Como cajero quiero imprimir el ticket final"
+    ],
+    "Generar reporte": [
+      "Como dueño quiero ver el resumen diario de ventas y pedidos"
+    ]
+  },
+  "releases": {
+    "MVP": [
+      "Explorar menú",
+      "Seleccionar tacos",
+      "Confirmar pedido"
+    ],
+    "Release 2": [
+      "Preparar en cocina",
+      "Entregar pedido"
+    ],
+    "Release 3": [
+      "Generar reporte"
+    ]
+  }
+}
+@endjson

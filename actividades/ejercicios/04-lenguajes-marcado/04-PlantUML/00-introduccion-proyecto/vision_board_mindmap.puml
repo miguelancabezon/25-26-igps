@@ -1,0 +1,25 @@
+@startmindmap
+* Producto: "El Buen Taco"
+** Visión
+*** Agilizar la gestión de pedidos en taquerías locales
+*** Reducir errores al tomar y entregar órdenes
+*** Digitalizar los reportes de ventas diarias
+** Usuarios
+*** Dueño de taquería
+*** Cajero/a
+*** Cocinero/a
+*** Cliente final
+** Necesidades
+*** Tomar pedidos rápidamente desde un dispositivo
+*** Ver en cocina las órdenes en tiempo real
+*** Calcular ingresos y ventas automáticas
+*** Mejorar la experiencia del cliente
+** Valor
+*** +30% eficiencia operativa
+*** -50% errores humanos
+*** Reportes automáticos sin papel
+*** Mejor servicio y satisfacción del cliente
+** Riesgos
+*** Falta de dispositivos o conexión en el local
+*** Resistencia al cambio del personal
+@endmindmap
