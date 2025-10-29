@@ -1,0 +1,41 @@
+@startmindmap
+'=== Estilo general ===
+skinparam backgroundColor #E8F6F3
+skinparam defaultTextAlignment center
+skinparam node {
+  BorderColor black
+  FontSize 16
+  FontColor black
+  FontStyle bold
+} 
+
+* 🌴 **Plan de viaje: República Dominicana**
+** 📍 Destino
+*** 🏖️ Ciudades a visitar
+**** 🏙️ Santo Domingo
+**** 🌅 Punta Cana
+**** 🌄 Samaná
+*** 🌟 Lugares destacados
+**** 🏰 Zona Colonial
+**** 🌊 Playa Bávaro
+**** 🌿 Parque Nacional Los Haitises
+left side
+** 🎉 Actividades
+*** 🤿 Aventura
+**** 🚤 Excursión en catamarán
+**** 🐠 Buceo y snorkel
+*** 🎭 Cultura
+**** 🏛️ Museos y mercados locales
+**** 🍽️ Gastronomía típica dominicana
+right side
+** 🧳 Logística
+*** ✈️ Transporte
+**** 🛫 Vuelos ida y vuelta
+**** 🚗 Traslados entre ciudades
+*** 🏨 Alojamiento
+**** 🏝️ Hoteles todo incluido
+**** 🏠 Airbnb en Santo Domingo
+*** 💰 Presupuesto
+**** 💵 Estimado de gastos diarios
+**** 📑 Reservas y seguros de viaje
+@endmindmap
