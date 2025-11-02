@@ -1,6 +1,9 @@
 <a id="top"></a>
 
-# 🏚️ Amityville — Lo que dijeron los Warren
+<center>
+  <h1> 🏚️ Amityville — Lo que dijeron los Warren</h1>
+  <img src="./recursos/imagenes/lo-que-dijeron.jpeg" alt=amityville" width="240"/>
+</center>
 
 **Inicio > Casos > Amityville**
 

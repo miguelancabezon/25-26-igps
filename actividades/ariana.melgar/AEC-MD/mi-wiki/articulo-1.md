@@ -1,6 +1,9 @@
 <a id="top"></a>
 
-# 🕯️ Ed & Lorraine Warren — Biografía y Legado
+<center>
+  <h1> 🕯️ Ed & Lorraine Warren — Biografía y Legado</h1>
+  <img src="./recursos/imagenes/ed-y-lorraine-warren.jpg" alt=Warrens" width="240"/>
+</center>
 
 **Inicio > Biografía > Ed & Lorraine Warren**
 

@@ -1,6 +1,9 @@
 <a id="top"></a>
 
-# 🎎 Annabelle — La muñeca
+<center>
+  <h1> 🎎 Annabelle — La muñeca</h1>
+  <img src="./recursos/imagenes/Muñeca_Annabelle_.jpg" alt=anabelle" width="240"/>
+</center>
 
 **Inicio > Casos > Annabelle**
 

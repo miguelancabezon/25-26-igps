@@ -1,6 +1,9 @@
 <a id="top"></a>
 
-# ⚖️ "Devil Made Me Do It" — Arne Cheyenne Johnson
+<center>
+  <h1> ⚖️ "Devil Made Me Do It" — Arne Cheyenne Johnson</h1>
+  <img src="./recursos/imagenes/the-devil.png" alt=devil" width="240"/>
+</center>
 
 **Inicio > Casos > Arne Johnson**
 

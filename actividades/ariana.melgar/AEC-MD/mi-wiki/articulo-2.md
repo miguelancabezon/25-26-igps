@@ -1,6 +1,9 @@
 <a id="top"></a>
 
-# 👻 El caso Perron — The Conjuring
+<center>
+  <h1> 👻 El caso Perron — The Conjuring</h1>
+  <img src="./recursos/imagenes/caso-perron3.jpeg" alt=perron" width="240"/>
+</center>
 
 **Inicio > Casos > Perron**
 
