@@ -4,9 +4,9 @@ skinparam backgroundColor #E8F6F3
 skinparam defaultTextAlignment center
 skinparam node {
   BorderColor black
-  FontSize 16
+  FontSize 19
   FontColor black
-  FontStyle bold
+  FontStyle italic
 } 
 
 * 🌴 **Plan de viaje: República Dominicana**
