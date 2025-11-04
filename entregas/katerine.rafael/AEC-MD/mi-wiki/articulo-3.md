@@ -1,9 +1,3 @@
-
----
-
-## 3. El León y el Ratón (cuento3.md)
-
-```markdown
 ---
 title: "🦁 El León y el Ratón"
 breadcrumb: "Inicio > Fábulas > El León y el Ratón"

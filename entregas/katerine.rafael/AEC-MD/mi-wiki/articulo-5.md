@@ -1,9 +1,3 @@
-
----
-
-## 5. El Unicornio Mágico (cuento5.md)
-
-```markdown
 ---
 title: "🦄 El Unicornio Mágico"
 breadcrumb: "Inicio > Cuentos Fantásticos > El Unicornio Mágico"

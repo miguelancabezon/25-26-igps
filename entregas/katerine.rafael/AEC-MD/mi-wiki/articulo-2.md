@@ -1,9 +1,3 @@
-
----
-
-## 2. El Conejito Travieso (cuento2.md)
-
-```markdown
 ---
 title: "🐰 El Conejito Travieso"
 breadcrumb: "Inicio > Cuentos Clásicos > El Conejito Travieso"
