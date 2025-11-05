@@ -1,3 +1,0 @@
-Primero clonamos el repo a nuestro escritorio, luegi en el terminal de visual utilizando cd y ls para ver nuetsros archivos y acceder a ellos
-luego creamos una rama desde el main y procedemos a pegar las carpetas que se nos indican
-luego vamos a hacer commit usando comandos como git status, git add, git commit -m "docs: nuevo archivo".............

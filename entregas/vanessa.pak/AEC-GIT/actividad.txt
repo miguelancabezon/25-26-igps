@@ -1,4 +1,0 @@
-Primera actividad de GIT completada por Vanessa Pak
-Paso 1: Crear fork y clonar repositorio
-Paso 2: Crear carpetas y primer commit
-Paso 3: Crear rama docs/modificaciones

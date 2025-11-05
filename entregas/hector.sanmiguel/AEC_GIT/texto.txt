@@ -1,9 +1,0 @@
-Lo primero de todo ha sido clonar el archivo de GIT a mi ordenador con el siguiente comando como se puede ver en la [Foto 1]:
-
-	git clone https://github.com/hectorsanmiguel/25-26-igps.git
-
-
-Después he creado una rama llamada docs/modificaciones [Foto 2]
-
-
-Por último, para hacer los commits he utilizado los comandos de la [Foto 3]
