@@ -55,5 +55,30 @@ Además deberá tener los siguientes hitos
 
 ## Diagramas a diseñar 3 - JSON
 
+Con los distintos elementos separados en los diagramas anteriores, como ingeniero deberás diagramar objetos o clases necesarios para crear el juego. Estas definiciones pueden ser de un arma, una mecánica, un escenario, un personaje o cualquier otro sistema que se te ocurra para el juego.
+
+
+*Requisitos:*
+
+- [ ] Mínimo 4 clases u objetos
+- [ ] Cada objeto debe tener atributos básicos (id, nombre, fecha, estado, etc.)
+- [ ] Al menos un objeto debe contener otros objetos
+- [ ] Usar colores
+- [ ] Incluir tipos de datos variados: cadenas, números, booleanos, listas y objetos
+- [ ] Fechas en formato ISO (YYYY-MM-DD o YYYY-MM-DDTHH:mm:ssZ)
+- [ ] Añadir un objeto "actions" o "methods" que describa las operaciones posibles (por ejemplo: "createUser", "borrowBook", "processPayment")
+- [ ] Cada acción debe indicar qué clase afecta y qué parámetros requiere
+- [ ] Agregar un campo "metadata" o "config" con información del sistema (versión, idioma, entorno, autor, etc.)
+- [ ] Usar nombres claros y consistentes en notación camelCase o PascalCase
+
 ## Diagramas a diseñar 4 - Wireframe/Salt
 
+Ya tenemos todo listo para empezar. Pero antes de nada, también te solicitan un boceto de la interfaz. Esta interfaz puede ser del juego o de un menú concreto.
+
+*Requisitos:*
+
+- [ ] Layout de forma libre
+- [ ] Al menos 1 tabla de datos
+- [ ] Incluir tabs
+- [ ] Mínimo 5 elementos interactivos
+- [ ] Usar símbolos/emojis
