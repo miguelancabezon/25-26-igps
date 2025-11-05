@@ -1,0 +1,90 @@
+@startgantt
+"Gantt - Línea de tiempo: Desarrollo de videojuego"
+Project starts 2025-11-10
+
+' Leyenda de colores
+legend left
+	|#ADD8E6| Preproducción
+	|#90EE90| Producción
+	|#FFB6C1| Postproducción
+endlegend
+
+' --------------------
+' Fase 1 - Preproducción (color: light blue)
+[Investigación y análisis] lasts 6 days and 100% #ADD8E6
+[Diseño de concepto] lasts 5 days and 80% #ADD8E6
+[Diagrama mental (diseño)] lasts 7 days and 60% #ADD8E6
+[Documentación (GDD)] lasts 8 days and 40% #ADD8E6
+[Prototipo técnico] lasts 10 days and 10% #ADD8E6
+
+note right of [Diagrama mental (diseño)]
+	Recursos: 1 Game Designer (lead), moodboard, referencias visuales.
+	% completado refleja el diagrama mental y la estructura de niveles.
+end note
+
+note right of [Prototipo técnico]
+	Equipo: 2 Devs (Gameplay + Ingeniería), motor: Unity/Unreal.
+	Herramientas: Git, GitHub, Jira/Trello, 1 build runner.
+end note
+
+' --------------------
+' Fase 2 - Producción (color: light green)
+[Implementación mecánicas] lasts 20 days and 0% #90EE90
+[Arte y assets] lasts 25 days and 0% #90EE90
+[Animaciones] lasts 15 days and 0% #90EE90
+[Audio y música] lasts 12 days and 0% #90EE90
+[Integración de niveles] lasts 18 days and 0% #90EE90
+[UI/UX polish] lasts 10 days and 0% #90EE90
+
+note left of [Arte y assets]
+	Recursos: 2 Illustrators, 1 Concept Artist, pipeline: PSD/PNG/Spritesheets.
+end note
+
+note right of [Audio y música]
+	Recursos: 1 Compositor, librería de SFX, formato: WAV/OGG.
+end note
+
+' --------------------
+' Fase 3 - Postproducción (color: light pink)
+[QA y pruebas] lasts 12 days and 0% #FFB6C1
+[Test de performance] lasts 8 days and 0% #FFB6C1
+[Optimización] lasts 10 days and 0% #FFB6C1
+[Localización] lasts 7 days and 0% #FFB6C1
+[Preparar lanzamiento] lasts 5 days and 0% #FFB6C1
+
+note left of [QA y pruebas]
+	Equipo QA: 2 testers. Recursos: dispositivos (móvil/PC/consola), scripts automatizados.
+end note
+
+' --------------------
+' Hitos (Milestones)
+[Milestone 1: Prototipo] happens 2025-12-15
+[Milestone 2: beta] happens 2026-01-30
+[Milestone 3: v1.0] happens 2026-03-15
+
+' --------------------
+' Dependencias (se indican con "depends on")
+[Prototipo técnico] depends on [Diagrama mental (diseño)]
+[Implementación mecánicas] depends on [Prototipo técnico]
+[Arte y assets] depends on [Diseño de concepto]
+[Animaciones] depends on [Arte y assets]
+[Integración de niveles] depends on [Implementación mecánicas]
+[Integración de niveles] depends on [Arte y assets]
+[UI/UX polish] depends on [Integración de niveles]
+[QA y pruebas] depends on [Integración de niveles]
+[Test de performance] depends on [QA y pruebas]
+[Optimización] depends on [Test de performance]
+[Localización] depends on [UI/UX polish]
+[Preparar lanzamiento] depends on [Optimización]
+[Preparar lanzamiento] depends on [Localización]
+
+' Notas generales del proyecto
+note right of [Milestone 3: v1.0]
+	Equipo sugerido por fase:
+	- Preproducción: 1 Game Designer, 1 Lead Dev, 1 Concept Artist
+	- Producción: 3 Devs, 2 Artists, 1 Audio
+	- Postproducción: 2 QA, 1 Dev (optimización), 1 Localizador
+	Repositorio: GitHub. CI/CD: GitHub Actions o similar.
+end note
+
+@endgantt
