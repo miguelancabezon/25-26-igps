@@ -1,0 +1,80 @@
+@startmindmap
+' Mindmap del proyecto FPS - PlantUML
+' Requisitos cumplidos: estilos personalizados, ≥5 colores, ≥3 niveles, emojis/símbolos, ambos lados
+
+!define C_ROOT #1f77b4
+!define C_GAMEPLAY #ff7f0e
+!define C_ART #2ca02c
+!define C_TECH #d62728
+!define C_INFRA #9467bd
+!define C_HR #8c564b
+
+skinparam backgroundColor #ffffff
+skinparam shadowing false
+skinparam defaultFontName "DejaVu Sans"
+
+' Nota: PlantUML acepta colores inline para nodos usando el prefijo #COLOR
+
+* #C_ROOT FPS Game 🎮 - Visión general
+
+' --- LADO IZQUIERDO: sistemas centrales y gameplay ---
+** < #C_GAMEPLAY Gameplay ⚔️
+*** < #C_GAMEPLAY Mecánicas 🎯
+**** < #C_GAMEPLAY Movimiento 🏃‍♂️ (locomoción, parkour)
+**** < #C_GAMEPLAY Disparo 🔫 (recoils, spread, hitreg)
+**** < #C_GAMEPLAY Salud & Daño ❤️ (armadura, regeneración)
+*** < #C_GAMEPLAY Armas 🔧
+**** < #C_GAMEPLAY Tipos (Asalto, Francotirador, Cuerpo a cuerpo)
+**** < #C_GAMEPLAY Balance & Progression ⚖️
+*** < #C_GAMEPLAY Modos 🕹️
+**** < #C_GAMEPLAY Singleplayer (campaña)
+**** < #C_GAMEPLAY Multiplayer (PvP / PvE)
+
+** < #C_TECH Motor & Tech 🛠️
+*** < #C_TECH Motor (Unreal / Unity / Custom)
+**** < #C_TECH Razones: rendimiento, toolchain, licencias
+*** < #C_TECH Networking 🌐
+**** < #C_INFRA Arquitectura servidores (dedicados/autoridad/clustering)
+**** < #C_INFRA Matchmaking, State Sync, Latency Compensation 🛰️
+*** < #C_TECH Herramientas CI/CD 🔁
+**** < #C_TECH Automatización: builds, tests, integraciones
+
+' --- LADO DERECHO: arte, infraestructura y personas ---
+** > #C_ART Arte & Audio 🎨
+*** > #C_ART Visual (estética, iluminación)
+**** > #C_ART Estilos: Realista / Estilizado
+**** > #C_ART VFX, partículas, post-procesado ✨
+*** > #C_ART Audio 🎵
+**** > #C_ART SFX (impactos, ambiente)
+**** > #C_ART Música adaptativa (intensidad por gameplay)
+
+** > #C_INFRA Infraestructura & Ops 🏗️
+*** > #C_INFRA Hosting & Escalado ☁️
+**** > #C_INFRA Cloud providers (regions, DR)
+**** > #C_INFRA Autoscaling, Cost Control 💸
+*** > #C_INFRA Observabilidad 🔍
+**** > #C_INFRA Telemetría, Logging, Tracing
+**** > #C_INFRA SLOs / Alerting (latency, errors)
+
+** > #C_HR Gente & Procesos 👥
+*** > #C_HR Equipo (roles) 🧑‍💻
+**** > #C_HR Devs, Artistas, Diseñadores, QA, Ops
+*** > #C_HR Roadmap & Hitos 📅
+**** > #C_HR Prototype → Alpha → Beta → Lanzamiento
+*** > #C_HR Riesgos & Mitigación ⚠️
+**** > #C_HR Tech debt, seguridad, legal, escalado
+
+' --- Capas transversales / Consideraciones ---
+** #9467bd Seguridad 🔒
+*** #9467bd Detección de trampas / anti-cheat
+*** #9467bd Protecciones de datos y privacidad
+
+** #8c564b Monetización 💰
+*** #8c564b Modelos: Premium, F2P, Season Pass
+*** #8c564b Diseño ético de monetización (no pay-to-win)
+
+** #d62728 QA & Testing ✅
+*** #d62728 Test de red (simulación de latencia)
+*** #d62728 Test de rendimiento y stress
+
+@endmindmap
