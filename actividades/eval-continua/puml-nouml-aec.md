@@ -1,5 +1,10 @@
 # Actividad de Evaluación Continua - PlantUML NoUML
 
+<h3><b>¡IMPORANTE!</b></h3>
+
+> [!CAUTION]
+> La entrega se debe hacer en la carpeta entregas > nombre.apellido > AEC-MD
+
 ## Contexto
 Te han contratado en un **estudio de videojuegos como ingeniero** y, antes de empezar a desarrollar nada, necesitan tu ayuda para decidir dónde van a ir los recursos (servidores, humanos, ...).
 Para llevar a cabo tu labor, vas a tener que crear **4 tipos de diagramas** que argumenten las decisiones (sensatas) que has tomado para planear el proyecto.
