@@ -1,0 +1,9 @@
+Nuevo archivo de texto
+
+Este archivo de texto solamente acepta caracteres simples
+
+"Como es adentro es afuera"
+"El exterior es solo un reflejo"
+"Enfocate en lo profundo"
+"Y te conoceras a ti"
+Author: Un tipo de psicologia
