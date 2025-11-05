@@ -3,7 +3,9 @@
 <h3><b>¡IMPORANTE!</b></h3>
 
 > [!CAUTION]
-> La entrega se debe hacer en la carpeta entregas > nombre.apellido > AEC-MD
+> La entrega se debe hacer en la carpeta entregas > nombre.apellido > AEC-PUML-NOUML
+>
+> Cualquier entrega realizada en otra carpeta se considerará **NO ENTREGADA**
 
 ## Contexto
 Te han contratado en un **estudio de videojuegos como ingeniero** y, antes de empezar a desarrollar nada, necesitan tu ayuda para decidir dónde van a ir los recursos (servidores, humanos, ...).
