@@ -10,7 +10,7 @@ El repositorio de materiales y proyectos de la asignatura **Introducción a la G
 - Evaluaciones
   - Evaluación continua: [Actividades](evaluaciones/actividades/README.md)
   - Exámenes
-    - **Parcial**: *Proximamente*.
+    - **Parcial**: 18-11-2025 *TBA*.
     - **Final**: *Proximamente*.
     - **Extraordinario**: *Espero que nadie llegue aquí*.
 
