@@ -1,0 +1,48 @@
+@startmindmap
+<style>
+mindmapDiagram {
+  .frontStyle * {
+    BackgroundColor lightgreen
+  }
+  .jsStyle * {
+    BackgroundColor lightyellow
+  }
+    .backStyle * {
+    BackgroundColor lightblue
+  }
+    .redStyle * {
+    BackgroundColor #FFBBCC
+  }
+}
+</style>
+
++ AmeriCity Builder
+
+++ Servicios Ciudadanos <<frontStyle>>
++++ Agua
++++ Electricidad
++++ Saneamiento
+
+++ Entretenimiento <<jsStyle>>
++++ Mega Estadios
++++ Futbol Americano
++++ Baseball
+
+
+-- Vías <<redStyle>>
+--- Calles suburbanas
+--- Stroads
+--- Autopistas
+--- Freeways
+
+-- Edificaciones
+--- Compras
+---- Walmart
+---- Costco
+---- Buccees
+--- Strip Malls
+--- Restaurantes
+---- MacDonald'
+---- Chili's
+---- a
+@endmindmap
