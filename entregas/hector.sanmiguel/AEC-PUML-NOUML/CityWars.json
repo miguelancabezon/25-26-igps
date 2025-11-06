@@ -1,0 +1,67 @@
+{
+  "config": {
+    "version": "1.0.0",
+    "language": "ES",
+    "author": "Héctor San Miguel"
+  },
+  "datos": {
+    "id": "ID Jugador",
+    "nombre": "Nombre Ciudad",
+    "poblacion": 100,
+    "fecha": "2025-11-06",
+    "recursos": {
+      "agua": "Cantidad de agua",
+      "energía": "Cantidad de energia",
+      "comida": "Cantidad de comida"
+    },
+    "edificios": [
+      { 
+        "id": 100, 
+        "nombre": "Defensa 1",
+        "nivel": 5, 
+        "daño": 100, 
+        "estado": true 
+      },
+      { 
+        "id": 101, 
+        "nombre": "Defensa 2",
+        "nivel": 4, 
+        "daño": 50, 
+        "estado": true
+      },
+      { 
+        "id": 102, 
+        "nombre": "Defensa 3", 
+        "nivel": 3,
+        "daño": 40, 
+        "estado": false 
+      }
+    ]
+  },
+  "acciones": [
+    {
+      "nombre": "crearEstructura",
+      "clase": "Estructura",
+      "parámetros": ["nombre", "x", "y"],
+      "descripción": "Crea un nuevo edificio en una ubicación específica"
+    },
+    {
+      "nombre": "atacarRival",
+      "clase": "Ataque",
+      "parámetros": ["ID Jugador","recursos"],
+      "descripción": "Ataca a una ciudad enemiga"
+    },
+    {
+      "nombre": "mejoraEdificio",
+      "clase": "Edificio",
+      "parámetros": ["id", "nivel", "duracionMejora"],
+      "descripción": "Mejora un edificio existente"
+    },
+    {
+      "nombre": "mensajeDeTexto",
+      "clase": "Mensaje",
+      "parámetros": ["textoEscrito", "fecha"],
+      "descripción": "Comunicación entre jugadores"
+    }
+  ]
+}
