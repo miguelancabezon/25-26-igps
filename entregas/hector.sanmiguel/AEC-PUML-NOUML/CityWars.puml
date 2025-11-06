@@ -1,0 +1,62 @@
+@startsalt City Wars
+{
+{* Archivo | Editar | Vista previa de tu ciudad | Juego | Ajustes }
+{#
+  {T
+    { <&person> Jugador: null | <&globe> Ciudad: null | <&calendar> Día: null }
+  }
+  
+  {/
+    { <&home> Ciudad
+    | <&wrench> Construir  
+    | <&graph> Estadísticas
+    | <&people> Social
+    | <&settings> Configuración
+    }
+  }
+  
+  {#
+    {+
+      {^"🌆 Vista de Ciudad"
+        {#
+          {S  🛡️ Zona Defensa }
+          {/
+            {| Edificios | Nivel | Estado | Accciones
+            | 🛡️ Torre Defensa | 4 | <&alert> Mejorando | [<&pause> Pausar]
+            | ⚡ Planta Energía | 2 | <&mute> Inactivo | [<&play> Activar]
+            | 💧 Depósito Agua | 3 | <&check> Activo | [<&up> Mejorar]
+            |}
+          }
+        }
+      }
+      
+      {+"📊 Panel de Control"
+        {T
+          [<&water> Agua: 85%] [<&flash> Energía: 72%] [<&food> Comida: 68%]
+          [👥 Población: 12,850] [😊 Felicidad: 88%] [💰 Oro: 45,620]
+        }
+        {T
+          [<&plus> Construir Nuevo] [<&up> Mejorar] [<&trash> Demoler] [<&pause> Pausar Todo] [<&disk> Guardar]
+        }
+        {/
+          "🚨 Alertas del Sistema"
+          {|
+            Tipo | Mensaje | Prioridad | Acción
+            | ⚠️ | Baja producción de comida | Media | [<&settings> Configurar]
+            | 🎯 | Ataque inminente | Alta | [<&shield> Defender]
+            | 📈 | Población creciendo | Baja | [<&home> Construir]
+            | 💬 | Mensaje de aliado | Baja | [<&eye> Leer]
+          |}
+        }
+      }
+    }
+  }
+  
+  {#
+    {T
+      <&clock> Tiempo de juego: null | <&signal> Online | <&cloud> Guardado en nube
+    }
+  }
+}
+}
+@endsalt
