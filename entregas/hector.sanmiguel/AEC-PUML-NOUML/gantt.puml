@@ -26,6 +26,12 @@ Project starts 2025-11-6
 [Producción] is colored in #FFAAFF
 [Producción] is 75% complete
 
+note bottom
+    Son prioritarios:
+    -Motor
+    -Online
+end note
+
 [Diseño de personajes] requires 5 days
 [Diseño de personajes] starts at [Preproducción]'s end
 [Diseño de personajes] is colored in #FFD700
@@ -73,6 +79,10 @@ Project starts 2025-11-6
 then [Corrección de bugs] requires 3 days
 [Corrección de bugs] is colored in #FF4444
 [Corrección de bugs] is 0% complete
+
+note bottom
+    No puede salir al mercado con bugs mayores
+end note
 
 [Presentación de City Wars 1.0] happens at [Producción]'s end
 
