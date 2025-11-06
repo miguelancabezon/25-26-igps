@@ -5,14 +5,14 @@
     "author": "Héctor San Miguel"
   },
   "datos": {
-    "id": "ID Jugador",
-    "nombre": "Nombre Ciudad",
-    "poblacion": 100,
-    "fecha": "2025-11-06",
+    "id": null,
+    "nombre": null,
+    "poblacion": null,
+    "fecha": null,
     "recursos": {
-      "agua": "Cantidad de agua",
-      "energía": "Cantidad de energia",
-      "comida": "Cantidad de comida"
+      "agua": null,
+      "energía": null,
+      "comida": null
     },
     "edificios": [
       { 
@@ -20,21 +20,33 @@
         "nombre": "Defensa 1",
         "nivel": 5, 
         "daño": 100, 
-        "estado": true 
+        "estado": {
+          "activo" : true,
+          "mejorando" : false,
+          "destruido" : false
+        }
       },
       { 
         "id": 101, 
         "nombre": "Defensa 2",
         "nivel": 4, 
         "daño": 50, 
-        "estado": true
+        "estado": {
+          "activo" : true,
+          "mejorando" : false,
+          "destruido" : false
+        }
       },
       { 
         "id": 102, 
         "nombre": "Defensa 3", 
         "nivel": 3,
         "daño": 40, 
-        "estado": false 
+        "estado": {
+          "activo" : true,
+          "mejorando" : false,
+          "destruido" : false
+        }
       }
     ]
   },
