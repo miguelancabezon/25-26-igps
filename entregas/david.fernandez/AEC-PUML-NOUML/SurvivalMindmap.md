@@ -1,4 +1,4 @@
-# Mindmap — Proyecto (Survival Game)
+# Mindmap — Survival Game
 
  **Concepto central:** Juego de supervivencia multijugador en mundo abierto
 
