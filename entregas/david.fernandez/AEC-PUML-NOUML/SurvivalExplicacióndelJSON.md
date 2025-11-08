@@ -1,5 +1,5 @@
 
-#  Descripción del archivo JSON — Proyecto Aurora
+#  Descripción del archivo JSON 
 
 Este archivo (`game_objects.json`) define las **clases y objetos** principales del juego de supervivencia.
 
