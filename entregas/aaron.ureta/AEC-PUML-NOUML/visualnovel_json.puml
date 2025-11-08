@@ -1,0 +1,107 @@
+@startjson
+' --- Estilos con colores para clases y tipos (Requisito) ---
+<style>
+jsonDiagram {
+  .class-entity { BackgroundColor #A7F3D0; FontColor #065F46 }
+  .class-system { BackgroundColor #93C5FD; FontColor #1E40AF }
+  .class-config { BackgroundColor #FEF08A; FontColor #B45309 }
+  .type-string { FontColor #DC2626 }
+  .type-number { FontColor #9333EA }
+  .type-boolean { FontColor #059669 }
+  .type-list { FontColor #F97316 }
+  .type-object { FontColor #475569 }
+}
+</style>
+
+{
+  "GameConfig" as GC #class-config {
+    "systemInfo": {
+      "id": "conf-001" as conf_id #type-string,
+      "name": "Configuración Global" as conf_name #type-string,
+      "status": "Active" as conf_status #type-string,
+      "dateLastUpdate": "2025-01-20T10:00:00Z" as conf_date #type-string,
+      "version": "1.0.0" as conf_version #type-string,
+      "environment": "Production" as conf_env #type-string,
+      "autosave": true as conf_save #type-boolean,
+      "languageDefault": "es-ES" as conf_lang #type-string,
+      "musicVolume": 0.7 as conf_vol #type-number,
+      "riskThreshold": 60 as conf_risk #type-number
+    }
+  },
+
+  "Character" as CH #class-entity {
+    "id": "char-001" as char_id #type-string,
+    "name": "Dante" as char_name #type-string,
+    "status": "Alive" as char_status #type-string,
+    "creationDate": "2025-01-20" as char_date #type-string,
+    "isMajor": true as char_major #type-boolean,
+    "affinity": 50 as char_aff #type-number,
+    "suspicion": 20 as char_susp #type-number,
+    "tags": [ "protagonist", "ex-soldado" ] as char_tags #type-list,
+    "profile": { ' *** Objeto dentro de Objeto (Requisito) *** '
+      "age": 28 as char_age #type-number,
+      "traits": [ "pragmático", "callado" ] as char_traits #type-list,
+      "spritePath": "sprites/dante_coat.png" as char_sprite #type-string
+    }
+  },
+
+  "SceneNode" as SN #class-system {
+    "id": "node-prolog-05" as node_id #type-string,
+    "name": "Toque de queda" as node_name #type-string,
+    "status": "Complete" as node_status #type-string,
+    "dateReviewed": "2025-01-22T14:30:00Z" as node_date #type-string,
+    "backgroundPath": "bg/checkpoint_night.png" as node_bg #type-string,
+    "requiredItem": null as node_item #type-string,
+    "choices": [
+      {
+        "choiceId": "c1" as choice1_id #type-string,
+        "text": "Cooperar con Valeria" as choice1_text #type-string,
+        "nextSceneId": "milicia_ruta01" as choice1_next #type-string,
+        "affinityChange": { "Valeria": 5 } as choice1_aff #type-object,
+        "suspicionChange": { "Dante": -3 } as choice1_susp #type-object
+      },
+      {
+        "choiceId": "c2" as choice2_id #type-string,
+        "text": "Pasar mercancía oculta" as choice2_text #type-string,
+        "nextSceneId": "cartel_ruta01" as choice2_next #type-string,
+        "affinityChange": { "Rojo": 5 } as choice2_aff #type-object,
+        "suspicionChange": { "Valeria": 6 } as choice2_susp #type-object
+      }
+    ] as node_choices #type-list
+  },
+
+  "GameActions" as GA #class-system {
+    "id": "act-001" as act_id #type-string,
+    "name": "Operaciones del Sistema" as act_name #type-string,
+    "status": "Ready" as act_status #type-string,
+    "dateImplemented": "2025-01-25" as act_date #type-string,
+    "methods": [
+      {
+        "methodName": "saveGameState" as met1_name #type-string,
+        "affectsClass": "GameState" as met1_class #type-string,
+        "params": [
+          {"name": "slotNumber", "type": "number"},
+          {"name": "progressData", "type": "object"}
+        ] as met1_params #type-list
+      },
+      {
+        "methodName": "advanceDialogue" as met2_name #type-string,
+        "affectsClass": "SceneNode" as met2_class #type-string,
+        "params": [
+          {"name": "currentNodeId", "type": "string"},
+          {"name": "choiceMadeId", "type": "string"}
+        ] as met2_params #type-list
+      },
+      {
+        "methodName": "modifyCharacterStat" as met3_name #type-string,
+        "affectsClass": "Character" as met3_class #type-string,
+        "params": [
+          {"name": "charId", "type": "string"},
+          {"name": "statName", "type": "string"},
+          {"name": "deltaValue", "type": "number"}
+        ] as met3_params #type-list
+      }
+    ] as act_methods #type-list
+  }
+}
+@endjson
