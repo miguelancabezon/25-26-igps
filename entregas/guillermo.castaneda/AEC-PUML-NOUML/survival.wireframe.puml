@@ -1,0 +1,61 @@
+@startuml
+skinparam handwritten false
+skinparam roundcorner 12
+skinparam shadowing false
+skinparam backgroundColor white
+
+salt
+{
+  [         SURVIVAL BOSQUE          ]
+  [        MENÚ PRINCIPAL            ]
+
+  --
+
+  [* CAMPAMENTO PRINCIPAL *]
+       [# INVENTARIO #]
+          [@ MAPA @]
+      [~ CONFIGURACIÓN ~]
+
+}
+
+salt
+{
+  ' CAMPAMENTO 1
+  +----------------------------------+
+  | CAMPAMENTO ID: 101               |
+  | NOMBRE: Refugio del Roble        |
+  | NIVEL DE PREPARACIÓN: 10          |
+  | ESTADO: Estable                  |
+  | SALUD DEL REFUGIO: 85%            |
+  | RECURSOS DISPONIBLES:             |
+  |    - Madera: 1,200 unidades       |
+  |    - Comida: 500 raciones         |
+  |    - Agua: 300 litros             |
+  | SUPERVIVIENTES: 5                 |
+  +----------------------------------+
+}
+
+salt
+{
+  ' Tabla Inventario Detallado
+  || Recurso       || Cantidad    || Estado     ||
+  | Madera         | 1,200 uds   | Suficiente |
+  | Comida         | 500 raciones| Escaso     |
+  | Agua           | 300 litros  | Adecuado   |
+  | Medicinas      | 50 unidades | Crítico    |
+  | Herramientas   | 15 piezas   | Bueno      |
+}
+
+salt
+{
+  [+ RECOLECTAR]
+  [* CONSTRUIR]
+  [! EXPLORAR]
+  [^ DEFENDER]
+  [> GUARDAR]
+
+  --
+
+  [  VERSIÓN 1.0 | ESPAÑOL | MODO DESARROLLO  ]
+}
+@enduml
