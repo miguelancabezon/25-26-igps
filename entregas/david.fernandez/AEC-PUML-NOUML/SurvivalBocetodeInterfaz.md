@@ -1,4 +1,4 @@
-
+#  Wireframe — Menú Principal del Juego
 
 ###  Elementos interactivos:
 1.  **Jugar**
