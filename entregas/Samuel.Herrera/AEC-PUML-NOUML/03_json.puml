@@ -1,0 +1,71 @@
+@startjson
+{
+  "metadata": {
+    "system": "Project Vortex - Match Server",
+    "version": "1.0.0",
+    "environment": "production",
+    "author": "GameEngineer (Samuel)",
+    "timestamp": "2027-06-15T12:00:00Z"
+  },
+  "Player": {
+    "playerId": "u-sam123",
+    "username": "Samuel",
+    "isOnline": true,
+    "currentMatchId": "m-9876",
+    "selectedLegend": "l-001",
+    "stats": {
+      "kills": 5,
+      "damageDealt": 1250,
+      "isDowned": false
+    },
+    "inventory": [
+      {
+        "itemId": "i-r301",
+        "name": "Rifle de Asalto",
+        "type": "Weapon",
+        "rarity": "Epic",
+        "isEquipped": true
+      },
+      {
+        "itemId": "i-p2020",
+        "name": "Pistola",
+        "type": "Weapon",
+        "rarity": "Common",
+        "isEquipped": false
+      }
+    ]
+  },
+  "Match": {
+    "matchId": "m-9876",
+    "serverRegion": "eu-west",
+    "status": "InProgress",
+    "playerCount": 60,
+    "squadsLeft": 20,
+    "safeZone": {
+      "radius": 500,
+      "nextShrink": "2027-06-15T12:05:00Z"
+    }
+  },
+  "Legend": {
+    "legendId": "l-001",
+    "name": "Vortex",
+    "passiveSkill": "Ver enemigos cercanos.",
+    "tacticalSkill": "Escudo de energía.",
+    "ultimateSkill": "Agujero negro."
+  },
+  "actions": {
+    "playerPicksUpItem": {
+      "affects": "Player.inventory",
+      "params": ["playerId", "itemId"]
+    },
+    "playerUsesAbility": {
+      "affects": "Legend",
+      "params": ["playerId", "abilityType"]
+    },
+    "startMatchmaking": {
+      "affects": "Match",
+      "params": ["playerId", "gameMode"]
+    }
+  }
+}
+@endjson
