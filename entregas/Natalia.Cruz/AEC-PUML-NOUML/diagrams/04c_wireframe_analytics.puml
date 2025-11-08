@@ -1,0 +1,101 @@
+@startsalt
+title Analítica de Ciudad - Panel Estratégico
+
+{+
+{/ <b><:1F4CA:> KPIs | <:1F4C8:> Tendencias | <:1F465:> Población | <:1F3E2:> Distritos | <:1F4B0:> Finanzas | <:1F514:> Alertas (3) }
+==
+{
+{T + <:1F3E0:> Ciudad
+++ <:1F4CA:> KPIs
+++ <:1F6E3:> Tráfico
+++ <:1F4A8:> Contaminación + <:1F4B0:> Finanzas
+++ <:1F4B5:> Impuestos
+++ <:1F4B8:> Subvenciones
+++ <:1F332:> Parques + <:1F465:> Población
+++ <:1F4CB:> Censo
+++ <:1F4C5:> Tendencias
+-- + <:2699:> Ajustes + <:1F6AA:> Salir
+} | {
+<b><size:16>Visión General</size></b>
+<i>Actualizado: hace 2 min</i>
+==
+{
+{^"<:1F465:> Población"
+<b><size:20>12,304</size></b>
+<color:green>↗ +2.1%</color> respecto a la semana pasada
+} | {^"<:1F4B0:> Tesorería"
+<b><size:20>€148,200</size></b>
+<color:green>↗ +€3,450</color> balance semanal
+} | {^"<:1F6E3:> Tráfico"
+<b><size:20>28%</size></b>
+<color:orange>↗ +3%</color> zonas críticas
+} | {^"<:1F4A8:> Polución"
+<b><size:20>Baja</size></b>
+<color:green>↘ -4%</color> PM2.5
+}
+}
+==
+{
+{SI
+<b><:1F4C8:> Tendencia de Ingresos (12 meses)</b>
+==
+||||||||||||||||||||||||||||||||||||||||||||| Ene: €20K
+|||||||||||||||||||||||||||||||||||||||||||||||| Feb: €22K
+||||||||||||||||||||||||||||||||||||||||||||||||||||| Mar: €24K
+||||||||||||||||||||||||||||||||||||||||||||||||||| Abr: €23K
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||| May: €26K
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||| Jun: €25K
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| Jul: €27K
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| Ago: €28K
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| Sep: €27K
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| Oct: €29K
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| Nov: €30K
+==
+} | {^
+<b><:1F4CA:> Top Distritos por Felicidad</b>
+{#
+Rank | Distrito | Felicidad | Población
+<:1F947:> 1 | Norte Verde | 84% | 3,210
+<:1F948:> 2 | Centro | 78% | 5,430
+<:1F949:> 3 | Ribera Este | 75% | 2,115
+4 | Industrial Sur | 62% | 1,549
+5 | Universitario | 70% | 2,000
+}
+}
+}
+==
+{
+{SI
+<b><:1F4CB:> Servicios - Estado</b>
+{#
+Servicio | Estado | Cobertura | Incidencias | [...]
+Energía | <:2705:> OK | 95% | 0 | [<:1F441:>]
+Agua | <:26A0:> Aviso | 90% | 2 | [<:1F441:>]
+Residuos | <:2705:> OK | 88% | 0 | [<:1F441:>]
+Salud | <:26A0:> Aviso | 75% | 1 | [<:1F441:>]
+Educación | <:2705:> OK | 85% | 0 | [<:1F441:>]
+}
+[Ver Todo →] [Exportar CSV] [Actualizar]
+} | {SI
+<b><:26A0:> Alertas</b>
+.
+<:1F534:> <b>Corte eléctrico</b> en Distrito Sur
+<i>hace 1 h</i>
+.
+<:1F7E1:> <b>Congestión alta</b> en Centro
+<i>hace 2 h</i>
+.
+<:1F7E2:> <b>Fondos recibidos</b> por bono municipal
+<i>ayer</i>
+.
+[Histórico de Alertas →]
+}
+}
+}
+}
+==
+{
+© 2025 City Team | Soporte: support@citybuilder.dev | Version: 1.0.0
+}
+}
+@endsalt
