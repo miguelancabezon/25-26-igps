@@ -2,13 +2,13 @@
 
 ##  Fases del proyecto
 
-1. **Preproducción (Meses 1–2)**
+1. **Preproducción**
    - Documento de diseño (GDD)
    - Concept art 
    - Plan técnico y planificación
    
 
-2. **Producción (Meses 3–9)**
+2. **Producción**
    - Sistema de crafteo 
    - Sistema de IA 
    - Mundo inicial (bosque) 
@@ -17,10 +17,10 @@
    - Servidor multijugador 
    
 
-3. **Postproducción (Meses 10–12)**
-   - Optimización y corrección de bugs 🧪
+3. **Postproducción**
+   - Optimización y corrección de bugs 
    - Localización (EN/ES)
-   - Marketing y tráiler 🎬
+   - Marketing y tráiler 
   
 
 ---
