@@ -1,0 +1,44 @@
+@startgantt
+Project starts 2025-01-01
+printscale weekly
+
+[Phase 1 - Preproducción] lasts 6 weeks
+[Concept Art] lasts 2 weeks and is colored in #FFCC99
+[Game Design Document] lasts 3 weeks and is colored in #FFCC99
+[Team Setup] lasts 2 weeks and is colored in #FFCC99
+[Concept Art] starts at [Phase 1 - Preproducción]'s start
+[Game Design Document] starts after [Concept Art]'s end
+[Team Setup] starts at [Phase 1 - Preproducción]'s start
+note right of [Team Setup]
+👥 Equipo: 2 diseñadores, 1 productor
+@end note
+
+[Milestone 1: Prototype] happens at 2025-02-15
+
+[Phase 2 - Producción] lasts 16 weeks
+[Core Mechanics] lasts 4 weeks and is colored in #99CCFF
+[AI System] lasts 4 weeks and is colored in #99CCFF
+[World Building] lasts 6 weeks and is colored in #99CCFF
+[Multiplayer Integration] lasts 6 weeks and is colored in #99CCFF
+[Core Mechanics] starts after [Milestone 1: Prototype]
+[AI System] starts after [Core Mechanics]'s end
+[World Building] starts at [Phase 2 - Producción]'s start
+[Multiplayer Integration] starts after [World Building]'s end
+
+[Milestone 2: Beta] happens at 2025-06-30
+
+[Phase 3 - Postproducción] lasts 8 weeks
+[Testing & QA] lasts 4 weeks and is colored in #99FF99
+[Optimization] lasts 3 weeks and is colored in #99FF99
+[Marketing & Launch Prep] lasts 5 weeks and is colored in #FF9999
+[Testing & QA] starts after [Milestone 2: Beta]
+[Optimization] starts after [Testing & QA]'s end
+[Marketing & Launch Prep] starts after [Testing & QA]'s start
+
+[Milestone 3: v1.0] happens at 2025-09-01
+
+note bottom
+💰 Recursos: 8 desarrolladores, 3 artistas, 2 QA testers  
+🎯 Estado: 30% completado hasta abril
+@end note
+@endgantt

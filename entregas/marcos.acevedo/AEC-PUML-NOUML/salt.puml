@@ -1,0 +1,29 @@
+@startsalt
+{
+{^ 🪓 LAST DAWN - MENU PRINCIPAL | _}
+[▶️ Jugar]
+[⚙️ Opciones]
+[💾 Cargar partida]
+[🌐 Multijugador]
+[🚪 Salir]
+
+{T
+{T "Inventario" | "Mapa" | "Crafteo"}
+{
+{+
+📦 Inventario
+| 🪓 Hacha de piedra | ⚔️ Cuchillo | 🥩 Carne cruda | 💧 Agua
+| Durabilidad: 70% | Daño: 25 | Energía: +15 | Hidratación: +20
+}
+}
+}
+
+{^ Tabla de Recursos | _}
++-----------------------------------------+
+| Recurso | Cantidad | Estado | Ubicación |
+| Madera  | 56       | 🪵 | Bosque       |
+| Agua    | 12       | 💧 | Lago         |
+| Metal   | 8        | ⛏️ | Cueva        |
++-----------------------------------------+
+}
+@endSalt
