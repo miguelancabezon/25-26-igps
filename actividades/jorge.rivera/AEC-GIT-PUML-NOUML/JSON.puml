@@ -1,0 +1,85 @@
+@startjson
+{
+  "metadata": {
+    "gameVersion": "1.0.0-Beta",
+    "language": "es",
+    "environment": "dev",
+    "author": "Tu_Nombre",
+    "lastUpdate": "2025-11-05T12:00:00Z"
+  },
+  "objects": {
+    "Weapon": {
+      "id": 101,
+      "name": "FusilAsalto01",
+      "type": "Rifle",
+      "creationDate": "2025-01-15",
+      "status": "Finalizada",
+      "isAutomatic": true,
+      "damageStats": {
+        "baseDamage": 30.5,
+        "headshotMultiplier": 1.5,
+        "falloffRange": 50
+      },
+      "availableSkins": [
+        "Default",
+        "Camo",
+        "Gold"
+      ],
+      "fireRate": 600,
+      "maxAmmo": 30
+    },
+    "PlayerProfile": {
+      "id": "user_45321",
+      "username": "GamerFPS_X",
+      "creationDate": "2024-08-20T10:30:00Z",
+      "status": "Activo",
+      "level": 45,
+      "isPremium": false,
+      "stats": {
+        "kills": 1250,
+        "deaths": 800,
+        "kdRatio": 1.56
+      },
+      "unlockedWeapons": [
+        "FusilAsalto01",
+        "Sniper05"
+      ],
+      "equippedWeapon": "FusilAsalto01"
+    },
+    "MatchmakingQueue": {
+      "id": 500,
+      "name": "QuickPlay_TDM",
+      "gameMode": "Team Deathmatch",
+      "status": "Buscando",
+      "creationDate": "2025-11-05T12:30:00Z",
+      "targetLatency": 50,
+      "maxPlayers": 12,
+      "currentPlayers": [
+        { "playerId": "user_45321", "rank": 1500 },
+        { "playerId": "user_98765", "rank": 1450 }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "method": "joinMatch",
+      "class": "MatchmakingQueue",
+      "description": "Añade un jugador a la cola de partida.",
+      "parameters": [
+        { "name": "playerId", "type": "string" },
+        { "name": "gameMode", "type": "string" }
+      ]
+    },
+    {
+      "method": "updatePlayerStats",
+      "class": "PlayerProfile",
+      "description": "Actualiza las estadísticas del jugador después de una partida.",
+      "parameters": [
+        { "name": "playerId", "type": "string" },
+        { "name": "newKills", "type": "number" },
+        { "name": "newDeaths", "type": "number" }
+      ]
+    }
+  ]
+}
+@endjson
