@@ -3,6 +3,8 @@ En esta carpeta se encuentra la entrega de la actividad de evaluación de evalua
 
 Abajo se muestran las imagenes de como se ve cada diagrama. Cabe destacar que se destacan las acciones relacionadas a la construcción y desarrollo de mapa, sin divagar en las misiones y elementos más pequeños del juego.
 
+---
+
 ## Mapa Mental 
 
 <div style="text-align: center">
@@ -11,10 +13,29 @@ Abajo se muestran las imagenes de como se ve cada diagrama. Cabe destacar que se
 
 </div>
 
+---
+
 ## Diagrama JSON
 
 <div style="text-align: center">
 
 ![](./images/json.png)
+
+</div>
+
+--- 
+
+## Diagrama Gantt
+<div style="text-align: center">
+
+![](./images/gantt.png)
+
+</div>
+
+## Wireframe
+
+<div style="text-align: center">
+
+![](./images/wireframe.png)
 
 </div>
