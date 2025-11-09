@@ -1,0 +1,27 @@
+@startsalt
+{
+{+
+  FPS Game UI &#128299;
+  [Personaje {
+    [Estadísticas {
+      "Nombre" | "Salud" | "Armas"
+      "Booker" | "150 ❤️" | "Rifle, RPG"
+      "Enemigo01" | "50 💀" | "Revolver"
+    }]
+    [Disparar]
+    [Recargar]
+    [Modo automático]
+    [Nombre del jugador]
+    [Seleccionar arma: "Rifle", "Escopeta", "RPG"]
+  }]
+  [Escenario {
+    [Mapas disponibles {
+      "Nombre" | "Clima" | "Jugadores"
+      "BaseNevada" | "Nieve" | "12"
+      "CiudadOscura" | "Noche" | "8"
+    }]
+    [Entrar al mapa]
+  }]
+}
+}
+@endsalt
