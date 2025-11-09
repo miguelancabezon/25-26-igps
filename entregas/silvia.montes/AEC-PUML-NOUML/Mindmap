@@ -78,6 +78,11 @@ mindmapDiagram {
 
 
 
+
+
+
+
+
 @startuml
 ' ======================= ESTILO GENERAL =======================
 skinparam backgroundColor #FAFAFA
@@ -176,5 +181,59 @@ Actions ..> Juego : afecta >
 Actions ..> Personaje : modifica >
 Actions ..> Escenario : crea >
 Actions ..> Decision : gestiona >
+
+@enduml
+
+
+
+
+
+
+
+
+@startuml
+title 🎮 Boceto de Interfaz - Visual Novel
+
+skinparam rectangle {
+  BackgroundColor #FAFAFA
+  BorderColor #424242
+  FontColor #212121
+}
+
+' =========================== CONTENEDORES PRINCIPALES ===========================
+rectangle "Menú Principal" as MainMenu {
+  
+  rectangle "🎮 Play Game" as PlayBtn
+  rectangle "⚙️ Settings" as SettingsBtn
+  rectangle "📚 Load Game" as LoadBtn
+  rectangle "💾 Save Game" as SaveBtn
+  rectangle " Help" as HelpBtn
+  
+  ' Tabs
+  rectangle "📁 Tabs" as TabsContainer {
+    rectangle "🎨 Arte" as TabArt
+    rectangle "📝 Guion" as TabScript
+    rectangle "🔊 Música" as TabMusic
+  }
+
+  ' Tabla de datos
+  rectangle "📊 Stats de Personajes" as TableStats {
+    note right
+    | Nombre | Edad | Rol | Estado |
+    | Emma  | 17  | Prota | Activa |
+    | Maria   | 17  | Prota | Activa a veces |
+    | Sofia  | 17  | Secundaria  | Activa siempre |
+    end note
+  }
+}
+
+' =========================== RELACIONES / INTERACTIVIDAD ===========================
+PlayBtn --> TableStats : inicia juego
+SettingsBtn --> TabArt : abre configuración de arte
+SettingsBtn --> TabScript : abre configuración de guion
+SettingsBtn --> TabMusic : abre configuración de música
+LoadBtn --> TableStats : seleccionar la partida
+SaveBtn --> TableStats : guardar la partida
+HelpBtn --> TableStats : muestra guía
 
 @enduml
