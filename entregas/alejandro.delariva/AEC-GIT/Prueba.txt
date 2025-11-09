@@ -1,0 +1,10 @@
+PASOS A SEGUIR: 
+
+1. Primero se hace el fork desdeGithub
+2. Clonar el repositorio forkeado en mi ordenador
+3. Crear las carpetas nombre.apellido y AEC-GIT
+4. Crear el archivo inicial
+5. Hacer git push
+6. Crear una nueva rama y cambiar de rama con el comando git checkout -b 
+7. Hacer git push
+8. Hacer pull request desde Github
