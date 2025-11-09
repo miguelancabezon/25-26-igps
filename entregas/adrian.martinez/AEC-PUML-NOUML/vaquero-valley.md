@@ -14,7 +14,6 @@ El **Mindmap** muestra la estructura general del proyecto *Vaquero Valley*, incl
 
 [![Mindmap Vaquero Valley](./images/mindmap-valley.png "Mindmap Vaquero Valley")](./diagrams/v-valley-mindmap.puml)
 
-📄 [Abrir archivo `.puml`](./diagrams/v-valley-mindmap.puml)
 
 ---
 
@@ -24,7 +23,6 @@ Este **JSON Visualizer** representa la organización de los datos del juego: pue
 
 [![JSON Vaquero Valley](./images/json-valley.png "JSON Vaquero Valley")](./diagrams/v-valley-json.puml)
 
-📄 [Abrir archivo `.puml`](./diagrams/v-valley-json.puml)
 
 ---
 
@@ -34,7 +32,6 @@ El **diagrama de Gantt** muestra la planificación de desarrollo del juego, incl
 
 [![Gantt Vaquero Valley](./images/gantt-valley.png "Gantt Vaquero Valley")](./diagrams/v-valley-gantt.puml)
 
-📄 [Abrir archivo `.puml`](./diagrams/v-valley-gantt.puml)
 
 ---
 
@@ -45,6 +42,4 @@ El **wireframe Salt** representa un "boceto" de interfaz.
 
 [![Salt Vaquero Valley](./images/salt-valley.png "Salt Vaquero Valley")](./diagrams/v-valley-salt.puml)
 
-📄 [Abrir archivo `.puml`](./diagrams/v-valley-salt.puml)
 
----
