@@ -6,7 +6,8 @@ title Vaquero Valley - Estructura jugabilidad y organización de datos
     "idioma": "es-ES",
     "autor": "Adrián Martínez",
     "fechaCreacion": "2025-11-08"
-  },
+  }
+  ,
   "clases": {
     "jugador": {
       "id": "J01",
@@ -15,7 +16,8 @@ title Vaquero Valley - Estructura jugabilidad y organización de datos
       "nivel": 3,
       "puebloId": "P01",
       "activo": true
-    },
+    }
+    ,
     "pueblo": {
       "id": "P01",
       "nombre": "Caserío Colesterol",
@@ -24,21 +26,23 @@ title Vaquero Valley - Estructura jugabilidad y organización de datos
       "propietarioId": "J01",
       "habitantes": 30,
       "edificios": [
-        {
-          "id": "E01",
-          "nombre": "Taberna",
-          "estado": "construido",
-          "personajes": ["C01"]
-        },
-        {
-          "id": "E02",
-          "nombre": "Oficina del Sheriff",
-          "estado": "enConstruccion",
-          "nivel": 1,
-          "objetos": ["O01"]
-        }
+      {
+        "id": "E01",
+        "nombre": "Taberna",
+        "estado": "construido",
+        "personajes": ["C01"]
+      }
+      ,
+      {
+        "id": "E02",
+        "nombre": "Oficina del Sheriff",
+        "estado": "enConstruccion",
+        "nivel": 1,
+        "objetos": ["O01"]
+      }
       ]
-    },
+    }
+    ,
     "personaje": {
       "id": "C01",
       "nombre": "Arthur",
@@ -47,7 +51,8 @@ title Vaquero Valley - Estructura jugabilidad y organización de datos
       "esNpc": true,
       "ubicacionEdificioId": "E01",
       "objetos": ["O01"]
-    },
+    }
+    ,
     "objeto": {
       "id": "O01",
       "nombre": "Revolver",
@@ -56,28 +61,32 @@ title Vaquero Valley - Estructura jugabilidad y organización de datos
       "fechaCreacion": "2025-11-05",
       "disponible": true
     }
-  },
+  }
+  ,
   "acciones": [
-    {
-      "nombre": "fundarPueblo",
-      "afecta": "pueblo",
-      "parametros": ["jugadorId", "nombre", "puebloId"]
-    },
-    {
-      "nombre": "construirEdificio",
-      "afecta": "edificio",
-      "parametros": ["puebloId", "nombre"]
-    },
-    {
-      "nombre": "reclutarPersonaje",
-      "afecta": "personaje",
-      "parametros": ["puebloId", "nombre", "rol"]
-    },
-    {
-      "nombre": "asignarObjeto",
-      "afecta": "objeto",
-      "parametros": ["personajeId", "objetoId"]
-    }
+  {
+    "nombre": "fundarPueblo",
+    "afecta": "pueblo",
+    "parametros": ["jugadorId", "nombre", "puebloId"]
+  }
+  ,
+  {
+    "nombre": "construirEdificio",
+    "afecta": "edificio",
+    "parametros": ["puebloId", "nombre"]
+  }
+  ,
+  {
+    "nombre": "reclutarPersonaje",
+    "afecta": "personaje",
+    "parametros": ["puebloId", "nombre", "rol"]
+  }
+  ,
+  {
+    "nombre": "asignarObjeto",
+    "afecta": "objeto",
+    "parametros": ["personajeId", "objetoId"]
+  }
   ]
 }
 @endjson
