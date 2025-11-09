@@ -1,61 +1,68 @@
-@startgantt
-title 📅 Plan de proyecto — Visual Novel "Sombras de Hierro"
+@startgantt gantt
+Project starts 2025-01-01
 
-Project starts the 2025-01-20
-saturday are closed
-sunday are closed
-
-' ===================== FASE 1: PREPRODUCCIÓN =====================
 -- Fase 1 - Preproducción --
-[Pitch & alcance] lasts 3 days
-[Biblia narrativa] lasts 5 days and starts after [Pitch & alcance]
-[Mapa de rutas] lasts 5 days and starts after [Biblia narrativa]
-[Guion inicial] lasts 3 days and starts after [Mapa de rutas]
-[Plan técnico] lasts 2 days and starts after [Guion inicial]
-[Plan arte y audio] lasts 2 days and starts after [Guion inicial]
 
-Milestone "🧩 Prototipo" happens at [Plan técnico]'s end
-note bottom of "🧩 Prototipo"
-Prototipo jugable listo
+[Investigación narrativa y contexto] requires 7 days and is colored in PaleGreen
+then [Arte conceptual] requires 8 days and is colored in PaleGreen
+then [Diseño de rutas y decisiones] requires 10 days and is colored in PaleGreen
+note bottom
+  Equipo: guionista principal  
+  Recursos: documentación histórica y referencias de guerra  
+  Objetivo: definir el tono, los personajes y las ramas narrativas
 end note
 
-' ===================== FASE 2: PRODUCCIÓN =====================
+then [Audio - concepto (ambiente de tensión)] requires 6 days and is colored in PaleGreen
+then [UI/UX inicial (interfaz de diálogo y menú)] requires 6 days and is colored in PaleGreen
+
+[Prototipo listo] happens at [UI/UX inicial (interfaz de diálogo y menú)]'s end
+[Fase 1 - Preproducción] requires 31 days
+[Fase 1 - Preproducción] is 70% complete
+
 -- Fase 2 - Producción --
-[Motor de diálogo] lasts 8 days and starts after [Plan técnico]
-[Sistema de variables] lasts 4 days and starts after [Motor de diálogo]
-[Sistema de guardado] lasts 4 days and starts after [Sistema de variables]
-[Implementación de escenas] lasts 6 days and starts after [Sistema de guardado]
 
-[Fondos urbanos] lasts 15 days and starts after [Plan arte y audio]
-[Sprites de personajes] lasts 12 days and starts after [Fondos urbanos]
-[Música y SFX] lasts 12 days and starts after [Plan arte y audio]
-
-[Integración] lasts 12 days
-[Integración] starts at [Sprites de personajes]'s end
-[Integración] starts at [Música y SFX]'s end
-
-[Rutas alternativas] lasts 10 days and starts after [Integración]
-[Pruebas internas] lasts 6 days and starts after [Rutas alternativas]
-
-Milestone "🧪 Beta" happens at [Pruebas internas]'s end
-note bottom of "🧪 Beta"
-Versión beta completa
+[Programación base (Ren’Py)] starts at [Prototipo listo]'s end and requires 20 days and is colored in LightSkyBlue
+note bottom
+  Equipo: 2 programadores  
+  Recursos: motor Ren’Py, laptops  
+  Objetivo: desarrollar sistema de diálogo, guardado y variables de afinidad
 end note
 
-' ===================== FASE 3: POSTPRODUCCIÓN =====================
+then [Arte de fondos] requires 15 days and is colored in LightSkyBlue
+then [Sprites de personajes y expresiones] requires 10 days and is colored in LightSkyBlue
+then [Diseño de escenas y rutas principales] requires 15 days and is colored in LightSkyBlue
+note bottom
+  Equipo: diseñador narrativo y artista  
+  Recursos: editor de guion y assets 2D  
+  Objetivo: crear las escenas jugables y rutas principales
+end note
+
+then [Integración de música y efectos] requires 18 days and is colored in LightSkyBlue
+note bottom
+  Equipo: músico y programador  
+  Recursos: biblioteca de sonidos y pistas originales  
+  Objetivo: ambientar las escenas clave
+end note
+
+[Beta lista] happens at [Integración de música y efectos]'s end
+[Fase 2 - Producción] requires 78 days
+[Fase 2 - Producción] is 50% complete
+
 -- Fase 3 - Postproducción --
-[QA y corrección de bugs] lasts 8 days and starts after "🧪 Beta"
-[Ajustes narrativos] lasts 3 days and starts after [QA y corrección de bugs]
-[Títulos y créditos] lasts 2 days and starts after [Ajustes narrativos]
-[Optimización] lasts 3 days and starts after [Títulos y créditos]
-[Marketing y trailer] lasts 4 days and starts after [Ajustes narrativos]
 
-[Publicación] lasts 2 days
-[Publicación] starts at [Optimización]'s end
-[Publicación] starts at [Marketing y trailer]'s end
-
-Milestone "🚀 v1.0" happens at [Publicación]'s end
-note bottom of "🚀 v1.0"
-Lanzamiento oficial
+[Testing QA] starts at [Beta lista]'s end and requires 7 days and is colored in LightSalmon
+then [Optimización y balance narrativo] requires 10 days and is colored in LightSalmon
+note bottom
+  Equipo: programadores y guionista  
+  Recursos: herramientas de testeo y retroalimentación de jugadores  
+  Objetivo: ajustar ritmo de lectura y corrección de errores
 end note
+
+then [Marketing y trailer] requires 7 days and is colored in LightSalmon
+then [Preparación de lanzamiento] requires 5 days and is colored in LightSalmon
+
+[Versión 1.0] happens at [Preparación de lanzamiento]'s end
+[Fase 3 - Postproducción] requires 29 days
+[Fase 3 - Postproducción] is 30% complete
+
 @endgantt
