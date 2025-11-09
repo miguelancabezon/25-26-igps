@@ -1,0 +1,39 @@
+@startsalt
+{
+  "Pantalla de Inventario (En Partida)"
+  {+
+    {
+      "EQUIPO 🎒" | "INVENTARIO 📦" | "MAPA 🗺️"
+    }
+    
+    {
+      {
+        "Leyenda: Vortex"
+        "Casco: (Nivel 2)"
+        "Armadura: (Nivel 3)"
+        "Mochila: (Nivel 2)"
+        "Arma 1: [Rifle de Asalto]"
+        "Arma 2: [Escopeta]"
+      }
+      
+      {
+        "Inventario (12/14)"
+        {|
+          "Item" | "Cantidad" | "Tipo"
+          "Munición (Pesada)" | 120 | Munición
+          "Munición (Escopeta)" | 16 | Munición
+          "Botiquín" | 2 | Curación
+          "Batería Escudo" | 4 | Escudo
+          "Granada" | 1 | Arrojadizo
+        |}
+        
+        ( Usar ) ( Soltar ) ( Soltar Pila )
+      }
+    }
+    
+    {
+      "Escudo: 100/100" | "Salud: 100/100" | .CloseButton | "[X]"
+    }
+  }
+}
+@endsalt
