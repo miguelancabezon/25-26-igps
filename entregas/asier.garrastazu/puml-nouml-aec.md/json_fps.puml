@@ -1,0 +1,72 @@
+@startjson
+{
+  "metadata": {
+    "version": "1.0",
+    "language": "es",
+    "environment": "dev",
+    "author": "nombre.apellido",
+    "dateCreated": "2025-01-01T10:00:00Z"
+  },
+  "classes": [
+    {
+      "id": 1,
+      "name": "Player",
+      "attributes": {
+        "health": 100,
+        "hunger": 50,
+        "thirst": 60,
+        "inventory": ["Axe", "WaterBottle"],
+        "position": {"x": 100, "y": 200}
+      }
+    },
+    {
+      "id": 2,
+      "name": "Item",
+      "attributes": {
+        "itemId": 10,
+        "itemName": "Axe",
+        "durability": 75,
+        "isCraftable": true
+      }
+    },
+    {
+      "id": 3,
+      "name": "Environment",
+      "attributes": {
+        "weather": "rain",
+        "timeOfDay": "night",
+        "temperature": 14.5,
+        "zones": ["forest", "river", "mountain"]
+      }
+    },
+    {
+      "id": 4,
+      "name": "Enemy",
+      "attributes": {
+        "enemyId": 5,
+        "type": "Zombie",
+        "aggressive": true,
+        "spawnTime": "2025-01-10T12:00:00Z",
+        "location": {"x": 300, "y": 400}
+      }
+    }
+  ],
+  "actions": [
+    {
+      "method": "attackEnemy",
+      "classAffected": "Enemy",
+      "params": ["enemyId", "damage"]
+    },
+    {
+      "method": "collectItem",
+      "classAffected": "Item",
+      "params": ["itemId"]
+    },
+    {
+      "method": "buildShelter",
+      "classAffected": "Environment",
+      "params": ["location", "materials"]
+    }
+  ]
+}
+@endjson

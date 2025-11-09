@@ -1,0 +1,32 @@
+@startsalt
+{
+{T
+  + 🧭 Menú Principal
+  {T
+    [🎮 Jugar]
+    [⚙️ Opciones]
+    [💾 Cargar partida]
+    [📊 Estadísticas]
+    [🚪 Salir]
+  }
+  ---
+  {+
+    {T
+      [📜 Inventario]
+      [🧍 Estado del jugador]
+      [🌍 Mapa]
+      [🛠️ Crafteo]
+      [💬 Chat]
+    }
+    ---
+    {#
+      TABLE: Inventario
+      | ID | Nombre | Tipo | Durabilidad |
+      |----|---------|------|-------------|
+      | 01 | Hacha 🪓 | Herramienta | 75% |
+      | 02 | Agua 💧 | Consumible | 1 uso |
+      | 03 | Piel 🐻 | Material | 100% |
+    }
+  }
+}
+@endSalt
