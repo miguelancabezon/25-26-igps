@@ -1,0 +1,200 @@
+from zipfile import ZipFile
+from pathlib import Path
+
+# Crear carpeta temporal
+base_path = Path("/mnt/data/AEC-PUML-NOUML")
+base_path.mkdir(parents=True, exist_ok=True)
+
+# Contenido de los archivos .puml
+files = {
+    "mindmap-survival.puml": """@startmindmap
+* 🌲 Survival Game Project
+** 🎯 Concepto
+*** 🌍 Mundo abierto
+*** ⏳ Ciclo día/noche
+*** 💀 Supervivencia por recursos
+** 🧍‍♂️ Personaje
+*** ⚙️ Atributos
+**** Salud ❤️
+**** Hambre 🍖
+**** Energía ⚡
+*** 🧰 Inventario
+**** Herramientas 🪓
+**** Comida 🍎
+**** Materiales 🪵
+** 🌿 Recursos Naturales
+*** 🌳 Bosques
+*** 🪨 Minas
+*** 🐟 Lagos y ríos
+** 👾 Enemigos
+*** 🐺 Animales salvajes
+*** 🧟‍♂️ Zombies
+*** 🤖 Drones hostiles
+** 🏗️ Construcción
+*** 🔨 Cabañas
+*** 🔥 Fogatas
+*** ⚙️ Trampas
+** 🎮 Gameplay
+*** 🗺️ Exploración
+*** ⚔️ Combate
+*** 🧠 Estrategia
+** 💻 Plataforma
+*** 🖥️ PC
+*** 🎮 Consolas
+*** 📱 Móvil
+@endmindmap
+""",
+    "gantt-survival.puml": """@startgantt
+Project starts 2025-01-01
+
+-- 🌱 Fase 1: Preproducción --
+[Idea y documentación] lasts 15 days
+[Diseño de mecánicas] lasts 20 days
+[Diseño de arte conceptual] lasts 25 days
+[Planificación del equipo] lasts 10 days
+[Prototipo inicial] lasts 10 days
+[Milestone 1: Prototipo] happens at 2025-02-20
+
+-- ⚙️ Fase 2: Producción --
+[Desarrollo de motor base] lasts 30 days and starts at 2025-02-21
+[Diseño de niveles] lasts 45 days
+[Modelado 3D y animaciones] lasts 40 days
+[Programación de IA] lasts 35 days
+[Integración de sonido] lasts 20 days
+[Milestone 2: Beta] happens at 2025-05-10
+
+-- 🧪 Fase 3: Postproducción --
+[Testeo QA] lasts 25 days
+[Optimización y corrección de bugs] lasts 20 days
+[Marketing y tráiler] lasts 15 days
+[Lanzamiento final] lasts 1 day
+[Milestone 3: v1.0] happens at 2025-07-01
+
+[Desarrollo de motor base] starts after [Prototipo inicial]
+[Diseño de niveles] starts after [Desarrollo de motor base]
+[Programación de IA] starts after [Diseño de niveles]
+[Optimización y corrección de bugs] starts after [Testeo QA]
+
+note right of [Programación de IA]
+Equipo: 3 programadores
+Recurso: Servidor de IA (AWS)
+end note
+
+note right of [Modelado 3D y animaciones]
+Equipo: 2 artistas
+Herramienta: Blender
+end note
+@endgantt
+""",
+    "json-survival.puml": """@startjson
+{
+  "version": "1.0",
+  "gameName": "SurviveTheWild",
+  "author": "Nombre Apellido",
+  "language": "es-ES",
+  "config": {
+    "environment": "development",
+    "lastUpdate": "2025-11-09T10:00:00Z"
+  },
+  "classes": [
+    {
+      "className": "Player",
+      "attributes": {
+        "id": "p001",
+        "name": "Survivor",
+        "health": 100,
+        "hunger": 50,
+        "energy": 80,
+        "inventory": ["axe", "berries", "torch"],
+        "isAlive": true
+      }
+    },
+    {
+      "className": "Resource",
+      "attributes": {
+        "id": "r045",
+        "type": "Wood",
+        "quantity": 15,
+        "location": {"x": 100, "y": 65, "z": 200},
+        "respawnTime": "2025-11-10T00:00:00Z"
+      }
+    },
+    {
+      "className": "Building",
+      "attributes": {
+        "id": "b003",
+        "name": "Cabin",
+        "ownerId": "p001",
+        "materials": ["wood", "stone"],
+        "durability": 85,
+        "createdAt": "2025-11-01"
+      }
+    },
+    {
+      "className": "Enemy",
+      "attributes": {
+        "id": "e012",
+        "type": "Wolf",
+        "health": 60,
+        "attackPower": 15,
+        "location": {"x": 95, "y": 64, "z": 198}
+      }
+    }
+  ],
+  "actions": {
+    "gatherResource": {
+      "class": "Resource",
+      "params": ["playerId", "resourceId", "quantity"]
+    },
+    "buildStructure": {
+      "class": "Building",
+      "params": ["playerId", "structureType", "materials"]
+    },
+    "attackEnemy": {
+      "class": "Enemy",
+      "params": ["playerId", "enemyId"]
+    },
+    "restoreHealth": {
+      "class": "Player",
+      "params": ["playerId", "amount"]
+    }
+  },
+  "metadata": {
+    "gameVersion": "0.9.2",
+    "engine": "Unity",
+    "platforms": ["PC", "Console"]
+  }
+}
+@endjson
+""",
+    "ui-survival.puml": """@startsalt
+{+
+  "SurviveTheWild UI"
+  [🏕️ Menú Principal] | [🎒 Inventario] | [⚙️ Opciones]
+  --
+  {T
+    + "Nombre" | "Salud ❤️" | "Hambre 🍖" | "Energía ⚡"
+    "Jugador1" | "100" | "40" | "75"
+  }
+  --
+  [➕ Crear Nueva Partida]
+  [▶️ Continuar]
+  [💾 Guardar]
+  [🔊 Configurar Sonido]
+  [❌ Salir]
+}
+@endsalt
+"""
+}
+
+# Crear los archivos
+for filename, content in files.items():
+    (base_path / filename).write_text(content, encoding="utf-8")
+
+# Crear el archivo ZIP
+zip_path = Path("/mnt/data/AEC-PUML-NOUML.zip")
+with ZipFile(zip_path, "w") as zipf:
+    for file in base_path.iterdir():
+        zipf.write(file, arcname=file.name)
+
+zip_path
