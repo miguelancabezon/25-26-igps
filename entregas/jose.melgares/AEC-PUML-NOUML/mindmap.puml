@@ -1,48 +1,67 @@
 @startmindmap
 <style>
 mindmapDiagram {
-  .frontStyle * {
-    BackgroundColor lightgreen
+  .serviciosStyle * {
+    BackgroundColor #fff
   }
-  .jsStyle * {
-    BackgroundColor lightyellow
+  .ocioStyle * {
+    BackgroundColor #2f29d8
+    FontColor #fff
   }
-    .backStyle * {
-    BackgroundColor lightblue
+    .comercioStyle * {
+    BackgroundColor #d5d025
   }
-    .redStyle * {
-    BackgroundColor #FFBBCC
+    .tranportStyle * {
+    BackgroundColor #A0291C
+    FontColor #fff
+  }
+ node {
+    FontSize 14
+  }
+  rootNode {
+    BackgroundColor red
+    FontColor #fff
+    FontSize 18
   }
 }
 </style>
 
-+ AmeriCity Builder
++ AmeriCity Builder <:1F307:>
 
-++ Servicios Ciudadanos <<frontStyle>>
-+++ Agua
-+++ Electricidad
-+++ Saneamiento
+-- Servicios Ciudadanos <:1F6A6:> <<serviciosStyle>>
+--- Agua <:1F6B0:>
+--- Electricidad <:1F4A1:>
+--- Saneamiento <:1F6BD:>
 
-++ Entretenimiento <<jsStyle>>
-+++ Mega Estadios
-+++ Futbol Americano
-+++ Baseball
+++ Ocio y Entretenimiento <:1F57A:> <<ocioStyle>>
++++ Mega Estadios <:1F3DF:>
+++++ Futbol Americano
+++++ Baseball
++++ Zonas abiertas <:1f333:>
+++++ Playas
+++++ Campos de Golf
+++++ Marinas
 
 
--- Vías <<redStyle>>
---- Calles suburbanas
---- Stroads
---- Autopistas
---- Freeways
+-- Transporte <:1F6E3:> <<tranportStyle>>
+--- Tipos de vías <:1F686:>
+---- Calles suburbanas
+---- Stroads
+---- Autopistas
+---- Freeways
+--- Medios <:1F68D:>
+---- Coches pequeños
+---- Coches grandes
+---- Autobuses 
+---- Monorieles
 
--- Edificaciones
---- Compras
----- Walmart
----- Costco
----- Buccees
---- Strip Malls
---- Restaurantes
----- MacDonald'
----- Chili's
----- a
+++ Comercios <:1F6D2:> <<comercioStyle>>
++++ Compras <:1F4B0:>
+++++ Walmart
+++++ Costco
+++++ Buccees
+++++ Strip Malls
++++ Restaurantes <:1F374:>
+++++ Estilo "To-Go"
+++++ Servicio de mesa
 @endmindmap
