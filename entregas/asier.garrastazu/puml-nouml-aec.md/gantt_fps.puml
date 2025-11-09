@@ -1,0 +1,53 @@
+@startgantt
+Project starts the 2025-01-01
+saturday are closed
+sunday are closed
+printscale weekly
+
+' Fases
+[Preproducción] starts 2025-01-01 and ends 2025-02-28
+[Producción] starts 2025-03-01 and ends 2025-08-31
+[Postproducción] starts 2025-09-01 and ends 2025-12-31
+
+' Tareas por fase
+[Idea y documentación] as [T1] starts 2025-01-01 and lasts 20 days and is 100% complete
+[Concept Art] as [T2] starts after [T1]'s end and lasts 25 days and is 80% complete
+[Prototipo inicial] as [T3] starts after [T2]'s end and lasts 15 days and is 60% complete
+
+[Programación del motor] as [T4] starts 2025-03-01 and lasts 40 days
+[Diseño de niveles] as [T5] starts after [T4]'s start and lasts 60 days
+[Modelado 3D] as [T6] starts after [T4]'s start and lasts 45 days
+[IA de enemigos] as [T7] starts after [T5]'s start and lasts 50 days
+[Interfaz de usuario] as [T8] starts after [T5]'s end and lasts 20 days
+[Test interno] as [T9] starts after [T8]'s end and lasts 20 days
+
+[Optimización] as [T10] starts 2025-09-01 and lasts 30 days
+[Corrección de bugs] as [T11] starts after [T10]'s start and lasts 40 days
+[Marketing y trailer] as [T12] starts 2025-09-15 and lasts 30 days
+[Lanzamiento beta] as [T13] starts 2025-10-15 and lasts 10 days
+[Versión final] as [T14] starts 2025-12-01 and lasts 15 days
+[Soporte post-lanzamiento] as [T15] starts 2025-12-15 and lasts 15 days
+
+' Dependencias
+[T2] -> [T3]
+[T3] -> [T4]
+[T4] -> [T5]
+[T8] -> [T9]
+[T9] -> [T10]
+[T13] -> [T14]
+
+' Hitos
+[Milestone 1: Prototipo] happens at [T3]'s end
+[Milestone 2: Beta] happens at [T13]'s start
+[Milestone 3: v1.0] happens at [T14]'s end
+
+' Notas
+note right of [T4]
+Equipo: 2 programadores, 1 arquitecto
+Recursos: Unity, GitHub
+end note
+
+note right of [T13]
+Equipo QA + marketing
+end note
+@endgantt
