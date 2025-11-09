@@ -1,0 +1,52 @@
+@startgantt
+Project starts 2025-01-01
+Project ends 2026-01-01
+
+' === Fase 1 - Preproducción ===
+[Preproducción] lasts 60 days
+[Concept Art] starts at [Preproducción]'s start and lasts 30 days
+[Prototipo Jugable] starts at [Concept Art]'s end and lasts 30 days
+milestone [Milestone 1: Prototipo] happens at [Prototipo Jugable]'s end
+
+' === Fase 2 - Producción ===
+[Producción] starts at [Prototipo Jugable]'s end and lasts 200 days
+[Programación núcleo] starts at [Producción]'s start and lasts 100 days
+[Modelado 3D] starts at [Concept Art]'s end and lasts 120 days
+[Animaciones] starts at [Modelado 3D]'s end and lasts 60 days
+[IA Enemigos] starts at [Programación núcleo]'s end and lasts 40 days
+[Pruebas internas] starts at [IA Enemigos]'s end and lasts 30 days
+milestone [Milestone 2: Beta] happens at [Pruebas internas]'s end
+
+' === Fase 3 - Postproducción ===
+[Postproducción] starts at [Pruebas internas]'s end and lasts 60 days
+[Optimización] starts at [Postproducción]'s start and lasts 30 days
+[Marketing] starts at [Optimización]'s start and lasts 60 days
+milestone [Milestone 3: v1.0] happens at [Postproducción]'s end
+
+' === Notas con recursos ===
+note right of [Concept Art]
+Equipo: 2 artistas
+Software: Photoshop, Blender
+end note
+
+note right of [Programación núcleo]
+Equipo: 4 devs
+Lenguaje: C#, Unity
+end note
+
+note right of [Pruebas internas]
+Equipo: QA + testers
+end note
+
+' === Porcentajes ===
+[Concept Art] is 100% done
+[Prototipo Jugable] is 80% done
+[Programación núcleo] is 60% done
+[Modelado 3D] is 50% done
+[Animaciones] is 20% done
+[IA Enemigos] is 0% done
+[Pruebas internas] is 0% done
+[Optimización] is 0% done
+[Marketing] is 10% done
+
+@endgantt
