@@ -1,0 +1,74 @@
+@startmindmap
+<style>
+mindmapDiagram {
+  .frontStyle * {
+    BackgroundColor lightgreen
+  }
+  .jsStyle * {
+    BackgroundColor lightyellow
+  }
+    .backStyle * {
+    BackgroundColor lightblue
+  }
+    .redStyle * {
+    BackgroundColor #FFBBCC
+  }
+  
+   .orangeStyle * {
+    BackgroundColor #FFA12B
+  }
+}
+</style>
+
++ StoneWorld
+
+++ Era de Piedra <<frontStyle>>
++++ <:1F3AF:>Objetivos 
+++++ Recolectar recursos básicos
+++++ Recolectar Fabricar herramientas de piedra
+++++ Construir un refugio 
+++++ Descubrir la agricultura
+
+++ Era de Metales <<jsStyle>>
++++ <:1F3AF:>Objetivos
+++++ Descubrir minerales (Hierro,Cobre)
+++++ Construir un horno o fundidor
+++++ Posibilidad de mecanismos rudimentarios
+++++ Experimentas con imanes, electricidad o mecanismos hidráulicos
+
+
+++ Era Clasica <<orangeStyle>>
++++ <:1F3AF:>Objetivos
+++++ Descubrir la energía mecánica controlable
+++++ Fabricar máquinas automáticas
+++++ Construir estructuras avanzadas
+
+-- Era Industrial <<backStyle>>
+--- <:1F3AF:>Objetivos
+---- Diseñar un motor de vapor
+---- Crear vehículos rudimentarios
+---- Aprender a manejar combustibles
+---- Construir talleres complejos
+
+
+-- Era de la Electricidad <<redStyle>>
+--- <:1F3AF:>Objetivos
+---- Crear un generador
+---- Almacenar y distribuir energía
+---- Inventar luces, motores eléctricos, radio básica
+---- Experimentar con tecnología avanzada y automatización
+---- Mejorar herramientas con energía
+
+-- Era Contemporanea
+--- <:1F3AF:>Objetivos
+---- Desarrollar circuitos, sensores
+---- Empezar a usar energía solar, eólica o nuclear
+---- Dominar biotecnología o materiales sintéticos
+---- Explorar comunicación de largo alcance
+---- Alcanzar autosuficiencia total
+
+
+
+
+
+@endmindmap

@@ -1,0 +1,52 @@
+@startuml
+
+' Definir las secciones principales de la UI
+!define RECTANGLE class
+
+' Sección de Header (encabezado)
+RECTANGLE Header {
+  +🛠️ Título del Juego
+  +⚙️ Configuración
+  +🔔 Notificaciones
+}
+
+' Tabs para cambiar entre secciones
+RECTANGLE Tabs {
+  +🗂️ Inventario
+  +🌍 Mapa
+  +👤 Perfil
+  +🛑 Salir
+}
+
+' Contenedor del contenido principal
+RECTANGLE Content {
+  +📦 Tabla de Inventario
+  +💬 Mensajes
+  +🖱️ Botones Interactivos
+}
+
+' Tabla de Datos (ejemplo de inventario)
+RECTANGLE TablaDeDatos {
+  +| ID | Objeto  | Cantidad | Descripción      |
+  +|----|---------|----------|------------------|
+  +| 1  | Bloque  | 64       | Bloque de tierra |
+  +| 2  | Madera  | 12       | Bloques de madera|
+  +| 3  | Piedra  | 8        | Bloques de piedra|
+}
+
+' Elementos Interactivos (botones y checkboxes)
+RECTANGLE ElementosInteractivos {
+  +🔨 Botón de Crafteo
+  +✔️ Casilla de Crafteo Automático
+  +🧭 Botón de Teletransportarse
+  +💡 Encender Linterna
+  +🎮 Ajustes del Juego
+}
+
+' Relacionar secciones
+Header -[hidden]-> Tabs : Muestra las secciones
+Tabs -down-> Content : Contenido que cambia según el Tab
+Content -down-> TablaDeDatos : Información mostrada en "Inventario"
+Content -down-> ElementosInteractivos : Elementos de interacción con el usuario
+
+@enduml
