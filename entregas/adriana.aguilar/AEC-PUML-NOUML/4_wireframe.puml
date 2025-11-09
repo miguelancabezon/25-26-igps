@@ -1,0 +1,123 @@
+@startsalt
+{+
+  {/ <b>⛏️ Crafteo</b> | <b>🎒 Inventario</b> | <b>🏗️ Construcción</b> | <b>📊 Estadísticas</b> }
+  {
+    {T
+      + <&home> Inicio
+      ++ <&wrench> Herramientas
+      +++ Hacha de Piedra
+      +++ Pico de Piedra
+      +++ Lanza de Madera
+      ++ <&fire> Supervivencia
+      +++ Hoguera 🔥
+      +++ Antorcha
+      +++ Vendaje
+      ++ <&heart> Comida
+      +++ Carne Cocida 🍖
+      +++ Bayas
+      +++ Agua Hervida 💧
+      ++ <&shield> Armadura
+      +++ Chaqueta de Piel
+      +++ Botas Reforzadas
+    } |
+    {
+      <b>🔨 Hacha de Piedra</b>
+      --
+      <i>Herramienta básica de supervivencia</i>
+      ==
+      Una hacha primitiva pero efectiva.
+      Útil para talar árboles y combate básico.
+      ..
+      <b>Durabilidad:</b> 75/100
+      <b>Daño:</b> 15
+      <b>Bonus:</b> +50% recolección de madera
+      --
+      <b>📦 Recursos Necesarios:</b>
+      {#
+        . <b>Recurso</b> | <b>Necesario</b> | <b>Disponible</b> | <b>Estado</b>
+        Madera 🌲 | 5 | 35 | <color:green>✓</color>
+        Piedra 🪨 | 3 | 0 | <color:red>✗</color>
+        Fibra 🌾 | 2 | 8 | <color:green>✓</color>
+      }
+      --
+      [ <b>Craftear</b> ] | [ Favorito ⭐ ] | [ Info ℹ️ ]
+    } |
+    {
+      <b>🎒 Inventario del Jugador</b>
+      Peso: 45.5 / 100 kg
+      ==
+      {#
+        . <b>Slot</b> | <b>Item</b> | <b>Cantidad</b> | <b>Acción</b>
+        1 | Hacha de Piedra ⛏️ | 1 | ^Equipar^
+        2 | Madera 🌲 | 35 | ^Soltar^
+        3 | Carne Cruda 🥩 | 8 | ^Cocinar^
+        4 | Fibra 🌾 | 8 | ^Soltar^
+        5 | Antorcha 🔦 | 3 | ^Equipar^
+        6 | <color:gray>Vacío</color> | - | -
+        7 | <color:gray>Vacío</color> | - | -
+        8 | <color:gray>Vacío</color> | - | -
+      }
+      --
+      [ Organizar ] | [ Desechar Todo ] | [ Transferir ]
+    }
+  }
+  --
+  {
+    <b>📊 Estado del Jugador</b> |
+    <b>Nivel 12</b> | 
+    <b>EXP:</b> 3450/5000 |
+    <b>🌡️ -15°C</b> |
+    <b>🕐 18:45</b> |
+    <b>Día 7</b>
+  }
+  {
+    <b>❤️ Vida:</b> [||||||||||||||||---] 85% |
+    <b>🍖 Hambre:</b> [|||||||||||--------] 60% |
+    <b>💧 Sed:</b> [||||||-------------] 45% |
+    <b>🌡️ Calor:</b> [|||||||||||||------] 70% |
+    <b>⚡ Energía:</b> [|||||||||||||||||--] 88%
+  }
+  --
+  {
+    <b>⚡ Hotbar de Acceso Rápido</b>
+  }
+  {
+    [1: ⛏️ Hacha] | [2: 🏹 Arco] | [3: 🩹 Venda] | [4: 🍖 Carne] | [5: 💧 Agua] | [6: Vacío] | [7: Vacío] | [8: Vacío]
+  }
+  --
+  {
+    <b>🗺️ Minimapa</b>
+    {SI
+      .
+      ....🌲..🏚️
+      ..🌲..⛺..🌲
+      🌲..👤....
+      ..🐺..🌲🌲
+      🌲......🌲
+    } |
+    {
+      <b>⚠️ Alertas Activas</b>
+      • 🐺 Manada de lobos cerca
+      • 🌡️ Temperatura bajando
+      • 🌨️ Ventisca aproximándose
+      --
+      <b>🎯 Misiones</b>
+      ☐ Construir refugio
+      ☑ Encender hoguera
+      ☐ Cazar 3 ciervos
+    } |
+    {
+      <b>🛠️ Acciones Rápidas</b>
+      --
+      ( ) Crafteo automático
+      (X) Recolección inteligente
+      ( ) PvP activado
+      (X) Mostrar nombres
+      --
+      ^<b>Guardar Partida</b>^
+      ^<b>Configuración</b>^
+      ^<b>Salir al Menú</b>^
+    }
+  }
+}
+@endsalt
