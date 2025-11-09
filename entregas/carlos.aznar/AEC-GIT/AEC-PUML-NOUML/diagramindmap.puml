@@ -1,0 +1,69 @@
+@startmindmap
+<style>
+mindmapDiagram {
+    .1 * {
+        BackgroundColor lightgreen
+    }
+    .2 * {
+        BackgroundColor lightyellow
+    }
+    .3 * {
+        BackgroundColor lightblue
+    }
+    .4 * {
+        BackgroundColor #FFBBCC
+    }
+    .5 * {
+        BackgroundColor #DDBBFF
+    }
+
+    .6 * {
+        BackgroundColor #FFFF88
+    }
+    .7 * {
+        BackgroundColor #88FF88
+    }
+}
+
+</style>
+
+
++ Supervivencia
+
+++ Estrategias <<1>>
++++ Planificación
++++ Orientación
++++ Sigilo
+
+++ Adaptación <<2>>
++++ Herramientas
++++ Refugio
++++ Espacios
+
+++ Recursos <<3>>
++++ Alimentación
++++ Agua
++++ Materiales
+
+++ Amenazas <<4>>
++++ Comunidad
++++ Enemigos
+++++ Algo que se pueda matar
+++++ Algo que no se pueda matar y se tenga que evitar
+
++++ Habilidades
+
+
+-- Personajes <<5>>
+--- Protagonista
+--- Antagonista
+
+-- Entorno <<6>>
+--- Ubicación
+--- Mapa
+---- Mundo Abierto
+---- Zonas Seguras
+---- Zonas Peligrosas
+--- Paisajes
+--- Clima
+--- Flora y Fauna

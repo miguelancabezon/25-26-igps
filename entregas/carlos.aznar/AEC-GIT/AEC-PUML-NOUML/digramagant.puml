@@ -1,0 +1,61 @@
+@startgantt 
+title Desarrollo Aplicación E-commerce
+printscale daily
+
+Project starts 2025-11-21
+
+
+-- Fase 1: Preproduccion (1 semana) --
+
+[Reunion de ideas] lasts 2 day
+[Reunion de ideas] is 50% completed
+[Reunion de ideas] is colored in Yellow
+
+[Desarrollo de concepto] lasts 3 days and starts at [Reunion de ideas]'s end
+[Desarrollo de concepto] is 20% completed
+[Desarrollo de concepto] is colored in LightBlue
+
+[Planificacion del proyecto] lasts 2 days and starts at [Desarrollo de concepto]'s end
+[Planificacion del proyecto] is colored in LightGreen
+[Planificacion del proyecto] is 60% completed
+
+-- Fase 2: Producción (2 semanas) --
+
+[Desarrollo de personajes] lasts 6 days and starts at [Planificacion del proyecto]'s end
+[Desarrollo de personajes] is 40% completed
+[Desarrollo de personajes] is colored in LightCoral
+
+[Desarrollo de historia] lasts 1 day and starts at [Desarrollo de personajes]'s end
+[Desarrollo de historia] is colored in LightPink
+[Desarrollo de historia] is 80% completed
+
+[Diseño de niveles] lasts 4 days and starts at [Desarrollo de historia]'s end
+[Diseño de niveles] is colored in LightSalmon
+[Diseño de niveles] is 30% completed
+
+[Programacion y mecanicas de juego] lasts 2 days and starts at [Diseño de niveles]'s end
+[Programacion y mecanicas de juego] is colored in LightSkyBlue
+[Programacion y mecanicas de juego] is 50% completed
+
+note right of [Programacion y mecanicas de juego]
+Revisión de prototipo
+con el equipo de UX
+end note
+
+[Diseño de sonido y musica] lasts 1 days and starts at [Programacion y mecanicas de juego]'s end
+[Diseño de sonido y musica] is colored in LightYellow
+[Diseño de sonido y musica] is 70% completed
+
+-- Fase 3: PostProduccion (1 semana) --
+
+[Pruebas y control de calidad] lasts 6 days and starts at [Diseño de sonido y musica]'s end
+[Pruebas y control de calidad] is colored in LightGray
+[Pruebas y control de calidad] is 90% completed
+
+[Lanzamiento y marketing] lasts 6 days and starts at [Pruebas y control de calidad]'s end
+[Lanzamiento y marketing] is colored in LightCyan
+[Lanzamiento y marketing] is 40% completed
+
+
+
+@endgantt
