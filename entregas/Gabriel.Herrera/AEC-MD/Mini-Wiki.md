@@ -91,4 +91,8 @@ gantt
     section Era moderna
     Freddy Fazbear's Mega Pizzaplex        :d1, 2030, 5y
 ```
+<<<<<<< HEAD
 [↑ Volver arriba](#-índice)
+=======
+[↑ Volver arriba](#-índice)
+>>>>>>> 86a7f2128f0560eae25a4150c13c9dd084cad1a1
