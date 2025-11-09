@@ -1,0 +1,83 @@
+@startmindmap
+
+<style>
+mindmapDiagram {
+  :rootNode {
+    BackgroundColor #ea0b0bff
+    FontColor #fff5f5ff
+    LineColor #2200ffff
+    FontSize 22
+    RoundCorner 20
+  }
+  :depth1 {
+    BackgroundColor #1ABC9C
+    FontColor #0B2B2B
+    LineColor #0E6655
+    RoundCorner 16
+  }
+  :depth2 {
+    BackgroundColor #3498DB
+    FontColor #0B2540
+    LineColor #1F618D
+    RoundCorner 14
+  }
+  :depth3 {
+    BackgroundColor #F1C40F
+    FontColor #7D6608
+    LineColor #B7950B
+    RoundCorner 12
+  }
+  :depth4 {
+    BackgroundColor #E67E22
+    FontColor #6E2C00
+    LineColor #BA4A00
+    RoundCorner 10
+  }
+}
+</style>
+
+* FPS Proyecto 
+
+** Núcleo del juego ★
+*** Bucle de juego: Explorar → Encontrar → Combatir → Recompensar
+**** Recompensas: botín ▣ | experiencia | planos
+*** Progresión: niveles | habilidades | equipamiento
+**** Árbol de mejoras: daño | control | utilidad
+*** Facciones e IA: patrullas | alertas | rutas
+
+** Sistemas de juego ⚙
+*** Armas: hitscan vs proyectil | retroceso | recarga
+**** Modificaciones: miras | acople | silenciador | aspecto
+*** Movimiento: esprintar | salto | deslizamiento | parkour ligero
+*** Modos: 5v5 táctico | deathmatch | cooperativo PvE
+
+** Arquitectura técnica ☁
+*** Servidores dedicados: lobby | matchmaker | game-servers
+**** Netcode: tickrate 60 | interpolación | reconciliación
+*** Escalado: contenedores | autoescalado | métricas
+*** Seguridad: anti-cheat | validación servidor
+
+** Arte y audio ♪
+*** Dirección artística: realista-estilizado | paleta fría
+*** Sonido: foley | mezcla 3D | pistas dinámicas
+*** UI/UX: HUD limpio | minimapa | sistema de ping
+
+left side
+
+** Producción y equipo ▣
+*** Roles: producción | diseño | programación | arte | QA | DevOps
+**** Cadencias: sprints 2 semanas | dailies | reviews
+*** Herramientas: Git | CI/CD | gestor de issues | métricas
+
+** Economía y negocio ▲
+*** Modelo: compra premium + DLCs cosméticos (sin P2W)
+**** Tienda: aspectos | pases de temporada | evento limitado
+*** KPI: retención D1/D7 | MAU | ARPPU
+
+** Riesgos y QA ⚠
+*** Técnicos: lag | trampas | rendimiento GPU media
+**** Mitigación: pruebas automáticas | perfiles | telemetría
+*** Producción: alcance | dependencia de assets | retrasos
+**** Plan: MVP → vertical slice → alpha → beta → gold
+
+@endmindmap
