@@ -1,0 +1,23 @@
+@startsalt
+{
+{+
+<b>🌍 Human Evolution Game UI
+
+[Tab: Sociedad] [Tab: Tecnología] [Tab: Edificios] [Tab: Países] [Tab: Estadísticas]
+
+[Tabla de Sociedad]
+| Nombre        | Población | Tecnología | Recursos       | Estado     |
+|---------------|-----------|------------|----------------|------------|
+| Tribu Inicial | 20        | 1          | madera, piedra | primitive  |
+| Clan Rival    | 18        | 1          | piedra         | primitive  |
+
+[Botón: Añadir Miembro] : Agrega un nuevo personaje a la sociedad
+[Botón: Descubrir Tecnología] : Descubre nuevas tecnologías
+[Botón: Construir Edificio] : Construye nuevas estructuras
+[Botón: Atacar País] : Inicia conflicto con otro país
+[Botón: Guardar Progreso] : Guarda la partida actual
+
+[🔍] [⚙️] [🏠] [📊] [🌐]
+}
+}
+@endsalt
