@@ -71,3 +71,110 @@ mindmapDiagram {
 ** Arte y estética <<art>>
 ** Mercado y comunidad <<comunity>>
 @endmindmap
+
+
+
+
+
+
+
+@startuml
+' ======================= ESTILO GENERAL =======================
+skinparam backgroundColor #FAFAFA
+skinparam class {
+  BackgroundColor<<Personaje>> #FFEBEE
+  BackgroundColor<<Escenario>> #E3F2FD
+  BackgroundColor<<Decision>>  #FFF9C4
+  BackgroundColor<<Juego>>     #E8F5E9
+  BackgroundColor<<Sistema>>   #F3E5F5
+  BorderColor #424242
+  FontColor #212121
+}
+
+title 🎨 Visual Novel - Class Diagram
+
+' ======================= CLASES PRINCIPALES =======================
+
+class Juego <<Juego>> {
+  +string id
+  +string nombre
+  +string descripcion
+  +string idioma
+  +string estado
+  +date fechaLanzamiento  // formato ISO: 2025-11-25
+  +list<Personaje> personajes
+  +list<Escenario> escenarios
+  +list<Decision> decisiones
+  +object metadata
+}
+
+class Personaje <<Personaje>> {
+  +string id
+  +string nombre
+  +string estado
+  +int edad
+  +string rol              // protagonista, secundario, antagonista...
+  +boolean activo
+  +string estadoEmocional
+  +string vozActor
+  +string fechaCreacion    // ISO: 2025-11-25
+}
+
+class Escenario <<Escenario>> {
+  +string id
+  +string nombre
+  +string ubicacion
+  +string horaDia
+  +string estado
+  +string fondo            // path o URL
+  +boolean visible
+  +list<Personaje> personajesPresentes
+  +string fechaModificacion // ISO: 2025-05-21T14:00:00Z
+}
+
+class Decision <<Decision>> {
+  +string id
+  +string nombre 
+  +string texto
+  +string estado
+  +string como 
+  +list<string> opciones
+  +int consecuenciaID
+  +boolean esFinal
+  +string fechaCreacion     // ISO: 2025-03-12
+}
+
+' ======================= RELACIONES =======================
+
+Juego "1" o-- "*" Personaje : contiene >
+Juego "1" o-- "*" Escenario : incluye >
+Juego "1" o-- "*" Decision  : utiliza >
+Escenario "*" o-- "*" Personaje : presenta >
+
+' ======================= OBJETO DE CONFIGURACIÓN / METADATA =======================
+class Sistema <<Sistema>> {
+  +string version
+  +string autor            // yo, protagonista
+  +string entorno          // dev, test, prod
+  +string lenguaje          // Python, Ren’Py
+  +string ultimaActualizacion // ISO: 2025-11-25
+}
+
+Juego *-- Sistema : metadata >
+
+' ======================= ACCIONES / MÉTODOS =======================
+class Actions {
+  +createPersonaje(nombre:string, edad:int, rol:string)
+  +addEscenario(nombre:string, ubicacion:string)
+  +addDecision(texto:string, opciones:list<string>)
+  +saveGame(juegoId:string, fecha:string)
+  +loadGame(juegoId:string)
+  +updateEstadoPersonaje(personajeId:string, estadoEmocional:string)
+}
+
+Actions ..> Juego : afecta >
+Actions ..> Personaje : modifica >
+Actions ..> Escenario : crea >
+Actions ..> Decision : gestiona >
+
+@enduml
