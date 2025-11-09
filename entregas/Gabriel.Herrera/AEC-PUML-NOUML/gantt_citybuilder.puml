@@ -1,0 +1,52 @@
+@startgantt
+Proyecto iniciado el 2025-01-01
+Sabado esta cerrado
+Domingo esta cerrado
+printscale 1.2
+
+-- Fase 1 - Preproducción --
+[📋 Concepto del Juego] dura 10 días y está coloreado en Coral
+[🎨 Arte Conceptual] dura 15 días y está coloreado en Ciruela (Plum)
+[🧩 Diseño de Mecánicas] dura 12 días y está coloreado en Coral
+[💻 Selección de Tecnologías] dura 7 días y está coloreado en Coral
+[🧠 Prototipo Inicial] dura 10 días y está coloreado en Oro (Gold)
+
+[🧠 Prototipo Inicial] comienza al final de [🎨 Arte Conceptual]
+[🎨 Arte Conceptual] depende de [📋 Concepto del Juego]
+
+Milestone [🚀 Hito 1: Prototipo] happens at [🧠 Prototipo Inicial]'s end
+
+-- Fase 2 - Producción --
+[🧱 Desarrollo del Motor Principal] dura 40 días y está coloreado en Azul Claro (LightBlue)
+[🌆 Implementar Sistemas de Ciudad] dura 30 días y está coloreado en Verde Claro (LightGreen)
+[👥 Inteligencia Artificial de Habitantes] dura 25 días y está coloreado en Verde Claro (LightGreen)
+[🎵 Música y Sonido] dura 20 días y está coloreado en Ciruela (Plum)
+[🧑‍🎨 Modelado 3D] dura 35 días y está coloreado en Ciruela (Plum)
+[🧩 Integración General] dura 15 días y está coloreado en Azul Claro (LightBlue)
+
+[🌆 Implementar Sistemas de Ciudad] comienza en el inicio de [🧱 Desarrollo del Motor Principal] +10 días
+[🧩 Integración General] comienza al final de [🧱 Desarrollo del Motor Principal]
+
+Milestone [🧪 Hito 2: Versión Beta] happens at [🧩 Integración General]'s end
+
+-- Fase 3 - Postproducción --
+[🐞 Pruebas y QA] dura 20 días y está coloreado en Caqui (Khaki)
+[📦 Optimización y Corrección] dura 15 días y está coloreado en Caqui (Khaki)
+[📢 Marketing y Lanzamiento] dura 10 días y está coloreado en Coral
+[🧾 Documentación Final] dura 5 días y está coloreado en Caqui (Khaki)
+
+[📦 Optimización y Corrección] comienza al final de [🐞 Pruebas y QA]
+[📢 Marketing y Lanzamiento] comienza en el inicio de [🐞 Pruebas y QA] +5 días
+
+Hito [🎉 Hito 3: Versión 1.0] ocurre al final de [📢 Marketing y Lanzamiento]
+
+note top of [🧱 Desarrollo del Motor Principal]
+Equipo: 5 programadores  
+Recurso: Servidor Unity Cloud
+end note
+
+note bottom of [🎨 Arte Conceptual]
+Equipo: 3 artistas, 1 diseñador  
+Herramientas: Blender, Photoshop
+end note
+@endgantt
