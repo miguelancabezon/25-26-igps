@@ -1,0 +1,164 @@
+@startgantt
+<style>
+ganttDiagram {
+  task {
+    BackgroundColor lightBlue
+  }
+  milestone {
+    BackgroundColor orange
+    FontColor white
+  }
+}
+</style>
+
+projectscale monthly
+Project starts 2025-11-01
+
+-- Fase 1: Preproducción --
+[Investigación de mercado] as [T1] lasts 15 days and is colored in #3498DB
+note bottom
+  Equipo: 2 analistas
+  Recursos: Estudios de mercado
+end note
+[T1] is 100% completed
+
+[Diseño del concepto del juego] as [T2] lasts 20 days and is colored in #3498DB
+note bottom
+  Equipo: 3 diseñadores
+  Recursos: Game Design Document
+end note
+[T2] starts at [T1]'s end
+[T2] is 100% completed
+
+[Prototipado de mecánicas core] as [T3] lasts 30 days and is colored in #3498DB
+note bottom
+  Equipo: 2 programadores, 1 diseñador
+  Recursos: Motor Unity/Unreal
+end note
+[T3] starts at [T2]'s end
+[T3] is 80% completed
+
+[Diseño de arte conceptual] as [T4] lasts 25 days and is colored in #9B59B6
+note bottom
+  Equipo: 3 artistas conceptuales
+  Recursos: Tabletas gráficas
+end note
+[T4] starts at [T2]'s end
+[T4] is 90% completed
+
+[Definición arquitectura técnica] as [T5] lasts 20 days and is colored in #E67E22
+note bottom
+  Equipo: 2 ingenieros senior
+  Recursos: Servidor de desarrollo
+end note
+[T5] starts at [T2]'s end
+[T5] is 85% completed
+
+[Prototipo] happens at [T3]'s end
+[Prototipo] is colored in #E74C3C
+
+-- Fase 2: Producción --
+[Desarrollo del motor del juego] as [T6] lasts 60 days and is colored in #E67E22
+note bottom
+  Equipo: 5 programadores
+  Recursos: Servidor dedicado
+end note
+[T6] starts at [T3]'s end
+[T6] is 45% completed
+
+[Implementación de sistemas core] as [T7] lasts 45 days and is colored in #E67E22
+note bottom
+  Equipo: 4 programadores
+  Recursos: Framework de crafteo
+end note
+[T7] starts at [T6]'s end
+[T7] is 30% completed
+
+[Creación de assets 3D] as [T8] lasts 75 days and is colored in #9B59B6
+note bottom
+  Equipo: 4 modeladores 3D, 2 animadores
+  Recursos: Licencias software 3D
+end note
+[T8] starts at [T4]'s end
+[T8] is 40% completed
+
+[Diseño de niveles y biomas] as [T9] lasts 50 days and is colored in #9B59B6
+note bottom
+  Equipo: 3 diseñadores de niveles
+  Recursos: Herramientas de terreno
+end note
+[T9] starts at [T7]'s end
+[T9] is 25% completed
+
+[Implementación de IA] as [T10] lasts 40 days and is colored in #E67E22
+note bottom
+  Equipo: 2 programadores IA
+  Recursos: Behavior Trees
+end note
+[T10] starts at [T7]'s end
+[T10] is 20% completed
+
+[Audio y música] as [T11] lasts 55 days and is colored in #16A085
+note bottom
+  Equipo: 2 diseñadores de sonido, 1 compositor
+  Recursos: Estudio de grabación
+end note
+[T11] starts at [T8]'s end
+[T11] is 15% completed
+
+[Testing Alpha interno] as [T12] lasts 30 days and is colored in #C0392B
+note bottom
+  Equipo: 3 QA testers
+  Recursos: Sistema de bug tracking
+end note
+[T12] starts at [T9]'s end
+[T12] is 0% completed
+
+[Beta] happens at [T12]'s end
+[Beta] is colored in #E74C3C
+
+-- Fase 3: Postproducción --
+[Testing Beta cerrada] as [T13] lasts 25 days and is colored in #C0392B
+note bottom
+  Equipo: 5 QA testers, 50 beta testers
+  Recursos: Servidor de testing
+end note
+[T13] starts at [T12]'s end
+[T13] is 0% completed
+
+[Corrección de bugs críticos] as [T14] lasts 20 days and is colored in #C0392B
+note bottom
+  Equipo: Todos los programadores
+  Recursos: Priorización por severidad
+end note
+[T14] starts at [T13]'s end
+[T14] is 0% completed
+
+[Optimización de rendimiento] as [T15] lasts 25 days and is colored in #E67E22
+note bottom
+  Equipo: 3 programadores senior
+  Recursos: Profilers y herramientas
+end note
+[T15] starts at [T13]'s end
+[T15] is 0% completed
+
+[Preparación de marketing] as [T16] lasts 40 days and is colored in #16A085
+note bottom
+  Equipo: 2 marketing specialists
+  Recursos: Materiales promocionales
+end note
+[T16] starts at [T13]'s end
+[T16] is 0% completed
+
+[Configuración de servidores] as [T17] lasts 15 days and is colored in #E67E22
+note bottom
+  Equipo: 2 DevOps engineers
+  Recursos: Infraestructura cloud
+end note
+[T17] starts at [T14]'s end
+[T17] is 0% completed
+
+[v1.0] happens at [T17]'s end
+[v1.0] is colored in #27AE60
+
+@endgantt

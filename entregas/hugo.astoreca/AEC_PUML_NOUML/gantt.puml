@@ -1,0 +1,83 @@
+@startgantt
+Project starts 2025-11-06
+
+[Planificar] 
+[Diseñar] 
+[Storyboard] 
+
+[Assets] 
+-- [Modelos] 
+-- [Animar] 
+-- [Texturas] 
+
+[Programar] 
+[Sonido] 
+
+[Beta] 
+-- [QA] 
+-- [Feedback] 
+[Corrección] 
+-- [Gráficos] 
+-- [Código] 
+[Lanzamiento] 
+
+[Planificar] lasts 2 days
+[Diseñar] lasts 3 days
+[Storyboard] lasts 2 days
+
+[Assets] lasts 5 days
+[Modelos] lasts 2 days
+[Animar] lasts 2 days
+[Texturas] lasts 1 day
+
+[Programar] lasts 4 days
+[Sonido] lasts 2 days
+
+[Beta] lasts 3 days
+[QA] lasts 1 day
+[Feedback] lasts 2 days
+
+[Corrección] lasts 3 days
+[Gráficos] lasts 1 day
+[Código] lasts 2 days
+
+[Lanzamiento] lasts 1 day
+
+[Diseñar] starts after [Planificar]
+[Storyboard] starts after [Diseñar]
+
+[Assets] starts after [Storyboard]
+[Modelos] starts at [Assets]'s start
+[Animar] starts after [Modelos]
+[Texturas] starts after [Animar]
+
+[Programar] starts after [Storyboard]
+[Sonido] starts after [Storyboard]
+
+[Beta] starts after [Assets] and [Programar] and [Sonido]
+[QA] starts at [Beta]'s start
+[Feedback] starts after [QA]
+
+[Corrección] starts after [Beta]
+[Gráficos] starts at [Corrección]'s start
+[Código] starts after [Gráficos]
+
+[Lanzamiento] starts after [Corrección]
+
+[Planificar] 100%
+[Diseñar] 100%
+[Storyboard] 80%
+[Assets] 60%
+[Modelos] 70%
+[Animar] 50%
+[Texturas] 30%
+[Programar] 60%
+[Sonido] 50%
+[Beta] 0%
+[QA] 0%
+[Feedback] 0%
+[Corrección] 0%
+[Gráficos] 0%
+[Código] 0%
+[Lanzamiento] 0%
+@endgantt

@@ -1,0 +1,72 @@
+@startjson
+title Creacion Survival
+<style>
+  .h1 {
+    BackGroundColor green
+    FontColor white
+    FontStyle italic
+  }
+  .h2 {
+    BackGroundColor red
+    FontColor white
+    FontStyle bold
+  }
+</style>
+#highlight "Creadores" <<h2>>
+#highlight "Saga Disponible" <<h1>>
+{
+"status": "Exito en la busqueda",
+"Creadores": "Miyazaki Cabron",
+"totalResultados": 3,
+"pagina": 1,
+"Idioma": "ES,RU,EN,JP,FR",
+"resultadosPorPagina": 3,
+"Saga Disponible": [
+{
+"id": "RP1re",
+"nombre": "Resident Povilion 1 Remaster(2021)",
+"precio": 99.99,
+"moneda": "EUR",
+"stock": "Digital",
+"disponible": true,
+"categorias": ["Survival", "Horror", "Aventura"],
+"Recomendaciones 60fps 1080p": {
+"ram": "32GB",
+"procesador": "Intel i5 15th",
+"gpu": "NVIDIA RTX 3060",
+"Espacio": "29GB"
+}
+},
+{
+"id": "RP2",
+"nombre": "Resident Povilion 2(2020)",
+"precio": 49.99,
+"moneda": "EUR",
+"stock": "Digital",
+"disponible": true,
+"categorias": ["Survival", "Horror", "Aventura"],
+"Recomendaciones 60fps 1080p": {
+"ram": "16GB",
+"procesador": "Intel i7",
+"gpu": "NVIDIA RTX 2060",
+"Espacio": "47GB"
+}
+},
+{
+"id": "RP3",
+"nombre": "Resident Povilion 3(2024)",
+"precio": 79.99,
+"moneda": "EUR",
+"stock": "Digital",
+"disponible": true,
+"categorias": ["Survival", "Horror", "Aventura"],
+"Recomendaciones 60fps 1080p": {
+"ram": "32GB",
+"procesador": "Intel i9",
+"gpu": "NVIDIA RTX 4060",
+"Espacio": "79GB"
+}
+}
+]
+}
+@endjson

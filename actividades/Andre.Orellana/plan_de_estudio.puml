@@ -1,0 +1,83 @@
+@startmindmap Plan de estudio
+
+<style>
+mindmapDiagram {
+    .IGPS {
+        BackgroundColor Cyan
+        LineColor black
+    }
+    .matematicas {
+        BackgroundColor Green
+        LineColor black
+    }
+    .PRG1 {
+        BackgroundColor Blue
+        LineColor black
+    }
+    .TEO {
+        BackgroundColor Orange
+        LineColor black
+    }
+    .fisica {
+        BackgroundColor Red
+        LineColor black
+    }
+    .titulo{
+        BackgroundColor Yellow
+        LineColor black
+    }
+}
+</style>
+
+- <:ballot_box_with_check:> Plan de estudio para certificacion con timeline y recursos<<titulo>>
+
+left side
+
+**[#61DAFB] <:zap:> Introduccion a la Gestion de Proyectos de Software<<IGPS>>
+*** Ides
+*** Git
+*** Ingenieria-software
+*** Markdown
+*** PlantUML
+
+**[#68A063] <:no_entry:> Matematicas I <<matematicas>>
+*** Introduccion al Calculo
+*** Limites y Continuidad
+*** Calculo Diferencial
+*** Calculo Integral
+*** Ecuaciones Diferenciales
+
+right side
+
+**[#336791] <:computer:> Programacion I <<PRG1>>
+*** DisciplinasSw
+*** ProcesosSw
+*** Pre-algoritmos
+*** Lenguajes de programacion
+*** Java
+*** Salida java
+*** Variables
+*** Entrada java
+*** Estructuras de control
+*** Estructuras de control alternativas
+
+**[#FF9900] <:gear:> Tecnologia y Estructura de Ordenadores <<TEO>>
+*** Evolucion y caracteristicas de los systemas de computo
+*** Arquictectura y organizacion de computadores modernos
+*** Sistemas de numeracion
+*** Representacion digital de la informacion
+*** Logica binaria y Algebra de Boole, Circuitos logicos
+
+
+
+**[#DD0031] <:atom_symbol:> Fisica <<fisica>>
+*** Mechanica
+**** Cinematica
+**** Dinamica
+**** Leyes convervacion
+**** Ondas
+**** Fluidos
+*** Termodinamica
+**** Leyes de la termodinamica
+
+@endmindmap

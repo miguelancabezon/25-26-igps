@@ -1,0 +1,139 @@
+@startgantt
+Project starts the 2026-04-01
+
+<style>
+ganttDiagram {
+  task {
+    BackGroundColor lightblue
+    LineColor blue
+  }
+  milestone {
+    BackGroundColor gold
+    LineColor orange
+  }
+  separator {
+    BackGroundColor lightgray
+    LineColor gray
+    FontColor black
+    FontStyle bold
+  }
+}
+</style>
+
+-- FASE 1: Preproducción --
+[A1: Análisis de mercado] as [PA1] lasts 5 days and starts at 2026-04-01
+[PA1] is colored in Yellow
+[PA1] is 100% completed
+note bottom
+Equipo: Marketing (3)
+Budget: €8K
+end note
+
+[A2: Definición del concepto] as [PA2] lasts 7 days and starts at [PA1]'s end
+[PA2] is colored in Purple
+[PA2] is 100% completed
+note bottom
+Equipo: Creativo (10)
+Budget: €5K
+end note
+
+[A3: Planificación de recursos] as [PA3] lasts 4 days and starts at [PA2]'s end
+[PA3] is colored in Yellow
+[PA3] is 100% completed
+note bottom
+Equipo: Econónomico (20)
+Budget: €3K
+end note
+
+[A4: Formación del equipo de desarrollo] as [PA4] lasts 20 days and starts at [PA3]'s end
+[PA4] is colored in OrangeRed
+[PA4] is 60% completed
+note bottom
+Equipo: RRHH (5)
+Budget: €30K
+end note
+
+[A5: Planificación creativa] as [PA5] lasts 15 days and starts at [PA4]'s end
+[PA5] is colored in Green
+[PA5] is 100% completed
+note bottom
+Equipo: Creativo (10)
+Budget: €12K
+end note
+
+[A6: Diseño técnico inicial] as [PA6] lasts 30 days and starts at [PA5]'s end
+[PA6] is colored in Blue
+[PA6] is 100% completed
+note bottom
+Equipo: Desarrollo (15)
+Budget: €50K
+end note
+[Milestone 1: Prototipo] as [M1] happens at [PA6]'s end
+
+-- FASE 2: Produccion --
+[B1: Diseño de modos de juego básicos] as [PB1] lasts 25 days and starts at [M1]'s end
+[PB1] is colored in LightGreen
+[PB1] is 100% completed
+
+[B2: Diseño de mapas] as [PB2] lasts 20 days and starts at [PB1]'s end
+[PB2] is colored in LightGreen
+[PB2] is 100% completed
+
+[B3: Arte y animaciones] as [PB3] lasts 10 days and starts at [PB2]'s end
+[PB3] is colored in Grey
+[PB3] is 80% completed
+
+[B4: Sistema de progresión] as [PB4] lasts 15 days and starts at [PB3]'s end
+[PB4] is colored in Orange
+[PB4] is 50% completed
+
+[B5: Pruebas internas] as [PB5] lasts 10 days and starts at [PB4]'s end
+[PB5] is colored in Red
+[PB5] is 100% completed
+
+[B6: Online y servidores] as [PB6] lasts 20 days and starts at [PB5]'s end
+[PB6] is colored in Blue
+[PB6] is 70% completed
+
+[Milestone 2: Versión Beta] as [M2] happens at [PB6]'s end
+
+[PB7: Feedback y ajustes] as [PB7] lasts 15 days and starts at [M2]'s end
+[PB7] is colored in Red
+[PB7] is 70% completed
+
+[PB8: Desarrollo del modo historia] as [PB8] lasts 70 days and starts at [PB7]'s end 
+[PB8] is colored in Blue
+[PB8] is 40% completed
+
+[Milestone 3: Versión 1.0] as [M3] happens at [PB8]'s end
+
+-- FASE 3: Postproducción --
+[C1: Marketing incial] as [PC1] lasts 25 days and starts at [PB5]'s end
+[PC1] is colored in Yellow
+[PC1] is 100% completed
+note bottom
+Equipo: Marketing (5)
+Budget: €100K
+end note
+
+[C2: Marketing continuo] as [PC2] lasts 60 days and starts at 2026-12-01
+[PC2] is colored in Yellow
+[PC2] is 0% completed
+
+[C3: Soporte y actualizaciones] as [PC3] lasts 365 days and starts at [M3]'s end
+[PC3] is colored in Blue
+[PC3] is 0% completed
+note bottom
+Equipo: Soporte (10)
+Budget: €150K
+end note
+
+[C4: Eventos y torneos] as [PC4] lasts 365 days and starts at [M3]'s end
+[PC4] is colored in LightGreen
+[PC4] is 0% completed
+note bottom
+Equipo: Desarrollo (20)
+Budget: €80K
+end note
+
+@endgantt

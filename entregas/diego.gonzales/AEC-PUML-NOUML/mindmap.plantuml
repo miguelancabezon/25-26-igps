@@ -1,0 +1,57 @@
+@startmindmap mindmap
+* 🎯 Juego FPS
+
+** ⚙️ Mecánicas
+*** 🔫 Armas
+**** Pistola
+**** Rifle
+**** Escopeta
+**** Francotirador
+**** Cuchillo
+**** Granada
+*** 🧍 Movimiento
+**** Saltar
+**** Correr
+**** Agacharse
+
+***[#e9d980]  Drops
+**** Curas
+**** Munición
+**** Tanque
+**** Armas Especiales
+**** Habilidades Especiales
+
+** 🌍 Ecosistema de Mapas
+*** Desierto 🏜️
+*** Ciudad 🏙️
+*** Bosque 🌲
+*** Postapocalíptico ⚠️
+***[#3b83bd] Mapas de Noche 🌙
+
+-- 🎨 Arte 🎨
+--- Estilo gráfico :realista:
+--- Colores :#FFD700: :#87CEEB: :#98FB98:
+
+-- 🧰 Tecnología
+--- Motor: Unreal Engine
+--- Lenguaje: C++
+--- Servidores: AWS
+
+-- 🎵 Sonido
+---[#FFA500] Música 
+---- Combate
+---- Ambiente
+---- Menú
+---- Victoria/Derrota
+---[#FF4500] Efectos de disparo 
+---- Por tipo de arma
+---- Impactos
+---- Recargas
+---- Explosiones
+---[#20B2AA] Voz de personaje 
+---- Comandos tácticos
+---- Reacciones de daño
+---- Diálogos en juego
+---- Frases de victoria
+
+@endmindmap

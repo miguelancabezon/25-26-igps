@@ -1,0 +1,26 @@
+@startmindmap
+* 🎮 Survival Game 🌲
+** 🧱 Sistemas Principales
+*** ⚔️ Combate
+**** 🔫 Armas: cuchillo, arco, lanza
+**** 🧍‍♂️ Enemigos: animales, otros jugadores
+*** 🛠️ Crafteo
+**** Materiales básicos (🌿 madera, 🪨 piedra)
+**** Estación de trabajo (🧰 Workbench)
+** 🏕️ Mundo
+*** 🌦️ Clima dinámico (sol, lluvia, tormenta)
+*** 🌍 Biomas (bosque, montaña, desierto)
+*** 🌅 Ciclo día/noche
+** 👤 Jugador
+*** ❤️ Salud / Hambre / Energía
+*** 🎒 Inventario
+*** 🧥 Ropa y protección
+** 💾 Recursos Humanos
+*** 👨‍💻 Programadores (azul)
+*** 🎨 Artistas (verde)
+*** 🔊 Sonido (amarillo)
+*** 🧪 QA Testers (rojo)
+** 💻 Servidores
+*** ☁️ AWS EC2 (backend)
+*** 🗄️ Base de datos MongoDB
+@endmindmap

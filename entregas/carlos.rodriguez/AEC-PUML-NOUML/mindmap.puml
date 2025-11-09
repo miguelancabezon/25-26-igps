@@ -1,0 +1,67 @@
+@startmindmap
+
+* <color:White><back:Red>Diseño de FPS 🎯</color>
+
+right side
+** <color:Green>Mecánicas del juego 🎮</color>
+*** Movimiento
+**** Sprint
+**** Agacharse
+**** Escalada
+*** Combate
+**** Disparo
+**** Recarga
+**** Armas especiales
+*** Interacción
+**** Objetos del entorno
+**** Reanimación
+
+** <color:LightGreen>Arte y sonido 🎨🔊</color>
+*** Estilo visual
+**** Realista
+*** Música
+**** Ambiental
+**** Dinámica
+*** Efectos de sonido
+*** Comunicación
+**** Chat de voz
+
+** <color:Blue>Experiencia del jugador 🧠</color>
+*** HUD
+**** Minimalista
+**** Personalizable
+*** Tutorial
+**** Interactivo
+**** Narrativo
+*** Feedback
+**** Vibración
+**** Indicadores visuales
+
+left side
+** <color:Orange>Online 🌐</color>
+*** Servidores
+**** Región
+**** Latencia
+*** Anticheat
+**** Detección
+**** Reportes
+*** Matchmaking
+**** Por habilidad
+**** Por conexión
+
+** <color:Red>Backend 💼</color>
+*** Actualizaciones
+**** Temporadas
+**** Eventos especiales
+**** Hotfixes
+*** Analítica
+**** Telemetría
+*** Infraestructura
+
+** <color:Purple>Modelo de negocios 💰</color>
+*** DLCs
+*** Pase de batalla
+*** Skins
+*** Skin cases
+
+@endmindmap

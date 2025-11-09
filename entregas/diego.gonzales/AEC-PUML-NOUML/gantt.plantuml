@@ -1,0 +1,68 @@
+@startgantt gantt
+Project starts 2025-01-01
+
+-- Fase 1 - Preproducción --
+
+[Investigación de mercado] requires 7 days and is colored in PaleGreen
+then [Arte conceptual] requires 8 days and is colored in PaleGreen
+then [Diseño de mecánicas] requires 10 days and is colored in PaleGreen
+note bottom
+  Equipo: diseñador principal  
+  Recursos: documentos técnicos  
+  Objetivo: definir las reglas base del FPS
+end note
+
+then [Audio - concepto] requires 6 days and is colored in PaleGreen
+then [UI/UX inicial] requires 6 days and is colored in PaleGreen
+
+[Prototipo listo] happens at [UI/UX inicial]'s end
+[Fase 1 - Preproducción] requires 31 days
+[Fase 1 - Preproducción] is 70% complete
+
+-- Fase 2 - Producción --
+
+[Programación base] starts at [Prototipo listo]'s end and requires 20 days and is colored in LightSkyBlue
+note bottom
+  Equipo: 3 programadores  
+  Recursos: motor Unity, PCs  
+  Objetivo: desarrollar sistema de movimiento y disparo
+end note
+
+then [Modelado 3D] requires 15 days and is colored in LightSkyBlue
+then [Animaciones] requires 10 days and is colored in LightSkyBlue
+then [Diseño de niveles] requires 15 days and is colored in LightSkyBlue
+note bottom
+  Equipo: diseñador de niveles  
+  Recursos: Unity Editor  
+  Objetivo: crear escenarios jugables
+end note
+
+then [Sistema multijugador] requires 18 days and is colored in LightSkyBlue
+note bottom
+  Equipo: 2 devs de red  
+  Recursos: servidor AWS  
+  Objetivo: implementar partidas online
+end note
+
+[Beta lista] happens at [Sistema multijugador]'s end
+[Fase 2 - Producción] requires 78 days
+[Fase 2 - Producción] is 50% complete
+
+-- Fase 3 - Postproducción --
+
+[Testing QA] starts at [Beta lista]'s end and requires 7 days and is colored in LightSalmon
+then [Optimización y balance] requires 10 days and is colored in LightSalmon
+note bottom
+  Equipo: programadores y diseñadores  
+  Recursos: herramientas de profiling  
+  Objetivo: mejorar rendimiento del juego
+end note
+
+then [Marketing y trailer] requires 7 days and is colored in LightSalmon
+then [Preparación de lanzamiento] requires 5 days and is colored in LightSalmon
+
+[Versión 1.0] happens at [Preparación de lanzamiento]'s end
+[Fase 3 - Postproducción] requires 29 days
+[Fase 3 - Postproducción] is 30% complete
+
+@endgantt

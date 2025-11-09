@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "language": "es-ES",
+    "environment": "development",
+    "author": "Equipo Aurora",
+    "createdAt": "2025-11-08T10:00:00Z"
+  },
+  "objects": {
+    "Player": {
+      "id": "player001",
+      "name": "Survivor",
+      "health": 100,
+      "hunger": 45,
+      "thirst": 60,
+      "inventory": ["axe001", "berry001"],
+      "position": { "x": 152.3, "y": 0.0, "z": -48.9 },
+      "isAlive": true,
+      "lastSave": "2025-11-08T09:45:00Z"
+    },
+    "Item": {
+      "id": "axe001",
+      "type": "Weapon",
+      "name": "Rusty Axe",
+      "damage": 25,
+      "durability": 80,
+      "weight": 2.5,
+      "craftable": true
+    },
+    "Enemy": {
+      "id": "wolf001",
+      "species": "Wolf",
+      "health": 80,
+      "aggressiveness": 0.7,
+      "position": { "x": 145.2, "y": 0.0, "z": -60.1 },
+      "loot": ["fur001", "meat001"]
+    },
+    "World": {
+      "id": "world_forest",
+      "biome": "Forest",
+      "temperature": 16.4,
+      "weather": "Rainy",
+      "entities": ["player001", "wolf001"],
+      "resources": [
+        { "type": "Wood", "quantity": 200 },
+        { "type": "Stone", "quantity": 100 }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "name": "craftItem",
+      "classAffected": "Player",
+      "parameters": ["itemId", "resources[]"]
+    },
+    {
+      "name": "attackEnemy",
+      "classAffected": "Player",
+      "parameters": ["enemyId", "weaponId"]
+    },
+    {
+      "name": "spawnEnemy",
+      "classAffected": "World",
+      "parameters": ["enemyType", "location"]
+    },
+    {
+      "name": "saveGame",
+      "classAffected": "World",
+      "parameters": ["playerId"]
+    }
+  ]
+}
+

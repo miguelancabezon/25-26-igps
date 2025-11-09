@@ -1,0 +1,47 @@
+@startgantt
+' ============================================================
+' DIAGRAMA DE GANTT - DESARROLLO VIDEOJUEGO SURVIVAL
+' ============================================================
+
+' =============== FASE 1: PREPRODUCCIÓN =======================
+[Idea inicial del juego] requires 10 days and is colored in #A7C7E7
+[Diseño de personajes y entorno] requires 15 days and is colored in #A7C7E7
+[Documento de diseño (GDD)] requires 15 days and is colored in #A7C7E7
+[Planificación de recursos y presupuesto] requires 10 days and is colored in #A7C7E7
+[Preparación del entorno de trabajo] requires 10 days and is colored in #A7C7E7
+[Milestone 1: Prototipo] happens at [Preparación del entorno de trabajo]'s end
+
+[Diseño de personajes y entorno] starts after [Idea inicial del juego]'s end
+[Documento de diseño (GDD)] starts after [Diseño de personajes y entorno]'s end
+[Planificación de recursos y presupuesto] starts after [Documento de diseño (GDD)]'s end
+[Preparación del entorno de trabajo] starts after [Planificación de recursos y presupuesto]'s end
+
+' =============== FASE 2: PRODUCCIÓN ==========================
+[Programación del motor base] requires 20 days and is colored in #5DAF75
+[Desarrollo del gameplay principal] requires 25 days and is colored in #5DAF75
+[Implementación de IA y enemigos] requires 20 days and is colored in #5DAF75
+[Diseño de niveles] requires 25 days and is colored in #5DAF75
+[Integración de arte y sonido] requires 15 days and is colored in #5DAF75
+[Milestone 2: Beta] happens at [Integración de arte y sonido]'s end
+
+[Programación del motor base] starts after [Milestone 1: Prototipo]'s end
+[Desarrollo del gameplay principal] starts after [Programación del motor base]'s end
+[Implementación de IA y enemigos] starts after [Desarrollo del gameplay principal]'s end
+[Diseño de niveles] starts after [Implementación de IA y enemigos]'s end
+[Integración de arte y sonido] starts after [Diseño de niveles]'s end
+
+' =============== FASE 3: POSTPRODUCCIÓN ======================
+[Testing QA] requires 15 days and is colored in #E8C86E
+[Corrección de errores y optimización] requires 10 days and is colored in #E8C86E
+[Marketing y trailer] requires 10 days and is colored in #E8C86E
+[Preparación del lanzamiento] requires 5 days and is colored in #E8C86E
+[Soporte post-lanzamiento] requires 10 days and is colored in #E8C86E
+[Milestone 3: Versión 1.0] happens at [Preparación del lanzamiento]'s end
+
+[Testing QA] starts after [Milestone 2: Beta]'s end
+[Corrección de errores y optimización] starts after [Testing QA]'s end
+[Marketing y trailer] starts after [Corrección de errores y optimización]'s end
+[Preparación del lanzamiento] starts after [Marketing y trailer]'s end
+[Soporte post-lanzamiento] starts after [Preparación del lanzamiento]'s end
+
+@endgantt

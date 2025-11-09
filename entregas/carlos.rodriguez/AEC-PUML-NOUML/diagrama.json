@@ -1,0 +1,119 @@
+{
+  "config": {
+    "version": "0.8.2",
+    "language": "es",
+    "environment": "development",
+    "author": "Carlos",
+    "createdAt": "2025-11-09T15:58:00Z"
+  },
+  "classes": {
+    "Player": {
+      "id": "player001",
+      "username": "Dbest",
+      "createdAt": "2025-11-01T10:00:00Z",
+      "status": "online",
+      "health": 100,
+      "armor": 50,
+      "isAlive": true,
+      "level": 12,
+      "inventory": [
+        {
+          "id": "weapon001",
+          "name": "AWP",
+          "type": "sniper",
+          "damage": 200,
+          "ammo": 5,
+          "range": 100,
+          "canWallbang": true,
+          "skin": "#dragonLore",
+          "pattern": "222",
+          "status": "equipped",
+          "createdAt": "2025-10-20T12:00:00Z"
+        },
+        {
+          "id": "weapon002",
+          "name": "Ghost",
+          "type": "handgun",
+          "damage": 35,
+          "ammo": 12,
+          "range": 25,
+          "canWallbang": false,
+          "skin": "#stealthBlack",
+          "pattern": "101",
+          "status": "available",
+          "createdAt": "2025-10-22T09:30:00Z"
+        },
+        {
+          "id": "grenade002",
+          "name": "Molotov",
+          "type": "explosive",
+          "damageOnExplosion": 30,
+          "damageOverTime": 10,
+          "duration": 8,
+          "quantity": 1,
+          "status": "available",
+          "createdAt": "2025-10-25T09:00:00Z"
+        }
+      ]
+    },
+    "Map": {
+      "id": "map001",
+      "name": "Base Subterránea",
+      "createdAt": "2025-10-15T08:00:00Z",
+      "size": "large",
+      "features": ["tunnels", "controlRoom", "ventilationShafts"],
+      "spawnPoints": [
+        { "id": "spawnTT", "x": 10, "y": 5 },
+        { "id": "spawnAT", "x": 40, "y": 18 }
+      ]
+    },
+    "Logger": {
+      "id": "log001",
+      "userId": "player001",
+      "username": "Dbest",
+      "email": "dbest@example.com",
+      "passwordHash": "abc123xyz",
+      "lastLogin": "2025-11-09T16:30:00Z",
+      "ipAddress": "192.168.1.10"
+    }
+  },
+  "gameActions": [
+    {
+      "name": "shootWeapon",
+      "targetClass": "Player",
+      "parameters": ["playerId", "weaponId", "targetCoordinates"]
+    },
+    {
+      "name": "reloadWeapon",
+      "targetClass": "Player",
+      "parameters": ["playerId", "weaponId"]
+    },
+    {
+      "name": "throwGrenade",
+      "targetClass": "Player",
+      "parameters": ["playerId", "grenadeId", "targetCoordinates"]
+    },
+    {
+      "name": "spawnPlayer",
+      "targetClass": "Map",
+      "parameters": ["playerId", "spawnPointId"]
+    }
+  ],
+  "systemActions": [
+    {
+      "name": "processPayment",
+      "targetClass": "Payment",
+      "parameters": ["paymentId", "userId", "amount", "currency", "method"]
+    },
+    {
+      "name": "createUser",
+      "targetClass": "Logger",
+      "parameters": ["userId", "username", "email", "passwordHash"]
+    },
+    {
+      "name": "logIn",
+      "targetClass": "Logger",
+      "parameters": ["userId", "ipAddress"]
+    }
+  ]
+}

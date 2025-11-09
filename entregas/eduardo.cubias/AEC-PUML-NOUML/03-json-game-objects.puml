@@ -1,0 +1,468 @@
+@startjson
+title 🎮 FPS Game - Sistema de Objetos del Juego
+
+<style>
+  .weapon {
+    BackGroundColor #FF6B6B
+    FontColor white
+    FontStyle bold
+  }
+  .operator {
+    BackGroundColor #4ECDC4
+    FontColor white
+    FontStyle bold
+  }
+  .map {
+    BackGroundColor #FFE66D
+    FontColor #333333
+    FontStyle bold
+  }
+  .match {
+    BackGroundColor #95E1D3
+    FontColor #333333
+    FontStyle bold
+  }
+  .actions {
+    BackGroundColor #C77DFF
+    FontColor white
+    FontStyle italic
+  }
+  .metadata {
+    BackGroundColor #FFD700
+    FontColor #333333
+    FontStyle bold
+  }
+}
+</style>
+
+#highlight "weaponId" <<weapon>>
+#highlight "weaponName" <<weapon>>
+#highlight "operatorId" <<operator>>
+#highlight "operatorName" <<operator>>
+#highlight "mapId" <<map>>
+#highlight "mapName" <<map>>
+#highlight "matchId" <<match>>
+#highlight "actions" <<actions>>
+#highlight "metadata" <<metadata>>
+
+{
+  "metadata": {
+    "gameVersion": "1.0.0",
+    "apiVersion": "v2",
+    "environment": "production",
+    "language": "es-ES",
+    "author": "Eduardo Cubias",
+    "lastUpdated": "2025-11-08T18:30:00Z",
+    "region": "EU-West"
+  },
+
+  "weapons": [
+    {
+      "weaponId": "WPN-001",
+      "weaponName": "AK-47",
+      "category": "AssaultRifle",
+      "rarity": "Common",
+      "isUnlocked": true,
+      "unlockLevel": 1,
+      "createdAt": "2025-01-15T10:00:00Z",
+      "lastModified": "2025-09-20T14:30:00Z",
+      "stats": {
+        "damage": 36,
+        "fireRate": 600,
+        "magazineSize": 30,
+        "reloadTime": 2.3,
+        "range": 50,
+        "accuracy": 72,
+        "mobility": 85
+      },
+      "attachments": [
+        {
+          "slotId": 1,
+          "slotName": "Optic",
+          "equippedItem": "Holographic Sight",
+          "improves": ["accuracy"]
+        },
+        {
+          "slotId": 2,
+          "slotName": "Barrel",
+          "equippedItem": "Compensator",
+          "improves": ["recoilControl", "accuracy"]
+        },
+        {
+          "slotId": 3,
+          "slotName": "Magazine",
+          "equippedItem": "Extended Mag",
+          "improves": ["magazineSize"]
+        }
+      ],
+      "skins": [
+        "Default",
+        "Desert Camo",
+        "Midnight Black",
+        "Golden Dragon"
+      ],
+      "masteryLevel": 47,
+      "totalKills": 2847,
+      "totalHeadshots": 892
+    },
+    {
+      "weaponId": "WPN-015",
+      "weaponName": "AWP Sniper",
+      "category": "SniperRifle",
+      "rarity": "Legendary",
+      "isUnlocked": true,
+      "unlockLevel": 25,
+      "createdAt": "2025-02-10T11:00:00Z",
+      "lastModified": "2025-10-01T16:45:00Z",
+      "stats": {
+        "damage": 115,
+        "fireRate": 41,
+        "magazineSize": 10,
+        "reloadTime": 3.8,
+        "range": 100,
+        "accuracy": 98,
+        "mobility": 45
+      },
+      "attachments": [
+        {
+          "slotId": 1,
+          "slotName": "Optic",
+          "equippedItem": "12x Scope",
+          "improves": ["zoom", "precision"]
+        }
+      ],
+      "skins": [
+        "Default",
+        "Arctic Warfare",
+        "Dragon Lore"
+      ],
+      "masteryLevel": 32,
+      "totalKills": 1523,
+      "totalHeadshots": 1389
+    }
+  ],
+
+  "operators": [
+    {
+      "operatorId": "OPR-001",
+      "operatorName": "Hawk",
+      "realName": "Marcus Thompson",
+      "nationality": "USA",
+      "role": "Assault",
+      "isUnlocked": true,
+      "unlockLevel": 1,
+      "createdAt": "2025-01-10T08:00:00Z",
+      "lastModified": "2025-10-15T12:20:00Z",
+      "stats": {
+        "health": 100,
+        "armor": 50,
+        "speed": 95,
+        "stamina": 90
+      },
+      "specialAbility": {
+        "abilityName": "UAV Drone",
+        "abilityType": "Recon",
+        "cooldownSeconds": 45,
+        "durationSeconds": 15,
+        "description": "Deploy a drone to reveal enemy positions"
+      },
+      "loadout": {
+        "primaryWeapon": "WPN-001",
+        "secondaryWeapon": "WPN-102",
+        "equipment": [
+          "Frag Grenade",
+          "Smoke Grenade"
+        ],
+        "perk1": "Fast Reload",
+        "perk2": "Extended Sprint",
+        "perk3": "Quick Fix"
+      },
+      "cosmetics": {
+        "currentSkin": "Urban Warfare",
+        "availableSkins": [
+          "Default",
+          "Urban Warfare",
+          "Desert Storm",
+          "Night Ops"
+        ],
+        "charm": "Golden Eagle",
+        "voicePack": "Tactical Commander"
+      },
+      "playerStats": {
+        "gamesPlayed": 487,
+        "wins": 289,
+        "kills": 5847,
+        "deaths": 3921,
+        "kdr": 1.49,
+        "winRate": 59.3,
+        "favoriteWeapon": "AK-47"
+      }
+    },
+    {
+      "operatorId": "OPR-005",
+      "operatorName": "Ghost",
+      "realName": "Yuki Tanaka",
+      "nationality": "Japan",
+      "role": "Infiltrator",
+      "isUnlocked": false,
+      "unlockLevel": 35,
+      "createdAt": "2025-02-20T09:30:00Z",
+      "lastModified": "2025-10-28T10:15:00Z",
+      "stats": {
+        "health": 90,
+        "armor": 40,
+        "speed": 110,
+        "stamina": 105
+      },
+      "specialAbility": {
+        "abilityName": "Shadow Step",
+        "abilityType": "Stealth",
+        "cooldownSeconds": 60,
+        "durationSeconds": 8,
+        "description": "Become invisible for a short duration"
+      },
+      "loadout": {
+        "primaryWeapon": "WPN-022",
+        "secondaryWeapon": "WPN-105",
+        "equipment": [
+          "Flashbang",
+          "Decoy Grenade"
+        ],
+        "perk1": "Silent Movement",
+        "perk2": "Dead Silence",
+        "perk3": "Ghost (Off Radar)"
+      },
+      "cosmetics": {
+        "currentSkin": "Default",
+        "availableSkins": [
+          "Default",
+          "Phantom",
+          "Ronin"
+        ],
+        "charm": null,
+        "voicePack": "Whisper"
+      },
+      "playerStats": {
+        "gamesPlayed": 0,
+        "wins": 0,
+        "kills": 0,
+        "deaths": 0,
+        "kdr": 0.0,
+        "winRate": 0.0,
+        "favoriteWeapon": null
+      }
+    }
+  ],
+
+  "maps": [
+    {
+      "mapId": "MAP-001",
+      "mapName": "Abandoned City",
+      "category": "Urban",
+      "playableGameModes": [
+        "Competitive",
+        "Team Deathmatch",
+        "Domination"
+      ],
+      "size": "Medium",
+      "maxPlayers": 16,
+      "isActive": true,
+      "releaseDate": "2025-06-15",
+      "lastUpdated": "2025-10-30T09:00:00Z",
+      "environment": {
+        "setting": "Post-apocalyptic urban",
+        "timeOfDay": "Dusk",
+        "weather": "Light Rain",
+        "atmosphere": "Dark and gritty"
+      },
+      "dimensions": {
+        "lengthMeters": 450,
+        "widthMeters": 380,
+        "heightMeters": 85
+      },
+      "strategicPoints": [
+        {
+          "pointId": "A",
+          "pointType": "Bomb Site",
+          "coordinates": {"x": 120, "y": 45, "z": 5}
+        },
+        {
+          "pointId": "B",
+          "pointType": "Bomb Site",
+          "coordinates": {"x": 340, "y": 210, "z": 12}
+        },
+        {
+          "pointId": "C",
+          "pointType": "High Ground",
+          "coordinates": {"x": 225, "y": 150, "z": 45}
+        }
+      ],
+      "statistics": {
+        "totalMatches": 12847,
+        "averageMatchDuration": 18.5,
+        "favoriteSpot": "Point C - Rooftop",
+        "playerRating": 4.6
+      }
+    },
+    {
+      "mapId": "MAP-003",
+      "mapName": "Factory Complex",
+      "category": "Industrial",
+      "playableGameModes": [
+        "Competitive",
+        "Gun Game"
+      ],
+      "size": "Large",
+      "maxPlayers": 20,
+      "isActive": true,
+      "releaseDate": "2025-08-01",
+      "lastUpdated": "2025-11-05T14:30:00Z",
+      "environment": {
+        "setting": "Industrial complex",
+        "timeOfDay": "Night",
+        "weather": "Clear",
+        "atmosphere": "Dark corridors with spotlights"
+      },
+      "dimensions": {
+        "lengthMeters": 620,
+        "widthMeters": 480,
+        "heightMeters": 120
+      },
+      "strategicPoints": [
+        {
+          "pointId": "A",
+          "pointType": "Bomb Site",
+          "coordinates": {"x": 180, "y": 95, "z": 8}
+        },
+        {
+          "pointId": "B",
+          "pointType": "Bomb Site",
+          "coordinates": {"x": 455, "y": 320, "z": 15}
+        }
+      ],
+      "statistics": {
+        "totalMatches": 8234,
+        "averageMatchDuration": 22.3,
+        "favoriteSpot": "Main Building Catwalk",
+        "playerRating": 4.8
+      }
+    }
+  ],
+
+  "matchHistory": [
+    {
+      "matchId": "MTH-2025110812450",
+      "gameMode": "Competitive 5v5",
+      "mapPlayed": "MAP-001",
+      "startTime": "2025-11-08T12:45:00Z",
+      "endTime": "2025-11-08T13:08:00Z",
+      "durationMinutes": 23,
+      "status": "Completed",
+      "winner": "TeamA",
+      "finalScore": {
+        "teamA": 13,
+        "teamB": 9
+      },
+      "players": [
+        {
+          "playerId": "PLY-00847",
+          "playerName": "eduardo.cubias",
+          "team": "TeamA",
+          "operatorUsed": "OPR-001",
+          "stats": {
+            "kills": 18,
+            "deaths": 12,
+            "assists": 7,
+            "score": 2340,
+            "mvp": true
+          }
+        }
+      ],
+      "serverInfo": {
+        "serverId": "SRV-EU-W-042",
+        "region": "EU-West",
+        "tickRate": 128,
+        "ping": 32
+      }
+    }
+  ],
+
+  "actions": {
+    "weaponActions": [
+      {
+        "actionName": "equipWeapon",
+        "affectsClass": "Weapon",
+        "requiredParams": ["weaponId", "playerId"],
+        "description": "Equip a weapon to player's loadout"
+      },
+      {
+        "actionName": "upgradeWeapon",
+        "affectsClass": "Weapon",
+        "requiredParams": ["weaponId", "attachmentId"],
+        "description": "Add or upgrade weapon attachment"
+      },
+      {
+        "actionName": "purchaseSkin",
+        "affectsClass": "Weapon",
+        "requiredParams": ["weaponId", "skinId", "currencyAmount"],
+        "description": "Purchase cosmetic skin for weapon"
+      }
+    ],
+    "operatorActions": [
+      {
+        "actionName": "selectOperator",
+        "affectsClass": "Operator",
+        "requiredParams": ["operatorId", "playerId"],
+        "description": "Select operator for match"
+      },
+      {
+        "actionName": "unlockOperator",
+        "affectsClass": "Operator",
+        "requiredParams": ["operatorId", "playerId"],
+        "description": "Unlock operator with level or currency"
+      },
+      {
+        "actionName": "customizeOperator",
+        "affectsClass": "Operator",
+        "requiredParams": ["operatorId", "cosmeticType", "cosmeticId"],
+        "description": "Apply cosmetic customization"
+      }
+    ],
+    "matchActions": [
+      {
+        "actionName": "createMatch",
+        "affectsClass": "Match",
+        "requiredParams": ["gameMode", "mapId", "playerIds"],
+        "description": "Create new multiplayer match"
+      },
+      {
+        "actionName": "joinMatch",
+        "affectsClass": "Match",
+        "requiredParams": ["matchId", "playerId"],
+        "description": "Join existing match"
+      },
+      {
+        "actionName": "endMatch",
+        "affectsClass": "Match",
+        "requiredParams": ["matchId", "finalScores"],
+        "description": "Finalize match and record statistics"
+      }
+    ],
+    "mapActions": [
+      {
+        "actionName": "loadMap",
+        "affectsClass": "Map",
+        "requiredParams": ["mapId", "gameMode"],
+        "description": "Load map for match"
+      },
+      {
+        "actionName": "voteMap",
+        "affectsClass": "Map",
+        "requiredParams": ["mapId", "playerId"],
+        "description": "Vote for map selection"
+      }
+    ]
+  }
+}
+
+@endjson

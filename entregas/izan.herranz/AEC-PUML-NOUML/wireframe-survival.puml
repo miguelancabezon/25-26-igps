@@ -1,0 +1,34 @@
+@startsalt
+' ===== Layout libre con tabs, tabla e interacciones =====
+{+
+  { "tabs" | [🏠 Inicio] [🎒 Inventario] [🗺️ Mapa] [⚙️ Opciones] }
+  --
+  { "HUD"
+    | "🌡️ Temp: -12°C" | "💧 Sed: 65%" | "🍗 Hambre: 40%" | "⌛ Día 3, 14:32"
+  }
+  --
+  { "Inventario"
+    |
+    {T
+      + Icono + Nombre + Cantidad + Estado
+      + 🪵 + Madera + 12 + ✅
+      + 🪨 + Piedra + 8 + ✅
+      + 🐟 + Pescado crudo + 2 + ⚠️
+      + 🧵 + Cuerda + 3 + ✅
+    }
+  }
+  --
+  { "Acciones"
+    | [⛺ Craftear] [🔥 Encender Fuego] [🛠️ Reparar] [📦 Soltar] [💤 Dormir]
+  }
+  --
+  { "Opciones rápidas"
+    |
+    "Volumen" : [|||||]
+    "Dificultad" : ( Fácil ) ( Normal ) ( Difícil )
+    "Modo HUD" : ( On ) ( Off )
+    "Idioma" : { es-ES | en-US | fr-FR }
+    [🧭 Marcar Punto en Mapa]
+  }
+}
+@endsalt

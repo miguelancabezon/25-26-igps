@@ -1,0 +1,54 @@
+@startmindmap
+title 🎯 Project Vortex (Battle Royale) - Planificación del Proyecto
+<style>
+mindmapDiagram {
+  .gameplay {
+    BackgroundColor #FF6B6B
+    LineColor #C92A2A
+  }
+  .technical {
+    BackgroundColor #4ECDC4
+    LineColor #0C8599
+  }
+  .art {
+    BackgroundColor #FFE66D
+    LineColor #F4A261
+  }
+  .multiplayer {
+    BackgroundColor #95E1D3
+    LineColor #38A3A5
+  }
+  .progression {
+    BackgroundColor #C77DFF
+    LineColor #9D4EDD
+  }
+}
+</style>
+
+* <:1F3AF:> Project Vortex (Battle Royale)
+left side
+**[#FF6B6B] <:1F3AE:> Mecánicas de Juego**
+***[#FF8787] Sistema de Loot****[#FFA8A8] Armas (Fusiles, SMG, Snipers)*****_ Accesorios (Miras, Cargadores)****[#FFA8A8] Armaduras*****_ Chalecos (LvL 1-3)*****_ Cascos (LvL 1-3)****[#FFA8A8] Curación & Utilidad*****_ Botiquines, Jeringas*****_ Granadas, Bombas de Humo
+***[#FF8787] Movimiento****[#FFA8A8] Sprint Táctico****[#FFA8A8] Deslizamiento (Slide)****[#FFA8A8] Trepar & Vantajes****[#FFA8A8] Paracaídas (Despliegue)
+***[#FF8787] Habilidades de Leyenda****[#FFA8A8] Pasivas (Siempre activas)****[#FFA8A8] Tácticas (Cooldown corto)****[#FFA8A8] Definitivas (Cooldown largo)
+**[#4ECDC4] <:1F4BB:> Arquitectura Técnica**
+***[#74D7CE] Netcode Battle Royale****[#A0E7E0] 100+ Jugadores****[#A0E7E0] Baja Latencia****[#A0E7E0] Sincronización de Posiciones
+***[#74D7CE] Servidores****[#A0E7E0] Dedicados por Región****[#A0E7E0] Balanceo de Carga****[#A0E7E0] Anti-cheat (Kernel-level)
+***[#74D7CE] Motor de Juego****[#A0E7E0] Unreal Engine 5*****_ Optimización de World Partition*****_ Streaming de Assets
+***[#74D7CE] Backend (Node.js)****[#A0E7E0] Autenticación de Jugadores****[#A0E7E0] Gestión de Inventario****[#A0E7E0] Datos de Progresión
+**[#FFE66D] <:1F3A8:> Arte & Diseño Visual**
+***[#FFE999] Estilo Artístico****[#FFF0B8] Post-apocalíptico****[#FFF0B8] Sci-fi Distópico****[#FFF0B8] Realismo Aumentado
+***[#FFE999] Mapa Principal****[#FFF0B8] Zonas Urbanas*****_ Ruinas de Metrópolis*****_ Distrito Financiero****[#FFF0B8] Zonas Rurales*****_ Bosques Mutados*****_ Pueblos Abandonados****[#FFF0B8] Puntos de Interés (POIs)*****_ Laboratorio Secreto*****_ Nave Estrellada
+***[#FFE999] Leyendas****[#FFF0B8] Diseño Único (8 iniciales)****[#FFF0B8] Animaciones (Habilidades, Muerte)****[#FFF0B8] Skins y Personalización
+right side
+**[#95E1D3] <:1F310:> Sistema Multijugador**
+***[#B3EBE4] Modos de Juego****[#CCEEE8] Battle Royale*****_ Solos, Dúos, Tríos*****_ Modo Clasificatorio****[#CCEEE8] Limitado por Tiempo*****_ Deathmatch por Equipos*****_ Captura la Bandera (pequeño mapa)
+***[#B3EBE4] Matchmaking****[#CCEEE8] Basado en Habilidad (SBMM)****[#CCEEE8] Emparejamiento Rápido****[#CCEEE8] Selección de Región
+***[#B3EBE4] Comunicación****[#CCEEE8] Chat de Voz (proximidad)****[#CCEEE8] Sistema de Ping Avanzado****[#CCEEE8] Chat de Texto (equipo/global)
+***[#B3EBE4] Integración Social****[#CCEEE8] Lista de Amigos****[#CCEEE8] Invitaciones a Grupo****[#CCEEE8] Clubs/Clanes
+**[#C77DFF] <:1F4C8:> Progresión & Monetización**
+***[#D89FF3] Sistema de Niveles****[#E5B8F9] Nivel de Cuenta****[#E5B8F9] Nivel de Leyenda****[#E5B8F9] Maestría de Arma
+***[#D89FF3] Recompensas****[#E5B8F9] Pase de Batalla*****_ 100 Tiers*****_ Recompensas F2P y Premium****[#E5B8F9] Misiones Diarias/Semanales****[#E5B8F9] Eventos Temporales
+***[#D89FF3] Tienda In-Game****[#E5B8F9] Skins de Leyendas****[#E5B8F9] Aspectos de Armas****[#E5B8F9] Emotes y Grafitis
+***[#D89FF3] Modelo Económico****[#E5B8F9] Free-to-Play****[#E5B8F9] Moneda Premium (Comprable)****[#E5B8F9] Moneda Gratuita (Jugando)
+@endmindmap

@@ -1,0 +1,47 @@
+@startmindmap
+* 🌍 Survival Horizon
+** 🎮 Gameplay
+*** 🏕️ Supervivencia
+**** 🍗 Recolección de comida
+**** 🪓 Crafteo de herramientas
+*** 🧱 Construcción
+**** 🏠 Refugios
+**** 🔥 Fogatas
+*** ⚔️ Combate
+**** 🧟‍♂️ Enemigos
+**** 🪃 Armas cuerpo a cuerpo
+** 🎨 Arte y Diseño
+*** 🌄 Escenarios
+**** 🏜️ Desierto
+**** 🌲 Bosque
+*** 👤 Personajes
+**** 🧔 Jugador
+**** 🧟‍♀️ Enemigos
+** 🧩 Mecánicas
+*** ❤️ Salud
+*** 💧 Hidratación
+*** 🌡️ Temperatura
+** 🧰 Tecnología
+*** 💻 Motor: Unity
+*** 🧠 IA de enemigos
+*** 🔊 Sonido 3D
+** 💼 Producción
+*** 👨‍💻 Equipo técnico
+**** Devs, artistas, QA
+*** 💰 Presupuesto
+*** 📅 Cronograma
+
+<style>
+mindmapDiagram {
+  node {
+    BackgroundColor white
+    BorderColor black
+    FontSize 14
+  }
+  :depth(1) { BackgroundColor #ffcccb }
+  :depth(2) { BackgroundColor #b3e6ff }
+  :depth(3) { BackgroundColor #d5ffb0 }
+  :depth(4) { BackgroundColor #ffffb3 }
+}
+</style>
+@endmindmap

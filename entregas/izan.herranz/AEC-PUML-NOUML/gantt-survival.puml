@@ -1,0 +1,103 @@
+@startgantt
+' ===== Config =====
+Project starts 2025-11-10
+saturday are closed
+sunday are closed
+printscale 1.2
+skinparam BackgroundColor #16171a
+skinparam gantt {
+  ArrowColor white
+  TaskFontColor white
+}
+
+' Paleta por categoría
+' Preproducción: azul, Producción: verde, Postprod: naranja
+' Hitos: rosa
+' ===== Fase 1 - Preproducción =====
+[Definición de visión y alcance] as V lasts 7 days [#6ea8fe]
+V is 100% completed
+[Investigación de mercado & benchmarks] as R lasts 6 days [#6ea8fe]
+R is 100% completed
+[Documentos de diseño (GDD/TDD/Arte)] as D lasts 10 days [#6ea8fe]
+D is 60% completed
+[Prototipo núcleo jugable] as P lasts 12 days [#6ea8fe]
+P is 35% completed
+
+V -> R
+R -> D
+D -> P
+
+' Hito 1
+[Milestone 1: Prototipo] happens at P's end [#ffafcc]
+
+note right of V
+Recursos: 1 Producer, 1 Game Designer
+Herramientas: Notion, Miro
+end note
+
+note right of P
+Recursos: 2 Programadores Gameplay, 1 Tech Artist
+Motor: Unity/Unreal (a evaluar)
+end note
+
+' ===== Fase 2 - Producción =====
+-- Fase 2 - Producción --
+[Arquitectura y persistencia (guardados/seed)] as A lasts 12 days [#7bd88f]
+[Gameplay supervivencia (frío/hambre/sed)] as G lasts 20 days [#7bd88f]
+[Sistemas crafteo & recetas] as C lasts 18 days [#7bd88f]
+[IA fauna/hostil + pathfinding] as I lasts 16 days [#7bd88f]
+[Biomas y clima dinámico] as B lasts 15 days [#7bd88f]
+[Arte: props/ropa/UI] as AR lasts 20 days [#7bd88f]
+[Audio: SFX/ambientes] as AU lasts 14 days [#7bd88f]
+[Online coop (4) + relé] as O lasts 18 days [#7bd88f]
+[Accesibilidad y opciones] as ACC lasts 8 days [#7bd88f]
+[Integración telemetría] as T lasts 7 days [#7bd88f]
+
+P -> A
+A -> G
+G -> C
+G -> I
+B starts at A's end
+AR starts at A's end
+AU starts at A's end
+O starts at A's end
+ACC starts at G's start
+T starts at G's end
+
+A is 10% completed
+G is 0% completed
+C is 0% completed
+I is 0% completed
+B is 0% completed
+AR is 0% completed
+AU is 0% completed
+O is 0% completed
+ACC is 0% completed
+T is 0% completed
+
+note right of G
+Equipo: 2 Gameplay, 1 Diseñador
+Riesgos: balance frío-consumo
+end note
+
+' Hito 2
+[Milestone 2: beta] happens at O's end [#ffafcc]
+
+' ===== Fase 3 - Postproducción =====
+-- Fase 3 - Postproducción --
+[Optimización & estabilidad] as OP lasts 14 days [#f4a261]
+[QA: regresión y certificaciones] as QA lasts 12 days [#f4a261]
+[Marketing final: tráiler/presskit] as M lasts 8 days [#f4a261]
+[Parche día 0] as DZ lasts 5 days [#f4a261]
+
+O -> OP
+OP -> QA
+QA -> DZ
+AR -> M
+AU -> M
+B -> OP
+
+' Hito 3
+[Milestone 3: v1.0] happens at DZ's end [#ffafcc]
+
+@endgantt

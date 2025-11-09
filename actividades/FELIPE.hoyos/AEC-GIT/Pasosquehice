@@ -1,4 +1,0 @@
-Primero clono el repositorio en mi equipo y lo abro en Visual Studio Code. Desde la terminal integrada me muevo entre carpetas para revisar la estructura del proyecto. Después creo una nueva rama a partir de la rama principal y en ella genero las carpetas que pidió el profesor.
-
-Cuando termino esos cambios, reviso el estado de mi proyecto, selecciono los archivos que quiero guardar y registro todo en un commit con un mensaje claro y descriptivo.
-Luego vamos a commitear usando comandos como git status, git add . y git commit -m "docs: nuevo archivo".....

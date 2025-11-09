@@ -1,0 +1,153 @@
+@startmindmap
+skinparam backgroundcolor transparent
+skinparam nodeBackgroundColor<<urgency1>> #FF6B6B
+skinparam nodeBorderColor<<urgency1>> #C92A2A
+skinparam nodeBackgroundColor<<urgency2>> #4ECDC4
+skinparam nodeBorderColor<<urgency2>> #339989
+skinparam nodeBackgroundColor<<urgency3>> #FFE66D
+skinparam nodeBorderColor<<urgency3>> #FFD93D
+skinparam nodeBackgroundColor<<urgency4>> #A8E6CF
+skinparam nodeBorderColor<<urgency4>> #56C596
+skinparam nodeBackgroundColor<<urgency5>> #B794F6
+skinparam nodeBorderColor<<urgency5>> #805AD5
+
+* <:1F3AF:> **Plan de estudio**\n12 Semanas
+
+** <:1F4DA:> Fundamentos Cloud\n**Semanas 1-3** <<urgency1>>
+*** <:1F4D6:> Conceptos Básicos
+**** <:2601:> Modelos de servicio
+***** IaaS, PaaS, SaaS
+***** Casos de uso reales
+**** <:1F30D:> Modelos implementación
+***** Pública, Privada, Híbrida
+**** <:1F4B0:> Beneficios económicos
+***** CapEx vs OpEx
+***** ROI en la nube
+
+*** <:1F3D7:> Arquitectura AWS
+**** <:1F5FA:> Infraestructura global
+***** 33+ Regiones mundiales
+***** Availability Zones
+***** Edge Locations
+**** <:1F512:> Modelo responsabilidad
+***** Seguridad AWS
+***** Seguridad Cliente
+**** <:1F4CA:> Well-Architected
+***** 5 Pilares framework
+
+** <:1F6E0:> Servicios Core\n**Semanas 4-7** <<urgency2>>
+*** <:26A1:> Cómputo
+**** <:1F4BB:> EC2 Instances
+***** t2, m5, c5 tipos
+***** On-demand, Reserved, Spot
+***** Auto Scaling Groups
+**** <:1F433:> Containers
+***** ECS y EKS
+***** AWS Fargate
+**** <:2699:> Serverless
+***** AWS Lambda
+***** Event-driven arch
+
+*** <:1F4BE:> Almacenamiento
+**** <:1F5C4:> S3 Storage
+***** Standard, IA, Glacier
+***** Lifecycle policies
+***** Versionado objetos
+**** <:1F4E6:> EBS y EFS
+***** Volúmenes persistentes
+***** File systems compartidos
+**** <:1F5C4:> Bases de datos
+***** RDS, Aurora
+***** DynamoDB NoSQL
+***** Redshift analytics
+
+***_ <:1F310:> Networking <<urgency3>>
+**** <:1F30D:> VPC
+***** Subnets públicas/privadas
+***** Internet Gateway
+***** NAT Gateway
+**** <:1F517:> Conectividad
+***** AWS Direct Connect
+***** Site-to-Site VPN
+**** <:1F6A6:> Load Balancing
+***** ALB, NLB, CLB
+
+left side
+
+** <:1F510:> Seguridad\n**Semanas 8-9** <<urgency4>>
+*** <:1F464:> Identidad y Acceso
+**** <:1F511:> IAM
+***** Users, Groups, Roles
+***** Policies en JSON
+***** MFA obligatorio
+**** <:1F50D:> Cognito
+***** User pools
+***** Identity federation
+
+*** <:1F6E1:> Protección
+**** <:1F9F1:> Security Groups
+***** Stateful firewall
+***** Reglas inbound/outbound
+**** <:1F512:> Encriptación
+***** AWS KMS
+***** SSL/TLS certificates
+**** <:1F441:> Monitoreo
+***** CloudTrail auditoría
+***** GuardDuty threats
+***** AWS Config compliance
+
+** <:1F4B2:> Pricing & Support\n**Semanas 10-11** <<urgency5>>
+*** <:1F4B3:> Modelos de precios
+**** <:1F4B5:> Pay-as-you-go
+***** On-demand pricing
+***** Savings Plans
+***** Compute Savings
+**** <:1F4C9:> Optimización costos
+***** Reserved Instances
+***** Spot Instances 90% off
+***** Cost Explorer
+**** <:1F9EE:> Calculadoras
+***** AWS Pricing Calculator
+***** TCO Calculator
+
+***_ <:1F3C6:> Soporte AWS
+**** <:1F39F:> Planes de soporte
+***** Basic (gratuito)
+***** Developer $29/mes
+***** Business $100/mes
+***** Enterprise $15k/mes
+**** <:1F4DE:> Recursos ayuda
+***** Documentation oficial
+***** AWS Forums
+***** Support Center
+
+** <:1F4DD:> Preparación Examen\n**Semana 12** <<urgency1>>
+*** <:2705:> Práctica intensiva
+**** <:1F4CB:> Exámenes simulacro
+***** AWS Official Practice
+***** Udemy tests
+***** WhizLabs plataforma
+**** <:1F4DA:> Repaso final
+***** Flashcards Anki
+***** Notas resumen
+***** Puntos débiles
+**** <:23F1:> Estrategia examen
+***** 90 minutos tiempo
+***** 65 preguntas
+***** 70% aprobar
+
+***_ <:1F393:> Recursos estudio <<urgency2>>
+**** <:1F3EB:> Cursos online
+***** AWS Skill Builder (oficial)
+***** A Cloud Guru
+***** Stephane Maarek Udemy
+**** <:1F4D6:> Documentación
+***** AWS Whitepapers
+***** FAQs servicios
+***** Case studies
+**** <:1F4AC:> Comunidad
+***** r/AWSCertifications
+***** Discord grupos
+***** LinkedIn groups
+
+@endmindmap

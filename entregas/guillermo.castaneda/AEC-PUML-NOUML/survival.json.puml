@@ -1,0 +1,55 @@
+@startuml
+' Definir colores
+skinparam class {
+  BackgroundColor<<Personaje>> #FFDDDD
+  BackgroundColor<<Arma>> #DDDFFF
+  BackgroundColor<<Inventario>> #DDFFDD
+  BackgroundColor<<Escenario>> #CCFFCC
+}
+
+class Personaje <<Personaje>> {
+  - id: String
+  - nombre: String
+  - fechaCreacion: Date
+  - estaActivo: Boolean
+  - nivel: int
+  - salud: int
+  - color: String
+  --
+  + crearPersonaje(id: String, nombre: String, color: String)
+  + atacar(idObjetivo: String, idArma: String)
+}
+
+class Arma <<Arma>> {
+  - id: String
+  - nombre: String
+  - danio: int
+  - color: String
+  - esLegendaria: Boolean
+}
+
+class Inventario <<Inventario>> {
+  - id: String
+  - nombre: String
+  - items: List<Object>
+  --
+  + agregarItem(item: Object)
+}
+
+class Escenario <<Escenario>> {
+  - id: String
+  - nombre: String
+  - fechaCreacion: Date
+  - estaActivo: Boolean
+  - dificultad: int
+  - color: String
+  --
+  + iniciarEscenario()
+}
+
+' Relaciones
+Personaje "1" *-- "1" Inventario : tiene >
+Inventario "1" o-- "*" Arma : contiene >
+Personaje ..> Arma : usa >
+
+@enduml

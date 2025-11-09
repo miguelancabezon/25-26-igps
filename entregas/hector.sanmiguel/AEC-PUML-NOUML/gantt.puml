@@ -1,0 +1,103 @@
+@startgantt City Wars Development Timeline
+Project starts 2025-11-6
+
+-- Fase de Planificación --
+
+[Preproducción] requires 10 days
+[Preproducción] starts 2025-11-6
+[Preproducción] is colored in #FFAAAA
+[Preproducción] is 100% complete
+
+[Artistas gráficos] requires 3 days
+[Artistas gráficos] is colored in #FF00FF
+[Programadores] requires 5 days
+[Programadores] is colored in #FF00AA
+[Músicos] requires 7 days
+[Músicos] is colored in #AA00AA
+
+[Presentación de la idea: Prototipo] happens at [Preproducción]'s end
+
+
+
+-- Fase de Desarrollo Principal --
+
+[Producción] requires 20 days
+[Producción] starts at [Preproducción]'s end
+[Producción] is colored in #FFAAFF
+[Producción] is 75% complete
+
+note bottom
+    Son prioritarios:
+    -Motor
+    -Online
+end note
+
+[Diseño de personajes] requires 5 days
+[Diseño de personajes] starts at [Preproducción]'s end
+[Diseño de personajes] is colored in #FFD700
+[Diseño de personajes] is 100% complete
+
+[Diseño de mapas] requires 10 days
+[Diseño de mapas] starts at [Preproducción]'s end
+[Diseño de mapas] is colored in #98FB98
+[Diseño de mapas] is 90% complete
+
+[Desarrollo de IA] requires 12 days
+[Desarrollo de IA] starts at [Preproducción]'s end
+[Desarrollo de IA] is colored in #FFB6C1
+[Desarrollo de IA] is 70% complete
+
+[Sistema de recursos] requires 8 days
+[Sistema de recursos] starts at [Preproducción]'s end
+[Sistema de recursos] is colored in #FFA500
+[Sistema de recursos] is 100% complete
+
+[Implementación online] requires 18 days
+[Implementación online] starts at [Preproducción]'s end
+[Implementación online] is colored in #9370DB
+[Implementación online] is 60% complete
+
+[Integración de sonido] requires 7 days
+[Integración de sonido] starts at [Preproducción]'s end
+[Integración de sonido] is colored in #20B2AA
+[Integración de sonido] is 100% complete
+
+[Programación del motor] requires 10 days
+[Programación del motor] starts at [Preproducción]'s end
+[Programación del motor] is colored in #87CEEB
+[Programación del motor] is 80% complete
+
+[Beta] happens at [Programación del motor]'s end
+
+[Optimización] requires 6 days
+[Optimización] starts 2025-11-26
+[Optimización] is colored in #32CD32
+[Optimización] is 50% complete
+
+-- Fase Final --
+
+then [Corrección de bugs] requires 3 days
+[Corrección de bugs] is colored in #FF4444
+[Corrección de bugs] is 0% complete
+
+note bottom
+    No puede salir al mercado con bugs mayores
+end note
+
+[Presentación de City Wars 1.0] happens at [Producción]'s end
+
+[Postproducción] requires 5 days
+[Postproducción] starts at [Producción]'s end
+[Postproducción] is colored in #AAFFFF
+[Postproducción] is 0% complete
+
+[Retraso máximo de desarrollo] happens 2025-12-10
+
+[Distribución] happens at [Postproducción]'s end
+[Distribución] is colored in #CCCCFF
+
+-- Dependencias --
+[Corrección de bugs] starts at [Optimización]'s end
+[Optimización] starts at [Programación del motor]'s end
+
+@endgantt

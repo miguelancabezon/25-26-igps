@@ -1,0 +1,39 @@
+@startsalt
+title Panel del Alcalde - Dashboard de Ciudad
+
+{+
+{/ <b><:1F3E0:> Dashboard | <:1F4B0:> Economía | <:1F6E3:> Tráfico | <:26A1:> Servicios | <:2699:> Configuración }
+.
+{
+{T + <b>Resumen</b>
+++ <:1F465:> Población: 12,304
+++ <:1F60A:> Felicidad: 72%
+++ <:1F4B0:> Fondos: €148,200 + <b>Actividad Reciente</b>
+++ <:1F527:> Construido "Estación de metro"
+++ <:1F4B5:> Ajustado impuestos residenciales al 10%
+++ <:1F6A8:> Alerta: congestión en Distrito Centro
+} | {
+<b>Indicadores Clave</b>
+{SI
+==
+==
+Energía |||||||||||||||||||| 95%
+Agua    ||||||||||||||||||  90%
+Residuos|||||||||||||||||   88%
+Salud   ||||||||||||||      75%
+Educación ||||||||||||||||  85%
+==
+==
+}
+.
+<b>Próximos Hitos</b>
+{#
+Hito | Área | Fecha | [...]
+Desbloquear Metro | Transporte | 2025-11-20 | [Ver]
+Festival Urbano | Cultura | 2025-11-25 | [Ver]
+Impuesto Comercial 12% | Economía | 2025-12-01 | [Ver]
+}
+}
+}
+}
+@endsalt

@@ -1,0 +1,107 @@
+@startgantt
+title 🪓 Línea Temporal de Desarrollo de "Ashes of Earth" (Survival)
+printscale daily
+
+Project starts 2025-01-01
+
+' ===============================
+-- Fase 1: Preproducción (2 meses) --
+' ===============================
+
+[Investigación de ambientación] lasts 10 days
+[Documento de diseño del juego (GDD)] lasts 15 days and starts at [Investigación de ambientación]'s end
+[Diseño técnico y arquitecturas] lasts 10 days and starts at [Documento de diseño del juego (GDD)]'s end
+[Prototipo jugable inicial] lasts 25 days and starts at [Diseño técnico y arquitecturas]'s end
+[Milestone 1: Prototipo] happens at [Prototipo jugable inicial]'s end
+
+[Investigación de ambientación] is colored in Green
+[Documento de diseño del juego (GDD)] is colored in Green
+[Diseño técnico y arquitecturas] is colored in Green
+[Prototipo jugable inicial] is colored in Green
+[Prototipo jugable inicial] is 80% completed
+
+' ===============================
+-- Fase 2: Producción (6 meses) --
+' ===============================
+
+[Sistema de supervivencia (hambre/sed/salud)] lasts 30 days and starts at [Prototipo jugable inicial]'s end
+[Sistema de supervivencia (hambre/sed/salud)] is colored in Blue
+[Sistema de supervivencia (hambre/sed/salud)] is 60% completed
+
+[Sistema de crafteo y recolección] lasts 35 days and starts at [Sistema de supervivencia (hambre/sed/salud)]'s start
+[Sistema de crafteo y recolección] is colored in Blue
+[Sistema de crafteo y recolección] is 40% completed
+
+[Sistema de IA enemiga] lasts 40 days and starts at [Prototipo jugable inicial]'s end
+[Sistema de IA enemiga] is colored in Blue
+[Sistema de IA enemiga] is 30% completed
+
+[Arte y modelado 3D] lasts 60 days and starts at [Documento de diseño del juego (GDD)]'s end
+[Arte y modelado 3D] is colored in Orange
+[Arte y modelado 3D] is 50% completed
+
+[Sonido y música ambiental] lasts 30 days and starts at [Arte y modelado 3D]'s end
+[Sonido y música ambiental] is colored in Orange
+[Sonido y música ambiental] is 20% completed
+
+[Interfaz y HUD] lasts 20 days and starts at [Arte y modelado 3D]'s end
+[Interfaz y HUD] is colored in Orange
+[Interfaz y HUD] is 10% completed
+
+[Misiones y eventos] lasts 25 days and starts at [Sistema de crafteo y recolección]'s end
+[Misiones y eventos] is colored in Blue
+[Misiones y eventos] is 10% completed
+
+[Backend y guardado en la nube] lasts 25 days and starts at [Prototipo jugable inicial]'s end
+[Backend y guardado en la nube] is colored in Purple
+[Backend y guardado en la nube] is 30% completed
+
+[Pruebas Alpha internas] lasts 10 days and starts at [Interfaz y HUD]'s end
+[Pruebas Alpha internas] is colored in Purple
+[Pruebas Alpha internas] is 0% completed
+
+[Milestone 2: Beta] happens at [Pruebas Alpha internas]'s end
+
+' ===============================
+-- Fase 3: Postproducción (3 meses) --
+' ===============================
+
+[Corrección de errores y balanceo] lasts 20 days and starts at [Pruebas Alpha internas]'s end
+[Corrección de errores y balanceo] is colored in Red
+[Corrección de errores y balanceo] is 0% completed
+
+[Optimización general] lasts 15 days and starts at [Corrección de errores y balanceo]'s end
+[Optimización general] is colored in Red
+[Optimización general] is 0% completed
+
+[Localización y doblaje] lasts 20 days and starts at [Optimización general]'s start
+[Localización y doblaje] is colored in Red
+[Localización y doblaje] is 0% completed
+
+[Marketing y lanzamiento] lasts 10 days and starts at [Optimización general]'s end
+[Marketing y lanzamiento] is colored in Red
+[Marketing y lanzamiento] is 0% completed
+
+[Milestone 3: Versión 1.0] happens at [Marketing y lanzamiento]'s end
+
+' ===============================
+-- Notas y recursos --
+' ===============================
+
+note top of [Documento de diseño del juego (GDD)]
+Equipo de diseño: 1 diseñador, 1 guionista
+end note
+
+note top of [Sistema de supervivencia (hambre/sed/salud)]
+Desarrollo principal: 3 programadores Unity, 1 IA
+end note
+
+note top of [Arte y modelado 3D]
+Arte y sonido: 2 artistas, 1 músico
+end note
+
+note top of [Corrección de errores y balanceo]
+QA y publicación: 2 testers, 1 DevOps
+end note
+
+@endgantt

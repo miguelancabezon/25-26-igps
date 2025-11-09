@@ -1,0 +1,25 @@
+@startsalt wireframe
+{
+{
+  🎮 **Menú Principal FPS**
+  [▶️ Jugar]
+  [⚙️ Configuración]
+  [👤 Perfil]
+  [🏆 Logros]
+  [❌ Salir]
+}
+
+{T
+  + 🧭 **Tabs**
+  ++ General | Controles | Gráficos | Audio
+}
+
+{#
+  | 📋 **Tabla de jugadores** | * | *
+  | Nombre | Nivel | Conectado 
+  | Diego | 12 | ✅ 
+  | Laura | 8 | ❌ 
+  | Alex | 15 | ✅
+}
+}
+@endsalt
