@@ -1,0 +1,205 @@
+/* Estilo Elden Ring */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap');
+
+body {
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1.6;
+    background-image: url('imagenes/backgrounds/dark-pattern.png');
+    margin: 0;
+    padding: 2rem;
+}
+
+.elden-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem;
+    background-color: rgba(13, 13, 13, 0.95);
+    border: 2px solid var(--border-color);
+    box-shadow: 0 0 20px var(--shadow-color);
+    position: relative;
+}
+
+/* Efecto de runas brillantes */
+.elden-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('imagenes/backgrounds/rune-pattern.png');
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+/* Títulos al estilo Elden Ring */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 2rem 0;
+    text-shadow: 0 0 10px var(--shadow-color);
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 150px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+    margin: 1rem auto;
+}
+
+/* Enlaces estilizados */
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+a:hover {
+    color: var(--text-secondary);
+    text-shadow: 0 0 5px var(--shadow-color);
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+a:hover::before {
+    width: 100%;
+}
+
+/* Tablas al estilo Elden Ring */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 2rem 0;
+    border: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--background-secondary);
+    color: var(--secondary-color);
+    padding: 1rem;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+td {
+    padding: 1rem;
+    border: 1px solid rgba(199, 163, 85, 0.2);
+    background-color: rgba(29, 29, 29, 0.5);
+}
+
+/* Bloques de cita */
+blockquote {
+    margin: 2rem 0;
+    padding: 2rem;
+    border-left: 3px solid var(--secondary-color);
+    background-color: var(--background-secondary);
+    position: relative;
+    font-style: italic;
+}
+
+blockquote::before {
+    content: '"';
+    font-size: 4em;
+    position: absolute;
+    left: 10px;
+    top: -20px;
+    color: var(--secondary-color);
+    opacity: 0.2;
+}
+
+/* Botones Elden Ring */
+.elden-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.elden-button:hover {
+    background-color: var(--secondary-color);
+    color: var(--background-primary);
+    box-shadow: 0 0 15px var(--shadow-color);
+}
+
+/* Separadores ornamentales */
+.elden-divider {
+    height: 30px;
+    background-image: url('imagenes/decorative/elden-divider.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 2rem 0;
+    opacity: 0.6;
+}
+
+/* Galería de imágenes */
+.elden-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.elden-gallery img {
+    width: 100%;
+    border: 3px solid var(--border-color);
+    box-shadow: 0 0 15px var(--shadow-color);
+    transition: all 0.3s ease;
+}
+
+.elden-gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px var(--shadow-color);
+}
+
+/* Pie de página */
+.elden-footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    font-family: 'Cinzel', serif;
+    font-size: 0.9em;
+    color: var(--text-secondary);
+}
+
+/* Efectos de hover para elementos interactivos */
+.interactive {
+    transition: all 0.3s ease;
+}
+
+.interactive:hover {
+    text-shadow: 0 0 10px var(--shadow-color);
+    color: var(--secondary-color);
+}
