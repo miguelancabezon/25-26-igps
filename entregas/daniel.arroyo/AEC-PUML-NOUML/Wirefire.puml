@@ -1,0 +1,33 @@
+@startsalt
+title Menú Principal / Pausa
+
+{+
+{/ <b><:1F3AE:> Juego Supervivencia}
+==
+
+{
+{T
+<:1F3AE:> <b>Juego</b>
+++ <:1F501:> Reanudar Partida
+++ <:1F4BE:> Guardar Partida
+++ <:1F504:> Cargar Último Punto de Guardado
+++ <:1F39B:> Configuración
+++ <:1F4DD:> Créditos
+++ <:1F6AA:> Salir al Menú Principal
+++ <:1F5D1:> Cerrar Juego
+} |
+
+{
+<b><size:11><:1F550:></size> <size:16>Panel de Pausa</size></b>
+<i>“Al juntar 2 de Madera y una Tela Sucia obtienes Antorchas”</i>
+==
+<b>Último guardado:</b> 2025-11-07 — Zona: Bosque Norte   
+<b>Estado del jugador:</b> ❤️ 85%  <size:9><:1F4A7:></size>60%  <size:9><:1F356:></size> 40%
+==
+[                 ▶️ Reanudar                 ]   
+}
+}
+
+
+}
+@endsalt
