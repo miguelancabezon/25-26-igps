@@ -1,0 +1,82 @@
+@startgantt
+Project starts the 2025-11-10
+[Preproducción] lasts 15 days
+    [🎨 Definición de ambientación] lasts 3 days
+    [🕹️ Diseño de mecánicas principales] lasts 3 days
+    [📖 Documentación de historia y personajes] lasts 3 days
+    [🖼️ Concepto artístico y escenarios] lasts 3 days
+    [👥 Planificación de recursos y equipo] lasts 3 days
+[Producción] starts 2025-11-25 and lasts 30 days
+    [🏢 Modelado 3D de la morgue] lasts 5 days
+    [🧟‍♂️ Programación de IA de cadáveres] lasts 6 days
+    [🛠️ Implementación de herramientas y objetos] lasts 4 days
+    [👹 Diseño de enemigos y entidades paranormales] lasts 5 days
+    [🔊 Integración de sonido y efectos] lasts 3 days
+    [📅 Sistema de progresión y eventos] lasts 4 days
+    [🧪 Pruebas internas de jugabilidad] lasts 3 days
+    [⚡ Optimización de rendimiento] lasts 3 days
+    [🚩 Milestone: Prototipo] happens at 2025-12-05
+    [🚩 Milestone: Beta] happens at 2025-12-20
+[Postproducción] starts 2025-12-25 and lasts 15 days
+    [🐞 Corrección de errores y bugs] lasts 5 days
+    [⚖️ Balance de dificultad] lasts 3 days
+    [📢 Preparación de materiales de marketing] lasts 3 days
+    [🚀 Lanzamiento y soporte inicial] lasts 4 days
+    [🚩 Milestone: v1.0] happens at 2026-01-10
+
+[🕹️ Diseño de mecánicas principales] depends on [🎨 Definición de ambientación]
+[📖 Documentación de historia y personajes] depends on [🕹️ Diseño de mecánicas principales]
+[🏢 Modelado 3D de la morgue] depends on [🖼️ Concepto artístico y escenarios]
+[🧟‍♂️ Programación de IA de cadáveres] depends on [🏢 Modelado 3D de la morgue]
+[🛠️ Implementación de herramientas y objetos] depends on [🏢 Modelado 3D de la morgue]
+[👹 Diseño de enemigos y entidades paranormales] depends on [🏢 Modelado 3D de la morgue]
+[🔊 Integración de sonido y efectos] depends on [👹 Diseño de enemigos y entidades paranormales]
+[📅 Sistema de progresión y eventos] depends on [🧟‍♂️ Programación de IA de cadáveres]
+[🧪 Pruebas internas de jugabilidad] depends on [📅 Sistema de progresión y eventos]
+[⚡ Optimización de rendimiento] depends on [🧪 Pruebas internas de jugabilidad]
+[🐞 Corrección de errores y bugs] depends on [⚡ Optimización de rendimiento]
+[⚖️ Balance de dificultad] depends on [🐞 Corrección de errores y bugs]
+[📢 Preparación de materiales de marketing] depends on [⚖️ Balance de dificultad]
+[🚀 Lanzamiento y soporte inicial] depends on [📢 Preparación de materiales de marketing]
+
+[🎨 Definición de ambientación] is colored in Lavender/Black
+[🕹️ Diseño de mecánicas principales] is colored in LightBlue/Black
+[🏢 Modelado 3D de la morgue] is colored in LightGreen/Black
+[🧟‍♂️ Programación de IA de cadáveres] is colored in Orange/Black
+[🛠️ Implementación de herramientas y objetos] is colored in Yellow/Black
+[👹 Diseño de enemigos y entidades paranormales] is colored in Red/Black
+[🔊 Integración de sonido y efectos] is colored in Gray/Black
+[📅 Sistema de progresión y eventos] is colored in Teal/Black
+[🧪 Pruebas internas de jugabilidad] is colored in Pink/Black
+[⚡ Optimización de rendimiento] is colored in Gold/Black
+[🐞 Corrección de errores y bugs] is colored in LightGray/Black
+[⚖️ Balance de dificultad] is colored in Brown/Black
+[📢 Preparación de materiales de marketing] is colored in Purple/Black
+[🚀 Lanzamiento y soporte inicial] is colored in Blue/Black
+
+[🎨 Definición de ambientación] has 100% completed
+[🕹️ Diseño de mecánicas principales] has 90% completed
+[🏢 Modelado 3D de la morgue] has 80% completed
+[🧟‍♂️ Programación de IA de cadáveres] has 60% completed
+[🛠️ Implementación de herramientas y objetos] has 50% completed
+[👹 Diseño de enemigos y entidades paranormales] has 40% completed
+[🔊 Integración de sonido y efectos] has 30% completed
+[📅 Sistema de progresión y eventos] has 20% completed
+[🧪 Pruebas internas de jugabilidad] has 10% completed
+[⚡ Optimización de rendimiento] has 0% completed
+
+note right of [🏢 Modelado 3D de la morgue]
+Equipo arte: 2 personas
+Software: Blender, Substance Painter
+end note
+
+note right of [🧟‍♂️ Programación de IA de cadáveres]
+Equipo programación: 2 personas
+Lenguaje: C#, Unity
+end note
+
+note right of [📢 Preparación de materiales de marketing]
+Equipo marketing: 1 persona
+Presupuesto: $1500
+end note
+@endgantt
