@@ -1,0 +1,64 @@
+# 🌍 EvoMundi - Human Evolution Game
+
+## 1️⃣ Mindmap - Evolución y Mecánicas
+```plantuml
+@startmindmap
+* <color:RoyalBlue>🌍 EvoMundi - Human Evolution Game
+
+-- LADO IZQUIERDO --
+** <color:Green>🪨 Edad de Piedra
+*** <color:Gray>Descubrir fuego 🔥
+*** <color:Gray>Inventar herramientas 🛠️
+*** <color:Gray>Cazar y recolectar 🍖
+*** <color:Gray>Formar tribu 👥
+
+** <color:Orange>🛞 Edad Antigua
+*** <color:Yellow>Inventar la rueda 🛞
+*** <color:Yellow>Construir refugios 🏕️
+*** <color:Yellow>Desarrollar lenguaje 🗣️
+*** <color:Yellow>Primeros intercambios 💱
+
+** <color:Purple>🏰 Edad Media
+*** <color:Violet>Desarrollar agricultura 🌾
+*** <color:Violet>Construir castillos 🏯
+*** <color:Violet>Formar reinos 👑
+*** <color:Violet>Comercio y guerras ⚔️
+
+** <color:Red>🏭 Revolución Industrial
+*** <color:Pink>Máquinas de vapor 🚂
+*** <color:Pink>Fábricas 🏭
+*** <color:Pink>Urbanización 🏙️
+*** <color:Pink>Educación pública 📚
+
+** <color:Teal>💡 Edad Moderna
+*** <color:Blue>Electricidad ⚡
+*** <color:Blue>Tecnología 💻
+*** <color:Blue>Globalización 🌐
+*** <color:Blue>Competencia internacional 🏳️‍🌈
+
+-- LADO DERECHO --
+** 🎮 Mecánicas del Juego
+*** 🌍 Evolución por eras
+*** ⚔️ Combate entre civilizaciones
+*** 🤝 Diplomacia y comercio
+*** 📚 Árbol tecnológico
+
+** ⚒ Recursos
+*** 🧍 Humanos
+*** 🌲 Materiales
+*** 💡 Conocimiento
+*** ⚡ Energía
+
+** 🏆 Modos de Victoria
+*** 🧠 Científica
+*** ⚔️ Militar
+*** 🤝 Diplomática
+*** 🎭 Cultural
+
+** ⚠ Desafíos
+*** ☄️ Desastres
+*** 😷 Pandemias
+*** 💀 Guerras
+*** 🌾 Escasez de recursos
+
+@endmindmap

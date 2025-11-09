@@ -1,0 +1,64 @@
+@startjson
+{
+  "config": {
+    "version": "1.0.0",
+    "language": "es-ES",
+    "author": "Equipo Survival Devs",
+    "environment": "production",
+    "lastUpdate": "2025-11-09T12:00:00Z"
+  },
+  "player": {
+    "id": 1,
+    "name": "Survivor01",
+    "health": 85,
+    "hydration": 60,
+    "hunger": 45,
+    "inventory": [
+      { "id": 101, "name": "Hacha de piedra", "durability": 70 },
+      { "id": 202, "name": "Carne cruda", "quantity": 2 }
+    ],
+    "skills": ["Crafteo", "Caza", "Construcción"]
+  },
+  "enemy": {
+    "id": 10,
+    "type": "Zombie",
+    "level": 3,
+    "aggressive": true,
+    "spawnDate": "2025-11-01"
+  },
+  "item": {
+    "id": 501,
+    "name": "Pico de hierro",
+    "type": "Herramienta",
+    "durability": 100,
+    "craftable": true
+  },
+  "world": {
+    "id": "W01",
+    "name": "Isla del Norte",
+    "weather": "Tormenta",
+    "resources": ["Madera", "Agua", "Minerales"],
+    "npcs": [
+      { "id": 201, "name": "Cazador", "friendly": false }
+    ]
+  },
+  "actions": {
+    "craftItem": {
+      "class": "item",
+      "params": ["itemId", "materials[]"]
+    },
+    "attackEnemy": {
+      "class": "enemy",
+      "params": ["enemyId", "weaponId"]
+    },
+    "buildStructure": {
+      "class": "world",
+      "params": ["structureType", "location"]
+    },
+    "consumeItem": {
+      "class": "player",
+      "params": ["itemId"]
+    }
+  }
+}
+@endjson

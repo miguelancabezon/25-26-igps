@@ -1,0 +1,57 @@
+@startjson json
+{
+  "metadata": {
+    "version": "1.0.0",
+    "language": "es-ES",
+    "environment": "development",
+    "author": "Diego Gonzales"
+  },
+  "weapon": {
+    "id": 1,
+    "name": "AssaultRifle",
+    "damage": 35,
+    "ammoType": "5.56mm",
+    "fireRate": 0.1,
+    "available": true,
+    "createdAt": "2025-01-10T12:00:00Z"
+  },
+  "player": {
+    "id": 101,
+    "name": "JugadorFPS",
+    "health": 100,
+    "stamina": 80,
+    "inventory": ["AssaultRifle", "Grenade", "Medkit"],
+    "position": {"x": 50, "y": 20, "z": 5}
+  },
+  "map": {
+    "id": "desert01",
+    "name": "Desert Base",
+    "size": 5000,
+    "weather": "sunny",
+    "enemies": [
+      {"id": "E1", "type": "soldier", "difficulty": "medium"},
+      {"id": "E2", "type": "sniper", "difficulty": "hard"}
+    ]
+  },
+  "gameConfig": {
+    "maxPlayers": 12,
+    "modes": ["deathmatch", "team_deathmatch"],
+    "friendlyFire": false,
+    "releaseDate": "2025-07-10"
+  },
+  "actions": {
+    "reloadWeapon": {
+      "affects": "weapon",
+      "parameters": ["ammoCount"]
+    },
+    "healPlayer": {
+      "affects": "player",
+      "parameters": ["healthPoints"]
+    },
+    "spawnEnemy": {
+      "affects": "map",
+      "parameters": ["enemyType", "position"]
+    }
+  }
+}
+@endjson

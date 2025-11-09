@@ -1,7 +1,0 @@
-Primera entrega de AEC-GIT
-Paso 1: Dentro de Github selecionar el repo 25-26-igps y hacer un fork
-Paso 2: Crear una carpeta dentro de entregas llamada javier.paguaga
-Paso 3: Crear una carpeta en javier.paguaga llamada AEC-GIT y luego crear un archivo tipo texto y comitearlo con el mensaje "docs: nuevo archivo" y subirlo al fork propio con commit
-Paso 4: Crear una rama llamada "docs/modificaciones", modificar el archvio escribiendo los pasos y mandando capturas
-Paso 5: Combinad las ramas
-Paso 6: Crear un pull request

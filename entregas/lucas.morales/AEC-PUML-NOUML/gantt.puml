@@ -1,0 +1,39 @@
+@startgantt
+Project starts 2025-01-01
+Project ends 2025-12-31
+printscale weekly
+
+-- Fase 1: Preproducción [#lightblue] --
+[Idea y Concepto] lasts 2 weeks
+[Documento de Diseño (GDD)] lasts 3 weeks and starts at [Idea y Concepto]'s end
+[Prototipo Inicial] lasts 4 weeks and starts at [Documento de Diseño (GDD)]'s end
+
+-- Hito 1: 🧩 Prototipo --
+[Prototipo Inicial] is milestone
+
+-- Fase 2: Producción [#lightgreen] --
+[Desarrollo Core Engine] lasts 10 weeks and starts at [Prototipo Inicial]'s end
+[Modelado 3D] lasts 8 weeks
+[Animaciones] lasts 6 weeks and starts at [Modelado 3D]'s end
+[IA de Enemigos] lasts 8 weeks and starts at [Desarrollo Core Engine]'s start
+[Integración Online] lasts 10 weeks and starts at [IA de Enemigos]'s end
+
+-- Hito 2: 🧪 Beta --
+[Beta Cerrada] lasts 3 weeks and starts at [Integración Online]'s end
+[Beta Cerrada] is milestone
+
+-- Fase 3: Postproducción [#lightyellow] --
+[Optimización y Bug Fixing] lasts 6 weeks and starts at [Beta Cerrada]'s end
+[Marketing y Trailer] lasts 4 weeks
+[Publicación en Steam] lasts 2 weeks and starts at [Optimización y Bug Fixing]'s end
+
+-- Hito 3: 🚀 v1.0 --
+[Versión Final] lasts 0 days and starts at [Publicación en Steam]'s end
+[Versión Final] is milestone
+
+note right of [Desarrollo Core Engine]
+Equipo: 4 programadores  
+Recursos: Unreal Engine 5  
+Avance: 60%
+end note
+@endgantt

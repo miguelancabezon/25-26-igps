@@ -1,0 +1,53 @@
+@startwbs
+' ===========================
+' CONFIGURACIÓN GENERAL
+' ===========================
+skinparam backgroundColor #F8F9FA
+skinparam defaultFontName "Segoe UI"
+skinparam defaultFontSize 14
+skinparam shadowing true
+skinparam roundCorner 15
+skinparam dpi 150
+
+' ===========================
+' ÁRBOL DE JUEGO
+' ===========================
+* <b><color:#1F4E79>Survival Game</color></b>
+
+' --- BLOQUE MUNDO ---
+** <b><color:#228B22>▲ Mundo</color></b>
+*** <color:#2E8B57>■ Biomas</color>
+**** ♣ Bosques
+**** ♦ Montañas
+**** ♥ Llanuras
+**** ♠ Cuevas
+*** <color:#6B8E23>☼ Clima</color>
+**** Día y noche
+**** Estaciones
+*** <color:#556B2F>☯ Exploración</color>
+**** Refugios
+**** Puntos de interés
+*** <color:#006400>⚒ Recursos</color>
+**** Materiales naturales
+**** Animales y plantas
+
+' --- BLOQUE JUGABILIDAD ---
+** <b><color:#8B0000>⚔ Jugabilidad</color></b>
+*** <color:#A52A2A>⚑ Supervivencia</color>
+**** Hambre y sed
+**** Temperatura y salud
+**** Descanso y energía
+*** <color:#B22222>⚒ Crafting</color>
+**** Herramientas
+**** Armas
+**** Construcción de refugios
+*** <color:#DC143C>⚖ Combate</color>
+**** Enemigos
+**** Defensa
+*** <color:#8B4513>⚙ Progresión</color>
+**** Misiones y logros
+**** Habilidades
+*** <color:#FF8C00>♞ Personaje</color>
+**** Personalización
+**** Cooperación o relaciones
+@endwbs

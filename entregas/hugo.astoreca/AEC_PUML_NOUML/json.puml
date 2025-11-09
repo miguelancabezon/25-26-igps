@@ -1,0 +1,133 @@
+@startjson
+{
+    "metadata": {
+        "version": "1.0",
+        "idioma": "es",
+        "entorno": "desarrollo",
+        "autor": "Hugo Astoreca",
+        "fechaCreacion": "2025-11-08T12:00:00Z"
+    }
+    ,
+    "clases": [
+    {
+        "nombreClase": "Ciudadano",
+        "color":"",
+        "atributos": {
+            "id": "",
+            "nombre": "",
+            "edad": "",
+            "trabajo": "",
+            "felicidad": "",
+            "activo": "boolean",
+            "inventario": ["Recurso"],
+            "fechaCreacion": ""
+        }
+        ,
+        "acciones": [
+        {
+            "nombreAccion": "moverse",
+            "afectaClase": "Ciudadano",
+            "parametros": ["x:", "y:"]
+        }
+        ,
+        {
+            "nombreAccion": "trabajar",
+            "afectaClase": "Ciudadano",
+            "parametros": ["edificio:Edificio"]
+        }
+        ]
+    }
+    ,
+    {
+        "nombreClase": "Edificio",
+        "color": "",
+        "atributos": {
+            "id": "",
+            "nombre": "",
+            "tipo": "",
+            "capacidad": "",
+            "nivel": "",
+            "activo": "boolean",
+            "recursosAlmacenados": ["Recurso"],
+            "fechaConstruccion": ""
+        }
+        ,
+        "acciones": [
+        {
+            "nombreAccion": "construir",
+            "afectaClase": "Edificio",
+            "parametros": ["tipo:", "ubicacion:"]
+        }
+        ,
+        {
+            "nombreAccion": "mejorar",
+            "afectaClase": "Edificio",
+            "parametros": ["nivel:"]
+        }
+        ]
+    }
+    ,
+    {
+        "nombreClase": "Recurso",
+        "color": "",
+        "atributos": {
+            "id": "",
+            "nombre": "",
+            "cantidad": "",
+            "tipo": "",
+            "fechaCreacion": ""
+        }
+        ,
+        "acciones": [
+        {
+            "nombreAccion": "usar",
+            "afectaClase": "Edificio",
+            "parametros": ["cantidad:"]
+        }
+        ]
+    }
+    ,
+    {
+        "nombreClase": "SistemaCiudad",
+        "color": "",
+        "atributos": {
+            "id": "",
+            "nombre": "",
+            "version": "",
+            "maximoCiudadanos": "",
+            "ciudadanosActivos": ["Ciudadano"],
+            "edificiosActivos": ["Edificio"],
+            "recursosTotales": ["Recurso"],
+            "enLinea": "",
+            "fechaCreacion": ""
+        }
+        ,
+        "acciones": [
+        {
+            "nombreAccion": "agregarCiudadano",
+            "afectaClase": "SistemaCiudad",
+            "parametros": ["ciudadano:Ciudadano"]
+        }
+        ,
+        {
+            "nombreAccion": "removerCiudadano",
+            "afectaClase": "SistemaCiudad",
+            "parametros": ["ciudadano:Ciudadano"]
+        }
+        ,
+        {
+            "nombreAccion": "construirEdificio",
+            "afectaClase": "SistemaCiudad",
+            "parametros": ["edificio:Edificio"]
+        }
+        ,
+        {
+            "nombreAccion": "recolectarRecurso",
+            "afectaClase": "SistemaCiudad",
+            "parametros": ["recurso:Recurso", "cantidad:"]
+        }
+        ]
+    }
+    ]
+}
+@endjson 

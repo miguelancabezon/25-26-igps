@@ -1,0 +1,95 @@
+@startjson json
+{
+  "metadata": {
+    "version": "1.0.0",
+    "language": "es-ES",
+    "environment": "development",
+    "author": "Aaron Ureta",
+    "projectName": "Sombras de Hierro",
+    "createdAt": "2025-01-20T12:00:00Z"
+  },
+
+  "player": {
+    "id": 1001,
+    "name": "Dante",
+    "role": "protagonista",
+    "health": 100,
+    "stressLevel": 25,
+    "inventory": ["Pistola 9mm", "USB encriptado", "Mapa del puerto"],
+    "affinity": {
+      "Valeria": 40,
+      "Rojo": 35
+    },
+    "position": {"x": 15, "y": 30, "zone": "Distrito Industrial"},
+    "lastSave": "2025-01-21T09:45:00Z"
+  },
+
+  "npc": [
+    {
+      "id": 200,
+      "name": "Valeria",
+      "faction": "Milicia Estatal",
+      "trust": 55,
+      "suspicion": 20,
+      "isFriendly": true
+    },
+    {
+      "id": 201,
+      "name": "Rojo",
+      "faction": "Cártel del Puerto",
+      "trust": 45,
+      "suspicion": 30,
+      "isFriendly": false
+    }
+  ],
+
+  "item": {
+    "id": "usb01",
+    "name": "USB encriptado",
+    "description": "Contiene información sobre el tráfico de armas.",
+    "usable": false,
+    "rarity": "alta",
+    "obtainedAt": "2025-01-20T18:00:00Z"
+  },
+
+  "map": {
+    "id": "ciudad_zona3",
+    "name": "Puerto Viejo",
+    "size": 1500,
+    "weather": "nublado",
+    "zones": [
+      {"id": "Z1", "name": "Almacén principal", "dangerLevel": "alto"},
+      {"id": "Z2", "name": "Muelle sur", "dangerLevel": "medio"},
+      {"id": "Z3", "name": "Base militar", "dangerLevel": "alto"}
+    ],
+    "activeNPCs": ["Valeria", "Rojo"]
+  },
+
+  "gameConfig": {
+    "textSpeed": 1.0,
+    "musicVolume": 0.8,
+    "autosave": true,
+    "resolution": "1920x1080",
+    "releaseDate": "2025-06-10"
+  },
+
+  "actions": {
+    "updateAffinity": {
+      "affects": "npc",
+      "parameters": ["npcName", "valueChange"]
+    },
+    "saveProgress": {
+      "affects": "player",
+      "parameters": ["saveSlot", "timestamp"]
+    },
+    "useItem": {
+      "affects": "player",
+      "parameters": ["itemId"]
+    },
+    "triggerScene": {
+      "affects": "map",
+      "parameters": ["zoneId", "sceneName"]
+    }
+  }
+}
+@endjson

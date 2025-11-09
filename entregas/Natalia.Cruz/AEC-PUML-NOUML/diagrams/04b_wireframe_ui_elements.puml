@@ -1,0 +1,95 @@
+@startsalt
+title Design System - UI In-Game (City Builder)
+
+{+
+{/ <b>Botones | Formularios | Tarjetas | Tablas | Modales | Navegación }
+==
+<b><size:14>Botones del Juego</size></b>
+.
+{
+<b>Acciones Principales</b>
+{ [<:1F3D7:> Construir] | [<:1F6E3:> Vías] | [<:26A1:> Energía] | [<:1F4A7:> Agua] | [<:1F4C8:> Informes] }
+.
+<b>Estados</b>
+{ [Normal] | [<color:blue>Hover</color>] | [<color:purple>Active</color>] | [<s>Deshabilitado</s>] }
+.
+<b>Tamaños</b>
+{ [Pequeño] | [ Mediano ] | [ Grande ] | [ Extra ] }
+.
+<b>Con Iconos</b>
+{ [<:1F4BE:> Guardar] | [<:1F501:> Cargar] | [<:1F4E5:> Exportar] | [<:1F5D1:> Demoler] | [<:2699:> Ajustes] }
+}
+==
+<b><size:14>Elementos de Formulario</size></b>
+.
+{
+<b>Inputs</b>
+{
+Buscar: | "Distrito Centro "
+Tasa Impuesto (%): | "10 "
+Nombre Barrio: | "Nueva Esperanza "
+}
+.
+<b>Selectores</b>
+{
+Política: | ^Zonificación^
+Servicio: | ^Energía^
+Idioma:   | ^Español^
+}
+.
+<b>Checks & Radios</b>
+{
+^Mostrar tráfico^
+^Mostrar contaminación^  
+ ^Mostrar ruido^
+}
+{
+(X) Pausa
+( ) 1x
+( ) 2x
+(X) 3x
+}
+.
+<b>Área de Texto</b>
+{SI
+"Notas del alcalde "
+"— Recordar ampliar subestación norte "
+"— Planificar nuevas líneas de bus "
+}
+}
+==
+<b><size:14>Tarjetas</size></b>
+.
+{
+{^
+<b><:1F3E2:> Ayuntamiento</b>
+--
+Nivel: 2
+Mantenimiento: €120/sem
+--
+[Actualizar] [Trasladar] [Info]
+} | {^
+<b><:1F6E3:> Tráfico</b>
+--
+<b><size:18>Congestión 28%</size></b>
+<color:orange>⚠ Zonas críticas: 3</color>
+--
+[Ver mapa]
+} | {^
+<b><:26A1:> Energía</b>
+--
+<b><size:18>95% Capacidad</size></b>
+<color:green>↗ Estable</color>
+--
+[Subestaciones]
+}
+}
+==
+<b><size:14>Alertas</size></b>
+.
+<color:green><back:lightgreen>✓ OK</back></color> Servicios funcionando
+<color:blue><back:lightblue>ℹ Info:</back></color> Nuevo edificio disponible
+<color:orange><back:lightyellow>⚠ Aviso:</back></color> Tráfico alto en Centro
+<color:red><back:lightpink>✖ Error:</back></color> Falta de agua en Distrito Sur
+}
+@endsalt

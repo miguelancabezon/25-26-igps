@@ -1,0 +1,86 @@
+@startjson
+title Videojuego Survival - Estructura Simplificada
+
+#highlight "Metadata"
+
+{
+  "status": "active",
+  "version": "v0.9.3",
+  "Fecha De Salida": "2025-05-01T00:00:00Z",
+
+  "Metadata": {
+    "género": "Survival",
+    "lenguajes": ["Español", "Inglés", "Francés"],
+    "última actualización": "2025-04-07T18:00:00Z"
+  },
+
+  "Jugador": {
+    "nombre": "Superviviente",
+    "vida": 90,
+    "stamina": 70,
+    "hambre": 35,
+    "sed": 45,
+    "posicion": [120.5, 48.2, 7.0],
+    "inventario": ["Arma: Cuchillo Oxidado, daño 12.", "Consumible: Botella de Agua", "Recurso: Madera, Cantidad 12"]
+  },
+
+  "Enemigos": [
+    {
+      "nombre": "Infectado errante",
+      "vida": 50,
+      "daño": 10,
+      "aggressivo": true,
+      "loot": ["Tela sucia", "Hueso"]
+    },
+    {
+      "nombre": "Bestia mutada",
+      "vida": 180,
+      "daño": 35,
+      "aggressivo": true,
+      "loot": ["Colmillo", "Piel gruesa"]
+    }
+  ],
+
+  "Fabricación": {
+    "recetas": [
+      {
+        "item": "Antorcha",
+        "necesita": ["Madera x2", "Tela sucia x1"]
+      },
+      {
+        "item": "Hacha básica",
+        "necesita": ["Madera x3", "Piedra afilada x2"]
+      }
+    ]
+  },
+
+  "Medios": {
+    "biomas": ["Bosque", "Pantano", "Costa"],
+    "Tiempo": "Lluvia ligera",
+    "Día": false
+  },
+
+  "Gráficos": {
+    "resolución": "1920x1080",
+    "calidad": "Alta",
+    "fps": 144
+  },
+
+  "Acciones": [
+    {
+      "nombre": "FabricaciónItems",
+      "afecta": "fabricar"
+    },
+    {
+      "nombre": "Ataque",
+      "afecta": "enemigos"
+    },
+    {
+      "nombre": "ConsumirItems",
+      "afecta": "Superviviente"
+    }
+  ]
+ 
+}
+
+@endjson

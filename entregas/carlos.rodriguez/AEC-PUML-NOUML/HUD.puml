@@ -1,0 +1,21 @@
+@startsalt
+title HUD
+{+
+
+[<size:60>🗺️</size>] | [⏸️(Esc)] | ^✅Misiones (I)^
+
+{
+^<size:10>🎒(Tab)</size>^
+}
+.
+.
+.
+.
+.
+{ 
+[<size:10>🛒(B)</size>]
+}
+{<size:20>❤️ 100</size>🛡️ 50 / 50} |                                              | {<size:20>🔫 AWP</size>30 / 120}
+}
+
+@endsalt

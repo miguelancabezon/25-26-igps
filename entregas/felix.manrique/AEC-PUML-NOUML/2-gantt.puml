@@ -1,0 +1,96 @@
+@startgantt
+title Plan de Desarrollo: Juego de Ritmo "Cosmic Beat"
+
+[Prototipo] happens at 2025-12-20
+[Beta] happens at 2026-03-15
+[v10] happens at 2026-04-30
+
+-- Fase 1: Preproducción --
+[Diseño de Juego GDD] as [T1] lasts 15 days and is 100% completed
+[T1] is colored in LightBlue
+note right of [T1] : 2 Game Designers
+[Investigación de mercado] as [T2] lasts 8 days and is 100% completed
+[T2] starts after [T1]'s start
+[T2] is colored in LightBlue
+note right of [T2] : Analista de Mercado
+[Selección y licencia canciones] as [T3] lasts 12 days and is 100% completed
+[T3] starts after [T1]'s end
+[T3] is colored in Plum
+note right of [T3] : Director Musical + Legal
+[Definición mecánicas notas] as [T4] lasts 10 days and is 90% completed
+[T4] starts after [T2]'s end
+[T4] is colored in LightBlue
+note right of [T4] : Lead Designer
+[Prototipo jugable] as [T5] lasts 25 days and is 80% completed
+[T5] starts after [T3]'s end
+[T5] starts after [T4]'s end
+[T5] is colored in LightBlue
+note right of [T5] : 2 Programadores
+
+-- Fase 2: Producción --
+[Desarrollo motor ritmo core] as [T6] lasts 35 days and is 60% completed
+[T6] starts after [T5]'s end
+[T6] is colored in LightGreen
+note right of [T6] : 3 Programadores Senior
+[Sistema puntuación y combos] as [T7] lasts 20 days and is 45% completed
+[T7] starts after [T6]'s start
+[T7] is colored in LightGreen
+note right of [T7] : 1 Gameplay Programmer
+[Diseño UI UX cyberpunk] as [T8] lasts 25 days and is 70% completed
+[T8] starts after [T5]'s end
+[T8] is colored in Khaki
+note right of [T8] : 2 UI UX Designers
+[Creación avatares 3D] as [T9] lasts 30 days and is 40% completed
+[T9] starts after [T8]'s start
+[T9] is colored in Khaki
+note right of [T9] : 2 Artistas 3D
+[Beatmapping 25 canciones] as [T10] lasts 45 days and is 30% completed
+[T10] starts after [T6]'s end
+[T10] is colored in Plum
+note right of [T10] : 3 Level Designers
+[Sistema multijugador online] as [T11] lasts 30 days and is 25% completed
+[T11] starts after [T7]'s end
+[T11] is colored in LightGreen
+note right of [T11] : 2 Network Programmers
+[Efectos visuales partículas] as [T12] lasts 20 days and is 35% completed
+[T12] starts after [T9]'s start
+[T12] is colored in Khaki
+note right of [T12] : 1 VFX Artist
+[Integración audio 3D] as [T13] lasts 18 days and is 20% completed
+[T13] starts after [T10]'s start
+[T13] is colored in Plum
+note right of [T13] : Audio Engineer
+[Implementación monetización] as [T14] lasts 15 days and is 15% completed
+[T14] starts after [T11]'s start
+[T14] is colored in LightGreen
+note right of [T14] : 1 Mobile Developer
+
+-- Fase 3: Postproducción --
+[Testing multiplataforma] as [T15] lasts 25 days and is 0% completed
+[T15] starts after [T12]'s end
+[T15] starts after [T13]'s end
+[T15] starts after [T14]'s end
+[T15] is colored in LightSalmon
+note right of [T15] : 4 QA Testers
+[Optimización rendimiento] as [T16] lasts 20 days and is 0% completed
+[T16] starts after [T15]'s start
+[T16] is colored in LightSalmon
+note right of [T16] : 2 Performance Engineers
+[Corrección bugs críticos] as [T17] lasts 15 days and is 0% completed
+[T17] starts after [T15]'s end
+[T17] is colored in LightSalmon
+note right of [T17] : Todo el equipo
+[Campaña marketing streamers] as [T18] lasts 35 days and is 0% completed
+[T18] starts after [T16]'s start
+[T18] is colored in LightSalmon
+note right of [T18] : Marketing Team
+[Preparación tiendas digitales] as [T19] lasts 12 days and is 0% completed
+[T19] starts after [T17]'s end
+[T19] is colored in LightSalmon
+note right of [T19] : Publishing Team
+[Lanzamiento Day-1 patch] as [T20] lasts 3 days and is 0% completed
+[T20] starts after [T19]'s end
+[T20] is colored in LightSalmon
+note right of [T20] : Hotfix Team
+
+@endgantt

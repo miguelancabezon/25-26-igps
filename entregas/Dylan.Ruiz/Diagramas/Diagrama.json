@@ -1,0 +1,123 @@
+{
+  "GeneracionDeMundo": [
+    {
+      "Id": 1,
+      "Nombre": "MundoInicial",
+      "Bioma": 1,
+      "CoordenadasInicio": {"X": 0, "Y": 0, "Z": 0},
+      "FechaGeneracion": "2025-11-09",
+      "Estado": "Activo"
+    }
+  ],
+  "Biomas": [
+    {
+      "Id": 1,
+      "Nombre": "Bosque",
+      "Descripcion": "Un bioma verde y frondoso, lleno de árboles y vida.",
+      "Temperatura": "Media",
+      "Animales": [1, 2],
+      "Vegetacion": ["ArbolDeRoble", "Pasto"]
+    },
+    {
+      "Id": 2,
+      "Nombre": "Desierto",
+      "Descripcion": "Extensas dunas de arena y poca vegetación.",
+      "Temperatura": "Alta",
+      "Animales": [3],
+      "Vegetacion": ["Cactus", "Piedra"]
+    },
+    {
+      "Id": 3,
+      "Nombre": "Montaña",
+      "Descripcion": "Terreno rocoso, frío y escarpado.",
+      "Temperatura": "Baja",
+      "Animales": [4],
+      "Vegetacion": ["Pino", "Musgo"]
+    }
+  ],
+  "Animales": [
+    {
+      "Id": 1,
+      "Nombre": "Ciervo",
+      "Bioma": 1,
+      "Salud": 100,
+      "Comida": ["HojaDeArbol", "Baya"],
+      "Velocidad": 10,
+      "Agresivo": false
+    },
+    {
+      "Id": 2,
+      "Nombre": "Lobo",
+      "Bioma": 1,
+      "Salud": 120,
+      "Comida": ["CarneDeCiervo"],
+      "Velocidad": 12,
+      "Agresivo": true
+    },
+    {
+      "Id": 3,
+      "Nombre": "Escorpión",
+      "Bioma": 2,
+      "Salud": 50,
+      "Comida": ["Insectos"],
+      "Velocidad": 8,
+      "Agresivo": true
+    },
+    {
+      "Id": 4,
+      "Nombre": "CabraMontes",
+      "Bioma": 3,
+      "Salud": 80,
+      "Comida": ["Pasto", "Rocas"],
+      "Velocidad": 15,
+      "Agresivo": false
+    }
+  ],
+  "Objetos": [
+    {
+      "Id": 1,
+      "Nombre": "PicoDePiedra",
+      "Tipo": "Herramienta",
+      "Durabilidad": 50,
+      "Material": "Piedra",
+      "Descripcion": "Un pico básico para recolectar minerales."
+    },
+    {
+      "Id": 2,
+      "Nombre": "Antorcha",
+      "Tipo": "Herramienta",
+      "Durabilidad": 10,
+      "Material": "Madera, Carbón",
+      "Descripcion": "Proporciona luz en la oscuridad."
+    },
+    {
+      "Id": 3,
+      "Nombre": "CarneDeCiervo",
+      "Tipo": "Alimento",
+      "ValorNutricional": 30,
+      "Descripcion": "Carne cocida de ciervo, recupera salud."
+    }
+  ],
+  "Jugador": [
+    {
+      "Id": 1,
+      "Nombre": "Jugador1",
+      "BiomaActual": 1,
+      "Inventario": [1, 2, 3],
+      "Salud": 100,
+      "Nivel": 5,
+      "Coordenadas": {"X": 100, "Y": 70, "Z": 0},
+      "FechaUltimaConexion": "2025-11-09T14:30:00"
+    },
+    {
+      "Id": 2,
+      "Nombre": "Jugador2",
+      "BiomaActual": 3,
+      "Inventario": [2, 3],
+      "Salud": 80,
+      "Nivel": 3,
+      "Coordenadas": {"X": 200, "Y": 100, "Z": 20},
+      "FechaUltimaConexion": "2025-11-08T10:00:00"
+    }
+  ]
+}

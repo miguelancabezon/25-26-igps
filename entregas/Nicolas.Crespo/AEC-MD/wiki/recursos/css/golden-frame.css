@@ -1,0 +1,70 @@
+/* Golden frame with medieval design */
+.golden-frame {
+    position: relative;
+    margin: 20px;
+    padding: 30px;
+    border: 2px solid #c7a355;
+    background: linear-gradient(to bottom right, rgba(199, 163, 85, 0.1), rgba(142, 116, 60, 0.1));
+}
+
+.golden-frame::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 1px solid #95783c;
+    background: 
+        linear-gradient(45deg, transparent 49%, #95783c 49%, #95783c 51%, transparent 51%) 0 0/20px 20px,
+        linear-gradient(-45deg, transparent 49%, #95783c 49%, #95783c 51%, transparent 51%) 0 0/20px 20px;
+    pointer-events: none;
+}
+
+/* Corner decorations */
+.golden-frame::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border: 1px solid #c7a355;
+    clip-path: polygon(
+        0 15px, 15px 15px, 15px 0,
+        calc(100% - 15px) 0, calc(100% - 15px) 15px, 100% 15px,
+        100% calc(100% - 15px), calc(100% - 15px) calc(100% - 15px), calc(100% - 15px) 100%,
+        15px 100%, 15px calc(100% - 15px), 0 calc(100% - 15px)
+    );
+    pointer-events: none;
+}
+
+/* Heading style */
+.golden-frame h1, 
+.golden-frame h2 {
+    color: #c7a355;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px rgba(199, 163, 85, 0.5);
+}
+
+/* Text content */
+.golden-frame p {
+    color: #d4c4a1;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Links */
+.golden-frame a {
+    color: #c7a355;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.golden-frame a:hover {
+    color: #95783c;
+    text-shadow: 0 0 5px rgba(199, 163, 85, 0.5);
+}

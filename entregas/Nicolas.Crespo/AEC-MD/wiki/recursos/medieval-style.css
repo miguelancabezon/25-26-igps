@@ -1,0 +1,163 @@
+/* Fuentes medievales importadas */
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* Variables de diseño Elden Ring */
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #c7a355;
+    --background-primary: #0d0d0d;
+    --background-secondary: #1d1d1d;
+    --border-color: #c7a355;
+    --accent-color: #8b733f;
+    --text-primary: #d4d4d4;
+    --text-secondary: #c7a355;
+    --shadow-color: rgba(199, 163, 85, 0.2);
+    --rune-glow: rgba(199, 163, 85, 0.1);
+}
+
+/* Estilo general */
+body {
+  background-color: var(--parchment-color);
+  color: var(--ink-color);
+  font-family: 'Crimson Text', Georgia, serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 2rem;
+  background-image: url('../imagenes/backgrounds/parchment.png');
+}
+
+/* Contenedor principal con bordes ornamentales */
+.medieval-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 2px solid var(--border-color);
+  border-image: url('../imagenes/backgrounds/border.png') 30 stretch;
+  position: relative;
+}
+
+/* Títulos estilizados */
+h1 {
+  color: var(--accent-color);
+  font-family: 'UnifrakturMaguntia', 'Crimson Text', serif;
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+}
+
+h2 {
+  color: var(--accent-color);
+  font-family: 'MedievalSharp', 'Crimson Text', serif;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+/* Enlaces estilizados */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #600;
+  text-decoration: underline;
+}
+
+/* Tablas medievales */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  background-color: rgba(244, 228, 188, 0.7);
+}
+
+th {
+  background-color: var(--accent-color);
+  color: var(--parchment-color);
+  padding: 1rem;
+  text-align: left;
+}
+
+td {
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+}
+
+/* Separadores ornamentales */
+.medieval-divider {
+  height: 30px;
+  background-image: url('../imagenes/backgrounds/divider.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 2rem 0;
+}
+
+/* Bloques de cita estilizados */
+blockquote {
+  border-left: 4px solid var(--accent-color);
+  margin: 1.5rem 0;
+  padding: 1rem 2rem;
+  background-color: rgba(244, 228, 188, 0.5);
+  position: relative;
+}
+
+blockquote::before {
+  content: '"';
+  font-size: 4em;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  color: var(--accent-color);
+  opacity: 0.2;
+}
+
+/* Galerías de imágenes */
+.medieval-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.medieval-gallery img {
+  width: 100%;
+  border: 8px solid var(--border-color);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Botones medievales */
+.medieval-button {
+  background-color: var(--accent-color);
+  color: var(--parchment-color);
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--border-color);
+  cursor: pointer;
+  font-family: 'MedievalSharp', 'Crimson Text', serif;
+  transition: all 0.3s ease;
+}
+
+.medieval-button:hover {
+  background-color: var(--border-color);
+  transform: translateY(-2px);
+}
+
+/* Pie de página */
+.medieval-footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--border-color);
+  font-size: 0.9em;
+}
+
+/* Iconos medievales */
+.medieval-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}

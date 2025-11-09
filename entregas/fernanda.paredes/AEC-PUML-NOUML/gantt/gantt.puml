@@ -1,0 +1,64 @@
+' @startgantt
+title Cronograma de desarrollo - EvoMundi
+skinparam ganttArrowColor black
+
+section 🧠 Preproducción
+[Fase 1: Preproducción] lasts 15 days and is 100% completed
+[Diseño de mecánicas] lasts 5 days and is colored green
+[Arte inicial] lasts 5 days and is colored blue
+[Documentación] lasts 5 days and is colored orange
+[Diseño de mecánicas] -> [Arte inicial]
+[Arte inicial] -> [Documentación]
+milestone [Hito 1: Prototipo] is 80% completed
+[Fase 1: Preproducción] -> [Hito 1: Prototipo]
+
+section ⚙️ Producción
+[Fase 2: Producción] lasts 40 days and is 50% completed
+[Programación base] lasts 10 days and is colored red
+[IA básica] lasts 5 days and is colored red
+[Modelado 3D] lasts 10 days and is colored blue
+[Animaciones] lasts 10 days and is colored blue
+[Sonido] lasts 5 days and is colored orange
+[Interfaz UI] lasts 5 days and is colored green
+[Testeo inicial] lasts 5 days and is colored purple
+[Programación base] -> [IA básica]
+[IA básica] -> [Modelado 3D]
+[Modelado 3D] -> [Animaciones]
+[Animaciones] -> [Sonido]
+[Sonido] -> [Interfaz UI]
+[Interfaz UI] -> [Testeo inicial]
+[Hito 1: Prototipo] -> [Fase 2: Producción]
+milestone [Hito 2: Beta] is 20% completed
+[Testeo inicial] -> [Hito 2: Beta]
+
+section 🚀 Postproducción
+[Fase 3: Postproducción] lasts 10 days and is 0% completed
+[Testeo avanzado] lasts 5 days and is colored purple
+[Optimización] lasts 5 days and is colored red
+[Marketing] lasts 5 days and is colored orange
+[Preparar lanzamiento] lasts 5 days and is colored green
+[Soporte post-lanzamiento] lasts 5 days and is colored purple
+[Testeo avanzado] -> [Optimización]
+[Optimización] -> [Preparar lanzamiento]
+[Preparar lanzamiento] -> [Marketing]
+[Marketing] -> [Soporte post-lanzamiento]
+[Hito 2: Beta] -> [Fase 3: Postproducción]
+milestone [Hito 3: Versión 1.0] is 0% completed
+[Soporte post-lanzamiento] -> [Hito 3: Versión 1.0]
+
+note right of [Fase 1: Preproducción]
+Equipo: 3 diseñadores, 2 artistas
+Recursos: PC, software de diseño
+end note
+
+note right of [Fase 2: Producción]
+Equipo: 5 programadores, 3 artistas, 2 testers
+Recursos: servidores, motores gráficos
+end note
+
+note right of [Fase 3: Postproducción]
+Equipo: 2 soporte, 1 marketing
+Recursos: web, redes sociales
+end note
+
+@endgantt

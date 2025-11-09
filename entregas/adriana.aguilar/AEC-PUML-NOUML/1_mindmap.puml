@@ -1,0 +1,105 @@
+@startmindmap
+<style>
+mindmapDiagram {
+  node {
+    BackgroundColor lightGray
+  }
+  :depth(0) {
+    BackgroundColor #D35400
+    FontColor white
+    FontSize 18
+  }
+  :depth(1) {
+    BackgroundColor #3498DB
+    FontColor white
+    FontSize 14
+  }
+}
+</style>
+
+* <&home> **PicoHelado**\nJuego Survival
+left side
+** <&wrench> **Mecánicas Centrales**
+***[#27AE60] <&hammer> Crafteo y Recolección
+****[#58D68D] Tipos de Recursos
+***** Madera 🌲
+***** Piedra 🪨
+***** Fibra 🌾
+***** Minerales ⛏️
+***** Pieles 🦌
+****[#58D68D] Estaciones de Crafteo
+***** Hoguera 🔥
+***** Banco de trabajo
+***** Forja 🔨
+***[#E74C3C] <&shield> Construcción de Bases
+****[#EC7063] Sistema modular
+***** Cimientos
+***** Paredes 🧱
+***** Techos
+****[#EC7063] Propósito
+***** Refugio 🏠
+***** Almacenamiento 📦
+***** Defensa 🛡️
+***[#F39C12] <&fire> Combate y Peligros
+****[#F8C471] Fauna Hostil
+***** Lobos 🐺
+***** Osos 🐻
+****[#F8C471] Fauna Pasiva
+***** Ciervos 🦌
+***** Conejos 🐰
+****[#F8C471] Armas
+***** Cuerpo a cuerpo ⚔️
+***** A distancia 🏹
+
+right side
+** <&person> **Sistemas del Jugador**
+***[#2ECC71] <&heart> Estadísticas Vitales
+****[#58D68D] Salud ❤️
+****[#58D68D] Hambre 🍖
+****[#58D68D] Sed 💧
+****[#58D68D] Temperatura 🌡️
+****[#58D68D] Energía ⚡
+***[#3498DB] <&briefcase> Inventario
+****[#5DADE2] Hotbar/Acceso Rápido
+****[#5DADE2] Gestión de peso
+****[#5DADE2] Organización por tipo
+***[#9B59B6] <&bar-chart> Progreso
+****[#BB8FCE] Árbol de habilidades
+****[#BB8FCE] Desbloqueo de recetas
+****[#BB8FCE] Logros 🏆
+
+** <&globe> **El Mundo**
+***[#1ABC9C] <&map-marker> Exploración
+****[#48C9B0] Biomas
+***** Tundra ❄️
+***** Bosque nevado 🌲
+***** Glaciar 🧊
+***** Montañas ⛰️
+****[#48C9B0] Puntos de Interés
+***** Cuevas 🕳️
+***** Cabañas abandonadas 🏚️
+***** Refugios militares
+***[#5499C7] <&cloud> Entorno Dinámico
+****[#7FB3D5] Ciclo Día/Noche ☀️🌙
+****[#7FB3D5] Clima
+***** Ventiscas 🌨️
+***** Niebla
+***** Nieve pesada
+
+** <&cog> **Aspectos Técnicos**
+***[#E67E22] <&code> IA y Comportamiento
+****[#F39C12] Comportamiento animal
+***** Caza 🎯
+***** Huida 🏃
+***** Manada
+****[#F39C12] Pathfinding avanzado
+***[#C0392B] <&monitor> Renderizado
+****[#E74C3C] Mundo 3D
+****[#E74C3C] Sistema de partículas
+****[#E74C3C] VFX (Nieve, fuego)
+***[#8E44AD] <&hard-drive> Backend
+****[#A569BD] Guardado de estado
+****[#A569BD] Sistema de físicas 🧊
+****[#A569BD] Multijugador Co-op 👥
+
+@endmindmap

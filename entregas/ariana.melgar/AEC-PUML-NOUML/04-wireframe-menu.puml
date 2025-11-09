@@ -1,0 +1,130 @@
+@startuml
+title Pastel Notes - Menu Principal
+
+class "PASTEL NOTES" as main {
+  Usuario: ariana.melgar
+  Nivel: 18
+  XP: 8,450 / 10,000 (85%)
+}
+
+class "MODO DE JUEGO" as gamemode {
+  **Modo Historia**
+  Completa la historia de Melody
+  Progreso: 7/10 niveles
+  --
+  **Modo Libre**
+  Juega cualquier canción desbloqueada
+  30 canciones disponibles
+  --
+  **Desafío Diario**
+  Completa el reto del día
+  Recompensa: 100 gemas
+}
+
+class "PERSONAJE: Melody" as character {
+  Habilidad: Bonus de Combo
+  Nivel Amistad: 8/10
+  --
+  **Estadísticas**
+  Canciones favoritas: 12
+  Partidas jugadas: 89
+}
+
+class "ESCENARIO" as stage {
+  **Escenario Actual**
+  Jardín de Flores ✓
+  --
+  **Disponibles**
+  • Cielo Estrellado
+  • Café Acogedor
+  • Playa Atardecer 🔒
+  --
+  Un jardín mágico lleno de flores
+}
+
+class "TOP CANCIONES" as topsongs {
+  1. Butterfly Dreams | Luna Rose | SSS
+  2. Starlight Melody | Pastel Harmony | SS
+  3. Morning Coffee | Café Vibes | S
+  4. Sweet Dreams | Dream Pop | A
+  5. Rainbow Sky | Color Band | B
+}
+
+class "LOGROS" as achievements {
+  ✓ Primera Canción
+  ✓ Combo Master
+  ✓ 10 Canciones
+  ☐ Perfecta Melodía
+  --
+  12/35 logros desbloqueados
+}
+
+class "CANCIÓN DESTACADA: Butterfly Dreams" as featured {
+  **Luna Rose**
+  BPM: 128 | Duración: 3:24
+  Género: Pop
+  --
+  **Dificultades**
+  Easy (3★)
+  Normal (5★) ✓
+  Hard (7★)
+}
+
+class "TU MEJOR PUNTUACIÓN" as bestscore {
+  Dificultad: Normal
+  Puntos: 156,200
+  Combo Max: 287
+  Precisión: 94.5%
+  Ranking: SSS
+}
+
+class "RANKING GLOBAL" as ranking {
+  1. melody_queen | 198,450
+  2. rhythm_star | 187,920
+  3. music_lover | 176,340
+  ...
+  47. ariana.melgar | 156,200
+}
+
+class "RECURSOS" as resources {
+  Gemas: 2,580 💎
+  Monedas: 8,750 🪙
+  Energía: 45/50 ⚡
+}
+
+class "EVENTOS ACTIVOS" as events {
+  **Semana de Canciones Pop**
+  Doble XP en canciones Pop
+  Termina en: 2 días
+  --
+  **Desafío Semanal**
+  Completa 15 canciones
+  Progreso: 8/15
+}
+
+class "NOVEDADES" as news {
+  **3 Canciones Nuevas!**
+  Ya disponibles en la tienda
+  --
+  **Nuevo Personaje: Sakura**
+  Desbloquéala en nivel 25
+}
+
+main -- gamemode
+main -- character
+main -- stage
+main -- topsongs
+main -- achievements
+main -- featured
+main -- bestscore
+main -- ranking
+main -- resources
+main -- events
+main -- news
+
+note bottom of main
+  Versión 1.0.0 | Conexión: Estable
+  2025 Pastel Notes by Ariana Melgar
+end note
+
+@enduml

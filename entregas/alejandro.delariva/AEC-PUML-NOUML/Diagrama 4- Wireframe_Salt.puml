@@ -1,0 +1,37 @@
+@startsalt
+{
+{ "TopBar" | ★ Vanguardia FPS | [Perfil] [Tienda] [Notificaciones ⓘ] [Ajustes] [Salir] }
+
+{T
+ + "Inicio" | "Partidas" | "Arsenal" | "Ajustes"
+}
+
+{ "Hero" |
+  [ Iniciar partida ▶ ]  [ Unirse a amigo ⏵ ]  [ Entrenamiento ]  [ Eventos ]  [ Recompensas ★ ]
+}
+
+{ "Filtros" |
+  [x] Crossplay    [ ] Ranked    [ Actualizar lista ]    Mapa: [__________]  [ Buscar ]
+}
+
+{ "Tabla de partidas" |
+  {# | ID | Mapa | Modo | Jugadores | Ping | Acción }
+  | { 1012 | Puerto Amanecer | 5v5 Táctico | 8/10 | 42 | [ Unirse ] }
+  | { 1045 | Fábrica Alfa   | Deathmatch  | 10/12 | 55 | [ Unirse ] }
+  | { 1078 | Desierto Echo  | Cooperativo | 3/4  | 38 | [ Unirse ] }
+  | { 1102 | Ciudad Nova    | 5v5 Táctico | 6/10 | 60 | [ Espectador ] }
+}
+
+{ "Paginación" | [ ◀ Prev ]  Página 1 de 9  [ Next ▶ ] }
+
+{ "Arsenal (resumen)" |
+  Primaria: AssaultRifle (lvl 7)  | [ Editar ]
+  Secundaria: Pistol-9 | [ Editar ]
+  Granada: Frag | [ Cambiar ]
+}
+
+{ "Estado del servidor" |
+  Región: EU-Central  | Salud: ✔ Estable | Jugadores: 3812/5000
+}
+}
+@endsalt

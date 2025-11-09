@@ -1,0 +1,56 @@
+
+@startsalt
+
+title Resident Povilion 1 Configuración
+
+
+{
+{ <b>General</b>
+++ Graficos
+++ Idioma y Región 
+++ Accesibilidad
+} |     
+.
+---
+.
+{
+<b>Graficos</b>
+.
+Preset : | ^Maximos^
+Claro
+(X)Oscuro
+FPS : | ^120 FPS^
+Resolución : | ^1920x1080^
+Calidad de texturas : | ^Alta^
+
+}
+.
+
+---
+
+.
+<b>Idioma y Región</b>
+.
+{
+Idioma: | ^Español^
+Formato fecha del reloj: | ^DD/MM/YYYY^
+Estilo del reloj : | ^Azul^
+}
+.
+
+---
+
+.
+<b>Accesibilidad</b>
+.
+^Modo alto contraste^
+^Aumentar tamaño de fuente^
+^Modo Sordo^
+^Lectura en voz alta^
+^Audio Alta Definicion^
+.
+.
+[Restablecer a valores por defecto]
+}
+}
+@endsalt

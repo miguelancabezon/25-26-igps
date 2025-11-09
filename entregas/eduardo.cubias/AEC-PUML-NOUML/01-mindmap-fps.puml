@@ -1,0 +1,129 @@
+@startmindmap
+title 🎮 FPS Game - Planificación del Proyecto
+
+<style>
+mindmapDiagram {
+  .gameplay {
+    BackgroundColor #FF6B6B
+    LineColor #C92A2A
+  }
+  .technical {
+    BackgroundColor #4ECDC4
+    LineColor #0C8599
+  }
+  .art {
+    BackgroundColor #FFE66D
+    LineColor #F4A261
+  }
+  .multiplayer {
+    BackgroundColor #95E1D3
+    LineColor #38A3A5
+  }
+  .progression {
+    BackgroundColor #C77DFF
+    LineColor #9D4EDD
+  }
+}
+</style>
+
+* <:1F3AF:> FPS Táctico Competitivo
+
+left side
+
+**[#FF6B6B] <:1F3AE:> Mecánicas de Juego
+***[#FF8787] Sistema de Armas
+****[#FFA8A8] Rifles de Asalto
+*****_ AK-47, M4A1, SCAR
+****[#FFA8A8] Francotiradores
+*****_ AWP, Barrett, Dragunov
+****[#FFA8A8] SMGs & Escopetas
+*****_ MP5, UMP, Benelli M4
+***[#FF8787] Movimiento
+****[#FFA8A8] Sprint & Slide
+****[#FFA8A8] Vault & Climb
+****[#FFA8A8] Crouch & Prone
+***[#FF8787] Mecánicas Tácticas
+****[#FFA8A8] Peeking System
+****[#FFA8A8] Lean izq/der
+****[#FFA8A8] Breach & Clear
+
+**[#4ECDC4] <:1F4BB:> Arquitectura Técnica
+***[#74D7CE] Motor de Juego
+****[#A0E7E0] Unreal Engine 5
+*****_ Nanite, Lumen
+****[#A0E7E0] Networking
+*****_ Dedicated Servers
+*****_ Anti-cheat (EAC)
+***[#74D7CE] Optimización
+****[#A0E7E0] 60 FPS mínimo
+****[#A0E7E0] Ray Tracing opcional
+****[#A0E7E0] DLSS/FSR support
+***[#74D7CE] Plataformas
+****[#A0E7E0] PC (Steam, Epic)
+****[#A0E7E0] Consoles (PS5, Xbox)
+****[#A0E7E0] Cross-play
+
+**[#FFE66D] <:1F3A8:> Arte & Diseño Visual
+***[#FFE999] Estilo Artístico
+****[#FFF0B8] Realista Táctico
+****[#FFF0B8] Grounded Military
+****[#FFF0B8] Dark & Gritty
+***[#FFE999] Mapas
+****[#FFF0B8] Urbanos
+*****_ Abandoned City
+*****_ Metro Station
+****[#FFF0B8] Industriales
+*****_ Factory Complex
+*****_ Oil Refinery
+****[#FFF0B8] Militares
+*****_ Army Base
+*****_ Desert Compound
+***[#FFE999] Personajes
+****[#FFF0B8] Operators (12 únicos)
+****[#FFF0B8] Customización
+*****_ Skins, Camos
+*****_ Charms, Stickers
+
+right side
+
+**[#95E1D3] <:1F310:> Sistema Multijugador
+***[#B3EBE4] Modos de Juego
+****[#CCEEE8] Competitive
+*****_ 5v5 Ranked
+*****_ Bomb Defusal
+****[#CCEEE8] Casual
+*****_ Team Deathmatch
+*****_ Domination
+****[#CCEEE8] Especiales
+*****_ Gun Game
+*****_ Infected
+***[#B3EBE4] Matchmaking
+****[#CCEEE8] Skill-based MM
+****[#CCEEE8] Party System
+****[#CCEEE8] Region Selection
+***[#B3EBE4] Comunicación
+****[#CCEEE8] Voice Chat
+****[#CCEEE8] Ping System
+****[#CCEEE8] Chat de Equipo
+
+**[#C77DFF] <:1F4C8:> Progresión & Monetización
+***[#D89FF3] Sistema de Niveles
+****[#E5B8F9] Player Level (1-100)
+****[#E5B8F9] Weapon Mastery
+****[#E5B8F9] Operator Ranks
+***[#D89FF3] Recompensas
+****[#E5B8F9] Battle Pass
+*****_ 100 tiers
+*****_ Free + Premium
+****[#E5B8F9] Daily Missions
+****[#E5B8F9] Weekly Challenges
+***[#D89FF3] Tienda
+****[#E5B8F9] Operator Bundles
+****[#E5B8F9] Weapon Skins
+****[#E5B8F9] Emotes & Sprays
+***[#D89FF3] Monetización
+****[#E5B8F9] Premium Currency
+****[#E5B8F9] Cosmetics Only
+****[#E5B8F9] No Pay-to-Win
+
+@endmindmap
