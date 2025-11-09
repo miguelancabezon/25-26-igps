@@ -1,0 +1,86 @@
+@startmindmap
+' ===== Estilos y colores =====
+skinparam BackgroundColor #1e1f22
+skinparam Mindmap {
+  ArrowColor white
+  LineColor white
+  LegendBackgroundColor #2b2d31
+  LegendBorderColor #9aa0a6
+}
+' Estilos por profundidad
+skinparam defaultTextAlignment left
+<style>
+mindmapDiagram {
+  .lvl0 {
+    BackgroundColor #f9f871
+    BorderColor #222
+    FontStyle bold
+  }
+  .lvl1a {
+    BackgroundColor #8ecae6
+  }
+  .lvl1b {
+    BackgroundColor #90be6d
+  }
+  .lvl1c {
+    BackgroundColor #ffafcc
+  }
+  .lvl1d {
+    BackgroundColor #ffd166
+  }
+  .lvl2 {
+    BackgroundColor #f4a261
+  }
+  .lvl3 {
+    BackgroundColor #cdb4db
+  }
+}
+</style>
+
+* <&globe> 🍖 Survival — "Frozen Coast" <<lvl0>> [#f9f871]
+' Lado derecho
+** > 🔧 Mecánicas <<lvl1a>> [#8ecae6]
+*** 🥶 Supervivencia (frío, hambre, sed) <<lvl2>>
+**** Capas de ropa, hipotermia, refugio <<lvl3>>
+*** 🛠️ Crafteo y recetas <<lvl2>>
+**** Banco de trabajo, rarezas, calidad <<lvl3>>
+*** ⚔️ Combate y sigilo <<lvl2>>
+**** Fauna hostil, trampas, durabilidad <<lvl3>>
+*** 👣 Progresión <<lvl2>>
+**** Perks por habilidad y uso <<lvl3>>
+
+** > 🌍 Mundo <<lvl1b>> [#90be6d]
+*** Biomas costeros nevados <<lvl2>>
+**** Acantilados, cuevas de hielo, bosques de coníferas <<lvl3>>
+*** Ciclos y clima dinámico <<lvl2>>
+**** Tormentas, ventiscas, mareas <<lvl3>>
+*** Recursos escasos <<lvl2>>
+**** Pesca en hielo, setas, escoria metálica <<lvl3>>
+
+' Lado izquierdo
+** < 🎨 Arte & Audio <<lvl1c>> [#ffafcc]
+*** Estética low-temp, materiales naturales <<lvl2>>
+**** Paleta fría y contraste cálido en UI <<lvl3>>
+*** Sonido diegético <<lvl2>>
+**** Viento, mar, crujidos, latido en frío extremo <<lvl3>>
+
+** < 🧪 Pruebas & QA <<lvl1d>> [#ffd166]
+*** Test de equilibrio (loot/consumo) <<lvl2>>
+**** Telemetría de supervivencia 7/30 días <<lvl3>>
+*** Rendimiento y estabilidad <<lvl2>>
+**** Consolas/PC, perfiles térmicos GPU/CPU <<lvl3>>
+
+** > 💻 Tech & Online <<lvl1a>> [#8ecae6]
+*** Guardados y persistencia <<lvl2>>
+**** Semillas de mapa, slots nube <<lvl3>>
+*** Servidores (coop opcional) <<lvl2>>
+**** 4 jugadores, P2P con relé anti-NAT <<lvl3>>
+*** Modding controlado <<lvl2>>
+**** Paquetes verificados y sandbox <<lvl3>>
+
+** < 💼 Producción & Marketing <<lvl1b>> [#90be6d]
+*** Roadmap público, demo Steam <<lvl2>>
+**** Wishlist, playtest cerrado <<lvl3>>
+*** Accesibilidad <<lvl2>>
+**** Daltonismo, subtítulos, remapeo <<lvl3>>
+@endmindmap
