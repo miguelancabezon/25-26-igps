@@ -1,0 +1,79 @@
+@startgantt
+title Desarrollo Videojuego City Builder
+printscale daily
+
+Project starts 2025-01-13
+
+-- Fase 1: Preproducción (4 semanas) --
+[Definir visión del proyecto] lasts 3 days
+[Benchmark de mercado] lasts 4 days and starts at [Definir visión del proyecto]'s end
+[Documento GDD inicial] lasts 5 days and starts at [Benchmark de mercado]'s end
+[Plan técnico y arquitectura] lasts 6 days and starts at [Documento GDD inicial]'s end
+[Roadmap de arte y estilo] lasts 5 days and starts at [Plan técnico y arquitectura]'s end
+[Milestone 1: Prototipo] happens at [Roadmap de arte y estilo]'s end
+
+[Definir visión del proyecto] is colored in LightBlue
+[Benchmark de mercado] is colored in LightBlue
+[Documento GDD inicial] is colored in LightBlue
+[Plan técnico y arquitectura] is colored in LightBlue
+[Roadmap de arte y estilo] is colored in LightBlue
+
+[Definir visión del proyecto] is 100% completed
+[Benchmark de mercado] is 100% completed
+[Documento GDD inicial] is 80% completed
+[Plan técnico y arquitectura] is 70% completed
+[Roadmap de arte y estilo] is 50% completed
+
+-- Fase 2: Producción (12 semanas) --
+[Sistema de construcción] lasts 10 days and starts at [Milestone 1: Prototipo]'s end
+[Sistema de construcción] is colored in Green
+[Sistema de construcción] is 40% completed
+
+[Simulación de población] lasts 12 days and starts at [Sistema de construcción]'s end
+[Simulación de población] is colored in Green
+[Simulación de población] is 25% completed
+
+[Economía municipal] lasts 10 days and starts at [Simulación de población]'s end
+[Economía municipal] is colored in Blue
+[Economía municipal] is 20% completed
+
+[Red de tráfico] lasts 8 days and starts at [Economía municipal]'s end
+[Red de tráfico] is colored in Blue
+[Red de tráfico] is 15% completed
+
+[Arte modular de edificios] lasts 12 days and starts at [Milestone 1: Prototipo]'s end
+[Arte modular de edificios] is colored in Orange
+[Arte modular de edificios] is 35% completed
+
+[UI/UX inicial] lasts 7 days and starts at [Arte modular de edificios]'s end
+[UI/UX inicial] is colored in Orange
+[UI/UX inicial] is 20% completed
+
+[Milestone 2: Beta] happens at [UI/UX inicial]'s end
+
+-- Fase 3: Postproducción (6 semanas) --
+[Optimización y rendimiento] lasts 10 days and starts at [Milestone 2: Beta]'s end
+[Optimización y rendimiento] is colored in Gold
+[Optimización y rendimiento] is 10% completed
+
+[Balance de juego] lasts 7 days and starts at [Optimización y rendimiento]'s end
+[Balance de juego] is colored in Gold
+
+[QA masivo] lasts 12 days and starts at [Balance de juego]'s end
+[QA masivo] is colored in Red
+
+[Milestone 3: v1.0] happens at [QA masivo]'s end
+
+-- Fase 4: Lanzamiento y Soporte (2 semanas) --
+[Campaña de marketing] lasts 5 days and starts at [Milestone 3: v1.0]'s end
+[Campaña de marketing] is colored in Violet
+
+[Lanzamiento en plataformas] lasts 2 days and starts at [Campaña de marketing]'s end
+[Lanzamiento en plataformas] is colored in Violet
+
+[Post-lanzamiento / Soporte] lasts 5 days and starts at [Lanzamiento en plataformas]'s end
+[Post-lanzamiento / Soporte] is colored in Gray
+
+[Milestone 4: Release] happens at [Post-lanzamiento / Soporte]'s end
+
+@endgantt
