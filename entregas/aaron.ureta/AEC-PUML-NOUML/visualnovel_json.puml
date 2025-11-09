@@ -1,15 +1,14 @@
 @startjson
-' --- Estilos con colores para clases y tipos (Requisito) ---
 <style>
 jsonDiagram {
-  .class-entity { BackgroundColor #A7F3D0; FontColor #065F46 }
-  .class-system { BackgroundColor #93C5FD; FontColor #1E40AF }
-  .class-config { BackgroundColor #FEF08A; FontColor #B45309 }
-  .type-string { FontColor #DC2626 }
-  .type-number { FontColor #9333EA }
-  .type-boolean { FontColor #059669 }
-  .type-list { FontColor #F97316 }
-  .type-object { FontColor #475569 }
+  .class-entity { BackgroundColor #A7F3D0; FontColor #065F46 } ' Verde
+  .class-system { BackgroundColor #93C5FD; FontColor #1E40AF } ' Azul
+  .class-config { BackgroundColor #FEF08A; FontColor #B45309 } ' Amarillo
+  .type-string { FontColor #DC2626 } ' Rojo
+  .type-number { FontColor #9333EA } ' Violeta
+  .type-boolean { FontColor #059669 } ' Esmeralda
+  .type-list { FontColor #F97316 } ' Naranja
+  .type-object { FontColor #475569 } ' Gris Oscuro
 }
 </style>
 
@@ -38,7 +37,7 @@ jsonDiagram {
     "affinity": 50 as char_aff #type-number,
     "suspicion": 20 as char_susp #type-number,
     "tags": [ "protagonist", "ex-soldado" ] as char_tags #type-list,
-    "profile": { ' *** Objeto dentro de Objeto (Requisito) *** '
+    "profile": {
       "age": 28 as char_age #type-number,
       "traits": [ "pragmático", "callado" ] as char_traits #type-list,
       "spritePath": "sprites/dante_coat.png" as char_sprite #type-string

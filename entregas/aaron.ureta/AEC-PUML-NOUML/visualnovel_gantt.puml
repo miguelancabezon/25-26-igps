@@ -1,69 +1,61 @@
 @startgantt
-title Plan de proyecto - Visual Novel "Sombras de Hierro"
+title 📅 Plan de proyecto — Visual Novel "Sombras de Hierro"
 
-project starts 2025-01-20
-saturdays are closed
-sundays are closed
+Project starts the 2025-01-20
+saturday are closed
+sunday are closed
 
-' --- Definición de estilos ---
-<style>
-ganttDiagram {
-  task {
-    .preprod { BackgroundColor #FEF08A }
-    .prod-code { BackgroundColor #93C5FD }
-    .prod-art { BackgroundColor #A7F3D0 }
-    .postprod { BackgroundColor #FBCFE8 }
-    .milestone { BackgroundColor #475569; FontColor white }
-  }
-}
-</style>
-
+' ===================== FASE 1: PREPRODUCCIÓN =====================
 -- Fase 1 - Preproducción --
-[Pitch & alcance] as [PITCH] lasts 3 days #preprod
-[Biblia narrativa] as [BIB] lasts 5 days after [PITCH] #preprod
-[Mapa de rutas] as [MAP] lasts 5 days after [BIB] #preprod
-[Guion inicial] as [GUION] lasts 3 days after [MAP] #preprod
-[Plan técnico] as [TECH] lasts 2 days after [GUION] #preprod
-[Plan arte y audio] as [ART] lasts 2 days after [GUION] #preprod
+[Pitch & alcance] lasts 3 days
+[Biblia narrativa] lasts 5 days and starts after [Pitch & alcance]
+[Mapa de rutas] lasts 5 days and starts after [Biblia narrativa]
+[Guion inicial] lasts 3 days and starts after [Mapa de rutas]
+[Plan técnico] lasts 2 days and starts after [Guion inicial]
+[Plan arte y audio] lasts 2 days and starts after [Guion inicial]
 
-' Milestone 1
-[M1] happens at [TECH]'s end #milestone
-note bottom of [M1]
-  Prototipo jugable
+Milestone "🧩 Prototipo" happens at [Plan técnico]'s end
+note bottom of "🧩 Prototipo"
+Prototipo jugable listo
 end note
 
+' ===================== FASE 2: PRODUCCIÓN =====================
 -- Fase 2 - Producción --
-[Motor de diálogo] as [MOTOR] starts at [M1]'s end lasts 8 days #prod-code
-[Sistema variables] as [VAR] lasts 4 days after [MOTOR] #prod-code
-[Sistema guardado] as [SAVE] lasts 4 days after [VAR] #prod-code
-[Implementación escenas] as [ESC] lasts 6 days after [SAVE] #prod-code
+[Motor de diálogo] lasts 8 days and starts after [Plan técnico]
+[Sistema de variables] lasts 4 days and starts after [Motor de diálogo]
+[Sistema de guardado] lasts 4 days and starts after [Sistema de variables]
+[Implementación de escenas] lasts 6 days and starts after [Sistema de guardado]
 
-[Fondos urbanos] as [FOND] starts at [ART]'s end lasts 15 days #prod-art
-[Sprites personajes] as [SPR] lasts 12 days after [FOND] #prod-art
+[Fondos urbanos] lasts 15 days and starts after [Plan arte y audio]
+[Sprites de personajes] lasts 12 days and starts after [Fondos urbanos]
+[Música y SFX] lasts 12 days and starts after [Plan arte y audio]
 
-[Música y SFX] as [SFX] starts at [ART]'s end lasts 12 days #prod-art
+[Integración] lasts 12 days
+[Integración] starts at [Sprites de personajes]'s end
+[Integración] starts at [Música y SFX]'s end
 
-[Integración] as [INT] lasts 12 days after [SPR] and [SFX] #prod-code
-[Rutas alternativas] as [RALT] lasts 10 days after [INT] #prod-code
-[Pruebas internas] as [TEST] lasts 6 days after [RALT] #prod-code
+[Rutas alternativas] lasts 10 days and starts after [Integración]
+[Pruebas internas] lasts 6 days and starts after [Rutas alternativas]
 
-' Milestone 2
-[M2] happens at [TEST]'s end #milestone
-note bottom of [M2]
-  Beta completa
+Milestone "🧪 Beta" happens at [Pruebas internas]'s end
+note bottom of "🧪 Beta"
+Versión beta completa
 end note
 
+' ===================== FASE 3: POSTPRODUCCIÓN =====================
 -- Fase 3 - Postproducción --
-[QA y bugs] as [QA] starts at [M2]'s end lasts 8 days #postprod
-[Ajustes narrativos] as [ADJ] lasts 3 days after [QA] #postprod
-[Títulos y créditos] as [CRED] lasts 2 days after [ADJ] #postprod
-[Optimización] as [OPT] lasts 3 days after [CRED] #postprod
-[Marketing] as [MKT] lasts 4 days after [ADJ] #postprod
-[Publicación] as [PUB] lasts 2 days after [OPT] and [MKT] #postprod
+[QA y corrección de bugs] lasts 8 days and starts after "🧪 Beta"
+[Ajustes narrativos] lasts 3 days and starts after [QA y corrección de bugs]
+[Títulos y créditos] lasts 2 days and starts after [Ajustes narrativos]
+[Optimización] lasts 3 days and starts after [Títulos y créditos]
+[Marketing y trailer] lasts 4 days and starts after [Ajustes narrativos]
 
-' Milestone 3
-[M3] happens at [PUB]'s end #milestone
-note bottom of [M3]
-  Lanzamiento v1.0
+[Publicación] lasts 2 days
+[Publicación] starts at [Optimización]'s end
+[Publicación] starts at [Marketing y trailer]'s end
+
+Milestone "🚀 v1.0" happens at [Publicación]'s end
+note bottom of "🚀 v1.0"
+Lanzamiento oficial
 end note
 @endgantt
