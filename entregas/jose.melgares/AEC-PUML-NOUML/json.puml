@@ -1,0 +1,89 @@
+@startjson
+title AmeriCity - American City Builder
+<style>
+  .id {
+    BackgroundColor: yellow
+    FontWeight: bold
+  }
+  .name {
+    BackgroundColor: lightgreen
+    FontColor: #000
+    FontWeight: bold
+  }
+</style>
+#highlight * / * / * /"id" <<id>>
+#highlight * / * / * /"name" <<name>>
+#highlight * / * / * / "actions"
+{
+    "Genre": "City Builder",
+    "State": "concept",
+    "timestamp": "2025-11-10",
+    "config": {
+        "language": ["EN", "ES", "DE", "FR", "HU", "ZH", "XU"],
+        "version": "v 0.1.0",
+        "author": "Jose Melgares",
+        "framework": ".NET",
+        "platform": ["PC", "Switch", "Xbox 720", "Poly Station"],
+        "debugMode": true,
+        "released": false
+    },
+    "Buildings": {
+        "Commercial": [
+            {
+                "id": "comm-001",
+                "name": "Shopping Mall",
+                "actions": ["move", "rotate", "demolish", "build"],
+                "state": ["inUse", "abandoned", "inConstruction"],
+                "forSuburb": false,
+                "xTileSize": 20,
+                "yTileSize": 15,
+                "hasParkingLot": true
+            },
+            {
+                "id": "comm-002",
+                "name": "Restaurant",
+                "actions": ["move", "rotate", "demolish", "build"],
+                "state": ["inUse", "abandoned", "inConstruction"],
+                "forSuburb": true,
+                "xTileSize": 5,
+                "yTileSize": 5,
+                "hasParkingLot":true
+            }
+        ],
+        "Suburban": [
+            {
+                "id": "subu-001",
+                "name": "Suburban House",
+                "actions": ["move", "rotate", "demolish", "build"],
+                "state": ["inUse", "abandoned", "inConstruction"],
+                "forSuburb": true,
+                "xTileSize": 4,
+                "yTileSize": 4,
+                "hasParkingLot":false
+            }
+        ],
+        "Entertainment": [
+            {
+                "id": "ent-001",
+                "name": "Stadium ",
+                "actions": ["move", "rotate", "demolish", "build"],
+                "state": ["inUse", "abandoned", "inConstruction"],
+                "forSuburb": false,
+                "xTileSize": 50,
+                "yTileSize": 70,
+                "hasParkingLot":true
+            },
+            {
+                "id": "ent-002",
+                "name": "Park",
+                "actions": ["move", "rotate", "demolish", "build"],
+                "state": ["inUse", "abandoned", "inConstruction"],
+                "forSuburb": true,
+                "xTileSize": 10,
+                "yTileSize": 14,
+                "hasParkingLot":false
+            }
+        ]
+    }
+}
+@endjson
