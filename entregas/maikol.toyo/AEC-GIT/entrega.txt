@@ -1,0 +1,5 @@
+Primero, realicé un fork del repositorio original desde GitHub y lo cloné en mi ordenador utilizando el comando git clone. Una vez clonado, accedí a la carpeta del repositorio local. Dentro de la carpeta con mi nombre, creé otra con el nombre AEC-GIT, y en su interior añadí un archivo de texto simple, al cual hice un primer commit con el mensaje "docs: nuevo archivo". Posteriormente, subí ese commit a mi repositorio remoto.
+
+A continuación, creé una nueva rama llamada docs/modificaciones para realizar los cambios requeridos. En esa rama, edité el archivo de texto agregando esta descripción detallada de los pasos que he seguido y también inserté las capturas de pantalla correspondientes a cada etapa del proceso (como la creación del fork, el árbol de commits, y la creación de la pull request). Durante este proceso realicé varios commits , cada uno con mensajes distintos según el cambio realizado.
+
+Finalmente, combiné la rama docs/modificaciones con la rama principal mediante un merge y, una vez confirmados los cambios, creé una Pull Request desde mi repositorio hacia el repositorio original del profesor, siguiendo así todas las instrucciones indicadas.
