@@ -1,0 +1,73 @@
+@startmindmap
+* 🌸 **Visual Novel**
+** 🎮 Definición
+*** 📖 Historia interactiva
+*** 💬 Diálogo con opciones
+*** 🎨 Estilo gráfico tipo anime
+** 🧠 Mecánicas del juego
+*** 🕹️ Elecciones → finales múltiples
+*** ⏳ Sistema de guardado
+*** 💗 Rutas románticas / amistad
+*** 🧩 Mini-juegos ocasionales
+** 🎭 Elementos narrativos
+*** ✍️ Guion ramificado
+*** 🎭 Desarrollo de personajes
+*** 🎵 Música ambiental
+**** 🎼 Temas de personaje
+**** 🔊 Efectos de sonido
+** 🎨 Arte y estética
+*** 🧑‍🎨 Diseño de personajes
+*** 🌆 Escenarios 2D
+*** 🖌️ Paletas de color
+*** 🎬 Ilustraciones clave (CGs)
+** 💻 Plataformas
+*** 🪟 PC (Steam, twitch)
+*** 📱 Android / Apple
+*** 🎮 Consolas (Switch, Nintendo)
+** 💰 Mercado y comunidad
+*** 💵 Modelos de monetización
+**** 🎟️ Pago único
+**** 🆓 Free-to-play
+*** 🌍 Fandoms 
+*** 🎨 Fanart 
+
+' ---------------------- Estilos personalizados ------------------------
+<style>
+mindmapDiagram {
+  .visualNovel {
+    BackgroundColor #fce4ec
+    LineColor #f06292
+    FontColor #880e4f
+    FontStyle bold
+  }
+  .mechanics {
+    BackgroundColor #e3f2fd
+    LineColor #42a5f5
+    FontColor #0d47a1
+  }
+  .narrative {
+    BackgroundColor #fff9c4
+    LineColor #fbc02d
+    FontColor #f57f17
+  }
+  .art {
+    BackgroundColor #e8f5e9
+    LineColor #66bb6a
+    FontColor #1b5e20
+  }
+  .comunity {
+    BackgroundColor #f3e5f5
+    LineColor #ab47bc
+    FontColor #4a148c
+  }
+}
+</style>
+
+' ---------------------- Asignación de estilos ------------------------
+* <&star> Visual Novel <<visualNovel>>
+** Definición
+** Mecánicas del juego <<mechanics>>
+** Elementos narrativos <<narrative>>
+** Arte y estética <<art>>
+** Mercado y comunidad <<comunity>>
+@endmindmap
