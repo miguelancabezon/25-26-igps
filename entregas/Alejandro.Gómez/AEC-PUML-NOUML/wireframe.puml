@@ -1,0 +1,27 @@
+@startsalt
+{+
+  🎮 Shadow Protocol - Menú Principal
+  [ ▶️ Iniciar Partida ]
+  [ 💾 Cargar Partida ]
+  [ ⚙️ Opciones ]
+  [ 🌐 Multijugador ]
+  [ ❌ Salir ]
+  ---
+  {Opciones}
+  [ Gráficos 🖼️ ]
+  [ Sonido 🔊 ]
+  [ Controles 🎮 ]
+  [ Idioma 🌍 ]
+  ---
+  {Multijugador}
+  [ Unirse a servidor ]
+  [ Crear partida ]
+  [ Clasificación 🏆 ]
+  [ Chat 💬 ]
+  ---
+  {Estadísticas}
+  | Jugador | Nivel | Puntos |
+  |---------|-------|--------|
+  | ShadowAgent | 12 | 3450 |
+}
+@endsalt
