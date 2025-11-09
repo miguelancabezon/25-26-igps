@@ -1,0 +1,94 @@
+@startmindmap
+
+<style>
+mindmapDiagram {
+  .infraStyle * {
+    BackgroundColor #E6F7FF
+  }
+  .gameplayStyle * {
+    BackgroundColor #E8F5E9
+  }
+  .netStyle * {
+    BackgroundColor #FFF3E0
+  }
+  .artStyle * {
+    BackgroundColor #E6F7FF
+  }
+  .opsStyle * {
+    BackgroundColor #F3E5F5
+  }
+  .econStyle * {
+    BackgroundColor #FFF9C4
+  }
+}
+</style>
+
++ Vaquero Valley 🌵
+
+++ Jugabilidad <<gameplayStyle>>
++++ Construcción 🧱
+++++ Pueblo principal
+++++ Casas de la época 🪵
+++++ Edificios destacados
++++++ Bareto / Posada
++++++ Oficina del sheriff
++++++ Establo
++++++ Mina
++++ Economía <<econStyle>> 💰
+++++ Oro y recursos
+++++ Comercio y trueques 🐎
+++++ Saqueos /Contrabando
+++++ Impuestos y ganancias 📊
++++ Habitantes 👥
+++++ Vaqueros, mineros, granjeros 
+++++ Necesidades: comida, agua, recursos
+++++ Transporte
++++++ En diligencia
++++++ A caballo
+
+-- Infraestructura <<infraStyle>>
+--- Servidores ☁️ <<netStyle>>
+---- Servidor principal 
+---- Guardar progreso de cada pueblo 💾
+---- Copias de seguridad de la BBDD 🧰
+--- Juego en línea 🌐
+---- Modo multijugador con interacción jugadores 
+---- Modo offline con misiones aparte
+
+++ Arte y diseño <<artStyle>> 
++++ Gráficos y entorno 🖼️
+++++ Desierto, cactus y montañas 🌄
+++++ Edificios clásicos del oeste 
+++++ Animales: caballos, ovejas, coyotes🐎
++++ Interfaz 🧭
+++++ Menú de construcción 
+++++ Menú de misiones
++++ Sonido y música 🎵
+++++ Ambientación del oeste 🎸
+++++ Efectos: disparos, viento, galope 
+
+-- Operaciones <<opsStyle>>
+--- Desarrollo 💻
+---- Versiones nuevas con regularidad 🏗️
+---- Tests del juego para evitar bugs 🧪
+--- Seguridad 🔒
+---- Inicio de sesión con Google 🔑
+---- Datos protegidos 🔐
+
+++ Equipo <<opsStyle>> 
++++ Roles 
+++++ Diseñadores 
+++++ Programadores 
++++ Organización 📆
+++++ Planificación a varios meses vista
+++++ Reuniones de equipo semanales
+
+-- Servicios <<netStyle>>
+--- Soporte 🆘
+---- Ayuda y guías 📩
+---- Comunidad de jugadores 💬
+--- Tienda 💳
+---- Ventas de sombreros, caballos, consumibles
+---- Expansiones del mapa
+
+@endmindmap
