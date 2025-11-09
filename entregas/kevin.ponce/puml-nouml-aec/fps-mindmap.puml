@@ -1,80 +1,96 @@
 @startmindmap
-' Mindmap del proyecto FPS - PlantUML
-' Requisitos cumplidos: estilos personalizados, ≥5 colores, ≥3 niveles, emojis/símbolos, ambos lados
+' Usamos clases para definir los 5+ colores temáticos
 
-!define C_ROOT #1f77b4
-!define C_GAMEPLAY #ff7f0e
-!define C_ART #2ca02c
-!define C_TECH #d62728
-!define C_INFRA #9467bd
-!define C_HR #8c564b
+<style>
+mindmapDiagram {
+    // Definición de Clases con 5+ colores diferentes
+    .root { BackgroundColor #1f77b4; LineColor #0C4A6E; FontColor white; FontSize 20 }
+    .gameplay { BackgroundColor #ff7f0e; LineColor #D96900 }
+    .art { BackgroundColor #2ca02c; LineColor #1A6C1A }
+    .tech { BackgroundColor #d62728; LineColor #A61D20 }
+    .infra { BackgroundColor #9467bd; LineColor #6B4990 }
+    .hr { BackgroundColor #8c564b; LineColor #6E4439 }
+    .transversal { BackgroundColor #E0E0E0; LineColor #9E9E9E; FontColor #333333 }
 
-skinparam backgroundColor #ffffff
-skinparam shadowing false
-skinparam defaultFontName "DejaVu Sans"
+    // Estilos genéricos para nodos de nivel
+    node {
+        LineThickness 2
+        FontColor #333333
+        FontSize 14
+        FontStyle bold
+    }
+    // Sobrescribe el estilo para nodos hoja (Nivel 4)
+    leafNode {
+        LineThickness 1
+        FontStyle normal
+        FontSize 12
+    }
+}
+</style>
 
-' Nota: PlantUML acepta colores inline para nodos usando el prefijo #COLOR
-
-* #C_ROOT FPS Game 🎮 - Visión general
+' --- NODO RAÍZ ---
+- FPS Game - Visión general <<root>>
 
 ' --- LADO IZQUIERDO: sistemas centrales y gameplay ---
-** < #C_GAMEPLAY Gameplay ⚔️
-*** < #C_GAMEPLAY Mecánicas 🎯
-**** < #C_GAMEPLAY Movimiento 🏃‍♂️ (locomoción, parkour)
-**** < #C_GAMEPLAY Disparo 🔫 (recoils, spread, hitreg)
-**** < #C_GAMEPLAY Salud & Daño ❤️ (armadura, regeneración)
-*** < #C_GAMEPLAY Armas 🔧
-**** < #C_GAMEPLAY Tipos (Asalto, Francotirador, Cuerpo a cuerpo)
-**** < #C_GAMEPLAY Balance & Progression ⚖️
-*** < #C_GAMEPLAY Modos 🕹️
-**** < #C_GAMEPLAY Singleplayer (campaña)
-**** < #C_GAMEPLAY Multiplayer (PvP / PvE)
+** Gameplay <<gameplay>>
+*** Mecánicas <<gameplay>>
+**** Movimiento (locomoción, parkour) <<gameplay>>
+**** Disparo (recoils, spread, hitreg) <<gameplay>>
+**** Salud & Daño (armadura, regeneración) <<gameplay>>
+*** Armas <<gameplay>>
+**** Tipos (Asalto, Francotirador, Cuerpo a cuerpo) <<gameplay>>
+**** Balance & Progression <<gameplay>>
+*** Modos <<gameplay>>
+**** Singleplayer (campaña) <<gameplay>>
+**** Multiplayer (PvP / PvE) <<gameplay>>
 
-** < #C_TECH Motor & Tech 🛠️
-*** < #C_TECH Motor (Unreal / Unity / Custom)
-**** < #C_TECH Razones: rendimiento, toolchain, licencias
-*** < #C_TECH Networking 🌐
-**** < #C_INFRA Arquitectura servidores (dedicados/autoridad/clustering)
-**** < #C_INFRA Matchmaking, State Sync, Latency Compensation 🛰️
-*** < #C_TECH Herramientas CI/CD 🔁
-**** < #C_TECH Automatización: builds, tests, integraciones
+** Motor & Tech <<tech>>
+*** Motor (Unreal / Unity / Custom) <<tech>>
+**** Razones: rendimiento, toolchain, licencias <<tech>>
+*** Networking <<tech>>
+**** Arquitectura servidores (dedicados/autoridad/clustering) <<infra>> ' Uso de clase cruzada
+**** Matchmaking, State Sync, Latency Compensation <<infra>>
+*** Herramientas CI/CD <<tech>>
+**** Automatización: builds, tests, integraciones <<tech>>
+
+left side
 
 ' --- LADO DERECHO: arte, infraestructura y personas ---
-** > #C_ART Arte & Audio 🎨
-*** > #C_ART Visual (estética, iluminación)
-**** > #C_ART Estilos: Realista / Estilizado
-**** > #C_ART VFX, partículas, post-procesado ✨
-*** > #C_ART Audio 🎵
-**** > #C_ART SFX (impactos, ambiente)
-**** > #C_ART Música adaptativa (intensidad por gameplay)
+** Arte & Audio <<art>>
+*** Visual (estética, iluminación) <<art>>
+**** Estilos: Realista / Estilizado <<art>>
+**** VFX, partículas, post-procesado <<art>>
+*** Audio <<art>>
+**** SFX (impactos, ambiente) <<art>>
+**** Música adaptativa (intensidad por gameplay) <<art>>
 
-** > #C_INFRA Infraestructura & Ops 🏗️
-*** > #C_INFRA Hosting & Escalado ☁️
-**** > #C_INFRA Cloud providers (regions, DR)
-**** > #C_INFRA Autoscaling, Cost Control 💸
-*** > #C_INFRA Observabilidad 🔍
-**** > #C_INFRA Telemetría, Logging, Tracing
-**** > #C_INFRA SLOs / Alerting (latency, errors)
+** Infraestructura & Ops <<infra>>
+*** Hosting & Escalado <<infra>>
+**** Cloud providers (regions, DR) <<infra>>
+**** Autoscaling, Cost Control <<infra>>
+*** Observabilidad <<infra>>
+**** Telemetría, Logging, Tracing <<infra>>
+**** SLOs / Alerting (latency, errors) <<infra>>
 
-** > #C_HR Gente & Procesos 👥
-*** > #C_HR Equipo (roles) 🧑‍💻
-**** > #C_HR Devs, Artistas, Diseñadores, QA, Ops
-*** > #C_HR Roadmap & Hitos 📅
-**** > #C_HR Prototype → Alpha → Beta → Lanzamiento
-*** > #C_HR Riesgos & Mitigación ⚠️
-**** > #C_HR Tech debt, seguridad, legal, escalado
+** Gente & Procesos <<hr>>
+*** Equipo (roles) <<hr>>
+**** Devs, Artistas, Diseñadores, QA, Ops <<hr>>
+*** Roadmap & Hitos <<hr>>
+**** Prototype → Alpha → Beta → Lanzamiento <<hr>>
+*** Riesgos & Mitigación <<hr>>
+**** Tech debt, seguridad, legal, escalado <<hr>>
 
-' --- Capas transversales / Consideraciones ---
-** #9467bd Seguridad 🔒
-*** #9467bd Detección de trampas / anti-cheat
-*** #9467bd Protecciones de datos y privacidad
+' --- Ramas transversales (mantienen clase transversal) ---
+** Seguridad <<transversal>>
+*** Detección de trampas / anti-cheat <<transversal>>
+*** Protecciones de datos y privacidad <<transversal>>
 
-** #8c564b Monetización 💰
-*** #8c564b Modelos: Premium, F2P, Season Pass
-*** #8c564b Diseño ético de monetización (no pay-to-win)
+** Monetización <<transversal>>
+*** Modelos: Premium, F2P, Season Pass <<transversal>>
+*** Diseño ético de monetización (no pay-to-win) <<transversal>>
 
-** #d62728 QA & Testing ✅
-*** #d62728 Test de red (simulación de latencia)
-*** #d62728 Test de rendimiento y stress
+** QA & Testing <<transversal>>
+*** Test de red (simulación de latencia) <<transversal>>
+*** Test de rendimiento y stress <<transversal>>
 
 @endmindmap
