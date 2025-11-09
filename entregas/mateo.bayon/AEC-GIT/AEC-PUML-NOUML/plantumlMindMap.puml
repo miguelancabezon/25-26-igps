@@ -1,0 +1,47 @@
+@startmindmap
+skinparam backgroundcolor #ebdbb2
+skinparam roundCorner 20
+skinparam defaultTextAlignment center
+
+<style>
+mindmapDiagram {
+  .greenStyle * {
+    BackgroundColor lightgreen
+  }
+  .yellowStyle * {
+    BackgroundColor #e3e354
+  }
+    .backStyle * {
+    BackgroundColor lightblue
+  }
+    .redStyle * {
+    BackgroundColor #FFBBCC
+  }
+    .lyStyle * {
+    BackgroundColor #d6d687
+  }
+}
+</style>
+  
+
+* &#128299; Juego FPS <<greenStyle>>
+
+right side
+** &#127912; Estética <<redStyle>>
+*** Retro <<yellowStyle>>
+**** PSX <<lyStyle>>
+*** Machine punk <<yellowStyle>>
+*** Surreal <<yellowStyle>>
+
+left side
+** &#128298; Armas <<backStyle>>
+*** Armas de fuego <<yellowStyle>>
+**** Escopeta <<lyStyle>>
+**** Rifle <<lyStyle>>
+**** RPG <<lyStyle>>
+*** Armas blancas <<yellowStyle>>
+**** Cuchillo <<lyStyle>>
+**** Espada <<lyStyle>>
+**** Hacha <<lyStyle>>
+
+@endmindmap
