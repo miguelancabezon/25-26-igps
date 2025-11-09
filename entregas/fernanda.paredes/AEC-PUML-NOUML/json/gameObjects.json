@@ -1,0 +1,98 @@
+{
+  "config": {
+    "version": "1.0.0",
+    "language": "es",
+    "environment": "development",
+    "author": "Fernanda Paredes"
+  },
+  "classes": [
+    {
+      "id": 1,
+      "className": "Society",
+      "name": "TribuInicial",
+      "creationDate": "2025-11-09T00:00:00Z",
+      "status": "primitive",
+      "population": 20,
+      "technologyLevel": 1,
+      "resources": ["wood", "stone"],
+      "isActive": true,
+      "members": [
+        {
+          "id": 101,
+          "className": "Character",
+          "name": "Luna",
+          "birthDate": "2025-10-01T00:00:00Z",
+          "role": "Lider",
+          "skills": ["liderazgo", "caza"],
+          "alive": true
+        },
+        {
+          "id": 102,
+          "className": "Character",
+          "name": "Taro",
+          "birthDate": "2025-09-15T00:00:00Z",
+          "role": "Cazador",
+          "skills": ["caza", "recoleccion"],
+          "alive": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "className": "Technology",
+      "name": "Fuego",
+      "discoveryDate": "2025-11-10T00:00:00Z",
+      "status": "discovered",
+      "era": "StoneAge",
+      "effects": ["cocinar", "calor", "proteccion"],
+      "isAvailable": true
+    },
+    {
+      "id": 3,
+      "className": "Building",
+      "name": "Choza",
+      "buildDate": "2025-11-11T00:00:00Z",
+      "status": "constructed",
+      "capacity": 5,
+      "materials": ["wood", "leaves"],
+      "isOccupied": false
+    },
+    {
+      "id": 4,
+      "className": "Country",
+      "name": "ClanRival",
+      "creationDate": "2025-11-09T00:00:00Z",
+      "status": "primitive",
+      "population": 18,
+      "technologyLevel": 1,
+      "resources": ["stone"],
+      "isActive": true
+    }
+  ],
+  "actions": [
+    {
+      "actionName": "discoverTechnology",
+      "affectsClass": "Technology",
+      "parameters": ["technologyId", "societyId"]
+    },
+    {
+      "actionName": "buildStructure",
+      "affectsClass": "Building",
+      "parameters": ["buildingType", "societyId"]
+    },
+    {
+      "actionName": "recruitMember",
+      "affectsClass": "Society",
+      "parameters": ["characterId", "societyId"]
+    },
+    {
+      "actionName": "attackCountry",
+      "affectsClass": "Country",
+      "parameters": ["attackerId", "defenderId"]
+    }
+  ],
+  "metadata": {
+    "lastUpdate": "2025-11-09T12:00:00Z",
+    "supportedPlatforms": ["Windows", "Mac", "Linux"]
+  }
+}
