@@ -74,6 +74,110 @@ mindmapDiagram {
 
 
 
+@startgantt
+' --------------------------------------------------
+' CONFIGURACIÓN GENERAL
+' --------------------------------------------------
+Project starts 2025-11-25
+Project ends 2025-11-29
+printscale monthly
+Project title "Visual Novel"
+
+' --------------------------------------------------
+' FASE 1 - PREPRODUCCIÓN
+' --------------------------------------------------
+[Preproducción] starts 2025-01-01 and ends 2025-03-15 and is colored in #BBDEFB
+
+[Investigación de mercado y público objetivo] lasts 11 days and is colored in #BBDEFB
+[Concepto narrativo y tono del juego] lasts 10 days and is colored in #BBDEFB
+[Diseño de personajes principales] lasts 10 days and is colored in #BBDEFB
+[Creación del guion inicial y estructura de rutas] lasts 11 days and is colored in #BBDEFB
+[Selección de motor de juego] lasts 10 days and is colored in #BBDEFB
+[Planificación de recursos visuales] lasts 11 days and is colored in #BBDEFB
+
+[Investigación de mercado y público objetivo] -> [Concepto narrativo y tono del juego]
+[Concepto narrativo y tono del juego] -> [Diseño de personajes principales]
+[Diseño de personajes principales] -> [Creación del guion inicial y estructura de rutas]
+[Creación del guion inicial y estructura de rutas] -> [Selección de motor de juego]
+[Selección de motor de juego] -> [Planificación de arte y recursos visuales]
+
+[Diseño de personajes] completes 100%
+[Creación del guión inicial] completes 70%
+[Planificación de recursos visuales] completes 100%
+
+
+[Milestone 1: Prototipo] happens at [Planificación de arte y recursos visuales]'s end
+
+note right of [Preproducción]
+👥 Equipo: Director de cine, escritor, diseñador de personajes
+🧩 Herramientas:  Google Docs, Clip Studio Paint
+end note
+
+' --------------------------------------------------
+' FASE 2 - PRODUCCIÓN
+' --------------------------------------------------
+[Producción] starts at [Milestone 1: Prototipo] and ends 2025-09-30 and is colored in #C8E6C9
+
+[Programación del sistema de diálogo y decisiones] lasts 30 days and is colored in #C8E6C9
+[Integración de sprites y fondos 2D] lasts 40 days and is colored in #C8E6C9
+[Implementación del sonido y de la música] lasts 25 days and is colored in #C8E6C9
+[Diseño de interfaz y menús interactivos] lasts 20 days and is colored in #C8E6C9
+[Escritura completa de rutas y finales] lasts 45 days and is colored in #C8E6C9
+[Testeo interno de guion y flujo narrativo] lasts 20 days and is colored in #C8E6C9
+[Optimización de rendimiento y recursos] lasts 15 days and is colored in #C8E6C9
+[Creación de anime] lasts 15 days and is colored in #C8E6C9
+
+[Programación del sistema de diálogo y decisiones] -> [Integración de sprites y fondos 2D]
+[Integración de sprites y fondos 2D] -> [Implementación de efectos de sonido y música]
+[Implementación de efectos de sonido y música] -> [Diseño de interfaz y menús interactivos]
+[Diseño de interfaz y menús interactivos] -> [Escritura completa de rutas y finales]
+[Escritura completa de rutas y finales] -> [Testeo interno de guion y flujo narrativo]
+[Testeo interno de guion y flujo narrativo] -> [Optimización de rendimiento y recursos]
+[Optimización de rendimiento y recursos] -> [Creación del opening animado y créditos]
+
+[Programación del sistema de diálogo y decisiones] completes 100%
+[Integración de sprites y fondos 2D] completes 75%
+[Implementación de efectos de sonido y música] completes 60%
+[Escritura completa de rutas y finales] completes 40%
+[Testeo interno de guion y flujo narrativo] completes 35%
+
+[Milestone 2: Beta] happens at [Creación del opening animado y créditos]'s end
+
+note right of [Producción]
+🎨 Equipo: Programadores, artistas 2D, compositores, guionistas  
+🛠️ Herramientas:Photoshop, Audacity, GitHub
+end note
+
+' --------------------------------------------------
+' FASE 3 - POSTPRODUCCIÓN
+' --------------------------------------------------
+[Postproducción] starts at [Milestone 2: Beta] and ends 2025-12-31 and is colored in #FFE0B2
+
+[Pruebas externas y feedback de usuarios] lasts 30 days and is colored in #FFE0B2
+[Corrección de errores y pulido final] lasts 25 days and is colored in #FFE0B2
+[Localización y traducción (español/inglés)] lasts 40 days and is colored in #FFE0B2
+[Estrategia de marketing y redes sociales] lasts 30 days and is colored in #FFE0B2
+[Preparación para lanzamiento en Steam/itch.io] lasts 20 days and is colored in #FFE0B2
+[Soporte post-lanzamiento y parches] lasts 30 days and is colored in #FFE0B2
+
+[Pruebas externas y feedback de usuarios] -> [Corrección de errores y pulido final]
+[Corrección de errores y pulido final] -> [Localización y traducción (español/inglés)]
+[Localización y traducción ] -> [Estrategia de marketing y redes sociales]
+[Estrategia de marketing y redes sociales] -> [Preparación para lanzamiento en Steam/itch.io]
+[Preparación para lanzamiento en Steam/itch.io] -> [Soporte post-lanzamiento y parches]
+
+[Pruebas externas y feedback de usuarios] completes 50%
+[Corrección de errores y pulido final] completes 30%
+
+[Milestone 3: v1.0] happens at [Preparación para lanzamiento en Steam/itch.io]
+
+note right of [Postproducción]
+ Equipo: QA testers, traductores, community manager, marketing  
+ Herramientas:  Canva, OBS, Excel
+end note
+
+@endgantt
+
 
 
 
