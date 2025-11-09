@@ -1,0 +1,258 @@
+@startgantt
+title FPS
+printscale weekly
+projectscale weekly
+
+Project starts 2025-01-06
+
+<style>
+ganttDiagram {
+  .preproduccion {
+    BackGroundColor #FFE5E5
+    LineColor #FF6B6B
+  }
+  .produccion {
+    BackGroundColor #E5F5FF
+    LineColor #4ECDC4
+  }
+  .postproduccion {
+    BackGroundColor #F5E5FF
+    LineColor #C77DFF
+  }
+  .hito {
+    BackGroundColor #FFD700
+    LineColor #FFA500
+    FontStyle bold
+  }
+  .arte {
+    BackGroundColor #FFF3E0
+    LineColor #F4A261
+  }
+  .tech {
+    BackGroundColor #E0F2F1
+    LineColor #00897B
+  }
+}
+</style>
+
+-- FASE 1: PREPRODUCCIÓN --
+[FASE 1: Preproducción] lasts 84 days
+[FASE 1: Preproducción] is colored in #FFE5E5
+
+[Concepto y Documento de Diseño] lasts 21 days and starts 2025-01-06
+[Concepto y Documento de Diseño] is 100% completed
+[Concepto y Documento de Diseño] is colored in #FFE5E5
+note bottom
+  Equipo: Game Designers (3)
+  • Definir mecánicas core
+  • Documentar sistemas
+end note
+
+[Investigación de Mercado] lasts 14 days and starts 2025-01-06
+[Investigación de Mercado] is 100% completed
+[Investigación de Mercado] is colored in #FFE5E5
+note bottom
+  Equipo: Producer + Marketing (2)
+  • Análisis competencia
+  • Target audience
+end note
+
+[Prototipo de Movimiento] lasts 21 days and starts at [Concepto y Documento de Diseño]'s end
+[Prototipo de Movimiento] is 100% completed
+[Prototipo de Movimiento] is colored in #E0F2F1
+note bottom
+  Equipo: Programmers (2)
+  • Sprint, slide, vault
+  • Feel del movimiento
+end note
+
+[Prototipo de Disparo] lasts 21 days and starts at [Prototipo de Movimiento]'s start
+[Prototipo de Disparo] is 100% completed
+[Prototipo de Disparo] is colored in #E0F2F1
+note bottom
+  Equipo: Programmers (2)
+  • Sistema de armas base
+  • Recoil y balística
+end note
+
+[Arte Conceptual] lasts 28 days and starts 2025-01-27
+[Arte Conceptual] is 100% completed
+[Arte Conceptual] is colored in #FFF3E0
+note bottom
+  Equipo: Concept Artists (2)
+  • Operators, mapas, UI
+  • Style guide
+end note
+
+[<:1F3AF:> MILESTONE 1: Prototipo Jugable] happens 2025-03-31
+
+-- FASE 2: PRODUCCIÓN --
+[FASE 2: Producción] lasts 252 days and starts 2025-04-01
+[FASE 2: Producción] is colored in #E5F5FF
+
+[Desarrollo de Mapas (3 mapas)] lasts 84 days and starts 2025-04-01
+[Desarrollo de Mapas (3 mapas)] is 80% completed
+[Desarrollo de Mapas (3 mapas)] is colored in #FFF3E0
+note bottom
+  Equipo: Level Designers (3) + Artists (4)
+  • Urban, Industrial, Military
+  • Blockout → Art → Polish
+end note
+
+[Sistema de Armas Completo] lasts 63 days and starts 2025-04-01
+[Sistema de Armas Completo] is 90% completed
+[Sistema de Armas Completo] is colored in #E0F2F1
+note bottom
+  Equipo: Programmers (2) + Designers (1)
+  • 15 armas únicas
+  • Attachments system
+end note
+
+[Personajes y Animaciones] lasts 84 days and starts 2025-04-01
+[Personajes y Animaciones] is 75% completed
+[Personajes y Animaciones] is colored in #FFF3E0
+note bottom
+  Equipo: Character Artists (3) + Animators (2)
+  • 12 Operators
+  • Animaciones tácticas
+end note
+
+[Sistema Multijugador] lasts 70 days and starts 2025-06-01
+[Sistema Multijugador] is 60% completed
+[Sistema Multijugador] is colored in #E0F2F1
+note bottom
+  Equipo: Network Programmers (3)
+  • Dedicated servers
+  • Matchmaking
+  • Anti-cheat integration
+end note
+
+[UI/UX Development] lasts 56 days and starts 2025-06-15
+[UI/UX Development] is 70% completed
+[UI/UX Development] is colored in #FFF3E0
+note bottom
+  Equipo: UI/UX Designers (2) + Dev (1)
+  • Menús principales
+  • HUD in-game
+  • Scoreboard
+end note
+
+[Modos de Juego] lasts 49 days and starts 2025-07-01
+[Modos de Juego] is 50% completed
+[Modos de Juego] is colored in #E0F2F1
+note bottom
+  Equipo: Game Designers (2) + Programmers (2)
+  • Competitive 5v5
+  • Team Deathmatch
+  • Gun Game
+end note
+
+[Sistema de Progresión] lasts 42 days and starts 2025-08-01
+[Sistema de Progresión] is 40% completed
+[Sistema de Progresión] is colored in #E0F2F1
+note bottom
+  Equipo: Backend (2) + Designer (1)
+  • XP system
+  • Weapon mastery
+  • Unlockables
+end note
+
+[Audio (SFX + Música)] lasts 70 days and starts 2025-07-15
+[Audio (SFX + Música)] is 30% completed
+[Audio (SFX + Música)] is colored in #FFF3E0
+note bottom
+  Equipo: Sound Designers (2) + Composer (1)
+  • Weapon sounds
+  • Ambiente
+  • Música dinámica
+end note
+
+[<:1F6A8:> MILESTONE 2: Beta Cerrada] happens 2025-09-15
+
+[Battle Pass Sistema] lasts 35 days and starts 2025-10-01
+[Battle Pass Sistema] is 20% completed
+[Battle Pass Sistema] is colored in #E0F2F1
+note bottom
+  Equipo: Backend (2) + UI (1)
+  • 100 tiers
+  • Rewards system
+end note
+
+[Tienda In-Game] lasts 28 days and starts 2025-10-15
+[Tienda In-Game] is 15% completed
+[Tienda In-Game] is colored in #E0F2F1
+note bottom
+  Equipo: Backend (2) + UI (1)
+  • Currency system
+  • Payment integration
+end note
+
+-- FASE 3: POSTPRODUCCIÓN --
+[FASE 3: Postproducción] lasts 98 days and starts 2025-11-15
+[FASE 3: Postproducción] is colored in #F5E5FF
+
+[Testing & QA Intensivo] lasts 70 days and starts 2025-11-15
+[Testing & QA Intensivo] is 10% completed
+[Testing & QA Intensivo] is colored in #F5E5FF
+note bottom
+  Equipo: QA Team (8)
+  • Bug fixing
+  • Balance testing
+  • Performance optimization
+end note
+
+[Beta Abierta] lasts 28 days and starts 2025-11-15
+[Beta Abierta] is colored in #F5E5FF
+note bottom
+  • Community feedback
+  • Stress testing servers
+  • Final adjustments
+end note
+
+[Optimización Final] lasts 42 days and starts 2025-12-15
+[Optimización Final] is colored in #E0F2F1
+note bottom
+  Equipo: Programmers (4)
+  • Performance
+  • Load times
+  • Memory optimization
+end note
+
+[Marketing Pre-Launch] lasts 56 days and starts 2025-12-01
+[Marketing Pre-Launch] is colored in #FFF3E0
+note bottom
+  Equipo: Marketing (4)
+  • Trailers
+  • Social media campaign
+  • Influencer partnerships
+end note
+
+[Day One Patch] lasts 14 days and starts 2026-01-12
+[Day One Patch] is colored in #F5E5FF
+note bottom
+  Equipo: All hands
+  • Critical bug fixes
+  • Balance adjustments
+end note
+
+--HITOS--
+[<:1F680:> MILESTONE 3: v1.0 LAUNCH] happens 2026-01-26
+
+note bottom
+<b><:1F4CA:> Estadísticas del Proyecto:</b>
+• Duración total: 55 semanas (~13 meses)
+• Equipo máximo: ~35 personas
+• Presupuesto: $2.5M USD
+• 3 Mapas iniciales
+• 12 Operators
+• 15 Armas
+
+<b><:26A0:> Riesgos Críticos:</b>
+• Networking complexity
+• Anti-cheat effectiveness
+• Server infrastructure costs
+• Market competition (CS2, Valorant)
+• Retención de jugadores post-launch
+end note
+
+@endgantt
