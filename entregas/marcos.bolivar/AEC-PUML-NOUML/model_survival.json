@@ -1,0 +1,58 @@
+{
+  "game": {
+    "id": 1,
+    "name": "El bosqueciño",
+    "releaseDate": "2025-12-15",
+    "version": "1.0",
+    "language": "es-ES",
+    "objects": {
+      "player": {
+        "id": 101,
+        "name": "Jugador",
+        "health": 100,
+        "hunger": 50,
+        "thirst": 50,
+        "inventory": ["hacha", "antorcha", "botiquín"]
+      },
+      "enemy": {
+        "id": 201,
+        "type": "Mutante",
+        "health": 80,
+        "attackPower": 15,
+        "isAggressive": true
+      },
+      "item": {
+        "id": 301,
+        "name": "Hacha de supervivencia",
+        "damage": 25,
+        "weight": 3.5,
+        "isCraftable": true
+      },
+      "environment": {
+        "id": 401,
+        "zone": "Bosque",
+        "weather": "Lluvia",
+        "timeOfDay": "Noche"
+      }
+    },
+    "actions": {
+      "createItem": {
+        "target": "item",
+        "params": ["name", "damage", "weight"]
+      },
+      "attackEnemy": {
+        "target": "enemy",
+        "params": ["enemyId", "weapon"]
+      },
+      "eatFood": {
+        "target": "player",
+        "params": ["foodType"]
+      }
+    },
+    "metadata": {
+      "author": "marcos.bolivar",
+      "engine": "Unity",
+      "environment": "Development"
+    }
+  }
+}

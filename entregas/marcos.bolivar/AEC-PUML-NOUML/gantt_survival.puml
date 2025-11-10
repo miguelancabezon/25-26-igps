@@ -1,0 +1,26 @@
+@startgantt
+Project starts 2025-01-01
+Project ends 2025-12-31
+
+-- Fase 1: Preproducción --
+[Concepto del juego] lasts 10 days
+[Diseño del documento GDD] lasts 15 days
+[Arte conceptual] lasts 20 days
+[Prototipo inicial] lasts 30 days
+Milestone "Prototipo listo" happens at [Prototipo inicial]'s end
+
+-- Fase 2: Producción --
+[Modelado 3D] lasts 60 days
+[Programación principal] lasts 80 days
+[Sistema de combate] lasts 30 days
+[IA enemigos] lasts 30 days
+[Diseño de niveles] lasts 50 days
+Milestone "Beta jugable" happens at [Diseño de niveles]'s end
+
+-- Fase 3: Postproducción --
+[Testeo y corrección de bugs] lasts 40 days
+[Optimización] lasts 20 days
+[Marketing y lanzamiento] lasts 15 days
+Milestone "Versión 1.0" happens at [Marketing y lanzamiento]'s end
+
+@endgantt
