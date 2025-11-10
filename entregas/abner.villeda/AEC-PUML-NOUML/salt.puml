@@ -1,0 +1,44 @@
+@startsalt
+title Dashboard - Visual Novel "Confesion bajo la lluvia"
+
+{+
+{/ Dashboard | Escenas | Personajes | Audio | Estadisticas | Configuracion }
+==
+{
+{T + Inicio
+++ Escenas
+++ Personajes
+++ Rutas
+++ Afinidad
+-- + Ajustes + Salir
+} | {
+<b><size:16>Panel General del Proyecto</size></b>
+<i>Ultima actualizacion: hace 5 minutos</i>
+==
+<b>Resumen</b>
+{#
+Elemento | Total | Estado
+Escenas creadas | 25 | En progreso
+Personajes activos | 8 | Estables
+Rutas principales | 3 | Completo 70%
+Musica implementada | 12 | Revisada
+}
+==
+<b>Progreso de rutas</b>
+||
+|||||||||||||||||||| Ruta Romantica: 80%
+|||||||||||| Ruta Amistad: 60%
+|||| Ruta Neutral: 35%
+==
+<b>Notificaciones</b>
+Compilacion completada (v1.0.3)
+Escena "Paseo nocturno" actualizada
+[Ver todas]
+}
+}
+==
+{
+2025 Estudio Picheda | Version interna 1.0.3
+}
+}
+@endsalt
