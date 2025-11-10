@@ -1,0 +1,122 @@
+@startgantt
+title Americity - Builder Simulator
+printscale weekly
+
+Project starts the 2025-11-22
+
+-- Fase 1: Planificación y Preproducción (1 mes) --
+[Conceptualización] lasts 10 days 
+[Conceptualización] is colored in red
+[Conceptualización] is 100% completed
+
+[Diseño del juego] lasts 20 days 
+[Diseño del juego] starts at [Conceptualización]'s end
+[Diseño del juego] is colored in red 
+[Diseño del juego] is 60% completed
+
+[Establecer Requerimientos] lasts 5 days
+[Establecer Requerimientos] starts at [Diseño del juego]'s end
+[Establecer Requerimientos] is colored in red 
+[Establecer Requerimientos] is 60% completed
+
+[Financiación] lasts 5 days
+[Financiación] starts at [Establecer Requerimientos]'s end
+[Financiación] is colored in red 
+[Financiación] is 0% completed 
+
+[Luz Verde del Proyecto] happens at [Financiación]'s end 
+
+-- Fase 2: Producción (5 meses) --
+[Prototipo inicial] lasts 20 days 
+[Prototipo inicial] is colored in Orange
+[Prototipo inicial] is 0% completed
+note bottom
+Equipo: Jose, Rene, Alberto & Moises
+Budget: 300€
+end note
+[Prototipo inicial] starts at [Luz Verde del Proyecto]'s end
+
+[Prototipo Completo] happens at [Prototipo inicial]'s end
+
+[Desarrollo del modelos 3D] lasts 40 days
+[Desarrollo del modelos 3D] is colored in Orange
+[Desarrollo del modelos 3D] is 0% completed
+note bottom
+Equipo: Jose & Moises
+Recursos: Blender
+end note
+[Desarrollo del modelos 3D] starts at [Prototipo Completo]'s end
+
+[Diseño de mecánicas] lasts 45 days
+[Diseño de mecánicas] is colored in Orange
+[Diseño de mecánicas] is 0% completed
+note bottom
+Equipo: Rene & Moises
+end note
+[Diseño de mecánicas] starts at [Prototipo Completo]'s end
+
+[Diseño de edificios]  lasts 45 days
+[Diseño de edificios]  is colored in Orange
+note bottom
+Equipo: Jose & Alberto 
+end note
+[Diseño de edificios]  is 0% completed
+[Diseño de edificios]  starts at [Diseño de mecánicas]'s end
+
+[Integración de arte y sonido] lasts 25 days
+[Integración de arte y sonido] is colored in Orange
+[Integración de arte y sonido] is 0% completed
+note bottom
+Equipo: Rene & Moises
+end note
+[Integración de arte y sonido] starts at [Diseño de edificios]'s end
+
+[Beta] happens at [Integración de arte y sonido]'s end
+
+[Pruebas internas] lasts 20 days
+[Pruebas internas] is colored in Orange
+[Pruebas internas] is 0% completed
+note bottom
+Equipo: Alberto & Rene
+end note
+[Pruebas internas] starts at [Beta]'s end
+
+[Lanzamiento beta al público] lasts 30 days
+[Lanzamiento beta al público] is colored in Orange
+[Lanzamiento beta al público] is 0% completed
+[Lanzamiento beta al público] starts at [Pruebas internas]'s end
+
+[Corrección de errores y ajustes] lasts 20 days
+[Corrección de errores y ajustes] is colored in Orange
+[Corrección de errores y ajustes] is 0% completed
+note bottom
+Equipo: Jose, Rene, & Moises
+end note
+[Corrección de errores y ajustes] starts at [Lanzamiento beta al público]'s end
+
+[Version 1.0.0] happens at [Corrección de errores y ajustes]'s end 
+
+-- Fase 3: Postproducción --
+[Lanzamiento] lasts 5 days
+[Lanzamiento] is colored in Green
+[Lanzamiento] is 0% completed
+[Lanzamiento] starts at [Version 1.0.0]'s end
+
+[Tomar Feedback de usuarios] lasts 30 days
+[Tomar Feedback de usuarios] is colored in green
+[Tomar Feedback de usuarios] is 0% completed
+note bottom
+Equipo: Rene 
+Recursos: Discord, Foros, Redes
+end note
+[Tomar Feedback de usuarios] starts at [Lanzamiento]'s end 
+
+[Parches y actualizaciones] lasts 30 days
+[Parches y actualizaciones] is colored in green
+[Parches y actualizaciones] is 0% completed
+[Parches y actualizaciones] starts at [Tomar Feedback de usuarios]'s end 
+note bottom
+Equipo: Jose, Rene, Alberto & Moises
+end note
+
+@endgantt

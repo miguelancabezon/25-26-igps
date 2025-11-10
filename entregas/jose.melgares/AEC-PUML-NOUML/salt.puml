@@ -1,0 +1,28 @@
+@startsalt
+title Panel de control - Servicios
+{+ 
+<b><size:16> Menu</size></b>
+{
+^Servicios públicos^ | 
+ 
+Gastos (este mes) | 5.1M
+
+
+}
+.
+.
+<b>Servicio</b> | Agua <:1F6B0:> | Energia <:1F4A1:> | Sanidad <:1F6BD:>
+Cobertura | 98% | 96% | 189% 
+Costo/mes | 1.4M | 2.8M | 0.9M
+---
+Satisfacion | " " | " " | " " 
+Ciudanana | 88% | 100% | 100%
+Empresarial | 75% | 90% | 100%
+.
+.
+[ Mejorar Servicios ] | [ Sobornar ] | [Reducir costos] | [ Cambiar Contrato]
+{
+[ <:2757:> ] | <b>Notificaciones (2)</b>
+}
+}
+@endsalt
