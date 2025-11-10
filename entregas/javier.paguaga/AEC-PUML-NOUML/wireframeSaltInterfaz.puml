@@ -1,0 +1,37 @@
+@startumlwireframe
+title Interfaz de Usuario - Menú Principal del Juego "NEON TRIGGER"
+@startuml
+skinparam backgroundColor #Cyan
+salt
+{
+{
+  [🏠 Inicio | ⚙️ Configuración | 💾 Cargar | 🧠 Perfil | 👾 Créditos]
+}
+
+{
+  {+
+    🌆 **NEON TRIGGER** 🚀
+    ---
+    [🎮 Nueva Partida]
+    [💥 Continuar]
+    [🗺️ Seleccionar Misión]
+    [🤖 Multijugador]
+    [❌ Salir]
+  |
+    ⚙️ **Configuración Rápida**
+    Volumen 🎵 : [llllllllll🔘llllllllll]
+    Brillo 💡 : [llllllllll🔘llllllllll]
+    Sensibilidad 🎯 : [llllllllll🔘llllllllll]
+    Idioma 🌐 : [Español ▼]
+    Dificultad 🔥 : [Normal ▼]
+  }
+}
+
+---
+[💾 Guardar Perfil]
+[🔧 Opciones Avanzadas]
+[🌐 Conectar en Línea]
+[📈 Ver Logros]
+[🏁 Salir del Juego]
+}
+@enduml

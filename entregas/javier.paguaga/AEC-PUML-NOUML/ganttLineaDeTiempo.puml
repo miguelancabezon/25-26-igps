@@ -1,0 +1,123 @@
+@startgantt
+title Plan del Proyecto Neon Trigger 2025
+printscale weekly
+
+Project starts 2025-10-01
+
+<style>
+ganttDiagram {
+  task {
+    BackGroundColor lightblue
+    LineColor blue
+  }
+  milestone {
+    BackGroundColor gold
+    LineColor orange
+  }
+  separator {
+    BackGroundColor lightgray
+    LineColor gray
+    FontColor black
+    FontStyle bold
+  }
+}
+</style>
+
+-- Fase 1: Preproduccion --
+[A1: Definir concepto y lore del juego] as [PA1] lasts 5 days
+[PA1] is colored in LightBlue
+[PA1] is 100% completed
+note bottom
+Equipo: DevOps (2)
+Budget: €10K
+end note
+
+[A2: Diseño inicial de personajes] as [PA2] lasts 7 days and starts at [PA1]'s end
+[PA2] is colored in LightBlue
+[PA2] is 100% completed
+
+[A3: Diseño de niveles preliminar] as [PA3] lasts 10 days and starts at [PA2]'s end
+[PA3] is colored in Blue
+[PA3] is 85% completed
+note bottom
+Equipo: DevOps (3)
+Recursos: AWS Credits
+end note
+
+[A4: Selección de motor de juego] as [PA4] lasts 15 days and starts at [PA3]'s end
+[PA4] is colored in Orange
+[PA4] is 35% completed
+
+[A5: Planificación de recursos y equipo] as [PA5] lasts 7 days and starts at [PA4]'s end
+[PA5] is colored in Red
+[PA5] is 60% completed
+
+[Milestone 1: Prototipo] as [MA1] happens at [PA5]'s end
+
+-- Fase 2: Produccion --
+[B1: Desarrollo de mecánicas principales] as [PB1] lasts 5 days and starts at [PA1]'s end
+[PB1] is colored in LightGreen
+[PB1] is 100% completed
+
+[B2: Implementación de niveles completos] as [PB2] lasts 10 days and starts at [PB1]'s end
+[PB2] is colored in LightGreen
+[PB2] is 100% completed
+
+[B3: Arte final de personajes y enemigos] as [PB3] lasts 3 days and starts at [PB2]'s end
+[PB3] is colored in Green
+[PB3] is 100% completed
+
+[B4: Sonido y música] as [PB4] lasts 7 days and starts at [PB3]'s end
+[PB4] is colored in Green
+[PB4] is 80% completed
+note bottom
+Equipo: Mobile (2)
+Sprint 1
+end note
+
+[B5: Integración de HUD y UI] as [PB5] lasts 14 days and starts at [PB4]'s end
+[PB5] is colored in Orange
+[PB5] is 35% completed
+
+[B6: Pruebas internas y ajustes] as [PB6] lasts 7 days and starts at [PB5]'s end
+[PB6] is colored in Red
+[PB6] is 55% completed
+
+[Milestone 2: Beta] as [MB1] happens at [PB6]'s end
+
+-- Fase 3: Postproduccion --
+[C1: Optimización y corrección de bugs] as [PC1] lasts 5 days and starts 2025-10-15
+[PC1] is colored in LightCoral
+[PC1] is 30% completed
+
+[C2: Marketing y materiales promocionales] as [PC2] lasts 3 days and starts at [PC1]'s end
+[PC2] is colored in LightCoral
+[PC2] is 60% completed
+
+[C3: Preparación de lanzamiento] as [PC3] lasts 10 days and starts at [PC2]'s end
+[PC3] is colored in Coral
+[PC3] is 70% completed
+note bottom
+Equipo: Backend (3)
+Crítico: No breaking changes
+end note
+
+[Milestone 3: Versión 1.0] as [MC1] happens at [PC3]'s end
+
+-- RECURSOS Y DEPENDENCIAS --
+note bottom
+<b>Recursos Totales Q4:</b>
+• DevOps Team: 3 personas
+• Backend Team: 3 personas
+• Frontend Team: 2 personas
+• Mobile Team: 2 personas
+• QA Team: 1 persona
+
+<b>Budget Total: €150K</b>
+
+<b>Dependencias Críticas:</b>
+⚠ Proyecto A bloquea parte de Proyecto C
+⚠ Proyecto B requiere APIs de Proyecto D
+end note
+
+@endgantt

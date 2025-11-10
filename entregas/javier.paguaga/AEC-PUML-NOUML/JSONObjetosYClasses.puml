@@ -1,0 +1,179 @@
+@startjson
+title Neon Trigger
+
+{
+  "metadata": {
+    "gameTitle": "Neon Trigger",
+    "version": "2.1.0",
+    "author": "Andre Orellana",
+    "language": "es-ES",
+    "environment": "development",
+    "lastUpdated": "2025-11-09T21:15:00Z"
+  },
+
+  "classes": {
+    "Personaje": {
+      "id": 101,
+      "nombre": "Lira Volt",
+      "rol": "Protagonista",
+      "nivel": 15,
+      "estado": "activo",
+      "habilidades": ["dobleSalto", "dashElectrico", "invisibilidadTemporal"],
+      "armaEquipada": 201,
+      "mecanicasDisponibles": [401, 402],
+      "fechaCreacion": "2025-07-10",
+      "colorTraje": "#00FFFF",
+      "colorPrincipal": "#33FFF9",
+      "uiStyle": {
+        "colorFondo": "#002B36",
+        "colorTexto": "#00FFFF",
+        "borde": "#009999"
+      }
+    },
+
+    "ArmaFuturista": {
+      "id": 201,
+      "nombre": "Rifle de Asalto Láser",
+      "tipo": "Rifle",
+      "dañoBase": 45,
+      "energiaPorDisparo": 5,
+      "modificadores": {
+        "aumentoCadencia": true,
+        "mejoraPrecision": true,
+        "efecto": "electricidad"
+      },
+      "colorDisparo": "#FF33FF",
+      "mejoras": [
+        "modificadorDaño",
+        "sistemaRecargaRápida",
+        "enfriamientoAutomático"
+      ],
+      "fechaCreacion": "2025-06-20",
+      "colorPrincipal": "#FF33FF",
+      "uiStyle": {
+        "colorFondo": "#300030",
+        "colorTexto": "#FF66FF",
+        "borde": "#9900CC"
+      }
+    },
+
+    "Mecanica": {
+      "id": 401,
+      "nombre": "Escudo de Energía",
+      "descripcion": "Crea una barrera de plasma que bloquea proyectiles durante 3 segundos.",
+      "cooldown": 10.5,
+      "esActiva": true,
+      "colorEfecto": "#33FFCC",
+      "fechaCreacion": "2025-08-05",
+      "colorPrincipal": "#33FFCC",
+      "uiStyle": {
+        "colorFondo": "#003333",
+        "colorTexto": "#66FFE6",
+        "borde": "#00CCCC"
+      }
+    },
+
+    "Escenario": {
+      "id": 301,
+      "nombre": "Distrito Alfa",
+      "tipo": "ciudadNeon",
+      "clima": "nocturno",
+      "iluminacion": "neón azul",
+      "enemigosActivos": [901, 902],
+      "elementosInteractivos": ["puertasHolograficas", "pantallasDeControl"],
+      "colorAmbiente": "#0033FF",
+      "fechaCreacion": "2025-09-01",
+      "colorPrincipal": "#3366FF",
+      "uiStyle": {
+        "colorFondo": "#000033",
+        "colorTexto": "#99CCFF",
+        "borde": "#0033FF"
+      }
+    },
+
+    "ModoDeJuego": {
+      "id": 501,
+      "nombre": "Modo Historia",
+      "descripcion": "Campaña narrativa para un jugador donde el protagonista combate corporaciones tecnológicas en un futuro distópico.",
+      "objetivos": [
+        "derrotarCorporaciónPEDMAS",
+        "recolectarRecursos",
+        "descubrirPasadoProtagonista"
+      ],
+      "cooperativo": false,
+      "fechaCreacion": "2025-07-15",
+      "colorPrincipal": "#FF9900",
+      "uiStyle": {
+        "colorFondo": "#331A00",
+        "colorTexto": "#FFCC66",
+        "borde": "#FF9900"
+      }
+    },
+
+    "MusicaYAmbiente": {
+      "id": 601,
+      "bandaSonora": ["synthwave", "retroTech", "neonDreams"],
+      "efectosSonido": ["explosiónPlasma", "descargaEléctrica", "pasosMetálicos"],
+      "entornosSonoros": ["urbano", "laboratorio", "fábricaAbandonada"],
+      "colorAmbientePrincipal": "#FF00FF",
+      "fechaCreacion": "2025-06-25",
+      "colorPrincipal": "#FF00FF",
+      "uiStyle": {
+        "colorFondo": "#330033",
+        "colorTexto": "#FF66FF",
+        "borde": "#CC00CC"
+      }
+    }
+  },
+
+  "actions": [
+    {
+      "name": "dispararArma",
+      "affects": "ArmaFuturista",
+      "parameters": ["armaId", "energiaUsada", "objetivoId"]
+    },
+    {
+      "name": "activarMecanica",
+      "affects": "Mecanica",
+      "parameters": ["mecanicaId", "personajeId"]
+    },
+    {
+      "name": "entrarEscenario",
+      "affects": "Escenario",
+      "parameters": ["escenarioId", "personajeId"]
+    },
+    {
+      "name": "iniciarModoJuego",
+      "affects": "ModoDeJuego",
+      "parameters": ["modoId", "dificultad"]
+    },
+    {
+      "name": "actualizarAmbiente",
+      "affects": "MusicaYAmbiente",
+      "parameters": ["escenarioId", "tipoAmbiente"]
+    },
+    {
+      "name": "equiparArma",
+      "affects": "Personaje",
+      "parameters": ["personajeId", "armaId"]
+    }
+  ],
+
+  "config": {
+    "colorPalette": {
+      "neonCyan": "#00FFFF",
+      "neonMagenta": "#FF33FF",
+      "aqua": "#33FFCC",
+      "electricBlue": "#0033FF",
+      "amberGlow": "#FF9900"
+    },
+    "soporteControl": ["teclado", "gamepad"],
+    "modoOnline": true,
+    "maxJugadores": 4,
+    "dificultadPredeterminada": "Normal",
+    "entornosDisponibles": ["urbano", "desértico", "laboratorio", "ciudadNeon"],
+    "fechaInstalacion": "2025-11-01"
+  }
+}
+
+@endjson
