@@ -1,0 +1,131 @@
+{
+  "player": {
+    "id": "player001",
+    "name": "Luis",
+    "startDate": "2025-11-10T08:00:00Z",
+    "mentalState": {
+      "stress": 30,
+      "fatigue": 15,
+      "fear": 20
+    },
+    "alive": true,
+    "skills": ["toolHandling", "problemSolving"],
+    "tools": ["tool001", "tool002", "tool003"],
+    "currentDay": 1,
+    "history": {
+      "motivation": "Necesidad económica",
+      "relationships": ["doctor001", "guard001"]
+    }
+  },
+  "corpse": [
+    {
+      "id": "corpse001",
+      "name": "Cuerpo sin identificar",
+      "arrivalDate": "2025-11-10T09:00:00Z",
+      "hostile": false,
+      "cleanliness": 40,
+      "mutations": [],
+      "procedures": ["autopsy", "embalming"],
+      "location": "depósito"
+    },
+    {
+      "id": "corpse002",
+      "name": "Cuerpo con anomalía",
+      "arrivalDate": "2025-11-11T10:00:00Z",
+      "hostile": true,
+      "cleanliness": 10,
+      "mutations": ["extraArm", "distortedFace"],
+      "procedures": ["autopsy"],
+      "location": "sala principal"
+    }
+  ],
+  "tool": [
+    {
+      "id": "tool001",
+      "name": "Linterna",
+      "type": "iluminación",
+      "batteryLevel": 80,
+      "usable": true,
+      "features": ["intensidad ajustable", "batería recargable"]
+    },
+    {
+      "id": "tool002",
+      "name": "Cepillo eléctrico",
+      "type": "limpieza",
+      "usable": true,
+      "features": ["velocidad variable"]
+    },
+    {
+      "id": "tool003",
+      "name": "Desinfectante",
+      "type": "producto químico",
+      "usable": true,
+      "features": ["acción rápida"]
+    }
+  ],
+  "morgue": {
+    "id": "morgue001",
+    "name": "Morgue Central",
+    "location": "Ciudad X",
+    "rooms": [
+      {
+        "name": "Sala principal",
+        "features": ["mesa de autopsias", "armarios de herramientas"]
+      },
+      {
+        "name": "Depósito de cuerpos",
+        "features": ["cámaras frigoríficas", "estanterías"]
+      },
+      {
+        "name": "Oficina",
+        "features": ["computadora", "archivos médicos"]
+      },
+      {
+        "name": "Cuarto de herramientas",
+        "features": ["inventario de productos", "sistema de seguridad"]
+      }
+    ],
+    "corpses": ["corpse001", "corpse002"],
+    "toolsAvailable": ["tool001", "tool002", "tool003"],
+    "securityLevel": 3
+  },
+  "actions": [
+    {
+      "name": "cleanCorpse",
+      "affects": "corpse",
+      "parameters": ["corpseId", "toolId"],
+      "description": "Limpia el cadáver usando una herramienta específica."
+    },
+    {
+      "name": "performAutopsy",
+      "affects": "corpse",
+      "parameters": ["corpseId"],
+      "description": "Realiza la autopsia en el cadáver seleccionado."
+    },
+    {
+      "name": "useTool",
+      "affects": "player",
+      "parameters": ["toolId"],
+      "description": "El jugador utiliza una herramienta del inventario."
+    },
+    {
+      "name": "surviveDay",
+      "affects": "player",
+      "parameters": ["dayNumber"],
+      "description": "El jugador intenta sobrevivir un día más en la morgue."
+    },
+    {
+      "name": "repairTool",
+      "affects": "tool",
+      "parameters": ["toolId"],
+      "description": "Repara una herramienta dañada."
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "language": "es",
+    "environment": "dev",
+    "author": "Luis Hoyos",
+    "lastUpdate": "2025-11-09T12:00:00Z"
+  }
+}
