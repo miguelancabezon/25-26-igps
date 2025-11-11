@@ -1,0 +1,25 @@
+@startuml
+salt
+{
+  {T
+  + 🎮 Aether Realms — Menú Principal
+  + [Tab: Inicio] [Tab: Personaje] [Tab: Tienda] [Tab: Ajustes]
+  --
+  + [Input: Nombre de personaje 🔎]
+  + [Button: Buscar]
+  + [Button: Crear personaje 🆕]
+  + [Button: Unirse partida ▶️]
+  --
+  + Tabla de personajes:
+  + | Nombre | Nivel | Clase | Estado |
+  + | valiente | 12 | Guerrero | Offline |
+  + | luna123 | 20 | Mago | Online |
+  --
+  + [Dropdown: Servidor]
+  + [Toggle: Mostrar offline]
+  + [Slider: Volumen]
+  + [Icon: ⚙️] [Icon: 💬] [Icon: 🛒]
+  }
+}
+@enduml
+

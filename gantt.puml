@@ -1,0 +1,49 @@
+@startuml
+title 🎮 Aether Realms — Cronograma de Desarrollo (Gantt)
+
+left to right direction
+skinparam activity {
+  BackgroundColor<<Preproducción>> LightBlue
+  BackgroundColor<<Producción>> LightGreen
+  BackgroundColor<<Postproducción>> LightYellow
+  BackgroundColor<<Hito>> Gold
+  BorderColor Black
+}
+
+' Fase 1 - Preproducción
+start
+:📅 Inicio del proyecto (2025-01-05);
+:🧠 Concept Art (14 días);
+:📜 Game Design Document (21 días);
+:🧩 Prototipo (30 días);
+note right
+Equipo: 2 programadores, 1 diseñador, 1 artista
+Recurso: Servidor dev pequeño
+Progreso: 70%
+end note
+:⭐ Hito: Prototipo Jugable;
+partition "Fase 2 - Producción" {
+  :⚙️ Core Gameplay (60 días);
+  :🗺️ Nivel 1 (30 días);
+  :🏰 Nivel 2 (30 días);
+  :🌐 Sistema de Red (45 días);
+  :🤖 IA y NPC (40 días);
+  :🎨 Animaciones (50 días);
+  :🧭 HUD y UI (25 días);
+  :🧪 QA Alpha (30 días);
+  note right
+  Progreso: 40%
+  Hito: Beta (2025-08-01)
+  end note
+  :🚀 Optimización (25 días);
+  :🌍 Localización (20 días);
+}
+
+partition "Fase 3 - Postproducción" {
+  :🧪 QA Beta (30 días);
+  :🔧 Correcciones (30 días);
+  :🏁 Versión 1.0 (Hito final - 2025-11-01);
+}
+stop
+@enduml
+
