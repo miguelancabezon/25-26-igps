@@ -1,0 +1,250 @@
+1 Mindmap
+@startmindmap
+' --- Estilos personalizados --- <style>
+mindmapDiagram {
+node {
+FontSize 14
+Padding 4 BorderColor #777777 BackgroundColor #ffffff RoundCorner 8
+} :depth(1) {
+BackgroundColor #8ECAE6
+FontColor #0b2545 }
+:depth(2) {
+BackgroundColor #FFB703
+} :depth(3) {
+BackgroundColor #FB8500 }
+:depth(4) {
+BackgroundColor #90BE6D
+} }
+</style>
+* City Builder <#8ECAE6> 🏢
+' LADO DERECHO (<<right>>)
+** Gameplay <<right>> <#FFB703> 🎮
+*** Mecánicas básicas <#FB8500>
+**** Construcción 🚜
+**** Economía 💰
+**** Felicidad ciudadana 😊
+*** Progresión <#FB8500>
+**** Era 1 🌱
+**** Era 2 ⚙
+**** Era 3
+🌆
+*** Retos <#FB8500>
+**** Desastres 🔥
+**** Energía ⚡
+**** Agua 💧
+** Objetivos <<right>> <#90BE6D> 🎯
+*** Campaña
+🏆
+ **** Misión 1 **** Misión 2 *** Sandbox ♾
+**** Logros
+**** Marcadores
+' LADO IZQUIERDO (<<left>>)
+** Arte & Audio <<left>> <#9B5DE5> 🎨
+*** Estilo visual <#F15BB5>
+**** Isométrico
+**** Paleta suave
+🎨
+*** UI/HUD <#F15BB5>
+**** Barras 📊
+**** Minimap
+🗺
+*** Sonido <#F15BB5> ****
+🎵
+BGM
+****
+SFX
+🔊
+**
+🛠
+Tech <<left>> <#00BBF9> *** Plataforma <#00F5D4>
+**** PC (Steam)
+**** Consola
+*** Online <#00F5D4>
+**** Coop 2-4 󰰁
+**** Guardado nube
+☁
+*** Rendimiento <#00F5D4> **** 60 FPS
+**** Escalado LOD
+@endmindmap
+2 Gantt
+@startgantt
+' Proyecto simple y básico Project starts 2025-11-10 printscale weekly
+' --- Leyenda colores por categoría ---
+' Preproducción: #8ECAE6 | Producción: #90BE6D | Post: #FFB703
+' FASE 1 - PREPRODUCCIÓN
+[Brief & Visión] lasts 5 days [#8ECAE6]
+note right of [Brief & Visión]
+Equipo: 1 Producer, 1 GD
+Recursos: Miro, docs
+end note
+[Investigación de mercado] lasts 5 days [#8ECAE6]
+
+ [Documento de diseño (GDD)] lasts 10 days [#8ECAE6] [Roadmap técnico] lasts 7 days [#8ECAE6]
+[Plan de arte y sonido] lasts 5 days [#8ECAE6]
+[Investigación de mercado] starts at [Brief & Visión]'s end
+[Documento de diseño (GDD)] starts at [Investigación de mercado]'s end [Roadmap técnico] starts at [Documento de diseño (GDD)]'s end
+[Plan de arte y sonido] starts at [Documento de diseño (GDD)]'s end
+[Brief & Visión] is 100% complete [Investigación de mercado] is 100% complete [Documento de diseño (GDD)] is 80% complete [Roadmap técnico] is 20% complete
+[Plan de arte y sonido] is 10% complete
+[Milestone 1: Prototipo] happens at [Roadmap técnico]'s end and is milestone
+' FASE 2 - PRODUCCIÓN
+[Arquitectura base] lasts 10 days [#90BE6D]
+[Core gameplay] lasts 20 days [#90BE6D]
+[Sistemas ciudad (economía)] lasts 20 days [#90BE6D] [Arte: tiles & edificios] lasts 25 days [#90BE6D] [UI/HUD básico] lasts 15 days [#90BE6D]
+[Integración audio] lasts 10 days [#90BE6D]
+[Testing interno] lasts 10 days [#90BE6D]
+[Arquitectura base] starts at [Milestone 1: Prototipo]'s end [Core gameplay] starts at [Arquitectura base]'s end
+[Sistemas ciudad (economía)] starts at [Core gameplay]'s end [Arte: tiles & edificios] starts at [Arquitectura base]'s end [UI/HUD básico] starts at [Core gameplay]'s end
+[Integración audio] starts at [UI/HUD básico]'s end
+[Testing interno] starts at [Sistemas ciudad (economía)]'s end
+[Core gameplay] is 30% complete [Arte: tiles & edificios] is 20% complete
+[Milestone 2: beta] happens at [Testing interno]'s end and is milestone
+' FASE 3 - POSTPRODUCCIÓN [Optimización] lasts 10 days [#FFB703]
+[QA externa] lasts 15 days [#FFB703] [Marketing & tienda] lasts 12 days [#FFB703] [Parche día 1] lasts 5 days [#FFB703]
+[Optimización] starts at [Milestone 2: beta]'s end [QA externa] starts at [Optimización]'s end [Marketing & tienda] starts at [Optimización]'s start
+
+ [Parche día 1] starts at [QA externa]'s end
+[Milestone 3: v1.0] happens at [QA externa]'s end and is milestone
+' Notas de recursos simples note right of [Core gameplay] 2 programadores
+󰠁󰞵
+end note
+note right of [Arte: tiles & edificios] 1 artista
+🎨
+end note
+note right of [QA externa]
+2 testers 🧪
+end note @endgantt
+3 JSON
+@startjson {
+"metadata": {
+"version": "1.0.0",
+"language": "es-ES",
+"environment": "dev",
+"author": "equipo-ciudad", "generatedAt": "2025-11-08T10:00:00Z"
+}, "config": {
+"autosave": true, "difficulty": "normal", "startDate": "2025-11-15", "currencySymbol": "₵", "taxRate": 0.12
+},
+"building": {
+"id": "bld-001",
+"name": "Granja",
+"createdAt": "2025-11-16T09:00:00Z", "state": "active",
+"level": 1,
+"cost": 1000,
+"upkeep": 25,
+"position": { "x": 12, "y": 8 }, "produces": ["trigo", "maíz"], "workersRequired": 2,
+"powered": true
+},
+
+ "citizen": {
+"id": "ctz-100",
+"fullName": "Ana Campos", "createdAt": "2025-11-16T09:05:00Z", "state": "happy",
+"age": 28,
+"homeId": "bld-010",
+"jobId": "bld-001",
+"skills": ["agricultura", "logística"], "isEmployed": true
+},
+"resource": {
+"id": "res-01",
+"name": "Madera",
+"createdAt": "2025-11-16T09:10:00Z", "state": "stocked",
+"quantity": 250,
+"maxStorage": 1000,
+"tradable": true
+},
+"city": {
+"id": "city-001",
+"name": "Villa Verde",
+"createdAt": "2025-11-16T09:00:00Z", "state": "running",
+"population": 25,
+"funds": 5000,
+"policies": ["reciclaje", "zonas-verdes"], "buildings": [
+{ "refId": "bld-001" },
+{ "refId": "bld-010" } ],
+"resources": [
+{ "refId": "res-01" }
+], "alerts": [
+{ "type": "info", "message": "
+✅
+Guardado automático activado" }, { "type": "warning", "message": "
+Baterías al 20%" }
+⚡
+] },
+"actions": { "createBuilding": {
+"affects": "building", "params": [
+
+ {"name": "name", "type": "string"}, {"name": "cost", "type": "number"}, {"name": "position", "type": "object"}, {"name": "powered", "type": "boolean"}
+] },
+"upgradeBuilding": { "affects": "building", "params": [
+{"name": "id", "type": "string"},
+{"name": "level", "type": "number"} ]
+}, "hireCitizen": {
+"affects": "citizen", "params": [
+{"name": "fullName", "type": "string"},
+{"name": "jobId", "type": "string"} ]
+}, "processTrade": {
+"affects": "resource", "params": [
+{"name": "resourceId", "type": "string"}, {"name": "amount", "type": "number"}, {"name": "sell", "type": "boolean"}
+] }
+} }
+@endjson
+4 Wireframe
+@startsalt {+
+"tabs" | [ ⚙🔄🏗🏙
+Ciudad] [
+Construir] [
+Comercio] [
+--
+{ " Ciudad" | 🏙
+{T
+Opciones]
++ ID | Nombre | Estado | Población
++ 001 | Villa Verde |
+✅
+Activa | 25
++ 002 | Barrio Norte |
+Energía baja | 8
+⚠
+}
+--
+[ Buscar...]
+🔍
+' input (falso)
+--
+' radio buttons () Pausa
+() Velocidad x1
+() x2
+--
+
+[ Nuevo edificio] [ Demoler] [ Guardar] [ Exportar] [ Ayuda] ❓📤💾🗑➕
+}
+--
+{" Construir" |
+🏗
+{ "Panel" |
+[Nombre edificio:] [__________]
+{ "Tipo" | () Vivienda () Producción () Servicio }
+[Coste estimado: 1000 ₵]
+{ "Potencia" | [☑] Requiere energía } [
+⬅🛠
+Colocar] [
+Atrás]
+--
+{"
+🔄
+Comercio" |
+{T
++ Recurso | Cantidad | Precio | Acción + Madera | 250 | 3 ₵ | [Vender]
++Trigo |120|5₵|[Comprar] }
+[⟳ Actualizar] [
+📈
+Historial]
+--
+{ " Opciones" |
+⚙
+{ "Ajustes" |
+{ "Dificultad" | [▼ normal] } { "Idioma" | [▼ es-ES] }
+{ "" | [☑] Autosave }
+[ Limpiar datos] [Cerrar ] ⚪🧹
+}
+}
+} @endsalt
