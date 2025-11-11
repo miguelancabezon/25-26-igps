@@ -1,0 +1,155 @@
+@startmindmap
+title Roadmap de nuestro FPS Neon Trigger
+
+<style>
+mindmapDiagram {
+  .EDJ {
+    BackgroundColor #E3F2FD
+    LineColor #1976D2
+  }
+  .AF {
+    BackgroundColor #F3E5F5
+    LineColor #7B1FA2
+  }
+  .LORE {
+    BackgroundColor #FFF3E0
+    LineColor #F57C00
+  }
+  .MDJ {
+    BackgroundColor #E8F5E9
+    LineColor #388E3C
+  }
+  .EV {
+    BackgroundColor #C8E6C9
+    LineColor #2E7D32
+    FontStyle italic
+  }
+  .MYA {
+    BackgroundColor #FFF9C4
+    LineColor #F9A825
+  }
+  .NT {
+    BackgroundColor #FFEBEE
+    LineColor #D32F2F
+    FontStyle bold
+    }
+}
+</style>
+
+- 🎯 Neon Trigger <<NT>>
+
+**[#E3F2FD] 🎮 Mecanicas principales <<EDJ>> 
+*** Movimiento fluido <<EDJ>>
+**** Sprinting y deslizamiento <<EDJ>>
+**** Parkour y escalada <<EDJ>>
+**** Doble salto <<EDJ>>
+**** Desplazamiento por paredes <<EDJ>>
+*** Combate dinámico <<EDJ>>
+**** Armas de fuego futuristas <<EDJ>>
+**** Habilidades basadas en energia <<EDJ>>
+***** Escudo de energia <<EDJ>>
+***** Salto propulsor <<EDJ>>
+***** Invisibilidad temporal <<EDJ>>
+***** Dash eléctrico <<EDJ>>
+*** Enemigos variados <<EDJ>>
+**** Drones de combate <<EDJ>>
+**** Soldados cibernéticos <<EDJ>>
+**** Jefes mecanizados <<EDJ>>
+*** Niveles interactivos <<EDJ>>
+**** Entornos destructibles <<EDJ>>
+**** Puzzles ambientales <<EDJ>>
+
+
+**[#F3E5F5] 💀 Armas futuristas <<AF>> 
+*** Pistolas <<AF>> 
+**** Pistola de plasma <<AF>> 
+**** Revolver de energía <<AF>> 
+*** Escopetas <<AF>> 
+**** Escopeta de dispersión ionica <<AF>> 
+**** Escopeta de energía concentrada <<AF>> 
+*** Rifles <<AF>> 
+**** Rifle de asalto láser <<AF>> 
+**** Rifle de francotirador de precisión <<AF>> 
+*** Explosivos <<AF>> 
+**** Granadas de pulso electromagnético <<AF>> 
+**** Minas adhesivas <<AF>> 
+**** Espada de energía neon <<AF>> 
+**** Bastón electrificado <<AF>> 
+*** Mejoras de armas que se pueden encontrar <<AF>> 
+**** Aumentos de cadencia de fuego <<AF>> 
+**** Modificadores de daño <<AF>> 
+***** fuego <<AF>> 
+***** hielo <<AF>> 
+***** electricidad <<AF>> 
+***** radiactividad <<AF>> 
+**** Aumentos de precisión <<AF>> 
+**** Sistemas de recarga rápida <<AF>> 
+
+**[#FFF9C4] 🎧️ Musica y ambiente <<MYA>>
+*** Banda sonora synthwave <<MYA>>
+**** Temas energéticos para combate <<MYA>>
+**** Melodías atmosféricas para exploración <<MYA>>
+*** Efectos de sonido futuristas <<MYA>>
+**** Sonidos de armas y explosiones <<MYA>>
+**** Ambientes urbanos y tecnológicos <<MYA>>
+*** Diseño de niveles neon <<MYA>>
+**** Ciudades futuristas iluminadas con neon <<MYA>>
+***** Paisajes urbanos distópicos <<MYA>>
+***** Rascacielos y puentes iluminados <<MYA>>
+**** Instalaciones tecnológicas y laboratorios <<MYA>>
+***** Paisajes naturales con ratos futuristas abadonados <<MYA>>
+***** Laboratorios de alta tecnología <<MYA>>
+**** Zonas industriales y fábricas abandonadas <<MYA>>
+***** Plantas de energía y maquinaria pesada <<MYA>>
+***** Redes de tuberías y cintas transportadoras <<MYA>>
+
+
+left side
+
+**[#FFF3E0] 🧠 Historia del mundo <<LORE>> 
+*** Contexto <<LORE>> 
+**** Año 2147 <<LORE>> 
+**** Megacorporaciones dominan el mundo <<LORE>> 
+**** Avances tecnológicos y cibernéticos <<LORE>> 
+**** Desigualdad social y resistencia ciudadana <<LORE>>
+*** Personajes principales <<LORE>>
+**** Protagonista: ex-soldado convertido en mercenario <<LORE>>
+**** Antagonista: líder de la megacorporación corrupta PEDMAS <<LORE>>
+**** Aliados: miembros de la resistencia y hackers <<LORE>>
+***  Trama principal <<LORE>>
+**** Descubrimiento de un complot para controlar la mente humana <<LORE>>
+**** Alianza con la resistencia para derrocar a PEDMAS <<LORE>>
+**** Misiones para sabotear operaciones de PEDMAS <<LORE>>
+**** Revelaciones sobre el pasado del protagonista <<LORE>>
+
+**[#C8E6C9] 🎨 Estilo Visual <<EV>>
+*** Estética cyberpunk <<EV>>
+**** Colores neón y contrastes fuertes <<EV>>
+***** Iluminación dinámica y efectos de neón <<EV>>
+***** Sombras pronunciadas y reflejos <<EV>>
+**** Diseño de personajes futuristas <<EV>>
+**** Entornos urbanos distópicos <<EV>>
+**** Interfaces holográficas <<EV>>
+*** Animaciones fluidas <<EV>>
+**** Movimientos de parkour y combate <<EV>>
+**** Efectos visuales de habilidades y armas <<EV>>
+***** Transiciones dinámicas entre escenas <<EV>>
+***** Efectos de partículas para explosiones y disparos <<EV>>
+
+**[#E8F5E9] 🕹️ Modos de juego <<MDJ>> 
+*** Modo Historia <<MDJ>>
+**** Misiones principales para derrocar a PEDMAS <<MDJ>>
+**** Misiones secundarias para ayudar a la resistencia <<MDJ>>
+**** Recolección de recursos y mejoras <<MDJ>>
+*** Modo Cooperativo <<MDJ>>
+**** Misiones especiales para equipos de hasta 4 jugadores <<MDJ>>
+**** Coordinación y estrategias en equipo <<MDJ>>
+*** PVP <<MDJ>>
+**** Modos de juego competitivos <<MDJ>>
+***** Deathmatch por equipos <<MDJ>>
+***** Captura la bandera <<MDJ>>
+***** Dominación de zonas <<MDJ>>
+**** Clasificaciones y recompensas <<MDJ>>
+
+
+@endmindmap

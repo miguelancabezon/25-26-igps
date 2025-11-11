@@ -1,0 +1,32 @@
+@startsalt
+{
+{+ Morgue Survival 🧟‍♂️ }
+[ Inventario | Estado | Herramientas | Procedimientos | Registro ]
+---
+{ Cadáveres en la morgue 🏢 }
++---------------------------------------------------------------+
+| ID        | Nombre               | Hostil | Limpieza | Mutación         | Ubicación      |
+|-----------|----------------------|--------|----------|------------------|----------------|
+| corpse001 | Cuerpo sin identificar| ❌     | 40%      | Ninguna          | Depósito       |
+| corpse002 | Cuerpo con anomalía   | ✅     | 10%      | Extra brazo, rostro distorsionado | Sala principal |
++---------------------------------------------------------------+
+---
+[🔦 Usar linterna] [🧴 Limpiar cadáver] [🩺 Realizar autopsia] [🛠️ Reparar herramienta] [📅 Pasar día]
+---
+{ Estado del jugador 👤 }
+Nombre: Luis
+Estrés: 30%
+Fatiga: 15%
+Miedo: 20%
+Herramientas: Linterna, Cepillo eléctrico, Desinfectante
+Día actual: 1
+---
+{ Registro de procedimientos 📋 }
++---------------------------------------------+
+| Día | Procedimiento | Cadáver     | Resultado |
+|-----|--------------|-------------|-----------|
+| 1   | Limpieza     | corpse001   | Completo  |
+| 1   | Autopsia     | corpse002   | Pendiente |
++---------------------------------------------+
+}
+@endsalt

@@ -1,0 +1,203 @@
+@startjson
+' Diagrama JSON: Sistema de Objetos - Juego Survival "Wasteland Survival"
+' Autor: Javier Turcios
+' Fecha: 2025-11-09
+
+<style>
+jsonDiagram {
+  node {
+    BackgroundColor lightcyan
+  }
+  arrow {
+    LineColor darkgreen
+  }
+  .metadata {
+    BackgroundColor lightgray
+  }
+  .playerProfile {
+    BackgroundColor lightblue
+  }
+  .item {
+    BackgroundColor lightgreen
+  }
+  .baseCamp {
+    BackgroundColor lightyellow
+  }
+  .creature {
+    BackgroundColor lightpink
+  }
+  .actions {
+    BackgroundColor orange
+  }
+}
+</style>
+
+{
+  "metadata": {
+    "systemName": "WastelandSurvivalEngine",
+    "version": "0.9.8",
+    "author": "Felix Manrique",
+    "environment": "development",
+    "language": "es-ES",
+    "lastUpdated": "2025-11-09T12:15:00Z",
+    "buildNumber": 112,
+    "debug": true
+  },
+
+  "playerProfile": {
+    "#color": "playerProfile",
+    "id": "player-surv-001",
+    "username": "LoneWanderer",
+    "level": 23,
+    "experiencePoints": 58250,
+    "health": 86,
+    "hunger": 32,
+    "thirst": 48,
+    "energy": 74,
+    "statusEffects": ["fracture", "tired"],
+    "lastSleep": "2025-11-09T02:20:00Z",
+    "inventoryCapacity": 50,
+    "inventoryUsed": 35,
+    "baseLocation": "sector-12N",
+    "joinedDate": "2025-08-03T14:00:00Z",
+    "lastLogin": "2025-11-09T11:47:13Z",
+    "isOnline": true,
+    "isInCoopTeam": false,
+    "statistics": {
+      "enemiesDefeated": 284,
+      "animalsHunted": 76,
+      "itemsCrafted": 458,
+      "deaths": 12,
+      "survivalDays": 94
+    },
+    "equippedItems": ["item-hatchet", "item-waterbottle", "item-bandage"],
+    "knownBlueprints": ["bp-campfire", "bp-spear", "bp-raincatcher"]
+  },
+
+  "item": {
+    "#color": "item",
+    "id": "item-hatchet",
+    "name": "Hacha improvisada",
+    "category": "arma",
+    "rarity": "común",
+    "durability": 87,
+    "maxDurability": 100,
+    "weight": 3.5,
+    "isEquipped": true,
+    "isCraftable": true,
+    "craftRecipe": {
+      "requiredLevel": 5,
+      "materials": [
+        {"name": "Madera", "quantity": 3},
+        {"name": "Piedra", "quantity": 2},
+        {"name": "Cuerda", "quantity": 1}
+      ],
+      "craftTimeSeconds": 35
+    },
+    "damage": {
+      "base": 15,
+      "criticalChance": 0.1,
+      "durabilityLossPerUse": 0.8
+    },
+    "useEffects": {
+      "staminaCost": 8,
+      "cooldownSeconds": 0.7
+    },
+    "iconUrl": "/assets/icons/hatchet.png",
+    "lastUsed": "2025-11-09T11:30:22Z"
+  },
+
+  "baseCamp": {
+    "#color": "baseCamp",
+    "id": "base-001",
+    "ownerId": "player-surv-001",
+    "name": "Refugio de Montaña",
+    "location": {"x": 412.4, "y": 86.2, "zone": "Sector-12N"},
+    "buildDate": "2025-09-22T18:44:00Z",
+    "isPublic": false,
+    "defenseLevel": 7,
+    "storageCapacity": 120,
+    "storedItems": [
+      {"itemId": "item-meat", "quantity": 12},
+      {"itemId": "item-wood", "quantity": 40},
+      {"itemId": "item-waterbottle", "quantity": 6}
+    ],
+    "structures": [
+      {"name": "Fogata", "level": 2, "isActive": true},
+      {"name": "Recolector de lluvia", "level": 1, "isActive": true},
+      {"name": "Cama improvisada", "level": 1, "isActive": false}
+    ],
+    "connectedPlayers": ["player-surv-002", "player-surv-003"]
+  },
+
+  "creature": {
+    "#color": "creature",
+    "id": "creature-mutant-03",
+    "species": "Canino mutado",
+    "type": "hostil",
+    "level": 12,
+    "health": 180,
+    "attackPower": 25,
+    "aggressionRadius": 15,
+    "dropItems": [
+      {"itemId": "item-meat", "chance": 0.8},
+      {"itemId": "item-hide", "chance": 0.4}
+    ],
+    "spawnArea": "Bosque Norte",
+    "lastSeen": "2025-11-09T09:12:45Z",
+    "isAlive": true
+  },
+
+  "actions": {
+    "#color": "actions",
+    "startSurvivalSession": {
+      "description": "Inicia una nueva sesión de supervivencia para el jugador",
+      "affectedClasses": ["playerProfile", "baseCamp"],
+      "requiredParams": ["playerId", "startingZone"],
+      "optionalParams": ["coopTeamId"],
+      "returnType": "sessionData",
+      "estimatedDuration": "sessionLength"
+    },
+    "craftItem": {
+      "description": "Crea un nuevo objeto usando materiales del inventario",
+      "affectedClasses": ["item", "playerProfile"],
+      "requiredParams": ["playerId", "blueprintId"],
+      "optionalParams": ["craftStationId"],
+      "returnType": "item",
+      "estimatedDuration": "5-30 seconds"
+    },
+    "consumeItem": {
+      "description": "Consume un ítem y aplica sus efectos (comida, medicina, etc.)",
+      "affectedClasses": ["playerProfile", "item"],
+      "requiredParams": ["playerId", "itemId"],
+      "optionalParams": ["quantity"],
+      "returnType": "effectResult",
+      "estimatedDuration": "< 1 second"
+    },
+    "attackCreature": {
+      "description": "Realiza un ataque contra una criatura hostil",
+      "affectedClasses": ["playerProfile", "creature"],
+      "requiredParams": ["playerId", "creatureId", "weaponId"],
+      "optionalParams": ["attackType", "isCritical"],
+      "returnType": "combatResult",
+      "estimatedDuration": "< 2 seconds"
+    },
+    "upgradeStructure": {
+      "description": "Mejora un edificio dentro del refugio",
+      "affectedClasses": ["baseCamp"],
+      "requiredParams": ["baseId", "structureName"],
+      "optionalParams": ["upgradeLevel"],
+      "returnType": "structureData",
+      "estimatedDuration": "10-60 seconds"
+    },
+    "saveGameProgress": {
+      "description": "Guarda el progreso del jugador y los datos de su base",
+      "affectedClasses": ["playerProfile", "baseCamp"],
+      "requiredParams": ["playerId", "saveSlot"],
+      "optionalParams": ["cloudSync"],
+      "returnType": "saveResult",
+      "estimatedDuration": "0.5-2 seconds"
+    }
+  }
+}
+@endjson

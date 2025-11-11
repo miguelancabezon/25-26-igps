@@ -1,38 +1,33 @@
 @startuml
-' Wireframe / Salt - Boceto de interfaz (menú principal)
+' Wireframe / SALT - Boceto de interfaz (menú principal)
 skinparam backgroundColor #FAFAFA
 skinparam shadowing false
 
-salt
+@startsalt
 {+
-|<size:18><b>🎮 Game Menu — Interfaz Principal</b></size>
-|[Home] [Inventory] [Shop] [Settings] [Leaderboard]
+<b><size:18>🎮 Game Menu — Interfaz Principal</size></b>
+==
+[Home] | [Inventory] | [Shop] | [Settings] | [Leaderboard]
 --
-|<b>🔎 Buscador</b>
-|[🔍 Buscar jugador...] [Ir ▶️]
+<b>🔎 Buscador</b>
+{ "🔍 Buscar jugador..." | [Ir ▶️] }
 --
-|<b>📋 Tabla de inventario</b>
-| Name | Qty | Type | Action
-| Aventurero's Sword ⚔️ | 1 | Weapon | [Equip 🗡️]
-| Healing Potion 🧪 | 5 | Consumable | [Use 🧪]
-| Wooden Shield 🛡️ | 1 | Armor | [Equip 🛡️]
+<b>📋 Tabla de inventario</b>
+{#
+Name | Qty | Type | Action
+Aventurero's Sword ⚔️ | 1 | Weapon | [Equip 🗡️]
+Healing Potion 🧪 | 5 | Consumable | [Use 🧪]
+Wooden Shield 🛡️ | 1 | Armor | [Equip 🛡️]
+}
 --
-|<b>👤 Player Card</b>
-| Name: Aventurero
-| Level: 3  •  HP: 85/100
-| [Profile ✏️] [Stats 📊] [Achievements 🏆]
+<b>👤 Player Card</b>
+Name: Aventurero  
+Level: 3 • HP: 85/100  
+[Profile ✏️] | [Stats 📊] | [Achievements 🏆]
 --
-|<b>Acciones rápidas</b>
-| [Start Game ▶️] [Load 💾] [Save 💾] [Exit ❌] [Help ❓]
-+
-end salt
-
-' Notas:
-' - Layout libre: cajas apiladas y separación con líneas.
-' - Tabs en la primera fila: Home / Inventory / Shop / Settings / Leaderboard.
-' - Tabla de inventario incluida con acciones (Equip, Use) como elementos interactivos.
-' - Emojis y símbolos usados para mejorar lectura: 🎮, 🔎, ⚔️, 🧪, 🛡️, ✏️, 📊, 🏆, ▶️, 💾, ❌, ❓
-' - Elementos interactivos en total (ejemplos): Tabs (5), Buscar (input + botón), acciones de fila (3), botones rápidos (5) => cumple mínimo 5 interactivos.
+<b>⚡ Acciones rápidas</b>
+[Start Game ▶️] | [Load 💾] | [Save 💾] | [Exit ❌] | [Help ❓]
+}
+@endsalt
 
 @enduml
-

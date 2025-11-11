@@ -1,0 +1,55 @@
+@startmindmap
+skinparam monochrome false
+
+*  "FPS Game 🎮"
+** "Gameplay ⚔️"
+*** "Combate 🔫"
+**** "Tipos de armas"
+**** "Recarga y munición"
+**** "Cobertura"
+*** "Movimiento 🏃"
+**** "Correr/Sprint"
+**** "Sigilo"
+**** "Desplazamiento vertical"
+*** "IA enemiga 🤖"
+**** "Zonas de patrullaje"
+**** "Area de vision"
+**** "Reacción al jugador"
+**** "Nivel de dificultad"
+
+** "Entornos 🌆"
+*** "Mapas abiertos 🌳"
+*** "Mapas urbanos 🏙️"
+*** "Efectos"
+**** "Ciclo de Día / noche"
+**** "Clima dinámico"
+
+** "Recursos y Economía 💰"
+*** "Armas y munición"
+*** "Salud y kits médicos"
+*** "Recompensas y progresión"
+*** "Pase de batalla"
+
+** "Multijugador 🌐"
+*** "Modos de juego"
+**** "5V5"
+**** "Plantar/desactivar bomba"
+*** "Comunicación 🗨️"
+**** "Chat de voz"
+**** "Chat escrito"
+***** "Filtrado de palabras ofensivas"
+*** "Matchmaking"
+
+** "Soporte Técnico y Servidores 🖥️"
+*** "Servidores"
+*** "Seguridad y anti-trampas"
+
+' Colores personalizados
+skinparam mindmapBackgroundColor #F0F8FF
+skinparam mindmapNodeBackgroundColor<<Gameplay>> #FFB6C1
+skinparam mindmapNodeBackgroundColor<<Entornos>> #ADD8E6
+skinparam mindmapNodeBackgroundColor<<Recursos y Economía>> #90EE90
+skinparam mindmapNodeBackgroundColor<<Multijugador>> #FFD700
+skinparam mindmapNodeBackgroundColor<<Soporte Técnico y Servidores>> #FFA07A
+
+@endmindmap

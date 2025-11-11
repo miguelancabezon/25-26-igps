@@ -1,0 +1,81 @@
+// main.js
+const data = {
+  "metadata": {
+    "version": "1.0",
+    "language": "es",
+    "environment": "production",
+    "author": "Katerine"
+  },
+  "classes": [
+    {
+      "id": 1,
+      "name": "Song",
+      "genre": "string",
+      "duration": 0,
+      "difficulty": "string",
+      "available": true,
+      "actions": [
+        {"name": "playSong", "parameters": []},
+        {"name": "pauseSong", "parameters": []}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Player",
+      "username": "string",
+      "score": 0,
+      "level": 1,
+      "inventory": [
+        {
+          "id": 1,
+          "name": "Song",
+          "genre": "string",
+          "duration": 0,
+          "difficulty": "string",
+          "available": true
+        }
+      ],
+      "actions": [
+        {"name": "performMove", "parameters": ["moveType"]},
+        {"name": "useItem", "parameters": ["itemId"]}
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Level",
+      "levelNumber": 1,
+      "song": {
+        "id": 1,
+        "name": "Song",
+        "genre": "string",
+        "duration": 0,
+        "difficulty": "string",
+        "available": true
+      },
+      "difficulty": "string",
+      "completed": false,
+      "actions": [
+        {"name": "startLevel", "parameters": []},
+        {"name": "endLevel", "parameters": []}
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Leaderboard",
+      "players": [
+        {
+          "id": 2,
+          "username": "string",
+          "score": 0,
+          "level": 1
+        }
+      ],
+      "topScores": [100, 90, 80],
+      "lastUpdate": "2025-11-09T10:00:00Z",
+      "actions": [
+        {"name": "updateLeaderboard", "parameters": []},
+        {"name": "getTopPlayers", "parameters": ["count"]}
+      ]
+    }
+  ]
+};

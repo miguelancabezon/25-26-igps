@@ -1,0 +1,106 @@
+@startjson
+title Game Objects - Proyecto FPS
+
+<style>
+  .h1 { BackGroundColor green; FontColor white; FontStyle italic }
+  .h2 { BackGroundColor red; FontColor white; FontStyle bold }
+</style>
+
+#highlight "name"
+#highlight "author" / "name" <<h1>>
+#highlight "author" / "email" <<h2>>
+
+{
+"name": "fps-game-engine",
+"version": "0.1.0",
+"description": "Definición de clases y objetos para un juego FPS",
+"author": {
+  "name": "Kevin Ponce",
+  "email": "kevin@example.com",
+  "url": "https://miportfolio.com"
+},
+"metadata": {
+  "language": "es",
+  "environment": "development",
+  "createdAt": "2025-11-09T10:00:00Z"
+},
+"classes": [
+  {
+    "className": "Weapon",
+    "color": "#FF4500",
+    "id": "weapon-001",
+    "name": "Rifle de Asalto",
+    "createdAt": "2025-11-05",
+    "status": "available",
+    "damage": 35,
+    "range": 250,
+    "isRanged": true
+  },
+  {
+    "className": "Character",
+    "color": "#1E90FF",
+    "id": "char-001",
+    "name": "Soldado Alpha",
+    "createdAt": "2025-11-06",
+    "status": "active",
+    "level": 5,
+    "health": 100,
+    "inventory": [
+      {
+        "refClass": "Weapon",
+        "id": "weapon-001",
+        "name": "Rifle de Asalto"
+      }
+    ]
+  },
+  {
+    "className": "Level",
+    "color": "#32CD32",
+    "id": "level-forest-01",
+    "name": "Bosque Inicial",
+    "createdAt": "2025-11-06",
+    "status": "design",
+    "difficulty": "easy",
+    "maxPlayers": 1
+  },
+  {
+    "className": "GameMechanic",
+    "color": "#D2691E",
+    "id": "mechanic-001",
+    "name": "Sistema de Salud",
+    "createdAt": "2025-11-07",
+    "status": "active",
+    "description": "Gestión de salud, regeneración y armadura"
+  }
+],
+"actions": [
+  {
+    "name": "createCharacter",
+    "affects": "Character",
+    "parameters": [
+      { "name": "name", "type": "string" },
+      { "name": "isNpc", "type": "boolean" }
+    ],
+    "returns": "Character"
+  },
+  {
+    "name": "equipWeapon",
+    "affects": "Character.inventory",
+    "parameters": [
+      { "name": "characterId", "type": "string" },
+      { "name": "weaponRef", "type": "object" }
+    ],
+    "returns": "inventory"
+  },
+  {
+    "name": "startLevel",
+    "affects": "Level",
+    "parameters": [
+      { "name": "levelId", "type": "string" },
+      { "name": "playerIds", "type": "array" }
+    ],
+    "returns": "session"
+  }
+]
+}
+@endjson
