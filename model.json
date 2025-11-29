@@ -1,0 +1,74 @@
+{
+    "Game": {
+      "id": "game-0001",
+      "name": "Aether Realms",
+      "releaseDate": "2026-06-01",
+      "state": "planning",
+      "genres": ["MMORPG", "Fantasía"],
+      "settings": {
+        "maxPlayersPerShard": 2000,
+        "region": "EU"
+      }
+    },
+    "Player": {
+      "id": "player-1001",
+      "username": "valiente123",
+      "createdAt": "2025-08-20T09:30:00Z",
+      "level": 12,
+      "isOnline": false,
+      "inventory": {
+        "id": "inv-5001",
+        "items": [
+          { "id": "wp-100", "type": "Weapon", "name": "Espada de Bronce", "durability": 78 },
+          { "id": "potion-1", "type": "Consumable", "name": "Poción menor de vida", "quantity": 3 }
+        ]
+      }
+    },
+    "Weapon": {
+      "id": "wp-100",
+      "name": "Espada de Bronce",
+      "createdAt": "2025-07-01",
+      "rarity": "común",
+      "damage": 12,
+      "isTwoHanded": false
+    },
+    "Level": {
+      "id": "lvl-01",
+      "name": "Bosque de Lynd",
+      "createdAt": "2025-09-10",
+      "difficulty": 3,
+      "npcs": [
+        { "id": "npc-201", "name": "Guardabosques Ely", "hostile": false }
+      ]
+    },
+    "actions": [
+      {
+        "name": "createPlayer",
+        "affects": "Player",
+        "parameters": ["username:string", "email:string"]
+      },
+      {
+        "name": "equipWeapon",
+        "affects": "Player",
+        "parameters": ["playerId:string", "weaponId:string"]
+      },
+      {
+        "name": "startMatchmaking",
+        "affects": "Game",
+        "parameters": ["region:string", "mode:string"]
+      },
+      {
+        "name": "purchaseItem",
+        "affects": "Player.inventory",
+        "parameters": ["playerId:string", "itemId:string", "quantity:int"]
+      }
+    ],
+    "metadata": {
+      "version": "1.0.0",
+      "language": "es",
+      "environment": "development",
+      "author": "Emilio Muciño Segura",
+      "lastUpdate": "2025-11-10T12:00:00Z"
+    }
+  }
+  
