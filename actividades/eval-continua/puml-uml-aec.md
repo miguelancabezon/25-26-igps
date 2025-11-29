@@ -1,5 +1,5 @@
 # Actividad de Evaluación Continua - PlantUML UML - Sistema de Gestión de Biblioteca Universitaria
-<!--
+<div style="display: none;">
 
 <h3><b>¡IMPORANTE!</b></h3>
 
@@ -7,7 +7,6 @@
 > La entrega se debe hacer en la carpeta entregas > nombre.apellido > AEC-PUML-UML
 >
 > Cualquier entrega realizada en otra carpeta se considerará **NO ENTREGADA**
->
 
 ## Índice
 - [Objetivos](#objectives "Ir a Objetivos")
@@ -122,7 +121,7 @@ Debes crear un diagrama de casos de uso que incluya:
    8. Package "Penalizaciones": Calcular multa, Pagar multa online, Aplicar penalización (bibliotecario).
    9. Package "Reportes" (solo bibliotecario): Generar reporte de préstamos, Generar reporte de multas.
 3. Relaciones a incluir
-   Para el diagrama de casos de uso, las relaciones serán las flechas normales de `-->`
+   Para el diagrama de casos de uso, las relaciones serán las flechas normales de `-->`. 
 
 ### Elementos adicionales
 - Agregar packages a los casos de uso y/o a los actores.
@@ -476,4 +475,4 @@ Devuelto --> [*]
 - Usar estilos personalizados y colores consistentes en todos los diagramas
 - Incluir un documento markdown explicando decisiones de diseño
 
- -->
+ </div>
