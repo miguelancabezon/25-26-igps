@@ -48,5 +48,30 @@ El sistema debe controlar el estado de cada préstamo desde su solicitud hasta s
 - Gestionar reservas
 - Generar reportes
 
-### Reglas de nego
+### Reglas de Negocio
 
+**Préstamos para Estudiantes:**
+- Máximo 3 libros simultáneos
+- Duración: 14 días
+- Renovaciones: hasta 2 veces (si no hay reservas)
+- Multa por retraso: €0.50/día
+
+**Préstamos para Profesores:**
+- Máximo 5 libros simultáneos
+- Duración: 30 días
+- Renovaciones: hasta 2 veces
+- Multa por retraso: €0.30/día
+
+**Estados de un Libro:**
+- Disponible
+- Prestado
+- Reservado
+- En Mantenimiento
+
+**Estados de un Préstamo:**
+- Solicitado
+- Activo
+- Renovado
+- Vencido
+- Devuelto
+- Cancelado
