@@ -1,5 +1,5 @@
 # Actividad de Evaluación Continua - PlantUML UML - Sistema de Gestión de Biblioteca Universitaria
-
+<!--
 
 <h3><b>¡IMPORANTE!</b></h3>
 
@@ -8,7 +8,7 @@
 >
 > Cualquier entrega realizada en otra carpeta se considerará **NO ENTREGADA**
 >
-<!--
+
 ## Índice
 - [Objetivos](#objectives "Ir a Objetivos")
 - [Datos](#data "Ir a Datos")
