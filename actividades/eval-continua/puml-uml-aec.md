@@ -401,6 +401,49 @@ Estado de historia: [H] para recordar último sub-estado en "En Curso"
 - Etiquetas explicativas en transiciones complejas
 - Uso de fork y join
 
+### Ejemplo de diagrama de estados
+```plantuml
+@startuml
+title Diagrama de Estados - Ciclo de Vida del Préstamo
+
+[*] --> Solicitado
+
+state Solicitado #Yellow {
+Solicitado : entry / registrarSolicitud()
+Solicitado : entry / verificarDisponibilidad()
+}
+
+Solicitado --> Activo : aprobar [libro disponible]
+Solicitado --> Cancelado : rechazar [libro no disponible]
+
+state "En Curso" as EnCurso {
+state Activo #LightGreen {
+Activo : entry / enviarEmailConfirmacion()
+Activo : entry / actualizarDisponibilidadLibro()
+Activo : exit / registrarHistorial()
+}
+
+state Renovado #LightGreen {
+Renovado : entry / extenderFechaVencimiento()
+Renovado : entry / incrementarContadorRenovaciones()
+}
+
+state Vencido #LightCoral {
+Vencido : entry / calcularMulta()
+Vencido : entry / enviarNotificacionRetraso()
+}
+
+Activo --> Renovado : renovar [renovaciones < 2]
+Activo --> Vencido : after 14 days
+Renovado --> Vencido : after 14 days
+}
+
+EnCurso --> Devuelto : devolver
+Devuelto --> [*]
+
+@enduml
+```
+
 
 
 
