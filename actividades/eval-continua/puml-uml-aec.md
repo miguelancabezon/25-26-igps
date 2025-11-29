@@ -374,13 +374,28 @@ Crear un super-estado "**En Curso**" que contenga:
    entry / liberarLibro()
    entry / procesarSiguienteReserva() 3.
 
-#### Etiquetas en Transiciones (5 mínimo):
+#### Etiquetas en Transiciones (5 mínimo)
 - `[libro disponible]` 
 - `[renovaciones < 2]`
 - `[sin reservas pendientes]`
 - `[usuario sin multas]`
 - `[a tiempo]`
 
+#### Eventos/Acciones (8 mínimo)
+- aprobar
+- rechazar
+- cancelar
+- devolver
+- renovar
+- vencer plazo
+- pagar multa
+- 14 días después (evento temporal)
+
+#### Estados Especiales
+Estado inicial: [*]
+Estado final: [*]
+Estado de decisión: [choice] para verificar renovaciones
+Estado de historia: [H] para recordar último sub-estado en "En Curso"
 
 ### Elementos adicionales
 - Etiquetas explicativas en transiciones complejas
