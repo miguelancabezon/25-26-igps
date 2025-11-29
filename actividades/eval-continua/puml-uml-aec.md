@@ -309,14 +309,88 @@ Debes mostrar las siguientes relaciones:
 
 
 ### Elementos adicionales
+- Incluir distintos tipos de relaciones entre los objetos.
 
-## Parte 1 - Diagrama de Casos de Uso
+## Parte 3 - Diagrama de Estados
+
 ### Objetivo de esta parte
-### Requisitos del Diagrama
+Modelar el **ciclo de vida completo** de un préstamo, desde su creación hasta su finalización, incluyendo todos los estados posibles y las transiciones entre ellos.
+
+### Estados del Préstamo (7 estados obligatorios)
+1. **[*] → Solicitado**: Estado inicial cuando se crea el préstamo
+2. **Solicitado**: Préstamo pendiente de aprobación por bibliotecario
+3. **Activo**: Préstamo aprobado y libro entregado al usuario
+4. **Renovado**: Préstamo que ha sido renovado (máximo 2 veces)
+5. **Vencido**: Préstamo que superó la fecha de devolución
+6. **Devuelto**: Préstamo completado correctamente
+7. **Cancelado**: Préstamo cancelado antes de ser activado
+8. **[*]**: Estado final
+
+### Transiciones Requeridas (mínimo 12)
+
+#### **Desde Solicitado:**
+- `aprobar [libro disponible]` → Activo
+- `rechazar [libro no disponible]` → Cancelado
+- `cancelar por usuario` → Cancelado
+
+#### **Desde Activo:**
+- `devolver [a tiempo]` → Devuelto
+- `vencer plazo` → Vencido
+- `renovar [renovaciones < 2 AND sin reservas]` → Renovado
+- `renovar [renovaciones >= 2]` → Activo (con nota de rechazo)
+
+#### **Desde Renovado:**
+- `devolver [a tiempo]` → Devuelto
+- `vencer plazo` → Vencido
+- `renovar [renovaciones < 2 AND sin reservas]` → Renovado
+
+#### **Desde Vencido:**
+- `devolver con multa` → Devuelto
+- `continuar vencido [>30 días]` → Vencido crítico
+
+#### **A Estado Final:**
+- Devuelto → [*]
+- Cancelado → [*]
+
+### Elementos requeridos
+
+#### Estados Compuestos
+Crear un super-estado "**En Curso**" que contenga:
+- Activo
+- Renovado
+- Vencido
+
+#### Acciones de Estados (entry/exit)
+- Activo:
+   entry / enviarEmailConfirmacion()
+   entry / actualizarDisponibilidadLibro()
+   exit / registrarHistorial()
+
+- Vencido:
+   entry / calcularMulta()
+   entry / enviarNotificacionRetraso()
+
+- Devuelto:
+   entry / liberarLibro()
+   entry / procesarSiguienteReserva() 3.
+
+#### Etiquetas en Transiciones (5 mínimo):
+- `[libro disponible]` 
+- `[renovaciones < 2]`
+- `[sin reservas pendientes]`
+- `[usuario sin multas]`
+- `[a tiempo]`
+
+
 ### Elementos adicionales
+- Etiquetas explicativas en transiciones complejas
+- Uso de fork y join
 
 
 
 
+## Elementos extra para el ejercicio
+- Usar estilos personalizados y colores consistentes en todos los diagramas
+- Incluir un documento markdown explicando decisiones de diseño
 
  
