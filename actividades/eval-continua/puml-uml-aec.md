@@ -7,22 +7,41 @@
 > La entrega se debe hacer en la carpeta entregas > nombre.apellido > AEC-PUML-UML
 >
 > Cualquier entrega realizada en otra carpeta se considerará **NO ENTREGADA**
+>
+
+## Índice
+- [Objetivos](#objectives "Ir a Objetivos")
+- [Datos](#data "Ir a Datos")
+- [Contexto](#context "Ir a Contexto")
+- [Descripción](#description "Ir a Descripción")
+- [Parte 1 - Diagrama de Casos de Uso](#part-1 "Ir a Parte 1")
+- [Parte 2 - Diagrama de Objetos](#part-2 "Ir a Parte 2")
+- [Parte 3 - Diagrama de Estados](#part-3 "Ir a Parte 3")
+- [Elementos extra para el ejercicio](#extra "Ir a Extra")
 
 ## Objetivos
+<div id="objectives"></div>
+
 - Modelar un sistema completo usando diferentes tipos de diagramas UML
 - Practicar la creación de diagramas de objetos, casos de uso y estado
 - Comprender las relaciones entre diferentes vistas del sistema
 - Aplicar PlantUML en un caso de uso real
 
 ## Datos
+<div id="data"></div>
+
 - Herramientas: PlantUML
 - Entregrables: 3 archivos `.puml`, uno por diagrama.
 
 ## Contexto
+<div id="context"></div>
+
 La Biblioteca Central de la Universidad necesita modernizar su sistema de gestión. El nuevo sistema debe permitir a estudiantes y profesores realizar préstamos de libros, gestionar reservas y manejar devoluciones.<br/>
 El sistema debe controlar el estado de cada préstamo desde su solicitud hasta su finalización, y permitir diferentes operaciones según el rol del usuario.
 
 ## Descripción del Sistema
+<div id="description"></div>
+
 
 ### Actores del sistema
 1. Estudiante: Puede buscar libros, hacer préstamos y reservas
@@ -79,6 +98,7 @@ El sistema debe controlar el estado de cada préstamo desde su solicitud hasta s
 ---
 
 ## Parte 1 - Diagrama de Casos de Uso
+<div id="part-1"></div>
 
 ### Objetivo de esta parte
 Modelar las interacciones entre los actores y el sistema, mostrando todas las funcionalidades disponibles.
@@ -112,6 +132,8 @@ Debes crear un diagrama de casos de uso que incluya:
 --- 
 
 ## Parte 2 - Diagrama de Objetos
+<div id="part-2"></div>
+
 ### Objetivo de esta parte
 Representar una instancia concreta del sistema en un momento específico, mostrando objetos reales y sus relaciones.
 
@@ -312,6 +334,7 @@ Debes mostrar las siguientes relaciones:
 - Incluir distintos tipos de relaciones entre los objetos.
 
 ## Parte 3 - Diagrama de Estados
+<div id="part-3"></div>
 
 ### Objetivo de esta parte
 Modelar el **ciclo de vida completo** de un préstamo, desde su creación hasta su finalización, incluyendo todos los estados posibles y las transiciones entre ellos.
@@ -448,6 +471,8 @@ Devuelto --> [*]
 
 
 ## Elementos extra para el ejercicio
+<div id="extra"></div>
+
 - Usar estilos personalizados y colores consistentes en todos los diagramas
 - Incluir un documento markdown explicando decisiones de diseño
 
