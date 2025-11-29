@@ -8,7 +8,7 @@
 >
 > Cualquier entrega realizada en otra carpeta se considerará **NO ENTREGADA**
 >
-
+<!--
 ## Índice
 - [Objetivos](#objectives "Ir a Objetivos")
 - [Datos](#data "Ir a Datos")
@@ -476,4 +476,4 @@ Devuelto --> [*]
 - Usar estilos personalizados y colores consistentes en todos los diagramas
 - Incluir un documento markdown explicando decisiones de diseño
 
- 
+ -->
