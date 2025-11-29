@@ -76,6 +76,8 @@ El sistema debe controlar el estado de cada préstamo desde su solicitud hasta s
 - Devuelto
 - Cancelado
 
+---
+
 ## Parte 1 - Diagrama de Casos de Uso
 
 ### Objetivo de esta parte
@@ -107,6 +109,7 @@ Debes crear un diagrama de casos de uso que incluya:
 - Etiquetas explicativas en las relaciones complejas.
 - Agrupación lógica de casos de uso relacionados.
 
+--- 
 
 ## Parte 2 - Diagrama de Objetos
 ### Objetivo de esta parte
@@ -118,7 +121,7 @@ Representar una instancia concreta del sistema en un momento específico, mostra
 
 **Situación:** Sistema con varios préstamos activos y una reserva.
 
-#### Objetos Requeridos (mínimo 15 objetos):
+#### Objetos Requeridos (mínimo 15 objetos)
 
 **Usuarios (3 objetos)**
 
@@ -210,18 +213,9 @@ Representar una instancia concreta del sistema en un momento específico, mostra
 ```
 
   
+**Préstamos (4 objetos)**
 
-  
-
-  
-
-  
-
-  
-
-  
-  3. Préstamos (4 objetos):
-  
+```
   prestamo1: Prestamo
   
   id: "PREST-2025-1234"
@@ -230,7 +224,9 @@ Representar una instancia concreta del sistema en un momento específico, mostra
   estado: "Activo"
   renovaciones: 0
   multa: 0.00
-  
+```
+
+```
   prestamo2: Prestamo
   
   id: "PREST-2025-1256"
@@ -239,7 +235,9 @@ Representar una instancia concreta del sistema en un momento específico, mostra
   estado: "Activo"
   renovaciones: 0
   multa: 0.00
-  
+```
+
+```
   prestamo3: Prestamo
   
   id: "PREST-2025-1189"
@@ -248,7 +246,9 @@ Representar una instancia concreta del sistema en un momento específico, mostra
   estado: "Vencido"
   renovaciones: 1
   multa: 6.00
-  
+```
+
+```
   prestamo4: Prestamo
   
   id: "PREST-2025-1290"
@@ -257,25 +257,31 @@ Representar una instancia concreta del sistema en un momento específico, mostra
   estado: "Activo"
   renovaciones: 0
   multa: 0.00
-  
-  4. Reservas (2 objetos):
-  
+```
+
+**Reservas (2 objetos)**
+
+```
   reserva1: Reserva
   
   id: "RES-2025-0089"
   fechaReserva: "2025-11-14"
   estado: "Pendiente"
   posicionCola: 1
-  
+```
+
+```
   reserva2: Reserva
   
   id: "RES-2025-0090"
   fechaReserva: "2025-11-15"
   estado: "Pendiente"
   posicionCola: 2
-  
-  5. Multa (1 objeto):
-  
+```
+
+**Multa (1 objeto)**
+
+```
   multa1: Multa
   
   id: "MULT-2025-045"
@@ -283,6 +289,24 @@ Representar una instancia concreta del sistema en un momento específico, mostra
   fechaGeneracion: "2025-11-04"
   estado: "Pendiente"
   concepto: "Retraso en devolución"
+```
+
+#### Relaciones entre Objetos
+
+Debes mostrar las siguientes relaciones:
+
+- estudiante1 tiene los préstamos prestamo1 y prestamo3
+- profesor1 tiene los préstamos prestamo2 y otro más
+- estudiante2 tiene el préstamo prestamo4
+- prestamo1 es del libro1
+- prestamo2 es del libro2
+- prestamo3 es del libro5 (vencido)
+- prestamo4 es del libro3
+- reserva1 es de libro2 y la hizo estudiante2
+- reserva2 es de libro2 y la hizo otro estudiante
+- multa1 está asociada a prestamo3 y a estudiante1
+  
+
 
 ### Elementos adicionales
 
