@@ -1,5 +1,5 @@
 # Actividad de Evaluación Continua - PlantUML UML - Sistema de Gestión de Biblioteca Universitaria
-<div style="display: none;">
+<!---
 
 <h3><b>¡IMPORANTE!</b></h3>
 
@@ -121,7 +121,7 @@ Debes crear un diagrama de casos de uso que incluya:
    8. Package "Penalizaciones": Calcular multa, Pagar multa online, Aplicar penalización (bibliotecario).
    9. Package "Reportes" (solo bibliotecario): Generar reporte de préstamos, Generar reporte de multas.
 3. Relaciones a incluir
-   Para el diagrama de casos de uso, las relaciones serán las flechas normales de `-->`. 
+   Para el diagrama de casos de uso, las relaciones serán las flechas normales de `\-\->`. 
 
 ### Elementos adicionales
 - Agregar packages a los casos de uso y/o a los actores.
@@ -428,15 +428,15 @@ Estado de historia: [H] para recordar último sub-estado en "En Curso"
 @startuml
 title Diagrama de Estados - Ciclo de Vida del Préstamo
 
-[*] --> Solicitado
+[*] \-\-> Solicitado
 
 state Solicitado #Yellow {
 Solicitado : entry / registrarSolicitud()
 Solicitado : entry / verificarDisponibilidad()
 }
 
-Solicitado --> Activo : aprobar [libro disponible]
-Solicitado --> Cancelado : rechazar [libro no disponible]
+Solicitado \-\-> Activo : aprobar [libro disponible]
+Solicitado \-\-> Cancelado : rechazar [libro no disponible]
 
 state "En Curso" as EnCurso {
 state Activo #LightGreen {
@@ -455,13 +455,13 @@ Vencido : entry / calcularMulta()
 Vencido : entry / enviarNotificacionRetraso()
 }
 
-Activo --> Renovado : renovar [renovaciones < 2]
-Activo --> Vencido : after 14 days
-Renovado --> Vencido : after 14 days
+Activo \-\-> Renovado : renovar [renovaciones < 2]
+Activo \-\-> Vencido : after 14 days
+Renovado \-\-> Vencido : after 14 days
 }
 
-EnCurso --> Devuelto : devolver
-Devuelto --> [*]
+EnCurso \-\-> Devuelto : devolver
+Devuelto \-\-> [*]
 
 @enduml
 ```
@@ -475,4 +475,4 @@ Devuelto --> [*]
 - Usar estilos personalizados y colores consistentes en todos los diagramas
 - Incluir un documento markdown explicando decisiones de diseño
 
- </div>
+--->
