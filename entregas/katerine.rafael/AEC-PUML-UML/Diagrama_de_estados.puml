@@ -1,0 +1,138 @@
+@startuml
+title Diagrama de Estados - Ciclo de Vida del Préstamo
+
+'--------------------------------------------------------
+' Estado inicial
+'--------------------------------------------------------
+[*] --> Solicitado : crearPrestamo()
+
+'--------------------------------------------------------
+' ESTADO SOLICITADO
+'--------------------------------------------------------
+state Solicitado #LightYellow {
+  Solicitado : entry / registrarSolicitud()
+  Solicitado : entry / verificarDisponibilidad()
+}
+
+Solicitado --> Activo : aprobar [libro disponible]
+Solicitado --> Cancelado : rechazar [libro no disponible]
+Solicitado --> Cancelado : cancelar por usuario
+
+'--------------------------------------------------------
+' ESTADO CANCELADO
+'--------------------------------------------------------
+Cancelado : entry / notificarCancelacion()
+Cancelado --> [*]
+
+'--------------------------------------------------------
+' SUPER-ESTADO "EN CURSO"
+'--------------------------------------------------------
+state "En Curso" as EnCurso {
+
+  ' Historia: recordar el último subestado
+  [H] --> Activo
+
+  '======================
+  ' ESTADO ACTIVO
+  '======================
+  state Activo #LightGreen {
+    Activo : entry / enviarEmailConfirmacion()
+    Activo : entry / actualizarDisponibilidadLibro()
+    Activo : exit / registrarHistorial()
+  }
+
+  '======================
+  ' ESTADO RENOVADO
+  '======================
+  state Renovado #LightBlue {
+    Renovado : entry / extenderFechaVencimiento()
+    Renovado : entry / incrementarContadorRenovaciones()
+  }
+
+  '======================
+  ' ESTADO VENCIDO
+  '======================
+  state Vencido #LightCoral {
+    Vencido : entry / calcularMulta()
+    Vencido : entry / enviarNotificacionRetraso()
+  }
+
+  '=======================================================
+  ' TRANSICIONES DESDE ACTIVO
+  '=======================================================
+
+  Activo --> Devuelto : devolver [a tiempo]
+  Activo --> Vencido : vencer plazo
+  Activo --> Renovado : renovar [renovaciones < 2 AND sin reservas]
+  Activo --> Activo : renovar [renovaciones >= 2] / registrarRechazoRenovacion()
+
+  '--------------------------------------------------------
+  ' USO DE CHOICE PARA DECISIÓN EN RENOVACIONES
+  '--------------------------------------------------------
+  Activo --> decisionRenovar : renovar
+  state decisionRenovar <<choice>>
+
+  decisionRenovar --> Renovado : [renovaciones < 2 AND sin reservas]
+  decisionRenovar --> Activo : [renovaciones >= 2] / registrarRechazoRenovacion()
+
+  '=======================================================
+  ' TRANSICIONES DESDE RENOVADO
+  '=======================================================
+  Renovado --> Devuelto : devolver [a tiempo]
+  Renovado --> Vencido : vencer plazo
+  Renovado --> Renovado : renovar [renovaciones < 2 AND sin reservas]
+
+  '=======================================================
+  ' TRANSICIONES DESDE VENCIDO
+  '=======================================================
+  Vencido --> Devuelto : devolver / generarMulta()
+  
+  ' Evento por tiempo: >30 días vencido
+  Vencido --> VencidoCritico : 30 días después
+
+  state VencidoCritico #Red {
+    VencidoCritico : entry / generarAlertaCritica()
+  }
+
+}
+
+'--------------------------------------------------------
+' ESTADO DEVUELTO
+'--------------------------------------------------------
+Devuelto : entry / liberarLibro()
+Devuelto : entry / procesarSiguienteReserva()
+Devuelto --> [*]
+
+'--------------------------------------------------------
+' TRANSICIONES DESDE EN CURSO
+'--------------------------------------------------------
+EnCurso --> Devuelto : devolver
+
+'--------------------------------------------------------
+' EJEMPLO DE FORK / JOIN
+' Al devolver, ejecutar dos procesos paralelos:
+'   - liberar libro
+'   - registrar historial
+'--------------------------------------------------------
+
+state fork1 <<fork>>
+state join1 <<join>>
+
+EnCurso --> fork1 : devolver
+
+fork1 --> procesoLiberar
+fork1 --> procesoHistorial
+
+state procesoLiberar {
+  procesoLiberar : liberarLibro()
+}
+
+state procesoHistorial {
+  procesoHistorial : registrarHistorialGlobal()
+}
+
+procesoLiberar --> join1
+procesoHistorial --> join1
+join1 --> Devuelto
+
+@enduml
