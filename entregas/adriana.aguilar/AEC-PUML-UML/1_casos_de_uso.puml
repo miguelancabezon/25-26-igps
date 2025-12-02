@@ -1,0 +1,215 @@
+@startuml Casos_de_Uso_Biblioteca
+
+title Sistema de Gestión de Biblioteca Universitaria\n**Diagrama de Casos de Uso**
+
+' ═══════════════════════════════════════════════════════════════
+' ESTILOS Y CONFIGURACIÓN
+' ═══════════════════════════════════════════════════════════════
+
+skinparam packageStyle rectangle
+skinparam actorStyle awesome
+skinparam backgroundColor #FAFAFA
+skinparam shadowing false
+
+skinparam actor {
+  BackgroundColor #3498DB
+  BorderColor #2C3E50
+  FontColor White
+  FontSize 12
+}
+
+skinparam usecase {
+  BackgroundColor #E8F8F5
+  BorderColor #16A085
+  FontColor #2C3E50
+  FontSize 11
+  ArrowColor #34495E
+}
+
+skinparam package {
+  BackgroundColor #ECF0F1
+  BorderColor #7F8C8D
+  FontColor #2C3E50
+  FontSize 12
+  FontStyle bold
+}
+
+' ═══════════════════════════════════════════════════════════════
+' ACTORES
+' ═══════════════════════════════════════════════════════════════
+
+:Estudiante: as estudiante #3498DB
+:Profesor: as profesor #9B59B6
+:Bibliotecario: as bibliotecario #E67E22
+:Sistema: as sistema #95A5A6
+
+' ═══════════════════════════════════════════════════════════════
+' CASOS DE USO - GESTIÓN DE PRÉSTAMOS
+' ═══════════════════════════════════════════════════════════════
+
+package "Gestión de Préstamos" #LightBlue {
+  usecase "Solicitar préstamo" as UC1 #B3E5FC
+  usecase "Renovar préstamo" as UC2 #B3E5FC
+  usecase "Devolver libro" as UC3 #B3E5FC
+  usecase "Procesar devolución" as UC4 #81D4FA
+  usecase "Registrar préstamo\nmanual" as UC5 #81D4FA
+}
+
+' ═══════════════════════════════════════════════════════════════
+' CASOS DE USO - GESTIÓN DE RESERVAS
+' ═══════════════════════════════════════════════════════════════
+
+package "Gestión de Reservas" #LightGreen {
+  usecase "Hacer reserva" as UC6 #C8E6C9
+  usecase "Cancelar reserva" as UC7 #C8E6C9
+  usecase "Notificar\ndisponibilidad" as UC8 #A5D6A7
+}
+
+' ═══════════════════════════════════════════════════════════════
+' CASOS DE USO - BÚSQUEDA Y CONSULTA
+' ═══════════════════════════════════════════════════════════════
+
+package "Búsqueda y Consulta" #LightYellow {
+  usecase "Buscar en catálogo" as UC9 #FFF9C4
+  usecase "Ver historial\nde préstamos" as UC10 #FFF59D
+  usecase "Consultar estado\nde libro" as UC11 #FFF176
+}
+
+' ═══════════════════════════════════════════════════════════════
+' CASOS DE USO - PENALIZACIONES
+' ═══════════════════════════════════════════════════════════════
+
+package "Penalizaciones" #LightCoral {
+  usecase "Calcular multa" as UC12 #FFCCBC
+  usecase "Pagar multa online" as UC13 #FFAB91
+  usecase "Aplicar\npenalización" as UC14 #FF8A65
+}
+
+' ═══════════════════════════════════════════════════════════════
+' CASOS DE USO - REPORTES
+' ═══════════════════════════════════════════════════════════════
+
+package "Reportes" #Lavender {
+  usecase "Generar reporte\nde préstamos" as UC15 #D1C4E9
+  usecase "Generar reporte\nde multas" as UC16 #B39DDB
+}
+
+' ═══════════════════════════════════════════════════════════════
+' RELACIONES - ESTUDIANTE
+' ═══════════════════════════════════════════════════════════════
+
+estudiante --> UC1
+estudiante --> UC2
+estudiante --> UC3
+estudiante --> UC6
+estudiante --> UC7
+estudiante --> UC9
+estudiante --> UC10
+estudiante --> UC11
+estudiante --> UC13
+
+' ═══════════════════════════════════════════════════════════════
+' RELACIONES - PROFESOR (hereda de Estudiante)
+' ═══════════════════════════════════════════════════════════════
+
+profesor --> UC1
+profesor --> UC2
+profesor --> UC3
+profesor --> UC6
+profesor --> UC7
+profesor --> UC9
+profesor --> UC10
+profesor --> UC11
+profesor --> UC13
+
+' Nota de herencia
+note right of profesor
+  Profesores tienen los mismos
+  permisos que estudiantes, pero:
+  • Préstamos más largos (30 días)
+  • Más libros simultáneos (5)
+  • Multas reducidas (€0.30/día)
+end note
+
+' ═══════════════════════════════════════════════════════════════
+' RELACIONES - BIBLIOTECARIO
+' ═══════════════════════════════════════════════════════════════
+
+bibliotecario --> UC4
+bibliotecario --> UC5
+bibliotecario --> UC6
+bibliotecario --> UC7
+bibliotecario --> UC9
+bibliotecario --> UC11
+bibliotecario --> UC14
+bibliotecario --> UC15
+bibliotecario --> UC16
+
+' ═══════════════════════════════════════════════════════════════
+' RELACIONES - SISTEMA
+' ═══════════════════════════════════════════════════════════════
+
+sistema --> UC8
+sistema --> UC12
+
+' Nota del sistema
+note left of sistema
+  El sistema ejecuta
+  automáticamente:
+  • Notificaciones
+  • Cálculo de multas
+  • Verificaciones
+end note
+
+' ═══════════════════════════════════════════════════════════════
+' NOTAS ADICIONALES
+' ═══════════════════════════════════════════════════════════════
+
+note bottom of UC1
+  <b>Condiciones:</b>
+  • Libro disponible
+  • Usuario sin multas pendientes
+  • No exceder límite de préstamos
+end note
+
+note bottom of UC2
+  <b>Límite:</b>
+  Máximo 2 renovaciones
+  por préstamo
+end note
+
+note bottom of UC6
+  <b>Solo si:</b>
+  El libro está
+  actualmente prestado
+end note
+
+note bottom of UC15
+  <b>Solo Bibliotecario</b>
+  Acceso restringido
+  a reportes del sistema
+end note
+
+' ═══════════════════════════════════════════════════════════════
+' LEYENDA
+' ═══════════════════════════════════════════════════════════════
+
+legend bottom
+  <b>Sistema de Gestión de Biblioteca Universitaria</b>
+  
+  <b>Actores:</b>
+  • Estudiante: Usuarios con préstamos estándar (14 días, 3 libros)
+  • Profesor: Usuarios con préstamos extendidos (30 días, 5 libros)
+  • Bibliotecario: Personal administrativo con acceso completo
+  • Sistema: Procesos automáticos del sistema
+  
+  <b>Reglas de negocio:</b>
+  • Estudiantes: 14 días, €0.50/día multa
+  • Profesores: 30 días, €0.30/día multa
+  • Renovaciones: máximo 2 por préstamo
+  
+  <b>Autor:</b> Adriana Aguilar
+  <b>Fecha:</b> Noviembre 2025
+end legend
+
+@enduml
