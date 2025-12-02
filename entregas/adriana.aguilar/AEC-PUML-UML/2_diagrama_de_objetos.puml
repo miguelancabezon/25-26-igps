@@ -1,0 +1,306 @@
+@startuml Diagrama_de_Objetos_Biblioteca
+
+title Sistema de Gestión de Biblioteca Universitaria\n**Diagrama de Objetos - Instancia del 15/11/2025 14:30h**
+
+' ═══════════════════════════════════════════════════════════════
+' ESTILOS Y CONFIGURACIÓN
+' ═══════════════════════════════════════════════════════════════
+
+skinparam backgroundColor #FAFAFA
+skinparam shadowing false
+
+skinparam object {
+  BackgroundColor #E8F8F5
+  BorderColor #16A085
+  FontColor #2C3E50
+  FontSize 10
+  AttributeFontSize 9
+  ArrowColor #34495E
+}
+
+skinparam note {
+  BackgroundColor #FFF9C4
+  BorderColor #F9A825
+  FontColor #2C3E50
+}
+
+' ═══════════════════════════════════════════════════════════════
+' OBJETOS - USUARIOS
+' ═══════════════════════════════════════════════════════════════
+
+object "estudiante1 : Estudiante" as est1 #B3E5FC {
+  id = "EST-2023001"
+  nombre = "Ana García"
+  email = "ana.garcia@uni.es"
+  prestamosActivos = 2
+  multasAcumuladas = 1.50€
+}
+
+object "profesor1 : Profesor" as prof1 #D1C4E9 {
+  id = "PROF-2020045"
+  nombre = "Dr. Carlos Ruiz"
+  departamento = "Informática"
+  prestamosActivos = 3
+  multasAcumuladas = 0.00€
+}
+
+object "estudiante2 : Estudiante" as est2 #B3E5FC {
+  id = "EST-2024089"
+  nombre = "Luis Martínez"
+  email = "luis.martinez@uni.es"
+  prestamosActivos = 1
+  multasAcumuladas = 0.00€
+}
+
+' ═══════════════════════════════════════════════════════════════
+' OBJETOS - LIBROS
+' ═══════════════════════════════════════════════════════════════
+
+object "libro1 : Libro" as lib1 #C8E6C9 {
+  isbn = "978-3-16-148410-0"
+  titulo = "Clean Code"
+  autor = "Robert C. Martin"
+  ejemplares = 3
+  disponibles = 1
+  categoria = "Programación"
+}
+
+object "libro2 : Libro" as lib2 #C8E6C9 {
+  isbn = "978-0-13-468599-1"
+  titulo = "The Pragmatic Programmer"
+  autor = "Hunt & Thomas"
+  ejemplares = 2
+  disponibles = 0
+  categoria = "Programación"
+}
+
+object "libro3 : Libro" as lib3 #C8E6C9 {
+  isbn = "978-0-596-52068-7"
+  titulo = "JavaScript: The Good Parts"
+  autor = "Douglas Crockford"
+  ejemplares = 4
+  disponibles = 3
+  categoria = "Programación"
+}
+
+object "libro4 : Libro" as lib4 #C8E6C9 {
+  isbn = "978-0-134-68599-8"
+  titulo = "Design Patterns"
+  autor = "Gang of Four"
+  ejemplares = 2
+  disponibles = 1
+  categoria = "Ingeniería Software"
+}
+
+object "libro5 : Libro" as lib5 #C8E6C9 {
+  isbn = "978-0-321-12742-6"
+  titulo = "Domain-Driven Design"
+  autor = "Eric Evans"
+  ejemplares = 1
+  disponibles = 0
+  categoria = "Arquitectura"
+}
+
+' ═══════════════════════════════════════════════════════════════
+' OBJETOS - PRÉSTAMOS
+' ═══════════════════════════════════════════════════════════════
+
+object "prestamo1 : Prestamo" as pres1 #FFF59D {
+  id = "PREST-2025-1234"
+  fechaInicio = "2025-11-01"
+  fechaVencimiento = "2025-11-15"
+  estado = "Activo"
+  renovaciones = 0
+  multa = 0.00€
+}
+
+object "prestamo2 : Prestamo" as pres2 #FFF59D {
+  id = "PREST-2025-1256"
+  fechaInicio = "2025-10-28"
+  fechaVencimiento = "2025-11-27"
+  estado = "Activo"
+  renovaciones = 0
+  multa = 0.00€
+}
+
+object "prestamo3 : Prestamo" as pres3 #FFCCBC {
+  id = "PREST-2025-1189"
+  fechaInicio = "2025-10-20"
+  fechaVencimiento = "2025-11-03"
+  estado = "Vencido"
+  renovaciones = 1
+  multa = 6.00€
+}
+
+object "prestamo4 : Prestamo" as pres4 #FFF59D {
+  id = "PREST-2025-1290"
+  fechaInicio = "2025-11-10"
+  fechaVencimiento = "2025-11-24"
+  estado = "Activo"
+  renovaciones = 0
+  multa = 0.00€
+}
+
+object "prestamo5 : Prestamo" as pres5 #FFF59D {
+  id = "PREST-2025-1301"
+  fechaInicio = "2025-11-05"
+  fechaVencimiento = "2025-12-05"
+  estado = "Activo"
+  renovaciones = 0
+  multa = 0.00€
+}
+
+' ═══════════════════════════════════════════════════════════════
+' OBJETOS - RESERVAS
+' ═══════════════════════════════════════════════════════════════
+
+object "reserva1 : Reserva" as res1 #E1BEE7 {
+  id = "RES-2025-0089"
+  fechaReserva = "2025-11-14"
+  estado = "Pendiente"
+  posicionCola = 1
+}
+
+object "reserva2 : Reserva" as res2 #E1BEE7 {
+  id = "RES-2025-0090"
+  fechaReserva = "2025-11-15"
+  estado = "Pendiente"
+  posicionCola = 2
+}
+
+' ═══════════════════════════════════════════════════════════════
+' OBJETOS - MULTAS
+' ═══════════════════════════════════════════════════════════════
+
+object "multa1 : Multa" as mult1 #FFAB91 {
+  id = "MULT-2025-045"
+  monto = 6.00€
+  fechaGeneracion = "2025-11-04"
+  estado = "Pendiente"
+  concepto = "Retraso en devolución"
+}
+
+' ═══════════════════════════════════════════════════════════════
+' RELACIONES - ESTUDIANTE1
+' ═══════════════════════════════════════════════════════════════
+
+est1 "1" --> "2" pres1 : tiene >
+est1 --> pres3 : tiene >
+
+' ═══════════════════════════════════════════════════════════════
+' RELACIONES - PROFESOR1
+' ═══════════════════════════════════════════════════════════════
+
+prof1 "1" --> "3" pres2 : tiene >
+prof1 --> pres5 : tiene >
+
+' ═══════════════════════════════════════════════════════════════
+' RELACIONES - ESTUDIANTE2
+' ═══════════════════════════════════════════════════════════════
+
+est2 "1" --> "1" pres4 : tiene >
+est2 --> res1 : realizó >
+
+' ═══════════════════════════════════════════════════════════════
+' RELACIONES - PRÉSTAMOS A LIBROS
+' ═══════════════════════════════════════════════════════════════
+
+pres1 --> lib1 : préstamo de >
+pres2 --> lib2 : préstamo de >
+pres3 --> lib5 : préstamo de >
+pres4 --> lib3 : préstamo de >
+pres5 --> lib4 : préstamo de >
+
+' ═══════════════════════════════════════════════════════════════
+' RELACIONES - RESERVAS A LIBROS
+' ═══════════════════════════════════════════════════════════════
+
+res1 "1" ..> "1" lib2 : reserva de
+res2 ..> lib2 : reserva de
+
+' ═══════════════════════════════════════════════════════════════
+' RELACIONES - MULTAS
+' ═══════════════════════════════════════════════════════════════
+
+mult1 "1" <-- "1" pres3 : generada por
+mult1 --> est1 : asignada a >
+
+' ═══════════════════════════════════════════════════════════════
+' COMPOSICIÓN Y AGREGACIÓN
+' ═══════════════════════════════════════════════════════════════
+
+est1 o-- mult1
+
+' ═══════════════════════════════════════════════════════════════
+' NOTAS EXPLICATIVAS
+' ═══════════════════════════════════════════════════════════════
+
+note right of est1
+  <b>Ana García</b>
+  • 2 préstamos activos
+  • 1 préstamo vencido (6€ multa)
+  • Total multas: 1.50€
+end note
+
+note right of prof1
+  <b>Dr. Carlos Ruiz</b>
+  • 3 préstamos activos
+  • Sin multas
+  • Préstamos de 30 días
+end note
+
+note right of pres3
+  <b>⚠️ VENCIDO</b>
+  Vencido hace 12 días
+  Multa: 6.00€
+  (€0.50/día × 12 días)
+end note
+
+note left of lib2
+  <b>🔥 Libro muy demandado</b>
+  • 0 disponibles
+  • 2 reservas pendientes
+  • 1 préstamo activo
+end note
+
+note bottom of res1
+  <b>Primera en la cola</b>
+  Será notificado cuando
+  libro2 esté disponible
+end note
+
+note bottom of mult1
+  <b>Multa generada</b>
+  Asociada al préstamo
+  vencido de Ana García
+end note
+
+' ═══════════════════════════════════════════════════════════════
+' LEYENDA
+' ═══════════════════════════════════════════════════════════════
+
+legend bottom left
+  <b>Instantánea del Sistema</b>
+  <b>Fecha:</b> 15 de Noviembre de 2025, 14:30h
+  
+  <b>Resumen:</b>
+  • 3 Usuarios (2 estudiantes, 1 profesor)
+  • 5 Libros en catálogo
+  • 5 Préstamos (4 activos, 1 vencido)
+  • 2 Reservas pendientes
+  • 1 Multa pendiente de pago
+  
+  <b>Colores:</b>
+  • <back:#B3E5FC>Estudiantes</back>
+  • <back:#D1C4E9>Profesores</back>
+  • <back:#C8E6C9>Libros</back>
+  • <back:#FFF59D>Préstamos Activos</back>
+  • <back:#FFCCBC>Préstamos Vencidos</back>
+  • <back:#E1BEE7>Reservas</back>
+  • <back:#FFAB91>Multas</back>
+  
+  <b>Autor:</b> Adriana Aguilar
+  <b>Actividad:</b> AEC-PUML-UML
+end legend
+
+@enduml
