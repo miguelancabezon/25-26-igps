@@ -1,0 +1,43 @@
+@startuml
+title Ciclo de Vida del Préstamo (versión sencilla)
+
+[*] --> Solicitado
+
+' Solicitado
+Solicitado : entry / registrarSolicitud()
+
+Solicitado --> Activo : aprobar [libro disponible]
+Solicitado --> Cancelado : rechazar [libro no disponible]
+Solicitado --> Cancelado : cancelar usuario
+
+' Super-estado En Curso
+state EnCurso as "En Curso" {
+
+  ' Activo
+  Activo : entry / actualizarDisponibilidadLibro()
+
+  ' Renovado
+  Renovado : entry / extenderFecha()
+
+  ' Vencido
+  Vencido : entry / calcularMulta()
+
+  ' Transiciones internas
+  Activo --> Renovado : renovar [renovaciones < 2 AND sin reservas]
+  Activo --> Activo : renovar [renovaciones >= 2]
+  Activo --> Vencido : vencer plazo
+
+  Renovado --> Renovado : renovar [renovaciones < 2 AND sin reservas]
+  Renovado --> Vencido : vencer plazo
+
+  Vencido --> Devuelto : devolver con multa
+}
+
+' Salida hacia Devuelto
+EnCurso --> Devuelto : devolver [a tiempo]
+
+' Estados finales
+Devuelto --> [*]
+Cancelado --> [*]
+
+@enduml
