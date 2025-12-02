@@ -1,0 +1,69 @@
+@startuml diagrama_estados_prestamo
+title Ciclo de Vida del Préstamo
+
+state "Solicitado" as Solicitado #Yellow
+state "Cancelado" as Cancelado #LightGray
+state "Devuelto" as Devuelto #White
+state "En Curso" as EnCurso #LightBlue
+
+[*] --> Solicitado
+
+state Solicitado {
+    ' Sin acciones específicas en el prompt para este estado, pero se pueden añadir
+}
+
+Solicitado --> EnCurso : aprobar [libro disponible]
+Solicitado --> Cancelado : rechazar [libro no disponible]
+Solicitado --> Cancelado : cancelar por usuario
+
+state EnCurso {
+    state "Activo" as Activo #LightGreen {
+        entry / enviarEmailConfirmacion()
+        entry / actualizarDisponibilidadLibro()
+        exit / registrarHistorial()
+    }
+
+    state "Renovado" as Renovado #PaleGreen {
+        entry / extenderFechaVencimiento()
+        entry / incrementarRenovaciones()
+    }
+
+    state "Vencido" as Vencido #LightCoral {
+        entry / calcularMulta()
+        entry / enviarNotificacionRetraso()
+    }
+
+    ' History state
+    state H as "H"
+    
+    ' Choice para la decisión de renovación
+    state c_renovar <<choice>>
+
+    [*] --> Activo
+    
+    Activo --> Devuelto : devolver [a tiempo]
+    Activo --> Vencido : vencer plazo [14 días]
+    
+    ' Lógica de renovación desde Activo
+    Activo --> c_renovar : renovar
+    c_renovar --> Renovado : [renovaciones < 2 \nAND sin reservas]
+    c_renovar --> Activo : [renovaciones >= 2 \nOR hay reservas] \n(rechazo)
+
+    ' Lógica desde Renovado
+    Renovado --> Devuelto : devolver [a tiempo]
+    Renovado --> Vencido : vencer plazo
+    Renovado --> c_renovar : renovar
+
+    ' Lógica desde Vencido
+    Vencido --> Vencido : continuar vencido [>30 días] \n(vencido crítico)
+}
+
+Vencido --> Devuelto : devolver con multa
+
+Devuelto : entry / liberarLibro()
+Devuelto : entry / procesarSiguienteReserva()
+
+Devuelto --> [*]
+Cancelado --> [*]
+
+@enduml

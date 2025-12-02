@@ -1,0 +1,131 @@
+@startuml diagrama_objetos_biblioteca
+title Diagrama de Objetos - Situación al 15 Nov 2025, 14:30h
+
+' --- USUARIOS ---
+object "estudiante1: Estudiante" as est1 {
+    id = "EST-2023001"
+    nombre = "Ana García"
+    email = "ana.garcia@uni.es"
+    prestamosActivos = 2
+    multasAcumuladas = 1.50
+}
+
+object "profesor1: Profesor" as prof1 {
+    id = "PROF-2020045"
+    nombre = "Dr. Carlos Ruiz"
+    departamento = "Informática"
+    prestamosActivos = 3
+    multasAcumuladas = 0.00
+}
+
+object "estudiante2: Estudiante" as est2 {
+    id = "EST-2024089"
+    nombre = "Luis Martínez"
+    email = "luis.martinez@uni.es"
+    prestamosActivos = 1
+    multasAcumuladas = 0.00
+}
+
+' --- LIBROS ---
+object "libro1: Libro" as lib1 {
+    isbn = "978-3-16-148410-0"
+    titulo = "Clean Code"
+    autor = "Robert C. Martin"
+    ejemplares = 3
+    disponibles = 1
+}
+
+object "libro2: Libro" as lib2 {
+    isbn = "978-0-13-468599-1"
+    titulo = "The Pragmatic Programmer"
+    disponibles = 0
+}
+
+object "libro3: Libro" as lib3 {
+    isbn = "978-0-596-52068-7"
+    titulo = "JavaScript: The Good Parts"
+    disponibles = 3
+}
+
+object "libro5: Libro" as lib5 {
+    isbn = "978-0-321-12742-6"
+    titulo = "Domain-Driven Design"
+    disponibles = 0
+}
+
+' --- PRÉSTAMOS ---
+object "prestamo1: Prestamo" as prest1 {
+    id = "PREST-2025-1234"
+    fechaInicio = "2025-11-01"
+    fechaVencimiento = "2025-11-15"
+    estado = "Activo"
+}
+
+object "prestamo2: Prestamo" as prest2 {
+    id = "PREST-2025-1256"
+    fechaInicio = "2025-10-28"
+    fechaVencimiento = "2025-11-27"
+    estado = "Activo"
+}
+
+object "prestamo3: Prestamo" as prest3 {
+    id = "PREST-2025-1189"
+    fechaVencimiento = "2025-11-03"
+    estado = "Vencido"
+    multa = 6.00
+}
+
+object "prestamo4: Prestamo" as prest4 {
+    id = "PREST-2025-1290"
+    fechaInicio = "2025-11-10"
+    fechaVencimiento = "2025-11-24"
+    estado = "Activo"
+}
+
+' --- RESERVAS Y MULTAS ---
+object "reserva1: Reserva" as res1 {
+    id = "RES-2025-0089"
+    fecha = "2025-11-14"
+    posicionCola = 1
+}
+
+object "reserva2: Reserva" as res2 {
+    id = "RES-2025-0090"
+    fecha = "2025-11-15"
+    posicionCola = 2
+}
+
+object "multa1: Multa" as mul1 {
+    id = "MULT-2025-045"
+    monto = 6.00
+    concepto = "Retraso en devolución"
+}
+
+' --- RELACIONES ---
+
+' Estudiante 1 tiene prestamo 1 y 3
+est1 -- prest1
+est1 -- prest3
+
+' Profesor 1 tiene prestamo 2
+prof1 -- prest2
+
+' Estudiante 2 tiene prestamo 4 y reserva 1
+est2 -- prest4
+est2 -- res1
+
+' Relación Préstamo - Libro
+prest1 -- lib1
+prest2 -- lib2
+prest3 -- lib5
+prest4 -- lib3
+
+' Relación Reserva - Libro
+res1 -- lib2
+res2 -- lib2
+
+' Relación Multa (Asociada a prestamo3 y est1)
+mul1 .. prest3
+est1 -- mul1
+
+@enduml
