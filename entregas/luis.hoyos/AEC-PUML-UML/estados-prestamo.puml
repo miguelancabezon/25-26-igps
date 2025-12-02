@@ -1,0 +1,92 @@
+@startuml
+title Diagrama de Estados - Ciclo de Vida del Préstamo
+
+[*] --> Solicitado
+
+state Solicitado #Yellow {
+  Solicitado : entry / registrarSolicitud()
+  Solicitado : entry / verificarDisponibilidad()
+}
+
+Solicitado --> Activo : aprobar [libro disponible]
+Solicitado --> Cancelado : rechazar [libro no disponible]
+Solicitado --> Cancelado : cancelar por usuario
+
+state "En Curso" as EnCurso {
+  [*] --> Activo
+  [H] --> Activo
+  
+  state Activo #LightGreen {
+    Activo : entry / enviarEmailConfirmacion()
+    Activo : entry / actualizarDisponibilidadLibro()
+    Activo : exit / registrarHistorial()
+  }
+
+  state Renovado #LightGreen {
+    Renovado : entry / extenderFechaVencimiento()
+    Renovado : entry / incrementarContadorRenovaciones()
+    Renovado : entry / enviarNotificacionRenovacion()
+    Renovado : exit / registrarRenovacion()
+  }
+
+  state Vencido #LightCoral {
+    Vencido : entry / calcularMulta()
+    Vencido : entry / enviarNotificacionRetraso()
+    Vencido : entry / bloquearNuevosPrestamos()
+  }
+  
+  state VencidoCritico #Red {
+    VencidoCritico : entry / enviarNotificacionUrgente()
+    VencidoCritico : entry / contactarUsuario()
+  }
+
+  state verificarRenovacion <<choice>>
+  
+  Activo --> verificarRenovacion : renovar
+  verificarRenovacion --> Renovado : [renovaciones < 2 AND sin reservas]
+  verificarRenovacion --> Activo : [renovaciones >= 2]
+  
+  Activo --> Vencido : after 14 days
+  
+  Renovado --> verificarRenovacion : renovar
+  Renovado --> Vencido : after 14 days
+  
+  Vencido --> VencidoCritico : continuar vencido [>30 días]
+  VencidoCritico --> VencidoCritico : after 7 days
+}
+
+EnCurso --> Devuelto : devolver [a tiempo]
+Vencido --> Devuelto : devolver con multa [multa pagada]
+VencidoCritico --> Devuelto : devolver con multa [multa pagada]
+
+state Devuelto #LightBlue {
+  Devuelto : entry / liberarLibro()
+  Devuelto : entry / procesarSiguienteReserva()
+  Devuelto : entry / cerrarPrestamo()
+}
+
+state Cancelado #Gray {
+  Cancelado : entry / notificarCancelacion()
+  Cancelado : entry / liberarRecursos()
+}
+
+Devuelto --> [*]
+Cancelado --> [*]
+
+note right of Solicitado
+  El préstamo inicia cuando
+  el usuario lo solicita
+end note
+
+note right of EnCurso
+  Super-estado que agrupa
+  todos los estados activos
+end note
+
+note bottom of Vencido
+  Se calcula multa de
+  €0.50/día (estudiante)
+  €0.30/día (profesor)
+end note
+
+@enduml

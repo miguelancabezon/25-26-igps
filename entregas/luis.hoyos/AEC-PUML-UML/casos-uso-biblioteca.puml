@@ -1,0 +1,75 @@
+@startuml
+title Sistema de Gestión de Biblioteca Universitaria - Casos de Uso
+
+left to right direction
+
+actor Estudiante as est
+actor Profesor as prof
+actor Bibliotecario as bib
+actor Sistema as sys
+
+package "Gestión de Préstamos" {
+  usecase "Solicitar préstamo" as UC1
+  usecase "Renovar préstamo" as UC2
+  usecase "Devolver libro" as UC3
+  usecase "Procesar devolución" as UC4
+  usecase "Registrar préstamo manual" as UC5
+}
+
+package "Gestión de Reservas" {
+  usecase "Hacer reserva" as UC6
+  usecase "Cancelar reserva" as UC7
+  usecase "Notificar disponibilidad" as UC8
+}
+
+package "Búsqueda y Consulta" {
+  usecase "Buscar en catálogo" as UC9
+  usecase "Ver historial de préstamos" as UC10
+  usecase "Consultar estado de libro" as UC11
+}
+
+package "Penalizaciones" {
+  usecase "Calcular multa" as UC12
+  usecase "Pagar multa online" as UC13
+  usecase "Aplicar penalización" as UC14
+}
+
+package "Reportes" {
+  usecase "Generar reporte de préstamos" as UC15
+  usecase "Generar reporte de multas" as UC16
+}
+
+est --> UC1
+est --> UC2
+est --> UC3
+est --> UC6
+est --> UC7
+est --> UC9
+est --> UC10
+est --> UC11
+est --> UC13
+
+prof --> UC1
+prof --> UC2
+prof --> UC3
+prof --> UC6
+prof --> UC7
+prof --> UC9
+prof --> UC10
+prof --> UC11
+prof --> UC13
+
+bib --> UC4
+bib --> UC5
+bib --> UC14
+bib --> UC15
+bib --> UC16
+
+sys --> UC8
+sys --> UC12
+
+UC2 ..> UC1 : extends
+UC4 ..> UC3 : extends
+UC8 ..> UC6 : extends
+
+@enduml
