@@ -1,0 +1,107 @@
+@startuml
+title Diagrama de Estados
+
+skinparam backgroundColor #F7F9FC
+skinparam shadowing false
+
+skinparam state {
+  BackgroundColor #FFFFFF
+  BorderColor #2E5C9A
+  FontColor #1F3556
+}
+
+' =========================
+' Estado inicial
+' =========================
+[*] --> Solicitado
+
+state Solicitado #FFF3CD {
+  Solicitado : entry / registrarSolicitud()
+  Solicitado : entry / verificarDisponibilidad()
+}
+
+Solicitado --> Activo : aprobar\n[libro disponible]\n[usuario sin multas]
+Solicitado --> Cancelado : rechazar\n[libro no disponible]
+Solicitado --> Cancelado : cancelar\ncancelar por usuario
+
+' =========================
+' Super-estado En Curso
+' =========================
+state "En Curso" as EnCurso {
+
+  [H] --> Activo
+
+  state Activo #D4EDDA {
+    Activo : entry / enviarEmailConfirmacion()
+    Activo : entry / actualizarDisponibilidadLibro()
+    Activo : exit / registrarHistorial()
+  }
+
+  state Renovado #C3E6CB {
+    Renovado : entry / extenderFechaVencimiento()
+    Renovado : entry / incrementarContadorRenovaciones()
+  }
+
+  state Vencido #F8D7DA {
+    Vencido : entry / calcularMulta()
+    Vencido : entry / enviarNotificacionRetraso()
+  }
+
+  state VerificarRenovacion <<choice>>
+
+  ' Renovación desde Activo y Renovado
+  Activo --> VerificarRenovacion : renovar
+  Renovado --> VerificarRenovacion : renovar
+
+  VerificarRenovacion --> Renovado : [renovaciones < 2]\n[sin reservas pendientes]
+  VerificarRenovacion --> Activo : [renovaciones >= 2]\nrenovación rechazada
+
+  ' Vencimientos temporales
+  Activo --> Vencido : 14 días después / vencer plazo
+  Renovado --> Vencido : 14 días después / vencer plazo
+
+  ' Devoluciones
+  Activo --> Devuelto : devolver\n[a tiempo]
+  Renovado --> Devuelto : devolver\n[a tiempo]
+  Vencido --> Devuelto : devolver con multa\npagar multa
+}
+
+' =========================
+' Vencido crítico
+' =========================
+state "Vencido crítico" as VencidoCritico #F5C6CB
+Vencido --> VencidoCritico : continuar vencido\n[>30 días]
+
+' =========================
+' Estados finales
+' =========================
+state Devuelto #E2E3E5 {
+  Devuelto : entry / liberarLibro()
+  Devuelto : entry / procesarSiguienteReserva()
+}
+
+state Cancelado #E2E3E5
+
+Cancelado --> [*]
+
+' =========================
+' Concurrencia con fork/join (versión válida en estados)
+' =========================
+state ForkGestion <<fork>>
+state JoinCierre <<join>>
+
+VencidoCritico --> ForkGestion : situación crítica
+
+ForkGestion --> GestionMulta
+ForkGestion --> Devuelto
+
+state GestionMulta #F8D7DA {
+  GestionMulta : entry / registrarMulta()
+  GestionMulta : entry / bloquearNuevosPrestamos()
+}
+
+GestionMulta --> JoinCierre
+Devuelto --> JoinCierre
+JoinCierre --> [*]
+
+@enduml
