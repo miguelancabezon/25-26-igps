@@ -1,0 +1,142 @@
+@startuml
+title Diagrama de Estados - Ciclo de Vida del Préstamo
+
+!define YELLOW #FFFACD
+!define LIGHTGREEN #90EE90
+!define LIGHTCORAL #F08080
+!define LIGHTBLUE #ADD8E6
+!define LIGHTGRAY #D3D3D3
+
+skinparam state {
+    BackgroundColor White
+    BorderColor Black
+    ArrowColor Black
+}
+
+[*] --> Solicitado
+
+state Solicitado YELLOW {
+    Solicitado : entry / registrarSolicitud()
+    Solicitado : entry / verificarDisponibilidad()
+    Solicitado : entry / verificarLimiteUsuario()
+}
+
+state decision1 <<choice>>
+
+Solicitado --> decision1 : evaluar solicitud
+decision1 --> Activo : [libro disponible AND\nusuario sin multas]
+decision1 --> Cancelado : [libro no disponible OR\nlímite alcanzado]
+Solicitado --> Cancelado : cancelar por usuario
+
+state "En Curso" as EnCurso {
+    [*] --> Activo
+    state history <<history>>
+    
+    state Activo LIGHTGREEN {
+        Activo : entry / enviarEmailConfirmacion()
+        Activo : entry / actualizarDisponibilidadLibro()
+        Activo : entry / establecerFechaVencimiento()
+        Activo : exit / registrarHistorial()
+    }
+    
+    state Renovado LIGHTGREEN {
+        Renovado : entry / extenderFechaVencimiento()
+        Renovado : entry / incrementarContadorRenovaciones()
+        Renovado : entry / enviarConfirmacionRenovacion()
+    }
+    
+    state Vencido LIGHTCORAL {
+        Vencido : entry / calcularMulta()
+        Vencido : entry / enviarNotificacionRetraso()
+        Vencido : entry / bloquearNuevosPrestamos()
+        
+        state "Vencido Normal" as VencidoNormal
+        state "Vencido Crítico" as VencidoCritico
+        
+        [*] --> VencidoNormal
+        VencidoNormal --> VencidoCritico : continuar vencido\n[>30 días]
+    }
+    
+    state decision2 <<choice>>
+    state decision3 <<choice>>
+
+    Activo --> decision2 : renovar
+    decision2 --> Renovado : [renovaciones < 2 AND\nsin reservas pendientes]
+    decision2 --> Activo : [renovaciones >= 2]\n/ enviarMensajeRechazo()
+    
+    Activo --> Vencido : vencer plazo\n[after 14 days para estudiantes]\n[after 30 days para profesores]
+
+    Renovado --> decision3 : renovar
+    decision3 --> Renovado : [renovaciones < 2 AND\nsin reservas pendientes]
+    decision3 --> Renovado : [renovaciones >= 2]\n/ enviarMensajeRechazo()
+    
+    Renovado --> Vencido : vencer plazo\n[after 14 days]
+
+    state fork_state <<fork>>
+    state join_state <<join>>
+}
+
+EnCurso --> fork_state : devolver
+fork_state --> Devuelto
+fork_state --> VerificarMulta
+
+state VerificarMulta {
+    VerificarMulta : entry / verificarMultasPendientes()
+}
+
+VerificarMulta --> join_state
+join_state --> Devuelto
+
+state Devuelto LIGHTBLUE {
+    Devuelto : entry / liberarLibro()
+    Devuelto : entry / procesarSiguienteReserva()
+    Devuelto : entry / actualizarHistorialUsuario()
+    Devuelto : entry / enviarConfirmacionDevolucion()
+}
+
+state Cancelado LIGHTGRAY {
+    Cancelado : entry / liberarReserva()
+    Cancelado : entry / notificarCancelacion()
+}
+
+Devuelto --> [*]
+Cancelado --> [*]
+
+Vencido --> Devuelto : devolver con multa\n/ registrarPago()
+
+note right of Solicitado
+    Estado inicial del préstamo
+    Se validan condiciones previas
+end note
+
+note right of EnCurso
+    Super-estado que contiene
+    todos los estados activos
+    del préstamo
+end note
+
+note right of decision2
+    Punto de decisión para
+    verificar si se puede renovar
+    según reglas de negocio
+end note
+
+note bottom of Vencido
+    Se aplican multas:
+    • Estudiantes: €0.50/día
+    • Profesores: €0.30/día
+    Si >30 días: estado crítico
+end note
+
+note right of fork_state
+    Al devolver se ejecutan
+    múltiples acciones en paralelo
+end note
+
+note left of Devuelto
+    Estado final positivo
+    Libro disponible para
+    siguiente usuario
+end note
+
+@enduml

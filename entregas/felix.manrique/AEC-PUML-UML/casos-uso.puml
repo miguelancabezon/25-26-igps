@@ -1,0 +1,92 @@
+@startuml
+title Diagrama de Casos de Uso - Sistema de Gestión de Biblioteca Universitaria
+
+!define LIGHTBLUE #E3F2FD
+!define LIGHTGREEN #E8F5E9
+!define LIGHTYELLOW #FFF9C4
+!define LIGHTPINK #FCE4EC
+
+actor "Estudiante" as estudiante <<Usuario>>
+actor "Profesor" as profesor <<Usuario>>
+actor "Bibliotecario" as bibliotecario <<Personal>>
+actor "Sistema" as sistema <<Sistema Automático>>
+
+profesor -up-|> estudiante
+
+rectangle "Sistema de Gestión de Biblioteca" {
+
+    usecase "Solicitar préstamo" as UC1 LIGHTBLUE
+    usecase "Renovar préstamo" as UC2 LIGHTBLUE
+    usecase "Devolver libro" as UC3 LIGHTBLUE
+    usecase "Procesar devolución" as UC4 LIGHTYELLOW
+    usecase "Registrar préstamo manual" as UC5 LIGHTYELLOW
+
+    package "Gestión de Reservas" LIGHTGREEN {
+        usecase "Hacer reserva" as UC6
+        usecase "Cancelar reserva" as UC7
+        usecase "Notificar disponibilidad" as UC8
+    }
+
+    package "Búsqueda y Consulta" LIGHTBLUE {
+        usecase "Buscar en catálogo" as UC9
+        usecase "Ver historial de préstamos" as UC10
+        usecase "Consultar estado de libro" as UC11
+    }
+
+    package "Penalizaciones" LIGHTPINK {
+        usecase "Calcular multa" as UC12
+        usecase "Pagar multa online" as UC13
+        usecase "Aplicar penalización" as UC14
+    }
+
+    package "Reportes" LIGHTYELLOW {
+        usecase "Generar reporte de préstamos" as UC15
+        usecase "Generar reporte de multas" as UC16
+    }
+}
+
+estudiante --> UC1
+estudiante --> UC2
+estudiante --> UC3
+estudiante --> UC6
+estudiante --> UC7
+estudiante --> UC9
+estudiante --> UC10
+estudiante --> UC11
+estudiante --> UC13
+
+bibliotecario --> UC4 : <<gestiona>>
+bibliotecario --> UC5 : <<registra>>
+bibliotecario --> UC14 : <<aplica>>
+bibliotecario --> UC15 : <<genera>>
+bibliotecario --> UC16 : <<genera>>
+bibliotecario --> UC6 : <<gestiona>>
+bibliotecario --> UC7 : <<gestiona>>
+
+sistema --> UC8 : <<automático>>
+sistema --> UC12 : <<calcula automáticamente>>
+
+note right of UC2
+  Máximo 2 renovaciones
+  Solo si no hay reservas
+end note
+
+note right of profesor
+  Préstamos de larga duración
+  Máximo 5 libros simultáneos
+  30 días de préstamo
+end note
+
+note right of estudiante
+  Máximo 3 libros simultáneos
+  14 días de préstamo
+end note
+
+note bottom of UC12
+  Se calcula automáticamente
+  cuando vence un préstamo
+  €0.50/día (estudiantes)
+  €0.30/día (profesores)
+end note
+
+@enduml
