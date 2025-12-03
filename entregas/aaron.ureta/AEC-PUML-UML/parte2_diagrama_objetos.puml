@@ -1,0 +1,193 @@
+@startuml
+title Mapa de Objetos del Sistema Bibliotecario\n(Actualizado 17/11/2025 – 09:45h)
+
+' =========================
+' Estilos generales nuevos
+' =========================
+skinparam backgroundColor #FDFDFE
+skinparam shadowing false
+
+skinparam object {
+  BackgroundColor #FFFFFF
+  BorderColor #4A4A9C
+  FontColor #1A1A40
+}
+
+' =========================
+' Usuarios (4)
+' =========================
+object "usuarioA: Estudiante" as usuarioA {
+  id = "STU-2025-011"
+  nombre = "Paula Fernández"
+  correo = "pfernandez@campus.es"
+  prestamosVigentes = 1
+  saldoMultas = 0.00
+}
+
+object "usuarioB: Profesor" as usuarioB {
+  id = "DOC-2018-032"
+  nombre = "Miguel Herrera"
+  departamento = "Matemáticas"
+  prestamosVigentes = 2
+  saldoMultas = 3.00
+}
+
+object "usuarioC: Estudiante" as usuarioC {
+  id = "STU-2025-099"
+  nombre = "Sara Pérez"
+  correo = "sperez@campus.es"
+  prestamosVigentes = 0
+  saldoMultas = 0.00
+}
+
+object "usuarioD: Estudiante" as usuarioD {
+  id = "STU-2025-145"
+  nombre = "Iván Torres"
+  correo = "itorres@campus.es"
+  prestamosVigentes = 1
+  saldoMultas = 2.50
+}
+
+' =========================
+' Libros (5)
+' =========================
+object "ejemplar1: Libro" as ejemplar1 {
+  isbn = "978-1-4028-9462-6"
+  titulo = "Fundamentos de Redes"
+  autor = "A. Stallings"
+  stock = 3
+  disponibles = 2
+  area = "Tecnología"
+}
+
+object "ejemplar2: Libro" as ejemplar2 {
+  isbn = "978-0-262-03384-8"
+  titulo = "Machine Learning"
+  autor = "T. Mitchell"
+  stock = 2
+  disponibles = 0
+  area = "IA"
+}
+
+object "ejemplar3: Libro" as ejemplar3 {
+  isbn = "978-1-59327-599-0"
+  titulo = "Automate the Boring Stuff"
+  autor = "A. Sweigart"
+  stock = 4
+  disponibles = 4
+  area = "Programación"
+}
+
+object "ejemplar4: Libro" as ejemplar4 {
+  isbn = "978-1-118-95112-7"
+  titulo = "Digital Design"
+  autor = "M. Mano"
+  stock = 1
+  disponibles = 0
+  area = "Electrónica"
+}
+
+object "ejemplar5: Libro" as ejemplar5 {
+  isbn = "978-0-596-00681-5"
+  titulo = "Python Cookbook"
+  autor = "David Beazley"
+  stock = 2
+  disponibles = 1
+  area = "Programación"
+}
+
+' =========================
+' Préstamos (4)
+' =========================
+object "prestA: Prestamo" as prestA {
+  id = "PST-2025-777"
+  inicio = "2025-11-05"
+  vence = "2025-11-19"
+  estado = "En curso"
+  renovaciones = 0
+  multa = 0.00
+}
+
+object "prestB: Prestamo" as prestB {
+  id = "PST-2025-781"
+  inicio = "2025-11-01"
+  vence = "2025-11-08"
+  estado = "Vencido"
+  renovaciones = 1
+  multa = 5.00
+}
+
+object "prestC: Prestamo" as prestC {
+  id = "PST-2025-802"
+  inicio = "2025-11-12"
+  vence = "2025-12-10"
+  estado = "En curso"
+  renovaciones = 0
+  multa = 0.00
+}
+
+object "prestD: Prestamo" as prestD {
+  id = "PST-2025-811"
+  inicio = "2025-11-14"
+  vence = "2025-11-30"
+  estado = "En curso"
+  renovaciones = 0
+  multa = 0.00
+}
+
+' =========================
+' Reservas (2)
+' =========================
+object "resA: Reserva" as resA {
+  id = "RSV-2025-020"
+  fecha = "2025-11-16"
+  estado = "En espera"
+  puesto = 1
+}
+
+object "resB: Reserva" as resB {
+  id = "RSV-2025-021"
+  fecha = "2025-11-17"
+  estado = "En espera"
+  puesto = 2
+}
+
+' =========================
+' Multas (1)
+' =========================
+object "multaA: Multa" as multaA {
+  id = "FINE-2025-099"
+  monto = 5.00
+  fecha = "2025-11-09"
+  estado = "Pendiente"
+  motivo = "Entrega fuera de plazo"
+}
+
+' =========================
+' Relaciones
+' =========================
+
+' Usuario → Préstamo
+usuarioA o-- prestA : mantiene >
+usuarioB o-- prestB : asociado >
+usuarioD o-- prestC : préstamo activo >
+usuarioB o-- prestD : segunda asignación >
+
+' Préstamo → Libro
+prestA *-- ejemplar1 : copia asociada
+prestB *-- ejemplar4 : relacionado
+prestC *-- ejemplar5 : unidad prestada
+prestD *-- ejemplar3 : copia tomada
+
+' Reservas
+resA -- usuarioC : solicitada por
+resA -- ejemplar2 : reserva de
+
+resB -- usuarioD : solicitada por
+resB -- ejemplar2 : reserva de
+
+' Multas
+multaA -- prestB : multa aplicada
+multaA -- usuarioB : usuario deudor
+
+@enduml
