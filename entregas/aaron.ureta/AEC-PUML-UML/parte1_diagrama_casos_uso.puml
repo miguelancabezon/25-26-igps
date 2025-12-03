@@ -1,0 +1,128 @@
+@startuml
+title Plataforma Bibliotecaria Universitaria\nDiagrama de Casos de Uso (Versión Revisada)
+
+' =========================
+' Estilos generales
+' =========================
+skinparam backgroundColor #FAFAFF
+skinparam shadowing false
+
+skinparam package {
+  BackgroundColor #EDEBFF
+  BorderColor #5A4FCF
+  FontColor #2D275F
+}
+
+skinparam usecase {
+  BackgroundColor #FFFFFF
+  BorderColor #5A4FCF
+  FontColor #2D275F
+  ArrowColor #5A4FCF
+}
+
+skinparam actor {
+  BackgroundColor #FAFAFF
+  BorderColor #5A4FCF
+  FontColor #2D275F
+}
+
+left to right direction
+
+' =========================
+' Actores
+' =========================
+actor Alumno as A
+actor Docente as D
+actor Administrador as Adm
+actor "Servicio de Alertas" as Alertas
+
+' =========================
+' Casos de uso
+' =========================
+package "Módulo de Biblioteca" {
+
+  package "Consulta de Información" {
+    usecase "Explorar catálogo" as UC_Catalogo
+    usecase "Consultar historial" as UC_Historial
+    usecase "Revisar disponibilidad" as UC_Disponibilidad
+  }
+
+  usecase "Pedir préstamo" as UC_Pedir
+  usecase "Extender préstamo" as UC_Extender
+  usecase "Registrar devolución" as UC_Devolver
+
+  package "Gestión Manual" {
+    usecase "Préstamo asistido" as UC_Asistido
+    usecase "Procesar devolución manual" as UC_DevolManual
+  }
+
+  package "Reservas" {
+    usecase "Solicitar reserva" as UC_Reserva
+    usecase "Anular reserva" as UC_Anular
+    usecase "Avisar libro disponible" as UC_Avisar
+  }
+
+  package "Sanciones" {
+    usecase "Determinar multa" as UC_Multa
+    usecase "Realizar pago" as UC_Pago
+    usecase "Registrar sanción" as UC_Sancion
+  }
+
+  package "Reportes" {
+    usecase "Informe de préstamos" as UC_RepPrest
+    usecase "Informe de sanciones" as UC_RepSanc
+  }
+}
+
+' =========================
+' Relaciones Alumno
+' =========================
+A --> UC_Catalogo
+A --> UC_Pedir : préstamo estándar
+A --> UC_Extender : ampliación limitada
+A --> UC_Devolver
+A --> UC_Reserva
+A --> UC_Anular
+A --> UC_Historial
+A --> UC_Disponibilidad
+A --> UC_Pago : pago digital
+
+' =========================
+' Relaciones Docente
+' =========================
+D --> UC_Catalogo
+D --> UC_Pedir : préstamos prolongados
+D --> UC_Extender
+D --> UC_Devolver
+D --> UC_Reserva
+D --> UC_Anular
+D --> UC_Historial
+D --> UC_Disponibilidad
+D --> UC_Pago
+
+' =========================
+' Relaciones Administrador
+' =========================
+Adm --> UC_Asistido : apoyo a usuarios
+Adm --> UC_DevolManual : verificación manual
+Adm --> UC_Reserva
+Adm --> UC_Anular
+Adm --> UC_Multa : cálculo según reglas
+Adm --> UC_Sancion : registrar incidentes
+Adm --> UC_RepPrest
+Adm --> UC_RepSanc
+
+' =========================
+' Relaciones Servicio de Alertas
+' =========================
+Alertas --> UC_Avisar : aviso automático
+Alertas --> UC_Multa : cálculo al superar plazo
+Alertas --> UC_Pago : confirmación y cierre
+
+' =========================
+' Relaciones internas
+' =========================
+UC_DevolManual --> UC_Multa : puede incluir cálculo
+UC_Sancion --> UC_Pago : requiere liquidación
+
+@enduml

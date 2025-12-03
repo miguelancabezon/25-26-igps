@@ -1,0 +1,108 @@
+@startuml
+title Ciclo de Vida de un Préstamo\n(Estado Revisado)
+
+skinparam backgroundColor #FDFDFE
+skinparam shadowing false
+
+skinparam state {
+  BackgroundColor #FFFFFF
+  BorderColor #5A4FCF
+  FontColor #2A245F
+}
+
+' =========================
+' Estado inicial
+' =========================
+[*] --> RegistroPendiente
+
+state RegistroPendiente #FFE9C7 {
+  RegistroPendiente : entry / crearSolicitud()
+  RegistroPendiente : entry / comprobarStock()
+}
+
+RegistroPendiente --> Autorizado : validar\n[ejemplar disponible]\n[usuario habilitado]
+RegistroPendiente --> Anulado : denegar\n[sin stock disponible]
+RegistroPendiente --> Anulado : solicitudRetirada\npor usuario
+
+' =========================
+' Superestado "Ciclo Activo"
+' =========================
+state "Ciclo Activo" as Ciclo {
+
+  [H] --> EnPrestamo
+
+  state EnPrestamo #D9F5DD {
+    EnPrestamo : entry / registrarInicio()
+    EnPrestamo : exit / actualizarLog()
+  }
+
+  state Ampliado #BEEBC4 {
+    Ampliado : entry / extenderPlazo()
+    Ampliado : entry / sumarRenovacion()
+  }
+
+  state Atrasado #F6D1D1 {
+    Atrasado : entry / generarAviso()
+    Atrasado : entry / calcularRecargo()
+  }
+
+  state EvaluarRenovacion <<choice>>
+
+  ' Solicitudes de renovación
+  EnPrestamo --> EvaluarRenovacion : solicitarRenovacion
+  Ampliado --> EvaluarRenovacion : solicitarRenovacion
+
+  EvaluarRenovacion --> Ampliado : [renovaciones < 2]\n[sin reservas activas]
+  EvaluarRenovacion --> EnPrestamo : [renovaciones >= 2]\nno concedida
+
+  ' Cambios por fechas
+  EnPrestamo --> Atrasado : superarPlazo
+  Ampliado --> Atrasado : superarPlazo
+
+  ' Devoluciones
+  EnPrestamo --> Retornado : devolución correcta
+  Ampliado --> Retornado : devolución correcta
+  Atrasado --> Retornado : devolución con recargo
+}
+
+' =========================
+' Escalamiento
+' =========================
+state "Incumplimiento Grave" as Grave #F4B7B7
+Atrasado --> Grave : prolongado >30 días
+
+' =========================
+' Estado final Retornado
+' =========================
+state Retornado #ECECEC {
+  Retornado : entry / actualizarStock()
+  Retornado : entry / liberarReservasPendientes()
+}
+
+' =========================
+' Estado final Anulado
+' =========================
+state Anulado #ECECEC
+Anulado --> [*]
+
+' =========================
+' Concurrencia con fork/join
+' =========================
+state Division <<fork>>
+state Reencuentro <<join>>
+
+Grave --> Division : escalamiento
+
+Division --> ProcesoMulta
+Division --> Retornado
+
+state ProcesoMulta #F2D6D6 {
+  ProcesoMulta : entry / registrarSancion()
+  ProcesoMulta : entry / restringirAccesoUsuario()
+}
+
+ProcesoMulta --> Reencuentro
+Retornado --> Reencuentro
+Reencuentro --> [*]
+
+@enduml
