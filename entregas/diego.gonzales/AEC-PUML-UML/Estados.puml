@@ -1,0 +1,78 @@
+@startuml parte3
+title Ciclo de Vida del Préstamo
+
+' Definición de estilos
+skinparam state {
+    BackgroundColor<<Initial>> LightGray
+    BackgroundColor LightBlue
+    BackgroundColor<<Final>> LightGray
+    BorderColor DarkBlue
+}
+
+[*] --> Solicitado : Crear préstamo
+
+state Solicitado {
+    Solicitado : entry / verificarDisponibilidad()
+}
+
+' Transiciones desde Solicitado
+Solicitado --> EnCurso : aprobar [libro disponible]
+Solicitado --> Cancelado : rechazar [libro no disponible]
+Solicitado --> Cancelado : cancelar por usuario
+
+state "En Curso" as EnCurso {
+    ' Estado de historia
+    state "[H]" as H
+    
+    state Activo {
+        Activo : entry / enviarEmailConfirmacion()
+        Activo : entry / actualizarDisponibilidadLibro()
+        Activo : exit / registrarHistorial()
+    }
+
+    state Renovado {
+        Renovado : entry / extenderFechaVencimiento()
+        Renovado : entry / incrementarContadorRenovaciones()
+    }
+
+    state Vencido {
+        Vencido : entry / calcularMulta()
+        Vencido : entry / enviarNotificacionRetraso()
+    }
+    
+    ' Lógica dentro de En Curso
+    [*] --> Activo
+    
+    ' Transiciones Activo
+    Activo --> Vencido : vencer plazo
+    
+    ' Lógica de decisión para renovación
+    state c_renovar <<choice>>
+    Activo --> c_renovar : renovar
+    c_renovar --> Renovado : [renovaciones < 2 \nAND sin reservas]
+    c_renovar --> Activo : [renovaciones >= 2] \n(con nota de rechazo)
+
+    ' Transiciones Renovado
+    Renovado --> Vencido : vencer plazo
+    Renovado --> Renovado : renovar \n[renovaciones < 2 \nAND sin reservas]
+
+    ' Transiciones Vencido
+    Vencido --> Vencido : continuar vencido \n[>30 días] \n-> Vencido crítico
+}
+
+' Salidas del estado compuesto
+EnCurso --> Devuelto : devolver [a tiempo]
+EnCurso --> Devuelto : devolver con multa \n[desde Vencido]
+
+state Devuelto {
+    Devuelto : entry / liberarLibro()
+    Devuelto : entry / procesarSiguienteReserva()
+}
+
+state Cancelado
+
+' Final
+Devuelto --> [*]
+Cancelado --> [*]
+
+@enduml
