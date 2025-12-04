@@ -1,0 +1,96 @@
+@startuml
+title Diagrama de estados - Ciclo de vida del préstamo
+
+skinparam backgroundColor #FFFFFF
+skinparam state {
+  BackgroundColor #F5FAFF
+  BorderColor #003366
+}
+
+[*] --> Solicitado
+
+state Solicitado #Yellow {
+  Solicitado : entry / registrarSolicitud()
+  Solicitado : entry / verificarDisponibilidad()
+}
+
+Solicitado --> Activo : aprobar\n[libro disponible]\n[usuario sin multas]
+Solicitado --> Cancelado : rechazar\n[libro no disponible]
+Solicitado --> Cancelado : cancelar / registrarCancelacionUsuario()
+
+' Super-estado En Curso
+state "En Curso" as EnCurso {
+
+  [H] --> Activo
+
+  state Activo #LightGreen {
+    Activo : entry / enviarEmailConfirmacion()
+    Activo : entry / actualizarDisponibilidadLibro()
+    Activo : exit / registrarHistorial()
+  }
+
+  state Renovado #LightGreen {
+    Renovado : entry / extenderFechaVencimiento()
+    Renovado : entry / incrementarContadorRenovaciones()
+  }
+
+  state Vencido #LightCoral {
+    Vencido : entry / calcularMulta()
+    Vencido : entry / enviarNotificacionRetraso()
+  }
+
+  state "Vencido crítico" as VencidoCritico #Red {
+    VencidoCritico : entry / escalarCasoAdministracion()
+    VencidoCritico : entry / bloquearUsuarioSiCorresponde()
+  }
+
+  ' Estado de decisión para renovaciones
+  state VerificarRenovacion <<choice>>
+
+  Activo --> VerificarRenovacion : renovar
+  Renovado --> VerificarRenovacion : renovar
+
+  VerificarRenovacion --> Renovado : [renovaciones < 2 && sin reservas pendientes]
+  VerificarRenovacion --> Activo : [renovaciones >= 2] / mostrarMensajeRechazo()
+
+  ' Paso del tiempo y vencimiento
+  Activo --> Vencido : vencer plazo
+  Activo --> Vencido : after 14 days / marcarComoVencido()
+
+  Renovado --> Vencido : vencer plazo
+  Renovado --> Vencido : after 14 days / marcarComoVencido()
+
+  ' Vencido crítico
+  Vencido --> VencidoCritico : continuar vencido\n[>30 días]
+}
+
+' Devoluciones
+Activo --> Devuelto : devolver\n[a tiempo]
+Renovado --> Devuelto : devolver\n[a tiempo]
+Vencido --> Devuelto : devolver / devolverConMulta()
+
+state Devuelto #LightBlue {
+  Devuelto : entry / liberarLibro()
+  Devuelto : entry / procesarSiguienteReserva()
+}
+
+state Cancelado #LightGray
+
+' Camino simple a estado final
+Devuelto --> [*] : sin multas pendientes
+Cancelado --> [*]
+
+' Fork / join cuando se paga multa tras devolución
+state fork_notif <<fork>>
+state join_cierre <<join>>
+
+Devuelto --> fork_notif : pagar multa
+fork_notif --> "Actualizar saldo" as ActualizarSaldo
+fork_notif --> "Notificar al usuario" as NotificarUsuario
+
+ActualizarSaldo --> join_cierre
+NotificarUsuario --> join_cierre
+
+join_cierre --> [*] : multa pagada y caso cerrado
+
+@enduml
