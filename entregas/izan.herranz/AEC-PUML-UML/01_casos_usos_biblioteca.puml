@@ -1,0 +1,94 @@
+@startuml
+title Sistema de Gestión de Biblioteca Universitaria - Casos de uso
+
+skinparam backgroundColor #FFFFFF
+skinparam actorStyle awesome
+skinparam handwritten false
+
+skinparam usecase {
+  BackgroundColor #F5FAFF
+  BorderColor #003366
+  ArrowColor #003366
+}
+
+skinparam package {
+  BackgroundColor #EEF5FF
+  BorderColor #003366
+}
+
+actor Estudiante as est
+actor Profesor as prof
+actor Bibliotecario as bib
+actor "Sistema de Notificaciones" as sistema
+
+rectangle "Sistema de Gestión de Biblioteca" as Sistema {
+
+  package "Búsqueda y consulta" as pkgBusqueda {
+    usecase "Buscar en catálogo" as UC_Buscar
+    usecase "Ver historial de préstamos" as UC_Historial
+    usecase "Consultar estado de libro" as UC_EstadoLibro
+  }
+
+  package "Gestión de préstamos" as pkgPrestamos {
+    usecase "Solicitar préstamo" as UC_Solicitar
+    usecase "Renovar préstamo" as UC_Renovar
+    usecase "Devolver libro" as UC_Devolver
+    usecase "Registrar préstamo manual" as UC_RegistrarManual
+    usecase "Procesar devolución" as UC_ProcesarDevolucion
+  }
+
+  package "Gestión de reservas" as pkgReservas {
+    usecase "Hacer reserva" as UC_Reservar
+    usecase "Cancelar reserva" as UC_CancelarReserva
+    usecase "Notificar disponibilidad" as UC_NotificarDisp
+  }
+
+  package "Penalizaciones" as pkgPenalizaciones {
+    usecase "Calcular multa" as UC_CalcularMulta
+    usecase "Pagar multa online" as UC_PagarMulta
+    usecase "Aplicar penalización" as UC_AplicarPenalizacion
+  }
+
+  package "Reportes" as pkgReportes {
+    usecase "Generar reporte de préstamos" as UC_RepPrestamos
+    usecase "Generar reporte de multas" as UC_RepMultas
+  }
+}
+
+' Relaciones Estudiante
+est --> UC_Buscar
+est --> UC_Historial
+est --> UC_EstadoLibro
+est --> UC_Solicitar
+est --> UC_Renovar : "[máx. 2 renovaciones]"
+est --> UC_Devolver
+est --> UC_Reservar
+est --> UC_CancelarReserva
+est --> UC_PagarMulta
+
+' Relaciones Profesor
+prof --> UC_Buscar
+prof --> UC_Historial
+prof --> UC_EstadoLibro
+prof --> UC_Solicitar : "Préstamo larga duración"
+prof --> UC_Renovar
+prof --> UC_Devolver
+prof --> UC_Reservar
+prof --> UC_CancelarReserva
+prof --> UC_PagarMulta
+
+' Relaciones Bibliotecario
+bib --> UC_RegistrarManual
+bib --> UC_ProcesarDevolucion
+bib --> UC_CalcularMulta
+bib --> UC_AplicarPenalizacion : "Según retraso y perfil usuario"
+bib --> UC_Reservar : "Gestionar reservas en mostrador"
+bib --> UC_CancelarReserva : "Cancelar reservas en sistema"
+bib --> UC_RepPrestamos
+bib --> UC_RepMultas
+
+' Relaciones Sistema de notificaciones
+sistema --> UC_NotificarDisp : "Enviar email al usuario"
+sistema --> UC_CalcularMulta : "Calcular multa automáticamente"
+
+@enduml

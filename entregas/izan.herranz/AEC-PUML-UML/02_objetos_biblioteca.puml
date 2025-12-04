@@ -1,0 +1,173 @@
+@startuml
+title Diagrama de objetos - Biblioteca 15/11/2025 14:30
+
+skinparam backgroundColor #FFFFFF
+skinparam object {
+  BackgroundColor #FFF9F0
+  BorderColor #994400
+}
+
+' Usuarios
+object "estudiante1: Estudiante" as estudiante1 {
+  id = "EST-2023001"
+  nombre = "Ana García"
+  email = "ana.garcia@uni.es"
+  prestamosActivos = 2
+  multasAcumuladas = 1.50
+}
+
+object "profesor1: Profesor" as profesor1 {
+  id = "PROF-2020045"
+  nombre = "Dr. Carlos Ruiz"
+  departamento = "Informática"
+  prestamosActivos = 3
+  multasAcumuladas = 0.00
+}
+
+object "estudiante2: Estudiante" as estudiante2 {
+  id = "EST-2024089"
+  nombre = "Luis Martínez"
+  email = "luis.martinez@uni.es"
+  prestamosActivos = 1
+  multasAcumuladas = 0.00
+}
+
+object "estudiante3: Estudiante" as estudiante3 {
+  id = "EST-999999"
+  nombre = "María López"
+  email = "maria.lopez@uni.es"
+  prestamosActivos = 0
+  multasAcumuladas = 0.00
+}
+
+' Libros
+object "libro1: Libro" as libro1 {
+  isbn = "978-3-16-148410-0"
+  titulo = "Clean Code"
+  autor = "Robert C. Martin"
+  ejemplares = 3
+  disponibles = 1
+  categoria = "Programación"
+}
+
+object "libro2: Libro" as libro2 {
+  isbn = "978-0-13-468599-1"
+  titulo = "The Pragmatic Programmer"
+  autor = "Hunt & Thomas"
+  ejemplares = 2
+  disponibles = 0
+  categoria = "Programación"
+}
+
+object "libro3: Libro" as libro3 {
+  isbn = "978-0-596-52068-7"
+  titulo = "JavaScript: The Good Parts"
+  autor = "Douglas Crockford"
+  ejemplares = 4
+  disponibles = 3
+  categoria = "Programación"
+}
+
+object "libro4: Libro" as libro4 {
+  isbn = "978-0-134-68599-8"
+  titulo = "Design Patterns"
+  autor = "Gang of Four"
+  ejemplares = 2
+  disponibles = 1
+  categoria = "Ingeniería Software"
+}
+
+object "libro5: Libro" as libro5 {
+  isbn = "978-0-321-12742-6"
+  titulo = "Domain-Driven Design"
+  autor = "Eric Evans"
+  ejemplares = 1
+  disponibles = 0
+  categoria = "Arquitectura"
+}
+
+' Préstamos
+object "prestamo1: Prestamo" as prestamo1 {
+  id = "PREST-2025-1234"
+  fechaInicio = "2025-11-01"
+  fechaVencimiento = "2025-11-15"
+  estado = "Activo"
+  renovaciones = 0
+  multa = 0.00
+}
+
+object "prestamo2: Prestamo" as prestamo2 {
+  id = "PREST-2025-1256"
+  fechaInicio = "2025-10-28"
+  fechaVencimiento = "2025-11-27"
+  estado = "Activo"
+  renovaciones = 0
+  multa = 0.00
+}
+
+object "prestamo3: Prestamo" as prestamo3 {
+  id = "PREST-2025-1189"
+  fechaInicio = "2025-10-20"
+  fechaVencimiento = "2025-11-03"
+  estado = "Vencido"
+  renovaciones = 1
+  multa = 6.00
+}
+
+object "prestamo4: Prestamo" as prestamo4 {
+  id = "PREST-2025-1290"
+  fechaInicio = "2025-11-10"
+  fechaVencimiento = "2025-11-24"
+  estado = "Activo"
+  renovaciones = 0
+  multa = 0.00
+}
+
+' Reservas
+object "reserva1: Reserva" as reserva1 {
+  id = "RES-2025-0089"
+  fechaReserva = "2025-11-14"
+  estado = "Pendiente"
+  posicionCola = 1
+}
+
+object "reserva2: Reserva" as reserva2 {
+  id = "RES-2025-0090"
+  fechaReserva = "2025-11-15"
+  estado = "Pendiente"
+  posicionCola = 2
+}
+
+' Multa
+object "multa1: Multa" as multa1 {
+  id = "MULT-2025-045"
+  monto = 6.00
+  fechaGeneracion = "2025-11-04"
+  estado = "Pendiente"
+  concepto = "Retraso en devolución"
+}
+
+' Relaciones usuario - préstamo
+estudiante1 o-- prestamo1 : "tiene"
+estudiante1 o-- prestamo3 : "tiene"
+profesor1 o-- prestamo2 : "tiene"
+profesor1 o-- prestamo4 : "tiene otro préstamo"
+estudiante2 o-- prestamo4 : "tiene"
+
+' Relaciones préstamo - libro (composición de ejemplar prestado)
+prestamo1 *-- libro1 : "ejemplar de"
+prestamo2 *-- libro2 : "ejemplar de"
+prestamo3 *-- libro5 : "ejemplar de (vencido)"
+prestamo4 *-- libro3 : "ejemplar de"
+
+' Relaciones reservas
+reserva1 -- libro2 : "reserva sobre"
+reserva1 -- estudiante2 : "realizada por"
+reserva2 -- libro2 : "reserva sobre"
+reserva2 -- estudiante3 : "realizada por"
+
+' Relaciones multa
+multa1 -- prestamo3 : "asociada a"
+multa1 -- estudiante1 : "deuda de"
+
+@enduml
