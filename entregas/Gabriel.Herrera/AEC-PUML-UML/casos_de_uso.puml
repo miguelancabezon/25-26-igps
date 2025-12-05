@@ -1,0 +1,88 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+skinparam note {
+  backgroundColor Wheat
+  borderColor DarkRed
+}
+
+title Diagrama de Casos de Uso - Sistema de Gestión Bibliotecario
+
+actor Estudiante as E
+actor Profesor as P
+actor Bibliotecario as B
+actor Sistema as S
+
+' 1. Relación de Generalización: Profesor hereda accesos de Estudiante
+E <|-- P : <<hereda acceso base>>
+
+rectangle "Sistema de Gestión Bibliotecario" {
+
+    package "Búsqueda y Consulta" {
+        usecase "Buscar en catálogo" as UC_Buscar
+        usecase "Ver historial de préstamos" as UC_Historial
+        usecase "Consultar estado de libro" as UC_Estado
+    }
+
+    package "Préstamos" {
+        usecase "Solicitar préstamo" as UC_Solicitar
+        usecase "Renovar préstamo" as UC_Renovar
+        usecase "Devolver libro (Usuario)" as UC_Devolver
+    }
+    
+    package "Gestión de Reservas" {
+        usecase "Hacer reserva" as UC_HacerReserva
+        usecase "Cancelar reserva" as UC_CancelarReserva
+        usecase "Notificar disponibilidad (Sistema)" as UC_Notificar
+    }
+
+    package "Penalizaciones" {
+        usecase "Calcular multa (Sistema)" as UC_CalcularMulta
+        usecase "Pagar multa online" as UC_PagarMulta
+        usecase "Aplicar penalización (Bibliotecario)" as UC_AplicarPenalizacion
+    }
+
+    package "Funciones Bibliotecario" {
+        usecase "Registrar préstamo manual" as UC_RegManual
+        usecase "Procesar devolución (Bibliotecario)" as UC_ProcDev
+    }
+    
+    package "Reportes" {
+        usecase "Generar reporte de préstamos" as UC_RepPrestamos
+        usecase "Generar reporte de multas" as UC_RepMultas
+    }
+    
+    ' 2. Relación de Inclusión Compleja
+    UC_ProcDev --> UC_CalcularMulta : <<includes>> \n(Si hay retraso)
+
+}
+
+' 3. Relaciones de Asociación (Flechas normales '-->')
+
+' Estudiante (y Profesor por herencia)
+E --> UC_Buscar
+E --> UC_Historial
+E --> UC_Estado
+E --> UC_Solicitar
+E --> UC_Renovar
+E --> UC_Devolver
+E --> UC_HacerReserva
+E --> UC_CancelarReserva
+E --> UC_PagarMulta
+
+' Profesor (Casos de uso adicionales/específicos)
+P --> UC_Solicitar
+P --> UC_Renovar
+
+' Bibliotecario
+B --> UC_RegManual
+B --> UC_ProcDev
+B --> UC_AplicarPenalizacion
+B --> UC_RepPrestamos
+B --> UC_RepMultas
+B --> UC_Estado
+
+' Sistema
+S --> UC_Notificar
+S --> UC_CalcularMulta
+@enduml
