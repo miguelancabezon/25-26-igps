@@ -1,0 +1,66 @@
+@startuml
+title Diagrama de Estados - Ciclo de Vida del Préstamo
+
+' Estado inicial: cuando el usuario solicita el préstamo
+[*] --> Solicitado
+
+state Solicitado {
+  ' Acciones al entrar
+  Solicitado : entry / registrarSolicitud()
+  Solicitado : entry / verificarDisponibilidad()
+
+  ' Decisiones básicas según disponibilidad
+}
+
+Solicitado --> Activo : aprobar\n[libro disponible]
+Solicitado --> Cancelado : rechazar\n[libro no disponible]
+Solicitado --> Cancelado : cancelación voluntaria
+
+' === Super estado que agrupa la vida del préstamo ===
+state "En Curso" as EnCurso {
+
+  ' El historial permite volver al último estado interno
+  [H] --> Activo
+
+  ' --- Estado Activo ---
+  state Activo {
+    Activo : entry / enviarEmailConfirmacion()
+    Activo : entry / actualizarDisponibilidadLibro()
+    Activo : exit / registrarHistorial()
+  }
+
+  ' --- Estado Renovado ---
+  state Renovado {
+    Renovado : entry / extenderFechaVencimiento()
+    Renovado : entry / incrementarContadorRenovaciones()
+  }
+
+  ' --- Estado Vencido ---
+  state Vencido {
+    Vencido : entry / calcularMulta()
+    Vencido : entry / enviarNotificacionRetraso()
+  }
+
+  ' Transiciones internas del super estado
+  Activo --> Renovado : renovar\n[renovaciones < 2 AND sin reservas]
+  Activo --> Activo : renovar\n[renovaciones >= 2]   ' Ya no se puede renovar más
+
+  Activo --> Vencido : vence plazo
+  Renovado --> Vencido : vence plazo
+
+  Renovado --> Renovado : renovar\n[renovaciones < 2 AND sin reservas]
+}
+
+' === Fuera del superestado (cuando termina el préstamo) ===
+EnCurso --> Devuelto : devolver\n[a tiempo]
+EnCurso --> Devuelto : devolver con multa
+
+state Devuelto {
+  Devuelto : entry / liberarLibro()
+  Devuelto : entry / procesarSiguienteReserva()
+}
+
+' Estados finales
+Devuelto --> [*]
+Cancelado --> [*]
+@enduml

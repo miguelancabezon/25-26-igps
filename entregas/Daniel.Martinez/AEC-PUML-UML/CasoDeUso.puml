@@ -1,0 +1,78 @@
+@startuml
+title Diagrama de Casos de Uso - Sistema Biblioteca Universitaria
+
+left to right direction
+
+actor Estudiante
+actor Profesor
+actor Bibliotecario
+'Sistema externo que envía correos
+actor Sistema as SistemaNotificaciones 
+
+package "Búsqueda y Consulta" {
+' Búsqueda general
+  usecase "Buscar en catálogo" as UC_Buscar 
+  usecase "Ver historial de préstamos" as UC_Historial
+  usecase "Consultar estado de libro" as UC_EstadoLibro
+}
+
+package "Gestión de Préstamos" {
+  usecase "Solicitar préstamo" as UC_Solicitar
+  usecase "Renovar préstamo" as UC_Renovar
+  usecase "Devolver libro" as UC_Devolver
+}
+
+package "Gestión Bibliotecario" {
+  usecase "Registrar préstamo manual" as UC_RegistrarManual
+' Con control de multas
+  usecase "Procesar devolución" as UC_ProcesarDevolucion
+  usecase "Aplicar penalización" as UC_AplicarPenalizacion
+}
+
+package "Gestión de Reservas" {
+  usecase "Hacer reserva" as UC_Reserva
+  usecase "Cancelar reserva" as UC_CancelarReserva
+' Notificación automática
+  usecase "Notificar disponibilidad" as UC_Notificar
+}
+
+package "Penalizaciones" {
+  usecase "Calcular multa" as UC_CalcularMulta
+  usecase "Pagar multa online" as UC_PagarMulta
+}
+
+package "Reportes" {
+  usecase "Generar reporte de préstamos" as UC_ReportePrestamos
+  usecase "Generar reporte de multas" as UC_ReporteMultas
+}
+
+' Relaciones
+Estudiante --> UC_Buscar
+Estudiante --> UC_Solicitar
+Estudiante --> UC_Renovar
+Estudiante --> UC_Devolver
+Estudiante --> UC_Reserva
+Estudiante --> UC_CancelarReserva
+Estudiante --> UC_Historial
+Estudiante --> UC_PagarMulta
+
+Profesor --> UC_Buscar
+Profesor --> UC_Solicitar
+Profesor --> UC_Renovar
+Profesor --> UC_Devolver
+Profesor --> UC_Reserva
+Profesor --> UC_CancelarReserva
+Profesor --> UC_Historial
+Profesor --> UC_PagarMulta
+
+Bibliotecario --> UC_RegistrarManual
+Bibliotecario --> UC_ProcesarDevolucion
+Bibliotecario --> UC_AplicarPenalizacion
+Bibliotecario --> UC_ReportePrestamos
+Bibliotecario --> UC_ReporteMultas
+
+SistemaNotificaciones --> UC_Notificar
+
+UC_ProcesarDevolucion --> UC_CalcularMulta : "incluye"
+UC_Devolver --> UC_CalcularMulta : "si hay retraso"
+@enduml
