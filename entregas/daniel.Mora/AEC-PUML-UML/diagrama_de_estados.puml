@@ -1,0 +1,73 @@
+@startuml
+title Diagrama de Estados - Ciclo de Vida del Préstamo
+
+[*] --> Solicitado
+
+state Solicitado {
+  :entry / registrarSolicitud();
+  :entry / verificarDisponibilidad();
+}
+
+Solicitado --> Activo : aprobar [libro disponible]
+Solicitado --> Cancelado : rechazar [libro no disponible]
+Solicitado --> Cancelado : cancelar por usuario
+
+state "En Curso" as EnCurso {
+
+  state Activo {
+    :entry / enviarEmailConfirmacion();
+    :entry / actualizarDisponibilidadLibro();
+    :exit / registrarHistorial();
+  }
+
+  state Renovado {
+    :entry / extenderFechaVencimiento();
+    :entry / incrementarContadorRenovaciones();
+  }
+
+  state Vencido {
+    :entry / calcularMulta();
+    :entry / enviarNotificacionRetraso();
+  }
+
+  ' transiciones internas
+  Activo --> Renovado : renovar [renovaciones < 2 AND sin reservas pendientes]
+  Activo --> Activo : renovar [renovaciones >= 2] / note left: "rechazo renovación"]
+  Activo --> Vencido : vencer plazo / after 14 days
+  Renovado --> Renovado : renovar [renovaciones < 2 AND sin reservas pendientes]
+  Renovado --> Vencido : vencer plazo / after 14 days
+}
+
+EnCurso --> Devuelto : devolver [a tiempo]
+EnCurso --> Vencido : vencer plazo
+
+Vencido --> Devuelto : devolver con multa
+Vencido --> VencidoCritico : continuar vencido [>30 días]
+
+state VencidoCritico {
+  :entry / escalarPenalizacion();
+}
+
+Devuelto {
+  :entry / liberarLibro();
+  :entry / procesarSiguienteReserva();
+}
+
+Devuelto --> [*]
+Cancelado --> [*]
+
+' Estado de decisión para renovar
+note right of EnCurso
+  [choice] comprobar: renovaciones < 2 ?\nsi no -> rechazo
+end note
+
+' Uso de fork/join (ejemplo)
+fork
+  -> Activo
+  -> Vencido
+join
+
+' Eventos/Acciones adicionales
+' eventos: aprobar, rechazar, cancelar, devolver, renovar, vencer plazo, pagar multa, after 14 days
+
+@enduml

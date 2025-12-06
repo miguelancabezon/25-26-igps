@@ -1,0 +1,78 @@
+@startuml
+title Diagrama de Casos de Uso - Sistema Gestión Biblioteca
+left to right direction
+skinparam packageStyle rect
+
+actor Estudiante
+actor Profesor
+actor Bibliotecario
+actor Sistema as "Sistema (Notificaciones)"
+
+package "Búsqueda y consulta" {
+  usecase UC_Buscar as "Buscar en catálogo"
+  usecase UC_VerHistorial as "Ver historial de préstamos"
+  usecase UC_ConsultarEstado as "Consultar estado de libro"
+}
+
+package "Gestión de Reservar" {
+  usecase UC_HacerReserva as "Hacer reserva"
+  usecase UC_CancelarReserva as "Cancelar reserva"
+  usecase UC_NotificarDisponibilidad as "Notificar disponibilidad"
+}
+
+package "Penalizaciones" {
+  usecase UC_CalcularMulta as "Calcular multa"
+  usecase UC_PagarMulta as "Pagar multa online"
+  usecase UC_AplicarPenalizacion as "Aplicar penalización"
+}
+
+package "Préstamos" {
+  usecase UC_SolicitarPrestamo as "Solicitar préstamo"
+  usecase UC_RenovarPrestamo as "Renovar préstamo"
+  usecase UC_DevolverLibro as "Devolver libro"
+}
+
+package "Administración" {
+  usecase UC_RegistrarPrestamo as "Registrar préstamo manual"
+  usecase UC_ProcesarDevolucion as "Procesar devolución"
+}
+
+package "Reportes" {
+  usecase UC_GenerarReportePrestamos as "Generar reporte de préstamos"
+  usecase UC_GenerarReporteMultas as "Generar reporte de multas"
+}
+
+' Relaciones básicas
+Estudiante --> UC_Buscar
+Estudiante --> UC_SolicitarPrestamo : "valida cupo y estado libro"
+Estudiante --> UC_RenovarPrestamo
+Estudiante --> UC_DevolverLibro
+Estudiante --> UC_HacerReserva
+Estudiante --> UC_VerHistorial
+Estudiante --> UC_PagarMulta
+
+Profesor --> UC_Buscar
+Profesor --> UC_SolicitarPrestamo : "préstamo de larga duración permitido"
+Profesor --> UC_RenovarPrestamo : "renovaciones <=2"
+Profesor --> UC_DevolverLibro
+Profesor --> UC_VerHistorial
+Profesor --> UC_PagarMulta
+
+Bibliotecario --> UC_RegistrarPrestamo : "registra y verifica usuario"
+Bibliotecario --> UC_ProcesarDevolucion
+Bibliotecario --> UC_AplicarPenalizacion
+Bibliotecario --> UC_GenerarReportePrestamos
+Bibliotecario --> UC_GenerarReporteMultas
+Bibliotecario --> UC_CancelarReserva : "gestiona colas"
+
+Sistema --> UC_NotificarDisponibilidad
+Sistema --> UC_CalcularMulta : "tarea nocturna"
+Sistema --> UC_NotificarDisponibilidad : "cuando ejemplar disponible"
+
+' Relaciones adicionales y etiquetas explicativas
+UC_SolicitarPrestamo --> UC_RegistrarPrestamo : "si solicitud requiere intervención"
+UC_ProcesarDevolucion --> UC_AplicarPenalizacion : "si retraso detectado"
+UC_HacerReserva --> UC_NotificarDisponibilidad : "cuando ejemplar devuelto"
+UC_PagarMulta <-- Estudiante : "pago online mediante pasarela"
+
+@enduml
