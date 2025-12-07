@@ -1,0 +1,102 @@
+@startuml
+title Sistema de Gestión de Biblioteca Universitaria - Diagrama de Casos de Uso
+
+skinparam actorStyle awesome
+skinparam packageStyle rectangle
+skinparam usecase {
+    BackgroundColor LightBlue
+    BorderColor DarkBlue
+    ArrowColor DarkBlue
+}
+skinparam actor {
+    BackgroundColor LightYellow
+    BorderColor DarkOrange
+}
+
+
+actor "Estudiante" as EST #LightPink
+actor "Sistema" as SYS #LightGray
+
+
+rectangle "Sistema Biblioteca" {
+    
+    ' Casos de uso generales
+    usecase "Solicitar préstamo" as UC1
+    usecase "Renovar préstamo" as UC2
+    usecase "Devolver libro" as UC3
+    usecase "Procesar devolución" as UC4
+    usecase "Registrar préstamo manual" as UC5
+    
+    
+    package "Gestión de Reservas" #LightYellow {
+        usecase "Hacer reserva" as UC6
+        usecase "Cancelar reserva" as UC7
+        usecase "Notificar disponibilidad" as UC8
+    }
+    
+    package "Búsqueda y Consulta" #LightCyan {
+        usecase "Buscar en catálogo" as UC9
+        usecase "Ver historial de préstamos" as UC10
+        usecase "Consultar estado de libro" as UC11
+    }
+    
+    package "Penalizaciones" #LightPink {
+        usecase "Calcular multa" as UC12
+        usecase "Pagar multa online" as UC13
+        usecase "Aplicar penalización" as UC14
+    }
+    
+    package "Reportes" #Lavender {
+        usecase "Generar reporte de préstamos" as UC15
+        usecase "Generar reporte de multas" as UC16
+    }
+}
+
+actor "Profesor" as PROF #LightCoral
+actor "Bibliotecario" as BIB #LightSalmon
+
+EST --> UC1
+EST --> UC2 
+EST --> UC3 
+EST --> UC6
+EST --> UC7
+EST --> UC9 
+EST --> UC10
+EST --> UC11 
+EST --> UC13 
+
+SYS --> UC8
+SYS --> UC12
+
+UC1 <-- PROF
+UC2 <-- PROF
+UC3 <-- PROF
+UC6 <-- PROF
+UC7 <-- PROF
+UC9 <-- PROF
+UC10 <-- PROF
+UC11 <-- PROF
+UC13 <-- PROF
+
+UC4 <-- BIB 
+UC5 <-- BIB 
+UC14 <-- BIB
+UC15 <-- BIB 
+UC16 <-- BIB
+
+note bottom of UC2
+  Máximo 2 renovaciones
+  Si no hay reservas pendientes
+end note
+
+note bottom of UC1
+  Estudiantes: max 3 libros, 14 días
+  Profesores: max 5 libros, 30 días
+end note
+
+note bottom of UC12
+  Estudiantes: €0.50/día
+  Profesores: €0.30/día
+end note
+
+@enduml
