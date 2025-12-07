@@ -1,0 +1,179 @@
+@startuml
+title Diagrama de Objetos - Biblioteca Central (PlantText)
+
+' ----------------------------
+' Usuarios
+' ----------------------------
+object estudiante1 as "Estudiante" {
+  id = "EST-2023001"
+  nombre = "Ana García"
+  email = "ana.garcia@uni.es"
+  prestamosActivos = 2
+  multasAcumuladas = 1.50
+}
+
+object profesor1 as "Profesor" {
+  id = "PROF-2020045"
+  nombre = "Dr. Carlos Ruiz"
+  departamento = "Informática"
+  prestamosActivos = 3
+  multasAcumuladas = 0.00
+}
+
+object estudiante2 as "Estudiante" {
+  id = "EST-2024089"
+  nombre = "Luis Martínez"
+  email = "luis.martinez@uni.es"
+  prestamosActivos = 1
+  multasAcumuladas = 0.00
+}
+
+' ----------------------------
+' Libros
+' ----------------------------
+object libro1 as "Libro" {
+  isbn = "978-3-16-148410-0"
+  titulo = "Clean Code"
+  autor = "Robert C. Martin"
+  ejemplares = 3
+  disponibles = 1
+  categoria = "Programación"
+}
+
+object libro2 as "Libro" {
+  isbn = "978-0-13-468599-1"
+  titulo = "The Pragmatic Programmer"
+  autor = "Hunt & Thomas"
+  ejemplares = 2
+  disponibles = 0
+  categoria = "Programación"
+}
+
+object libro3 as "Libro" {
+  isbn = "978-0-596-52068-7"
+  titulo = "JavaScript: The Good Parts"
+  autor = "Douglas Crockford"
+  ejemplares = 4
+  disponibles = 3
+  categoria = "Programación"
+}
+
+object libro4 as "Libro" {
+  isbn = "978-0-134-68599-8"
+  titulo = "Design Patterns"
+  autor = "Gang of Four"
+  ejemplares = 2
+  disponibles = 1
+  categoria = "Ingeniería de Software"
+}
+
+object libro5 as "Libro" {
+  isbn = "978-0-321-12742-6"
+  titulo = "Domain-Driven Design"
+  autor = "Eric Evans"
+  ejemplares = 1
+  disponibles = 0
+  categoria = "Arquitectura"
+}
+
+' ----------------------------
+' Préstamos
+' ----------------------------
+object prestamo1 as "Préstamo" {
+  id = "PREST-2025-1234"
+  fechaInicio = "2025-11-01"
+  fechaVencimiento = "2025-11-15"
+  estado = "Activo"
+  renovaciones = 0
+  multa = 0.00
+}
+
+object prestamo2 as "Préstamo" {
+  id = "PREST-2025-1256"
+  fechaInicio = "2025-10-28"
+  fechaVencimiento = "2025-11-27"
+  estado = "Activo"
+  renovaciones = 0
+  multa = 0.00
+}
+
+object prestamo3 as "Préstamo" {
+  id = "PREST-2025-1189"
+  fechaInicio = "2025-10-20"
+  fechaVencimiento = "2025-11-03"
+  estado = "Vencido"
+  renovaciones = 1
+  multa = 6.00
+}
+
+object prestamo4 as "Préstamo" {
+  id = "PREST-2025-1290"
+  fechaInicio = "2025-11-10"
+  fechaVencimiento = "2025-11-24"
+  estado = "Activo"
+  renovaciones = 0
+  multa = 0.00
+}
+
+' ----------------------------
+' Reservas
+' ----------------------------
+object reserva1 as "Reserva" {
+  id = "RES-2025-0089"
+  fechaReserva = "2025-11-14"
+  estado = "Pendiente"
+  posicionCola = 1
+}
+
+object reserva2 as "Reserva" {
+  id = "RES-2025-0090"
+  fechaReserva = "2025-11-15"
+  estado = "Pendiente"
+  posicionCola = 2
+}
+
+' ----------------------------
+' Multas
+' ----------------------------
+object multa1 as "Multa" {
+  id = "MULT-2025-045"
+  monto = 6.00
+  fechaGeneracion = "2025-11-04"
+  estado = "Pendiente"
+  concepto = "Retraso en devolución"
+}
+
+' ----------------------------
+' Relaciones
+' ----------------------------
+estudiante1 -- prestamo1 : "tiene"
+estudiante1 -- prestamo3 : "tiene (vencido)"
+profesor1 -- prestamo2 : "tiene"
+profesor1 -- prestamo4 : "tiene (adicional)"
+estudiante2 -- prestamo4 : "tiene"
+
+prestamo1 -- libro1 : "es de"
+prestamo2 -- libro2 : "es de"
+prestamo3 -- libro5 : "es de (vencido)"
+prestamo4 -- libro3 : "es de"
+
+reserva1 -- libro2 : "reserva de"
+reserva1 -- estudiante2 : "hecha por"
+reserva2 -- libro2 : "reserva de"
+reserva2 -- estudiante1 : "hecha por (otro estudiante)"
+
+multa1 -- prestamo3 : "asociada a"
+multa1 -- estudiante1 : "impuesta a"
+
+prestamo1 <..> prestamo3 : "relación administrativa"
+libro2 -> libro5 : "recomendado junto"
+
+legend left
+== Leyenda ==
+-- asociación
+.. dependencia
+-> dirección
+<..> especial
+endlegend
+
+@enduml
