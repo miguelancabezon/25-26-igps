@@ -1,0 +1,88 @@
+@startuml
+title Diagrama de Estados - Ciclo de Vida del Préstamo
+skinparam state {
+    BorderColor darkblue
+    BackgroundColor #LightSkyBlue
+    FontName Arial
+}
+
+' --------------------
+' 1. ESTADO INICIAL Y SOLICITUD
+' --------------------
+[*] --> Solicitado
+
+state Solicitado #Yellow {
+    Solicitado : entry / registrarSolicitud()
+    Solicitado : entry / verificarDisponibilidad()
+    Solicitado --> Cancelado : rechazar [libro no disponible]
+    Solicitado --> Cancelado : cancelar por usuario
+    Solicitado --> EnCurso : aprobar [libro disponible]
+}
+
+' --------------------
+' 2. ESTADO COMPUESTO "EN CURSO"
+' --------------------
+
+state "En Curso" as EnCurso #WhiteSmoke {
+
+    state Activo #LightGreen {
+        Activo : entry / enviarEmailConfirmacion()
+        Activo : entry / actualizarDisponibilidadLibro()
+        Activo : exit / registrarHistorial()
+        Activo --> Vencido : vencer plazo
+    }
+
+    state Renovado #LightGreen {
+        Renovado : entry / extenderFechaVencimiento()
+        Renovado : entry / incrementarContadorRenovaciones()
+        Renovado --> Vencido : vencer plazo
+    }
+
+    state Vencido #LightCoral {
+        Vencido : entry / calcularMulta()
+        Vencido : entry / enviarNotificacionRetraso()
+    }
+
+    state "Vencido Crítico" as VencidoCritico #Red
+
+    ' --------------------
+    ' CHOICE (NODO DE DECISIÓN)
+    ' --------------------
+    state RenovacionChoice <<choice>>
+
+    Activo --> RenovacionChoice : renovar
+    Renovado --> RenovacionChoice : renovar
+
+    RenovacionChoice --> Renovado : [renovaciones < 2 AND sin reservas]
+    RenovacionChoice --> Activo : [renovaciones >= 2 OR con reservas] / RechazarRenovacion()
+
+    ' --------------------
+    ' TRANSICIÓN A VENCIDO CRÍTICO (evento temporal)
+    ' --------------------
+    Vencido --> VencidoCritico : after 14 days [sin pagar multa]
+
+    ' Entrada por defecto al estado compuesto
+    [*] --> Activo
+}
+
+' --------------------
+' 3. TRANSICIONES DE SALIDA Y ESTADO FINAL
+' --------------------
+
+EnCurso --> Devuelto : devolver [a tiempo]
+Vencido --> Devuelto : devolver con multa / procesarPagoMulta()
+VencidoCritico --> Devuelto : devolver con multa alta
+
+state Devuelto #LightBlue {
+    Devuelto : entry / liberarLibro()
+    Devuelto : entry / procesarSiguienteReserva()
+}
+
+state Cancelado #Gray {
+    Cancelado : entry / notificarCancelacion()
+}
+
+Devuelto --> [*]
+Cancelado --> [*]
+
+@enduml
