@@ -6,53 +6,37 @@ actor Profesor
 actor Bibliotecario
 actor Sistema
 
-' -------------------------------
-' Paquete Gestión de Reservar
-' -------------------------------
 package "Gestión de Reservar" {
   usecase "Hacer reserva" as UC1
   usecase "Cancelar reserva" as UC2
   usecase "Notificar disponibilidad" as UC3
 }
 
-' -------------------------------
-' Paquete Búsqueda y consulta
-' -------------------------------
 package "Búsqueda y consulta" {
   usecase "Buscar en catálogo" as UC4
   usecase "Ver historial de préstamos" as UC5
   usecase "Consultar estado de libro" as UC6
 }
 
-' -------------------------------
-' Paquete Penalizaciones
-' -------------------------------
+
 package "Penalizaciones" {
   usecase "Calcular multa" as UC7
   usecase "Pagar multa online" as UC8
   usecase "Aplicar penalización" as UC9
 }
 
-' -------------------------------
-' Paquete Reportes
-' -------------------------------
+
 package "Reportes" {
   usecase "Generar reporte de préstamos" as UC10
   usecase "Generar reporte de multas" as UC11
 }
 
-' -------------------------------
-' Otros casos de uso generales
-' -------------------------------
 usecase "Solicitar préstamo" as UC12
 usecase "Renovar préstamo" as UC13
 usecase "Devolver libro" as UC14
 usecase "Procesar devolución" as UC15
 usecase "Registrar préstamo manual" as UC16
 
-' -------------------------------
-' Relaciones con actores
-' -------------------------------
 
 ' Estudiante
 Estudiante --> UC12

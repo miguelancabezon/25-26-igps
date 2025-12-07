@@ -1,3 +1,113 @@
 @startuml
+' Definimos el título y la fecha del escenario
+title Diagrama de Objetos - Biblioteca Central (15/11/2025 - 14:30h)
+skinparam object {
+    BorderColor darkblue
+    BackgroundColor #LightSkyBlue
+}
 
-@enduml
+
+object "Ana García : Estudiante" as estudiante1 {
+    id = EST-2023001
+    prestamosActivos = 2
+    multasAcumuladas = 1.50
+}
+object "Dr. Carlos Ruiz : Profesor" as profesor1 {
+    id = PROF-2020045
+    prestamosActivos = 3
+    multasAcumuladas = 0.00
+}
+object "Luis Martínez : Estudiante" as estudiante2 {
+    id = EST-2024089
+    prestamosActivos = 1
+    multasAcumuladas = 0.00
+}
+object "Estudiante X : Estudiante" as estudianteX
+
+
+object "El Diablo : Libro" as libro1 {
+    isbn = 978-84-261-34743-2
+    disponibles = 1
+}
+object "Asesinato en el Oriente Express : Libro" as libro2 {
+    isbn = 978-8427-200-050
+    disponibles = 0
+    estado = Prestado/Reservado
+}
+object "The Great Gatsby : Libro" as libro3 {
+    isbn = 978-1-4351-7197-8
+    disponibles = 3
+}
+object "Design Patterns : Libro" as libro4 {
+    isbn = 978-0-134-68599-8
+    disponibles = 1
+}
+object "Sotileza : Libro" as libro5 {
+    isbn = 84-85349-00-8
+    disponibles = 0
+}
+object "De Grecia al Islam : Libro" as libro6 {
+    isbn = 84-299-0054-3
+    disponibles = 4
+}
+
+
+object "PRESTAMO-1234 : Prestamo" as prestamo1 {
+    fechaVencimiento = 2025-11-15
+    estado = Activo
+}
+object "PRESTAMO-1256 : Prestamo" as prestamo2 {
+    fechaVencimiento = 2025-11-27
+    estado = Activo
+}
+object "PRESTAMO-1189 : Prestamo" as prestamo3 {
+    fechaVencimiento = 2025-11-03
+    estado = Vencido
+    multa = 6.00
+}
+object "PRESTAMO-1290 : Prestamo" as prestamo4 {
+    fechaVencimiento = 2025-11-24
+    estado = Activo
+}
+object "PRESTAMO-XXXX : Prestamo" as prestamoX {
+    estado = Activo
+}
+
+
+object "RES-0089 : Reserva" as reserva1 {
+    fechaReserva = 2025-11-14
+    estado = Pendiente
+    posicionCola = 1
+}
+object "RES-0090 : Reserva" as reserva2 {
+    fechaReserva = 2025-11-15
+    estado = Pendiente
+    posicionCola = 2
+}
+object "MULT-045 : Multa" as multa1 {
+    monto = 6.00
+    estado = Pendiente
+}
+
+estudiante1 o-- prestamo1 : tiene
+estudiante1 o-- prestamo3 : tiene
+profesor1 o-- prestamo2 : tiene
+profesor1 o-- prestamoX : tiene
+estudiante2 o-- prestamo4 : tiene
+
+
+prestamo1 *-- libro1 : de ejemplar de
+prestamo2 *-- libro2 : de ejemplar de
+prestamo3 *-- libro5 : de ejemplar de (Vencido)
+prestamo4 *-- libro3 : de ejemplar de
+
+reserva1 -- libro2 : solicita (Pos. 1)
+reserva2 -- libro2 : solicita (Pos. 2)
+
+estudiante2 -- reserva1 : hecha por
+estudianteX -- reserva2 : hecha por
+
+
+multa1 -- prestamo3 : generada por
+multa1 -- estudiante1 : asociada a
+@endumal
