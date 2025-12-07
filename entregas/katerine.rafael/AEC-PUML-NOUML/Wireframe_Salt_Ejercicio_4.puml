@@ -1,0 +1,26 @@
+@startuml
+skinparam backgroundColor #FFF0F5
+!define RECTANGLE class
+
+RECTANGLE "🎵 Selección de Canción" as SongSelect
+RECTANGLE "🕹️ Controles" as Controls
+RECTANGLE "⭐ Puntuaciones" as Scores
+RECTANGLE "👤 Perfil de Jugador" as PlayerProfile
+RECTANGLE "⚙️ Configuración" as Settings
+
+SongSelect --> Controls
+SongSelect --> Scores
+PlayerProfile --> Scores
+Settings --> Controls
+
+' Tabs
+note right of SongSelect
+Tab: Canciones Populares | Favoritos | Nuevas
+end note
+
+' Tabla de datos
+note bottom of Scores
+Top 5 jugadores
+Jugador | Puntos | Nivel
+end note
+@enduml

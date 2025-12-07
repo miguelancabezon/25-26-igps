@@ -1,0 +1,126 @@
+@startgantt
+title Visual Novel - Plan de Desarrollo
+printscale weekly
+
+Project starts 2025-01-06
+
+<style>
+ganttDiagram {
+  task {
+    FontColor black
+  }
+  milestone {
+    BackGroundColor gold
+    LineColor orange
+  }
+  separator {
+    BackGroundColor lightgray
+    FontStyle bold
+  }
+}
+</style>
+
+-- FASE 1: PREPRODUCCIÓN --
+[1.1 Concepto del juego] as [F1T1] lasts 5 days
+[F1T1] is colored in LightBlue
+[F1T1] is 100% completed
+note bottom
+Equipo: Dirección creativa
+Recursos: Documentos de diseño
+end note
+
+[1.2 Escritura del guion principal] as [F1T2] lasts 10 days and starts at [F1T1]'s end
+[F1T2] is colored in LightBlue
+[F1T2] is 70% completed
+note bottom
+Equipo: Guionista, Director narrativo
+end note
+
+[1.3 Diseño de personajes] as [F1T3] lasts 8 days and starts at [F1T2]'s start
+[F1T3] is colored in LightPink
+[F1T3] is 60% completed
+
+[1.4 Diseño de escenarios] as [F1T4] lasts 7 days and starts at [F1T3]'s start
+[F1T4] is colored in LightPink
+[F1T4] is 50% completed
+
+[1.5 Selección de motor de juego (Ren'Py)] as [F1T5] lasts 3 days and starts at [F1T1]'s end
+[F1T5] is colored in SkyBlue
+[F1T5] is 100% completed
+
+[Milestone 1: Prototipo] as [M1] happens at [F1T5]'s end
+
+-- FASE 2: PRODUCCIÓN --
+[2.1 Programación del sistema de decisiones] as [F2T1] lasts 10 days and starts at [M1]'s end
+[F2T1] is colored in LightGreen
+[F2T1] is 50% completed
+
+[2.2 Implementación de personajes y sprites] as [F2T2] lasts 12 days and starts at [F2T1]'s start
+[F2T2] is colored in LightPink
+[F2T2] is 40% completed
+
+[2.3 Creación de fondos y escenas] as [F2T3] lasts 10 days and starts at [F2T1]'s start
+[F2T3] is colored in LightPink
+[F2T3] is 30% completed
+
+[2.4 Composición de música y efectos] as [F2T4] lasts 8 days and starts at [F2T3]'s start
+[F2T4] is colored in LightYellow
+[F2T4] is 20% completed
+
+[2.5 Integración del guion con decisiones] as [F2T5] lasts 15 days and starts at [F2T2]'s end
+[F2T5] is colored in LightGreen
+[F2T5] is 25% completed
+
+[2.6 Pruebas internas de jugabilidad] as [F2T6] lasts 7 days and starts at [F2T5]'s end
+[F2T6] is colored in LightCoral
+[F2T6] is 10% completed
+note bottom
+Equipo: QA y narrativa
+Objetivo: detectar errores de rutas
+end note
+
+[Milestone 2: 🧪 Beta] as [M2] happens at [F2T6]'s end
+
+-- FASE 3: POSTPRODUCCIÓN --
+[3.1 Corrección de errores y optimización] as [F3T1] lasts 10 days and starts at [M2]'s end
+[F3T1] is colored in LightCoral
+[F3T1] is 30% completed
+
+[3.2 Grabación de voces (opcional)] as [F3T2] lasts 8 days and starts at [F3T1]'s start
+[F3T2] is colored in LightYellow
+[F3T2] is 10% completed
+
+[3.3 Campaña de marketing y redes sociales] as [F3T3] lasts 10 days and starts at [F3T1]'s end
+[F3T3] is colored in LightBlue
+[F3T3] is 5% completed
+note bottom
+Equipo: Marketing + Dirección
+end note
+
+[3.4 Publicación y distribución (Steam, Itch.io)] as [F3T4] lasts 5 days and starts at [F3T3]'s end
+[F3T4] is colored in LightGreen
+[F3T4] is 0% completed
+
+[Milestone 3: 🎉 Versión 1.0] as [M3] happens at [F3T4]'s end
+
+-- HITOS GENERALES --
+[Anuncio del proyecto] happens 2025-01-10
+[Inicio pruebas Beta Cerrada] happens 2025-05-15
+[Lanzamiento oficial] happens 2025-07-01
+
+-- RECURSOS Y DEPENDENCIAS --
+note bottom
+<b>Recursos principales:</b>
+Arte (2 personas)
+Guion (1 persona)
+Programación (2 personas)
+Música (1 persona)
+QA (1 persona)
+Marketing (1 persona)
+
+<b>Dependencias críticas:</b>
+⚠ Sistema de decisiones [F2T1] bloquea integración de guion [F2T5]
+⚠ Beta [M2] bloquea corrección final [F3T1]
+end note
+
+@endgantt

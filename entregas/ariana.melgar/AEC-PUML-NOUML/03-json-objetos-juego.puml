@@ -1,0 +1,238 @@
+@startjson
+title Pastel Notes - Sistema del Juego
+
+<style>
+  .cancion {
+    BackgroundColor #FFD1DC
+    FontColor white
+    FontStyle bold
+  }
+  .personaje {
+    BackgroundColor #BAE1FF
+    FontColor #333333
+    FontStyle bold
+  }
+  .jugador {
+    BackgroundColor #E0BBE4
+    FontColor white
+    FontStyle bold
+  }
+  .acciones {
+    BackgroundColor #BAFFC9
+    FontColor #333333
+    FontStyle italic
+  }
+  .metadata {
+    BackgroundColor #FFB3BA
+    FontColor white
+    FontStyle bold
+  }
+}
+</style>
+
+#highlight "cancionId" <<cancion>>
+#highlight "nombreCancion" <<cancion>>
+#highlight "personajeId" <<personaje>>
+#highlight "nombrePersonaje" <<personaje>>
+#highlight "jugadorId" <<jugador>>
+#highlight "actions" <<acciones>>
+#highlight "metadata" <<metadata>>
+
+{
+  "metadata": {
+    "gameName": "Pastel Notes",
+    "gameVersion": "1.0.0",
+    "genre": "Rhythm Game",
+    "developer": "Ariana Melgar",
+    "platform": "Mobile & PC",
+    "lastUpdated": "2025-11-08T20:30:00Z"
+  },
+
+  "canciones": [
+    {
+      "cancionId": "SONG-001",
+      "nombreCancion": "Butterfly Dreams",
+      "artista": "Luna Rose",
+      "genero": "Pop",
+      "duracion": "3:24",
+      "bpm": 128,
+      "isUnlocked": true,
+      "dificultades": [
+        {
+          "nivel": "Easy",
+          "estrellas": 3,
+          "totalNotas": 180
+        },
+        {
+          "nivel": "Normal",
+          "estrellas": 5,
+          "totalNotas": 320
+        },
+        {
+          "nivel": "Hard",
+          "estrellas": 7,
+          "totalNotas": 485
+        }
+      ],
+      "escenario": "Jardin de Flores",
+      "colorTema": "#FFB3D9",
+      "vecesJugada": 47
+    },
+    {
+      "cancionId": "SONG-012",
+      "nombreCancion": "Starlight Melody",
+      "artista": "Pastel Harmony",
+      "genero": "Lo-fi",
+      "duracion": "2:58",
+      "bpm": 95,
+      "isUnlocked": true,
+      "dificultades": [
+        {
+          "nivel": "Easy",
+          "estrellas": 2,
+          "totalNotas": 145
+        },
+        {
+          "nivel": "Normal",
+          "estrellas": 4,
+          "totalNotas": 268
+        },
+        {
+          "nivel": "Hard",
+          "estrellas": 6,
+          "totalNotas": 410
+        }
+      ],
+      "escenario": "Cielo Estrellado",
+      "colorTema": "#AEC6FF",
+      "vecesJugada": 23
+    }
+  ],
+
+  "personajes": [
+    {
+      "personajeId": "CHAR-001",
+      "nombrePersonaje": "Melody",
+      "descripcion": "Una chica soñadora que ama la musica",
+      "colorRepresentativo": "#FFB3D9",
+      "isUnlocked": true,
+      "nivelAmistad": 8,
+      "habilidad": {
+        "nombre": "Bonus de Combo",
+        "efecto": "Aumenta puntos x1.5",
+        "duracion": 10
+      },
+      "estadisticas": {
+        "cancionesFavoritas": 12,
+        "totalPartidas": 89
+      }
+    },
+    {
+      "personajeId": "CHAR-002",
+      "nombrePersonaje": "Luna",
+      "descripcion": "Misteriosa pianista talentosa",
+      "colorRepresentativo": "#AEC6FF",
+      "isUnlocked": true,
+      "nivelAmistad": 5,
+      "habilidad": {
+        "nombre": "Precision Perfecta",
+        "efecto": "Aumenta precision en notas",
+        "duracion": 15
+      },
+      "estadisticas": {
+        "cancionesFavoritas": 8,
+        "totalPartidas": 45
+      }
+    }
+  ],
+
+  "jugador": {
+    "jugadorId": "PLY-00234",
+    "nombreJugador": "ariana.melgar",
+    "nivel": 18,
+    "experiencia": 8450,
+    "expProximoNivel": 10000,
+    "gemas": 2580,
+    "fechaRegistro": "2025-03-15T10:00:00Z",
+    "personajeFavorito": "CHAR-001",
+    "estadisticas": {
+      "cancionesCompletadas": 18,
+      "comboMaximo": 487,
+      "horasJugadas": 24.5
+    },
+    "logros": [
+      {
+        "logroId": "ACH-001",
+        "nombre": "Primera Cancion",
+        "desbloqueado": true,
+        "fecha": "2025-03-15"
+      },
+      {
+        "logroId": "ACH-015",
+        "nombre": "Combo Master",
+        "desbloqueado": true,
+        "fecha": "2025-04-22"
+      },
+      {
+        "logroId": "ACH-028",
+        "nombre": "Perfecta Melodia",
+        "desbloqueado": false,
+        "fecha": null
+      }
+    ]
+  },
+
+  "escenarios": [
+    {
+      "escenarioId": "SCN-001",
+      "nombreEscenario": "Jardin de Flores",
+      "descripcion": "Un hermoso jardin lleno de flores",
+      "colorPrincipal": "#FFB3D9",
+      "isUnlocked": true,
+      "efectosEspeciales": ["Petalos", "Mariposas", "Brillo"]
+    },
+    {
+      "escenarioId": "SCN-003",
+      "nombreEscenario": "Cielo Estrellado",
+      "descripcion": "Noche magica bajo las estrellas",
+      "colorPrincipal": "#AEC6FF",
+      "isUnlocked": true,
+      "efectosEspeciales": ["Estrellas", "Luna", "Luz"]
+    }
+  ],
+
+  "actions": {
+    "cancionActions": [
+      {
+        "actionName": "playSong",
+        "affectsClass": "Cancion",
+        "requiredParams": ["cancionId", "dificultad", "jugadorId"],
+        "description": "Iniciar cancion con dificultad"
+      },
+      {
+        "actionName": "unlockSong",
+        "affectsClass": "Cancion",
+        "requiredParams": ["cancionId", "jugadorId"],
+        "description": "Desbloquear cancion"
+      }
+    ],
+    "personajeActions": [
+      {
+        "actionName": "selectCharacter",
+        "affectsClass": "Personaje",
+        "requiredParams": ["personajeId", "jugadorId"],
+        "description": "Seleccionar personaje"
+      }
+    ],
+    "jugadorActions": [
+      {
+        "actionName": "earnGems",
+        "affectsClass": "Jugador",
+        "requiredParams": ["jugadorId", "cantidad"],
+        "description": "Ganar gemas"
+      }
+    ]
+  }
+}
+
+@endjson

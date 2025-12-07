@@ -1,0 +1,72 @@
+@startmindmap
+<style>
+mindmapDiagram {
+  .greenStyle * {
+    BackgroundColor lightgreen
+  }
+  .yellowStyle * {
+    BackgroundColor lightyellow
+  }
+    .blueStyle * {
+    BackgroundColor lightblue
+  }
+    .redStyle * {
+    BackgroundColor #FFBBCC
+  }
+    .pinkStyle * {
+    BackgroundColor #ff0080
+  }
+}
+</style>
+
++ Watashi no kurasumēto to no erotikkuna bōken
+
+++ <:sunny:> Historia <<greenStyle>>
++++ <:gear:> Trama principal
+++++ Inicio
+++++ Conflicto
+++++ Finales alternativos
++++ <:exclamation:> Diálogos
+++++ Árbol de decisiones
+++++ Elecciones del jugador
++++ <:standing_person:>Personajes
+++++ Protagonista
+++++ Secundarios
+
+++ <:paintbrush:>Arte y Diseño <<yellowStyle>>
++++ Estilo visual
+++++ Anime
+++++ Realista
+++++ Minimalista
++++ <:partly_sunny:> Escenarios
+++++ Colegio
+++++ Casa
+++++ Crepes lovers
+++++ Ciudad
+
+-- <:headphones:>Audio <<redStyle>>
+--- <:musical_note:> Banda sonora
+---- Música ambiental
+---- Canciones 
+--- <:speaking_head:>️ Doblaje
+---- Voces parciales
+---- Narrador
+
+-- <:newspaper_roll:> Mecánicas <<blueStyle>>
+--- <:unlock:>️ Sistema de decisione
+---- Puntos de afinidad
+---- Rutas bloqueadas
+--- <:ballot_box_with_check:> Guardado de progreso
+---- Guardado automático
+---- Slots manuales
+--- <:v:>Relectura 
+---- Skip leído
+---- Registro de texto
+
+-- <:computer:>Desarrollo técnico <<pinkStyle>>
+--- <:artificial_satellite:>Motor de juego
+---- Ren’Py
+---- Unity
+---- Godot
+
+@endmindmap

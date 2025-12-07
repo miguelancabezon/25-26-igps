@@ -1,4 +1,4 @@
-# Ejercicio Markdown - CV 
+# Ejercicio Markdown - CV
 
 ## Recursos
 
@@ -7,6 +7,7 @@
 ## Descripción del ejercicio
 
 Crear un CV con los siguientes parámetros:
+
 - Usar un Encabezado 1 para el nombre
 - Foto
 - Crear un listado como indice para las secciones de Perfil, Educación, ...
@@ -17,30 +18,41 @@ Crear un CV con los siguientes parámetros:
   - Habilidades
   - Datos de contacto
   - Idiomas
---- 
+
+---
+
 - **Sección Perfil**
   - Texto con estilos (negritas, cursivas, etc.)
---- 
+
+---
+
 - **Sección Educación**
   - Lista desordenada
   - Puesto
     - Lugar - años
     - Descripción de las tareas desarrolladas en ese puesto
---- 
+
+---
+
 - **Sección Habilidades**
   - Lista desordenada
   - Iconos
---- 
+
+---
+
 - **Sección Datos Contacto**
   - Lista desordenada
   - Iconos con enlace (linkedin si se tiene)
   - Enlace con mailto
---- 
+
+---
+
 - **Sección Idiomas**
   - Lista ordeanada
   - Ordenar por dominio del idioma
 
-
 Ejemplo:
+
 1. Español :es: C2
---- 
+
+---

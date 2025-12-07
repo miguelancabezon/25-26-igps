@@ -1,0 +1,122 @@
+@startsalt
+' Wireframe: Interfaz Principal - Juego de Ritmo "Cosmic Beat"
+' Autor: Felix Manrique
+' Fecha: 2025-11-05
+
+<style>
+saltDiagram {
+  .header {
+    FontColor #00D4FF
+    FontSize 18
+    FontStyle bold
+  }
+  .tab-active {
+    BackgroundColor #00BFFF
+    FontColor white
+  }
+  .tab-inactive {
+    BackgroundColor #E0E0E0
+    FontColor black
+  }
+  .button-primary {
+    BackgroundColor #32CD32
+    FontColor white
+    FontStyle bold
+  }
+  .button-secondary {
+    BackgroundColor #FF6B47
+    FontColor white
+  }
+  .button-info {
+    BackgroundColor #4169E1
+    FontColor white
+  }
+  .stats-panel {
+    BackgroundColor #F0F8FF
+  }
+  .player-info {
+    BackgroundColor #E6E6FA
+  }
+}
+</style>
+
+{+
+  {/ "� COSMIC BEAT - Dashboard Principal" .header}
+  ==
+  {
+    {
+      {/ "👤 CosmicRhythm42" .player-info} | {/ "Nivel: 87 ⭐" .player-info} | {/ "XP: 245,780 💎" .player-info} | {/ "Coins: 15,420 🪙" .player-info}
+    }
+    --
+    {
+      {^"🎵 Canciones" .tab-active} | {^"🏆 Rankings" .tab-inactive} | {^"👥 Multijugador" .tab-inactive} | {^"🛍️ Tienda" .tab-inactive} | {^"⚙️ Ajustes" .tab-inactive}
+    }
+    ==
+    {
+      {
+        "🎯 Seleccionar Canción:"
+        --
+        {
+          | Título ^ | Artista ^ | BPM ^ | Dificultad ^ | Tu Récord ^ | Estado ^
+          | "🌌 Cosmic Overdrive" | "NeonSynth Collective" | 145 | "🔥 Expert" | "999,850 ⭐" | "🔓 Desbloqueada"
+          | "⚡ Neon Thunder" | "ElectroBeats Pro" | 172 | "🟡 Hard" | "987,320 ⭐" | "🔓 Desbloqueada" 
+          | "🌠 Starfall Anthem" | "Cosmic DJ Alliance" | 128 | "🟢 Medium" | "892,450 ⭐" | "🔓 Desbloqueada"
+          | "🔮 Digital Dreams" | "SynthWave Masters" | 160 | "🔴 Expert" | "--- " | "🔒 Bloqueada"
+          | "💫 Galaxy Rush" | "Space Beats Inc" | 190 | "🟠 Hard" | "756,890 ⭐" | "💎 Premium"
+        }
+        --
+        {
+          "🎚️ Filtros:"
+          ( ) "Todas" | (X) "Desbloqueadas" | ( ) "Premium" | ( ) "Favoritas ❤️"
+        }
+        --
+        {
+          "📊 Dificultad Seleccionada:"
+          {^"🟢 Easy" .tab-inactive} | {^"🟡 Medium" .tab-inactive} | {^"🟠 Hard" .tab-active} | {^"🔴 Expert" .tab-inactive}
+        }
+      }
+      |
+      {
+        "📈 Estadísticas Rápidas" .stats-panel
+        --
+        "🎯 Precisión Promedio: 94.7%"
+        "🔥 Racha Máxima: 256 hits"
+        "🎵 Canciones Jugadas: 340"
+        "⏱️ Tiempo Total: 260h 15m"
+        "🏅 Ranking Global: #1,247"
+        --
+        "🎭 Avatar Actual:"
+        "🥷 Cyber Ninja (Epic)"
+        [ "Cambiar Avatar 🔄" .button-info ]
+        --
+        "🎁 Logros Recientes:"
+        "✅ Perfectionist (99% precisión)"
+        "✅ Speed Demon (Expert song)"
+        "🔄 Combo Master (500+ combo)"
+        --
+        "⚡ Power-ups Disponibles:"
+        "🚀 Score Boost x3"
+        "🎯 Auto-Hit x1" 
+        "⏰ Slow Motion x2"
+        [ "Gestionar Power-ups ⚙️" .button-secondary ]
+      }
+    }
+    ==
+    {
+      "🔊 Vista Previa:" | {/ "🌌 Cosmic Overdrive - NeonSynth Collective" } | [ "▶️ Reproducir" .button-info ] | [ "⏸️ Pausar" .button-secondary ]
+    }
+    --
+    {
+      "🎮 Opciones de Juego:"
+      --
+      {
+        [ "🎯 Modo Práctica" .button-secondary ] | [ "🏆 Desafío Diario" .button-info ] | [ "👥 Batalla 1vs1" .button-secondary ] | [ "📊 Ver Leaderboard" .button-info ]
+      }
+    }
+    ==
+    {
+      {/ "🔙 Menú Principal" .button-secondary} | "                    " | {/ "🎮 ¡INICIAR PARTIDA! 🚀" .button-primary}
+    }
+  }
+}
+@endsalt

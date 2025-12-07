@@ -1,0 +1,46 @@
+@startjson
+{
+  "player": {
+    "id": 1,
+    "name": "ShadowAgent",
+    "health": 100,
+    "inventory": ["pistol", "medkit", "grenade"],
+    "isAlive": true,
+    "createdAt": "2025-11-09T21:00:00Z",
+    "actions": {
+      "move": "WASD",
+      "shoot": "LeftClick",
+      "reload": "R"
+    },
+    "metadata": {
+      "platform": "PC",
+      "version": "1.0.0"
+    }
+  },
+  "weapon": {
+    "id": 101,
+    "name": "AssaultRifle",
+    "damage": 35,
+    "range": 50,
+    "ammoType": "5.56mm",
+    "isAutomatic": true,
+    "createdAt": "2025-11-09T21:00:00Z"
+  },
+  "enemy": {
+    "id": 201,
+    "type": "Drone",
+    "health": 50,
+    "behavior": ["patrol", "attack", "retreat"],
+    "isHostile": true,
+    "createdAt": "2025-11-09T21:00:00Z"
+  },
+  "level": {
+    "id": 301,
+    "name": "UrbanStrike",
+    "difficulty": "Hard",
+    "objectives": ["Eliminate all enemies", "Reach extraction point"],
+    "spawnPoints": [101, 102, 103],
+    "createdAt": "2025-11-09T21:00:00Z"
+  }
+}
+@endjson

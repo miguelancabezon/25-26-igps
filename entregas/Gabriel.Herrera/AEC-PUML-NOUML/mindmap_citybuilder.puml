@@ -1,0 +1,77 @@
+
+@startmindmap
+<style>
+mindmapDiagram {
+  node {
+    BackgroundColor white
+    FontColor black
+    FontSize 14
+    FontName Arial
+    LineColor gray
+  }
+}
+:root {
+  BackgroundColor #cce5ff
+  FontColor #003366
+  LineColor #003366
+}
+.idea {
+  BackgroundColor #ffe6cc
+}
+.dev {
+  BackgroundColor #d9f2d9
+}
+.art {
+  BackgroundColor #fce5ff
+}
+.econ {
+  BackgroundColor #fff2cc
+}
+.sound {
+  BackgroundColor #ccffff
+}
+</style>
+
+* 🏙️ **City Builder Game**
+** 🎮 Gameplay [#ffe6cc]
+*** 🚧 Construction System
+**** 🏗️ Build Roads, Zones, Services
+**** 🧩 Grid & Free Placement
+*** 🌆 City Management
+**** 💡 Energy, Water, Garbage
+**** 🏥 Health, Education, Security
+*** 💰 Economy
+**** 📈 Taxes, Trade, Loans
+**** 🏦 Budget Management
+
+** 🎨 Art & Design [#fce5ff]
+*** 🏘️ Building Models
+**** 🏠 Residential
+**** 🏢 Commercial
+**** 🏭 Industrial
+*** 🌳 Environment
+**** 🌲 Nature, Weather, Day/Night
+*** 👥 UI/UX
+**** 🎛️ Panels, Menus, Icons
+
+** 🧠 AI & Simulation [#d9f2d9]
+*** 🚗 Traffic Simulation
+*** 👷 Population Growth
+*** 🏢 Employment System
+*** 🌍 Procedural Events (disasters, economy)
+
+** 💵 Economy & Progression [#fff2cc]
+*** 📊 Taxes & City Budget
+*** 💼 Unlockable Upgrades
+*** 🏗️ Expansion Milestones
+
+** 🎵 Sound & Music [#ccffff]
+*** 🎶 Dynamic Soundtrack
+*** 🔊 Ambient Sounds
+*** 🎤 Voice/Effects
+
+** 🧩 Multiplayer & Cloud [#e6f7ff]
+*** 🌐 City Sharing
+*** 🧑‍🤝‍🧑 Co-op Building
+*** ☁️ Cloud Saves
+@endmindmap

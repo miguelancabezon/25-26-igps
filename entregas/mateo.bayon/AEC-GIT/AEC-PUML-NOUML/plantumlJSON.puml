@@ -1,0 +1,121 @@
+@startjson
+title FPS Game Data Model
+{
+  "id": 0,
+  "nombre": "salaTest",
+  "fecha": "2025-10-07",
+  "estado": "activo",
+  "elementos": [
+    {
+      "id": 1,
+      "nombre": "Booker DeWitt",
+      "fecha": "2025-11-08",
+      "salud": "150",
+      "estado": "activo",
+      "armasFuego": [
+        {
+          "id": 101,
+          "nombre": "Rifle",
+          "fecha": "2025-11-08",
+          "loTiene": true,
+          "estado": "activo",
+          "daño": "25"
+        },
+        {
+          "id": 102,
+          "nombre": "RPG",
+          "fecha": "2025-11-08",
+          "loTiene": true,
+          "estado": "inactivo",
+          "daño": "100"
+        },
+        {
+          "id": 103,
+          "nombre": "Escopeta",
+          "fecha": "2025-11-08",
+          "loTiene": true,
+          "estado": "inactivo",
+          "daño": "50"
+        }
+      ],
+      "armasBlancas": [
+        {
+          "id": 104,
+          "nombre": "Cuchillo",
+          "fecha": "2025-11-08",
+          "loTiene": false,
+          "estado": "inactivo",
+          "daño": "10"
+        },
+        {
+          "id": 105,
+          "nombre": "Espada",
+          "fecha": "2025-11-08",
+          "loTiene": false,
+          "estado": "inactivo",
+          "daño": "30"
+        },
+        {
+          "id": 106,
+          "nombre": "Hacha",
+          "fecha": "2025-11-08",
+          "loTiene": true,
+          "estado": "inactivo",
+          "daño": "40"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "enemigo01",
+      "fecha": "2025-11-10",
+      "salud": "50",
+      "estado": "activo",
+      "armas": [
+        {
+          "id": 201,
+          "nombre": "Cuchillo",
+          "fecha": "2025-11-11",
+          "estado": "activo",
+          "daño": "10"
+        },
+        {
+          "id": 202,
+          "nombre": "Revolver",
+          "fecha": "2025-11-11",
+          "estado": "inactivo",
+          "daño": "20"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "nombre": "disparar",
+      "clase": "Arma",
+      "parámetros": ["id", "objetivoId"]
+    },
+    {
+      "nombre": "recargar",
+      "clase": "Arma",
+      "parámetros": ["id", "munición"]
+    },
+    {
+      "nombre": "equiparArma",
+      "clase": "Personaje",
+      "parámetros": ["personajeId", "armaId"]
+    },
+    {
+      "nombre": "entrarEscenario",
+      "clase": "Escenario",
+      "parámetros": ["personajeId", "escenarioId"]
+    }
+  ],
+  "config": {
+    "versión": "1.0.0",
+    "idioma": "es-ES",
+    "entorno": "desarrollo",
+    "autor": "Mateo"
+  }
+}
+@endjson

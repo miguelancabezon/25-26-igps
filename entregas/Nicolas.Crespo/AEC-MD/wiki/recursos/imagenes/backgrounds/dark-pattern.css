@@ -1,0 +1,5 @@
+/* Base64 encoded dark pattern with subtle runes */
+.elden-background {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA2ElEQVR42mNkYGBgYGBg+M/AwMgABf8ZGP4zMPz7z8AABX/+MzD++8/A9O8/A/O//wzs//4zCP37z6D67z+D3b//DIn//jNk/fvPUPXvP0P7v/8MQ/79Z5j87z/D3H//GVb++8+w/d9/hkP//jOc+/ef4ca//wz3//1neP7vP8O7f/8ZPv37z/D933+Gf//+M/z/9x8cMkZERLgwMDD4AJ0TC3RwDNC3JUDfVgN9u+c/CDC6urq6AeXTgPJFQPkGoHwn0LcngL69+u8/w2egb9/9+8/w6t9/hg8As0FUMp2KxbYAAAAASUVORK5CYII=');
+    background-repeat: repeat;
+}

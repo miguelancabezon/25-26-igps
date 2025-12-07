@@ -1,0 +1,36 @@
+/* Dark parchment pattern */
+.parchment-background {
+    background-color: #1a1a1a;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAUVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcqRVCAAAAGnRSTlMAA/7uzIsFCvnoc2FcPhwUB+/q5tjRy8K8tXowL2gAAABESURBVEjH7c1JCsAwDENR2U7iTMNM73/UUkqgm0JX/O1A8FsCAAAA+Bq+M1yrFp+dSn1BJ/zq1nf0LV/dAwAAAIB3nW8AQRoKgwIbFz0AAAAASUVORK5CYII=');
+    background-repeat: repeat;
+    padding: 20px;
+    position: relative;
+    color: #d4c4a1;
+}
+
+/* Aging effect */
+.parchment-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(0,0,0,0), rgba(0,0,0,0.3));
+    pointer-events: none;
+}
+
+/* Border with aged golden effect */
+.parchment-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #95783c;
+    box-shadow: 
+        inset 0 0 10px rgba(149, 120, 60, 0.5),
+        0 0 10px rgba(149, 120, 60, 0.3);
+    pointer-events: none;
+}

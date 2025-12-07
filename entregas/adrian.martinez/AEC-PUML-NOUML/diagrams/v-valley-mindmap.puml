@@ -1,0 +1,94 @@
+@startmindmap
+
+<style>
+mindmapDiagram {
+  .infraStyle * {
+    BackgroundColor #E6F7FF
+  }
+  .gameplayStyle * {
+    BackgroundColor #E8F5E9
+  }
+  .netStyle * {
+    BackgroundColor #FFF3E0
+  }
+  .artStyle * {
+    BackgroundColor #E6F7FF
+  }
+  .opsStyle * {
+    BackgroundColor #F3E5F5
+  }
+  .econStyle * {
+    BackgroundColor #FFF9C4
+  }
+}
+</style>
+
++ Vaquero Valley
+
+++ Jugabilidad <<gameplayStyle>>
++++ Construcción <:1F9F1:>
+++++ Pueblo principal
+++++ Casas de la época
+++++ Edificios destacados
++++++ Bareto / Posada
++++++ Oficina del sheriff
++++++ Establo
++++++ Mina
++++ Economía <<econStyle>> <:1F4B0:>
+++++ Oro y recursos
+++++ Comercio y trueques <:1F434:>
+++++ Saqueos / Contrabando
+++++ Impuestos y ganancias <:1F4CA:>
++++ Habitantes <:1F465:>
+++++ Vaqueros, mineros, granjeros
+++++ Necesidades: comida, agua, recursos
+++++ Transporte
++++++ En diligencia
++++++ A caballo
+
+-- Infraestructura <<infraStyle>>
+--- Servidores <:2601:> <<netStyle>>
+---- Servidor principal
+---- Guardar progreso de cada pueblo <:1F4BE:>
+---- Copias de seguridad de la BBDD <:1F9F0:>
+--- Juego en línea <:1F310:>
+---- Modo multijugador con interacción jugadores
+---- Modo offline con misiones aparte
+
+++ Arte y diseño <<artStyle>>
++++ Gráficos y entorno <:1F5BC:>
+++++ Desierto, cactus y montañas <:1F304:>
+++++ Edificios clásicos del oeste
+++++ Animales: caballos, ovejas, coyotes <:1F434:>
++++ Interfaz <:1F9ED:>
+++++ Menú de construcción
+++++ Menú de misiones
++++ Sonido y música <:1F3B5:>
+++++ Ambientación del oeste <:1F3B8:>
+++++ Efectos: disparos, viento, galope
+
+-- Operaciones <<opsStyle>>
+--- Desarrollo <:1F4BB:>
+---- Versiones nuevas con regularidad <:1F3D7:>
+---- Tests del juego para evitar bugs <:1F9EA:>
+--- Seguridad <:1F512:>
+---- Inicio de sesión con Google <:1F511:>
+---- Datos protegidos <:1F510:>
+
+++ Equipo <<opsStyle>>
++++ Roles
+++++ Diseñadores
+++++ Programadores
++++ Organización <:1F4C6:>
+++++ Planificación a varios meses vista
+++++ Reuniones de equipo semanales
+
+-- Servicios <<netStyle>>
+--- Soporte
+---- Ayuda y guías <:1F4E9:>
+---- Comunidad de jugadores <:1F4AC:>
+--- Tienda <:1F4B3:>
+---- Ventas de sombreros, caballos, consumibles
+---- Expansiones del mapa
+
+@endmindmap

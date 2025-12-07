@@ -1,0 +1,101 @@
+@startjson
+{
+  "config": {
+    "version": "1.0.0",
+    "language": "es-ES",
+    "environment": "development",
+    "author": "AshStudio Games"
+  },
+  "objects": {
+    "Player": {
+      "id": "player_001",
+      "name": "Survivor_01",
+      "creationDate": "2025-01-01T09:00:00Z",
+      "health": 100,
+      "hunger": 45,
+      "thirst": 30,
+      "energy": 60,
+      "position": { "x": 120.5, "y": 30.2, "z": -40.3 },
+      "inventory": [
+        { "itemId": "i_001", "name": "Hacha improvisada", "quantity": 1 },
+        { "itemId": "i_002", "name": "Madera", "quantity": 12 }
+      ],
+      "isAlive": true
+    },
+    "Item": {
+      "id": "i_001",
+      "name": "Hacha improvisada",
+      "type": "weapon",
+      "damage": 25,
+      "durability": 0.8,
+      "weight": 3.2,
+      "craftable": true,
+      "materials": ["piedra", "madera"]
+    },
+    "Enemy": {
+      "id": "enemy_001",
+      "name": "Zombi Bosque",
+      "type": "infectado",
+      "health": 80,
+      "attackPower": 15,
+      "isAggressive": true,
+      "spawnArea": "bosque_norte",
+      "loot": [
+        { "itemId": "i_005", "chance": 0.3 },
+        { "itemId": "i_006", "chance": 0.1 }
+      ]
+    },
+    "Environment": {
+      "id": "env_forest_01",
+      "name": "Bosque del Norte",
+      "temperature": 12.5,
+      "timeOfDay": "noon",
+      "weather": "lluvia",
+      "resources": [
+        { "type": "madera", "amount": 500 },
+        { "type": "agua", "amount": 200 },
+        { "type": "comida", "amount": 150 }
+      ]
+    },
+    "Shelter": {
+      "id": "shelter_001",
+      "name": "Refugio Básico",
+      "constructionDate": "2025-01-15T10:00:00Z",
+      "durability": 80,
+      "capacity": 2,
+      "isBuilt": true,
+      "contents": [
+        { "itemId": "i_002", "quantity": 20 },
+        { "itemId": "i_003", "quantity": 5 }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "name": "craftItem",
+      "targetClass": "Player",
+      "parameters": ["playerId", "itemId", "materials"]
+    },
+    {
+      "name": "consumeItem",
+      "targetClass": "Player",
+      "parameters": ["playerId", "itemId"]
+    },
+    {
+      "name": "attackEnemy",
+      "targetClass": "Enemy",
+      "parameters": ["playerId", "enemyId"]
+    },
+    {
+      "name": "gatherResource",
+      "targetClass": "Environment",
+      "parameters": ["playerId", "resourceType", "amount"]
+    },
+    {
+      "name": "buildShelter",
+      "targetClass": "Shelter",
+      "parameters": ["playerId", "shelterId", "materials"]
+    }
+  ]
+}
+@endjson

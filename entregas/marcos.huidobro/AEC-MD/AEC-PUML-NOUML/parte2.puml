@@ -1,0 +1,39 @@
+@startgantt
+title Desarrollo Aplicación E-commerce
+printscale daily
+
+Project starts 2024-6-7
+
+-- Fase 1: Preproducción (3 semanas) --
+[Reuniones iniciales] lasts 5 days
+[Definir requisitos] lasts 6 days and starts at [Reuniones iniciales]'s end
+[Diseño UX/UI] lasts 10 days and starts at [Definir requisitos]'s end
+[Aprobación diseño] happens at [Diseño UX/UI]'s end
+
+-- Fase 2:  Produccion (7 semanas) --
+[Modelado animaciones y mecanicas] lasts 21 days and starts at [Aprobación diseño]'s end
+[Mapas particulas y música] lasts 14 days and starts at [Modelado animaciones y mecanicas]'s end
+[Interfaz y multijugador] lasts 14 days and starts at [Modelado animaciones y mecanicas]'s end
+
+
+
+-- Fase 3: Postproduccion (3 semanas) --
+
+[Optimización y bugs] lasts 5 days and starts at [Interfaz y multijugador]'s end
+[Optimización y bugs] is colored in Green
+[Optimización y bugs] is 100% completed
+
+[Beta] lasts 5 days and starts at [Optimización y bugs]'s end
+[Beta] is colored in Orange
+[Beta] is 67% completed
+
+
+[LANZAMIENTO] lasts 1 days and starts at [Beta]'s end
+
+[Soporte post] lasts 4 days and starts at [LANZAMIENTO]'s end
+[Soporte post] is colored in Red
+[Soporte post] is 50% completed
+
+
+
+@endgantt

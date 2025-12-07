@@ -1,0 +1,31 @@
+@startmindmap City Wars
+*[#Orange] City Wars
+ *[#lightgreen] 🎮 Jugabilidad
+  *[#lightblue] 👷‍♂️ Construcción
+   *[#FFBBCC] 🏠 Defensas
+  *[#lightblue] ⚙️ Gestión de recursos
+   *[#FFBBCC] 💧 Agua
+   *[#FFBBCC] ⚡ Energía
+   *[#FFBBCC] 🍞 Alimentos
+  *[#lightblue] 💬 Modo online
+   *[#FFBBCC] 💬 Chat de texto
+   *[#FFBBCC] 🎙️ Chat de voz
+   *[#FFBBCC] ⚔️ Atacar ciudades vecinas
+    *[#BBCCFF] 💰 Roba recursos
+   *[#FFBBCC] 🤝 Alianzas
+    *[#BBCCFF] 🏪 Comercio
+
+--[#FFCCBB] 🌍Ambientación
+---[#AABBCC] 🌦Clima
+----[#FFFF88] ☀️ Sol
+----[#FFFF88] 🌧️ Lluvia
+---[#AABBCC] 🗺️ Mapas
+----[#FFFF88] 📏 Tamaño de ciudad
+----[#FFFF88] 🔓 Zonas desbloqueables
+---[#AABBCC] 🧱 Interfaz
+----[#FFFF88] 🧭 Barra de navegación
+----[#FFFF88] 🏗️ Menú de construcción
+----[#FFFF88] 📊 Panel de estadísticas
+----[#FFFF88] 💬 Notificaciones
+
+@endmindmap

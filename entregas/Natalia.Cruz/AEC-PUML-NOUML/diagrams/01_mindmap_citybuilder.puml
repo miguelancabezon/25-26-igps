@@ -1,0 +1,94 @@
+@startmindmap
+skinparam backgroundcolor transparent
+
+<style>
+mindmapDiagram {
+  node {
+    BackgroundColor lightblue
+    LineColor darkblue
+    FontColor black
+    FontSize 14
+    FontStyle bold
+  }
+  rootNode {
+    BackgroundColor darkblue
+    LineColor black
+    FontColor white
+    FontSize 20
+  }
+  leafNode {
+    BackgroundColor lightgreen
+    LineColor green
+  }
+  arrow {
+    LineColor red
+    LineThickness 2
+  }
+}
+</style>
+
+- <:1F3AE:> City Builder (Diseño del Juego)
+
+**[#87CEEB] <:1F3D7:> Construcción 
+***[#4682B4] <:1F3D8:> Zonas 
+****[#4169E1] <:1F3E1:> Residencial 
+****[#4169E1] <:1F3EC:> Comercial 
+****[#4169E1] <:1F3ED:> Industrial 
+***[#4682B4] <:2692:> Recursos
+****[#4169E1] <:1F332:> Madera 
+****[#4169E1] <:26F0:> Piedra 
+****[#4169E1] <:2699:> Metal 
+***[#4682B4] <:1F3DB:> Edificios Singulares 
+****[#4169E1] <:1F3DB:> Ayuntamiento 
+****[#4169E1] <:26BD:> Estadio 
+****[#4169E1] <:1F3AD:> Museo 
+
+**[#90EE90] <:26A1:> Infraestructura 
+***[#32CD32] <:1F50C:> Energía 
+****[#80b280] <:2600:> Solar 
+****[#80b280] <:1F32C:> Eólica 
+***[#32CD32] <:1F4A7:> Agua 
+****[#80b280] <:1F4A0:> Tuberías 
+****[#80b280] <:267B:> Depuradoras 
+***[#32CD32] <:1F68C:> Transporte 
+****[#80b280] <:1F6E3:> Carreteras 
+****[#80b280] <:1F687:> Metro 
+****[#80b280] <:2708:> Aeropuerto 
+
+left side
+
+**[#FFB6C1] <:1F465:> Población y Simulación 
+***[#FF69B4] <:1F9D1:> Necesidades
+****[#C71585] <:1F4BC:> Empleo 
+****[#C71585] <:1F3E5:> Salud 
+****[#C71585] <:1F393:> Educación 
+***[#FF69B4] <:1F60A:> Felicidad
+****[#C71585] <:1F697:> Tráfico 
+****[#C71585] <:2601:> Contaminación 
+****[#C71585] <:1F693:> Seguridad 
+***[#FF69B4] <:1F916:> IA de Ciudadanos
+****[#C71585] <:23F0:> Rutinas 
+****[#C71585] <:1F389:> Eventos 
+
+**[#FFD700] <:1F4B0:> Economía y Progresión 
+***[#FFA500] <:1F4B3:> Presupuesto
+****[#FF8C00] <:1F4B5:> Impuestos 
+****[#FF8C00] <:1F4B8:> Subvenciones 
+***[#FFA500] <:1F69A:> Comercio
+****[#FF8C00] <:2693:> Import/Export 
+***[#FFA500] <:1F52C:> Tecnología
+****[#FF8C00] <:1F333:> Árbol de progreso 
+****[#FF8C00] <:1F512:> Desbloqueos 
+
+**[#BA55D3] <:1F3A8:> Arte y Tecnología 
+***[#DA70D6] <:1F3AE:> Motor de Juego
+****[#9932CC] <:1F527:> Unity / Unreal 
+****[#9932CC] <:1F504:> ECS / LOD 
+***[#DA70D6] <:1F58C:> Arte
+****[#9932CC] <:1F5FA:> Isométrico 
+****[#9932CC] <:1F4C8:> UI/UX 
+***[#DA70D6] <:1F3B5:> Audio
+****[#9932CC] <:1F3A7:> Ambiente 
+****[#9932CC] <:1F50A:> Efectos 
+
+@endmindmap

@@ -1,0 +1,138 @@
+@startuml
+title FPS Tactico - Lobby Principal del Juego
+
+class "TACTICAL OPS - MAIN LOBBY" as lobby {
+  User: eduardo.cubias
+  Rank: Diamond II
+  Level: 47
+}
+
+class "QUICK PLAY" as quickplay {
+  **Game Mode**
+  + Competitive 5v5 ✓
+  + Team Deathmatch
+  + Domination
+  --
+  **Map Selection**
+  + Factory Complex ✓
+  + Metro Station
+  + Random
+  --
+  Server: EU-West
+  Players Online: 38,472
+}
+
+class "YOUR PARTY (2/5)" as party {
+  eduardo.cubias | Diamond II | Host
+  player_234 | Platinum III | Ready
+  --
+  Voice Chat: ON
+  Volume: 90%
+}
+
+class "NEWS & UPDATES" as news {
+  **NEW SEASON: SHADOW PROTOCOL**
+  • Battle Pass available
+  • 2 New Operators: Ghost & Viper
+  • Map Update: Abandoned City 2.0
+  --
+  **Balance Patch 1.2.5**
+  • AK-47: Recoil -8%
+  • AWP: Price $4750
+  --
+  **DOUBLE XP WEEKEND**
+  • Nov 8-10
+}
+
+class "YOUR PROFILE" as profile {
+  Level: 47
+  XP: 15,847 / 20,000 (78%)
+  Rank: Diamond II
+  K/D Ratio: 1.49
+  Win Rate: 59.3%
+  --
+  **Daily Missions**
+  Win 3 matches: 2/3 → 500 XP
+  Get 20 kills: 20/20 ✓ → 300 XP
+  Play Factory: 0/1 → 200 XP
+}
+
+class "OPERATOR: HAWK" as operator {
+  Name: Marcus T.
+  Role: Assault
+  Ability: UAV Drone
+  Cooldown: 45s
+  --
+  Health: 100 ████████
+  Armor: 50 ████
+  Speed: 95 ███████
+  Stamina: 90 ███████
+}
+
+class "WEAPON LOADOUT" as loadout {
+  **Primary: AK-47 Level 47**
+  • Holographic Sight
+  • Compensator
+  • Extended Mag
+  --
+  **Secondary: Glock 19**
+  --
+  **Equipment**
+  Lethal: Frag Grenade
+  Tactical: Smoke Grenade
+  --
+  **Perks**
+  • Fast Reload
+  • Extended Sprint
+  • Quick Fix
+}
+
+class "CUSTOMIZATION" as custom {
+  **Operator Skin**
+  Urban Warfare ✓
+  --
+  **Weapon Skin**
+  Golden Dragon ✓
+  --
+  Charm: Golden Eagle
+  Spray: Skull & Bones
+  Voice Pack: Tactical Cmdr
+}
+
+class "LEADERBOARD" as leaderboard {
+  1. ProGamer_TTV | Champion | 2.87 K/D
+  2. ninja_killer | Champion | 2.65 K/D
+  3. headshot_master | Diamond I | 2.43 K/D
+  5. eduardo.cubias | Diamond II | 1.49 K/D
+  --
+  My Rank: #5,847
+}
+
+class "CHAT & SOCIAL" as chat {
+  player_234: ready?
+  eduardo.cubias: yes, lets go
+  System: Event active - Double XP
+  --
+  **Online (12/58)**
+  • player_234 (In Party)
+  • friend_xyz (In Match)
+  • cool_sniper (Online)
+}
+
+lobby -- quickplay
+lobby -- party
+lobby -- news
+lobby -- profile
+lobby -- operator
+lobby -- loadout
+lobby -- custom
+lobby -- leaderboard
+lobby -- chat
+
+note bottom of lobby
+  Build v1.0.0 | Ping: 32ms | FPS: 144
+  Server: EU-West-042
+  2025 Tactical Ops Studios
+end note
+
+@enduml

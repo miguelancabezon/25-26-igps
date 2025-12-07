@@ -1,0 +1,98 @@
+@startjson
+
+skinparam backgroundColor #1E1E1E
+skinparam jsonKeywordColor #00BFFF
+skinparam jsonKeyColor #FFD700
+skinparam jsonValueColor #FFFFFF
+skinparam jsonStringColor #98FB98
+skinparam jsonNumberColor #FFB6C1
+skinparam jsonBooleanColor #87CEEB
+skinparam jsonNullColor #B0C4DE
+skinparam shadowing true
+skinparam defaultFontColor #FFFFFF
+
+
+{
+  "metadata": {
+    "version": "1.0.0",
+    "idioma": "español",
+    "entorno": "desarrollo",
+    "autor": "Marcos",
+    "ultimaActualizacion": "2025-11-08T13:00:33Z"
+  },
+  "jugador": {
+    "idJugador": 1,
+    "nombre": "XxxBladeRunner67xxX",
+    "salud": 100,
+    "vivo": true,
+    "armas": [
+      {
+        "idArma": 101,
+        "nombre": "Rifle de Asalto",
+        "daño": 35.5,
+        "munición": 120,
+        "automática": true,
+        "últimaRecarga": "2025-11-08T18:00:00Z"
+      },
+      {
+        "idArma": 102,
+        "nombre": "Pistola",
+        "daño": 20,
+        "munición": 45,
+        "automática": false,
+        "últimaRecarga": "2025-11-09T10:15:00Z"
+      }
+    ],
+    "posición": "BaseInicial",
+    "fechaIngreso": "2025-11-08"
+  },
+  "enemigos": [
+    {
+      "idEnemigo": 1,
+      "tipo": "SoldadoIA",
+      "salud": 80,
+      "zonaPatrulla": "Alameda Aullante",
+      "agresivo": true,
+      "fechaAparición": "2025-11-08"
+    },
+    {
+      "idEnemigo": 2,
+      "tipo": "TorretaAutomática",
+      "salud": 150,
+      "zonaPatrulla": "Liberty city",
+      "agresivo": true,
+      "fechaAparición": "2025-11-08"
+    }
+  ],
+  "mapa": {
+    "idMapa": 1,
+    "nombre": "Ciudad campestre",
+    "tipo": "Urbano",
+    "climaDinámico": true,
+    "zonas": ["Alameda aullante", "Valentine", "Liberty city"],
+    "fechaCreación": "2025-10-19"
+  },
+  "acciones": {
+    "crearJugador": {
+      "afecta": "jugador",
+      "parámetros": ["nombre", "mapaId"]
+    },
+    "dispararArma": {
+      "afecta": "arma",
+      "parámetros": ["idJugador", "idArma"]
+    },
+    "recargarArma": {
+      "afecta": "arma",
+      "parámetros": ["idArma"]
+    },
+    "moverJugador": {
+      "afecta": "jugador",
+      "parámetros": ["idJugador", "nuevaPosición"]
+    },
+    "generarEnemigo": {
+      "afecta": "enemigo",
+      "parámetros": ["tipo", "mapaId"]
+    }
+  }
+}
+@endjson

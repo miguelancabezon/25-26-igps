@@ -1,0 +1,35 @@
+@startuml
+salt
+{
+  {+"Frontline Zero - Menú Principal"}
+
+  [🏠 Inicio] | [⚙️ Configuración] | [🎖️ Perfil] | [📜 Misiones] | [💬 Chat]
+
+  { "Inicio"
+    [▶️ JUGAR AHORA]
+    [🎯 CAMPAÑA]
+    [🧍 PERSONALIZAR]
+    [🌍 MAPAS]
+    [📊 ESTADÍSTICAS]
+  }
+
+  { "Configuración"
+    [🎧 Sonido: ON/OFF]
+    [🎵 Música: ON/OFF]
+    [🎯 Dificultad: Facil | Medio | Dificil]
+    [🌐 Idioma: Español ▼]
+    [💾 Guardado automático: ✔️]
+  }
+
+  { "Estadísticas"
+    | 🧍 Jugador | 🔫 Asesinatos | 💀 Muertes | 🏆 Ratio K/D |
+    | MasterBaiter99  | 120 | 45 | 2.66 |
+    | Mr.M_67 | 98 | 50 | 1.96 |
+    | LilMilk11 | 134 | 40 | 3.35 |
+  }
+
+  { "Chat Global"
+    [💭 Escribe un mensaje…] [📨 Enviar]
+  }
+}
+@enduml

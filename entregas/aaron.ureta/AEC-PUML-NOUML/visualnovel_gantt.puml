@@ -1,0 +1,68 @@
+@startgantt gantt
+Project starts 2025-01-01
+
+-- Fase 1 - Preproducción --
+
+[Investigación narrativa y contexto] requires 7 days and is colored in PaleGreen
+then [Arte conceptual] requires 8 days and is colored in PaleGreen
+then [Diseño de rutas y decisiones] requires 10 days and is colored in PaleGreen
+note bottom
+  Equipo: guionista principal  
+  Recursos: documentación histórica y referencias de guerra  
+  Objetivo: definir el tono, los personajes y las ramas narrativas
+end note
+
+then [Audio - concepto (ambiente de tensión)] requires 6 days and is colored in PaleGreen
+then [UI/UX inicial (interfaz de diálogo y menú)] requires 6 days and is colored in PaleGreen
+
+[Prototipo listo] happens at [UI/UX inicial (interfaz de diálogo y menú)]'s end
+[Fase 1 - Preproducción] requires 31 days
+[Fase 1 - Preproducción] is 70% complete
+
+-- Fase 2 - Producción --
+
+[Programación base (Ren’Py)] starts at [Prototipo listo]'s end and requires 20 days and is colored in LightSkyBlue
+note bottom
+  Equipo: 2 programadores  
+  Recursos: motor Ren’Py, laptops  
+  Objetivo: desarrollar sistema de diálogo, guardado y variables de afinidad
+end note
+
+then [Arte de fondos] requires 15 days and is colored in LightSkyBlue
+then [Sprites de personajes y expresiones] requires 10 days and is colored in LightSkyBlue
+then [Diseño de escenas y rutas principales] requires 15 days and is colored in LightSkyBlue
+note bottom
+  Equipo: diseñador narrativo y artista  
+  Recursos: editor de guion y assets 2D  
+  Objetivo: crear las escenas jugables y rutas principales
+end note
+
+then [Integración de música y efectos] requires 18 days and is colored in LightSkyBlue
+note bottom
+  Equipo: músico y programador  
+  Recursos: biblioteca de sonidos y pistas originales  
+  Objetivo: ambientar las escenas clave
+end note
+
+[Beta lista] happens at [Integración de música y efectos]'s end
+[Fase 2 - Producción] requires 78 days
+[Fase 2 - Producción] is 50% complete
+
+-- Fase 3 - Postproducción --
+
+[Testing QA] starts at [Beta lista]'s end and requires 7 days and is colored in LightSalmon
+then [Optimización y balance narrativo] requires 10 days and is colored in LightSalmon
+note bottom
+  Equipo: programadores y guionista  
+  Recursos: herramientas de testeo y retroalimentación de jugadores  
+  Objetivo: ajustar ritmo de lectura y corrección de errores
+end note
+
+then [Marketing y trailer] requires 7 days and is colored in LightSalmon
+then [Preparación de lanzamiento] requires 5 days and is colored in LightSalmon
+
+[Versión 1.0] happens at [Preparación de lanzamiento]'s end
+[Fase 3 - Postproducción] requires 29 days
+[Fase 3 - Postproducción] is 30% complete
+
+@endgantt

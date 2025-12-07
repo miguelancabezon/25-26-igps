@@ -1,0 +1,49 @@
+@startjson
+{
+  "metadata": {
+    "version": "1.0.0",
+    "author": "Juan Pérez",
+    "language": "es",
+    "environment": "dev",
+    "lastUpdate": "2025-11-09T15:00:00Z"
+  },
+  "player": {
+    "id": 1,
+    "name": "Survivor01",
+    "level": 5,
+    "health": 85,
+    "isAlive": true,
+    "inventory": [
+      { "itemId": 100, "name": "Wood", "quantity": 20 },
+      { "itemId": 101, "name": "Stone", "quantity": 15 }
+    ],
+    "position": { "x": 120, "y": 45, "z": 10 }
+  },
+  "weapon": {
+    "id": 200,
+    "name": "Spear",
+    "damage": 35,
+    "durability": 90,
+    "rarity": "common",
+    "craftedAt": "2025-11-01T10:00:00Z"
+  },
+  "enemy": {
+    "id": 301,
+    "type": "Wolf",
+    "health": 60,
+    "attackPower": 15,
+    "aggressive": true
+  },
+  "world": {
+    "seed": 9988,
+    "biomes": ["forest", "mountain"],
+    "dayNightCycle": true,
+    "weather": "rain"
+  },
+  "actions": {
+    "craftItem": { "class": "player", "params": ["itemId", "quantity"] },
+    "attackEnemy": { "class": "player", "params": ["enemyId"] },
+    "gatherResource": { "class": "player", "params": ["resourceType"] }
+  }
+}
+@endjson

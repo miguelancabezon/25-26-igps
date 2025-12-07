@@ -1,0 +1,176 @@
+@startgantt
+title Desarrollo Ágil - Product Roadmap 2025
+printscale weekly
+projectscale weekly
+
+Project starts 2025-11-01
+
+<style>
+ganttDiagram {
+  .sprint1 {
+    BackGroundColor #E3F2FD
+    LineColor #1976D2
+  }
+  .sprint2 {
+    BackGroundColor #F3E5F5
+    LineColor #7B1FA2
+  }
+  .sprint3 {
+    BackGroundColor #FFF3E0
+    LineColor #F57C00
+  }
+  .sprint4 {
+    BackGroundColor #E8F5E9
+    LineColor #388E3C
+  }
+  .epic {
+    BackGroundColor #FFE0B2
+    LineColor #E65100
+    FontStyle bold
+  }
+}
+</style>
+
+
+
+-- EPIC 1: Codigo Base --
+[EPIC-1: Preproducción] as [E1] lasts 35 days
+[E1] is colored in #FFE0B2
+
+-- Sprint 1 (2 semanas) --
+[Sprint 1 Generacion de Mundo] happens 2025-11-01
+
+[Montañas-101: Terreno] lasts 5 days and starts 2025-11-02
+[Superficie-101: Terreno] is 100% completed
+[Cuevas-101: Terreno] is colored in #E3F2FD
+note bottom 
+    Story Points: 5 | Dev: Alice 
+end note
+
+[Oceanos-102: Mar] lasts 5 days and starts at [Superficie-101: Terreno]'s end
+[Estructuras-102: Extra] is 100% completed
+[Bosques-102: Terreno] is colored in #E3F2FD
+note bottom 
+    Story Points: 8 | Dev: Bob 
+end note
+
+[Animales-103: Variedad de Especies] lasts 4 days and starts at [Superficie-101: Terreno]'s end
+[Biomas-103: Variedad de Biomas] is 100% completed
+[Clima-103: Variedad de Climas] is colored in #E3F2FD
+note bottom 
+    Story Points: 5 | Dev: Alice 
+end note
+
+[Sprint 1 Review] happens 2025-11-15
+[Sprint 1 Retro] happens 2025-11-15
+
+-- Sprint 2 (2 semanas) --
+[Sprint 2 Biomas] happens 2025-11-16
+
+[Desierto-104: OAuth Google] lasts 7 days and starts 2025-11-17
+[Praderas-104: OAuth Google] is 80% completed
+[Junglas-104: OAuth Google] is colored in #F3E5F5
+[Taigas-104: OAuth Google] is 50% completed
+[Manglares-104: OAuth Google] is 80% completed
+[Pantanos-104: OAuth Google] is 100% completed
+note bottom 
+    Story Points: 8 | Dev: Charlie 
+end note
+
+
+
+[Sprint 2 Review] happens 2025-11-29
+[Sprint 2 Retro] happens 2025-11-29
+
+
+
+
+
+-- EPIC 2: Interacciones del Jugador --
+[EPIC-2: Producción] as [E2] lasts 42 days and starts 2025-11-10
+[E2] is colored in #FFE0B2
+
+-- Sprint 3 (2 semanas) --
+[Sprint 3 Planning] happens 2025-12-01
+
+[Menu-201: Diseño] lasts 5 days and starts 2025-12-02
+[Interfaz-201: Diseño] is 100% completed
+[Camera-201: Diseño] is colored in #FFF3E0
+note bottom 
+    Story Points: 5 | Designer: Eve 
+end note
+
+[Movimiento-202: Control] lasts 7 days and starts at [Menu-201: Diseño]'s end
+[Interacciones-202: Control] is 30% completed
+[Controles-202: Control] is colored in #FFF3E0
+note bottom 
+    Story Points: 8 | Dev: Bob 
+end note
+
+[Mecanicas-203: Widgets Configurables] lasts 7 days and starts at [Movimiento-202: Control]'s start
+[Aritmetica-203: Widgets Configurables] is 20% completed
+[Extras-203: Widgets Configurables] is colored in #FFF3E0
+note bottom 
+    Story Points: 13 | Dev: Charlie 
+end note
+
+[Sprint 3 Review] happens 2025-12-13
+[Sprint 3 Retro] happens 2025-12-13
+
+-- Sprint 4 (2 semanas) --
+[Sprint 4 Planning] happens 2025-12-14
+
+[Rendimiento-204: Render] lasts 10 days and starts 2025-12-15
+[Compatibilidad-204: Render] is colored in #E8F5E9
+note bottom 
+    Story Points: 13 | Dev: Alice, Bob 
+end note
+
+[Texturas-205: Visual] lasts 10 days and starts 2025-12-15
+[Graficos-205: Visual] is colored in #E8F5E9
+note bottom 
+    Story Points: 8 | Dev: Diana 
+end note
+
+[Sprint 4 Review] happens 2025-12-27
+[Sprint 4 Retro] happens 2025-12-27
+
+
+
+
+-- EPIC 3: Compatibilidad --
+[EPIC-3: Postproducción] as [E3] lasts 32 days and starts 2025-12-01
+[E3] is colored in #FFE0B2 
+
+-- Sprint 5 (2 semanas) --
+[Sprint 5 Planning] happens 2026-01-01
+
+[Graficos-301: Blender] lasts 7 days and starts 2026-01-02
+[Texturas-301: Blender] is colored in #E3F2FD
+note bottom 
+    Story Points: 8 | Dev: Eve 
+end note
+
+[Iluminacion-302: Blender] lasts 10 days and starts at [Graficos-301: Blender]'s start
+[Compatibilidad-302: PRG] is colored in #E3F2FD
+note bottom 
+    Story Points: 13 | Dev: Alice 
+end note
+
+[Tipos de Graficos-303: Preferencias Usuario] lasts 5 days and starts at [Graficos-301: Blender]'s start
+[Tipos de Textura-303: Preferencias Usuario] is colored in #E3F2FD
+note bottom
+    Story Points: 5 | Dev: Bob 
+end note
+
+[Sprint 5 Review] happens 2026-01-15
+[Sprint 5 Retro] happens 2026-01-15
+
+-- HITOS DE RELEASE --
+[<:1F680:> Alpha Release] happens 2025-11-30
+[<:1F680:> Beta Release] happens 2025-12-27
+[<:1F680:> Production Release] happens 2026-01-15
+
+
+
+@endgantt

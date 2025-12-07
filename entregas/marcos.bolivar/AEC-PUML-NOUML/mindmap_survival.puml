@@ -1,0 +1,28 @@
+@startmindmap
+* 🌲 El bosqueciño
+** 🎮 Jugabilidad
+*** 🔪 Supervivencia
+**** Recolectar recursos (comida, agua, madera)
+**** Construir refugio
+**** Gestionar hambre, sed y energía
+*** ⚔️ Combate
+**** Armas cuerpo a cuerpo
+**** Armas a distancia
+**** Enemigos: criaturas y humanos
+** 🌳 Entorno
+*** Bosque misterioso
+*** Cueva subterránea
+*** Clima dinámico (día/noche, lluvia)
+** 📜 Historia
+*** Misión principal
+*** Tensión psicológica
+*** Notas y pistas ocultas
+** 🧍 Personajes
+*** Jugador
+*** Enemigos mutantes
+*** Aliados eventuales
+** ⚙️ Tecnología
+*** Motor: Unity
+*** Modo: Un jugador / Cooperativo
+*** Guardado automático
+@endmindmap

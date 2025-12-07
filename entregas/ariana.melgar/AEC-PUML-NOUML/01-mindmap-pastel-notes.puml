@@ -1,0 +1,99 @@
+@startmindmap
+title Pastel Notes - Juego de Ritmo Musical
+
+<style>
+mindmapDiagram {
+  .gameplay {
+    BackgroundColor #FFD1DC
+    LineColor #FFB3BA
+  }
+  .music {
+    BackgroundColor #BAE1FF
+    LineColor #AEC6CF
+  }
+  .visual {
+    BackgroundColor #E0BBE4
+    LineColor #C8A2C8
+  }
+  .social {
+    BackgroundColor #FFFFBA
+    LineColor #FFEAA7
+  }
+  .features {
+    BackgroundColor #BAFFC9
+    LineColor #B2E5D4
+  }
+}
+</style>
+
+* <&heart> Pastel Notes
+
+left side
+
+**[#FFD1DC] <&musical-note> Mecánicas de Juego
+***[#FFB3BA] Modos de Juego
+****_ Historia
+****_ Modo Libre
+****_ Desafíos Diarios
+***[#FFB3BA] Dificultades
+****_ Easy (3 notas)
+****_ Normal (4 notas)
+****_ Hard (5 notas)
+***[#FFB3BA] Controles
+****_ Tap
+****_ Hold
+****_ Slide
+
+**[#BAE1FF] <&music> Música
+***[#AEC6CF] Géneros
+****_ Pop
+****_ K-Pop
+****_ Indie
+****_ Lo-fi
+***[#AEC6CF] Canciones
+****_ 30 canciones iniciales
+****_ Updates semanales
+***[#AEC6CF] Artistas
+****_ Colaboraciones
+****_ Música original
+
+**[#E0BBE4] <&brush> Estilo Visual
+***[#C8A2C8] Arte
+****_ Colores Pastel
+****_ Personajes Kawaii
+****_ Efectos de Luz
+***[#C8A2C8] Escenarios
+****_ Jardín de Flores
+****_ Cielo Estrellado
+****_ Café Acogedor
+****_ Playa al Atardecer
+
+right side
+
+**[#FFFFBA] <&people> Sistema Social
+***[#FFEAA7] Amigos
+****_ Agregar amigos
+****_ Ver puntuaciones
+****_ Enviar regalos
+***[#FFEAA7] Competencias
+****_ Rankings semanales
+****_ Batallas 1v1
+***[#FFEAA7] Comunidad
+****_ Chat global
+****_ Compartir logros
+
+**[#BAFFC9] <&star> Características
+***[#B2E5D4] Progresión
+****_ Niveles de jugador
+****_ Desbloquear canciones
+****_ Coleccionar stickers
+***[#B2E5D4] Personalización
+****_ Temas de notas
+****_ Fondos personalizados
+****_ Avatares cute
+***[#B2E5D4] Recompensas
+****_ Gemas diarias
+****_ Eventos especiales
+****_ Logros únicos
+
+@endmindmap
