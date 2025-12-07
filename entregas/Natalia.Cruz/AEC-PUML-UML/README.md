@@ -19,8 +19,8 @@ Sistema de gestión integral para la Biblioteca Central de la Universidad que pe
 
 | Descripción | Diagrama |
 |:------------|:--------:|
-| **Propósito:** Modelar las interacciones entre los actores del sistema (Estudiante, Profesor, Bibliotecario y Sistema) y las funcionalidades disponibles.<br><br>**Características principales:**<br>- 4 actores del sistema<br>- 16 casos de uso organizados en packages<br>- Gestión de préstamos, reservas, búsqueda y penalizaciones<br>- Generación de reportes para bibliotecarios | ![Diagrama de Casos de Uso](../../natalia.cruz/AEC-PUML-UML/imagenes/01-diagrama-casos-uso.svg) |
-| | Código fuente: [01-diagrama-casos-uso.puml](../../natalia.cruz/AEC-PUML-UML/diagramas/01-diagrama-casos-uso.puml) |
+| **Propósito:** Modelar las interacciones entre los actores del sistema (Estudiante, Profesor, Bibliotecario y Sistema) y las funcionalidades disponibles.<br><br>**Características principales:**<br>- 4 actores del sistema<br>- 16 casos de uso organizados en packages<br>- Gestión de préstamos, reservas, búsqueda y penalizaciones<br>- Generación de reportes para bibliotecarios | ![Diagrama de Casos de Uso](/25-26-igps/entregas/natalia.cruz/AEC-PUML-UML/imagenes/01-diagrama-casos-uso.svg) |
+| | Código fuente: [01-diagrama-casos-uso.puml](/25-26-igps/entregas/natalia.cruz/AEC-PUML-UML/diagramas/01-diagrama-casos-uso.puml) |
 
 </div>
 
@@ -32,8 +32,8 @@ Sistema de gestión integral para la Biblioteca Central de la Universidad que pe
 
 | Descripción | Diagrama |
 |:------------|:--------:|
-| **Propósito:** Representar una instancia concreta del sistema en un momento específico (15 Nov 2025, 14:30h), mostrando objetos reales y sus relaciones.<br><br>**Escenario modelado:**<br>- 3 usuarios (2 estudiantes, 1 profesor)<br>- 5 libros del catálogo de programación<br>- 5 préstamos en diferentes estados<br>- 2 reservas pendientes<br>- 1 multa por préstamo vencido<br><br>**Relaciones implementadas:**<br>- Composición, Agregación, Dependencia y Asociación | ![Diagrama de Objetos](../../natalia.cruz/AEC-PUML-UML/imagenes/02-diagrama-objetos.svg) |
-| | Código fuente: [02-diagrama-objetos.puml](../../natalia.cruz/AEC-PUML-UML/diagramas/02-diagrama-objetos.puml) |
+| **Propósito:** Representar una instancia concreta del sistema en un momento específico (15 Nov 2025, 14:30h), mostrando objetos reales y sus relaciones.<br><br>**Escenario modelado:**<br>- 3 usuarios (2 estudiantes, 1 profesor)<br>- 5 libros del catálogo de programación<br>- 5 préstamos en diferentes estados<br>- 2 reservas pendientes<br>- 1 multa por préstamo vencido<br><br>**Relaciones implementadas:**<br>- Composición, Agregación, Dependencia y Asociación | ![Diagrama de Objetos](/25-26-igps/entregas/natalia.cruz/AEC-PUML-UML/imagenes/02-diagrama-objetos.svg) |
+| | Código fuente: [02-diagrama-objetos.puml](/25-26-igps/entregas/natalia.cruz/AEC-PUML-UML/diagramas/02-diagrama-objetos.puml) |
 
 </div>
 
@@ -45,8 +45,8 @@ Sistema de gestión integral para la Biblioteca Central de la Universidad que pe
 
 | Descripción | Diagrama |
 |:------------|:--------:|
-| **Propósito:** Modelar el ciclo de vida completo de un préstamo, desde su creación hasta su finalización, incluyendo todos los estados posibles y transiciones.<br><br>**Estados principales:**<br>- Solicitado (pendiente aprobación)<br>- En Curso (Activo, Renovado, Vencido)<br>- Devuelto / Cancelado (estados finales)<br><br>**Características:**<br>- Estados compuestos con subestados<br>- Puntos de decisión para renovaciones<br>- Eventos temporales (vencimiento a 14 días)<br>- Multas diferenciadas por tipo de usuario<br>- Máximo 2 renovaciones por préstamo | ![Diagrama de Estados](../../natalia.cruz/AEC-PUML-UML/imagenes/03-diagrama-estados.svg) |
-| | Código fuente: [03-diagrama-estados.puml](../../natalia.cruz/AEC-PUML-UML/diagramas/03-diagrama-estados.puml) |
+| **Propósito:** Modelar el ciclo de vida completo de un préstamo, desde su creación hasta su finalización, incluyendo todos los estados posibles y transiciones.<br><br>**Estados principales:**<br>- Solicitado (pendiente aprobación)<br>- En Curso (Activo, Renovado, Vencido)<br>- Devuelto / Cancelado (estados finales)<br><br>**Características:**<br>- Estados compuestos con subestados<br>- Puntos de decisión para renovaciones<br>- Eventos temporales (vencimiento a 14 días)<br>- Multas diferenciadas por tipo de usuario<br>- Máximo 2 renovaciones por préstamo | ![Diagrama de Estados](/25-26-igps/entregas/natalia.cruz/AEC-PUML-UML/imagenes/03-diagrama-estados.svg) |
+| | Código fuente: [03-diagrama-estados.puml](/25-26-igps/entregas/natalia.cruz/AEC-PUML-UML/diagramas/03-diagrama-estados.puml) |
 
 </div>
 
