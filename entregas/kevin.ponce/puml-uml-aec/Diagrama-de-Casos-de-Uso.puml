@@ -1,0 +1,90 @@
+@startuml
+skinparam actorStyle awesome
+skinparam packageStyle rectangle
+'dirección principal de izquierda a derecha (Actores a Casos de Uso)
+left to right direction
+
+' --------------------
+' 1. ACTORES
+' --------------------
+' Agrupamos actores humanos a la izquierda
+actor Estudiante as Student
+actor Profesor as Prof
+actor Bibliotecario as Lib
+
+'el sistema (no humano) a la derecha
+actor Sistema as Sys
+
+' --------------------
+' 2. HERENCIA DE ROLES
+' --------------------
+Student <|-- Prof : extiende
+
+' --------------------
+' 3. CASOS DE USO Y PACKAGES (Con Alias Cortos)
+' --------------------
+
+package "Transacciones de Préstamo" as PTrans {
+    usecase "Solicitar préstamo" as UC_Solicitar
+    usecase "Renovar préstamo" as UC_Renovar
+    usecase "Devolver libro" as UC_Devolver
+    usecase "Procesar devolución" as UC_ProcDev
+    usecase "Registrar préstamo manual" as UC_RegManual
+}
+
+package "Búsqueda y Consulta" as PBusqueda {
+    usecase "Buscar en catálogo" as UC_Buscar
+    usecase "Consultar estado de libro" as UC_ConsultarEstado
+    usecase "Ver historial de préstamos" as UC_Historial
+}
+
+package "Gestión de Reservas" as PReservas {
+    usecase "Hacer reserva" as UC_HacerReserva
+    usecase "Cancelar reserva" as UC_CancelReserva
+    usecase "Notificar disponibilidad" as UC_NotificarDisp
+}
+
+package "Penalizaciones" as PMultas {
+    usecase "Calcular multa" as UC_CalcMulta
+    usecase "Pagar multa online" as UC_PagarMulta
+    usecase "Aplicar penalización" as UC_AplicarPenal
+}
+
+package "Reportes (Administrativo)" as PReportes {
+    usecase "Generar reporte de préstamos" as UC_RepPrestamo
+    usecase "Generar reporte de multas" as UC_RepMulta
+}
+
+
+' --------------------
+' 4. ASOCIACIONES Y RELACIONES
+' direcciones específicas para evitar el cruce de flechas
+' --------------------
+
+' ASOCIACIONES: ESTUDIANTE / PROFESOR (Usuarios)
+Student -right-> UC_Solicitar
+Student -right-> UC_Renovar
+Student -right-> UC_Devolver
+Student -down-> UC_HacerReserva
+Student -down-> UC_CancelReserva
+Student -right-> UC_Buscar
+Student -right-> UC_ConsultarEstado
+Student -right-> UC_Historial
+Student -down-> UC_PagarMulta
+
+' ASOCIACIONES: BIBLIOTECARIO
+' Usamos flechas de subida y bajada para evitar cruzar con Estudiante
+Lib -up-> UC_ProcDev
+Lib -up-> UC_RegManual
+Lib -down-> UC_HacerReserva
+Lib -down-> UC_AplicarPenal
+Lib -down-> UC_RepPrestamo
+Lib -down-> UC_RepMulta
+
+' ASOCIACIONES: SISTEMA (a la derecha para separar)
+Sys -left-> UC_NotificarDisp : Automático
+Sys -left-> UC_CalcMulta : Criterios de negocio
+Sys -left-> UC_ProcDev : Confirma la devolución
+Sys -left-> UC_PagarMulta : Procesa el pago
+
+@enduml
