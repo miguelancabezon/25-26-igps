@@ -1,0 +1,103 @@
+Filename: casos_de_uso.puml
+@startuml
+' Casos de Uso - Sistema Biblioteca Central
+' Estilo y colores consistentes
+skinparam backgroundColor #F9F9FB
+skinparam packageBackgroundColor #FFFFFF
+skinparam packageBorderColor #BBBBBB
+skinparam actorStyle awesome
+left to right direction
+
+actor Estudiante
+actor Profesor
+actor Bibliotecario
+actor Sistema as "Sistema\n(notificaciones)" 
+
+package "Búsqueda y consulta" {
+  usecase "Buscar en catálogo" as UC_Buscar
+  usecase "Ver historial de préstamos" as UC_Historial
+  usecase "Consultar estado de libro" as UC_ConsultarEstado
+}
+
+package "Gestión de Reservar" {
+  usecase "Hacer reserva" as UC_HacerReserva
+  usecase "Cancelar reserva" as UC_CancelarReserva
+  usecase "Notificar disponibilidad" as UC_NotificarDisp
+}
+
+package "Penalizaciones" {
+  usecase "Calcular multa" as UC_CalcularMulta
+  usecase "Pagar multa online" as UC_PagarMulta
+  usecase "Aplicar penalización" as UC_AplicarPenal
+}
+
+package "Préstamos y Devoluciones" {
+  usecase "Solicitar préstamo" as UC_Solicitar
+  usecase "Renovar préstamo" as UC_Renovar
+  usecase "Devolver libro" as UC_Devolver
+  usecase "Procesar devolución" as UC_ProcDevol   ' bibliotecario
+  usecase "Registrar préstamo manual" as UC_RegistrarManual
+}
+
+package "Reportes (Bibliotecario)" {
+  usecase "Generar reporte de préstamos" as UC_RepPrestamos
+  usecase "Generar reporte de multas" as UC_RepMultas
+}
+
+' Relaciones actor -> casos de uso (flechas -->)
+Estudiante --> UC_Buscar
+Estudiante --> UC_Solicitar
+Estudiante --> UC_Renovar
+Estudiante --> UC_Devolver
+Estudiante --> UC_Historial
+Estudiante --> UC_PagarMulta
+Estudiante --> UC_HacerReserva
+Estudiante --> UC_CancelarReserva
+Estudiante --> UC_ConsultarEstado
+
+Profesor --> UC_Buscar
+Profesor --> UC_Solicitar
+Profesor --> UC_Renovar
+Profesor --> UC_Devolver
+Profesor --> UC_Historial
+Profesor --> UC_PagarMulta
+' Profesor tiene préstamos de larga duración implícito en nota
+note right of Profesor
+  Préstamos de larga duración:
+  regla específica para profesores
+end note
+
+Bibliotecario --> UC_RegistrarManual
+Bibliotecario --> UC_ProcDevol
+Bibliotecario --> UC_AplicarPenal
+Bibliotecario --> UC_CalcularMulta
+Bibliotecario --> UC_RepPrestamos
+Bibliotecario --> UC_RepMultas
+Bibliotecario --> UC_NotificarDisp
+Bibliotecario --> UC_HacerReserva
+
+' Sistema actor para notificaciones automáticas
+Sistema --> UC_NotificarDisp : "envía aviso cuando\nlibro vuelve a estar disponible"
+Sistema --> UC_CalcularMulta : "ejecuta proceso nocturno"
+Sistema --> UC_PagarMulta : "confirma pago y actualiza"
+
+' Relaciones entre casos de uso (agrupaciones lógicas)
+UC_Solicitar --> UC_CalcularMulta : <<uses>> 
+UC_Devolver --> UC_CalcularMulta : <<uses>>
+UC_PagarMulta --> UC_AplicarPenal : <<uses>>
+
+' Etiquetas explicativas en relaciones complejas
+UC_Renovar .> UC_HacerReserva : "rechazo si hay reservas pendientes"
+UC_RegistrarManual ..> UC_Solicitar : "crea préstamo manual"
+
+' Agrupaciones visuales extra (notes)
+note top of UC_HacerReserva
+  Gestión de cola de reservas:
+  Notificar al primer usuario disponible.
+end note
+
+' Asegurar mínimo 12 casos de uso
+' (ya incluidos en los paquetes y listados)
+
+title "Diagrama de Casos de Uso - Biblioteca Central"
+@enduml
