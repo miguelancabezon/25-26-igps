@@ -1,0 +1,52 @@
+@startuml
+
+title Diagrama de Estados - Ciclo de Vida del Préstamo
+
+[*] --> Solicitado
+
+state Solicitado {
+  :entry / registrarSolicitud();
+}
+
+Solicitado --> Activo : aprobar [libro disponible]
+Solicitado --> Cancelado : rechazar [libro no disponible]
+Solicitado --> Cancelado : cancelar por usuario
+
+state "En Curso" as EnCurso {
+
+  state Activo {
+    :entry / enviarEmailConfirmacion();
+    :entry / actualizarDisponibilidadLibro();
+    :exit / registrarHistorial();
+  }
+
+  state Renovado {
+    :entry / extenderFechaVencimiento();
+    :entry / incrementarContadorRenovaciones();
+  }
+
+  state Vencido {
+    :entry / calcularMulta();
+    :entry / enviarNotificacionRetraso();
+  }
+
+  Activo --> Renovado : renovar [renovaciones < 2 AND sin reservas]
+  Activo --> Activo : renovar [renovaciones >= 2]
+  Activo --> Vencido : vencer plazo
+
+  Renovado --> Vencido : vencer plazo
+  Renovado --> Renovado : renovar [renovaciones < 2 AND sin reservas]
+
+  Vencido --> Devuelto : devolver con multa
+  Vencido --> Vencido : continuar vencido [ >30 días ]
+}
+
+EnCurso --> Devuelto
+
+Devuelto : entry / liberarLibro()
+Devuelto : entry / procesarSiguienteReserva()
+
+Devuelto --> [*]
+Cancelado --> [*]
+
+@enduml

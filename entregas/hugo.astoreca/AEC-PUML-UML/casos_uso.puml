@@ -1,0 +1,77 @@
+@startuml
+
+title Diagrama de Casos de Uso - Sistema Biblioteca Universitaria
+left to right direction
+
+actor Estudiante
+actor Profesor
+actor Bibliotecario
+actor Sistema as SistemaNotificaciones
+
+package "Busqueda y Consulta" {
+  usecase "Buscar en catalogo" as UC_Buscar
+  usecase "Consultar estado de libro" as UC_ConsultarEstado
+  usecase "Ver historial de prestamos" as UC_Historial
+}
+
+package "Gestion de Prestamos" {
+  usecase "Solicitar prestamo" as UC_Solicitar
+  usecase "Renovar prestamo" as UC_Renovar
+  usecase "Devolver libro" as UC_Devolver
+  usecase "Registrar prestamo manual" as UC_RegistrarManual
+  usecase "Procesar devolucion" as UC_ProcesarDevolucion
+}
+
+package "Gestion de Reservas" {
+  usecase "Hacer reserva" as UC_HacerReserva
+  usecase "Cancelar reserva" as UC_CancelarReserva
+  usecase "Notificar disponibilidad" as UC_NotificarDisp
+}
+
+package "Penalizaciones" {
+  usecase "Calcular multa" as UC_CalcularMulta
+  usecase "Pagar multa online" as UC_PagarMulta
+  usecase "Aplicar penalizacion" as UC_AplicarPenalizacion
+}
+
+package "Reportes" {
+  usecase "Generar reporte de prestamos" as UC_ReportePrest
+  usecase "Generar reporte de multas" as UC_ReporteMult
+}
+
+' Relaciones Estudiante
+Estudiante --> UC_Buscar
+Estudiante --> UC_ConsultarEstado
+Estudiante --> UC_Historial
+Estudiante --> UC_Solicitar
+Estudiante --> UC_Renovar
+Estudiante --> UC_Devolver
+Estudiante --> UC_HacerReserva
+Estudiante --> UC_CancelarReserva
+Estudiante --> UC_PagarMulta
+
+' Relaciones Profesor
+Profesor --> UC_Buscar
+Profesor --> UC_ConsultarEstado
+Profesor --> UC_Historial
+Profesor --> UC_Solicitar
+Profesor --> UC_Renovar
+Profesor --> UC_Devolver
+Profesor --> UC_HacerReserva
+Profesor --> UC_CancelarReserva
+Profesor --> UC_PagarMulta
+
+' Relaciones Bibliotecario
+Bibliotecario --> UC_RegistrarManual
+Bibliotecario --> UC_ProcesarDevolucion
+Bibliotecario --> UC_AplicarPenalizacion
+Bibliotecario --> UC_ReportePrest
+Bibliotecario --> UC_ReporteMult
+Bibliotecario --> UC_CalcularMulta
+Bibliotecario --> UC_HacerReserva
+Bibliotecario --> UC_CancelarReserva
+
+' Relaciones Sistema
+SistemaNotificaciones --> UC_NotificarDisp
+
+@enduml
