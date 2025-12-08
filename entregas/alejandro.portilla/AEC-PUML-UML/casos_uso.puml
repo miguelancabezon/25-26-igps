@@ -1,0 +1,111 @@
+@startuml
+title Diagrama de Casos de Uso - Sistema de Gestión de Biblioteca Universitaria
+left to right direction
+skinparam packageStyle rectangle
+
+
+actor Estudiante
+actor Profesor
+actor Bibliotecario
+actor Sistema as "Sistema (Notificaciones)"
+
+package "Búsqueda y consulta" {
+usecase BuscarCatalogo as UC_Buscar
+usecase VerHistorial as UC_Historial
+usecase ConsultarEstadoLibro as UC_EstadoLibro
+}
+
+
+package "Gestión de Reservar" {
+usecase HacerReserva as UC_Reservar
+usecase CancelarReserva as UC_CancelarReserva
+usecase NotificarDisponibilidad as UC_NotificarDisponibilidad
+}
+
+
+package "Penalizaciones" {
+usecase CalcularMulta as UC_CalcularMulta
+usecase PagarMultaOnline as UC_PagarMulta
+usecase AplicarPenalizacion as UC_AplicarPenalizacion
+}
+
+
+package "Préstamos" {
+usecase SolicitarPrestamo as UC_SolicitarPrestamo
+usecase RenovarPrestamo as UC_RenovarPrestamo
+usecase DevolverLibro as UC_Devolver
+usecase RegistrarPrestamoManual as UC_RegistrarManual
+usecase ProcesarDevolucion as UC_ProcesarDevolucion
+}
+
+
+package "Reportes" {
+usecase GenerarReportePrestamos as UC_RepPrest
+usecase GenerarReporteMultas as UC_RepMult
+}
+
+' Relaciones actor -> casos de uso
+Estudiante --> UC_RenovarPrestamo
+Estudiante --> UC_Devolver
+Estudiante --> UC_Reservar
+Estudiante --> UC_CancelarReserva
+Estudiante --> UC_Historial
+Estudiante --> UC_PagarMulta
+Estudiante --> UC_EstadoLibro
+
+
+Profesor --> UC_Buscar
+Profesor --> UC_SolicitarPrestamo
+Profesor --> UC_RenovarPrestamo
+Profesor --> UC_Devolver
+Profesor --> UC_Reservar
+Profesor --> UC_Historial
+Profesor --> UC_PagarMulta
+Profesor --> UC_EstadoLibro
+' Profesores tienen permiso de préstamo largo (nota explicativa)
+note right of Profesor
+Profesor: préstamos de larga duración
+(regla de negocio distinta: 30 días, max 5)
+end note
+
+
+Bibliotecario --> UC_RegistrarManual
+Bibliotecario --> UC_ProcesarDevolucion
+Bibliotecario --> UC_AplicarPenalizacion
+Bibliotecario --> UC_Reservar
+Bibliotecario --> UC_GestionarReportes
+Bibliotecario --> UC_RepPrest
+Bibliotecario --> UC_RepMult
+
+
+' Conexión del sistema (notificaciones automáticas)
+Sistema --> UC_NotificarDisponibilidad
+Sistema --> UC_CalcularMulta
+Sistema --> UC_PagarMulta
+
+
+' Agrupaciones lógicas (notas)
+note left of UC_Reservar
+Package: Gestión de Reservar
+end note
+
+
+note left of UC_Buscar
+Package: Búsqueda y consulta
+end note
+
+
+' Relaciones con etiquetas explicativas
+UC_SolicitarPrestamo --> UC_RegistrarManual : "si falla auto-proceso -> manual"
+UC_Reservar --> UC_NotificarDisponibilidad : "cuando ejemplar disponible"
+UC_CalcularMulta --> UC_AplicarPenalizacion : "si multa>0 -> aplicar"
+
+
+' Vincular reportes solo a bibliotecario (visibilidad)
+UC_RepPrest .> UC_RepMult : <<include>>
+
+
+' Aseguramos mínimo 12 casos de uso (se listan y se agrupan)
+
+
+@enduml
