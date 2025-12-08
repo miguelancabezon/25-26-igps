@@ -1,9 +1,7 @@
 @startuml
-title Diagrama de Objetos - Sistema de Biblioteca (15/11/2025 - 14:30h)
+title Diagrama de Objetos - 15 Nov 2025 (14:30h)
 
-' ============================
-' USUARIOS
-' ============================
+' ==== OBJETOS USUARIOS ====
 
 object estudiante1 {
   id = "EST-2023001"
@@ -11,14 +9,6 @@ object estudiante1 {
   email = "ana.garcia@uni.es"
   prestamosActivos = 2
   multasAcumuladas = 1.50
-}
-
-object profesor1 {
-  id = "PROF-2020045"
-  nombre = "Dr. Carlos Ruiz"
-  departamento = "Informática"
-  prestamosActivos = 3
-  multasAcumuladas = 0.00
 }
 
 object estudiante2 {
@@ -29,14 +19,15 @@ object estudiante2 {
   multasAcumuladas = 0.00
 }
 
-object estudianteX {
-  id = "EST-XXXX"
-  nombre = "Otro estudiante"
+object profesor1 {
+  id = "PROF-2020045"
+  nombre = "Dr. Carlos Ruiz"
+  departamento = "Informática"
+  prestamosActivos = 3
+  multasAcumuladas = 0.00
 }
 
-' ============================
-' LIBROS
-' ============================
+' ==== OBJETOS LIBROS ====
 
 object libro1 {
   isbn = "978-3-16-148410-0"
@@ -83,9 +74,7 @@ object libro5 {
   categoria = "Arquitectura"
 }
 
-' ============================
-' PRESTAMOS
-' ============================
+' ==== OBJETOS PRÉSTAMOS ====
 
 object prestamo1 {
   id = "PREST-2025-1234"
@@ -123,14 +112,7 @@ object prestamo4 {
   multa = 0.00
 }
 
-object prestamoX {
-  id = "PREST-2025-XXXX"
-  estado = "Activo"
-}
-
-' ============================
-' RESERVAS
-' ============================
+' ==== OBJETOS RESERVAS ====
 
 object reserva1 {
   id = "RES-2025-0089"
@@ -146,9 +128,7 @@ object reserva2 {
   posicionCola = 2
 }
 
-' ============================
-' MULTA
-' ============================
+' ==== OBJETO MULTA ====
 
 object multa1 {
   id = "MULT-2025-045"
@@ -158,32 +138,31 @@ object multa1 {
   concepto = "Retraso en devolución"
 }
 
-' ============================
-' RELACIONES
-' ============================
+' =====================================================
+'               RELACIONES ENTRE OBJETOS
+' =====================================================
 
-' Usuarios → Préstamos
-estudiante1 --> prestamo1 : tiene
-estudiante1 --> prestamo3 : tiene
-profesor1 --> prestamo2 : tiene
-profesor1 --> prestamoX : tiene
-estudiante2 --> prestamo4 : tiene
+' Usuarios - Préstamos
+estudiante1 -- prestamo1
+estudiante1 -- prestamo3
+profesor1 -- prestamo2
+profesor1 -- prestamoX : otro préstamo (no instanciado)
+estudiante2 -- prestamo4
 
-' Préstamos → Libros
-prestamo1 --> libro1 : ejemplar
-prestamo2 --> libro2 : ejemplar
-prestamo3 --> libro5 : ejemplar
-prestamo4 --> libro3 : ejemplar
+' Préstamos - Libros
+prestamo1 -- libro1
+prestamo2 -- libro2
+prestamo3 -- libro5
+prestamo4 -- libro3
 
-' Reservas → Usuarios y Libros
-reserva1 --> estudiante2 : reservó
-reserva1 --> libro2 : libro
+' Reservas
+reserva1 -- libro2
+reserva1 -- estudiante2
+reserva2 -- libro2
+reserva2 -- estudianteY : otro estudiante
 
-reserva2 --> estudianteX : reservó
-reserva2 --> libro2 : libro
-
-' Multas → Prestamo y Usuario
-multa1 --> prestamo3 : asociada
-multa1 --> estudiante1 : asignada a
+' Multa ligada a préstamo y usuario
+multa1 -- prestamo3
+multa1 -- estudiante1
 
 @enduml
