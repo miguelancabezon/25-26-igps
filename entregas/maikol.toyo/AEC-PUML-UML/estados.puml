@@ -1,0 +1,97 @@
+@startuml
+title Diagrama de Estados - Ciclo de Vida del Préstamo
+
+' Definición de estilos
+skinparam state {
+  BackgroundColor<<Solicitado>> Gold
+  BackgroundColor<<Activo>> LightGreen
+  BackgroundColor<<Vencido>> LightCoral
+  BackgroundColor<<Final>> LightGray
+}
+
+[*] --> Solicitado
+
+state Solicitado <<Solicitado>> {
+    entry / registrarSolicitud()
+    
+    ' Uso de Fork/Join para verificar condiciones en paralelo
+    state "Verificaciones Iniciales" as Verificaciones <<fork>>
+    [*] --> Verificaciones
+    Verificaciones --> VerificandoUsuario
+    Verificaciones --> VerificandoStock
+    
+    state VerificandoUsuario : verificarMultas()
+    state VerificandoStock : verificarDisponibilidad()
+    
+    state "Evaluación Completa" as JoinVerificacion <<join>>
+    VerificandoUsuario --> JoinVerificacion
+    VerificandoStock --> JoinVerificacion
+}
+
+Solicitado --> Cancelado : rechazar [libro no disponible]
+Solicitado --> Cancelado : cancelar por usuario
+Solicitado --> EnCurso : aprobar [libro disponible]
+
+state "En Curso" as EnCurso {
+    ' History state para recordar subestado
+    state "H" as H 
+    
+    state Activo <<Activo>> {
+        entry / enviarEmailConfirmacion()
+        entry / actualizarDisponibilidadLibro()
+        exit / registrarHistorial()
+    }
+
+    state Renovado <<Activo>> {
+        entry / extenderFechaVencimiento()
+        entry / incrementarContadorRenovaciones()
+    }
+
+    state Vencido <<Vencido>> {
+        entry / calcularMulta()
+        entry / enviarNotificacionRetraso()
+    }
+    
+    ' Estado inicial dentro de EnCurso
+    [*] --> Activo
+
+    ' Lógica de Renovación con Choice
+    state c_renovacion <<choice>>
+    
+    Activo --> c_renovacion : renovar
+    Renovado --> c_renovacion : renovar
+
+    c_renovacion --> Renovado : [renovaciones < 2 AND sin reservas]
+    c_renovacion --> Activo : [renovaciones >= 2] \n(mensaje rechazo)
+    
+    ' Transiciones de tiempo
+    Activo --> Vencido : vencer plazo (14 días)
+    Renovado --> Vencido : vencer plazo (14 días)
+    
+    ' Transición interna Vencido
+    Vencido --> Vencido : continuar vencido [>30 días] / escalar a crítico
+}
+
+EnCurso --> Devuelto : devolver [a tiempo]
+EnCurso --> Devuelto : devolver con multa [desde Vencido]
+
+state Devuelto <<Final>> {
+    entry / liberarLibro()
+    entry / procesarSiguienteReserva()
+}
+
+state Cancelado <<Final>> {
+    entry / archivarSolicitud()
+}
+
+Devuelto --> [*]
+Cancelado --> [*]
+
+note right of c_renovacion
+  Lógica de Negocio:
+  Solo se permite renovar si
+  no se ha alcanzado el límite
+  y no hay reservas.
+end note
+
+@enduml
