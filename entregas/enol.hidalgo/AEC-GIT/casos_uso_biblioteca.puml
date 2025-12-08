@@ -1,0 +1,58 @@
+@startuml
+title Diagrama de Casos de Uso - Biblioteca
+actor Estudiante
+actor Profesor
+actor Bibliotecario
+actor Sistema
+
+package "Búsqueda y consulta" {
+  usecase "Buscar en catálogo"
+  usecase "Ver historial de préstamos"
+  usecase "Consultar estado de libro"
+}
+
+package "Gestión de Reservar" {
+  usecase "Hacer reserva"
+  usecase "Cancelar reserva"
+  usecase "Notificar disponibilidad"
+}
+
+package "Penalizaciones" {
+  usecase "Calcular multa"
+  usecase "Pagar multa online"
+  usecase "Aplicar penalización"
+}
+
+package "Reportes" {
+  usecase "Generar reporte de préstamos"
+  usecase "Generar reporte de multas"
+}
+
+usecase "Solicitar préstamo"
+usecase "Renovar préstamo"
+usecase "Devolver libro"
+usecase "Procesar devolución"
+usecase "Registrar préstamo manual"
+
+Estudiante --> "Buscar en catálogo"
+Estudiante --> "Solicitar préstamo"
+Estudiante --> "Renovar préstamo"
+Estudiante --> "Devolver libro"
+Estudiante --> "Ver historial de préstamos"
+Estudiante --> "Pagar multa online"
+Estudiante --> "Hacer reserva"
+Estudiante --> "Cancelar reserva"
+
+Profesor --> "Buscar en catálogo"
+Profesor --> "Solicitar préstamo"
+Profesor --> "Renovar préstamo"
+Profesor --> "Devolver libro"
+
+Bibliotecario --> "Procesar devolución"
+Bibliotecario --> "Registrar préstamo manual"
+Bibliotecario --> "Aplicar penalización"
+Bibliotecario --> "Generar reporte de préstamos"
+Bibliotecario --> "Generar reporte de multas"
+
+Sistema --> "Notificar disponibilidad"
+@enduml
