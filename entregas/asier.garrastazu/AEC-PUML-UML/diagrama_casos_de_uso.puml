@@ -1,0 +1,97 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+skinparam actorStyle awesome
+
+' ==== ACTORES ====
+actor Estudiante
+actor Profesor
+actor Bibliotecario
+actor "Sistema de Notificaciones" as Sistema
+
+' ===========================================================
+'                   PACKAGE: PRÉSTAMOS
+' ===========================================================
+package "Gestión de Préstamos" {
+
+  usecase "Solicitar préstamo" as UC_Solicitar
+  usecase "Renovar préstamo" as UC_Renovar
+  usecase "Devolver libro" as UC_Devolver
+  usecase "Procesar devolución" as UC_ProcDevol
+  usecase "Registrar préstamo manual" as UC_RegistrarManual
+}
+
+' ===========================================================
+'                   PACKAGE: RESERVAS
+' ===========================================================
+package "Gestión de Reservas" {
+  usecase "Hacer reserva" as UC_HacerRes
+  usecase "Cancelar reserva" as UC_CancelarRes
+  usecase "Notificar disponibilidad" as UC_Notificar
+}
+
+' ===========================================================
+'                   PACKAGE: BÚSQUEDA Y CONSULTA
+' ===========================================================
+package "Búsqueda y Consulta" {
+  usecase "Buscar en catálogo" as UC_Buscar
+  usecase "Ver historial de préstamos" as UC_Historial
+  usecase "Consultar estado de libro" as UC_EstadoLibro
+}
+
+' ===========================================================
+'                   PACKAGE: PENALIZACIONES
+' ===========================================================
+package "Penalizaciones" {
+  usecase "Calcular multa" as UC_CalcularMulta
+  usecase "Pagar multa online" as UC_PagarMulta
+  usecase "Aplicar penalización" as UC_AplicarPen
+}
+
+' ===========================================================
+'                   PACKAGE: REPORTES
+' ===========================================================
+package "Reportes" {
+  usecase "Generar reporte de préstamos" as UC_RepPrest
+  usecase "Generar reporte de multas" as UC_RepMultas
+}
+
+' ==== RELACIONES GENERALES ====
+
+' Estudiante
+Estudiante --> UC_Solicitar
+Estudiante --> UC_Renovar
+Estudiante --> UC_Devolver
+Estudiante --> UC_HacerRes
+Estudiante --> UC_CancelarRes
+Estudiante --> UC_Buscar
+Estudiante --> UC_Historial
+Estudiante --> UC_EstadoLibro
+Estudiante --> UC_PagarMulta
+
+' Profesor
+Profesor --> UC_Solicitar
+Profesor --> UC_Renovar
+Profesor --> UC_Devolver
+Profesor --> UC_HacerRes
+Profesor --> UC_CancelarRes
+Profesor --> UC_Buscar
+Profesor --> UC_Historial
+Profesor --> UC_EstadoLibro
+Profesor --> UC_PagarMulta
+
+' Bibliotecario
+Bibliotecario --> UC_ProcDevol  : "Confirma estado físico"
+Bibliotecario --> UC_RegistrarManual
+Bibliotecario --> UC_AplicarPen
+Bibliotecario --> UC_RepPrest
+Bibliotecario --> UC_RepMultas
+
+' Sistema automático
+Sistema --> UC_Notificar       : "<<envía aviso>>"
+Sistema --> UC_CalcularMulta   : "<<proceso automático>>"
+
+' Penalizaciones
+UC_ProcDevol --> UC_CalcularMulta : "<<si hay retraso>>"
+
+@enduml

@@ -1,0 +1,67 @@
+@startuml
+[*] --> Solicitado : crear préstamo
+
+state Solicitado
+
+' --- Transiciones desde Solicitado ---
+Solicitado --> Activo : aprobar\n[libro disponible]
+Solicitado --> Cancelado : rechazar\n[libro no disponible]
+Solicitado --> Cancelado : cancelar por usuario
+
+' ===============================
+' SUPER-ESTADO EN CURSO
+' ===============================
+state "En Curso" as EnCurso {
+
+    [*] --> Activo
+
+    state Activo
+    state Renovado
+    state Vencido
+    state "Vencido Crítico" as VencidoCritico
+    state Devuelto
+
+    ' --- Acciones (entry/exit) como notas ---
+    note right of Activo
+      entry: enviarEmailConfirmacion()
+      entry: actualizarDisponibilidadLibro()
+      exit: registrarHistorial()
+    end note
+
+    note right of Vencido
+      entry: calcularMulta()
+      entry: enviarNotificacionRetraso()
+    end note
+
+    note right of Devuelto
+      entry: liberarLibro()
+      entry: procesarSiguienteReserva()
+    end note
+
+    ' --- Transiciones internas de En Curso ---
+    Activo --> Renovado : renovar\n[renovaciones < 2 AND sin reservas]
+    Activo --> Activo : renovar\n[renovaciones >= 2]\n(renovación rechazada)
+    Activo --> Vencido : vencer plazo
+    Activo --> Devuelto : devolver\n[a tiempo]
+
+    Renovado --> Renovado : renovar\n[renovaciones < 2 AND sin reservas]
+    Renovado --> Vencido : vencer plazo
+    Renovado --> Devuelto : devolver\n[a tiempo]
+
+    Vencido --> VencidoCritico : continuar vencido\n[>30 días]
+    Vencido --> Devuelto : devolver con multa
+}
+
+' ===============================
+' SALIDAS DEL SUPER ESTADO
+' ===============================
+EnCurso --> Devuelto : devolver
+EnCurso --> VencidoCritico : continuar vencido
+
+' ===============================
+' ESTADOS FINALES
+' ===============================
+Devuelto --> [*]
+Cancelado --> [*]
+
+@enduml
