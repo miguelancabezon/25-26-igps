@@ -1,0 +1,73 @@
+@startuml
+title Diagrama de Estados - Ciclo de Vida del Préstamo
+
+[*] --> Solicitado
+
+state Solicitado {
+  Solicitado : entry / registrarSolicitud()
+  Solicitado : entry / verificarDisponibilidad()
+}
+
+Solicitado --> Activo : aprobar [libro disponible]
+Solicitado --> Cancelado : rechazar [libro no disponible]
+Solicitado --> Cancelado : cancelar por usuario
+
+state "En Curso" as EnCurso {
+
+  [H] --> Activo
+
+  state Activo {
+      Activo : entry / enviarEmailConfirmacion()
+      Activo : entry / actualizarDisponibilidadLibro()
+      Activo : exit / registrarHistorial()
+  }
+
+  state Renovado {
+      Renovado : entry / extenderFechaVencimiento()
+      Renovado : entry / incrementarContadorRenovaciones()
+  }
+
+  state Vencido {
+      Vencido : entry / calcularMulta()
+      Vencido : entry / enviarNotificacionRetraso()
+  }
+
+  Activo --> Vencido : vencer plazo
+  Activo --> Devuelto : devolver [a tiempo]
+  Activo --> choiceRenovacion : renovar
+
+  state choiceRenovacion <<choice>>
+
+  choiceRenovacion --> Renovado : [renovaciones < 2 AND sin reservas]
+  choiceRenovacion --> Activo : [renovaciones >= 2] / mostrarMensajeRechazo()
+
+  Renovado --> Devuelto : devolver [a tiempo]
+  Renovado --> Vencido : vencer plazo
+  Renovado --> Renovado : renovar [renovaciones < 2 AND sin reservas]
+
+  Vencido --> Devuelto : devolver con multa
+  Vencido --> VencidoCritico : continuar vencido [>30 días]
+}
+
+state VencidoCritico
+
+state Devuelto {
+  Devuelto : entry / liberarLibro()
+  Devuelto : entry / procesarSiguienteReserva()
+
+  Devuelto --> FinLogistico : procesar logística
+  Devuelto --> FinAdministrativo : procesar administración
+
+  state FinLogistico
+  state FinAdministrativo
+
+  FinLogistico --> Fin : logística finalizada
+  FinAdministrativo --> Fin : administración finalizada
+}
+
+state Fin
+Fin --> [*]
+
+Cancelado --> [*]
+
+@enduml
