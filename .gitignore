@@ -1,2 +1,4 @@
 # Configuraciones de usuario de Obsidian
 .obsidian/
+.vscode/
+.DS_Store
