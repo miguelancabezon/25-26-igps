@@ -1,0 +1,70 @@
+@startuml
+title Diagrama de Objetos - Biblioteca Universitaria (15 Nov 2025, 14:30)
+
+object estudiante1 {
+  id = "EST-2023001"
+  nombre = "Ana García"
+  email = "ana.garcia@uni.es"
+  prestamosActivos = 2
+  multasAcumuladas = 1.50
+}
+
+object estudiante2 {
+  id = "EST-2024089"
+  nombre = "Luis Martínez"
+  email = "luis.martinez@uni.es"
+  prestamosActivos = 1
+  multasAcumuladas = 0.00
+}
+
+object profesor1 {
+  id = "PROF-2020045"
+  nombre = "Dr. Carlos Ruiz"
+  departamento = "Informática"
+  prestamosActivos = 3
+  multasAcumuladas = 0.00
+}
+
+object libro1 {titulo="Clean Code"}
+object libro2 {titulo="The Pragmatic Programmer"}
+object libro3 {titulo="JavaScript: The Good Parts"}
+object libro4 {titulo="Design Patterns"}
+object libro5 {titulo="Domain-Driven Design"}
+
+object prestamo1 {estado="Activo"}
+object prestamo2 {estado="Activo"}
+object prestamo3 {estado="Vencido"}
+object prestamo4 {estado="Activo"}
+
+object reserva1 {estado="Pendiente", posicionCola=1}
+object reserva2 {estado="Pendiente", posicionCola=2}
+
+object multa1 {monto=6.00, estado="Pendiente"}
+
+'estudiante1 tiene prestamo1 y prestamo3
+estudiante1 --> prestamo1
+estudiante1 --> prestamo3
+
+'profesor1 tiene prestamo2 y otro
+profesor1 --> prestamo2
+
+'estudiante2 tiene prestamo4
+estudiante2 --> prestamo4
+
+'Prestamos a libros
+prestamo1 --> libro1
+prestamo2 --> libro2
+prestamo3 --> libro5
+prestamo4 --> libro3
+
+'Reservas
+reserva1 --> libro2
+reserva1 --> estudiante2
+
+reserva2 --> libro2
+
+'Multa
+multa1 --> prestamo3
+multa1 --> estudiante1
+
+@enduml
