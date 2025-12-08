@@ -1,0 +1,73 @@
+@startuml
+title Diagrama de Estados - Ciclo de Vida Completo del Préstamo
+
+
+[*] --> Solicitado
+
+state Solicitado #LightYellow {
+  Solicitado : entry / registrarSolicitud()
+  Solicitado : entry / verificarDisponibilidad()
+}
+
+
+Solicitado --> Activo : aprobar [libro disponible]
+Solicitado --> Cancelado : rechazar [libro no disponible]
+Solicitado --> Cancelado : cancelar por usuario
+
+
+state "En Curso" as EnCurso {
+
+
+
+  state Activo #LightGreen {
+    Activo : entry / enviarEmailConfirmacion()
+    Activo : entry / actualizarDisponibilidadLibro()
+    Activo : exit  / registrarHistorial()
+  }
+
+  state Renovado #LightGreen {
+    Renovado : entry / extenderFechaVencimiento()
+    Renovado : entry / incrementarContadorRenovaciones()
+  }
+
+
+  state Vencido #LightCoral {
+    Vencido : entry / calcularMulta()
+    Vencido : entry / enviarNotificacionRetraso()
+  }
+
+ 
+  state "Vencido Crítico" as VencidoCritico #Red {
+    VencidoCritico : entry / bloquearUsuario()
+  }
+
+ 
+  Activo --> choiceRenovar : renovar
+  Renovado --> choiceRenovar : renovar
+
+  state choiceRenovar <<choice>>
+  choiceRenovar --> Renovado : [renovaciones < 2]\n[sin reservas pendientes]
+  choiceRenovar --> Activo : [renovaciones >= 2]\n/rechazar renovación
+
+  Activo --> Vencido : vencer plazo
+  Renovado --> Vencido : vencer plazo
+
+  Vencido --> VencidoCritico : continuar vencido\n[> 30 días]
+
+
+
+
+EnCurso --> Devuelto : devolver [a tiempo]
+Vencido --> Devuelto : devolver con multa
+VencidoCritico --> Devuelto : pagar multa\n+ devolver
+
+state Devuelto #LightBlue {
+  Devuelto : entry / liberarLibro()
+  Devuelto : entry / procesarSiguienteReserva()
+}
+
+
+Devuelto --> [*]
+Cancelado --> [*]
+
+@enduml

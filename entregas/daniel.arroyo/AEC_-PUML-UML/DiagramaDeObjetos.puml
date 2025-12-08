@@ -1,0 +1,182 @@
+@startuml
+title Fecha: 15 de Noviembre de 2025, 14:30h
+
+
+object estudiante1 as "<b>estudiante1: estudiante</b>" {
+  estudiante1: Estudiante
+  
+  id: "EST-2023001"
+  nombre: "Ana García"
+  email: "ana.garcia@uni.es"
+  prestamosActivos: 2
+  multasAcumuladas: 1.50
+
+}
+
+object estudiante2 as "<b>estudiante2: estudiante</b>" {
+  estudiante2: Estudiante
+  
+  id: "EST-2024089"
+  nombre: "Luis Martínez"
+  email: "luis.martinez@uni.es"
+  prestamosActivos: 1
+  multasAcumuladas: 0.00
+
+}
+
+object profesor1 as "<b>profesor1: Profesor</b>" {
+  profesor1: Profesor
+  
+  id: "PROF-2020045"
+  nombre: "Dr. Carlos Ruiz"
+  departamento: "Informática"
+  prestamosActivos: 3
+  multasAcumuladas: 0.00
+}
+
+
+
+object libro1 as "<b>libro1: Libro</b>" {
+  libro1: Libro
+  
+  isbn: "978-3-16-148410-0"
+  titulo: "Clean Code"
+  autor: "Robert C. Martin"
+  ejemplares: 3
+  disponibles: 1
+  categoria: "Programación"
+}
+object libro2 as "<b>libro2: Libro</b>" {
+  libro3: Libro
+  
+  isbn: "978-0-596-52068-7"
+  titulo: "JavaScript: The Good Parts"
+  autor: "Douglas Crockford"
+  ejemplares: 4
+  disponibles: 3
+  categoria: "Programación"
+}
+object libro3 as "<b>libro3: Libro</b>" {
+  libro3: Libro
+  
+  isbn: "978-0-596-52068-7"
+  titulo: "JavaScript: The Good Parts"
+  autor: "Douglas Crockford"
+  ejemplares: 4
+  disponibles: 3
+  categoria: "Programación"
+}
+object libro4 as "<b>libro4: Libro</b>" {
+  libro4: Libro
+  
+  isbn: "978-0-134-68599-8"
+  titulo: "Design Patterns"
+  autor: "Gang of Four"
+  ejemplares: 2
+  disponibles: 1
+  categoria: "Ingeniería Software"
+}
+object libro5 as "<b>libro5: Libro</b>" {
+  libro5: Libro
+  
+  isbn: "978-0-321-12742-6"
+  titulo: "Domain-Driven Design"
+  autor: "Eric Evans"
+  ejemplares: 1
+  disponibles: 0
+  categoria: "Arquitectura"
+}
+
+object prestamo1 as "<b>prestamo1: prestamo</b>" {
+  prestamo1: Prestamo
+  
+  id: "PREST-2025-1234"
+  fechaInicio: "2025-11-01"
+  fechaVencimiento: "2025-11-15"
+  estado: "Activo"
+  renovaciones: 0
+  multa: 0.00
+}
+object prestamo2 as "<b>prestamo2: prestamo</b>" {
+  prestamo2: Prestamo
+  
+  id: "PREST-2025-1256"
+  fechaInicio: "2025-10-28"
+  fechaVencimiento: "2025-11-27"
+  estado: "Activo"
+  renovaciones: 0
+  multa: 0.00
+}
+object prestamo3 as "<b>prestamo3: prestamo</b>" {
+  prestamo3: Prestamo
+  
+  id: "PREST-2025-1189"
+  fechaInicio: "2025-10-20"
+  fechaVencimiento: "2025-11-03"
+  estado: "Vencido"
+  renovaciones: 1
+  multa: 6.00
+}
+object prestamo4 as "<b>prestamo4: prestamo</b>" {
+  prestamo4: Prestamo
+  
+  id: "PREST-2025-1290"
+  fechaInicio: "2025-11-10"
+  fechaVencimiento: "2025-11-24"
+  estado: "Activo"
+  renovaciones: 0
+  multa: 0.00
+}
+
+object reserva1 as "<b>reserva1: reserva</b>" {
+  reserva1: Reserva
+  
+  id: "RES-2025-0089"
+  fechaReserva: "2025-11-14"
+  estado: "Pendiente"
+  posicionCola: 1
+}
+object reserva2 as "<b>reserva2: reserva</b>" {
+  reserva2: Reserva
+  
+  id: "RES-2025-0090"
+  fechaReserva: "2025-11-15"
+  estado: "Pendiente"
+  posicionCola: 2
+}
+object multa1 as "<b>multa1: multa</b>" {
+  multa1: Multa
+  
+  id: "MULT-2025-045"
+  monto: 6.00
+  fechaGeneracion: "2025-11-04"
+  estado: "Pendiente"
+  concepto: "Retraso en devolución"
+}
+
+estudiante1 --> prestamo1
+estudiante1 --> prestamo3
+
+estudiante2 --> prestamo4
+
+profesor1 --> prestamo2
+profesor1 -->prestamo4
+
+prestamo1 --> libro1
+prestamo2 --> libro2
+prestamo3 --> libro5
+prestamo4 --> libro3
+
+libro2 --> reserva1
+estudiante2 --> reserva1
+
+libro2 --> reserva2
+estudiante1 --> reserva2
+
+prestamo3 --> multa1
+estudiante1 --> multa1
+
+
+
+
+@enduml

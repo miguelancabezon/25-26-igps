@@ -1,0 +1,68 @@
+@startuml
+left to right direction
+actor Estudiante
+actor Profesor
+actor Bibliotecario
+actor Sistema
+
+package "Búsqueda y consulta" {
+    usecase "Buscar en catálogo" as UC_Buscar
+    usecase "Ver historial de préstamos" as UC_Historial
+    usecase "Consultar estado de libro" as UC_Consultar
+}
+
+package "Gestión de Préstamos" {
+    usecase "Solicitar préstamo" as UC_Solicitar
+    usecase "Renovar préstamo" as UC_Renovar
+    usecase "Devolver libro" as UC_Devolver
+    usecase "Registrar préstamo manual" as UC_Registrar
+    usecase "Procesar devolución" as UC_Procesar
+}
+
+package "Gestión de Reservas" {
+    usecase "Hacer reserva" as UC_Reserva
+    usecase "Cancelar reserva" as UC_Cancelar
+    usecase "Notificar disponibilidad" as UC_Notificar
+}
+
+package "Penalizaciones" {
+    usecase "Calcular multa" as UC_CalcularMulta
+    usecase "Pagar multa online" as UC_PagarMulta
+    usecase "Aplicar penalización" as UC_Penalizacion
+}
+
+package "Reportes" {
+    usecase "Generar reporte de préstamos" as UC_RepPrestamos
+    usecase "Generar reporte de multas" as UC_RepMultas
+}
+
+Estudiante --> UC_Buscar
+Estudiante --> UC_Historial
+Estudiante --> UC_Consultar
+Estudiante --> UC_Solicitar
+Estudiante --> UC_Renovar
+Estudiante --> UC_Devolver
+Estudiante --> UC_Reserva
+Estudiante --> UC_Cancelar
+Estudiante --> UC_PagarMulta
+
+Profesor --> UC_Buscar
+Profesor --> UC_Historial
+Profesor --> UC_Consultar
+Profesor --> UC_Solicitar
+Profesor --> UC_Renovar
+Profesor --> UC_Devolver
+Profesor --> UC_Reserva
+Profesor --> UC_Cancelar
+Profesor --> UC_PagarMulta
+
+Bibliotecario --> UC_Registrar
+Bibliotecario --> UC_Procesar
+Bibliotecario --> UC_Penalizacion
+Bibliotecario --> UC_RepPrestamos
+Bibliotecario --> UC_RepMultas
+Bibliotecario --> UC_CalcularMulta
+
+Sistema--> UC_Notificar
+
+@enduml
