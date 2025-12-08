@@ -1,0 +1,90 @@
+@startuml
+' archivo: aec_pu01_casos_de_uso.puml
+!define AWSPUML https://raw.githubusercontent.com/plantuml-stdlib/Cicon-PlantUML/master
+skinparam style strictuml
+skinparam packageStyle rect
+title Diagrama de Casos de Uso - Sistema Gestión Biblioteca Universitaria
+
+left to right direction
+actor Estudiante
+actor Profesor
+actor Bibliotecario
+actor Sistema as SistemaNot
+
+package "Búsqueda y consulta" {
+  usecase UC_Buscar as "Buscar en catálogo"
+  usecase UC_Historial as "Ver historial de préstamos"
+  usecase UC_EstadoLibro as "Consultar estado de libro"
+}
+
+package "Gestión de Reservar" {
+  usecase UC_Reservar as "Hacer reserva"
+  usecase UC_CancelarReserva as "Cancelar reserva"
+  usecase UC_NotificarDispon as "Notificar disponibilidad"
+}
+
+package "Penalizaciones" {
+  usecase UC_CalcularMulta as "Calcular multa"
+  usecase UC_PagarMulta as "Pagar multa online"
+  usecase UC_AplicarPenal as "Aplicar penalización"
+}
+
+package "Préstamos" {
+  usecase UC_Solicitar as "Solicitar préstamo"
+  usecase UC_Renovar as "Renovar préstamo"
+  usecase UC_Devolver as "Devolver libro"
+}
+
+package "Bibliotecario - Operaciones" {
+  usecase UC_ProcesarDevol as "Procesar devolución"
+  usecase UC_RegistrarManual as "Registrar préstamo manual"
+  package "Reportes" {
+    usecase UC_RepoPrest as "Generar reporte de préstamos"
+    usecase UC_RepoMult as "Generar reporte de multas"
+  }
+}
+
+' Relaciones básicas
+Estudiante --> UC_Buscar
+Estudiante --> UC_Solicitar
+Estudiante --> UC_Renovar
+Estudiante --> UC_Devolver
+Estudiante --> UC_Reservar
+Estudiante --> UC_CancelarReserva
+Estudiante --> UC_Historial
+Estudiante --> UC_PagarMulta
+
+Profesor --> UC_Buscar
+Profesor --> UC_Solicitar
+Profesor --> UC_Renovar
+Profesor --> UC_Devolver
+Profesor --> UC_Reservar
+Profesor --> UC_CancelarReserva
+Profesor --> UC_Historial
+Profesor --> UC_PagarMulta
+
+' Profesor tiene permiso de préstamo largo: relación estereotipada
+ProfessorNote <- Profesor : <<préstamo_largo>>
+
+Bibliotecario --> UC_ProcesarDevol
+Bibliotecario --> UC_RegistrarManual
+Bibliotecario --> UC_AplicarPenal
+Bibliotecario --> UC_RepoPrest
+Bibliotecario --> UC_RepoMult
+Bibliotecario --> UC_Reservar
+
+SistemaNot --> UC_NotificarDispon
+SistemaNot --> UC_CalcularMulta
+SistemaNot --> UC_NotificarDispon : <<envía aviso automático>>
+
+' Relaciones entre casos de uso (extensiones / inclusiones explicativas)
+UC_Solicitar .> UC_Buscar : <<usa>>
+UC_Renovar .> UC_CalcularMulta : <<verifica>>
+UC_PagarMulta .> UC_CalcularMulta : <<usa>>
+UC_Reservar .> UC_Buscar : <<usa>>
+
+' Etiquetas explicativas en relaciones complejas
+Bibliotecario -down-> UC_RegistrarManual : "Registra en caso de error del kiosco"
+Estudiante -right-> UC_Renovar : "Solo si renovaciones < 2 y sin reservas pendientes"
+
+@enduml
