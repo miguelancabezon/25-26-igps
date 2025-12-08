@@ -1,0 +1,70 @@
+@startjson
+{
+  "metadata": {
+    "version": "1.0.0",
+    "author": "Daniel Mora",
+    "language": "es-ES",
+    "environment": "development",
+    "createdAt": "2025-11-09T10:00:00Z"
+  },
+  "classes": {
+    "Player": {
+      "id": 1,
+      "name": "JugadorPrincipal",
+      "level": 5,
+      "health": 85.5,
+      "isAlive": true,
+      "inventory": ["Axe", "WaterBottle", "Bandage"],
+      "location": {
+        "x": 100,
+        "y": 200,
+        "zone": "Bosque"
+      }
+    },
+    "Item": {
+      "id": 101,
+      "name": "Axe",
+      "type": "weapon",
+      "damage": 25,
+      "durability": 80,
+      "isCraftable": true
+    },
+    "Enemy": {
+      "id": 201,
+      "name": "Zombie",
+      "aggressiveness": 0.8,
+      "health": 50,
+      "attackPower": 10,
+      "spawnArea": "Bosque"
+    },
+    "World": {
+      "id": "world_001",
+      "name": "Zona Desierto",
+      "biomes": ["Desierto", "Bosque", "Montaña"],
+      "enemies": [
+        { "id": 201, "name": "Zombie" },
+        { "id": 202, "name": "Lobo Salvaje" }
+      ],
+      "resources": ["agua", "madera", "piedra"]
+    }
+  },
+  "actions": {
+    "createPlayer": {
+      "class": "Player",
+      "params": ["name", "difficulty"]
+    },
+    "collectResource": {
+      "class": "Player",
+      "params": ["resourceType", "quantity"]
+    },
+    "craftItem": {
+      "class": "Item",
+      "params": ["recipeId"]
+    },
+    "attackEnemy": {
+      "class": "Enemy",
+      "params": ["playerId", "enemyId", "weaponId"]
+    }
+  }
+}
+@endjson

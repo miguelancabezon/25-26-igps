@@ -1,9 +1,0 @@
-Pasos que segui:
-1. Primero hice fork desde la interfaz visual de github
-2. Clone el repositorio forkeado en mi computadora
-3. Cree las carpetas que me pidieron
-4. Cree el archivo inicial
-5. Hice git push
-6. Cree una nueva rama y me movi a el con git checkout -b 
-7. Hice git push
-8. Hice pull request desde la interfaz grafica de github

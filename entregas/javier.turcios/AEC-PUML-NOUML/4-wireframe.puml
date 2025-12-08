@@ -1,0 +1,122 @@
+@startsalt
+' Wireframe: Interfaz Principal - Juego Survival "Wasteland Survival"
+' Autor: Javier Turcios
+' Fecha: 2025-11-09
+
+<style>
+saltDiagram {
+  .header {
+    FontColor #FFAE00
+    FontSize 18
+    FontStyle bold
+  }
+  .tab-active {
+    BackgroundColor #B87333
+    FontColor white
+  }
+  .tab-inactive {
+    BackgroundColor #E0E0E0
+    FontColor black
+  }
+  .button-primary {
+    BackgroundColor #228B22
+    FontColor white
+    FontStyle bold
+  }
+  .button-secondary {
+    BackgroundColor #8B0000
+    FontColor white
+  }
+  .button-info {
+    BackgroundColor #4682B4
+    FontColor white
+  }
+  .stats-panel {
+    BackgroundColor #FFF8DC
+  }
+  .player-info {
+    BackgroundColor #F5DEB3
+  }
+}
+</style>
+
+{+
+  {/ "☣ WASTELAND SURVIVAL - Refugio Principal" .header}
+  ==
+  {
+    {
+      {/ "🧍‍♂️ Sobreviviente: RustWalker42" .player-info} | {/ "Nivel: 23 🔥" .player-info} | {/ "XP: 45,720 ⚙️" .player-info} | {/ "Campamento: Refugio Omega 🏚️" .player-info}
+    }
+    --
+    {
+      {^"🎒 Inventario" .tab-active} | {^"🗺️ Exploración" .tab-inactive} | {^"⚒️ Crafteo" .tab-inactive} | {^"📜 Misiones" .tab-inactive} | {^"⚙️ Ajustes" .tab-inactive}
+    }
+    ==
+    {
+      {
+        "📦 Recursos Disponibles:"
+        --
+        {
+          | Tipo ^ | Cantidad ^ | Estado ^ | Última Recolección ^
+          | "💧 Agua" | "47" | "🟢 Pura" | "Hace 2h"
+          | "🥫 Comida Enlatada" | "33" | "🟢 En buen estado" | "Hace 5h"
+          | "🔩 Material Metálico" | "128" | "⚙️ Procesado" | "Hace 1d"
+          | "🪵 Madera" | "76" | "🟡 Seca" | "Hace 3d"
+          | "💊 Medicina" | "12" | "🟢 Útil" | "Hace 1d"
+        }
+        --
+        {
+          "🧭 Filtros:"
+          (X) "Todos" | ( ) "Comida" | ( ) "Materiales" | ( ) "Curación"
+        }
+        --
+        {
+          "⚙️ Acción Rápida:"
+          [ "🛠️ Craftear Objeto" .button-info ] | [ "📦 Organizar Almacén" .button-secondary ] | [ "🚶‍♂️ Salir a Explorar" .button-primary ]
+        }
+      }
+      |
+      {
+        "📊 Estado del Jugador" .stats-panel
+        --
+        "❤️ Salud: 85%"
+        "💧 Hidratación: 62%"
+        "🍖 Hambre: 44%"
+        "😴 Energía: 72%"
+        "☣ Radiación: 15%"
+        --
+        "🏚️ Refugio:"
+        "Nivel 3 (Defensas Medias)"
+        [ "Mejorar Refugio 🔧" .button-info ]
+        --
+        "🎯 Misiones Activas:"
+        "✅ Recuperar el transmisor antiguo"
+        "🕐 Cazar 3 criaturas mutadas"
+        "⛏️ Recolectar 20 unidades de metal"
+        --
+        "🧰 Equipo Actual:"
+        "⚔️ Machete reforzado"
+        "🛡️ Chaleco de cuero"
+        "🎒 Mochila táctica"
+        [ "Gestionar Equipo ⚙️" .button-secondary ]
+      }
+    }
+    ==
+    {
+      "📻 Comunicación:" | {/ "📡 Transmisión activa - Señal débil..." } | [ "🔊 Escuchar" .button-info ] | [ "🛑 Cortar Señal" .button-secondary ]
+    }
+    --
+    {
+      "🌍 Acciones de Supervivencia:"
+      --
+      {
+        [ "🔥 Encender Fogata" .button-secondary ] | [ "💧 Filtrar Agua" .button-info ] | [ "⚒️ Reparar Armas" .button-secondary ] | [ "📦 Recolectar Recursos" .button-info ]
+      }
+    }
+    ==
+    {
+      {/ "🔙 Menú Principal" .button-secondary} | "                    " | {/ "🚀 EMPEZAR EXPEDICIÓN" .button-primary}
+    }
+  }
+}
+@endsalt

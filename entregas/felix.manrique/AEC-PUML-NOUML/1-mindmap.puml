@@ -1,0 +1,118 @@
+@startmindmap
+<style>
+mindmapDiagram {
+  node {
+    BackgroundColor lightblue
+    RoundCorner 25
+    FontSize 12
+  }
+  .red {
+    BackgroundColor #FF6B6B
+    FontColor white
+  }
+  .blue {
+    BackgroundColor #4ECDC4
+    FontColor white
+  }
+  .orange {
+    BackgroundColor #FFE66D
+    FontColor black
+  }
+  .green {
+    BackgroundColor #95E1D3
+    FontColor black
+  }
+  .purple {
+    BackgroundColor #A8E6CF
+    FontColor black
+  }
+  .gold {
+    BackgroundColor #FFD93D
+    FontColor black
+  }
+}
+</style>
+
+* **🎵 Cosmic Beat** <<red>>
+
+left side
+
+** **🖥️ Plataformas** <<blue>>
+*** :desktop_computer: **PC (Steam, Epic Games)** 💻
+**** Windows, Mac, Linux 🖱️
+**** Compatibilidad con controles 🎮
+*** :video_game: **Consolas** 🕹️
+**** Nintendo Switch 🎯
+**** PlayStation 5 🔵
+**** Xbox Series X/S 🟢
+*** :iphone: **Móvil** 📱
+**** iOS (iPhone/iPad) 🍎
+**** Android 🤖
+
+** **🎮 Contenido** <<orange>>
+*** **🎵 Canciones** 🎶
+**** **Licenciadas** 💿
+***** J-Pop (Hatsune Miku) 🎤
+***** EDM (Deadmau5, Skrillex) 🎧
+***** K-Pop 🌟
+**** **Originales** 🎼
+***** Compositores internos ✨
+***** Colaboraciones artistas 🤝
+*** **🎯 Modos de Juego** 🏁
+**** Modo Historia 📖
+**** Modo Arcade 🕹️
+**** Multijugador Online 🌐
+**** Modo Desafío ⚡
+*** **👤 Personajes** 🎭
+**** Avatares desbloqueables 🔓
+**** Customización completa 🎨
+**** Trajes temáticos 👗
+
+right side
+
+** **⚙️ Mecánicas** <<green>>
+*** **🎼 Tipos de Notas** 🎹
+**** **Tap** 👆
+***** Notas simples 🔵
+***** Timing preciso ⏰
+**** **Hold** ⏱️
+***** Mantener presionado 🤏
+***** Duración variable 📏
+**** **Swipe** 👈👉
+***** Deslizar direccional 🔄
+***** Combo chains ⛓️
+*** **🏆 Puntuación** 📊
+**** **Precisión** 🎯
+***** Perfect (1000 pts) ⭐
+***** Great (500 pts) ✨
+***** Good (100 pts) 💫
+**** **Sistema Combo** 🔢
+***** Multiplicador x2, x4, x8 ⚡
+***** Combo break penalty ❌
+**** **Fever Mode** 🔥
+***** Puntuación doble 💥
+***** Efectos visuales 🌟
+
+** **🎨 Visual & Audio** <<purple>>
+*** **Estilo Cyberpunk** 🌆
+**** Neones y colores vibrantes 🎆
+**** Efectos de partículas ✨
+*** **UI Responsiva** 📱
+**** Adaptable a pantallas 📐
+**** Accesibilidad visual 👁️
+*** **Audio 3D** 🎧
+**** Sonido espacial 🌀
+**** Efectos dinámicos 🎵
+
+** **💰 Monetización** <<gold>>
+*** **Modelo F2P** 🆓
+**** Juego base gratuito 🎁
+**** Anuncios opcionales 📺
+*** **DLC Premium** 💎
+**** Packs de canciones ($2.99) 💿
+**** Avatares exclusivos ($0.99) 👤
+*** **Pase de Temporada** 🎫
+**** Contenido mensual 📅
+**** Recompensas únicas 🏅
+
+@endmindmap

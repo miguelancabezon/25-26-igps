@@ -1,0 +1,96 @@
+@startmindmap
+' Usamos clases para definir los 5+ colores temáticos
+
+<style>
+mindmapDiagram {
+    // Definición de Clases con 5+ colores diferentes
+    .root { BackgroundColor #1f77b4; LineColor #0C4A6E; FontColor white; FontSize 20 }
+    .gameplay { BackgroundColor #ff7f0e; LineColor #D96900 }
+    .art { BackgroundColor #2ca02c; LineColor #1A6C1A }
+    .tech { BackgroundColor #d62728; LineColor #A61D20 }
+    .infra { BackgroundColor #9467bd; LineColor #6B4990 }
+    .hr { BackgroundColor #8c564b; LineColor #6E4439 }
+    .transversal { BackgroundColor #E0E0E0; LineColor #9E9E9E; FontColor #333333 }
+
+    // Estilos genéricos para nodos de nivel
+    node {
+        LineThickness 2
+        FontColor #333333
+        FontSize 14
+        FontStyle bold
+    }
+    // Sobrescribe el estilo para nodos hoja (Nivel 4)
+    leafNode {
+        LineThickness 1
+        FontStyle normal
+        FontSize 12
+    }
+}
+</style>
+
+' --- NODO RAÍZ ---
+- FPS Game - Visión general <<root>>
+
+' --- LADO IZQUIERDO: sistemas centrales y gameplay ---
+** Gameplay <<gameplay>>
+*** Mecánicas <<gameplay>>
+**** Movimiento (locomoción, parkour) <<gameplay>>
+**** Disparo (recoils, spread, hitreg) <<gameplay>>
+**** Salud & Daño (armadura, regeneración) <<gameplay>>
+*** Armas <<gameplay>>
+**** Tipos (Asalto, Francotirador, Cuerpo a cuerpo) <<gameplay>>
+**** Balance & Progression <<gameplay>>
+*** Modos <<gameplay>>
+**** Singleplayer (campaña) <<gameplay>>
+**** Multiplayer (PvP / PvE) <<gameplay>>
+
+** Motor & Tech <<tech>>
+*** Motor (Unreal / Unity / Custom) <<tech>>
+**** Razones: rendimiento, toolchain, licencias <<tech>>
+*** Networking <<tech>>
+**** Arquitectura servidores (dedicados/autoridad/clustering) <<infra>> ' Uso de clase cruzada
+**** Matchmaking, State Sync, Latency Compensation <<infra>>
+*** Herramientas CI/CD <<tech>>
+**** Automatización: builds, tests, integraciones <<tech>>
+
+left side
+
+' --- LADO DERECHO: arte, infraestructura y personas ---
+** Arte & Audio <<art>>
+*** Visual (estética, iluminación) <<art>>
+**** Estilos: Realista / Estilizado <<art>>
+**** VFX, partículas, post-procesado <<art>>
+*** Audio <<art>>
+**** SFX (impactos, ambiente) <<art>>
+**** Música adaptativa (intensidad por gameplay) <<art>>
+
+** Infraestructura & Ops <<infra>>
+*** Hosting & Escalado <<infra>>
+**** Cloud providers (regions, DR) <<infra>>
+**** Autoscaling, Cost Control <<infra>>
+*** Observabilidad <<infra>>
+**** Telemetría, Logging, Tracing <<infra>>
+**** SLOs / Alerting (latency, errors) <<infra>>
+
+** Gente & Procesos <<hr>>
+*** Equipo (roles) <<hr>>
+**** Devs, Artistas, Diseñadores, QA, Ops <<hr>>
+*** Roadmap & Hitos <<hr>>
+**** Prototype → Alpha → Beta → Lanzamiento <<hr>>
+*** Riesgos & Mitigación <<hr>>
+**** Tech debt, seguridad, legal, escalado <<hr>>
+
+' --- Ramas transversales (mantienen clase transversal) ---
+** Seguridad <<transversal>>
+*** Detección de trampas / anti-cheat <<transversal>>
+*** Protecciones de datos y privacidad <<transversal>>
+
+** Monetización <<transversal>>
+*** Modelos: Premium, F2P, Season Pass <<transversal>>
+*** Diseño ético de monetización (no pay-to-win) <<transversal>>
+
+** QA & Testing <<transversal>>
+*** Test de red (simulación de latencia) <<transversal>>
+*** Test de rendimiento y stress <<transversal>>
+
+@endmindmap

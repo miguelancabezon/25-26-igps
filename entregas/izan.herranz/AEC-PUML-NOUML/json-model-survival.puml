@@ -1,0 +1,147 @@
+@startjson
+' ===== Estilo general =====
+skinparam BackgroundColor #0f1115
+skinparam json {
+  ArrowColor white
+  FontColor white
+  LineColor #9aa0a6
+}
+
+{
+  "metadata": {
+    "projectName": "Frozen Coast",
+    "version": "0.9.0-beta",
+    "author": "Game Studio North",
+    "language": "es-ES",
+    "environment": "staging",
+    "buildDate": "2025-11-09T16:00:00Z"
+  },
+  "config": {
+    "defaultDifficulty": "Normal",
+    "maxPlayers": 4,
+    "seed": 123456789,
+    "telemetryEnabled": true,
+    "temperatureUnit": "C"
+  },
+  "classes": [
+    {
+      "id": "Player",
+      "name": "Jugador",
+      "createdAt": "2025-11-09T16:00:00Z",
+      "status": "active",
+      "attributes": {
+        "health": 100,
+        "hunger": 20,
+        "thirst": 35,
+        "bodyTemp": -1.5,
+        "position": { "x": 120.5, "y": 8.0, "z": -42.3 },
+        "perks": ["Forager", "Firestarter"]
+      },
+      "inventory": [
+        {
+          "id": "itm-wood-001",
+          "name": "Madera",
+          "qty": 12,
+          "condition": 100,
+          "stackable": true
+        },
+        {
+          "id": "itm-fish-raw-001",
+          "name": "Pescado crudo",
+          "qty": 2,
+          "condition": 85,
+          "stackable": true,
+          "expiresAt": "2025-11-11T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "Recipe",
+      "name": "Receta",
+      "createdAt": "2025-11-09T16:00:00Z",
+      "status": "enabled",
+      "attributes": {
+        "recipeId": "rcp-fire-001",
+        "displayName": "Hoguera básica",
+        "inputs": [
+          { "itemId": "itm-wood-001", "qty": 4 },
+          { "itemId": "itm-stone-001", "qty": 2 }
+        ],
+        "outputs": [
+          { "itemId": "itm-campfire-001", "qty": 1 }
+        ],
+        "craftTimeSec": 10
+      }
+    },
+    {
+      "id": "Biome",
+      "name": "Bioma",
+      "createdAt": "2025-11-09T16:00:00Z",
+      "status": "active",
+      "attributes": {
+        "biomeId": "coast-snow",
+        "temperatureRange": { "min": -25, "max": 2 },
+        "resources": ["Wood", "Stone", "Fish", "Mushroom"],
+        "hazards": ["Blizzard", "ThinIce", "Wolves"]
+      },
+      "subZones": [
+        { "id": "cave-ice-01", "name": "Cueva de hielo" },
+        { "id": "cliff-02", "name": "Acantilado oriental" }
+      ]
+    },
+    {
+      "id": "Enemy",
+      "name": "Enemigo",
+      "createdAt": "2025-11-09",
+      "status": "active",
+      "attributes": {
+        "enemyId": "wolf-alpha",
+        "hp": 120,
+        "damage": 18,
+        "aggroRadius": 12.5,
+        "lootTable": [
+          { "itemId": "itm-hide-001", "chance": 0.6 },
+          { "itemId": "itm-meat-raw-001", "chance": 0.4 }
+        ],
+        "behaviors": ["PackHunt", "FleeLowHP"]
+      }
+    }
+  ],
+  "actions": [
+    {
+      "name": "craftItem",
+      "affectsClass": "Player",
+      "requires": [
+        { "param": "recipeId", "type": "string" }
+      ],
+      "returns": { "type": "InventoryItem", "fields": ["id","name","qty"] }
+    },
+    {
+      "name": "consumeItem",
+      "affectsClass": "Player",
+      "requires": [
+        { "param": "itemId", "type": "string" },
+        { "param": "qty", "type": "number" }
+      ],
+      "returns": { "type": "boolean" }
+    },
+    {
+      "name": "enterBiome",
+      "affectsClass": "Player",
+      "requires": [
+        { "param": "biomeId", "type": "string" }
+      ],
+      "returns": { "type": "Biome" }
+    },
+    {
+      "name": "spawnEnemy",
+      "affectsClass": "Enemy",
+      "requires": [
+        { "param": "enemyId", "type": "string" },
+        { "param": "position", "type": "object" }
+      ],
+      "returns": { "type": "Enemy" }
+    }
+  ]
+}
+@endjson

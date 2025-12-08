@@ -1,0 +1,80 @@
+@startmindmap
+title 🎭 Visual Novel — "Sombras de Hierro"
+
+<style>
+mindmapDiagram {
+  .rootNode {
+    BackgroundColor #3B82F6  ' Azul (1)
+    FontColor #FFFFFF
+    BorderColor #1D4ED8
+  }
+  .level1-left {
+    BackgroundColor #C2410C ' Rojo/Naranja (2)
+    FontColor #FFFFFF
+  }
+  .level1-right {
+    BackgroundColor #047857 ' Verde Oscuro (3)
+    FontColor #FFFFFF
+  }
+  .level2-story {
+    BackgroundColor #FECACA ' Rojo Claro (4)
+    FontColor #7F1D1D
+  }
+  .level2-mech {
+    BackgroundColor #FDE68A ' Amarillo (5)
+    FontColor #92400E
+  }
+  .level2-art {
+    BackgroundColor #D1D5DB ' Gris (6)
+    FontColor #1F2937
+  }
+}
+</style>
+
+* **🕶️ Proyecto "Sombras de Hierro"** #rootNode
+left side
+** 🧠 Historia y Guion #level1-left
+*** 🌆 **Contexto** #level2-story
+**** Ciudad portuaria en toque de queda
+**** Escasez, militarización, crimen organizado
+*** ⚔️ **Conflicto Central** #level2-story
+**** Facciones: Milicia (orden) vs. Cártel (poder)
+**** Objetivo: Sobrevivir y trazar tu propia ruta
+*** 🔀 **Ramas de Trama** #level2-story
+**** Lealtad a la Milicia
+**** Colaboración con el Cártel
+**** Informante Neutral
+
+** 👥 Personajes Principales #level1-left
+*** 🧍‍♂️ **Dante** (Protagonista) #level2-story
+**** Rol: Ex-soldado, Contrabandista
+**** Rasgo Clave: Pragmático
+*** 👩 **Valeria** (Milicia) #level2-story
+**** Rol: Capitana, Idealista
+**** Rasgo Clave: Inflexible
+*** 🐺 **Rojo** (Cártel) #level2-story
+**** Rol: Lugarteniente, Carismático
+**** Rasgo Clave: Impredecible
+right side
+** 🎮 Mecánicas de Juego #level1-right
+*** 💬 **Sistema de Diálogo** #level2-mech
+**** Elección de múltiples opciones
+**** Reacciones visibles de los personajes
+*** 📊 **Variables de Relación** #level2-mech
+**** Afinidad (Amistad/Confianza)
+**** Sospecha (Riesgo/Hostilidad)
+*** 🏁 **Rutas y Finales** #level2-mech
+**** Finales asociados a la ruta predominante
+**** Condicionantes por valor de Sospecha
+
+** 🎨 Arte & Tecnología #level1-right
+*** 🖼️ **Estilo de Arte** #level2-art
+**** Estilo Gritty Noir, tonos oscuros
+**** Fondos: Día/Noche/Lluvia/Incendio
+*** 🔧 **Tecnología** #level2-art
+**** Motor: Ren'Py
+**** Repositorio: GitHub
+*** 🎵 **Audio** #level2-art
+**** Música: Percusión Tensa / Ambiente Urbano
+**** SFX: Pasos, disparos, lluvia
+@endmindmap

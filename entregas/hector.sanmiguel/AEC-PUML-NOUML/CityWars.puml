@@ -1,0 +1,49 @@
+@startsalt City Wars
+{
+  {* Archivo | Editar | Vista ciudad | Juego | Ajustes }
+  {
+    Jugador: null 
+    Ciudad: null
+    Día: null
+  }
+  
+  {
+    [[Ciudad] [Construir] [Estadísticas] [Social] [Configuración]]
+  }
+  
+  {
+    "🌆 Vista de Ciudad - Zona Defensa"
+    {|
+      Edificio | Nivel | Estado | Acción
+      🛡️ Torre Defensa | 4 | Mejorando | [Pausar]
+      ⚡ Planta Energía | 2 | Inactivo | [Activar] 
+      💧 Depósito Agua | 3 | Activo | [Mejorar]
+    |}
+  }
+  
+  {
+    "📊 Panel de Control"
+    {
+      [[💧 Agua: 85%] [⚡ Energía: 72%] [🍞 Comida: 68%]]
+    }
+    {
+      [[🏗️ Construir] [⬆️ Mejorar] [💣 Demoler] [⏸️ Pausar] [💾 Guardar]]
+    }
+  }
+  
+  {
+    "🚨 Alertas del Sistema"
+    {|
+      Tipo | Mensaje | Prioridad | Acción
+      ⚠️ | Baja producción comida | Media | [Configurar]
+      🎯 | Ataque inminente | Alta | [Defender]
+      📈 | Población crece | Baja | [Construir]
+      💬 | Mensaje aliado | Baja | [Leer]
+    |}
+  }
+  
+  {
+    ⏰ Tiempo: null | 🌐 Online | ☁️ Guardado
+  }
+}
+@endsalt

@@ -1,0 +1,59 @@
+@startsalt
+{
+  {
+    <b>Navegación</b>
+    + Resumen del Pueblo <:1F33D:>
+    + Edificios <:1F3DB:>
+    + Personajes <:1F920:>
+    + Inventario <:1F9F0:>
+    + Configuración <:2699:>
+  }
+  |
+  {
+    <b>Resumen del Pueblo</b>
+    Nombre del Pueblo: [Caserío Colesterol ]
+    Habitantes: [30 ]
+    Propietario: [Adrián ]
+    [Editar Pueblo] [Construir Edificio]
+
+    ---
+
+    <b>Edificios</b>
+    <b>Taberna</b>
+    Estado: Construido
+    Nivel: 2
+    Personajes: Jesse
+
+    <b>Oficina del Sheriff</b>
+    Estado: En construcción
+    Nivel: 1
+    Personajes: -
+
+    [Agregar Edificio <:2795:>]
+
+    ---
+
+    <b>Personajes</b>
+    <b>Jesse</b>
+    Rol: Vaquero
+    Salud: 95
+    Ubicación: Taberna
+
+    [Reclutar Personaje <:2795:>]
+
+    ---
+
+    <b>Inventario</b>
+    <b>Revolver</b>
+    Tipo: Arma
+    Daño: 25
+
+    [Asignar Objeto <:1F381:>]
+
+    ---
+
+    <b>Configuración</b>
+    [Opciones] [Guardar Partida] [Salir]
+  }
+}
+@endsalt

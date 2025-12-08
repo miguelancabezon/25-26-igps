@@ -1,0 +1,37 @@
+@startgantt
+-- Fase 1: Preproducción --
+Project starts 2026-01-01
+[Conceptualización del juego] lasts 14 days and is colored in Red
+[Conceptualización del juego] is 100% completed
+
+[Diseño del documento de juego (GDD)] starts at [Conceptualización del juego]'s end and lasts 21 days and is colored in Red
+[Prototipado inicial] starts at [Conceptualización del juego]'s end and lasts 21 days and is colored in Red
+
+[Planificación del proyecto] starts at [Prototipado inicial]'s end and lasts 14 days and is colored in Red
+[Contratación y formación del equipo]  starts at [Planificación del proyecto]'s end and lasts 14 days and is colored in Red
+[Prototipo] happens at [Contratación y formación del equipo]'s end
+
+-- Fase 2: Producción --
+[Desarrollo del motor o integración con uno existente] starts at [Contratación y formación del equipo]'s end and lasts 14 days and is colored in Blue
+[Diseño de niveles (Level Design)] starts at [Desarrollo del motor o integración con uno existente]'s end and lasts 21 days and is colored in Blue
+[Programación de mecánicas de juego] starts at [Desarrollo del motor o integración con uno existente]'s end and lasts 21 days and is colored in Blue
+[Creación de arte y animaciones] starts at [Programación de mecánicas de juego]'s end and lasts 28 days and is colored in Blue
+[Creación de arte y animaciones] is 41% completed
+[Composición de audio y efectos sonoros] starts at [Programación de mecánicas de juego]'s end and lasts 21 days and is colored in Blue
+[Composición de audio y efectos sonoros] is 67% completed
+[Beta] happens at [Composición de audio y efectos sonoros]'s end
+
+-- Fase 3: Postproducción --
+[Pruebas de calidad (QA)] starts at [Composición de audio y efectos sonoros]'s end and lasts 14 days and is colored in Green
+[Pruebas de calidad (QA)] is 0% completed
+[Optimización del rendimiento] starts at [Pruebas de calidad (QA)]'s end and lasts 21 days and is colored in Green
+[Optimización del rendimiento] is 0% completed
+[Marketing y promoción] starts at [Optimización del rendimiento]'s end and lasts 21 days and is colored in Green
+[Marketing y promoción] is 0% completed
+[Preparación para el lanzamiento] starts at [Marketing y promoción]'s end and lasts 7 days and is colored in Green
+[Preparación para el lanzamiento] is 0% completed
+[Soporte post-lanzamiento] starts at [Preparación para el lanzamiento]'s end and lasts 35 days and is colored in Green
+[Soporte post-lanzamiento] is 0% completed
+[v1.0] happens at [Preparación para el lanzamiento]'s end
+
+@endgantt

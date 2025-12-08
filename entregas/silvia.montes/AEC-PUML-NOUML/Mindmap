@@ -1,0 +1,343 @@
+@startmindmap
+* 🌸 **Visual Novel**
+** 🎮 Definición
+*** 📖 Historia interactiva
+*** 💬 Diálogo con opciones
+*** 🎨 Estilo gráfico tipo anime
+** 🧠 Mecánicas del juego
+*** 🕹️ Elecciones → finales múltiples
+*** ⏳ Sistema de guardado
+*** 💗 Rutas románticas / amistad
+*** 🧩 Mini-juegos ocasionales
+** 🎭 Elementos narrativos
+*** ✍️ Guion ramificado
+*** 🎭 Desarrollo de personajes
+*** 🎵 Música ambiental
+**** 🎼 Temas de personaje
+**** 🔊 Efectos de sonido
+** 🎨 Arte y estética
+*** 🧑‍🎨 Diseño de personajes
+*** 🌆 Escenarios 2D
+*** 🖌️ Paletas de color
+*** 🎬 Ilustraciones clave (CGs)
+** 💻 Plataformas
+*** 🪟 PC (Steam, twitch)
+*** 📱 Android / Apple
+*** 🎮 Consolas (Switch, Nintendo)
+** 💰 Mercado y comunidad
+*** 💵 Modelos de monetización
+**** 🎟️ Pago único
+**** 🆓 Free-to-play
+*** 🌍 Fandoms 
+*** 🎨 Fanart 
+
+' ---------------------- Estilos personalizados ------------------------
+<style>
+mindmapDiagram {
+  .visualNovel {
+    BackgroundColor #fce4ec
+    LineColor #f06292
+    FontColor #880e4f
+    FontStyle bold
+  }
+  .mechanics {
+    BackgroundColor #e3f2fd
+    LineColor #42a5f5
+    FontColor #0d47a1
+  }
+  .narrative {
+    BackgroundColor #fff9c4
+    LineColor #fbc02d
+    FontColor #f57f17
+  }
+  .art {
+    BackgroundColor #e8f5e9
+    LineColor #66bb6a
+    FontColor #1b5e20
+  }
+  .comunity {
+    BackgroundColor #f3e5f5
+    LineColor #ab47bc
+    FontColor #4a148c
+  }
+}
+</style>
+
+' ---------------------- Asignación de estilos ------------------------
+* <&star> Visual Novel <<visualNovel>>
+** Definición
+** Mecánicas del juego <<mechanics>>
+** Elementos narrativos <<narrative>>
+** Arte y estética <<art>>
+** Mercado y comunidad <<comunity>>
+@endmindmap
+
+
+
+@startgantt
+' --------------------------------------------------
+' CONFIGURACIÓN GENERAL
+' --------------------------------------------------
+Project starts 2025-11-25
+Project ends 2025-11-29
+printscale monthly
+Project title "Visual Novel"
+
+' --------------------------------------------------
+' FASE 1 - PREPRODUCCIÓN
+' --------------------------------------------------
+[Preproducción] starts 2025-01-01 and ends 2025-03-15 and is colored in #BBDEFB
+
+[Investigación de mercado y público objetivo] lasts 11 days and is colored in #BBDEFB
+[Concepto narrativo y tono del juego] lasts 10 days and is colored in #BBDEFB
+[Diseño de personajes principales] lasts 10 days and is colored in #BBDEFB
+[Creación del guion inicial y estructura de rutas] lasts 11 days and is colored in #BBDEFB
+[Selección de motor de juego] lasts 10 days and is colored in #BBDEFB
+[Planificación de recursos visuales] lasts 11 days and is colored in #BBDEFB
+
+[Investigación de mercado y público objetivo] -> [Concepto narrativo y tono del juego]
+[Concepto narrativo y tono del juego] -> [Diseño de personajes principales]
+[Diseño de personajes principales] -> [Creación del guion inicial y estructura de rutas]
+[Creación del guion inicial y estructura de rutas] -> [Selección de motor de juego]
+[Selección de motor de juego] -> [Planificación de arte y recursos visuales]
+
+[Diseño de personajes] completes 100%
+[Creación del guión inicial] completes 70%
+[Planificación de recursos visuales] completes 100%
+
+
+[Milestone 1: Prototipo] happens at [Planificación de arte y recursos visuales]'s end
+
+note right of [Preproducción]
+👥 Equipo: Director de cine, escritor, diseñador de personajes
+🧩 Herramientas:  Google Docs, Clip Studio Paint
+end note
+
+' --------------------------------------------------
+' FASE 2 - PRODUCCIÓN
+' --------------------------------------------------
+[Producción] starts at [Milestone 1: Prototipo] and ends 2025-09-30 and is colored in #C8E6C9
+
+[Programación del sistema de diálogo y decisiones] lasts 30 days and is colored in #C8E6C9
+[Integración de sprites y fondos 2D] lasts 40 days and is colored in #C8E6C9
+[Implementación del sonido y de la música] lasts 25 days and is colored in #C8E6C9
+[Diseño de interfaz y menús interactivos] lasts 20 days and is colored in #C8E6C9
+[Escritura completa de rutas y finales] lasts 45 days and is colored in #C8E6C9
+[Testeo interno de guion y flujo narrativo] lasts 20 days and is colored in #C8E6C9
+[Optimización de rendimiento y recursos] lasts 15 days and is colored in #C8E6C9
+[Creación de anime] lasts 15 days and is colored in #C8E6C9
+
+[Programación del sistema de diálogo y decisiones] -> [Integración de sprites y fondos 2D]
+[Integración de sprites y fondos 2D] -> [Implementación de efectos de sonido y música]
+[Implementación de efectos de sonido y música] -> [Diseño de interfaz y menús interactivos]
+[Diseño de interfaz y menús interactivos] -> [Escritura completa de rutas y finales]
+[Escritura completa de rutas y finales] -> [Testeo interno de guion y flujo narrativo]
+[Testeo interno de guion y flujo narrativo] -> [Optimización de rendimiento y recursos]
+[Optimización de rendimiento y recursos] -> [Creación del opening animado y créditos]
+
+[Programación del sistema de diálogo y decisiones] completes 100%
+[Integración de sprites y fondos 2D] completes 75%
+[Implementación de efectos de sonido y música] completes 60%
+[Escritura completa de rutas y finales] completes 40%
+[Testeo interno de guion y flujo narrativo] completes 35%
+
+[Milestone 2: Beta] happens at [Creación del opening animado y créditos]'s end
+
+note right of [Producción]
+🎨 Equipo: Programadores, artistas 2D, compositores, guionistas  
+🛠️ Herramientas:Photoshop, Audacity, GitHub
+end note
+
+' --------------------------------------------------
+' FASE 3 - POSTPRODUCCIÓN
+' --------------------------------------------------
+[Postproducción] starts at [Milestone 2: Beta] and ends 2025-12-31 and is colored in #FFE0B2
+
+[Pruebas externas y feedback de usuarios] lasts 30 days and is colored in #FFE0B2
+[Corrección de errores y pulido final] lasts 25 days and is colored in #FFE0B2
+[Localización y traducción (español/inglés)] lasts 40 days and is colored in #FFE0B2
+[Estrategia de marketing y redes sociales] lasts 30 days and is colored in #FFE0B2
+[Preparación para lanzamiento en Steam/itch.io] lasts 20 days and is colored in #FFE0B2
+[Soporte post-lanzamiento y parches] lasts 30 days and is colored in #FFE0B2
+
+[Pruebas externas y feedback de usuarios] -> [Corrección de errores y pulido final]
+[Corrección de errores y pulido final] -> [Localización y traducción (español/inglés)]
+[Localización y traducción ] -> [Estrategia de marketing y redes sociales]
+[Estrategia de marketing y redes sociales] -> [Preparación para lanzamiento en Steam/itch.io]
+[Preparación para lanzamiento en Steam/itch.io] -> [Soporte post-lanzamiento y parches]
+
+[Pruebas externas y feedback de usuarios] completes 50%
+[Corrección de errores y pulido final] completes 30%
+
+[Milestone 3: v1.0] happens at [Preparación para lanzamiento en Steam/itch.io]
+
+note right of [Postproducción]
+ Equipo: QA testers, traductores, community manager, marketing  
+ Herramientas:  Canva, OBS, Excel
+end note
+
+@endgantt
+
+
+
+
+
+
+
+
+
+
+@startuml
+' ======================= ESTILO GENERAL =======================
+skinparam backgroundColor #FAFAFA
+skinparam class {
+  BackgroundColor<<Personaje>> #FFEBEE
+  BackgroundColor<<Escenario>> #E3F2FD
+  BackgroundColor<<Decision>>  #FFF9C4
+  BackgroundColor<<Juego>>     #E8F5E9
+  BackgroundColor<<Sistema>>   #F3E5F5
+  BorderColor #424242
+  FontColor #212121
+}
+
+title 🎨 Visual Novel - Class Diagram
+
+' ======================= CLASES PRINCIPALES =======================
+
+class Juego <<Juego>> {
+  +string id
+  +string nombre
+  +string descripcion
+  +string idioma
+  +string estado
+  +date fechaLanzamiento  // formato ISO: 2025-11-25
+  +list<Personaje> personajes
+  +list<Escenario> escenarios
+  +list<Decision> decisiones
+  +object metadata
+}
+
+class Personaje <<Personaje>> {
+  +string id
+  +string nombre
+  +string estado
+  +int edad
+  +string rol              // protagonista, secundario, antagonista...
+  +boolean activo
+  +string estadoEmocional
+  +string vozActor
+  +string fechaCreacion    // ISO: 2025-11-25
+}
+
+class Escenario <<Escenario>> {
+  +string id
+  +string nombre
+  +string ubicacion
+  +string horaDia
+  +string estado
+  +string fondo            // path o URL
+  +boolean visible
+  +list<Personaje> personajesPresentes
+  +string fechaModificacion // ISO: 2025-05-21T14:00:00Z
+}
+
+class Decision <<Decision>> {
+  +string id
+  +string nombre 
+  +string texto
+  +string estado
+  +string como 
+  +list<string> opciones
+  +int consecuenciaID
+  +boolean esFinal
+  +string fechaCreacion     // ISO: 2025-03-12
+}
+
+' ======================= RELACIONES =======================
+
+Juego "1" o-- "*" Personaje : contiene >
+Juego "1" o-- "*" Escenario : incluye >
+Juego "1" o-- "*" Decision  : utiliza >
+Escenario "*" o-- "*" Personaje : presenta >
+
+' ======================= OBJETO DE CONFIGURACIÓN / METADATA =======================
+class Sistema <<Sistema>> {
+  +string version
+  +string autor            // yo, protagonista
+  +string entorno          // dev, test, prod
+  +string lenguaje          // Python, Ren’Py
+  +string ultimaActualizacion // ISO: 2025-11-25
+}
+
+Juego *-- Sistema : metadata >
+
+' ======================= ACCIONES / MÉTODOS =======================
+class Actions {
+  +createPersonaje(nombre:string, edad:int, rol:string)
+  +addEscenario(nombre:string, ubicacion:string)
+  +addDecision(texto:string, opciones:list<string>)
+  +saveGame(juegoId:string, fecha:string)
+  +loadGame(juegoId:string)
+  +updateEstadoPersonaje(personajeId:string, estadoEmocional:string)
+}
+
+Actions ..> Juego : afecta >
+Actions ..> Personaje : modifica >
+Actions ..> Escenario : crea >
+Actions ..> Decision : gestiona >
+
+@enduml
+
+
+
+
+
+
+
+
+@startuml
+title 🎮 Boceto de Interfaz - Visual Novel
+
+skinparam rectangle {
+  BackgroundColor #FAFAFA
+  BorderColor #424242
+  FontColor #212121
+}
+
+' =========================== CONTENEDORES PRINCIPALES ===========================
+rectangle "Menú Principal" as MainMenu {
+  
+  rectangle "🎮 Play Game" as PlayBtn
+  rectangle "⚙️ Settings" as SettingsBtn
+  rectangle "📚 Load Game" as LoadBtn
+  rectangle "💾 Save Game" as SaveBtn
+  rectangle " Help" as HelpBtn
+  
+  ' Tabs
+  rectangle "📁 Tabs" as TabsContainer {
+    rectangle "🎨 Arte" as TabArt
+    rectangle "📝 Guion" as TabScript
+    rectangle "🔊 Música" as TabMusic
+  }
+
+  ' Tabla de datos
+  rectangle "📊 Stats de Personajes" as TableStats {
+    note right
+    | Nombre | Edad | Rol | Estado |
+    | Emma  | 17  | Prota | Activa |
+    | Maria   | 17  | Prota | Activa a veces |
+    | Sofia  | 17  | Secundaria  | Activa siempre |
+    end note
+  }
+}
+
+' =========================== RELACIONES / INTERACTIVIDAD ===========================
+PlayBtn --> TableStats : inicia juego
+SettingsBtn --> TabArt : abre configuración de arte
+SettingsBtn --> TabScript : abre configuración de guion
+SettingsBtn --> TabMusic : abre configuración de música
+LoadBtn --> TableStats : seleccionar la partida
+SaveBtn --> TableStats : guardar la partida
+HelpBtn --> TableStats : muestra guía
+
+@enduml

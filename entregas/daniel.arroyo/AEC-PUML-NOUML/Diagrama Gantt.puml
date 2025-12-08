@@ -1,0 +1,74 @@
+@startgantt
+title Línea de tiempo - Desarrollo del Videojuego
+printscale weekly
+
+Project starts 2025-01-06
+
+' ==========================
+-- FASE 1 - PREPRODUCCIÓN --
+' ==========================
+
+[Investigación de mercado] lasts 7 days
+[Investigación de mercado] is 100% completed and is colored in Blue
+
+
+[Concepto del juego] lasts 7 days and starts at [Investigación de mercado]'s end
+[Concepto del juego] is 80% completed and is colored in Blue
+
+[Diseño del Juego] lasts 7 days and starts at [Concepto del juego]'s end
+[Diseño del Juego] is 50% completed and is colored in Blue
+
+
+[Planificación del proyecto] lasts 7 days and starts at [Diseño del Juego]'s end
+[Planificación del proyecto] is 50% completed and is colored in Blue
+
+
+[Milestone 1: Prototipo] happens at [Planificación del proyecto]'s end
+[Milestone 1: Prototipo] is colored in DarkBlue
+
+' =======================
+-- FASE 2 - PRODUCCIÓN --
+' =======================
+
+[Prototipo] lasts 15 days and starts at [Planificación del proyecto]'s end
+[Prototipo] is 40% completed and is colored in Green
+
+
+[Diseño de niveles] lasts 15 days and starts at [Prototipo]'s start
+[Diseño de niveles] is 30% completed and is colored in Green
+
+
+[Desarrollo de arte y assets] lasts 15 days and starts at [Prototipo]'s start
+[Desarrollo de arte y assets] is 30% completed and is colored in Green
+
+
+[Programación de mecánicas] lasts 15 days and starts at [Prototipo]'s end
+[Programación de mecánicas] is 50% completed and is colored in Green
+
+
+[Sonido y música] lasts 10 days and starts at [Programación de mecánicas]'s end
+[Sonido y música] is 20% completed and is colored in Green
+
+
+[Milestone 2: Beta] happens at [Sonido y música]'s end
+[Milestone 2: Beta] is colored in DarkGreen
+
+' ==========================
+-- FASE 3 - POSTPRODUCCIÓN --
+' ==========================
+
+[Pruebas y corrección de bugs] lasts 10 days and starts at [Sonido y música]'s end
+[Pruebas y corrección de bugs] is 30% completed and is colored in Orange
+
+
+[Optimización de rendimiento] lasts 10 days and starts at [Pruebas y corrección de bugs]'s end
+[Optimización de rendimiento] is 30% completed and is colored in Orange
+
+
+[Marketing y lanzamiento] lasts 10 days and starts at [Optimización de rendimiento]'s end
+[Marketing y lanzamiento] is 40% completed and is colored in Orange
+
+[Milestone 3: v1.0] happens at [Marketing y lanzamiento]'s end
+[Milestone 3: v1.0] is colored in Red
+
+@endgantt

@@ -1,0 +1,161 @@
+@startjson
+title City Builder — Modelo de Datos
+
+<style>
+  .h1 {
+    BackGroundColor green
+    FontColor white
+    FontStyle italic
+  }
+  .h2 {
+    BackGroundColor red
+    FontColor white
+    FontStyle bold
+  }
+  .h3 {
+    BackGroundColor DodgerBlue
+    FontColor white
+    FontStyle bold
+  }
+  .h4 {
+    BackGroundColor Orange
+    FontColor black
+    FontStyle italic
+  }
+</style>
+
+#highlight "metadata" / "author" / "name" <<h1>>
+#highlight "metadata" / "author" / "email" <<h2>>
+#highlight "gameConfig" / "gameName" <<h1>>
+#highlight "building" / "name" <<h3>>
+#highlight "utilityNetwork" / "name" <<h3>>
+#highlight "citizen" / "fullName" <<h3>>
+#highlight "economy" / "budget" <<h4>>
+#highlight "actions" <<h2>>
+
+{
+  "metadata": {
+    "version": "1.0.0",
+    "language": "es-ES",
+    "environment": "dev",
+    "author": {
+      "name": "GameStudioX",
+      "email": "dev-team@gamestudiox.com"
+    },
+    "generatedAt": "2025-01-13T09:00:00Z"
+  },
+
+  "gameConfig": {
+    "id": "cfg-001",
+    "gameName": "Metropolis",
+    "startDate": "2025-03-01",
+    "difficulty": "Normal",
+    "autosaveEnabled": true,
+    "targetFps": 60,
+    "supportedLocales": ["es-ES","en-US","fr-FR","de-DE"],
+    "seed": 123456,
+    "status": "Active"
+  },
+
+  "building": {
+    "id": "bld-1001",
+    "name": "Vivienda Urbana",
+    "type": "Residential",
+    "level": 1,
+    "cost": 1200.0,
+    "upkeep": 15.0,
+    "powerUsage": 2.5,
+    "waterUsage": 1.0,
+    "occupancy": 4,
+    "position": {"x": 12, "y": 0, "z": 34},
+    "constructionDate": "2025-04-12",
+    "state": "Active",
+    "tags": ["housing","starter","lowNoise"]
+  },
+
+  "utilityNetwork": {
+    "id": "net-042",
+    "name": "Red Eléctrica Central",
+    "type": "Power",
+    "capacityMw": 120.5,
+    "lossPercent": 3.1,
+    "nodes": [
+      {"nodeId":"n-1","kind":"Substation","loadMw":30.0,"online":true},
+      {"nodeId":"n-2","kind":"Substation","loadMw":25.5,"online":true}
+    ],
+    "edges": [
+      {"from":"n-1","to":"n-2","resistance":0.12}
+    ],
+    "online": true,
+    "commissionedAt": "2025-05-01T11:00:00Z"
+  },
+
+  "citizen": {
+    "id": "ctz-9001",
+    "fullName": "Ana García",
+    "age": 28,
+    "job": "Enfermera",
+    "happiness": 0.72,
+    "homeBuildingId": "bld-1001",
+    "workBuildingId": "bld-2003",
+    "wallet": 540.5,
+    "preferences": {"noiseTolerance":0.3,"greenAreas":true,"publicTransport":true},
+    "lastUpdate": "2025-06-21T08:30:00Z",
+    "status": "Alive"
+  },
+
+  "economy": {
+    "id": "eco-2025",
+    "budget": 150000,
+    "taxes": [
+      {"type":"Residential","rate":0.10,"active":true,"lastChange":"2025-06-20"},
+      {"type":"Commercial","rate":0.12,"active":true,"lastChange":"2025-06-18"}
+    ],
+    "loan": {"principal":50000,"interest":0.05,"issuedAt":"2025-04-01"},
+    "weeklyIncome": [3200, 3400, 3100, 3550],
+    "weeklyExpenses": [2800, 3000, 2950, 3050],
+    "lastCalculatedAt": "2025-06-20T18:00:00Z",
+    "solvent": true,
+    "status": "Healthy"
+  },
+
+  "mapChunk": {
+    "id": "chunk-7A",
+    "biome": "Templado",
+    "elevation": 12.3,
+    "resources": {"wood":1200,"stone":800,"iron":250},
+    "buildable": true,
+    "neighbors": ["chunk-6A","chunk-7B","chunk-8A"],
+    "bounds": {"minX":0,"minZ":0,"maxX":64,"maxZ":64},
+    "discoveredAt": "2025-03-05T10:15:00Z",
+    "status": "Explored"
+  },
+
+  "actions": {
+    "createBuilding": {
+      "class": "building",
+      "params": {"name":"string","type":"string","position":"Vector3","cost":"number"}
+    },
+    "upgradeBuilding": {
+      "class": "building",
+      "params": {"id":"string","newLevel":"number"}
+    },
+    "toggleUtilityNode": {
+      "class": "utilityNetwork",
+      "params": {"id":"string","nodeId":"string","online":"boolean"}
+    },
+    "hireCitizen": {
+      "class": "citizen",
+      "params": {"fullName":"string","job":"string","homeBuildingId":"string"}
+    },
+    "adjustTax": {
+      "class": "economy",
+      "params": {"type":"string","rate":"number"}
+    },
+    "saveGame": {
+      "class": "gameConfig",
+      "params": {"slot":"number","timestamp":"ISODate"}
+    }
+  }
+}
+@endjson

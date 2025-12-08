@@ -1,0 +1,160 @@
+@startgantt
+title Cronograma de Desarrollo de Videojuego FPS
+printscale weekly
+
+' Iniciamos el proyecto el 1 de enero de 2026
+Project starts 2026-01-01
+
+' --- ESTILOS: Colores para las fases y hitos ---
+<style>
+ganttDiagram {
+    // Tareas por Fase
+    .preproduccion { BackgroundColor #E3F2FD; LineColor #1977D2 } // Azul Claro
+    .produccion { BackgroundColor #FFF3E0; LineColor #F57C00 } // Naranja Suave
+    .postproduccion { BackgroundColor #E8F5E9; LineColor #388E3C } // Verde Suave
+
+    // Hitos (Milestones)
+    milestone {
+        BackGroundColor #DD0031
+        LineColor #A00020
+        FontColor white
+        FontStyle bold
+    }
+    // Separadores de Fase
+    separator {
+        BackGroundColor #333333
+        LineColor #111111
+        FontColor white
+        FontStyle bold
+    }
+}
+</style>
+
+-- FASE 1: PREPRODUCCIÓN (Concepto y Diseño Base) --
+[1.0 Concepto y GDD Inicial] as [T10] lasts 10 days
+[T10] is colored in preproduccion
+[T10] is 100% completed
+note bottom
+Equipo: Director, Diseño (1)
+end note
+
+[1.1 Diseño de Mecánicas Core] as [T11] lasts 15 days and starts at [T10]'s end
+[T11] is colored in preproduccion
+[T11] is 100% completed
+note bottom
+Recursos: Referencia de mercado, GDD
+end note
+
+[1.2 Diseño UX/UI (Wireframes)] as [T12] lasts 10 days and starts at [T11]'s start
+[T12] is colored in preproduccion
+[T12] is 80% completed
+note bottom
+Equipo: Diseño (2)
+end note
+
+[1.3 Setup de Proyecto (Repo, Motor)] as [T13] lasts 5 days and starts at [T10]'s end
+[T13] is colored in preproduccion
+[T13] is 100% completed
+note bottom
+Equipo: Tech Lead (1)
+end note
+
+[1.4 Prueba de Concepto (Vertical Slice)] as [T14] lasts 15 days
+[T14] starts at [T11]'s end
+[T14] starts at [T13]'s end
+[T14] is colored in preproduccion
+[T14] is 60% completed
+note bottom
+Recursos: Primeros assets de motor
+end note
+
+-- Hito: Milestone 1: Prototipo --
+[Milestone 1: Prototipo jugable (Core Loop)] happens at [T14]'s end
+
+-- FASE 2: PRODUCCIÓN (Desarrollo Completo) --
+[2.1 Desarrollo de Movimiento y Armas] as [T21] lasts 25 days and starts at [T14]'s end
+[T21] is colored in produccion
+[T21] is 40% completed
+note bottom
+Equipo: Programación (3)
+Depende de T14 (Validación de control)
+end note
+
+[2.2 Diseño y Creación de Nivel 1] as [T22] lasts 30 days and starts at [T21]'s start
+[T22] is colored in produccion
+[T22] is 30% completed
+note bottom
+Equipo: Artistas 3D (2), Level Design (1)
+end note
+
+[2.3 Desarrollo de Módulos de Red/Multiplayer] as [T23] lasts 40 days and starts at [T21]'s end
+[T23] is colored in produccion
+[T23] is 10% completed
+note bottom
+Equipo: Programación (2)
+end note
+
+[2.4 Integración de Arte y VFX] as [T24] lasts 20 days and starts at [T22]'s end
+[T24] is colored in produccion
+[T24] is 0% completed
+
+[2.5 Implementación de Audio y SFX] as [T25] lasts 15 days and starts at [T22]'s end
+[T25] is colored in produccion
+[T25] is 0% completed
+
+[2.6 Desarrollo de Metajuego (Progreso, Lobby)] as [T26] lasts 25 days and starts at [T23]'s start
+[T26] is colored in produccion
+[T26] is 0% completed
+
+[2.7 Pruebas Internas Continuas (QA)] as [T27] lasts 40 days and starts at [T22]'s start
+[T27] is colored in produccion
+[T27] is 20% completed
+note bottom
+Equipo: QA (1)
+end note
+
+-- Hito: Milestone 2: Beta --
+[Milestone 2: Beta (Content Locked, Online Funcional)] happens at [T26]'s end
+
+-- FASE 3: POSTPRODUCCIÓN (QA y Lanzamiento) --
+[3.1 Pulido de Mecánicas y Balance] as [T31] lasts 15 days and starts at [T26]'s end
+[T31] is colored in postproduccion
+[T31] is 0% completed
+note bottom
+Depende de T26 (Funcionalidad de lobby)
+end note
+
+[3.2 Corrección Masiva de Bugs (Beta Feedback)] as [T32] lasts 20 days and starts at [T31]'s start
+[T32] is colored in postproduccion
+[T32] is 0% completed
+note bottom
+Equipo: Todo el equipo de desarrollo
+end note
+
+[3.3 Optimización de Rendimiento y Carga] as [T33] lasts 10 days and starts at [T32]'s end
+[T33] is colored in postproduccion
+[T33] is 0% completed
+
+[3.4 Preparación de Tienda y Marketing] as [T34] lasts 10 days and starts at [T32]'s end
+[T34] is colored in postproduccion
+[T34] is 0% completed
+
+[3.5 Certificación de Plataformas (Consolas/PC)] as [T35] lasts 7 days and starts at [T33]'s end
+[T35] is colored in postproduccion
+[T35] is 0% completed
+
+-- Hito: Milestone 3: v1.0 --
+[Milestone 3: v1.0 (Lanzamiento)] happens at [T35]'s end
+
+-- VISUALIZACIÓN DE DEPENDENCIAS CLAVE --
+[T11] -> [T14]
+[T13] -> [T14]
+[T14] -> [T21]
+[T21] -> [T23]
+[T22] -> [T24]
+[T23] -> [T26]
+[T26] -> [T31]
+[T32] -> [T33]
+[T33] -> [T35]
+
+@endgantt

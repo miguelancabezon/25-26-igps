@@ -1,6 +1,5 @@
 # Ejercicio 6: Guía Completa de Ciudad
 
-
 Crea una guía turística exhaustiva de una ciudad:
 
 ## Contenido
@@ -13,12 +12,10 @@ Crea una guía turística exhaustiva de una ciudad:
 - Tabla con opciones de transporte, duración, costo
 - Mapa conceptual en Mermaid
 
-
 ### Dónde alojarse (5+ opciones)
 
 - Tabla comparativa detallada
 - Reseñas en bloques de cita
-
 
 ### Qué ver (mínimo 10 lugares)
 
@@ -26,24 +23,20 @@ Crea una guía turística exhaustiva de una ciudad:
 - Categorías con emojis
 - Itinerarios sugeridos por días
 
-
 ### Dónde comer (8+ restaurantes)
 
 - Tabla con tipo de comida, rango de precio, ubicación
 - Platos imperdibles
-
 
 ### Vida nocturna
 
 - Lista de bares/clubs
 - Tabla de eventos por día de la semana
 
-
 ### De compras
 
 - Áreas comerciales
 - Mercados locales
-
 
 ### Consejos prácticos
 

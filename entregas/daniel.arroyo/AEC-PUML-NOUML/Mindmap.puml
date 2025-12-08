@@ -1,0 +1,48 @@
+@startmindmap
+top to bottom direction
+<style>
+
+mindmapDiagram {
+  node {
+    FontSize 16
+    FontColor black
+  }
+
+  rootNode {
+    BackgroundColor DarkBlue
+    FontColor White
+    FontSize 22
+  }
+
+  :depth(1) {
+    BackgroundColor LightGreen
+    FontColor white
+    FontStyle bold
+  }
+
+  :depth(2) {
+    BackgroundColor #A5D6A7
+    FontColor black
+  }
+}
+</style>
+
+* <b>★ Juego Survival</b>
+** ⚙ Mecánicas Principales
+*** Recursos
+**** Obtenido tanto de animales\ncomo de ríos y mar
+*** Control de hambre, vida y sed
+*** ☀ Ciclos de día y noche
+-- ✚ Extras
+--- Capacidad de modear el juego
+** ✦ Mecánicas Secundarias
+*** ⚑ Multijugador
+**** Servidores online
+**** Mundos privados compartidos
+*** ◆ Skins
+
+
+
+
+
+@endmindmap

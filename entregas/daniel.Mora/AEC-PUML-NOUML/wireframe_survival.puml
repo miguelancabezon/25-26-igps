@@ -1,0 +1,33 @@
+@startsalt
+{
+{+ "🌍 Survival Horizon"}
+{T
+  + [🏠 Inicio]
+  + [🎮 Jugar]
+  + [⚙️ Opciones]
+  + [📜 Créditos]
+  + [❌ Salir]
+}
+{T
+  [Inventario]
+  [Estadísticas]
+  [Mapa]
+}
+
+{+
+  "🧺 Inventario"
+  {|
+    Nombre | Tipo | Durabilidad | Peso | Usable |
+    "Hacha" | "Arma" | "80%" | "3.0kg" | [Usar]
+    "Botella de Agua" | "Consumible" | "1 uso" | "0.5kg" | [Beber]
+    "Madera" | "Material" | "-" | "5.0kg" | [Craftear]
+  |}
+}
+
+{T
+  [💾 Guardar]
+  [🔄 Cargar]
+  [⬅️ Volver]
+}
+}
+@endsalt

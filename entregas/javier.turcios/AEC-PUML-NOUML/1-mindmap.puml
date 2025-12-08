@@ -1,0 +1,106 @@
+@startmindmap
+<style>
+mindmapDiagram {
+  node {
+    BackgroundColor lightblue
+    RoundCorner 25
+    FontSize 12
+  }
+  .red {
+    BackgroundColor #FF6B6B
+    FontColor white
+  }
+  .blue {
+    BackgroundColor #4ECDC4
+    FontColor white
+  }
+  .orange {
+    BackgroundColor #FFE66D
+    FontColor black
+  }
+  .green {
+    BackgroundColor #95E1D3
+    FontColor black
+  }
+  .purple {
+    BackgroundColor #A8E6CF
+    FontColor black
+  }
+  .gold {
+    BackgroundColor #FFD93D
+    FontColor black
+  }
+}
+</style>
+
+* **🍖 Wasteland Survival** <<red>>
+
+left side
+
+** **🌍 Entorno** <<blue>>
+*** **🗺️ Mapas** 🧭
+**** Bosque Denso 🌲
+**** Desierto Árido 🏜️
+**** Ciudad Abandonada 🏚️
+*** **🌦️ Clima Dinámico**
+**** Día/Noche ☀️🌙
+**** Tormentas eléctricas ⚡
+**** Niebla espesa 🌫️
+*** **🌋 Eventos Naturales**
+**** Terremotos 🌎
+**** Erupciones volcánicas 🌋
+**** Inundaciones 💧
+
+** **🎮 Jugabilidad** <<orange>>
+*** **👊 Supervivencia Básica**
+**** Hambre y sed 🍞💧
+**** Salud y energía ❤️⚡
+**** Lesiones y medicinas 💊
+*** **🧰 Crafteo**
+**** Armas y herramientas 🔨
+**** Refugios y trampas 🏕️
+**** Cocina de alimentos 🍖
+*** **👥 Cooperativo**
+**** Chat por voz 🎤
+**** Comercio entre jugadores 💱
+**** Bases compartidas 🏠
+
+right side
+
+** **⚙️ Mecánicas** <<green>>
+*** **⚔️ Combate**
+**** Melee (Cuchillos, Bate) 🔪
+**** A distancia (Arco, Pistola) 🎯
+**** Sigilo y distracción 🕵️
+*** **🧟 Enemigos**
+**** Humanos hostiles 💀
+**** Animales salvajes 🐺
+**** Infectados mutantes 🧬
+*** **📦 Recolección**
+**** Recursos naturales 🌿
+**** Loot en edificios 🏚️
+**** Cacería y pesca 🎣
+
+** **🎨 Estilo Visual & Sonido** <<purple>>
+*** **Estilo Realista** 🎬
+**** Sombras dinámicas 🌗
+**** Texturas detalladas 🪵
+*** **Interfaz Minimalista** 🧭
+**** HUD simple y claro 📊
+**** Inventario radial 🎒
+*** **Audio Ambiental** 🎧
+**** Pasos, viento, fauna 🌾
+**** Música ambiental tensa 🎵
+
+** **💰 Monetización** <<gold>>
+*** **Modelo Híbrido** 💲
+**** Compra única 💵
+**** Expansiones de historia 📖
+*** **Cosméticos Premium** 👕
+**** Skins de personajes 🎭
+**** Estilos de refugio 🏡
+*** **Pase de Temporada** 🎫
+**** Eventos de supervivencia ⏳
+**** Recompensas exclusivas 🏅
+
+@endmindmap

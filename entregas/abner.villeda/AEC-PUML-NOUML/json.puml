@@ -1,0 +1,117 @@
+@startjson
+title 💞 Escena de Confesión - Visual Novel
+
+{
+  "escena": {
+    "id": "scene_102",
+    "nombre": "Confesión bajo la lluvia",
+    "descripcion": "El protagonista se encuentra con Aiko en el parque, donde ella le confiesa su amor.",
+    "fechaCreacion": "2025-10-15T18:45:00Z",
+    "estado": "enDesarrollo",
+    "background": "parque_lluvia.png",
+    "musica": "tema_confesion.mp3",
+    "personajes": [
+      {
+        "id": "char_001",
+        "nombre": "Protagonista",
+        "emocionActual": "sorprendido",
+        "sprite": "mc_sorprendido.png",
+        "activo": true
+      },
+      {
+        "id": "char_002",
+        "nombre": "Aiko",
+        "emocionActual": "nerviosa",
+        "sprite": "aiko_nerviosa.png",
+        "activo": true
+      }
+    ],
+    "dialogos": [
+      {
+        "id": "dlg_310",
+        "personajeId": "char_002",
+        "texto": "Yo... he querido decirte esto desde hace tiempo...",
+        "emocion": "nerviosa"
+      },
+      {
+        "id": "dlg_311",
+        "personajeId": "char_002",
+        "texto": "Me gustas, ¡mucho!",
+        "emocion": "sonrojada"
+      },
+      {
+        "id": "dlg_312",
+        "personajeId": "char_001",
+        "texto": "¿A-Aiko...? No sabía que tú...",
+        "emocion": "sorprendido"
+      }
+    ],
+    "elecciones": [
+      {
+        "id": "choice_1",
+        "texto": "Aceptar sus sentimientos",
+        "consecuencia": "ruta_romantica",
+        "afinidadGanada": 15
+      },
+      {
+        "id": "choice_2",
+        "texto": "Rechazarla con delicadeza",
+        "consecuencia": "ruta_amigos",
+        "afinidadGanada": -10
+      }
+    ],
+    "duracionAproxSegundos": 120
+  },
+
+  "sistema": {
+    "id": "sys_01",
+    "nombre": "Sistema de Decisiones",
+    "tipo": "mecánica",
+    "activo": true,
+    "rutasDesbloqueadas": ["romántica", "amistad"],
+    "ultimaActualizacion": "2025-10-20T14:00:00Z"
+  },
+
+  "usuario": {
+    "id": "player_019",
+    "nombre": "Jugador",
+    "rangoAfinidad": 45,
+    "estadoPartida": "enCurso",
+    "guardados": [
+      {
+        "slot": 1,
+        "fecha": "2025-10-21T21:10:00Z",
+        "escenaActual": "scene_102"
+      }
+    ]
+  },
+
+  "actions": {
+    "mostrarDialogo": {
+      "afecta": "escena",
+      "parametros": ["dialogoId"]
+    },
+    "realizarEleccion": {
+      "afecta": "sistema",
+      "parametros": ["choiceId", "playerId"]
+    },
+    "guardarPartida": {
+      "afecta": "usuario",
+      "parametros": ["slot", "fecha"]
+    },
+    "cambiarMusica": {
+      "afecta": "escena",
+      "parametros": ["nombreArchivo"]
+    }
+  },
+
+  "metadata": {
+    "version": "1.0.3",
+    "idioma": "es",
+    "autor": "Estudio Picheda",
+    "entorno": "desarrollo",
+    "motor": "Ren'Py",
+    "ultimaModificacion": "2025-10-22T11:30:00Z"
+  }
+}
+@endjson

@@ -1,0 +1,38 @@
+@startmindmap
+* ☢️ Ashes of Earth 🪓
+** 🧭 Gameplay
+*** ⚔️ Combate
+**** 🔫 Armas
+**** 🧟‍♂️ Enemigos
+**** 🧠 IA hostil
+*** 🔨 Crafteo
+**** 🪵 Materiales
+**** 🔥 Fogata
+**** 🥩 Cocina
+*** 🌎 Exploración
+**** 🏕️ Zonas
+**** ⛏️ Recursos
+** 🎨 Arte & UI
+*** 🌅 Ambiente
+**** ☀️ Clima
+**** 🌧️ Efectos
+**** 🌄 Texturas
+*** 🎮 Interfaz
+**** 🧭 HUD
+**** 📊 Menús
+**** 🕹️ Inventario
+** 💻 Tecnología
+*** 🧩 Motor
+**** 🧱 Unity
+**** 🔌 API REST
+*** ☁️ Servidores
+**** 🌐 AWS
+**** 🗄️ MongoDB
+*** 🔒 Seguridad
+**** 🛡️ AntiCheat
+**** 🔐 OAuth2
+** 🎯 Misiones y Eventos
+*** 🗺️ Exploración guiada
+*** 🏹 Recompensas
+*** ⚠️ Eventos dinámicos
+@endmindmap

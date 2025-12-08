@@ -1,0 +1,33 @@
+@startuml
+' Wireframe / SALT - Boceto de interfaz (menú principal)
+skinparam backgroundColor #FAFAFA
+skinparam shadowing false
+
+@startsalt
+{+
+<b><size:18>🎮 Game Menu — Interfaz Principal</size></b>
+==
+[Home] | [Inventory] | [Shop] | [Settings] | [Leaderboard]
+--
+<b>🔎 Buscador</b>
+{ "🔍 Buscar jugador..." | [Ir ▶️] }
+--
+<b>📋 Tabla de inventario</b>
+{#
+Name | Qty | Type | Action
+Aventurero's Sword ⚔️ | 1 | Weapon | [Equip 🗡️]
+Healing Potion 🧪 | 5 | Consumable | [Use 🧪]
+Wooden Shield 🛡️ | 1 | Armor | [Equip 🛡️]
+}
+--
+<b>👤 Player Card</b>
+Name: Aventurero  
+Level: 3 • HP: 85/100  
+[Profile ✏️] | [Stats 📊] | [Achievements 🏆]
+--
+<b>⚡ Acciones rápidas</b>
+[Start Game ▶️] | [Load 💾] | [Save 💾] | [Exit ❌] | [Help ❓]
+}
+@endsalt
+
+@enduml

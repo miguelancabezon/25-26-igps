@@ -1,0 +1,82 @@
+@startgantt
+title Linea Temporal de Desarrollo de Vaquero Valley 🤠
+printscale daily
+
+Project starts 2025-11-10
+
+-- Fase 1: Preproducción (3 semanas) --
+[Reunión inicial] lasts 1 day
+[Investigación y referencias] lasts 4 days and starts at [Reunión inicial]'s end
+[Documento de diseño del juego (GDD)] lasts 7 days and starts at [Investigación y referencias]'s end
+[Diseño técnico] lasts 5 days and starts at [Documento de diseño del juego (GDD)]'s end
+[Guía de arte y estilo] lasts 5 days and starts at [Documento de diseño del juego (GDD)]'s end
+[Prototipo jugable] lasts 10 days and starts at [Diseño técnico]'s end
+[Milestone 1: Prototipo] happens at [Prototipo jugable]'s end
+
+-- Fase 2: Producción (12 semanas) --
+[Jugabilidad principal] lasts 30 days and starts at [Prototipo jugable]'s end
+[Jugabilidad principal] is colored in Green
+[Jugabilidad principal] is 20% completed
+
+[Construcción del pueblo] lasts 18 days and starts at [Jugabilidad principal]'s start
+[Construcción del pueblo] is colored in Green
+[Construcción del pueblo] is 15% completed
+
+[Economía y comercio] lasts 14 days and starts at [Jugabilidad principal]'s start
+[Economía y comercio] is colored in Green
+[Economía y comercio] is 10% completed
+
+[IA y simulación de habitantes] lasts 20 days and starts at [Jugabilidad principal]'s start
+[IA y simulación de habitantes] is colored in Green
+[IA y simulación de habitantes] is 5% completed
+
+[Arte y assets] lasts 35 days and starts at [Guía de arte y estilo]'s end
+[Arte y assets] is colored in Blue
+[Arte y assets] is 10% completed
+
+[Interfaz y menús] lasts 15 days and starts at [Jugabilidad principal]'s end
+[Interfaz y menús] is colored in Blue
+[Interfaz y menús] is 20% completed
+
+[Audio y música] lasts 10 days and starts at [Jugabilidad principal]'s end
+[Audio y música] is colored in Blue
+[Audio y música] is 0% completed
+
+[Backend y servidores] lasts 25 days and starts at [Prototipo jugable]'s end
+[Backend y servidores] is colored in Orange
+[Backend y servidores] is 30% completed
+
+[Modo multijugador] lasts 14 days and starts at [Backend y servidores]'s end
+[Modo multijugador] is colored in Orange
+[Modo multijugador] is 0% completed
+
+[Herramientas y CI/CD] lasts 10 days and starts at [Backend y servidores]'s start
+[Herramientas y CI/CD] is colored in Orange
+[Herramientas y CI/CD] is 20% completed
+
+[Pruebas Alpha internas] lasts 10 days and starts at [Interfaz y menús]'s end
+[Pruebas Alpha internas] is colored in Orange
+[Pruebas Alpha internas] is 0% completed
+
+[Milestone 2: Beta] happens at [Pruebas Alpha internas]'s end
+
+-- Fase 3: Postproducción (4 semanas) --
+[Corrección de errores] lasts 14 days and starts at [Pruebas Alpha internas]'s end
+[Corrección de errores] is colored in Red
+[Corrección de errores] is 0% completed
+
+[Pulido y optimización] lasts 10 days and starts at [Corrección de errores]'s end
+[Pulido y optimización] is colored in Red
+[Pulido y optimización] is 0% completed
+
+[Localización a varios idiomas] lasts 7 days and starts at [Pulido y optimización]'s start
+[Localización a varios idiomas] is colored in Red
+[Localización a varios idiomas] is 0% completed
+
+[Preparación del lanzamiento] lasts 5 days and starts at [Pulido y optimización]'s end
+[Preparación del lanzamiento] is colored in Red
+[Preparación del lanzamiento] is 0% completed
+
+[Milestone 3: Versión 1.0] happens at [Preparación del lanzamiento]'s end
+
+@endgantt

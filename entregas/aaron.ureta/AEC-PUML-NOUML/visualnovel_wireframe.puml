@@ -1,0 +1,42 @@
+@startsalt
+title 🖼️ Wireframe — Pantalla de Diálogo e Inventario (Sombras de Hierro)
+
+
+{+
+  
+  [Diálogo Box] ^
+  |
+  +-- [**Dante**: "Respira. Si dices demasiado, Rojo te hará pagar..."]
+  +-- [<<Scrollbar>>]
+
+  ' --- Elementos Interactivos (5+) ---
+  ' Opciones de Diálogo (Botones)
+  [<<Botón>> A. Cooperar con Valeria (Milicia)] #93C5FD
+  [<<Botón>> B. Pasar mercancía oculta (Cártel)] #C2410C
+
+
+  {T
+    <|> [📖 Diálogo] ^ #FEF08A
+    <|> [🗂️ Inventario]
+    <|> [⚙️ Sistema]
+  }
+
+
+  [Inventario (Tab Activo)]
+  {
+    O {Ítems de Contrabando} #D1D5DB
+    | Símbolo | Objeto           | Cant. | Efecto |
+    | 🔌     | USB encriptado | 1     | Intel |
+    | 🚬     | Paquete sin marcar | 3     | Afinidad/Rojo |
+    | 🗝️     | Llave del almacén | 1     | Ruta |
+    | 💵     | Dinero sucio     | 500   | Compra |
+  }
+}
+
+' Elementos de la interfaz (fuera de la zona de diálogo principal)
+[<<Botón>> 💾 Guardar Partida]
+[<<Slider>> Velocidad del Texto]
+[<<Checkbox>> Modo Lectura Automática]
+[<<Botón>> 📜 Historial de Diálogo]
+[<<Gauge>> Barra de Sospecha General (25%)]
+@endsalt

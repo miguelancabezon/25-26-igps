@@ -1,0 +1,314 @@
+@startjson
+<style>
+jsonDiagram {
+  node {
+    BackgroundColor White
+    LineColor Black
+  }
+  highlight {
+    BackgroundColor #E8F8F5
+    FontColor Black
+  }
+}
+</style>
+
+#highlight "metadata" / "projectName"
+#highlight "metadata" / "version"
+#highlight "definitions" / "PlayerState"
+#highlight "definitions" / "GameItem"
+#highlight "definitions" / "PlayerInventory"
+#highlight "definitions" / "CraftingRecipe"
+#highlight "actions"
+
+{
+  "#type": "color:blue",
+  "metadata": {
+    "#type": "color:orange",
+    "projectName": "PicoHelado",
+    "version": "0.3.0-alpha",
+    "language": "es-ES",
+    "environment": "development",
+    "author": "Ingeniero Principal - Adriana Aguilar",
+    "lastUpdated": "2025-11-08T18:30:00Z",
+    "serverRegion": "EU-West",
+    "engineVersion": "Unity 2023.2"
+  },
+  "definitions": {
+    "#type": "color:green",
+    "PlayerState": {
+      "#type": "color:#3498DB",
+      "playerId": "user-a8f3-44b1-91e2-c5d6e7f8",
+      "playerName": "Sobreviviente_Alpha",
+      "isAlive": true,
+      "createdAt": "2025-11-01T10:00:00Z",
+      "lastOnline": "2025-11-08T18:25:00Z",
+      "level": 12,
+      "experience": 3450,
+      "stats": {
+        "health": 85.5,
+        "maxHealth": 100.0,
+        "hunger": 60.0,
+        "maxHunger": 100.0,
+        "thirst": 45.0,
+        "maxThirst": 100.0,
+        "warmth": 70.0,
+        "maxWarmth": 100.0,
+        "stamina": 88.0,
+        "maxStamina": 100.0
+      },
+      "position": {
+        "x": 245.67,
+        "y": 85.12,
+        "z": -123.89,
+        "biome": "FrozenForest"
+      },
+      "inventoryId": "inv-a8f3-player",
+      "equippedItems": {
+        "weapon": "item-015-axe",
+        "armor": "item-102-jacket",
+        "accessory": "item-203-compass"
+      }
+    },
+    "GameItem": {
+      "#type": "color:#9B59B6",
+      "itemId": "item-001-wood",
+      "itemName": "Madera",
+      "itemType": "Resource",
+      "rarity": "Common",
+      "description": "Un trozo de madera seca. Útil para construir y quemar.",
+      "isStackable": true,
+      "maxStack": 50,
+      "weight": 0.5,
+      "durability": null,
+      "effects": null,
+      "canBeCrafted": false,
+      "canBeConsumed": false,
+      "sellValue": 2,
+      "iconPath": "assets/icons/wood.png",
+      "createdAt": "2025-11-01T00:00:00Z"
+    },
+    "WeaponItem": {
+      "#type": "color:#E74C3C",
+      "itemId": "item-015-axe",
+      "itemName": "Hacha de Piedra",
+      "itemType": "Weapon",
+      "rarity": "Common",
+      "description": "Un hacha primitiva pero efectiva. Útil para combate y talar árboles.",
+      "isStackable": false,
+      "maxStack": 1,
+      "weight": 2.5,
+      "durability": 75.0,
+      "maxDurability": 100.0,
+      "weaponStats": {
+        "damage": 15,
+        "attackSpeed": 1.2,
+        "range": 2.0,
+        "damageType": "Melee"
+      },
+      "effects": [
+        {
+          "effectType": "GatheringBonus",
+          "resourceType": "Wood",
+          "bonusMultiplier": 1.5
+        }
+      ],
+      "canBeCrafted": true,
+      "recipeId": "rec-001-stone-axe",
+      "sellValue": 15,
+      "iconPath": "assets/icons/stone_axe.png",
+      "createdAt": "2025-11-03T12:30:00Z"
+    },
+    "PlayerInventory": {
+      "#type": "color:#2ECC71",
+      "inventoryId": "inv-a8f3-player",
+      "ownerPlayerId": "user-a8f3-44b1-91e2-c5d6e7f8",
+      "maxSlots": 20,
+      "hotbarSlots": 5,
+      "currentWeight": 45.5,
+      "maxWeight": 100.0,
+      "lastModified": "2025-11-08T18:20:00Z",
+      "items": [
+        {
+          "slotIndex": 0,
+          "item": {
+            "itemId": "item-015-axe",
+            "itemName": "Hacha de Piedra",
+            "itemType": "Weapon",
+            "isStackable": false
+          },
+          "quantity": 1,
+          "isHotbarSlot": true
+        },
+        {
+          "slotIndex": 1,
+          "item": {
+            "itemId": "item-001-wood",
+            "itemName": "Madera",
+            "itemType": "Resource",
+            "isStackable": true
+          },
+          "quantity": 35,
+          "isHotbarSlot": true
+        },
+        {
+          "slotIndex": 2,
+          "item": {
+            "itemId": "item-008-meat",
+            "itemName": "Carne Cruda",
+            "itemType": "Food",
+            "isStackable": true
+          },
+          "quantity": 8,
+          "isHotbarSlot": true
+        },
+        {
+          "slotIndex": 3,
+          "item": null,
+          "quantity": 0,
+          "isHotbarSlot": true
+        }
+      ]
+    },
+    "CraftingRecipe": {
+      "#type": "color:#F39C12",
+      "recipeId": "rec-001-stone-axe",
+      "recipeName": "Hacha de Piedra",
+      "outputItemId": "item-015-axe",
+      "outputQuantity": 1,
+      "category": "Tools",
+      "stationRequired": "none",
+      "requiresUnlock": false,
+      "unlockLevel": 1,
+      "craftingTime": 5.0,
+      "ingredients": [
+        {
+          "itemId": "item-001-wood",
+          "itemName": "Madera",
+          "quantity": 5
+        },
+        {
+          "itemId": "item-002-stone",
+          "itemName": "Piedra",
+          "quantity": 3
+        },
+        {
+          "itemId": "item-005-fiber",
+          "itemName": "Fibra",
+          "quantity": 2
+        }
+      ],
+      "createdAt": "2025-11-01T00:00:00Z"
+    },
+    "WorldEnvironment": {
+      "#type": "color:#16A085",
+      "environmentId": "env-frozen-forest-01",
+      "biomeType": "FrozenForest",
+      "temperature": -15.5,
+      "weatherCondition": "LightSnow",
+      "timeOfDay": "Evening",
+      "currentTime": "18:45",
+      "dayNumber": 7,
+      "isDangerous": true,
+      "activeThreats": [
+        "WolfPack",
+        "DecreasingTemperature"
+      ],
+      "visibilityRange": 50.0,
+      "lastUpdated": "2025-11-08T18:45:00Z"
+    }
+  },
+  "actions": {
+    "#type": "color:#C0392B",
+    "craftItem": {
+      "actionId": "action-001",
+      "description": "Intenta craftear un item usando una receta específica",
+      "affects": ["PlayerInventory", "CraftingRecipe"],
+      "parameters": [
+        "playerId: string",
+        "recipeId: string"
+      ],
+      "returns": "boolean",
+      "validations": [
+        "Check if player has required ingredients",
+        "Check if crafting station is available",
+        "Check if recipe is unlocked"
+      ]
+    },
+    "consumeItem": {
+      "actionId": "action-002",
+      "description": "El jugador consume un item (comida, bebida, medicina)",
+      "affects": ["PlayerState", "PlayerInventory"],
+      "parameters": [
+        "playerId: string",
+        "inventorySlotIndex: number"
+      ],
+      "returns": "boolean",
+      "validations": [
+        "Check if item is consumable",
+        "Check if player is alive",
+        "Apply effects to player stats"
+      ]
+    },
+    "updatePlayerStat": {
+      "actionId": "action-003",
+      "description": "Aplica daño, regeneración o modificador a una estadística vital",
+      "affects": ["PlayerState"],
+      "parameters": [
+        "playerId: string",
+        "statName: string",
+        "amount: number",
+        "isDelta: boolean"
+      ],
+      "returns": "PlayerState",
+      "validations": [
+        "Clamp values between 0 and max",
+        "Check for death condition"
+      ]
+    },
+    "gatherResource": {
+      "actionId": "action-004",
+      "description": "Recolecta recursos del entorno usando una herramienta",
+      "affects": ["PlayerInventory", "GameItem", "WorldEnvironment"],
+      "parameters": [
+        "playerId: string",
+        "resourceNodeId: string",
+        "toolItemId: string"
+      ],
+      "returns": "Array<GameItem>",
+      "validations": [
+        "Check tool durability",
+        "Check if resource node exists",
+        "Apply gathering bonuses"
+      ]
+    },
+    "equipItem": {
+      "actionId": "action-005",
+      "description": "Equipa un item desde el inventario a un slot de equipo",
+      "affects": ["PlayerState", "PlayerInventory"],
+      "parameters": [
+        "playerId: string",
+        "itemId: string",
+        "equipSlot: string"
+      ],
+      "returns": "boolean",
+      "validations": [
+        "Check if item is equippable",
+        "Check if slot is valid for item type"
+      ]
+    }
+  },
+  "config": {
+    "#type": "color:#7D3C98",
+    "gameSettings": {
+      "difficultyLevel": "Normal",
+      "permadeathEnabled": false,
+      "pvpEnabled": false,
+      "maxPlayers": 4,
+      "autoSaveInterval": 300,
+      "dayLengthMinutes": 20,
+      "nightLengthMinutes": 10
+    }
+  }
+}
+
+@endjson

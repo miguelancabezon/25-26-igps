@@ -1,0 +1,75 @@
+@startjson
+{
+  "metadata": {
+    "version": "1.0.0",
+    "language": "es-ES",
+    "environment": "development",
+    "author": "Equipo de Ingeniería de Videojuegos",
+    "lastUpdate": "2025-11-08T18:00:00Z"
+  },
+  "objects": {
+    "ciudad": {
+      "id": 1,
+      "nombre": "Nueva Esperanza",
+      "poblacion": 12000,
+      "fundacion": "2025-06-01",
+      "presupuesto": 1500000,
+      "enLinea": true,
+      "zonas": [
+        {"tipo": "Residencial", "capacidad": 5000},
+        {"tipo": "Comercial", "capacidad": 2000},
+        {"tipo": "Industrial", "capacidad": 1000}
+      ],
+      "alcalde": {"id": 101, "nombre": "Ana Torres", "inicioMandato": "2025-06-01"}
+    },
+    "edificio": {
+      "id": 2001,
+      "nombre": "Central Eléctrica",
+      "tipo": "Servicio Público",
+      "fechaConstruccion": "2025-07-15",
+      "estado": "activo",
+      "produccionEnergia": 2500.5,
+      "empleados": 25
+    },
+    "ciudadano": {
+      "id": 501,
+      "nombre": "Carlos Méndez",
+      "edad": 34,
+      "profesion": "Ingeniero",
+      "felicidad": 0.87,
+      "empleado": true,
+      "idEdificioHogar": 2005
+    },
+    "recurso": {
+      "id": 700,
+      "nombre": "Energía",
+      "tipo": "Electricidad",
+      "cantidad": 120000,
+      "unidad": "kWh"
+    }
+  },
+  "acciones": {
+    "construirEdificio": {
+      "clase": "edificio",
+      "parametros": ["nombre", "tipo", "costo", "fechaConstruccion"]
+    },
+    "contratarCiudadano": {
+      "clase": "ciudadano",
+      "parametros": ["nombre", "profesion", "edad"]
+    },
+    "actualizarPresupuesto": {
+      "clase": "ciudad",
+      "parametros": ["monto", "tipoOperacion"]
+    },
+    "generarRecurso": {
+      "clase": "recurso",
+      "parametros": ["tipo", "cantidad"]
+    }
+  }
+}
+@endjson
+
+
+
+
+

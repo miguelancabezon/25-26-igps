@@ -1,0 +1,215 @@
+@startgantt
+title 🎯 Project Vortex (Battle Royale) - Timeline 2026-2027
+printscale weekly
+projectscale weekly
+
+Project starts 2026-01-05
+
+<style>
+ganttDiagram {
+  .preproduccion {
+    BackGroundColor #FFE5E5
+    LineColor #FF6B6B
+  }
+  .produccion {
+    BackGroundColor #E5F5FF
+    LineColor #4ECDC4
+  }
+  .postproduccion {
+    BackGroundColor #F5E5FF
+    LineColor #C77DFF
+  }
+  .hito {
+    BackGroundColor #FFD700
+    LineColor #FFA500
+    FontStyle bold
+  }
+  .art {
+    BackGroundColor #FFF3E0
+    LineColor #F4A261
+  }
+  .dev {
+    BackGroundColor #E0F2F1
+    LineColor #00897B
+  }
+}
+</style>
+
+-- 📋 FASE 1: PREPRODUCCIÓN --
+[FASE 1: Preproducción] lasts 84 days
+[FASE 1: Preproducción] is colored in #FFE5E5
+
+[GDD - Core Loop] lasts 21 days and starts 2026-01-05
+[GDD - Core Loop] is 100% completed
+[GDD - Core Loop] is colored in #FFE5E5
+note bottom
+  Equipo: Game Designers (3)
+  • Definir (Loot, Shoot, Survive)
+  • Diseño Sistema de Habilidades
+end note
+
+[Prueba Técnica (Netcode 100p)] lasts 28 days and starts 2026-01-12
+[Prueba Técnica (Netcode 100p)] is 100% completed
+[Prueba Técnica (Netcode 100p)] is colored in #E0F2F1
+note bottom
+  Equipo: Network Programmers (2)
+  • Test de estrés (100+ jugadores)
+  • Latencia y Sincronización
+end note
+
+[Diseño de Mapa (Boceto)] lasts 42 days and starts 2026-01-19
+[Diseño de Mapa (Boceto)] is 100% completed
+[Diseño de Mapa (Boceto)] is colored in #FFF3E0
+note bottom
+  Equipo: Level Designers (2) + Artists (1)
+  • Definir Puntos de Interés (POIs)
+  • Flujo y rotaciones del mapa
+end note
+
+[Prototipo (Mov y Disparo)] lasts 28 days and starts at [Prueba Técnica (Netcode 100p)]'s end
+[Prototipo (Mov y Disparo)] is 90% completed
+[Prototipo (Mov y Disparo)] is colored in #E0F2F1
+note bottom
+  Equipo: Programmers (3)
+  • "Game feel" del disparo
+  • Habilidades básicas
+end note
+
+[<:1F3AF:> MILESTONE 1: Prototipo Jugable] happens 2026-04-01
+
+-- 🔨 FASE 2: PRODUCCIÓN --
+[FASE 2: Producción] lasts 252 days and starts 2026-04-02
+[FASE 2: Producción] is colored in #E5F5FF
+
+[Sistema de Matchmaking (Backend)] lasts 63 days and starts 2026-04-02
+[Sistema de Matchmaking (Backend)] is 80% completed
+[Sistema de Matchmaking (Backend)] is colored in #E0F2F1
+note bottom
+  Equipo: Backend (3) (Ej: Node.js)
+  • Lógica de colas (Queue)
+  • Skill-Based (SBMM)
+end note
+
+[Sistema de Inventario (Backend)] lasts 49 days and starts at [Sistema de Matchmaking (Backend)]'s end
+[Sistema de Inventario (Backend)] is 70% completed
+[Sistema de Inventario (Backend)] is colored in #E0F2F1
+note bottom
+  Equipo: Backend (2) + Devs (1)
+  • Gestión de "loot" en partida
+  • Persistencia (Locker)
+end note
+
+[Modelado 3D (Entorno y POIs)] lasts 120 days and starts 2026-04-02
+[Modelado 3D (Entorno y POIs)] is 50% completed
+[Modelado 3D (Entorno y POIs)] is colored in #FFF3E0
+note bottom
+  Equipo: Level Art Team (5)
+  • Assets de edificios
+  • Follaje y terreno
+end note
+
+[Modelado (Leyendas y Armas)] lasts 90 days and starts 2026-04-02
+[Modelado (Leyendas y Armas)] is 60% completed
+[Modelado (Leyendas y Armas)] is colored in #FFF3E0
+note bottom
+  Equipo: Character (3) + Weapon Artists (2)
+  • 8 Leyendas iniciales
+  • 20 Armas
+end note
+
+[Implementación (Sistema de Zona)] lasts 35 days and starts 2026-06-01
+[Implementación (Sistema de Zona)] is 40% completed
+[Implementación (Sistema de Zona)] is colored in #E0F2F1
+note bottom
+  Equipo: Gameplay Programmers (2)
+  • Lógica del círculo (daño, tiempo)
+  • Sincronización visual
+end note
+
+[UI/UX (Lobby, HUD)] lasts 70 days and starts 2026-05-01
+[UI/UX (Lobby, HUD)] is 50% completed
+[UI/UX (Lobby, HUD)] is colored in #FFF3E0
+note bottom
+  Equipo: UI/UX (2) + Frontend (2) (Ej: React)
+  • Lobby pre-partida
+  • HUD de vida, escudo, habilidades
+end note
+
+[Sistema de Pases de Batalla] lasts 42 days and starts 2026-08-01
+[Sistema de Pases de Batalla] is 20% completed
+[Sistema de Pases de Batalla] is colored in #E0F2F1
+note bottom
+  Equipo: Backend (2) + UI (1)
+  • Sistema de XP y recompensas
+  • Tiers (Gratis y Premium)
+end note
+
+[<:1F6A8:> MILESTONE 2: Beta Cerrada] happens 2026-10-01
+
+-- 🚀 FASE 3: POSTPRODUCCIÓN --
+[FASE 3: Postproducción] lasts 98 days and starts 2026-11-01
+[FASE 3: Postproducción] is colored in #F5E5FF
+
+[Beta Abierta (Estrés Servidores)] lasts 28 days and starts 2026-11-01
+[Beta Abierta (Estrés Servidores)] is 10% completed
+[Beta Abierta (Estrés Servidores)] is colored in #F5E5FF
+note bottom
+  Equipo: QA (5) + Ops (2) + Backend (2)
+  • Pruebas de carga masiva
+  • Recopilación de feedback
+end note
+
+[Optimización de Red y Cliente] lasts 70 days and starts 2026-11-15
+[Optimización de Red y Cliente] is 0% completed
+[Optimización de Red y Cliente] is colored in #E0F2F1
+note bottom
+  Equipo: Core Dev Team (4)
+  • Reducción de "lag"
+  • Mejora de FPS
+end note
+
+[Balanceo (Armas y Habilidades)] lasts 42 days and starts 2026-12-01
+[Balanceo (Armas y Habilidades)] is 0% completed
+[Balanceo (Armas y Habilidades)] is colored in #FFE5E5
+note bottom
+  Equipo: Game Designers (2) + QA (2)
+  • Ajustes de Time-to-Kill (TTK)
+  • Cooldowns de habilidades
+end note
+
+[Marketing Pre-Launch] lasts 56 days and starts 2026-12-01
+[Marketing Pre-Launch] is 0% completed
+[Marketing Pre-Launch] is colored in #FFF3E0
+note bottom
+  Equipo: Marketing (3)
+  • Tráiler de lanzamiento
+  • Campaña de influencers
+end note
+
+[Day One Patch] lasts 14 days and starts 2027-01-18
+[Day One Patch] is 0% completed
+[Day One Patch] is colored in #F5E5FF
+note bottom
+  Equipo: "Todos a bordo"
+  • Corrección de "showstoppers"
+end note
+
+-- 🎯 HITOS PRINCIPALES --
+[<:1F680:> MILESTONE 3: v1.0 LAUNCH] happens 2027-02-01
+
+note bottom
+<b><:1F4CA:> Estadísticas del Proyecto:</b>
+• Duración total: ~56 semanas (~13 meses)
+• Equipo máximo: ~30-35 personas
+• 1 Mapa principal
+• 8 Leyendas iniciales
+• 20 Armas
+
+<b><:26A0:> Riesgos Críticos:</b>
+• Complejidad del Netcode (100p)
+• Eficacia del Anti-Cheat
+• Costes de infraestructura de servidores
+• Competencia (Apex, Fortnite, CoD)
+end note
+
+@endgantt

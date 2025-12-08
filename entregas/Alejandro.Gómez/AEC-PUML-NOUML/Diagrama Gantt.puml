@@ -1,0 +1,54 @@
+@startgantt
+title Desarrollo FPS - Proyecto "Shadow Protocol"
+printscale weekly
+Project starts 2025-11-10
+
+-- FASE 1 - PREPRODUCCIÓN --
+section Preproducción
+[Brief inicial] lasts 5 days
+[Brief inicial] is 100% completed and is colored in Blue
+
+[Diseño de mecánicas FPS] lasts 10 days and starts at [Brief inicial]'s end
+[Diseño de mecánicas FPS] is 80% completed and is colored in Blue
+
+[Prototipo jugable] lasts 15 days and starts at [Diseño de mecánicas FPS]'s end
+[Prototipo jugable] is 50% completed and is colored in Blue
+
+[Milestone: Prototipo] happens at [Prototipo jugable]'s end
+[Milestone: Prototipo] is colored in DarkBlue
+
+-- FASE 2 - PRODUCCIÓN --
+section Producción
+[Modelado de armas] lasts 12 days and starts at [Prototipo jugable]'s end
+[Modelado de armas] is 30% completed and is colored in Green
+
+[Diseño de niveles] lasts 20 days and starts at [Modelado de armas]'s start
+[Diseño de niveles] is 40% completed and is colored in Green
+
+[Programación IA enemiga] lasts 18 days and starts at [Diseño de niveles]'s start
+[Programación IA enemiga] is 25% completed and is colored in Green
+[Programación IA enemiga] links to [Diseño de niveles]
+
+[Integración de sonido] lasts 10 days and starts at [Programación IA enemiga]'s end
+[Integración de sonido] is 10% completed and is colored in Green
+
+[Menú y HUD] lasts 8 days and starts at [Diseño de niveles]'s end
+[Menú y HUD] is 20% completed and is colored in Green
+
+[Milestone: Beta] happens at [Menú y HUD]'s end
+[Milestone: Beta] is colored in DarkGreen
+
+-- FASE 3 - POSTPRODUCCIÓN --
+section Postproducción
+[Testeo QA] lasts 10 days and starts at [Menú y HUD]'s end
+[Testeo QA] is 30% completed and is colored in Orange
+
+[Optimización rendimiento] lasts 7 days and starts at [Testeo QA]'s end
+[Optimización rendimiento] is 20% completed and is colored in Orange
+
+[Marketing y distribución] lasts 10 days and starts at [Optimización rendimiento]'s end
+[Marketing y distribución] is 40% completed and is colored in Orange
+
+[Milestone: Versión 1.0] happens at [Marketing y distribución]'s end
+[Milestone: Versión 1.0] is colored in Red
+@endgantt
