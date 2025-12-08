@@ -1,6 +1,6 @@
 @startuml
 
-title Sistema de Gestión de Biblioteca Universitaria\nDiagrama de Casos de Uso
+title Sistema de Gestión de Biblioteca Universitaria\nDiagrama de Casos de Uso.
 
 skinparam style strictuml
 skinparam packageStyle rectangle
@@ -81,3 +81,4 @@ Sistema --> UC_Notificar
 Sistema --> UC_CalcularMulta
 
 @enduml
+
