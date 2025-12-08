@@ -1,0 +1,71 @@
+@startgantt
+Project starts 2024-01-01
+
+' Colores
+<style>
+ganttDiagram {
+  task {
+    BackGroundColor GreenYellow
+    LineColor Green 
+  }
+  milestone {
+    FontColor Red
+    FontSize 16
+    FontStyle bold
+    BackGroundColor Red
+  }
+}
+</style>
+
+' --- FASE 1 ---
+[**Fase 1: Preproducción**] as [F1] lasts 15 days
+[Concept Art] lasts 10 days
+[Documento de Diseño (GDD)] lasts 10 days
+[Elección de Motor] lasts 3 days
+[Concept Art] starts at [F1]'s start
+[Documento de Diseño (GDD)] starts at [F1]'s start
+[Elección de Motor] starts at [Documento de Diseño (GDD)]'s end
+
+[**Milestone 1: Prototipo**] as [M1] happens at [F1]'s end
+
+' --- FASE 2 ---
+[**Fase 2: Producción**] as [F2] starts at [M1]'s end
+[Modelado 3D Personaje] as [T1] lasts 15 days
+[Programación Movimiento] as [T2] lasts 10 days
+[Diseño de Nivel (Isla)] as [T3] lasts 20 days
+[Sistema de Inventario] as [T4] lasts 12 days
+[IA de Enemigos] as [T5] lasts 15 days
+[Sistema de Crafting] as [T6] lasts 10 days
+[Animaciones Básicas] as [T7] lasts 8 days
+[Implementar Sonido] as [T8] lasts 5 days
+
+' Dependencias y recursos
+[T2] starts at [F2]'s start and is 100% complete
+note bottom
+  Recurso: Dev Senior
+end note
+
+[T1] starts at [F2]'s start and is 60% complete
+[T3] starts at [T2]'s end
+[T4] starts at [T2]'s end
+[T5] starts at [T3]'s end
+[T6] starts at [T4]'s end
+[T7] starts at [T1]'s end
+[T8] starts at [T7]'s end
+
+[**Milestone 2: Beta**] as [M2] happens at [T8]'s end
+
+' --- FASE 3 ---
+[**Fase 3: Postproducción**] as [F3] starts at [M2]'s end
+[Testing QA] lasts 10 days
+[Corrección de Bugs] lasts 10 days
+[Marketing Trailer] lasts 5 days
+[Lanzamiento en Tiendas] lasts 1 day
+
+[Testing QA] starts at [F3]'s start
+[Corrección de Bugs] starts at [Testing QA]'s start
+[Marketing Trailer] starts at [F3]'s start
+
+[**Milestone 3: v1.0**] as [M3] happens at [Lanzamiento en Tiendas]'s end
+
+@endgantt
