@@ -1,0 +1,63 @@
+@startuml
+title "Diagrama de Estados - Ciclo de Vida del Préstamo"
+
+skinparam state {
+    StartColor #F3F0FF
+    EndColor #F3F0FF
+    BackgroundColor #E9FFF5
+    BorderColor #8062FF
+    BackgroundColor<<EnCurso>> #D8F4FF
+    BackgroundColor<<Vencido>> #FFD6E6
+}
+
+[*] --> Solicitado
+
+state Solicitado #Yellow {
+    Solicitud : entry/registrarSolicitud()
+    Solicitud : entry/verificarDisponibilidad()
+}
+
+Solicitado --> Activo : aprobar [libro disponible] / enviarEmailConfirmacion()
+Solicitado --> Cancelado : rechazar [libro no disponible]
+Solicitado --> Cancelado : cancelar por usuario [usuario sin multas]
+
+state "En Curso" as EnCurso <<EnCurso>> {
+    state Activo #LightGreen {
+        Activo : entry/enviarEmailConfirmacion()
+        Activo : entry/actualizarDisponibilidadLibro()
+        Activo : exit/registrarHistorial()
+    }
+
+    state Renovado #LightGreen {
+        Renovado : entry/extenderFechaVencimiento()
+        Renovado : entry/incrementarContadorRenovaciones()
+    }
+
+    state Vencido #LightCoral {
+        Vencido : entry/calcularMulta()
+        Vencido : entry/enviarNotificacionRetraso()
+    }
+    ' transiciones internas entre subestados
+    Activo --> Renovado : renovar [renovaciones < 2 & sin reservas] /evento: renovar
+    Activo --> Activo : renovar [renovaciones >=2] /evento: renovar (rechazo)
+    Activo --> Vencido : vencer plazo /evento: after 14 días
+
+    Renovado --> Renovado : renovar [renovaciones < 2 & sin reservas pendientes]
+    Renovado --> Vencido : vencer plazo /after 14 días
+    Renovado --> Devuelto : devolver [a tiempo]
+
+    Vencido --> Devuelto : devolver con multa /evento: pagar multa
+    Vencido --> VencidoCrítico : continuar vencido [>30 días]
+}
+
+EnCurso --> Devuelto : devolver [a tiempo]
+Devuelto : entry/liberarLibro()
+Devuelto : entry/procesarSiguienteReserva()
+Devuelto --> [*]
+Cancelado --> [*]
+
+state VencidoCrítico #Red {
+    VencidoCrítico : entry/escalarPenalización()
+}
+
+@enduml

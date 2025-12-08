@@ -1,0 +1,55 @@
+@startuml
+title "Diagrama de Objetos - Biblioteca Central (15/11/2025, 14:30)"
+
+' USERS
+object estudiante1 as "Estudiante\nid: EST-2023001\nnombre: Ana García\nemail: ana.garcia@uni.es\nprestamosActivos: 2\nmultasAcumuladas: 1.50"
+object profesor1 as "Profesor\nid: PROF-2020045\nnombre: Dr. Carlos Ruiz\ndep: Informática\nprestamosActivos: 3\nmultasAcumuladas: 0.00"
+object estudiante2 as "Estudiante\nid: EST-2024089\nnombre: Luis Martínez\nemail: luis.martinez@uni.es\nprestamosActivos: 1\nmultasAcumuladas: 0.00"
+
+' BOOKS
+object libro1 as "Libro\nisbn: 978-3-16-148410-0\ntitulo: Clean Code\nautor: Robert C. Martin\nejemplares: 3\ndisponibles: 1\ncategoria: Programación"
+object libro2 as "Libro\nisbn: 978-0-13-468599-1\ntitulo: The Pragmatic Programmer\nautor: Hunt & Thomas\nejemplares: 2\ndisponibles: 0\ncategoria: Programación"
+object libro3 as "Libro\nisbn: 978-0-596-52068-7\ntitulo: JavaScript: The Good Parts\nautor: Douglas Crockford\nejemplares: 4\ndisponibles: 3\ncategoria: Programación"
+object libro4 as "Libro\nisbn: 978-0-134-68599-8\ntitulo: Design Patterns\nautor: Gang of Four\nejemplares: 2\ndisponibles: 1\ncategoria: Ingeniería Software"
+object libro5 as "Libro\nisbn: 978-0-321-12742-6\ntitulo: Domain-Driven Design\nautor: Eric Evans\nejemplares: 1\ndisponibles: 0\ncategoria: Arquitectura"
+
+' LOANS
+object prestamo1 as "Préstamo\nid: PREST-2025-1234\ninicio: 2025-11-01\nvencimiento: 2025-11-15\nestado: Activo\nrenovaciones: 0\nmulta: 0.00"
+object prestamo2 as "Préstamo\nid: PREST-2025-1256\ninicio: 2025-10-28\nvencimiento: 2025-11-27\nestado: Activo\nrenovaciones: 0\nmulta: 0.00"
+object prestamo3 as "Préstamo\nid: PREST-2025-1189\ninicio: 2025-10-20\nvencimiento: 2025-11-03\nestado: Vencido\nrenovaciones: 1\nmulta: 6.00"
+object prestamo4 as "Préstamo\nid: PREST-2025-1290\ninicio: 2025-11-10\nvencimiento: 2025-11-24\nestado: Activo\nrenovaciones: 0\nmulta: 0.00"
+object prestamoX as "Préstamo\nid: PREST-2025-XXXX\ninicio: --\nvencimiento: --\nestado: --\nrenovaciones: --\nmulta: --"
+
+' RESERVES
+object reserva1 as "Reserva\nid: RES-2025-0089\nfecha: 2025-11-14\nestado: Pendiente\nposición: 1"
+object reserva2 as "Reserva\nid: RES-2025-0090\nfecha: 2025-11-15\nestado: Pendiente\nposición: 2"
+object estudianteX as "Estudiante\nid: ?\nnombre: ?\nemail: ?"
+
+' FINE
+object multa1 as "Multa\nid: MULT-2025-045\nmonto: 6.00\nfecha: 2025-11-04\nestado: Pendiente\nconcepto: Retraso devolución"
+
+' RELATIONS
+
+estudiante1 -- prestamo1 : "tiene"
+estudiante1 -- prestamo3 : "tiene"
+
+profesor1 -- prestamo2 : "tiene"
+profesor1 -- prestamoX : "tiene"
+
+estudiante2 -- prestamo4 : "tiene"
+
+prestamo1 -- libro1 : "ejemplar"
+prestamo2 -- libro2 : "ejemplar"
+prestamo3 -- libro5 : "ejemplar\nvencido"
+prestamo4 -- libro3 : "ejemplar"
+
+reserva1 -- libro2 : "reserva"
+reserva1 -- estudiante2 : "hecha por"
+
+reserva2 -- libro2 : "reserva (en cola)"
+reserva2 -- estudianteX : "hecha por"
+
+multa1 -- prestamo3 : "asociada a"
+multa1 -- estudiante1 : "asociada a"
+
+@enduml

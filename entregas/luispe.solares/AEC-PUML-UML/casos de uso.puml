@@ -1,0 +1,93 @@
+@startuml
+title "Diagrama de Casos de Uso - Biblioteca Central"
+
+'Colores para agrupaciones
+skinparam package {
+    BackgroundColor<<GestiónDeReservas>> #E8F7FF
+    BackgroundColor<<BusquedaConsulta>> #F0FFF0
+    BackgroundColor<<Penalizaciones>> #FFF8E4
+    BackgroundColor<<Reportes>> #F6E8FF
+}
+
+actor Estudiante
+actor Profesor
+actor Bibliotecario
+actor Sistema
+
+package "Búsqueda y consulta" <<BusquedaConsulta>> {
+    usecase "Buscar en catálogo" as UC1
+    usecase "Ver historial de préstamos" as UC2
+    usecase "Consultar estado de libro" as UC3
+}
+
+package "Gestión de Reservas" <<GestiónDeReservas>> {
+    usecase "Hacer reserva" as UC4
+    usecase "Cancelar reserva" as UC5
+    usecase "Notificar disponibilidad" as UC6
+}
+
+package "Préstamos" {
+    usecase "Solicitar préstamo" as UC7
+    usecase "Renovar préstamo" as UC8
+    usecase "Devolver libro" as UC9
+    usecase "Registrar préstamo manual" as UC10
+    usecase "Procesar devolución" as UC11
+}
+
+package "Penalizaciones" <<Penalizaciones>> {
+    usecase "Calcular multa" as UC12
+    usecase "Pagar multa online" as UC13
+    usecase "Aplicar penalización" as UC14
+}
+
+package "Reportes" <<Reportes>> {
+    usecase "Generar reporte de préstamos" as UC15
+    usecase "Generar reporte de multas" as UC16
+}
+
+Estudiante --> UC1
+Estudiante --> UC2
+Estudiante --> UC3
+Estudiante --> UC4
+Estudiante --> UC5
+Estudiante --> UC7
+Estudiante --> UC8
+Estudiante --> UC9
+Estudiante --> UC13
+
+Profesor --> UC1
+Profesor --> UC2
+Profesor --> UC3
+Profesor --> UC4
+Profesor --> UC5
+Profesor --> UC7: "Préstamo larga duración (Regla)"
+Profesor --> UC8
+Profesor --> UC9
+Profesor --> UC13
+
+Bibliotecario --> UC10
+Bibliotecario --> UC11
+Bibliotecario --> UC14
+Bibliotecario --> UC5
+Bibliotecario --> UC4
+Bibliotecario --> UC15
+Bibliotecario --> UC16
+
+Sistema --> UC6: "Envía notificación automática"
+Sistema --> UC12: "Calcula y notifica multa"
+
+UC9 --> UC11: "Procesar devolución puede ser manual"
+UC8 --> UC7: "<include> Renovación es extensión de Préstamo"
+UC12 --> UC13: "Pagar sólo si hay multa pendiente"
+UC14 --> UC12: "<include> Aplicar penalización calcula multa"
+
+UC4 --> UC6: "Reserva dispara notificación si libro disponible"
+UC5 --> UC4: "Cancelar implica reserva previa"
+
+UC2 --> UC7: "<extend> Historial muestra solicitudes previas"
+UC13 --> UC2: "<extend> Pago se refleja en historial"
+
+UC15 --> UC7
+UC16 --> UC12
+
+@enduml
