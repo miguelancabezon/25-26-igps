@@ -359,3 +359,103 @@ profesor1 ..> reserva2 : "puede aprobar"
 
 
 
+
+
+
+
+
+
+
+
+
+
+@startuml
+title  Sistema de Gestión de Biblioteca Universitaria - Diagrama de Estados
+
+' Estado inicial
+[*] --> Solicitado
+
+' Estado Solicitado con acciones de entrada
+state Solicitado #Yellow {
+  Solicitado : entry / registrarSolicitud()
+  Solicitado : entry / verificarDisponibilidad()
+}
+
+' Desde Solicitado: Transiciones
+Solicitado --> Activo : aprobar [libro disponible]
+Solicitado --> Cancelado : rechazar [libro no disponible]
+Solicitado --> Cancelado : cancelar [usuario sin multas]
+
+' Super-estado En Curso con historia
+state "En Curso" as EnCurso {
+  [H] --> Activo
+
+  state Activo #LightPink {
+    Activo : entry / enviarEmailConfirmacion()
+    Activo : entry / actualizarDisponibilidadLibro()
+    Activo : exit / registrarHistorial()
+  }
+
+  state Renovado #LightPink {
+    Renovado : entry / extenderFechaVencimiento()
+    Renovado : entry / incrementarContadorRenovaciones()
+  }
+
+  state Vencido #LightCoral {
+    Vencido : entry / calcularMulta()
+    Vencido : entry / enviarNotificacionRetraso()
+  }
+
+  ' Desde activo: Transiciones
+  Activo --> Renovado : renovar [renovaciones < 2 AND sin reservas pendientes]
+  Activo --> Activo : renovar [renovaciones >= 2] / activo con nota de rechazo()
+  Activo --> Devuelto : devolver [a tiempo]
+  
+
+  Renovado --> Devuelto : devolver [a tiempo]
+  
+  Renovado --> Renovado : renovar [renovaciones < 2 AND sin reservas pendientes]
+
+  Vencido --> Devuelto : devolver / pagar multa
+  Vencido --> Vencido : continuar vencido [diasVencido > 30] / marcarCritico()
+}
+
+' Desde Renovado: Transiciones
+EnCurso --> Devuelto : devolver [a tiempo]
+EnCurso --> Vencido : vencer plazo
+
+' Estado Devuelto con acciones
+state Devuelto #LightBlue {
+  Devuelto : entry / liberarLibro()
+  Devuelto : entry / procesarSiguienteReserva()
+}
+
+' Estado Cancelado con acción
+state Cancelado #Gray {
+  Cancelado : entry / notificarCancelacion()
+}
+
+' Estado de decisión para validar renovaciones
+state DecisionRenovacion <<choice>>
+Renovado --> DecisionRenovacion : renovar
+DecisionRenovacion --> Renovado : [renovaciones < 2 AND sin reservas renovado]
+DecisionRenovacion --> Activo : [renovaciones >= 2] / activo con nota de rechazo()
+
+' Ejemplo de fork/join válidos en diagrama de estados:
+state F_Paralelo <<fork>>
+state J_Union <<join>>
+
+' Dispara procesos paralelos desde Activo:
+Activo --> F_Paralelo : iniciar procesos paralelos
+F_Paralelo --> Renovado : flujo de renovacion
+F_Paralelo --> Vencido : flujo de vencimiento
+
+' Ambos convergen antes de poder devolver:
+Renovado --> J_Union
+Vencido --> J_Union
+J_Union --> Devuelto : completar procesos
+
+' Estados finales
+Devuelto --> [*]
+Cancelado --> [*]
+@enduml
