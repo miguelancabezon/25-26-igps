@@ -1,0 +1,82 @@
+@startuml
+title Sistema de Gestión de Biblioteca Universitaria - Casos de Uso
+
+left to right direction
+skinparam packageStyle rectangle
+
+actor Estudiante
+actor Profesor
+actor Bibliotecario
+actor Sistema as SistemaNotificaciones
+
+package "Búsqueda y Consulta" {
+  usecase "Buscar en catálogo" as BC
+  usecase "Ver historial de préstamos" as HP
+  usecase "Consultar estado de libro" as CE
+}
+
+package "Gestión de Préstamos" {
+  usecase "Solicitar préstamo" as SP
+  usecase "Renovar préstamo" as RP
+  usecase "Devolver libro" as DP
+  usecase "Registrar préstamo manual" as RPM
+  usecase "Procesar devolución" as PD
+}
+
+package "Gestión de Reservas" {
+  usecase "Hacer reserva" as HR
+  usecase "Cancelar reserva" as CR
+  usecase "Notificar disponibilidad" as ND
+}
+
+package "Penalizaciones" {
+  usecase "Calcular multa" as CM
+  usecase "Pagar multa online" as PM
+  usecase "Aplicar penalización" as AP
+}
+
+package "Reportes" {
+  usecase "Generar reporte de préstamos" as GRP
+  usecase "Generar reporte de multas" as GRM
+}
+
+' ===== Relaciones =====
+
+'Estudiantes y Profesores comparten funcionalidades
+Estudiante --> BC
+Estudiante --> HP
+Estudiante --> CE
+Estudiante --> SP
+Estudiante --> RP
+Estudiante --> DP
+Estudiante --> HR
+Estudiante --> CR
+Estudiante --> PM
+
+Profesor --> BC
+Profesor --> HP
+Profesor --> CE
+Profesor --> SP
+Profesor --> RP
+Profesor --> DP
+Profesor --> HR
+Profesor --> CR
+Profesor --> PM
+
+'Solo bibliotecario
+Bibliotecario --> RPM
+Bibliotecario --> PD
+Bibliotecario --> AP
+Bibliotecario --> GRP
+Bibliotecario --> GRM
+
+'Sistema
+SistemaNotificaciones --> ND
+
+'Asociaciones internas
+PD --> CM : "calcula multa al procesar"
+SP --> CE : "verifica disponibilidad"
+RP --> CE : "verifica reservas pendientes"
+HR --> CE
+
+@enduml
