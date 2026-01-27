@@ -1,0 +1,127 @@
+@startuml
+
+title Diagrama de Objetos — Estado del Sistema\n15/11/2025 14:30h
+
+skinparam object {
+  BackgroundColor #FFF7E6
+  BorderColor #CC9900
+}
+
+' ----------------- OBJETOS ------------------
+
+object estudiante1 {
+  id = "EST-676767"
+  nombre = "Dexter Morgan"
+  email = "dxt.morg@uni.es"
+  prestamosActivos = 2
+  multasAcumuladas = 1.50
+}
+
+object profesor1 {
+  id = "PROF-696969"
+  nombre = "Dr. Rick Sánchez"
+  departamento = "Informática"
+  prestamosActivos = 3
+  multasAcumuladas = 0.00
+}
+
+object estudiante2 {
+  id = "EST-333333"
+  nombre = "Saul Goodman"
+  email = "saul.goodman@uni.es"
+  prestamosActivos = 1
+  multasAcumuladas = 0.00
+}
+
+object libro1 {
+  isbn = "978-3-16-148410-0"
+  titulo = "Diario de Greg"
+  disponibles = 1
+}
+
+object libro2 {
+  isbn = "978-0-13-468599-1"
+  titulo = "El libro troll"
+  disponibles = 0
+}
+
+object libro3 {
+  isbn = "978-0-596-52068-7"
+  titulo = "La Biblia"
+  disponibles = 3
+}
+
+object libro4 {
+  isbn = "978-0-134-68599-8"
+  titulo = "El hobbit"
+  disponibles = 1
+}
+
+object libro5 {
+  isbn = "978-0-321-12742-6"
+  titulo = "Mortadelo y Filemon 
+  contra Jimmy el cachondo"
+  disponibles = 0
+}
+
+object prestamo1 {
+  id = "PREST-2025-1234"
+  estado = "Activo"
+}
+
+object prestamo2 {
+  id = "PREST-2025-1256"
+  estado = "Activo"
+}
+
+object prestamo3 {
+  id = "PREST-2025-1189"
+  estado = "Vencido"
+}
+
+object prestamo4 {
+  id = "PREST-2025-1290"
+  estado = "Activo"
+}
+
+object reserva1 {
+  id = "RES-2025-0089"
+  estado = "Pendiente"
+  posicion = 1
+}
+
+object reserva2 {
+  id = "RES-2025-0090"
+  estado = "Pendiente"
+  posicion = 2
+}
+
+object multa1 {
+  id = "MULT-2025-045"
+  monto = 6.00
+  estado = "Pendiente"
+}
+
+' -------------- RELACIONES -------------------
+
+estudiante1 --> prestamo1
+estudiante1 --> prestamo3
+
+profesor1 --> prestamo2
+
+estudiante2 --> prestamo4
+
+prestamo1 --> libro1
+prestamo2 --> libro2
+prestamo3 --> libro5
+prestamo4 --> libro3
+
+reserva1 --> libro2
+reserva1 --> estudiante2
+
+reserva2 --> libro2
+
+multa1 --> prestamo3
+multa1 --> estudiante1
+
+@enduml
