@@ -1,0 +1,102 @@
+@startuml
+title Casos de Uso - Biblioteca Central
+left to right direction
+skinparam packageStyle rectangle
+
+actor Estudiante
+actor Profesor
+actor Bibliotecario
+actor "Sistema (Notificaciones)" as Sistema
+
+' ============================
+'     BÚSQUEDA Y CONSULTA
+' ============================
+package "Búsqueda y consulta" {
+  usecase UC_Buscar as "Buscar en catálogo"
+  usecase UC_VerHistorial as "Ver historial de préstamos"
+  usecase UC_ConsultarEstado as "Consultar estado de libro"
+}
+
+' ============================
+'     GESTIÓN DE RESERVAS
+' ============================
+package "Gestión de Reservas" {
+  usecase UC_HacerReserva as "Hacer reserva"
+  usecase UC_CancelarReserva as "Cancelar reserva"
+  usecase UC_NotificarDisponibilidad as "Notificar disponibilidad"
+  usecase UC_GestionReservas as "Gestionar reservas"
+}
+
+' ============================
+'     PRÉSTAMOS Y DEVOLUCIÓN
+' ============================
+package "Préstamos y Devoluciones" {
+  usecase UC_SolicitarPrestamo as "Solicitar préstamo"
+  usecase UC_Renovar as "Renovar préstamo"
+  usecase UC_Devolver as "Devolver libro"
+}
+
+' ============================
+'     PENALIZACIONES
+' ============================
+package "Penalizaciones" {
+  usecase UC_CalcularMulta as "Calcular multa"
+  usecase UC_PagarMulta as "Pagar multa online"
+  usecase UC_AplicarPenalizacion as "Aplicar penalización"
+}
+
+' ============================
+'     REPORTES
+' ============================
+package "Reportes (Bibliotecario)" {
+  usecase UC_ReportePrestamos as "Generar reporte de préstamos"
+  usecase UC_ReporteMultas as "Generar reporte de multas"
+}
+
+' ============================
+'     CASO EXTRA NECESARIO
+' ============================
+usecase UC_ProcesarDevolucion as "Procesar devolución"
+
+' ============================
+'     RELACIONES
+' ============================
+
+' Estudiante
+Estudiante --> UC_Buscar
+Estudiante --> UC_SolicitarPrestamo
+Estudiante --> UC_Renovar
+Estudiante --> UC_Devolver
+Estudiante --> UC_HacerReserva
+Estudiante --> UC_VerHistorial
+Estudiante --> UC_PagarMulta
+Estudiante --> UC_ConsultarEstado
+
+' Profesor
+Profesor --> UC_Buscar
+Profesor --> UC_SolicitarPrestamo
+Profesor --> UC_Renovar
+Profesor --> UC_Devolver
+Profesor --> UC_HacerReserva
+Profesor --> UC_VerHistorial
+Profesor --> UC_PagarMulta
+Profesor --> UC_ConsultarEstado
+
+' Bibliotecario
+Bibliotecario --> UC_ProcesarDevolucion
+Bibliotecario --> UC_CalcularMulta
+Bibliotecario --> UC_AplicarPenalizacion
+Bibliotecario --> UC_GestionReservas
+Bibliotecario --> UC_ReportePrestamos
+Bibliotecario --> UC_ReporteMultas
+
+' Sistema
+Sistema --> UC_NotificarDisponibilidad
+Sistema --> UC_PagarMulta
+
+' Includes
+UC_HacerReserva --> UC_NotificarDisponibilidad : <<include>>
+UC_Devolver --> UC_ProcesarDevolucion : <<include>>
+UC_CalcularMulta --> UC_AplicarPenalizacion : <<include>>
+
+@enduml

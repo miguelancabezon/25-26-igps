@@ -1,0 +1,82 @@
+@startuml
+title Ciclo de Vida del Préstamo - Biblioteca
+
+[*] --> Solicitado
+
+' Estado Solicitado
+state Solicitado
+' Acciones de entrada simuladas con comentarios
+' registrarSolicitud()
+' verificarDisponibilidad()
+
+Solicitado --> Activo : aprobar [libro disponible]
+Solicitado --> Cancelado : rechazar [libro no disponible]
+Solicitado --> Cancelado : cancelar por usuario
+
+' Superestado EnCurso con subestados
+state EnCurso {
+  state Activo
+  ' acciones de entrada/ salida simuladas con comentarios
+  ' enviarEmailConfirmacion()
+  ' actualizarDisponibilidadLibro()
+  ' registrarHistorial() al salir
+
+  state Renovado
+  ' extenderFechaVencimiento()
+  ' incrementarContadorRenovaciones()
+
+  state Vencido
+  ' calcularMulta()
+  ' enviarNotificacionRetraso()
+
+  Activo --> Renovado : renovar [renovaciones < 2 AND sin reservas pendientes]
+  Activo --> Activo : renovar [renovaciones >= 2]
+  Activo --> Vencido : vencerPlazo
+
+  Renovado --> Renovado : renovar [renovaciones < 2 AND sin reservas pendientes]
+  Renovado --> Vencido : vencerPlazo
+  Renovado --> Devuelto : devolver [a tiempo]
+
+  Vencido --> Devuelto : devolver con multa
+  Vencido --> VencidoCritico : continuar vencido [>30 días]
+}
+
+state Devuelto
+' liberarLibro(), procesarSiguienteReserva(), registrarHistorial()
+state Cancelado
+state VencidoCritico
+
+Devuelto --> [*]
+Cancelado --> [*]
+
+' Estado de decisión simplificado
+state DecisionRenovacion
+Activo --> DecisionRenovacion : solicitar renovacion
+DecisionRenovacion --> Renovado : [renovaciones < 2]
+DecisionRenovacion --> Activo : [renovaciones >= 2]
+
+' Procesos paralelos como estados normales
+state ProcesarMulta
+state NotificarUsuario
+
+note left of ProcesarMulta
+Proceso paralelo: cálculo de multa
+end note
+
+note left of NotificarUsuario
+Proceso paralelo: notificación al usuario
+end note
+
+note right
+Eventos/Acciones:
+- aprobar
+- rechazar
+- cancelar
+- devolver
+- renovar
+- vencerPlazo
+- pagar multa
+- 14 días después (evento temporal)
+end note
+
+@enduml
