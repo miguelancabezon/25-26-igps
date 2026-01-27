@@ -1,0 +1,21 @@
+@startuml
+title Diagrama de Estados - Préstamo
+
+[*] --> Solicitado
+
+Solicitado --> Activo : aprobar [libro disponible]
+Solicitado --> Cancelado : rechazar [libro no disponible]
+Solicitado --> Cancelado : cancelar
+
+state "En Curso" as EnCurso {
+  Activo --> Renovado : renovar [renovaciones < 2]
+  Activo --> Vencido : vencer plazo
+  Renovado --> Renovado : renovar [renovaciones < 2]
+  Renovado --> Vencido : vencer plazo
+}
+
+EnCurso --> Devuelto : devolver
+Devuelto --> [*]
+Cancelado --> [*]
+
+@enduml

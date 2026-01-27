@@ -1,0 +1,39 @@
+@startuml
+title Diagrama de Objetos - Biblioteca
+object estudiante1 { id="EST-2023001" }
+object profesor1 { id="PROF-2020045" }
+object estudiante2 { id="EST-2024089" }
+
+object libro1 { titulo="Clean Code" }
+object libro2 { titulo="The Pragmatic Programmer" }
+object libro3 { titulo="JavaScript: The Good Parts" }
+object libro4 { titulo="Design Patterns" }
+object libro5 { titulo="Domain-Driven Design" }
+
+object prestamo1
+object prestamo2
+object prestamo3
+object prestamo4
+
+object reserva1
+object reserva2
+
+object multa1
+
+estudiante1 --> prestamo1
+estudiante1 --> prestamo3
+profesor1 --> prestamo2
+estudiante2 --> prestamo4
+
+prestamo1 --> libro1
+prestamo2 --> libro2
+prestamo3 --> libro5
+prestamo4 --> libro3
+
+reserva1 --> libro2
+reserva1 --> estudiante2
+reserva2 --> libro2
+
+multa1 --> prestamo3
+multa1 --> estudiante1
+@enduml
