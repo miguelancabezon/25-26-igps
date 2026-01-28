@@ -1,0 +1,58 @@
+@startmindmap
+' Configuración de estilos y colores
+<style>
+mindmapDiagram {
+  node {
+    BackgroundColor lightGreen
+  }
+  :depth(1) {
+      BackgroundColor lightBlue
+  }
+  :depth(2) {
+      BackgroundColor pink
+  }
+  :depth(3) {
+      BackgroundColor orange
+  }
+  .importante {
+      BackgroundColor #FF5555
+  }
+}
+</style>
+
+' Lado Derecho
+* :island: **ISLAND SURVIVOR**
+** :hammer: Crafting
+*** Herramientas
+**** Hacha de piedra
+**** Pico de hierro
+*** Construcción
+**** Refugio básico <<importante>>
+**** Trampas
+
+** :seedling: Recursos
+*** Naturales
+**** Madera
+**** Piedra
+*** Procesados
+**** Lingotes
+
+' Lado Izquierdo
+left side
+
+** :skull: Enemigos
+*** Animales
+**** Lobo
+**** Oso
+*** Sobrenaturales
+**** Zombie Nocturno
+
+** :heart: Estado del Jugador
+*** Salud
+**** Heridas leves
+**** Fracturas
+*** Hambre
+**** Cocinar alimentos
+*** Sed
+
+@endmindmap

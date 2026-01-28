@@ -1,0 +1,78 @@
+@startuml
+title Diagrama de Casos de Uso - Biblioteca Universitaria
+left to right direction
+skinparam packageStyle rectangle
+
+' --- ACTORES ---
+actor Estudiante
+actor Profesor
+actor Bibliotecario
+actor "Sistema" as Sys <<Automático>>
+
+' Herencia de actores (Opcional pero recomendado: Profesor es un Usuario)
+Estudiante <|-- Profesor : "Hereda permisos básicos"
+
+' --- PAQUETES Y CASOS DE USO ---
+
+package "Gestión de Préstamos" {
+    usecase "Solicitar préstamo" as UC_Solicitar
+    usecase "Renovar préstamo" as UC_Renovar
+    usecase "Devolver libro" as UC_Devolver
+    usecase "Procesar devolución" as UC_ProcesarDev
+    usecase "Registrar préstamo manual" as UC_Manual
+}
+
+package "Gestión de Reservas" {
+    usecase "Hacer reserva" as UC_Reservar
+    usecase "Cancelar reserva" as UC_CancelReserva
+    usecase "Notificar disponibilidad" as UC_Notificar
+}
+
+package "Búsqueda y Consulta" {
+    usecase "Buscar en catálogo" as UC_Buscar
+    usecase "Ver historial de préstamos" as UC_Historial
+    usecase "Consultar estado de libro" as UC_EstadoLibro
+}
+
+package "Penalizaciones" {
+    usecase "Calcular multa" as UC_CalcularMulta
+    usecase "Pagar multa online" as UC_Pagar
+    usecase "Aplicar penalización" as UC_AplicarPenal
+}
+
+package "Reportes" {
+    usecase "Generar reporte préstamos" as UC_RepPrestamo
+    usecase "Generar reporte multas" as UC_RepMulta
+}
+
+' --- RELACIONES ---
+
+' Estudiante (y Profesor por herencia)
+Estudiante --> UC_Solicitar
+Estudiante --> UC_Renovar
+Estudiante --> UC_Devolver
+Estudiante --> UC_Reservar
+Estudiante --> UC_CancelReserva
+Estudiante --> UC_Buscar
+Estudiante --> UC_Historial
+Estudiante --> UC_EstadoLibro
+Estudiante --> UC_Pagar
+
+' Bibliotecario
+Bibliotecario --> UC_ProcesarDev
+Bibliotecario --> UC_Manual
+Bibliotecario --> UC_AplicarPenal
+Bibliotecario --> UC_RepPrestamo
+Bibliotecario --> UC_RepMulta
+Bibliotecario --> UC_Buscar
+Bibliotecario --> UC_EstadoLibro
+
+' Sistema (Automático)
+Sys --> UC_Notificar
+Sys --> UC_CalcularMulta
+
+' Relaciones entre casos de uso (Include/Extend implícitos por lógica de negocio)
+UC_ProcesarDev --> UC_CalcularMulta : "Si hay retraso"
+UC_Notificar --> Estudiante : "Envía email"
+
+@enduml

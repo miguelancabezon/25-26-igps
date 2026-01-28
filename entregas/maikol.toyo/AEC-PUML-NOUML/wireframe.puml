@@ -1,0 +1,35 @@
+@startsalt
+{+
+  <b>Menú de Supervivencia - v1.0</b> | [X]
+  .
+  {/ <b>:school_satchel: Inventario</b> | :hammer: Crafting | :map: Mapa | :gear: Ajustes }
+  {
+    .
+    {
+      <b>Mochila (Peso: 15/30kg)</b>
+      {#
+        Item | Cantidad | Peso | Estado
+        Madera | 20 | 5.0kg | OK
+        Piedra | 10 | 10.0kg | OK
+        Manzana | 3 | 0.3kg | :heart: Fresco
+        Hacha | 1 | 2.0kg | :warning: Dañado
+      }
+    }
+    |
+    {
+      
+      .
+      -- Acciones --
+      [ Usar Objeto ]
+      [ Equipar ]
+      [ Tirar al suelo ]
+      .
+      -- Descripción --
+      "Hacha de piedra básica."
+      "Útil para cortar árboles."
+      .
+      [ :arrows_clockwise: Ordenar ]
+    }
+  }
+}
+@endsalt

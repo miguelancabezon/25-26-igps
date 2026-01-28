@@ -1,0 +1,61 @@
+@startjson
+#highlight "metadata"
+#highlight "gameState" / "player"
+#highlight "actions"
+
+{
+  "metadata": {
+    "version": "1.0.2",
+    "author": "Equipo Ingenieria",
+    "environment": "Production",
+    "lastUpdate": "2024-10-25T14:30:00Z"
+  },
+  "gameState": {
+    "serverId": 5592,
+    "isDaytime": true,
+    "difficulty": "Hardcore",
+    "activeEvents": ["FullMoon", "HighTide"],
+    "player": {
+      "id": "player_01",
+      "nickname": "SurvivorOne",
+      "isAlive": true,
+      "stats": {
+        "health": 85.5,
+        "hunger": 40,
+        "stamina": 100
+      },
+      "position": {
+        "x": 102.4,
+        "y": 50.0,
+        "z": -12.1
+      },
+      "inventory": [
+        {
+          "itemId": "item_wood",
+          "qty": 20,
+          "weight": 2.5
+        },
+        {
+          "itemId": "item_torch",
+          "qty": 1,
+          "durability": 0.8
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "name": "craftItem",
+      "targetClass": "CraftingSystem",
+      "parameters": ["recipeId", "quantity"],
+      "description": "Crea un objeto consumiendo recursos"
+    },
+    {
+      "name": "consumeFood",
+      "targetClass": "PlayerStats",
+      "parameters": ["itemId"],
+      "description": "Restaura hambre y salud"
+    }
+  ]
+}
+@endjson
