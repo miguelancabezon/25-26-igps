@@ -1,0 +1,461 @@
+@startuml
+title Sistema de Gestión de Biblioteca Universitaria - Casos de Uso
+
+'===========================
+'   Estilo visual actualizado
+'===========================
+skinparam backgroundColor #FFF8E7
+skinparam actorStyle rectangle
+skinparam handwritten true
+
+skinparam usecase {
+  BackgroundColor #FFFAF0
+  BorderColor #FF6600
+  ArrowColor #FF6600
+  FontColor #333333
+}
+
+skinparam package {
+  BackgroundColor #FFF0E0
+  BorderColor #FF6600
+  FontColor #333333
+}
+
+skinparam rectangle {
+  BackgroundColor #FFF0D9
+  BorderColor #CC5500
+}
+
+'===========================
+'   Actores
+'===========================
+actor Estudiante as est
+actor Profesor as prof
+actor Bibliotecario as bib
+actor "Sistema de Notificaciones" as sistema
+
+'===========================
+'   Sistema principal
+'===========================
+rectangle "Sistema de Gestión de Biblioteca" as Sistema {
+
+  '---------------------------
+  ' Búsqueda y consulta
+  '---------------------------
+  package "Búsqueda y consulta" as pkgBusqueda {
+    usecase "Buscar en catálogo" as UC_Buscar
+    usecase "Ver historial de préstamos" as UC_Historial
+    usecase "Consultar estado de libro" as UC_EstadoLibro
+  }
+
+  '---------------------------
+  ' Gestión de préstamos
+  '---------------------------
+  package "Gestión de préstamos" as pkgPrestamos {
+    usecase "Solicitar préstamo" as UC_Solicitar
+    usecase "Renovar préstamo" as UC_Renovar
+    usecase "Devolver libro" as UC_Devolver
+    usecase "Registrar préstamo manual" as UC_RegistrarManual
+    usecase "Procesar devolución" as UC_ProcesarDevolucion
+  }
+
+  '---------------------------
+  ' Gestión de reservas
+  '---------------------------
+  package "Gestión de reservas" as pkgReservas {
+    usecase "Hacer reserva" as UC_Reservar
+    usecase "Cancelar reserva" as UC_CancelarReserva
+    usecase "Notificar disponibilidad" as UC_NotificarDisp
+  }
+
+  '---------------------------
+  ' Penalizaciones
+  '---------------------------
+  package "Penalizaciones" as pkgPenalizaciones {
+    usecase "Calcular multa" as UC_CalcularMulta
+    usecase "Pagar multa online" as UC_PagarMulta
+    usecase "Aplicar penalización" as UC_AplicarPenalizacion
+  }
+
+  '---------------------------
+  ' Reportes
+  '---------------------------
+  package "Reportes" as pkgReportes {
+    usecase "Generar reporte de préstamos" as UC_RepPrestamos
+    usecase "Generar reporte de multas" as UC_RepMultas
+  }
+}
+
+'====================================================
+'   Relaciones Estudiante
+'====================================================
+est --> UC_Buscar
+est --> UC_Historial
+est --> UC_EstadoLibro
+est --> UC_Solicitar
+est --> UC_Renovar : "[máx. 2 renovaciones]"
+est --> UC_Devolver
+est --> UC_Reservar
+est --> UC_CancelarReserva
+est --> UC_PagarMulta
+
+'====================================================
+'   Relaciones Profesor
+'====================================================
+prof --> UC_Buscar
+prof --> UC_Historial
+prof --> UC_EstadoLibro
+prof --> UC_Solicitar : "Préstamo larga duración"
+prof --> UC_Renovar
+prof --> UC_Devolver
+prof --> UC_Reservar
+prof --> UC_CancelarReserva
+prof --> UC_PagarMulta
+
+'====================================================
+'   Relaciones Bibliotecario
+'====================================================
+bib --> UC_RegistrarManual
+bib --> UC_ProcesarDevolucion
+bib --> UC_CalcularMulta
+bib --> UC_AplicarPenalizacion : "Según retraso y perfil usuario"
+bib --> UC_Reservar : "Gestionar reservas en mostrador"
+bib --> UC_CancelarReserva : "Cancelar reservas en sistema"
+bib --> UC_RepPrestamos
+bib --> UC_RepMultas
+
+'====================================================
+'   Relaciones Sistema de Notificaciones
+'====================================================
+sistema --> UC_NotificarDisp : "Enviar email al usuario"
+sistema --> UC_CalcularMulta : "Calcular multa automáticamente"
+
+@enduml
+
+
+
+
+
+
+
+
+@startuml
+title  Sistema de Gestión de Biblioteca Universitaria-Diagrama de Objetos
+caption Escenario: 15 Noviembre 2025, 14:30h
+
+' ============================
+' Objetos de Usuarios
+' ============================
+package "Usuarios" {
+  object estudiante1 {
+    id = "EST-2023001"
+    nombre = "Ana García"
+    email = "ana.garcia@uni.es"
+    prestamosActivos = 2
+    multasAcumuladas = 1.50
+  }
+
+  object profesor1 {
+    id = "PROF-2020045"
+    nombre = "Dr. Carlos Ruiz"
+    departamento = "Informática"
+    prestamosActivos = 3
+    multasAcumuladas = 0.00
+  }
+
+  object estudiante2 {
+    id = "EST-2024089"
+    nombre = "Luis Martínez"
+    email = "luis.martinez@uni.es"
+    prestamosActivos = 1
+    multasAcumuladas = 0.00
+  }
+}
+
+' ============================
+' Objetos de Libros
+' ============================
+package "Libros" {
+  object libro1 {
+    libro1: Libro
+  
+  isbn: "978-3-16-148410-0"
+  titulo: "Clean Code"
+  autor: "Robert C. Martin"
+  ejemplares: 3
+  disponibles: 1
+  categoria: "Programación"
+   
+  }
+
+  object libro2 {
+    libro2: Libro
+  
+  isbn: "978-0-13-468599-1"
+  titulo: "The Pragmatic Programmer"
+  autor: "Hunt & Thomas"
+  ejemplares: 2
+  disponibles: 0
+  categoria: "Programación"
+    
+  }
+
+  object libro3 {
+    libro3: Libro
+  
+  isbn: "978-0-596-52068-7"
+  titulo: "JavaScript: The Good Parts"
+  autor: "Douglas Crockford"
+  ejemplares: 4
+  disponibles: 3
+  categoria: "Programación"
+    
+  }
+
+  object libro4 {
+    libro4: Libro
+  
+  isbn: "978-0-134-68599-8"
+  titulo: "Design Patterns"
+  autor: "Gang of Four"
+  ejemplares: 2
+  disponibles: 1
+  categoria: "Ingeniería Software"
+    
+  }
+
+  object libro5 {
+    libro5: Libro
+  
+  isbn: "978-0-321-12742-6"
+  titulo: "Domain-Driven Design"
+  autor: "Eric Evans"
+  ejemplares: 1
+  disponibles: 0
+  categoria: "Arquitectura"
+    
+  }
+}
+
+' ============================
+' Objetos de Préstamos
+' ============================
+package "Préstamos" {
+  object prestamo1 {
+    prestamo1: Prestamo
+  
+  id: "PREST-2025-1234"
+  fechaInicio: "2025-11-01"
+  fechaVencimiento: "2025-11-15"
+  estado: "Activo"
+  renovaciones: 0
+  multa: 0.00
+    
+  }
+
+  object prestamo2 {
+    prestamo2: Prestamo
+  
+  id: "PREST-2025-1256"
+  fechaInicio: "2025-10-28"
+  fechaVencimiento: "2025-11-27"
+  estado: "Activo"
+  renovaciones: 0
+  multa: 0.00
+    
+  }
+
+  object prestamo3 {
+    prestamo3: Prestamo
+  
+  id: "PREST-2025-1189"
+  fechaInicio: "2025-10-20"
+  fechaVencimiento: "2025-11-03"
+  estado: "Vencido"
+  renovaciones: 1
+  multa: 6.00
+    
+  }
+
+  object prestamo4 {
+    prestamo4: Prestamo
+  
+  id: "PREST-2025-1290"
+  fechaInicio: "2025-11-10"
+  fechaVencimiento: "2025-11-24"
+  estado: "Activo"
+  renovaciones: 0
+  multa: 0.00
+   
+  }
+}
+
+' ============================
+' Objetos de Reservas
+' ============================
+package "Reservas" {
+  object reserva1 {
+    id = "RES-2025-0089"
+    fechaReserva: "2025-11-14"
+    estado = "Pendiente"
+    posicionCola = 1
+  }
+
+  object reserva2 {
+    id = "RES-2025-0090"
+    fechaReserva: "2025-11-15"
+    estado = "Pendiente"
+    posicionCola = 2
+  }
+}
+
+' ============================
+' Objeto de Multa
+' ============================
+object multa1 {
+  multa1: Multa
+  
+  id: "MULT-2025-045"
+  monto: 6.00
+  fechaGeneracion: "2025-11-04"
+  estado: "Pendiente"
+  concepto: "Retraso en devolución"
+  
+}
+
+' ============================
+' Relaciones entre objetos
+' ============================
+
+' Usuarios con préstamos
+estudiante1 --> prestamo1 : "tiene"
+estudiante1 --> prestamo3 : "tiene"
+profesor1 --> prestamo2 : "tiene"
+profesor1 ..> prestamo4 : "otro préstamo"
+estudiante2 --> prestamo4 : "tiene"
+
+' Préstamos con libros
+prestamo1 --> libro1 : "corresponde a"
+prestamo2 --> libro2 : "corresponde a"
+prestamo3 --> libro5 : "corresponde a (vencido)"
+prestamo4 --> libro3 : "corresponde a"
+
+' Reservas con libros y usuarios
+reserva1 --> libro2 : "reserva de"
+reserva1 --> estudiante2 : "hecha por"
+reserva2 --> libro2 : "reserva de"
+reserva2 ..> estudiante1 : "otro estudiante"
+
+' Multa asociada
+multa1 --> prestamo3 : "asociada a"
+multa1 --> estudiante1 : "pertenece a"
+
+' ============================
+' Relaciones adicionales sugeridas
+' ============================
+prestamo1 ..> multa1 : "posible multa"
+profesor1 ..> reserva2 : "puede aprobar"
+@enduml
+
+
+
+
+
+
+
+
+
+
+
+
+
+@startuml
+title  Sistema de Gestión de Biblioteca Universitaria - Diagrama de Estados
+
+' Estado inicial
+[*] --> Solicitado
+
+' Estado Solicitado con acciones de entrada
+state Solicitado #Yellow {
+  Solicitado : entry / registrarSolicitud()
+  Solicitado : entry / verificarDisponibilidad()
+}
+
+' Desde Solicitado: Transiciones
+Solicitado --> Activo : aprobar [libro disponible]
+Solicitado --> Cancelado : rechazar [libro no disponible]
+Solicitado --> Cancelado : cancelar [usuario sin multas]
+
+' Super-estado En Curso con historia
+state "En Curso" as EnCurso {
+  [H] --> Activo
+
+  state Activo #LightPink {
+    Activo : entry / enviarEmailConfirmacion()
+    Activo : entry / actualizarDisponibilidadLibro()
+    Activo : exit / registrarHistorial()
+  }
+
+  state Renovado #LightPink {
+    Renovado : entry / extenderFechaVencimiento()
+    Renovado : entry / incrementarContadorRenovaciones()
+  }
+
+  state Vencido #LightCoral {
+    Vencido : entry / calcularMulta()
+    Vencido : entry / enviarNotificacionRetraso()
+  }
+
+  ' Desde activo: Transiciones
+  Activo --> Renovado : renovar [renovaciones < 2 AND sin reservas pendientes]
+  Activo --> Activo : renovar [renovaciones >= 2] / activo con nota de rechazo()
+  Activo --> Devuelto : devolver [a tiempo]
+  
+
+  Renovado --> Devuelto : devolver [a tiempo]
+  
+  Renovado --> Renovado : renovar [renovaciones < 2 AND sin reservas pendientes]
+
+  Vencido --> Devuelto : devolver / pagar multa
+  Vencido --> Vencido : continuar vencido [diasVencido > 30] / marcarCritico()
+}
+
+' Desde Renovado: Transiciones
+EnCurso --> Devuelto : devolver [a tiempo]
+EnCurso --> Vencido : vencer plazo
+
+' Estado Devuelto con acciones
+state Devuelto #LightBlue {
+  Devuelto : entry / liberarLibro()
+  Devuelto : entry / procesarSiguienteReserva()
+}
+
+' Estado Cancelado con acción
+state Cancelado #Gray {
+  Cancelado : entry / notificarCancelacion()
+}
+
+' Estado de decisión para validar renovaciones
+state DecisionRenovacion <<choice>>
+Renovado --> DecisionRenovacion : renovar
+DecisionRenovacion --> Renovado : [renovaciones < 2 AND sin reservas renovado]
+DecisionRenovacion --> Activo : [renovaciones >= 2] / activo con nota de rechazo()
+
+' Ejemplo de fork/join válidos en diagrama de estados:
+state F_Paralelo <<fork>>
+state J_Union <<join>>
+
+' Dispara procesos paralelos desde Activo:
+Activo --> F_Paralelo : iniciar procesos paralelos
+F_Paralelo --> Renovado : flujo de renovacion
+F_Paralelo --> Vencido : flujo de vencimiento
+
+' Ambos convergen antes de poder devolver:
+Renovado --> J_Union
+Vencido --> J_Union
+J_Union --> Devuelto : completar procesos
+
+' Estados finales
+Devuelto --> [*]
+Cancelado --> [*]
+@enduml
