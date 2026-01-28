@@ -1,0 +1,200 @@
+@startuml
+title Diagrama de Objetos - Sistema de Biblioteca (15/11/2025 14:30h)
+
+!define USERCOLOR #E3F2FD
+!define BOOKCOLOR #E8F5E9
+!define LOANCOLOR #FFF9C4
+!define RESERVECOLOR #F3E5F5
+!define FINECOLOR #FFEBEE
+
+skinparam object {
+    BackgroundColor White
+    BorderColor Black
+    ArrowColor Black
+}
+
+object "estudiante1: Estudiante" as est1 USERCOLOR {
+    id = "EST-2023001"
+    nombre = "Ana García"
+    email = "ana.garcia@uni.es"
+    prestamosActivos = 2
+    multasAcumuladas = 1.50
+}
+
+object "profesor1: Profesor" as prof1 USERCOLOR {
+    id = "PROF-2020045"
+    nombre = "Dr. Carlos Ruiz"
+    departamento = "Informática"
+    prestamosActivos = 3
+    multasAcumuladas = 0.00
+}
+
+object "estudiante2: Estudiante" as est2 USERCOLOR {
+    id = "EST-2024089"
+    nombre = "Luis Martínez"
+    email = "luis.martinez@uni.es"
+    prestamosActivos = 1
+    multasAcumuladas = 0.00
+}
+
+object "estudiante3: Estudiante" as est3 USERCOLOR {
+    id = "EST-2024105"
+    nombre = "María López"
+    email = "maria.lopez@uni.es"
+    prestamosActivos = 0
+    multasAcumuladas = 0.00
+}
+
+object "libro1: Libro" as lib1 BOOKCOLOR {
+    isbn = "978-3-16-148410-0"
+    titulo = "Clean Code"
+    autor = "Robert C. Martin"
+    ejemplares = 3
+    disponibles = 1
+    categoria = "Programación"
+}
+
+object "libro2: Libro" as lib2 BOOKCOLOR {
+    isbn = "978-0-13-468599-1"
+    titulo = "The Pragmatic Programmer"
+    autor = "Hunt & Thomas"
+    ejemplares = 2
+    disponibles = 0
+    categoria = "Programación"
+}
+
+object "libro3: Libro" as lib3 BOOKCOLOR {
+    isbn = "978-0-596-52068-7"
+    titulo = "JavaScript: The Good Parts"
+    autor = "Douglas Crockford"
+    ejemplares = 4
+    disponibles = 3
+    categoria = "Programación"
+}
+
+object "libro4: Libro" as lib4 BOOKCOLOR {
+    isbn = "978-0-134-68599-8"
+    titulo = "Design Patterns"
+    autor = "Gang of Four"
+    ejemplares = 2
+    disponibles = 1
+    categoria = "Ingeniería Software"
+}
+
+object "libro5: Libro" as lib5 BOOKCOLOR {
+    isbn = "978-0-321-12742-6"
+    titulo = "Domain-Driven Design"
+    autor = "Eric Evans"
+    ejemplares = 1
+    disponibles = 0
+    categoria = "Arquitectura"
+}
+
+object "prestamo1: Prestamo" as prest1 LOANCOLOR {
+    id = "PREST-2025-1234"
+    fechaInicio = "2025-11-01"
+    fechaVencimiento = "2025-11-15"
+    estado = "Activo"
+    renovaciones = 0
+    multa = 0.00
+}
+
+object "prestamo2: Prestamo" as prest2 LOANCOLOR {
+    id = "PREST-2025-1256"
+    fechaInicio = "2025-10-28"
+    fechaVencimiento = "2025-11-27"
+    estado = "Activo"
+    renovaciones = 0
+    multa = 0.00
+}
+
+object "prestamo3: Prestamo" as prest3 LOANCOLOR {
+    id = "PREST-2025-1189"
+    fechaInicio = "2025-10-20"
+    fechaVencimiento = "2025-11-03"
+    estado = "Vencido"
+    renovaciones = 1
+    multa = 6.00
+}
+
+object "prestamo4: Prestamo" as prest4 LOANCOLOR {
+    id = "PREST-2025-1290"
+    fechaInicio = "2025-11-10"
+    fechaVencimiento = "2025-11-24"
+    estado = "Activo"
+    renovaciones = 0
+    multa = 0.00
+}
+
+object "prestamo5: Prestamo" as prest5 LOANCOLOR {
+    id = "PREST-2025-1300"
+    fechaInicio = "2025-11-05"
+    fechaVencimiento = "2025-12-05"
+    estado = "Activo"
+    renovaciones = 0
+    multa = 0.00
+}
+
+object "reserva1: Reserva" as res1 RESERVECOLOR {
+    id = "RES-2025-0089"
+    fechaReserva = "2025-11-14"
+    estado = "Pendiente"
+    posicionCola = 1
+}
+
+object "reserva2: Reserva" as res2 RESERVECOLOR {
+    id = "RES-2025-0090"
+    fechaReserva = "2025-11-15"
+    estado = "Pendiente"
+    posicionCola = 2
+}
+
+object "multa1: Multa" as multa1 FINECOLOR {
+    id = "MULT-2025-045"
+    monto = 6.00
+    fechaGeneracion = "2025-11-04"
+    estado = "Pendiente"
+    concepto = "Retraso en devolución"
+}
+
+est1 "1" --> "2" prest1 : tiene >
+est1 --> prest3 : tiene >
+
+prof1 "1" --> "3" prest2 : tiene >
+prof1 --> prest5 : tiene >
+
+est2 "1" --> "1" prest4 : tiene >
+
+prest1 --> lib1 : de >
+prest2 --> lib2 : de >
+prest3 --> lib5 : de >
+prest4 --> lib3 : de >
+prest5 --> lib4 : de >
+
+est2 --> res1 : hizo >
+res1 --> lib2 : para >
+
+est3 --> res2 : hizo >
+res2 --> lib2 : para >
+
+multa1 --> prest3 : por >
+multa1 --> est1 : aplica a >
+
+note right of prest3
+    Préstamo vencido
+    12 días de retraso
+    Multa: €0.50 × 12 = €6.00
+end note
+
+note right of lib2
+    Libro completamente prestado
+    2 reservas pendientes
+end note
+
+note bottom of res1
+    Primera en cola
+    Se notificará cuando
+    el libro esté disponible
+end note
+
+@enduml
