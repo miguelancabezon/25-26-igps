@@ -1,0 +1,120 @@
+@startuml
+title Diagrama de Objetos - Biblioteca Central
+
+skinparam backgroundColor #FFFFFF
+
+object estudiante1 {
+  id = EST-2023001
+  nombre = Ana García
+  email = ana.garcia@uni.es
+  prestamosActivos = 2
+  multasAcumuladas = 1.50
+}
+
+object profesor1 {
+  id = PROF-2020045
+  nombre = Dr. Carlos Ruiz
+  departamento = Informática
+  prestamosActivos = 3
+  multasAcumuladas = 0.00
+}
+
+object estudiante2 {
+  id = EST-2024089
+  nombre = Luis Martínez
+  email = luis.martinez@uni.es
+  prestamosActivos = 1
+  multasAcumuladas = 0.00
+}
+
+object libro1 {
+  isbn = 978-3-16-148410-0
+  titulo = Clean Code
+  disponibles = 1
+}
+
+object libro2 {
+  isbn = 978-0-13-468599-1
+  titulo = The Pragmatic Programmer
+  disponibles = 0
+}
+
+object libro3 {
+  isbn = 978-0-596-52068-7
+  titulo = JS The Good Parts
+  disponibles = 3
+}
+
+object libro4 {
+  isbn = 978-0-134-68599-8
+  titulo = Design Patterns
+  disponibles = 1
+}
+
+object libro5 {
+  isbn = 978-0-321-12742-6
+  titulo = Domain-Driven Design
+  disponibles = 0
+}
+
+object prestamo1 {
+  id = PREST-2025-1234
+  estado = Activo
+}
+
+object prestamo2 {
+  id = PREST-2025-1256
+  estado = Activo
+}
+
+object prestamo3 {
+  id = PREST-2025-1189
+  estado = Vencido
+  multa = 6.00
+}
+
+object prestamo4 {
+  id = PREST-2025-1290
+  estado = Activo
+}
+
+object reserva1 {
+  id = RES-2025-0089
+  estado = Pendiente
+  posicionCola = 1
+}
+
+object reserva2 {
+  id = RES-2025-0090
+  estado = Pendiente
+  posicionCola = 2
+}
+
+object multa1 {
+  id = MULT-2025-045
+  monto = 6.00
+  estado = Pendiente
+}
+
+' Relaciones
+estudiante1 --> prestamo1
+estudiante1 --> prestamo3
+
+profesor1 --> prestamo2
+
+estudiante2 --> prestamo4
+
+prestamo1 --> libro1
+prestamo2 --> libro2
+prestamo3 --> libro5
+prestamo4 --> libro3
+
+reserva1 --> libro2
+reserva1 --> estudiante2
+
+reserva2 --> libro2
+
+multa1 --> prestamo3
+multa1 --> estudiante1
+
+@enduml

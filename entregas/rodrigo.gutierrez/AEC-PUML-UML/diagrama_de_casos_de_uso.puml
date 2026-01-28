@@ -1,0 +1,77 @@
+@startuml
+title Casos de Uso - Biblioteca Central
+
+skinparam backgroundColor #FAFAFA
+skinparam actorStyle awesome
+
+actor Estudiante
+actor Profesor
+actor Bibliotecario
+actor Sistema
+
+package "Búsqueda y Consulta" {
+  usecase "Buscar en catálogo"
+  usecase "Ver historial de préstamos"
+  usecase "Consultar estado de libro"
+}
+
+package "Gestión de Reservas" {
+  usecase "Hacer reserva"
+  usecase "Cancelar reserva"
+  usecase "Notificar disponibilidad"
+}
+
+package "Préstamos" {
+  usecase "Solicitar préstamo"
+  usecase "Renovar préstamo"
+  usecase "Devolver libro"
+}
+
+package "Penalizaciones" {
+  usecase "Calcular multa"
+  usecase "Pagar multa online"
+  usecase "Aplicar penalización"
+}
+
+package "Operaciones Bibliotecario" {
+  usecase "Registrar préstamo manual"
+  usecase "Procesar devolución"
+}
+
+package "Reportes" {
+  usecase "Generar reporte de préstamos"
+  usecase "Generar reporte de multas"
+}
+
+' Estudiante
+Estudiante --> "Buscar en catálogo"
+Estudiante --> "Solicitar préstamo"
+Estudiante --> "Renovar préstamo"
+Estudiante --> "Devolver libro"
+Estudiante --> "Ver historial de préstamos"
+Estudiante --> "Hacer reserva"
+Estudiante --> "Pagar multa online"
+
+' Profesor
+Profesor --> "Buscar en catálogo"
+Profesor --> "Solicitar préstamo"
+Profesor --> "Renovar préstamo"
+Profesor --> "Devolver libro"
+Profesor --> "Ver historial de préstamos"
+Profesor --> "Hacer reserva"
+Profesor --> "Pagar multa online"
+
+' Bibliotecario
+Bibliotecario --> "Registrar préstamo manual"
+Bibliotecario --> "Procesar devolución"
+Bibliotecario --> "Aplicar penalización"
+Bibliotecario --> "Cancelar reserva"
+Bibliotecario --> "Generar reporte de préstamos"
+Bibliotecario --> "Generar reporte de multas"
+
+' Sistema
+Sistema --> "Notificar disponibilidad"
+Sistema --> "Calcular multa" : automático
+Sistema --> "Pagar multa online" : integración
+
+@enduml
