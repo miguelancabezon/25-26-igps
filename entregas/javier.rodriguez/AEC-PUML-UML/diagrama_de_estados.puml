@@ -1,0 +1,89 @@
+@startuml
+' archivo: aec_pu03_estados_prestamo.puml
+title Diagrama de Estados - Ciclo de Vida del Préstamo
+skinparam state {
+  BackgroundColor<<EnCurso>> LightYellow
+}
+
+[*] --> Solicitado
+
+state Solicitado {
+  :entry / registrarSolicitud()
+  :entry / verificarDisponibilidad()
+}
+
+Solicitado --> EnCurso_Activo : aprobar [libro disponible]
+Solicitado --> Cancelado : rechazar [libro no disponible]
+Solicitado --> Cancelado : cancelar por usuario
+
+state "En Curso" as EnCurso {
+  [H] --> EnCurso_Activo
+
+  state EnCurso_Activo as Activo {
+    :entry / enviarEmailConfirmacion()
+    :entry / actualizarDisponibilidadLibro()
+    :exit / registrarHistorial()
+  }
+
+  state Renovado {
+    :entry / extenderFechaVencimiento()
+    :entry / incrementarContadorRenovaciones()
+  }
+
+  state Vencido {
+    :entry / calcularMulta()
+    :entry / enviarNotificacionRetraso()
+  }
+
+  Activo --> Renovado : renovar [renovaciones < 2 and sin reservas pendientes]
+  Activo --> Activo : renovar [renovaciones >= 2] / note right: rechazado - máx renovaciones alcanzado
+  Activo --> Vencido : vencer plazo
+
+  Renovado --> Renovado : renovar [renovaciones < 2 and sin reservas pendientes]
+  Renovado --> Vencido : vencer plazo
+
+  Vencido --> Vencido : continuar vencido [>30 días]
+  Vencido --> Devuelto : devolver con multa
+}
+
+' transiciones desde EnCurso a Devuelto y sincronización
+EnCurso --> Devuelto : devolver [a tiempo]
+
+Devuelto :entry / liberarLibro()
+Devuelto :entry / procesarSiguienteReserva()
+Devuelto --> [*]
+
+Cancelado :entry / registrarCancelacion()
+Cancelado --> [*]
+
+' Eventos externos y acciones adicionales
+note left of Activo
+  Acciones en Activo:
+  - enviarEmailConfirmacion()
+  - actualizarDisponibilidadLibro()
+  - registrarHistorial() (on exit)
+end note
+
+' Uso de decision (choice) para comprobar renovaciones
+state decision_renov <<choice>>
+
+Activo --> decision_renov : solicitar_renovacion
+decision_renov --> Renovado : [renovaciones < 2]
+decision_renov --> Activo : [renovaciones >= 2]
+
+' Fork/Join ejemplo (notación gráfica)
+[*] --> Solicitado
+Solicitado --> Activo
+
+fork
+  Activo --> Vencido : after 14 days
+fork again
+  Activo --> Renovado : renovar [renovaciones < 2 and sin reservas pendientes]
+end fork
+
+' Etiquetas en transiciones (mínimo 5 incluidas arriba): [libro disponible], [renovaciones < 2], [sin reservas pendientes], [usuario sin multas], [a tiempo]
+
+' Evento temporal ejemplo
+Activo --> Vencido : after 14 days / note right: evento '14 días después'
+
+@enduml
