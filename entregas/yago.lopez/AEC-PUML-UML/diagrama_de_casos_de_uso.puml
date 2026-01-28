@@ -1,0 +1,73 @@
+@startuml
+title Diagrama de Casos de Uso - Biblioteca Universitaria
+
+actor Estudiante
+actor Profesor
+actor Bibliotecario
+actor Sistema
+
+package "Búsqueda y Consulta" {
+    usecase "Buscar en catálogo" as UC1
+    usecase "Ver historial de préstamos" as UC2
+    usecase "Consultar estado de libro" as UC3
+}
+
+package "Gestión de Préstamos" {
+    usecase "Solicitar préstamo" as UC4
+    usecase "Renovar préstamo" as UC5
+    usecase "Devolver libro" as UC6
+    usecase "Registrar préstamo manual" as UC7
+    usecase "Procesar devolución" as UC8
+}
+
+package "Gestión de Reservas" {
+    usecase "Hacer reserva" as UC9
+    usecase "Cancelar reserva" as UC10
+    usecase "Notificar disponibilidad" as UC11
+}
+
+package "Penalizaciones" {
+    usecase "Calcular multa" as UC12
+    usecase "Pagar multa online" as UC13
+    usecase "Aplicar penalización" as UC14
+}
+
+package "Reportes" {
+    usecase "Generar reporte de préstamos" as UC15
+    usecase "Generar reporte de multas" as UC16
+}
+
+'Estudiante y Profesor
+Estudiante --> UC1
+Estudiante --> UC2
+Estudiante --> UC3
+Estudiante --> UC4
+Estudiante --> UC5
+Estudiante --> UC6
+Estudiante --> UC9
+Estudiante --> UC10
+Estudiante --> UC13
+
+Profesor --> UC1
+Profesor --> UC2
+Profesor --> UC3
+Profesor --> UC4
+Profesor --> UC5
+Profesor --> UC6
+Profesor --> UC9
+Profesor --> UC10
+Profesor --> UC13
+
+'Bibliotecario
+Bibliotecario --> UC7
+Bibliotecario --> UC8
+Bibliotecario --> UC14
+Bibliotecario --> UC15
+Bibliotecario --> UC16
+Bibliotecario --> UC9
+Bibliotecario --> UC10
+
+'Sistema
+Sistema --> UC11
+
+@enduml
