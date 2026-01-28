@@ -1,0 +1,75 @@
+@startuml
+state Activo #LightGreen {
+entry / enviarEmailConfirmacion()
+entry / actualizarDisponibilidadLibro()
+exit / registrarHistorial()
+}
+
+
+state Renovado #LightGreen {
+entry / extenderFechaVencimiento()
+entry / incrementarContadorRenovaciones()
+}
+
+
+state Vencido #LightCoral {
+entry / calcularMulta()
+entry / enviarNotificacionRetraso()
+}
+
+
+Activo --> Renovado : renovar [renovaciones < 2 AND sin reservas pendientes]
+Activo --> Activo : renovar [renovaciones >= 2] / note right: "rechazo - máximo alcanzado"
+Activo --> Vencido : after 14 days / vencer plazo
+
+
+Renovado --> Renovado : renovar [renovaciones < 2 AND sin reservas pendientes]
+Renovado --> Vencido : after 14 days
+
+
+Vencido --> Vencido : continuar vencido [>30 días]
+}
+
+
+' Transiciones desde EnCurso hacia Devuelto
+EnCurso --> Devuelto : devolver [a tiempo] / {
+entry / liberarLibro()
+entry / procesarSiguienteReserva()
+}
+
+
+Devuelto : entry / liberarLibro()
+Devuelto : entry / procesarSiguienteReserva()
+Devuelto --> [*]
+
+
+Vencido --> Devuelto : devolver con multa / pagar multa
+
+
+' Estados especiales
+Cancelado : entry / notificarCancelacion()
+Cancelado --> [*]
+
+
+' Uso de fork/join para acciones paralelas (ejemplo: cuando se aprueba)
+Solicitado --> ForkA
+state ForkA <<fork>>
+ForkA --> Activo : aprobar
+ForkA --> NotificarCreacion
+state NotificarCreacion <<join>>
+NotificarCreacion --> EnCurso
+
+
+' Eventos/acciones listadas como notas
+note left of Solicitado
+Eventos/Acciones definidas:
+aprobar, rechazar, cancelar, devolver, renovar,
+vencer plazo, pagar multa, 14 días después
+end note
+
+
+' Estado de decisión (choice) para renovaciones
+state Decision_Renovacion <<choice>>
+
+
+@enduml

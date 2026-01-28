@@ -1,0 +1,82 @@
+@startuml
+fechaVencimiento = "2025-11-27"
+estado = "Activo"
+renovaciones = 0
+multa = 0.00
+}
+
+
+object prestamo3 <<Prestamo>> {
+id = "PREST-2025-1189"
+fechaInicio = "2025-10-20"
+fechaVencimiento = "2025-11-03"
+estado = "Vencido"
+renovaciones = 1
+multa = 6.00
+}
+
+
+object prestamo4 <<Prestamo>> {
+id = "PREST-2025-1290"
+fechaInicio = "2025-11-10"
+fechaVencimiento = "2025-11-24"
+estado = "Activo"
+renovaciones = 0
+multa = 0.00
+}
+
+
+object reserva1 <<Reserva>> {
+id = "RES-2025-0089"
+fechaReserva = "2025-11-14"
+estado = "Pendiente"
+posicionCola = 1
+}
+
+
+object reserva2 <<Reserva>> {
+id = "RES-2025-0090"
+fechaReserva = "2025-11-15"
+estado = "Pendiente"
+posicionCola = 2
+}
+
+
+object multa1 <<Multa>> {
+id = "MULT-2025-045"
+monto = 6.00
+fechaGeneracion = "2025-11-04"
+estado = "Pendiente"
+concepto = "Retraso en devolución"
+}
+
+
+' Relaciones (asociaciones con multiplicidad y etiquetas)
+estudiante1 -- "2" prestamo1 : "tiene"
+estudiante1 -- "1" prestamo3 : "tiene"
+profesor1 -- "2+" prestamo2 : "tiene"
+estudiante2 -- "1" prestamo4 : "tiene"
+
+
+prestamo1 -- libro1 : "es del"
+prestamo2 -- libro2 : "es del"
+prestamo3 -- libro5 : "es del (vencido)"
+prestamo4 -- libro3 : "es del"
+
+
+reserva1 -- libro2 : "reserva de"
+reserva1 -- estudiante2 : "hecha por"
+reserva2 -- libro2 : "reserva de"
+reserva2 -- "otro estudiante" : "hecha por"
+
+
+multa1 -- prestamo3 : "asociada a"
+multa1 -- estudiante1 : "generada para"
+
+
+' Ejemplos de distintos tipos de relaciones
+profesor1 ..> multa1 : "puede consultar"
+libro2 o-- "0..2" reserva1 : "cola de reservas"
+
+
+@enduml
