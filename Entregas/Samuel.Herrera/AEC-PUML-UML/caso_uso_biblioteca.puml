@@ -1,0 +1,77 @@
+@startuml caso_uso_biblioteca
+left to right direction
+skinparam packageStyle rectangle
+skinparam actorStyle awesome
+
+' --- ACTORES ---
+actor "Estudiante" as Est
+actor "Profesor" as Prof
+actor "Bibliotecario" as Biblio
+actor "Sistema" as Sys
+
+' Herencia: Profesor es un Estudiante con más permisos
+Est <|-- Prof
+
+' --- CASOS DE USO ---
+
+package "Gestión de Préstamos" {
+    usecase "Solicitar préstamo" as UC_Solicitar
+    usecase "Renovar préstamo" as UC_Renovar
+    usecase "Devolver libro" as UC_Devolver
+    usecase "Registrar préstamo manual" as UC_Manual
+    usecase "Procesar devolución" as UC_ProcesarDev
+}
+
+package "Búsqueda y Consulta" {
+    usecase "Buscar en catálogo" as UC_Buscar
+    usecase "Ver historial de préstamos" as UC_Historial
+    usecase "Consultar estado de libro" as UC_EstadoLibro
+}
+
+package "Gestión de Reservas" {
+    usecase "Hacer reserva" as UC_Reservar
+    usecase "Cancelar reserva" as UC_CancelarRes
+    usecase "Notificar disponibilidad" as UC_Notificar
+}
+
+package "Penalizaciones" {
+    usecase "Calcular multa" as UC_CalcMulta
+    usecase "Pagar multa online" as UC_Pagar
+    usecase "Aplicar penalización" as UC_AplicarPenal
+}
+
+package "Reportes" {
+    usecase "Generar reporte de préstamos" as UC_RepPrest
+    usecase "Generar reporte de multas" as UC_RepMultas
+}
+
+' --- RELACIONES ---
+
+' Estudiante (y Profesor por herencia)
+Est --> UC_Solicitar
+Est --> UC_Renovar
+Est --> UC_Devolver
+Est --> UC_Buscar
+Est --> UC_Historial
+Est --> UC_EstadoLibro
+Est --> UC_Reservar
+Est --> UC_CancelarRes
+Est --> UC_Pagar
+
+' Bibliotecario
+Biblio --> UC_Manual
+Biblio --> UC_ProcesarDev
+Biblio --> UC_AplicarPenal
+Biblio --> UC_RepPrest
+Biblio --> UC_RepMultas
+Biblio --> UC_CancelarRes : (Gestión)
+
+' Sistema (Automático)
+Sys --> UC_Notificar
+Sys --> UC_CalcMulta
+
+' Conexiones internas lógicas (opcional para mayor claridad)
+UC_ProcesarDev ..> UC_CalcMulta : include
+UC_Notificar ..> UC_Reservar : trigger
+
+@enduml
