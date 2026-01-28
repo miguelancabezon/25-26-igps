@@ -1,0 +1,138 @@
+@startuml sistemaDeGestionDeLaBibliotecaCentral
+left to right direction
+skinparam packageStyle rectangle
+skinparam shadowing false
+
+'========================================
+' COLORES GENERALES
+'========================================
+skinparam actor {
+  BackgroundColor #FFF3CD
+  BorderColor #C59F00
+}
+
+skinparam usecase {
+  BackgroundColor #E3F2FD
+  BorderColor #1565C0
+}
+
+skinparam package {
+  BackgroundColor #F8F9FA
+  BorderColor #999999
+}
+
+' Colores para paquetes específicos
+skinparam package {
+  FontColor black
+}
+
+'========================================
+' ACTORES
+'========================================
+actor Estudiante
+actor Profesor
+actor Bibliotecario
+actor Sistema
+
+Profesor --|> Estudiante : hereda
+
+'========================================
+' PAQUETE 1: Búsqueda y Consulta
+'========================================
+package "1. Búsqueda y Consulta" as P1 #E8F5E9 {
+  usecase "Buscar en catálogo" as UC_Buscar
+  usecase "Ver historial de préstamos" as UC_Historial
+  usecase "Consultar estado de libro" as UC_Estado
+}
+
+Estudiante --> UC_Buscar
+Estudiante --> UC_Historial
+Estudiante --> UC_Estado
+
+Profesor --> UC_Buscar
+Profesor --> UC_Historial
+Profesor --> UC_Estado
+
+'========================================
+' PAQUETE 2: Gestión de Reservas
+'========================================
+package "2. Gestión de Reservas" as P2 #FFF3E0 {
+  usecase "Hacer reserva" as UC_HacerReserva
+  usecase "Cancelar reserva" as UC_CancelarReserva
+  usecase "Notificar disponibilidad" as UC_Notificar
+}
+
+Estudiante --> UC_HacerReserva
+Estudiante --> UC_CancelarReserva
+Profesor --> UC_HacerReserva
+Profesor --> UC_CancelarReserva
+
+Sistema --> UC_Notificar : automático
+
+'========================================
+' PAQUETE 3: Préstamos
+'========================================
+package "3. Préstamos" as P3 #E3F2FD {
+  usecase "Solicitar préstamo" as UC_Solicitar
+  usecase "Renovar préstamo" as UC_Renovar
+  usecase "Devolver libro" as UC_Devolver
+  usecase "Procesar devolución" as UC_Procesar
+  usecase "Registrar préstamo manual" as UC_RegistrarManual
+}
+
+Estudiante --> UC_Solicitar
+Estudiante --> UC_Renovar
+Estudiante --> UC_Devolver
+
+Profesor --> UC_Solicitar
+Profesor --> UC_Renovar
+Profesor --> UC_Devolver
+
+Bibliotecario --> UC_Procesar
+Bibliotecario --> UC_RegistrarManual
+
+'=== Notas del paquete Préstamos ===
+note right of UC_Solicitar #FFF8E1
+Límites y duración del préstamo
+varían según el rol.
+end note
+
+note right of UC_Renovar #FFF8E1
+Renovación condicionada a que
+no existan reservas activas.
+end note
+
+'========================================
+' PAQUETE 4: Penalizaciones
+'========================================
+package "4. Penalizaciones" as P4 #FFEBEE {
+  usecase "Calcular multa" as UC_CalcularMulta
+  usecase "Aplicar penalización" as UC_AplicarPenal
+  usecase "Pagar multa online" as UC_PagarMulta
+}
+
+Sistema --> UC_CalcularMulta : automático
+Bibliotecario --> UC_AplicarPenal
+Estudiante --> UC_PagarMulta
+Profesor --> UC_PagarMulta
+
+UC_CalcularMulta --> UC_AplicarPenal : base del cálculo
+
+note right of UC_AplicarPenal #FFEBEE
+La penalización depende del cálculo
+automático realizado por el Sistema.
+end note
+
+'========================================
+' PAQUETE 5: Reportes
+'========================================
+package "5. Reportes" as P5 #F3E5F5 {
+  usecase "Generar reporte de préstamos" as UC_ReportePrestamos
+  usecase "Generar reporte de multas" as UC_ReporteMultas
+}
+
+Bibliotecario --> UC_ReportePrestamos
+Bibliotecario --> UC_ReporteMultas
+
+@enduml
+

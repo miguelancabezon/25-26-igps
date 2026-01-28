@@ -1,0 +1,64 @@
+@startuml cicloDeVidaDelPrestamo
+
+[*] --> Solicitado
+EnCurso : History
+
+
+state Solicitado #Yellow {
+Solicitado : entry / registrarSolicitud()
+Solicitado : entry / verificarDisponibilidad()
+Solicitado --> Cancelado : cancelar por usuario
+}
+
+Solicitado --> Activo : aprobar [libro disponible]
+Solicitado --> Cancelado : rechazar [libro no disponible]
+
+state "En Curso" as EnCurso {
+state Activo #LightGreen {
+Activo --> Devuelto : devolver [a tiempo]
+Activo --> Vencido : vencer plazo
+Activo --> Renovado : renovar [renovaciones < 2 AND sin reservas]
+Activo : entry / enviarEmailConfirmacion()
+Activo : entry / actualizarDisponibilidadLibro()
+Activo : exit / registrarHistorial()
+}
+
+state Cancelado
+
+state Renovado #LightGreen {
+Renovado --> Devuelto : devolver [a tiempo]
+Renovado --> Renovado : renovar [renovaciones < 2 AND sin reservas]
+Renovado : entry / extenderFechaVencimiento()
+Renovado : entry / incrementarContadorRenovaciones()
+}
+
+state Vencido #LightCoral {
+Vencido --> VencidoCritico : continuar vencido [>30 días]
+Vencido : entry / calcularMulta()
+Vencido : entry / enviarNotificacionRetraso()
+Vencido --> Devuelto : devolver con multa
+}
+
+state VencidoCritico #Red {
+ VencidoCritico : entry / escalarIncidente()
+}
+
+state decision <<choice>>
+Activo --> decision : renovar
+decision --> Renovado : [renovaciones < 2 AND sin reservas]
+decision --> Activo : [renovaciones >= 2]
+
+
+Activo --> Renovado : renovar [renovaciones < 2]
+Activo --> Vencido : after 14 days
+Renovado --> Vencido : after 14 days
+Renovado --> Vencido : vencer plazo
+}
+
+Devuelto : entry / liberarLibro()
+Devuelto : entry / procesarSiguienteReserva()
+EnCurso --> Devuelto : devolver
+Devuelto --> [*]
+Cancelado --> [*]
+
+@enduml
