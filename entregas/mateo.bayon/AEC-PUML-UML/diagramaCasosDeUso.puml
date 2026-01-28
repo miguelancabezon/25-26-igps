@@ -1,0 +1,74 @@
+@startuml
+title Parte 1 - Diagrama de Casos de Uso
+caption Modelar las interacciones entre actores y el sistema
+
+actor Estudiante
+actor Profesor
+actor Bibliotecario
+actor Sistema as "Sistema (Notificaciones automáticas)"
+
+package "Préstamos" {
+  usecase "Solicitar préstamo" as UC1
+  usecase "Renovar préstamo" as UC2
+  usecase "Devolver libro" as UC3
+  usecase "Procesar devolución" as UC4
+  usecase "Registrar préstamo manual" as UC5
+}
+
+package "Gestión de Reservar" {
+  usecase "Hacer reserva" as UC6
+  usecase "Cancelar reserva" as UC7
+  usecase "Notificar disponibilidad" as UC8
+}
+
+package "Búsqueda y consulta" {
+  usecase "Buscar en catálogo" as UC9
+  usecase "Ver historial de préstamos" as UC10
+  usecase "Consultar estado de libro" as UC11
+}
+
+package "Penalizaciones" {
+  usecase "Calcular multa" as UC12
+  usecase "Pagar multa online" as UC13
+  usecase "Aplicar penalización" as UC14
+}
+
+package "Reportes" {
+  usecase "Generar reporte de préstamos" as UC15
+  usecase "Generar reporte de multas" as UC16
+}
+
+' Relaciones principales
+Estudiante --> UC1 : "Solicita préstamo"
+Estudiante --> UC2 : "Renueva préstamo"
+Estudiante --> UC3 : "Devuelve libro"
+Estudiante --> UC6 : "Reserva libro"
+Estudiante --> UC7 : "Cancela reserva"
+Estudiante --> UC9 : "Consulta catálogo"
+Estudiante --> UC10 : "Revisa historial"
+Estudiante --> UC11 : "Consulta estado"
+Estudiante --> UC13 : "Paga multa"
+
+Profesor --> UC1 : "Solicita préstamo"
+Profesor --> UC2 : "Renueva préstamo"
+Profesor --> UC3 : "Devuelve libro"
+Profesor --> UC6 : "Reserva libro"
+Profesor --> UC7 : "Cancela reserva"
+Profesor --> UC9 : "Consulta catálogo"
+Profesor --> UC10 : "Revisa historial"
+Profesor --> UC11 : "Consulta estado"
+Profesor --> UC13 : "Paga multa"
+
+Bibliotecario --> UC4 : "Procesa devolución"
+Bibliotecario --> UC5 : "Registra préstamo manual"
+Bibliotecario --> UC14 : "Aplica penalización"
+Bibliotecario --> UC15 : "Genera reporte préstamos"
+Bibliotecario --> UC16 : "Genera reporte multas"
+
+Sistema --> UC8 : "Envía notificación de disponibilidad"
+
+' Relaciones explicativas
+UC3 --> UC4 : "Devolución procesada por bibliotecario"
+UC12 --> UC13 : "Multa calculada antes de pagar"
+UC6 --> UC8 : "Sistema notifica disponibilidad"
+@enduml
