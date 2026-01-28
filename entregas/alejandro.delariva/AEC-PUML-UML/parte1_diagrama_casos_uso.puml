@@ -1,0 +1,125 @@
+@startuml
+title Sistema de Gestión de Biblioteca Universitaria\nDiagrama de Casos de Uso
+
+' =========================
+' Estilos comunes
+' =========================
+skinparam backgroundColor #F7F9FC
+skinparam shadowing false
+skinparam handwritten false
+
+skinparam package {
+  BackgroundColor #E6EEF8
+  BorderColor #2E5C9A
+  FontColor #1F3556
+}
+
+skinparam usecase {
+  BackgroundColor #FFFFFF
+  BorderColor #2E5C9A
+  ArrowColor #2E5C9A
+  FontColor #1F3556
+}
+
+skinparam actor {
+  BackgroundColor #F7F9FC
+  BorderColor #2E5C9A
+  FontColor #1F3556
+}
+
+left to right direction
+
+' =========================
+' Actores
+' =========================
+actor Estudiante as Est
+actor Profesor as Prof
+actor Bibliotecario as Bib
+actor "Sistema de Notificaciones" as Sys
+
+' =========================
+' Casos de uso
+' =========================
+package "Sistema de Gestión de Biblioteca" {
+
+  package "Búsqueda y consulta" {
+    usecase "Buscar en catálogo" as UC_Buscar
+    usecase "Ver historial de préstamos" as UC_Historial
+    usecase "Consultar estado de libro" as UC_ConsultarEstado
+  }
+
+  usecase "Solicitar préstamo" as UC_Solicitar
+  usecase "Renovar préstamo" as UC_Renovar
+  usecase "Devolver libro" as UC_Devolver
+
+  usecase "Registrar préstamo manual" as UC_RegistrarManual
+  usecase "Procesar devolución" as UC_ProcesarDevol
+
+  package "Gestión de Reservas" {
+    usecase "Hacer reserva" as UC_HacerReserva
+    usecase "Cancelar reserva" as UC_CancelarReserva
+    usecase "Notificar disponibilidad" as UC_NotificarDisp
+  }
+
+  package "Penalizaciones" {
+    usecase "Calcular multa" as UC_CalcularMulta
+    usecase "Pagar multa online" as UC_PagarMulta
+    usecase "Aplicar penalización" as UC_AplicarPenalizacion
+  }
+
+  package "Reportes" {
+    usecase "Generar reporte de préstamos" as UC_ReportePrestamos
+    usecase "Generar reporte de multas" as UC_ReporteMultas
+  }
+}
+
+' =========================
+' Relaciones Estudiante
+' =========================
+Est --> UC_Buscar : consulta catálogo
+Est --> UC_Solicitar : solicitud estándar\n(según reglas estudiante)
+Est --> UC_Renovar : renovaciones <= 2\n[sin reservas]
+Est --> UC_Devolver
+Est --> UC_HacerReserva : si libro está prestado
+Est --> UC_CancelarReserva
+Est --> UC_Historial
+Est --> UC_ConsultarEstado
+Est --> UC_PagarMulta : pago online
+
+' =========================
+' Relaciones Profesor
+' =========================
+Prof --> UC_Buscar
+Prof --> UC_Solicitar : préstamo de larga duración\n(según reglas profesor)
+Prof --> UC_Renovar
+Prof --> UC_Devolver
+Prof --> UC_HacerReserva
+Prof --> UC_CancelarReserva
+Prof --> UC_Historial
+Prof --> UC_ConsultarEstado
+Prof --> UC_PagarMulta
+
+' =========================
+' Relaciones Bibliotecario
+' =========================
+Bib --> UC_RegistrarManual : registrar préstamos\nin situ
+Bib --> UC_ProcesarDevol : validar devolución\nactualizar estado
+Bib --> UC_HacerReserva : gestión asistida\npara usuarios
+Bib --> UC_CancelarReserva : gestión de cola\nreservas
+Bib --> UC_CalcularMulta : cálculo según reglas\nrol y días de retraso
+Bib --> UC_AplicarPenalizacion : registrar penalización\n(retrasos, impagos)
+Bib --> UC_ReportePrestamos
+Bib --> UC_ReporteMultas
+
+' =========================
+' Relaciones Sistema
+' =========================
+Sys --> UC_NotificarDisp : cuando libro pasa a\nDisponible
+Sys --> UC_CalcularMulta : cálculo automático\nal vencer plazo
+Sys --> UC_PagarMulta : confirmación de pago\ny actualización estado
+
+' Etiquetas explicativas en algunas relaciones
+UC_ProcesarDevol --> UC_CalcularMulta : incluye\nsi hay retraso
+UC_AplicarPenalizacion --> UC_PagarMulta : penalización activa\nrequiere pago
+
+@enduml
