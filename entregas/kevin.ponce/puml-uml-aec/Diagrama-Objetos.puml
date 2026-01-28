@@ -1,0 +1,124 @@
+@startuml
+' Definimos el título y la fecha del escenario
+title Diagrama de Objetos - Biblioteca Central (15/11/2025 - 14:30h)
+skinparam object {
+    BorderColor darkblue
+    BackgroundColor #LightSkyBlue
+}
+
+' --------------------
+' 1. USUARIOS (Clase/Instancia: Atributos)
+' --------------------
+object "Ana García : Estudiante" as estudiante1 {
+    id = EST-2023001
+    prestamosActivos = 2
+    multasAcumuladas = 1.50
+}
+object "Dr. Carlos Ruiz : Profesor" as profesor1 {
+    id = PROF-2020045
+    prestamosActivos = 3
+    multasAcumuladas = 0.00
+}
+object "Luis Martínez : Estudiante" as estudiante2 {
+    id = EST-2024089
+    prestamosActivos = 1
+    multasAcumuladas = 0.00
+}
+object "Estudiante X : Estudiante" as estudianteX
+
+' --------------------
+' 2. LIBROS
+' --------------------
+object "Clean Code : Libro" as libro1 {
+    isbn = 978-3-16-148410-0
+    disponibles = 1
+}
+object "Pragmatic Programmer : Libro" as libro2 {
+    isbn = 978-0-13-468599-1
+    disponibles = 0
+    estado = Prestado/Reservado
+}
+object "JavaScript Good Parts : Libro" as libro3 {
+    isbn = 978-0-596-52068-7
+    disponibles = 3
+}
+object "Design Patterns : Libro" as libro4 {
+    isbn = 978-0-134-68599-8
+    disponibles = 1
+}
+object "Domain-Driven Design : Libro" as libro5 {
+    isbn = 978-0-321-12742-6
+    disponibles = 0
+}
+
+' --------------------
+' 3. PRÉSTAMOS
+' --------------------
+object "PREST-1234 : Prestamo" as prestamo1 {
+    fechaVencimiento = 2025-11-15
+    estado = Activo
+}
+object "PREST-1256 : Prestamo" as prestamo2 {
+    fechaVencimiento = 2025-11-27
+    estado = Activo
+}
+object "PREST-1189 : Prestamo" as prestamo3 {
+    fechaVencimiento = 2025-11-03
+    estado = Vencido
+    multa = 6.00
+}
+object "PREST-1290 : Prestamo" as prestamo4 {
+    fechaVencimiento = 2025-11-24
+    estado = Activo
+}
+object "PREST-XXXX : Prestamo" as prestamoX {
+    estado = Activo
+}
+
+' --------------------
+' 4. RESERVAS Y MULTAS
+' --------------------
+object "RES-0089 : Reserva" as reserva1 {
+    fechaReserva = 2025-11-14
+    estado = Pendiente
+    posicionCola = 1
+}
+object "RES-0090 : Reserva" as reserva2 {
+    fechaReserva = 2025-11-15
+    estado = Pendiente
+    posicionCola = 2
+}
+object "MULT-045 : Multa" as multa1 {
+    monto = 6.00
+    estado = Pendiente
+}
+
+' --------------------
+' 5. RELACIONES (Asociaciones y Cardinalidad 1:1 implícita)
+' --------------------
+
+' 5.1 Relaciones Usuario-Préstamo (Agregación: El usuario existe sin el préstamo)
+estudiante1 o-- prestamo1 : tiene
+estudiante1 o-- prestamo3 : tiene
+profesor1 o-- prestamo2 : tiene
+profesor1 o-- prestamoX : tiene
+estudiante2 o-- prestamo4 : tiene
+
+' 5.2 Relaciones Préstamo-Libro (Composición: El préstamo solo tiene sentido con un libro)
+prestamo1 *-- libro1 : de ejemplar de
+prestamo2 *-- libro2 : de ejemplar de
+prestamo3 *-- libro5 : de ejemplar de (Vencido)
+prestamo4 *-- libro3 : de ejemplar de
+
+' 5.3 Relaciones Reserva-Libro
+reserva1 -- libro2 : solicita (Pos. 1)
+reserva2 -- libro2 : solicita (Pos. 2)
+
+' 5.4 Relaciones Reserva-Usuario
+estudiante2 -- reserva1 : hecha por
+estudianteX -- reserva2 : hecha por
+
+' 5.5 Relaciones Multa
+multa1 -- prestamo3 : generada por
+multa1 -- estudiante1 : asociada a
+@endumal
