@@ -1,0 +1,318 @@
+@startuml Diagrama_de_Estados_Prestamo
+
+title Sistema de Gestión de Biblioteca Universitaria\n**Diagrama de Estados - Ciclo de Vida del Préstamo**
+
+' ═══════════════════════════════════════════════════════════════
+' ESTILOS Y CONFIGURACIÓN
+' ═══════════════════════════════════════════════════════════════
+
+skinparam backgroundColor #FAFAFA
+skinparam shadowing false
+
+skinparam state {
+  BackgroundColor #E8F8F5
+  BorderColor #16A085
+  FontColor #2C3E50
+  FontSize 11
+  ArrowColor #34495E
+  ArrowFontSize 10
+  AttributeFontSize 9
+}
+
+' ═══════════════════════════════════════════════════════════════
+' ESTADO INICIAL
+' ═══════════════════════════════════════════════════════════════
+
+[*] --> Solicitado : crear préstamo
+
+' ═══════════════════════════════════════════════════════════════
+' ESTADO: SOLICITADO
+' ═══════════════════════════════════════════════════════════════
+
+state Solicitado #FFF59D {
+  Solicitado : <b>Estado inicial del préstamo</b>
+  Solicitado : ──────────────────────────
+  Solicitado : entry / registrarSolicitud()
+  Solicitado : entry / verificarDisponibilidad()
+  Solicitado : entry / verificarLimitesUsuario()
+  Solicitado : do / esperarAprobacion()
+}
+
+' ═══════════════════════════════════════════════════════════════
+' TRANSICIONES DESDE SOLICITADO
+' ═══════════════════════════════════════════════════════════════
+
+Solicitado --> Activo : aprobar\n[libro disponible AND\nusuario sin multas]
+Solicitado --> Cancelado : rechazar\n[libro no disponible OR\nlímite excedido]
+Solicitado --> Cancelado : cancelar por usuario
+
+' ═══════════════════════════════════════════════════════════════
+' ESTADO COMPUESTO: EN CURSO
+' ═══════════════════════════════════════════════════════════════
+
+state "En Curso" as EnCurso #E8F4F8 {
+  
+  [*] --> Activo
+  
+  ' ───────────────────────────────────────────────────────────
+  ' ESTADO: ACTIVO
+  ' ───────────────────────────────────────────────────────────
+  
+  state Activo #C8E6C9 {
+    Activo : <b>Préstamo aprobado y libro entregado</b>
+    Activo : ──────────────────────────────────────
+    Activo : entry / enviarEmailConfirmacion()
+    Activo : entry / actualizarDisponibilidadLibro()
+    Activo : entry / establecerFechaVencimiento()
+    Activo : do / monitorearPlazo()
+    Activo : exit / registrarHistorial()
+  }
+  
+  ' ───────────────────────────────────────────────────────────
+  ' ESTADO: RENOVADO
+  ' ───────────────────────────────────────────────────────────
+  
+  state Renovado #A5D6A7 {
+    Renovado : <b>Préstamo renovado (máx 2 veces)</b>
+    Renovado : ────────────────────────────────────
+    Renovado : entry / extenderFechaVencimiento()
+    Renovado : entry / incrementarContadorRenovaciones()
+    Renovado : entry / enviarConfirmacionRenovacion()
+    Renovado : do / monitorearPlazoExtendido()
+    Renovado : exit / registrarRenovacion()
+  }
+  
+  ' ───────────────────────────────────────────────────────────
+  ' ESTADO: VENCIDO
+  ' ───────────────────────────────────────────────────────────
+  
+  state Vencido #FFCCBC {
+    Vencido : <b>Préstamo fuera de plazo</b>
+    Vencido : ──────────────────────────────
+    Vencido : entry / calcularMulta()
+    Vencido : entry / enviarNotificacionRetraso()
+    Vencido : entry / bloquearNuevosPrestamos()
+    Vencido : do / incrementarMultaDiaria()
+    Vencido : exit / registrarRetraso()
+  }
+  
+  ' ───────────────────────────────────────────────────────────
+  ' SUB-ESTADO: VENCIDO CRÍTICO
+  ' ───────────────────────────────────────────────────────────
+  
+  state "Vencido Crítico" as VencidoCritico #FF8A65 {
+    VencidoCritico : <b>Retraso mayor a 30 días</b>
+    VencidoCritico : ──────────────────────────────
+    VencidoCritico : entry / notificarAdministracion()
+    VencidoCritico : entry / suspenderCuenta()
+    VencidoCritico : do / escalarPenalizacion()
+  }
+  
+  ' ───────────────────────────────────────────────────────────
+  ' TRANSICIONES INTERNAS DE "EN CURSO"
+  ' ───────────────────────────────────────────────────────────
+  
+  Activo --> Renovado : renovar\n[renovaciones < 2 AND\nsin reservas pendientes]
+  
+  Activo --> Activo : renovar\n[renovaciones >= 2]\n/ rechazarRenovacion()
+  
+  Activo --> Vencido : after 14 days\n[estudiante]\n/ vencerPlazo()
+  
+  Activo --> Vencido : after 30 days\n[profesor]\n/ vencerPlazo()
+  
+  Renovado --> Renovado : renovar\n[renovaciones < 2 AND\nsin reservas pendientes]
+  
+  Renovado --> Vencido : after 14 days\n[estudiante]
+  
+  Renovado --> Vencido : after 30 days\n[profesor]
+  
+  Vencido --> VencidoCritico : after 30 days\n/ escalarPenalizacion()
+  
+  VencidoCritico --> VencidoCritico : continuar vencido\n/ incrementarSancion()
+  
+  ' ───────────────────────────────────────────────────────────
+  ' ESTADO DE DECISIÓN - VERIFICAR RENOVACIONES
+  ' ───────────────────────────────────────────────────────────
+  
+  state verificar_renovacion <<choice>>
+  
+  Activo --> verificar_renovacion : solicitar renovación
+  
+  verificar_renovacion --> Renovado : [renovaciones < 2 AND\nsin reservas]
+  verificar_renovacion --> Activo : [else]\n/ notificar rechazo
+  
+  ' ───────────────────────────────────────────────────────────
+  ' ESTADO DE HISTORIA (recordar último sub-estado)
+  ' ───────────────────────────────────────────────────────────
+  
+  state historial_estado <<history,type=deep>>
+  
+}
+
+' ═══════════════════════════════════════════════════════════════
+' TRANSICIONES DESDE "EN CURSO" A DEVUELTO
+' ═══════════════════════════════════════════════════════════════
+
+EnCurso --> Devuelto : devolver\n[a tiempo]\n/ confirmarDevolucion()
+
+Vencido --> Devuelto : devolver con multa\n[multa pagada]\n/ liberarLibro()
+
+VencidoCritico --> Devuelto : devolver con multa\n[multa pagada AND\nautorización admin]\n/ reactivarCuenta()
+
+' ═══════════════════════════════════════════════════════════════
+' ESTADO: DEVUELTO
+' ═══════════════════════════════════════════════════════════════
+
+state Devuelto #B3E5FC {
+  Devuelto : <b>Préstamo completado</b>
+  Devuelto : ──────────────────────────
+  Devuelto : entry / liberarLibro()
+  Devuelto : entry / procesarSiguienteReserva()
+  Devuelto : entry / cerrarPrestamo()
+  Devuelto : entry / actualizarHistorial()
+}
+
+' ═══════════════════════════════════════════════════════════════
+' ESTADO: CANCELADO
+' ═══════════════════════════════════════════════════════════════
+
+state Cancelado #FFAB91 {
+  Cancelado : <b>Préstamo cancelado antes de activarse</b>
+  Cancelado : ─────────────────────────────────────────
+  Cancelado : entry / registrarCancelacion()
+  Cancelado : entry / notificarUsuario()
+  Cancelado : entry / liberarReserva()
+}
+
+' ═══════════════════════════════════════════════════════════════
+' TRANSICIONES A ESTADO FINAL
+' ═══════════════════════════════════════════════════════════════
+
+Devuelto --> [*] : finalizar\n/ archivarPrestamo()
+Cancelado --> [*] : finalizar\n/ archivarSolicitud()
+
+' ═══════════════════════════════════════════════════════════════
+' FORK Y JOIN - PROCESO PARALELO DE DEVOLUCIÓN
+' ═══════════════════════════════════════════════════════════════
+
+state fork_devolucion <<fork>>
+state join_devolucion <<join>>
+
+Devuelto --> fork_devolucion
+
+fork_devolucion --> VerificarEstado
+fork_devolucion --> ProcesarMulta
+fork_devolucion --> ActualizarCatalogo
+
+state VerificarEstado {
+  VerificarEstado : Verificar estado físico del libro
+}
+
+state ProcesarMulta {
+  ProcesarMulta : Procesar multas si aplica
+}
+
+state ActualizarCatalogo {
+  ActualizarCatalogo : Actualizar disponibilidad
+}
+
+VerificarEstado --> join_devolucion
+ProcesarMulta --> join_devolucion
+ActualizarCatalogo --> join_devolucion
+
+join_devolucion --> [*]
+
+' ═══════════════════════════════════════════════════════════════
+' NOTAS EXPLICATIVAS
+' ═══════════════════════════════════════════════════════════════
+
+note right of Solicitado
+  <b>Verificaciones iniciales:</b>
+  • Libro disponible
+  • Usuario sin multas
+  • Límite de préstamos no excedido
+  • Usuario activo
+end note
+
+note right of Activo
+  <b>Duraciones por tipo de usuario:</b>
+  • Estudiante: 14 días
+  • Profesor: 30 días
+  
+  <b>Límites:</b>
+  • Estudiantes: 3 libros
+  • Profesores: 5 libros
+end note
+
+note left of Renovado
+  <b>Condiciones para renovar:</b>
+  • Máximo 2 renovaciones
+  • No haber reservas pendientes
+  • Préstamo no vencido
+  • Usuario sin sanciones
+end note
+
+note left of Vencido
+  <b>Cálculo de multas:</b>
+  • Estudiantes: €0.50/día
+  • Profesores: €0.30/día
+  
+  <b>Acciones automáticas:</b>
+  • Notificación diaria
+  • Bloqueo de nuevos préstamos
+  • Incremento automático de multa
+end note
+
+note bottom of VencidoCritico
+  <b>⚠️ Estado crítico</b>
+  Después de 30 días de retraso:
+  • Suspensión temporal de cuenta
+  • Notificación a administración
+  • Posible sanción disciplinaria
+end note
+
+note right of Devuelto
+  <b>Proceso de devolución:</b>
+  1. Verificar estado físico del libro
+  2. Procesar multas pendientes
+  3. Actualizar catálogo
+  4. Procesar siguiente reserva
+end note
+
+note top of verificar_renovacion
+  <b>Punto de decisión</b>
+  Verifica condiciones
+  antes de renovar
+end note
+
+' ═══════════════════════════════════════════════════════════════
+' LEYENDA
+' ═══════════════════════════════════════════════════════════════
+
+legend bottom
+  <b>Ciclo de Vida Completo del Préstamo</b>
+  
+  <b>Estados principales:</b>
+  • <back:#FFF59D>Solicitado</back> - Pendiente de aprobación
+  • <back:#C8E6C9>Activo</back> - Préstamo en curso
+  • <back:#A5D6A7>Renovado</back> - Plazo extendido
+  • <back:#FFCCBC>Vencido</back> - Fuera de plazo
+  • <back:#FF8A65>Vencido Crítico</back> - >30 días de retraso
+  • <back:#B3E5FC>Devuelto</back> - Completado exitosamente
+  • <back:#FFAB91>Cancelado</back> - No procesado
+  
+  <b>Eventos temporales:</b>
+  • after 14 days - Para estudiantes
+  • after 30 days - Para profesores o vencimiento crítico
+  
+  <b>Símbolos especiales:</b>
+  • [*] - Estado inicial/final
+  • <<choice>> - Punto de decisión
+  • <<history>> - Recordar último estado
+  • <<fork>>/<<join>> - Procesamiento paralelo
+  
+  <b>Autor:</b> Adriana Aguilar | <b>Fecha:</b> Noviembre 2025
+  <b>Actividad:</b> AEC-PUML-UML - Sistema de Biblioteca
+end legend
+
+@enduml
