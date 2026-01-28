@@ -1,0 +1,102 @@
+@startuml
+title Sistema de Gestión de Biblioteca Universitaria - Diagrama de Estados\nCiclo de Vida del Préstamo
+
+' ===== ESTILOS PERSONALIZADOS =====
+skinparam state {
+    BackgroundColor LightBlue
+    BorderColor DarkBlue
+    ArrowColor DarkSlateGray
+}
+
+
+[*] --> Solicitado
+
+state Solicitado #Yellow {
+    Solicitado : entry / registrarSolicitud()
+    Solicitado : entry / verificarDisponibilidad()
+}
+
+Solicitado --> Activo : aprobar [libro disponible]
+Solicitado --> Cancelado : rechazar [libro no disponible]
+Solicitado --> Cancelado : cancelar por usuario
+
+state "En Curso" as EnCurso {
+    
+
+    [*] --> Activo
+
+    state Activo #LightGreen {
+        Activo : entry / enviarEmailConfirmacion()
+        Activo : entry / actualizarDisponibilidadLibro()
+        Activo : exit / registrarHistorial()
+    }
+    
+    state Renovado #LightGreen {
+        Renovado : entry / extenderFechaVencimiento()
+        Renovado : entry / incrementarContadorRenovaciones()
+    }
+    
+    state Vencido #LightCoral {
+        Vencido : entry / calcularMulta()
+        Vencido : entry / enviarNotificacionRetraso()
+        
+        [*] --> VencidoNormal
+        state VencidoNormal
+        state VencidoCritico
+        
+        VencidoNormal --> VencidoCritico : continuar vencido [>30 días]
+    }
+    
+    state verificarRenovacion <<choice>>
+    
+    Activo --> verificarRenovacion : renovar
+    Renovado --> verificarRenovacion : renovar
+    
+    verificarRenovacion --> Renovado : [renovaciones < 2 AND\nsin reservas]
+    verificarRenovacion --> Activo : [renovaciones >= 2]\nrechazar renovación
+    
+    Activo --> Vencido : vencer plazo\n(after 14 days)
+    Renovado --> Vencido : vencer plazo\n(after 14 days)
+}
+
+state Devuelto #LightGray {
+    Devuelto : entry / liberarLibro()
+    Devuelto : entry / procesarSiguienteReserva()
+}
+
+state Cancelado #LightGray {
+    Cancelado : entry / liberarReserva()
+    Cancelado : entry / notificarCancelacion()
+}
+
+Activo --> Devuelto : devolver [a tiempo]
+Renovado --> Devuelto : devolver [a tiempo]
+Vencido --> Devuelto : devolver con multa\n[multa pagada]
+
+Devuelto --> [*]
+Cancelado --> [*]
+
+note right of Solicitado
+  Estado inicial del préstamo
+  Pendiente de aprobación
+end note
+
+note top of verificarRenovacion
+  Decisión de renovación:
+  - Máximo 2 renovaciones
+  - Sin reservas pendientes
+end note
+
+note bottom of Vencido
+  Multas:
+  - Estudiante: €0.50/día
+  - Profesor: €0.30/día
+end note
+
+note left of Devuelto
+  Estado final exitoso
+  Libro disponible para
+  siguiente usuario
+end note
+
+@enduml
