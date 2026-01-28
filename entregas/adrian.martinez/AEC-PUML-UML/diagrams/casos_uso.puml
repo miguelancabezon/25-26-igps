@@ -1,0 +1,94 @@
+@startuml
+left to right direction
+skinparam actorStyle awesome
+skinparam packageStyle rect
+
+actor Estudiante as Est
+actor Profesor as Prof
+actor Bibliotecario as Bib
+actor Sistema as Sys
+
+' Paquete: Búsqueda y consulta
+
+package "Búsqueda y consulta" {
+  usecase Buscar as "Buscar en catálogo"
+  usecase Historial as "Ver historial de préstamos"
+  usecase ConsultarEstado as "Consultar estado de libro"
+}
+
+' Paquete: Gestión de Reservar
+
+package "Gestión de Reservar" {
+  usecase HacerReserva as "Hacer reserva"
+  usecase CancelarReserva as "Cancelar reserva"
+  usecase NotificarDisponibilidad as "Notificar disponibilidad"
+}
+
+' Paquete: Penalizaciones
+
+package "Penalizaciones" {
+  usecase CalcularMulta as "Calcular multa"
+  usecase PagarMulta as "Pagar multa online"
+  usecase AplicarPenalizacion as "Aplicar penalización"
+}
+
+' Paquete: Reportes
+
+package "Reportes" {
+  usecase RepPrestamos as "Generar reporte de préstamos"
+  usecase RepMultas as "Generar reporte de multas"
+}
+
+' Casos de uso generales
+
+usecase SolicitarPrestamo as "Solicitar préstamo"
+usecase Renovar as "Renovar préstamo"
+usecase Devolver as "Devolver libro"
+usecase ProcesarDevolucion as "Procesar devolución"
+usecase RegistrarManual as "Registrar préstamo manual"
+
+' Relaciones: Estudiante
+
+Est --> Buscar
+Est --> SolicitarPrestamo
+Est --> Renovar
+Est --> Devolver
+Est --> Historial
+Est --> HacerReserva
+Est --> PagarMulta
+Est --> ConsultarEstado
+
+' Relaciones: Profesor
+
+Prof --> Buscar
+Prof --> SolicitarPrestamo
+Prof --> Renovar
+Prof --> Devolver
+Prof --> Historial
+Prof --> HacerReserva
+Prof --> PagarMulta
+Prof --> ConsultarEstado
+
+' Etiquetas para casos de uso específicos
+
+Est --> Renovar : "Máx. 2 renovaciones\nsi no hay reservas"
+Prof --> SolicitarPrestamo : "Préstamos de\nlarga duración"
+
+' Relaciones: Biblioetcario
+
+Bib --> ProcesarDevolucion
+Bib --> RegistrarManual
+Bib --> AplicarPenalizacion
+Bib --> CalcularMulta
+Bib --> RepPrestamos
+Bib --> RepMultas
+Bib --> CancelarReserva
+Bib --> HacerReserva
+
+' Relaciones: Sistema
+
+Sys --> NotificarDisponibilidad : "envía notificaciones\nautomáticas"
+Sys --> CalcularMulta : "calcula multa\nautomática"
+
+
+@enduml
