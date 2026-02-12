@@ -1,0 +1,60 @@
+@startuml
+title Ciclo de Vida del Préstamo
+
+skinparam state {
+  BackgroundColor LightYellow
+  BorderColor Black
+}
+
+[*] --> Solicitado
+
+state Solicitado {
+  :entry / registrarSolicitud();
+  :entry / verificarDisponibilidad();
+}
+
+Solicitado --> Activo : aprobar \n[libro disponible]
+Solicitado --> Cancelado : rechazar \n[libro no disponible]
+Solicitado --> Cancelado : cancelar por usuario
+
+' ===== SUPER ESTADO EN CURSO =====
+state "En Curso" as EnCurso {
+
+  state Activo {
+    :entry / enviarEmailConfirmacion();
+    :entry / actualizarDisponibilidadLibro();
+    :exit / registrarHistorial();
+  }
+
+  state Renovado {
+    :entry / extenderFechaVencimiento();
+    :entry / incrementarContadorRenovaciones();
+  }
+
+  state Vencido {
+    :entry / calcularMulta();
+    :entry / enviarNotificacionRetraso();
+  }
+
+  [H] --> Activo
+
+  Activo --> Renovado : renovar\n[renovaciones < 2 AND sin reservas]
+  Activo --> Activo : renovar\n[renovaciones >= 2]\n"renovación rechazada"
+  Activo --> Vencido : vencer plazo
+
+  Renovado --> Renovado : renovar\n[renovaciones < 2 AND sin reservas]
+  Renovado --> Vencido : vencer plazo
+  Renovado --> Devuelto : devolver [a tiempo]
+
+  Vencido --> Devuelto : devolver con multa
+  Vencido --> "Vencido crítico" : continuar vencido [>30 días]
+}
+
+EnCurso --> Devuelto : devolver
+Devuelto : entry / liberarLibro();
+Devuelto : entry / procesarSiguienteReserva();
+
+Devuelto --> [*]
+Cancelado --> [*]
+
+@enduml
