@@ -1,0 +1,103 @@
+Filename: diagrama_estados.puml
+@startuml
+' Diagrama de Estados - Ciclo de Vida del Préstamo
+' Estilo global
+skinparam backgroundColor #F9F9FB
+skinparam state {
+  BackgroundColor #FFFFFF
+  BorderColor #AAAAAA
+}
+
+title "Diagrama de Estados - Ciclo de Vida del Préstamo"
+
+[*] --> Solicitado
+
+state Solicitado {
+  :entry / registrarSolicitud();
+  :entry / verificarDisponibilidad();
+}
+
+Solicitado --> Activo : aprobar [libro disponible]
+Solicitado --> Cancelado : rechazar [libro no disponible]
+Solicitado --> Cancelado : cancelar por usuario
+
+' Super-estado En Curso con history (H)
+state "En Curso" as EnCurso {
+  [H]   ' historia del último subestado
+  state Activo {
+    :entry / enviarEmailConfirmacion();
+    :entry / actualizarDisponibilidadLibro();
+    :exit / registrarHistorial();
+  }
+
+  state Renovado {
+    :entry / extenderFechaVencimiento();
+    :entry / incrementarContadorRenovaciones();
+  }
+
+  state Vencido {
+    :entry / calcularMulta();
+    :entry / enviarNotificacionRetraso();
+  }
+
+  Activo --> Renovado : renovar [renovaciones < 2 AND sin reservas pendientes]
+  Activo --> Activo : renovar [renovaciones >= 2] / note right: rechazo por límite
+  Activo --> Vencido : vencer plazo [after 14 days]
+
+  Renovado --> Renovado : renovar [renovaciones < 2 AND sin reservas pendientes]
+  Renovado --> Vencido : vencer plazo [after 14 days]
+
+  Vencido --> Vencido_Critico : continuar vencido [>30 días]
+
+  ' estado interno para Vencido crítico
+  state Vencido_Critico {
+    :entry / escalarPenalizacion();
+  }
+}
+
+EnCurso --> Devuelto : devolver [a tiempo] / note right: proceso normal de cierre
+EnCurso --> Vencido : vencer plazo
+
+Devuelto :entry / liberarLibro()
+Devuelto :entry / procesarSiguienteReserva()
+Devuelto --> [*]
+
+Cancelado :entry / notificarCancelacion()
+Cancelado --> [*]
+
+' Transiciones desde Vencido
+Vencido --> Devuelto : devolver con multa
+Vencido --> Vencido_Critico : after 30 days
+
+' Acciones y eventos suplementarios
+note left
+  Eventos / Acciones:
+   - aprobar, rechazar, cancelar, devolver, renovar
+   - vencer plazo, pagar multa, evento temporal (after 14 days)
+end note
+
+' Ejemplo de fork/join: al devolver se liberan recursos y se notifica en paralelo
+Devuelto --> ForkDevolver
+fork ForkDevolver
+  ForkDevolver --> Liberar : entry / liberarLibro()
+  ForkDevolver --> ProcesarReserva : entry / procesarSiguienteReserva()
+end fork
+Liberar --> [*]
+ProcesarReserva --> [*]
+
+' Decisión para renovación (estado de decisión)
+state Decision <<choice>> 
+Decision --> Renovado : [renovaciones < 2 AND sin reservas pendientes]
+Decision --> Activo : [renovaciones >= 2] / note right: mantener estado y notificar
+
+' Ejemplo de uso del choice en flujo (conecta desde Activo)
+Activo --> Decision : solicitar renovación
+Decision --> Renovado
+Decision --> Activo
+
+' Historial (recordar último sub-estado de EnCurso)
+note right of EnCurso
+  [H] representa el historial del super-estado "En Curso" para volver\nal último sub-estado activo.
+end note
+
+@enduml
