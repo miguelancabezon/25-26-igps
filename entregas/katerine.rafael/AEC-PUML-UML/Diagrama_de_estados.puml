@@ -1,0 +1,91 @@
+@startuml
+title Diagrama de Estados - Ciclo de Vida del Préstamo
+
+[*] --> Solicitado
+
+'=========================================================
+' ESTADO SOLICITADO
+'=========================================================
+
+state Solicitado #Cornsilk {
+    Solicitado : entry / registrarSolicitud()
+    Solicitado : entry / verificarDisponibilidad()
+}
+
+Solicitado --> Activo : aprobar [libro disponible] / entregarLibro()
+Solicitado --> Cancelado : rechazar [libro no disponible]
+Solicitado --> Cancelado : cancelar por usuario
+
+'=========================================================
+' SUPER-ESTADO EN CURSO
+'=========================================================
+
+state "En Curso" as EnCurso {
+
+    ' Estado de historia simple
+    state H <<history>>
+
+    H --> Activo
+
+    ' ---------- ACTIVO ----------
+    state Activo #LightGreen {
+        Activo : entry / enviarEmailConfirmacion()
+        Activo : entry / actualizarDisponibilidadLibro()
+        Activo : exit / registrarHistorial()
+    }
+
+    ' ---------- RENOVADO ----------
+    state Renovado #LightGreen {
+        Renovado : entry / extenderFechaVencimiento()
+        Renovado : entry / incrementarContadorRenovaciones()
+    }
+
+    ' ---------- VENCIDO ----------
+    state Vencido #LightCoral {
+        Vencido : entry / calcularMulta()
+        Vencido : entry / enviarNotificacionRetraso()
+    }
+
+    ' ---------- TRANSICIONES ----------
+    Activo --> Devuelto : devolver [a tiempo]
+    Activo --> Vencido : vencer plazo
+    Activo --> choiceRenovar : renovar
+
+    Renovado --> Devuelto : devolver [a tiempo]
+    Renovado --> Vencido : vencer plazo
+    Renovado --> choiceRenovar : renovar
+
+    Vencido --> Devuelto : devolver / cobrarMulta()
+    Vencido --> VencidoCritico : continuar vencido [>30 días]
+}
+
+'=========================================================
+' CHOICE PARA RENOVACIÓN
+'=========================================================
+
+state choiceRenovar <<choice>>
+choiceRenovar --> Renovado : [renovaciones < 2 AND sin reservas pendientes]
+choiceRenovar --> Activo : [renovaciones >= 2] / mostrarRechazoRenovacion()
+
+'=========================================================
+' OTROS ESTADOS
+'=========================================================
+
+state VencidoCritico #IndianRed {
+    VencidoCritico : entry / reportarIncidencia()
+}
+
+state Cancelado #Gray {
+    Cancelado : entry / registrarCancelacion()
+    Cancelado : entry / liberarLibroPendiente()
+}
+
+state Devuelto #SkyBlue {
+    Devuelto : entry / liberarLibro()
+    Devuelto : entry / procesarSiguienteReserva()
+}
+
+Devuelto --> [*]
+Cancelado --> [*]
+
+@enduml

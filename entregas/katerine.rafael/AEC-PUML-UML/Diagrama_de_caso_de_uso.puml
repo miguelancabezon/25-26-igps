@@ -1,0 +1,69 @@
+@startuml
+left to right direction
+actor "Profesor" as pro
+actor "Estudiante" as est
+actor "Bibliotecario" as bli
+actor "Sistema" as sis
+
+rectangle Biblioteca {
+    usecase "Solicitar préstamo" as UC1
+    usecase "Renovar préstamo" as UC2
+    usecase "Devolver libro" as UC3
+    usecase "Procesar devolución" as UC4
+    usecase "Registrar préstamo manual" as UC5
+}
+
+rectangle "Gestión de Reserva" {
+    usecase "Registrar reserva" as UC6
+    usecase "Cancelar reserva" as UC7
+    usecase "Notificar disponibilidad" as UC8
+}
+
+rectangle "Busqueda y consulta" {
+    usecase "Buscar en catalogo" as UC9
+    usecase "Ver historial de prestamos" as UC10
+    usecase "Consultar estado del libro" as UC11
+}
+
+rectangle "Penalizaciones" {
+    usecase "Calcular multa" as UC12
+    usecase "Pagar multa online" as UC13
+    usecase "Aplicar penalizacion" as UC14
+}
+
+rectangle "Reportes" {
+    usecase "Generar reporte de prestamos" as UC15
+    usecase "Generar reporte de multas" as UC16
+}
+
+
+est --> UC1
+pro --> UC1
+bli --> UC2
+est --> UC3
+pro --> UC3
+bli --> UC4
+bli --> UC5
+
+sis --> UC6
+sis --> UC7
+sis --> UC8
+
+
+pro --> UC9
+est -->UC9
+pro --> UC10
+est -->UC10
+pro --> UC11
+est -->UC11
+
+
+sis --> UC12
+pro --> UC13
+est --> UC13
+bli --> UC14
+
+bli --> UC15
+bli --> UC16
+
+@enduml
