@@ -1,4 +1,4 @@
-***Versión en Español***
+***Versión en Español (English version below)***
 
 # Actividad de Evaluación Continua - GIT
 
