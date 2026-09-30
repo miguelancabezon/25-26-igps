@@ -78,6 +78,8 @@
 * **Visualiza tu historia:** Usa `git log --oneline --graph` para ver tus commits y ramas claramente antes de subir nada.
 * **Las capturas:** No olvides incluirlas físicamente dentro del archivo de texto o adjuntarlas donde corresponda según indique el enunciado original ("añadiendo las capturas"). Si el archivo es `.txt`, probablemente debas describir dónde están las imágenes o usar un formato que permita insertarlas (como Markdown `.md` si está permitido, aunque el enunciado dice "archivo de tipo texto"). *Clarifica esto con tu docente si es necesario.*
 
+---
+
 ***English Version***
 
 # Continuous Assessment Activity - Git
