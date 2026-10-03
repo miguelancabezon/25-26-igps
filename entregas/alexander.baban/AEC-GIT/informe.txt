@@ -4,4 +4,6 @@ Configuración inicial:
 Para iniciar la practica lo que hacemos es clonar el repositorio(aquel que forkeamos), y seguimos los pasos que se pueden apreciar en la captura:WindowsTerminal_f86qpIOmvJ.
 Creacion de carpetas iniciales:
 Este proceso puede ser visto en la captura :WindowsTerminal_Zzfu8bjlmB
+Primer commit y subida inicial:
+Esto puede ser apreciado en las suigientes capturas:WindowsTerminal_xcPJ12n42J y WindowsTerminal_ppqJNPEuyZ.
 
