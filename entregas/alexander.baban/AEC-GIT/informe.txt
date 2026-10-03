@@ -6,4 +6,5 @@ Creacion de carpetas iniciales:
 Este proceso puede ser visto en la captura :WindowsTerminal_Zzfu8bjlmB
 Primer commit y subida inicial:
 Esto puede ser apreciado en las suigientes capturas:WindowsTerminal_xcPJ12n42J y WindowsTerminal_ppqJNPEuyZ.
-
+Y por ultimo,trabajar en una nueva rama:
+Lo cual puede ser apreciado en la captura:WindowsTerminal_tBp1aVPByW
